@@ -12,14 +12,21 @@ import { posts } from '../posts';
 function extractFaq(markdown: string): Array<{ q: string; a: string }> {
   const section = markdown.split(/\n## Frequently Asked Questions\n/)[1];
   if (!section) return [];
-  const out: Array<{ q: string; a: string }> = [];
-  const re = /^### (.+?)\n([\s\S]*?)(?=\n### |\n## |$)/gm;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(section)) !== null) {
-    const a = m[2].replace(/\s+/g, ' ').trim();
-    if (a) out.push({ q: m[1].trim(), a });
-  }
-  return out;
+  // Split rather than match. A lookahead ending in `$` under the `m` flag
+  // matches at the blank line after every question, so the answer capture came
+  // back empty for all four and the whole block was dropped silently.
+  return section
+    .split(/\n## /)[0]
+    .split(/\n### /)
+    .slice(1)
+    .map((chunk) => {
+      const nl = chunk.indexOf('\n');
+      return {
+        q: (nl === -1 ? chunk : chunk.slice(0, nl)).trim(),
+        a: (nl === -1 ? '' : chunk.slice(nl + 1)).replace(/\s+/g, ' ').trim(),
+      };
+    })
+    .filter((f) => f.q && f.a);
 }
 
 interface Props { params: Promise<{ slug: string }> }
