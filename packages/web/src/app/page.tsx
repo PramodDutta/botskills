@@ -1,57 +1,112 @@
 import Link from 'next/link';
 import { getAllBots } from '@/lib/bots';
-import { CATEGORIES, RUNTIMES } from '@botskills/shared';
+import { getBoardRows } from '@/lib/board';
+import { CATEGORIES } from '@botskills/shared';
+import { Leaderboard } from '@/components/leaderboard';
 
 export default function HomePage() {
+  const rows = getBoardRows();
   const bots = getAllBots();
-  const categoryName = (id: string) => CATEGORIES.find((c) => c.id === id)?.name ?? id;
-  const runtimeBadge = (id: string) => RUNTIMES.find((r) => r.id === id)?.badge ?? id;
+  const recent = rows.slice(-4).reverse(); // stand-in for created_at until DB
+  const catCount = (id: string) => bots.filter((b) => b.category === id).length;
 
   return (
     <main className="wrap">
+      {/* Compact hero, TrustMRR-style: the board is the hero */}
       <div className="hero">
         <span className="kicker">Skills for Grok Bot &amp; Rakazo</span>
         <h1>The leaderboard of bots that get real work done</h1>
         <p className="sub">
-          Paste-ready bot setups. Every bot declares what it does, what it connects to, and the
-          one thing it will never do without you. {bots.length} in the catalog.
+          Paste-ready bot setups ranked by copies. Every bot declares its integrations and the one
+          thing it never does without you.
         </p>
       </div>
 
-      <div className="board">
-        <div className="board-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>#</th><th>Bot</th><th>Category</th><th>Integrations</th>
-                <th>Runtime</th><th>Boundary</th>
-              </tr>
-            </thead>
-            <tbody>
-              {bots.map((bot, i) => (
-                <tr key={bot.slug}>
-                  <td className="rank">{i + 1}</td>
-                  <td>
-                    <Link href={`/bots/${bot.slug}`}>
-                      <span className="nm">{bot.name}</span>
-                      <br />
-                      <span className="ds">{bot.description}</span>
-                    </Link>
-                  </td>
-                  <td className="ds">{categoryName(bot.category)}</td>
-                  <td className="ds">{bot.integrations.join(' · ')}</td>
-                  <td>
-                    {bot.runtimes.map((r) => (
-                      <span key={r} className={`rt rt-${r}`}>{runtimeBadge(r)}</span>
-                    ))}
-                  </td>
-                  <td className="boundary">{bot.boundary}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      {/* Sponsor marquee (botdirectory pattern), placeholder inventory */}
+      <div className="marquee" aria-label="Sponsors">
+        <div className="marquee-in">
+          {[1, 2].map((k) => (
+            <span key={k} className="marquee-seg">
+              <span className="spon"><span className="sq" />Your tool here</span>
+              <span className="spon"><span className="sq" />Sponsor slot</span>
+              <span className="spon slot"><Link href="/sponsor">Advertise · slot 1 of 8</Link></span>
+            </span>
+          ))}
         </div>
       </div>
+
+      {/* Recently added: horizontal card row */}
+      <section>
+        <div className="shead">
+          <h2>Recently added</h2>
+          <Link href="/bots" className="hint">View all →</Link>
+        </div>
+        <div className="cardrow">
+          {recent.map((r) => (
+            <Link key={r.slug} href={`/bots/${r.slug}`} className="rcard">
+              <span className="rcard-top">
+                <span className="av">{r.name.slice(0, 2).toUpperCase()}</span>
+                <span className="nm">{r.name}</span>
+              </span>
+              <span className="tag">{r.category}</span>
+              <span className="rstats mono">
+                <span><b>{r.copies.toLocaleString('en-US')}</b> copies</span>
+                <span><b>{r.delta7d >= 0 ? '+' : ''}{r.delta7d}</b> 7d</span>
+                <span><b>{r.runtimes.length}</b> runtime{r.runtimes.length > 1 ? 's' : ''}</span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* The centerpiece */}
+      <section>
+        <div className="shead">
+          <h2>Leaderboard</h2>
+          <span className="hint">most copied, all time</span>
+        </div>
+        <div className="avstrip">
+          {rows.slice(0, 10).map((r) => (
+            <Link key={r.slug} href={`/bots/${r.slug}`} className="av" title={r.name}>
+              {r.name.slice(0, 2).toUpperCase()}
+            </Link>
+          ))}
+        </div>
+        <Leaderboard rows={rows} />
+        <p className="trustnote">
+          <span className="tick">✓</span> Copies are counted by install telemetry and refreshed
+          hourly, not self-reported. Telemetry ships before launch; numbers shown in development
+          are placeholders.
+        </p>
+      </section>
+
+      {/* Activity feed */}
+      <section>
+        <div className="shead"><h2>What&apos;s happening</h2></div>
+        <div className="feed">
+          {recent.map((r) => (
+            <div key={r.slug} className="fi">
+              <span className="when mono">new</span>
+              <span>
+                <b className="mono">@{r.contributor}</b> published{' '}
+                <Link href={`/bots/${r.slug}`} className="nm">{r.name}</Link>
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Category pills */}
+      <section>
+        <div className="shead"><h2>Categories</h2></div>
+        <div className="pills">
+          {CATEGORIES.map((c) => (
+            <Link key={c.id} href={`/api/bots?category=${c.id}`} className="pill">
+              {c.name} <b>{catCount(c.id)}</b>
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { getAllBots, getBot } from '@/lib/bots';
 import { CATEGORIES, RUNTIMES } from '@botskills/shared';
+import { CopyButton } from '@/components/copy-button';
 
 interface Props { params: Promise<{ slug: string }> }
 
@@ -50,6 +51,7 @@ export default async function BotPage({ params }: Props) {
         <b>Boundary:</b> {bot.boundary}
       </div>
       <h2>Setup prompt</h2>
+      <CopyButton slug={bot.slug} prompt={bot.prompt} />
       <pre>{bot.prompt}</pre>
       <p className="ds">
         Raw file: <code className="mono">/api/bots/{bot.slug}/content</code> · JSON:{' '}
