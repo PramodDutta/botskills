@@ -26,8 +26,22 @@ export interface Sponsor {
   demo: boolean;
 }
 
+/**
+ * Featured links carry UTM tags so the projects we send traffic to can see it in
+ * their own analytics. Without them the visit lands as an unattributed referral
+ * and the free traffic is invisible to the person receiving it.
+ */
+function utm(url: string, id: string): string {
+  if (url.startsWith('/')) return url;
+  const u = new URL(url);
+  u.searchParams.set('utm_source', 'botskills.sh');
+  u.searchParams.set('utm_medium', 'referral');
+  u.searchParams.set('utm_campaign', `free-pick-${id}`);
+  return u.toString();
+}
+
 function featured(id: string, name: string, line: string, cta: string, url: string): Sponsor {
-  return { id, name, line, cta, url, kind: 'featured', demo: false };
+  return { id, name, line, cta, url: utm(url, id), kind: 'featured', demo: false };
 }
 function demo(id: string, name: string, line: string, cta: string): Sponsor {
   return { id, name, line, cta, url: '/sponsor', kind: 'demo', demo: true };
