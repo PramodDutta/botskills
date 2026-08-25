@@ -19,7 +19,7 @@ setup instructions anywhere in it. If you decide afterwards that you want one,
 the [setup guide](/blog/grok-bot-setup-guide) picks up exactly where this
 leaves off.
 
-## The short answer
+## A bot, defined in one paragraph
 
 A Grok bot is a written job description that a computer follows on its own
 schedule, using your accounts.

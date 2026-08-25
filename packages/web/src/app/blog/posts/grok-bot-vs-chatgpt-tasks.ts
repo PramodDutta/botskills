@@ -255,7 +255,9 @@ holds live sessions to whatever you signed it into, so anything that can
 instruct the bot can potentially use those sessions. The mitigations are
 unglamorous and effective: connect the minimum number of tools rather than
 everything, prefer read-only access where the job only reads, use a dedicated
-account for anything financial, set a spending cap, and write an explicit
+account for anything financial, use whatever account-level billing controls
+your plan offers rather than assuming a per-product cap exists, and write an
+explicit
 boundary that names the actions the bot must never take unattended. Review
 what is connected once a month and disconnect what nothing uses.
 

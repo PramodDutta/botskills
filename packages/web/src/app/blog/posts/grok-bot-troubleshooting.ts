@@ -28,7 +28,7 @@ fix. Find yours in the table, then read that entry.
 | 4 | It arrived every day and said nothing useful | Silent success, with no heartbeat to distinguish empty from broken |
 | 5 | The bot is frozen partway through | Parked on a login, captcha, approval prompt, or a page that never loaded |
 | 6 | "The computer cannot be reached" | Agent computer needs recovery, not a reset |
-| 7 | Everything stopped at once | Usage exhausted or a spending cap hit |
+| 7 | Everything stopped at once | Included usage allowance exhausted |
 | 8 | A tool suddenly returns nothing | Connector authorisation revoked upstream, often by a password change |
 | 9 | The report looks complete but the numbers are short | Rate limited mid-run, partial data reported confidently |
 | 10 | The output is bland and could describe anyone | No definition of good output in the charter |
@@ -156,9 +156,11 @@ first is the single most expensive mistake in this list.
 
 Symptom: several bots stop on the same day, with no pattern in what they do.
 
-Cause: usage exhausted or a spending cap reached. A common trigger is one
-badly scoped routine that thrashed, such as a bot retrying a broken login
-hundreds of times, consuming the budget everything else was relying on.
+Cause: the included usage allowance is exhausted. Worth knowing: as of
+writing there is no Grok Bot spend cap, so nothing stops a runaway routine
+before the allowance is gone. A common trigger is one badly scoped routine
+that thrashed, such as a bot retrying a broken login hundreds of times,
+consuming the usage everything else was relying on.
 
 Fix: check usage and billing before debugging any individual bot. Then find
 the routine that burned it, which is usually the one with the shortest

@@ -5,10 +5,15 @@
 // Batch arrays, when they arrive, spread at the END (last write wins on slug).
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
+import { post as grokBotApprovalRulesReversibility } from './grok-bot-approval-rules-reversibility';
 import { post as grokBotBoundaries } from './grok-bot-boundaries';
+import { post as grokBotChiefOfStaffSetup } from './grok-bot-chief-of-staff-setup';
+import { post as grokBotClaudeCodeSkillsCompatibility } from './grok-bot-claude-code-skills-compatibility';
 import { post as grokBotCost } from './grok-bot-cost';
+import { post as grokBotCursorAccountExplained } from './grok-bot-cursor-account-explained';
 import { post as grokBotExamples } from './grok-bot-examples';
 import { post as grokBotFirstWeek } from './grok-bot-first-week';
 import { post as grokBotGithub } from './grok-bot-github';
@@ -19,10 +24,15 @@ import { post as grokBotMemory } from './grok-bot-memory';
 import { post as grokBotNotion } from './grok-bot-notion';
 import { post as grokBotPermissionsExplained } from './grok-bot-permissions-explained';
 import { post as grokBotPromptsThatWork } from './grok-bot-prompts-that-work';
+import { post as grokBotRoutinesVsTriggers } from './grok-bot-routines-vs-triggers';
 import { post as grokBotSafetyChecklist } from './grok-bot-safety-checklist';
 import { post as grokBotScheduling } from './grok-bot-scheduling';
 import { post as grokBotSetupGuide } from './grok-bot-setup-guide';
+import { post as grokBotSharedComputerSecurity } from './grok-bot-shared-computer-security';
 import { post as grokBotSlack } from './grok-bot-slack';
+import { post as grokBotSpendCapAndTokenBurn } from './grok-bot-spend-cap-and-token-burn';
+import { post as grokBotStarterRoster } from './grok-bot-starter-roster';
+import { post as grokBotSupportedPlatforms } from './grok-bot-supported-platforms';
 import { post as grokBotTroubleshooting } from './grok-bot-troubleshooting';
 import { post as grokBotVsChatgptTasks } from './grok-bot-vs-chatgpt-tasks';
 import { post as howToCreateAGrokBot } from './how-to-create-a-grok-bot';
@@ -39,8 +49,12 @@ export interface BlogPost {
 export const posts: Record<string, BlogPost> = {
   'introducing-botskills': introducingBotskills,
   'one-person-company-grok-bot': onePersonCompanyGrokBot,
+  'grok-bot-approval-rules-reversibility': grokBotApprovalRulesReversibility,
   'grok-bot-boundaries': grokBotBoundaries,
+  'grok-bot-chief-of-staff-setup': grokBotChiefOfStaffSetup,
+  'grok-bot-claude-code-skills-compatibility': grokBotClaudeCodeSkillsCompatibility,
   'grok-bot-cost': grokBotCost,
+  'grok-bot-cursor-account-explained': grokBotCursorAccountExplained,
   'grok-bot-examples': grokBotExamples,
   'grok-bot-first-week': grokBotFirstWeek,
   'grok-bot-github': grokBotGithub,
@@ -51,10 +65,15 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-notion': grokBotNotion,
   'grok-bot-permissions-explained': grokBotPermissionsExplained,
   'grok-bot-prompts-that-work': grokBotPromptsThatWork,
+  'grok-bot-routines-vs-triggers': grokBotRoutinesVsTriggers,
   'grok-bot-safety-checklist': grokBotSafetyChecklist,
   'grok-bot-scheduling': grokBotScheduling,
   'grok-bot-setup-guide': grokBotSetupGuide,
+  'grok-bot-shared-computer-security': grokBotSharedComputerSecurity,
   'grok-bot-slack': grokBotSlack,
+  'grok-bot-spend-cap-and-token-burn': grokBotSpendCapAndTokenBurn,
+  'grok-bot-starter-roster': grokBotStarterRoster,
+  'grok-bot-supported-platforms': grokBotSupportedPlatforms,
   'grok-bot-troubleshooting': grokBotTroubleshooting,
   'grok-bot-vs-chatgpt-tasks': grokBotVsChatgptTasks,
   'how-to-create-a-grok-bot': howToCreateAGrokBot,
@@ -64,8 +83,12 @@ export const posts: Record<string, BlogPost> = {
 export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'introducing-botskills', ...introducingBotskills },
   { slug: 'one-person-company-grok-bot', ...onePersonCompanyGrokBot },
+  { slug: 'grok-bot-approval-rules-reversibility', ...grokBotApprovalRulesReversibility },
   { slug: 'grok-bot-boundaries', ...grokBotBoundaries },
+  { slug: 'grok-bot-chief-of-staff-setup', ...grokBotChiefOfStaffSetup },
+  { slug: 'grok-bot-claude-code-skills-compatibility', ...grokBotClaudeCodeSkillsCompatibility },
   { slug: 'grok-bot-cost', ...grokBotCost },
+  { slug: 'grok-bot-cursor-account-explained', ...grokBotCursorAccountExplained },
   { slug: 'grok-bot-examples', ...grokBotExamples },
   { slug: 'grok-bot-first-week', ...grokBotFirstWeek },
   { slug: 'grok-bot-github', ...grokBotGithub },
@@ -76,10 +99,15 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-notion', ...grokBotNotion },
   { slug: 'grok-bot-permissions-explained', ...grokBotPermissionsExplained },
   { slug: 'grok-bot-prompts-that-work', ...grokBotPromptsThatWork },
+  { slug: 'grok-bot-routines-vs-triggers', ...grokBotRoutinesVsTriggers },
   { slug: 'grok-bot-safety-checklist', ...grokBotSafetyChecklist },
   { slug: 'grok-bot-scheduling', ...grokBotScheduling },
   { slug: 'grok-bot-setup-guide', ...grokBotSetupGuide },
+  { slug: 'grok-bot-shared-computer-security', ...grokBotSharedComputerSecurity },
   { slug: 'grok-bot-slack', ...grokBotSlack },
+  { slug: 'grok-bot-spend-cap-and-token-burn', ...grokBotSpendCapAndTokenBurn },
+  { slug: 'grok-bot-starter-roster', ...grokBotStarterRoster },
+  { slug: 'grok-bot-supported-platforms', ...grokBotSupportedPlatforms },
   { slug: 'grok-bot-troubleshooting', ...grokBotTroubleshooting },
   { slug: 'grok-bot-vs-chatgpt-tasks', ...grokBotVsChatgptTasks },
   { slug: 'how-to-create-a-grok-bot', ...howToCreateAGrokBot },
