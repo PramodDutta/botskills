@@ -56,7 +56,6 @@ export const MARQUEE_CAP = 8;
 export const railSponsors: Sponsor[] = [
   featured('f1', 'QASkills.sh', 'QA skills your coding agent can install in one command.', 'Browse skills', 'https://qaskills.sh'),
   featured('f2', 'Rakazo', 'Open-source, self-hosted runtime for the bots in this directory.', 'View the repo', 'https://github.com/elie222/rakazo'),
-  featured('f3', 'botdirectory.ai', 'Where most of this catalogue came from, MIT licensed.', 'Visit', 'https://botdirectory.ai'),
   openSlot('s1', 'A card in this rail, visible the whole scroll.'),
 ];
 
@@ -65,7 +64,6 @@ export const marqueeSponsors: Sponsor[] = [
   featured('m2', 'Rakazo', '', '', 'https://github.com/elie222/rakazo'),
   featured('m3', 'OpenMausBot', '', '', 'https://github.com/milind-soni/OpenMausBot'),
   featured('m4', 'EvalDog', '', '', 'https://evaldog.com'),
-  featured('m5', 'botdirectory.ai', '', '', 'https://botdirectory.ai'),
   demo('m6', 'Notewheel', '', ''),
 ];
 
@@ -74,7 +72,6 @@ export const edgeSponsors: Sponsor[] = [
   featured('e2', 'Rakazo', 'Self-host the runtime, own the credentials.', 'Repo', 'https://github.com/elie222/rakazo'),
   featured('e3', 'OpenMausBot', 'Apache-2.0 desktop alternative with portable teams.', 'Repo', 'https://github.com/milind-soni/OpenMausBot'),
   featured('e4', 'EvalDog', 'Evals for the prompts your bots run on.', 'Try it', 'https://evaldog.com'),
-  featured('e5', 'botdirectory.ai', 'The original Grok Bot directory.', 'Visit', 'https://botdirectory.ai'),
   openSlot('e6', 'Edge card on every page.'),
 ];
 
@@ -89,3 +86,10 @@ export function paidCount(list: Sponsor[]): number {
 export const railTaken = () => paidCount(railSponsors);
 export const marqueeTaken = () => paidCount(marqueeSponsors);
 export const edgeTaken = () => paidCount(edgeSponsors);
+
+/**
+ * A counter reading "0 of 8 taken" publishes the price and the proof nobody paid
+ * it in the same breath. Until there is real demand to report, the surfaces show
+ * a capped founding cohort instead, which is true and does not argue against us.
+ */
+export const FOUNDING_SLOTS = 4;

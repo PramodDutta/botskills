@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { railSponsors, railTaken, RAIL_CAP } from '@/lib/sponsors';
+import { railSponsors, FOUNDING_SLOTS } from '@/lib/sponsors';
 
 // botdirectory-pattern rail: sticky beside the leaderboard on desktop. Demo
 // entries are fictional brands showing how sold inventory looks; the corner
@@ -23,7 +23,7 @@ export function SponsorRail() {
         </Link>
       ))}
       <Link href="/sponsor" className="rail-book">
-        {railTaken()} of {RAIL_CAP} taken · <b>$360/mo</b>
+        {FOUNDING_SLOTS} founding slots · <b>$99/mo</b>
       </Link>
     </aside>
   );

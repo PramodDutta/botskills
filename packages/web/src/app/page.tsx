@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { url: 'https://botskills.sh' },
 };
 import { SponsorRail } from '@/components/sponsor-rail';
-import { marqueeSponsors, marqueeTaken, MARQUEE_CAP } from '@/lib/sponsors';
+import { marqueeSponsors } from '@/lib/sponsors';
 
 export default async function HomePage() {
   const rows = await getBoardRows();
@@ -74,7 +74,7 @@ export default async function HomePage() {
                 </span>
               ))}
               <span className="spon slot">
-                <Link href="/sponsor">Advertise · {marqueeTaken()} of {MARQUEE_CAP} taken · $120/mo</Link>
+                <Link href="/sponsor">Advertise · founding rate · $29/mo</Link>
               </span>
             </span>
           ))}
