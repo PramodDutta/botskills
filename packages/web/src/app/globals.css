@@ -170,3 +170,29 @@ td.who { color: var(--muted); font-size: 0.78rem; white-space: nowrap; }
   letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
   border: 1px dashed var(--accent); border-radius: 5px; padding: 0.1rem 0.4rem;
   vertical-align: 2px; }
+
+/* ---- sponsor rail (botdirectory pattern) ---- */
+.board-grid { display: grid; grid-template-columns: 1fr 230px; gap: 0.9rem;
+  align-items: start; }
+@media (max-width: 860px) { .board-grid { grid-template-columns: 1fr; } }
+.rail { position: sticky; top: 0.8rem; display: flex; flex-direction: column;
+  gap: 0.6rem; }
+.rail-head { font-size: 0.6rem; letter-spacing: 0.12em; color: var(--muted); }
+.rail-card { border: 1px solid var(--line); border-radius: 10px;
+  background: var(--surface); padding: 0.7rem 0.75rem; display: flex;
+  gap: 0.6rem; align-items: flex-start; }
+.rail-card:hover { border-color: var(--line2); }
+.rail-card.is-slot { border-style: dashed; }
+.rail-card .sq { width: 24px; height: 24px; border-radius: 6px;
+  background: var(--raise); border: 1px solid var(--line2); flex: none; }
+.rail-txt { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.rail-name { font-weight: 600; font-size: 0.82rem; }
+.rail-line { font-size: 0.73rem; color: var(--muted); line-height: 1.4; }
+.rail-cta { font-size: 0.73rem; color: var(--accent); font-weight: 600;
+  margin-top: 0.15rem; }
+.rail-book { border: 1px dashed var(--line2); border-radius: 8px;
+  text-align: center; font-size: 0.72rem; color: var(--muted);
+  padding: 0.45rem 0.5rem; }
+.rail-book b { color: var(--ink); }
+.rail-book:hover { border-color: var(--accent); color: var(--ink); }
+@media (max-width: 860px) { .rail { position: static; } }

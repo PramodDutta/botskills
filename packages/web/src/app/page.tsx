@@ -3,6 +3,8 @@ import { getAllBots } from '@/lib/bots';
 import { getBoardRows, DEMO_METRICS } from '@/lib/board';
 import { CATEGORIES } from '@botskills/shared';
 import { Leaderboard } from '@/components/leaderboard';
+import { SponsorRail } from '@/components/sponsor-rail';
+import { marqueeOpenCount, MARQUEE_CAP } from '@/lib/sponsors';
 
 export default function HomePage() {
   const rows = getBoardRows();
@@ -29,7 +31,7 @@ export default function HomePage() {
             <span key={k} className="marquee-seg">
               <span className="spon"><span className="sq" />Your tool here</span>
               <span className="spon"><span className="sq" />Sponsor slot</span>
-              <span className="spon slot"><Link href="/sponsor">Advertise · slot 1 of 8</Link></span>
+              <span className="spon slot"><Link href="/sponsor">Advertise · {MARQUEE_CAP - marqueeOpenCount()} of {MARQUEE_CAP} taken · $120/mo</Link></span>
             </span>
           ))}
         </div>
@@ -73,7 +75,10 @@ export default function HomePage() {
             </Link>
           ))}
         </div>
-        <Leaderboard rows={rows} />
+        <div className="board-grid">
+          <Leaderboard rows={rows} />
+          <SponsorRail />
+        </div>
         <p className="trustnote">
           <span className="tick">✓</span> Copies are counted by install telemetry and refreshed
           hourly, not self-reported. Telemetry ships before launch; numbers shown in development
