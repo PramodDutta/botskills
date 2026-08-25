@@ -1,0 +1,4 @@
+{
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm --filter @botskills/shared build && pnpm --filter @botskills/web build"
+}
