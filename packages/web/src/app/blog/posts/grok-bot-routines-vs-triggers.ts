@@ -2,13 +2,13 @@ import type { BlogPost } from './index';
 
 export const post: BlogPost = {
   title:
-    'Schedules vs Event Triggers: Building Routines That Do Not Fail Silently',
+    'Schedules vs Event Triggers: Routines That Never Fail Silently',
   description:
     'Grok Bot routines bind one workflow to one bot and keep only 20 run records. Pick the right trigger, survive silent failure, and design around the ten minute cap.',
   date: '2026-08-25',
   category: 'Guide',
   content: `
-# Schedules vs Event Triggers: Building Routines That Do Not Fail Silently
+# Schedules vs Event Triggers: Routines That Never Fail Silently
 
 A routine that stopped firing looks exactly like a routine with nothing to
 report. Both produce silence. You will notice the difference somewhere between
@@ -19,7 +19,7 @@ This is about the object model first, because the constraints on a Grok Bot
 routine are specific and published, and they change what a sensible design
 looks like.
 
-## What a routine actually is
+## A routine binds one workflow to one bot, and dies with it
 
 The documented shape, from
 [skills, routines and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations):
@@ -60,7 +60,7 @@ only available response to a misbehaving routine is to stop it. Which is an
 argument for making every routine safe to stop at any point, and for never
 scheduling something whose half-completed state is worse than not running.
 
-## Schedule triggers and event triggers, side by side
+## Choose between a clock and a cause, not between good and better
 
 The choice is not really "which is better". It is whether the work has a clock
 or a cause.
@@ -70,15 +70,16 @@ anything that must exist by a certain time regardless of activity, and a waste
 everywhere else. An event fires when reality changed, so it never runs for
 nothing and never runs at a predictable time.
 
-| Trigger | Good fit | How it fails, and what you will see |
-|---|---|---|
-| Daily schedule | Morning briefs, overnight change reports | Fires in a timezone you did not intend, so it lands at 3am and you stop reading it |
-| Weekday schedule | Standups, pipeline reviews, working-week work | Runs on public holidays and while you are away, producing output nobody reads |
-| Weekly schedule | Reconciliation, planning, metric reviews | Too coarse to warn you, so it becomes a post-mortem of a problem that started Tuesday |
-| Monthly schedule | Invoicing, access reviews, subscription audits | Collides with every other system's month-end batch, so data is slow and unsettled |
-| Event trigger | Inbound mail, new PR, form submission | The matching rule silently stops matching after a label, channel, or form is renamed. No error, just nothing |
-| Manual run | New routines, irregular but repeated work | Never gets run, and the bot decays into a bookmark you feel guilty about |
-| Tight polling interval | Almost nothing | Overlapping runs, duplicated actions, rate limits, and burn on runs that find nothing |
+| Trigger | Good fit | How it fails, and what you will see | The check that catches it |
+|---|---|---|---|
+| Daily schedule | Morning briefs, overnight change reports | Fires in a timezone you did not intend, lands at 3am, and you stop reading it | The range line at the foot of the report |
+| Weekday schedule | Standups, pipeline reviews, working-week work | Runs on public holidays and while you are away, producing output nobody reads | A monthly look at unread outputs |
+| Weekly schedule | Reconciliation, planning, metric reviews | Too coarse to warn you, so it becomes a post-mortem of a Tuesday problem | Nothing catches this. Change the cadence |
+| Monthly schedule | Invoicing, access reviews, subscription audits | Collides with every other month-end batch, so data is slow and unsettled | Requested against received counts |
+| Event trigger | Inbound mail, new PR, form submission | The matching rule stops matching after a label, channel, or form is renamed. No error, just nothing | A watcher on the heartbeat file |
+| Chained trigger | Second stage of a split workflow | Stage one fails quietly, so stage two runs on yesterday's artifact | A freshness check on the artifact |
+| Manual run | New routines, irregular but repeated work | Never gets run, and the bot decays into a bookmark you feel guilty about | A calendar reminder, not a routine |
+| Tight polling interval | Almost nothing | Overlapping runs, duplicated actions, rate limits, burn on runs that find nothing | A per-run counter line |
 
 The event trigger row is the one worth staring at. Its failure mode produces
 no error and no output, which is indistinguishable from a quiet week. Every
@@ -90,7 +91,28 @@ without cron syntax, there is a fuller treatment in
 [the Grok Bot scheduling guide](/blog/grok-bot-scheduling). This article picks
 up where trigger choice ends.
 
-## Timezone traps that survive a correct schedule
+## Decide the trigger from the cost of being late
+
+Trigger arguments go in circles because people compare frequencies. Ask instead
+what it costs to find out an hour late, and a day late. The gap between those
+two numbers picks the trigger for you.
+
+| What it watches | An hour late | A day late | Trigger that fits |
+|---|---|---|---|
+| Overnight changes you read each morning | Nothing | Nothing | Daily schedule |
+| Your own inbox | Nothing | A slow reply | Twice on weekdays |
+| A pull request awaiting review | Nothing | A blocked colleague | Event on new commits |
+| A customer's first message | A little | A churn risk | Event, with a daily cap |
+| A failed payment | A little | A chase in your name | Event, drafting only |
+| Competitor pricing | Nothing | Nothing | Weekly |
+| A monthly report number | Nothing | Nothing | Monthly, plus a mid-month check |
+
+Most rows are flat across both columns, which is the finding: for most standing
+work an hour of latency is worth nothing, and a schedule with a knowable worst
+case beats an event trigger with a better average. Reserve events for the rows
+where the two columns differ, and cap each per day.
+
+## Three timezone traps survive a perfectly correct schedule
 
 Three of these, briefly, because they are the most common cause of a routine
 that fired perfectly and still produced the wrong thing.
@@ -111,7 +133,17 @@ may be UTC, or a company default, or a choice someone made years ago. Write
 explicit date ranges into the charter and require the bot to state the range
 it used in every report. An invisible mismatch becomes a line you can read.
 
-## One bot, many routines, and the overlap problem
+Concretely: a 07:00 London routine asking a UTC analytics tool for yesterday
+gets a correct window. After the clocks change it is asking at 06:00 UTC for a
+day that closed six hours ago in one system and is still open in another, and
+the report will not mention it.
+
+A fourth trap appears only with more than one bot. Two routines anchored to
+different timezones drift into and out of overlap twice a year, so a stagger
+that worked all winter produces contention for three weeks in spring. Anchor
+every routine on one bot to the same timezone and shift the content instead.
+
+## Stagger routines on one bot, and never split them for isolation
 
 Because routines attach to a single bot, all of a bot's routines share that
 bot. The documentation describes each bot as having its own screen on a shared
@@ -137,6 +169,16 @@ eight per bot you cannot hold the schedule in your head, and there is no
 team-level view to hold it for you. A bot with thirty routines is not an
 automation setup, it is an outage waiting for a reason.
 
+Contention does not announce itself as an error. Two routines started in the
+same minute usually show up as one output that arrived late and one that
+arrived incomplete, or as the same item processed twice with slightly different
+wording. Neither reads as a scheduling problem from the inbox, and both read as
+the model being flaky, which is how people rewrite a charter that was fine.
+
+Record how long each routine takes on a normal day, then set the next start at
+that number doubled. Unmeasured, assume a browser-driven routine takes three
+times as long as you expect.
+
 The stagger is easier when each bot has one clear job.
 [Chief of Staff Briefing](/bots/chief-of-staff-briefing) runs early and reads,
 never sending, scheduling, or acting externally without approval.
@@ -144,7 +186,7 @@ never sending, scheduling, or acting externally without approval.
 direct message, never a shared channel. Two bots, two slots, two boundaries,
 and no contention.
 
-## What silent failure looks like, and the watcher that catches it
+## Catch silent failure with a heartbeat and a watcher
 
 Start with the diagnosis, because two very different problems present
 identically.
@@ -210,6 +252,38 @@ you have built an automated retry loop with no ceiling and given it a
 schedule. Detection and remediation are different jobs, and only one of them
 is safe to leave running.
 
+## Verify the watcher by breaking something on purpose
+
+A watcher you have never seen fire is one you are trusting on faith, and faith
+is what this design was supposed to replace.
+
+Test it directly. Pause the routine it watches, leave it paused past its
+cadence plus the grace period, and wait for the watcher's next run. The correct
+outcome names that routine, its cadence, and how long it has been silent.
+Anything else is a finding: a grace period so generous the gap is invisible, a
+routine missing from the expected list, or a watcher reading a heartbeat file
+the other routine never writes to.
+
+Repeat it whenever you add a routine. The failure this catches is not the
+watcher breaking, it is a new routine never added to the expected list, watched
+by nothing while looking as monitored as the rest.
+
+## Answer the objection that a watcher is one more thing to break
+
+The fair criticism is that the answer to a routine failing silently should not
+be a second routine that can also fail silently.
+
+It would be, if the watcher were the same kind of component. It is smaller: it
+reads one file, compares timestamps, and writes a message, so it has almost no
+surface to fail on next to a routine driving a browser through a login. And it
+is louder: it reports every run, including the ones where everything is
+current, so a silent watcher is itself a visible signal.
+
+One case stays uncovered, and it is worth stating rather than papering over. If
+the watcher stops and you stop noticing its daily line, nothing tells you. The
+only cure is that its output is the one message you actually read, which argues
+for one line.
+
 ## Twenty run records is a short evidence window
 
 The app keeps the 20 most recent run records per routine. Convert that into
@@ -254,7 +328,7 @@ If a routine has already gone quiet and you are trying to work out why, the
 symptom-by-symptom list is in
 [the troubleshooting reference](/blog/grok-bot-troubleshooting).
 
-## Designing around the ten minute demonstration cap
+## Design around the ten minute demonstration cap
 
 Teach by demonstration is the fastest way to get a workflow into a bot, and it
 comes with a specific set of limits: it records visible computer interaction
@@ -291,11 +365,21 @@ actual work.
 is editing the result.
 
 A weekly reconciliation that takes forty minutes by hand becomes four
-segments: pull the export, reconcile the flagged rows, update the tracker,
-write the summary. Each is under ten minutes because each ends where a real
-document was saved. Those become separate routines chained by artifact, or one
-workflow assembled from four drafts, and either way the failure of segment
-three tells you exactly which artifact is missing.
+segments. Each is under ten minutes because each ends where a real document was
+saved, and the artifact column is what makes a failure legible.
+
+| Segment | Starts from | Ends at | If it fails you see |
+|---|---|---|---|
+| 1 Pull the export | The report URL | A file in the downloads folder | No file, and nothing downstream runs |
+| 2 Reconcile flagged rows | That file | A marked-up copy saved beside it | The original, with no marked-up twin |
+| 3 Update the tracker | The marked-up copy | Saved rows in the tracker | A marked-up copy nobody consumed |
+| 4 Write the summary | The tracker | A summary message to you | Silence, with the tracker current |
+
+Those become separate routines chained by artifact, or one workflow assembled
+from four drafts, and either way a failure in segment three tells you which
+artifact is missing. Give each later segment one extra instruction: check that
+its input artifact is from today, and stop if it is not. Without that, a failed
+segment two produces a segment three running happily on last week's file.
 
 That decomposition has a second benefit worth naming: shorter units are easier
 to bound. A four minute segment that only reads has an obvious boundary. A
@@ -306,7 +390,24 @@ copy here, touching only your local calendar and never editing the shared
 source, and [Inbox Triage](/bots/inbox-triage) never sends, so every draft
 waits for approval.
 
-## Before you switch anything on
+## Where a routine is the wrong shape for the job
+
+Three cases where the honest move is not to schedule it at all.
+
+Work that needs a decision partway through. If the middle of the job is a
+judgment call, the routine either waits, holding its bot until you notice, or
+it guesses. Split it so the routine ends at the decision and hands you a list.
+
+Work whose half-completed state is worse than not running. On iPhone your only
+control is pause and resume, so if stopping mid-flight leaves a partly updated
+tracker, you have built something you cannot safely stop from the device you
+will actually have with you.
+
+Work you do not yet understand. A routine encodes a process, and encoding one
+you are still inventing means debugging two things at once. Run it by hand
+until the steps stop changing, then automate what settled.
+
+## Run five checks before you switch anything on
 
 Five checks, in order, and none of them take long.
 
@@ -323,6 +424,8 @@ gone quiet, check whether the run history shows a failed run or no run at all
 before you change anything. Those two diagnoses point at completely different
 fixes, and with 20 records to work from, you may only get one chance to read
 the evidence.
+
+**Keep reading:** [Rakazo Routines](/blog/rakazo-routines), [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers), [The Best AI Bots for Founders in 2026](/blog/best-ai-bots-for-founders).
 
 ## Frequently Asked Questions
 

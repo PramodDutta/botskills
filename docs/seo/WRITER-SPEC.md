@@ -34,7 +34,7 @@ Do NOT touch `index.ts`. Registration is handled centrally. Write only your own 
 - >= 1 fenced code block showing a real, pasteable bot charter or config, for any technical topic.
 - Ends with a `## Frequently Asked Questions` section containing exactly 4 `###` questions, each answered in 60-110 words of prose (no lists inside answers). These are the AI-citation surface, so each answer must stand alone without the surrounding article.
 - `description`: 140-170 characters, contains the target keyword, reads like a promise not a summary.
-- `category`: one of Guide, Reference, Tutorial, Comparison, Safety, Integration, Playbook.
+- `category`: one of Guide, Reference, Tutorial, Comparison, Safety, Playbook, Migration, Announcement. Adding a new one means adding it to the ORDER array in `packages/web/src/app/blog/page.tsx`, or it sorts to the bottom of the index.
 - `date`: '2026-08-25'.
 
 ## Internal links

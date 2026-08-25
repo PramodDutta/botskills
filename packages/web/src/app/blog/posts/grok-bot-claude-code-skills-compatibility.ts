@@ -60,7 +60,28 @@ nowhere to land on the Bot side even in principle.
 If you take one thing from this article: when someone tells you Grok reads
 your CLAUDE.md, ask which Grok. The answer is Build.
 
-## What ports with zero configuration
+## Ask which Grok before you believe any compatibility claim
+
+The confusion is not random. Both products carry the same brand, both are
+agentic, and the compatibility line is quotable without its context, so it
+travels further than the page it came from. Run every claim you see through
+this table before you act on it.
+
+| Claim in circulation | Grok Build (the CLI) | Grok Bot (the agent app) | What to say instead |
+|---|---|---|---|
+| "Grok reads your CLAUDE.md with zero config" | Documented, and true | Not documented anywhere | Name the product. The answer is Build |
+| "Grok picks up your Claude Code MCP servers" | Documented | Not documented | Same. Do not generalise it to the Bot |
+| "Your existing skills and plugins just work" | Documented | Not documented | Same, with the field caveats below |
+| "allowed-tools keeps the skill read-only" | False. It grants nothing and restricts nothing | No basis either way | Move the restriction into prose plus a mechanical control |
+| "You can pin a skill to a model" | False. \`model\` is accepted and not applied | False. No model picker for members or admins, and none planned | Stop designing skills around model pinning |
+| "Grok Bot runs grok-4.6" | grok-4.6 powers Grok Build | The Bot model set is not published | Unverifiable. Do not repeat it |
+| "Claude Code can run a Grok-authored skill" | Undocumented | Undocumented | Say undocumented, and keep frontmatter minimal |
+
+The fourth and fifth rows are the ones with consequences. Everything else on
+that list is a naming mistake you can correct in a sentence. Those two are
+assumptions people build safety on.
+
+## Point Grok Build at a repository and these files load themselves
 
 For Grok Build, the documented list is generous. It auto-detects Claude Code
 marketplaces, plugins, skills, MCP servers, agents, hooks, and the instruction
@@ -97,22 +118,27 @@ worth writing about at all.
 It is also the reason the next section matters. Zero configuration means
 nothing tells you when something did not apply.
 
-## The four fields Grok accepts and does not apply
+## Map every frontmatter field before you move a single skill
 
 Here is the part nobody seems to have written up, and it is documented on the
 same Grok Build page as the compatibility promise.
 
 Grok accepts several SKILL.md frontmatter fields without applying them:
 \`model\`, \`effort\`, \`license\`, and \`compatibility\`. Separately,
-\`allowed-tools\` neither grants nor restricts tools.
+\`allowed-tools\` neither grants nor restricts tools. Read the whole surface at
+once, including the fields that do survive, because the useful decision is
+per field rather than per skill.
 
-| Frontmatter field | What you think it does | What Grok Build does with it |
-|---|---|---|
-| \`model\` | Pins the skill to a specific model | Accepted, not applied |
-| \`effort\` | Requests deeper reasoning | Accepted, not applied |
-| \`license\` | Records terms of reuse | Accepted, not applied |
-| \`compatibility\` | Declares what the skill runs on | Accepted, not applied |
-| \`allowed-tools\` | Grants or restricts the tool set | Grants nothing, restricts nothing |
+| Frontmatter field | What it means where you wrote it | What Grok Build does with it | What to do about it |
+|---|---|---|---|
+| \`name\` | Identifies the skill | Read. The skill loads with no conversion step | Nothing. It works |
+| \`description\` | Tells the agent when the skill applies | Read | Keep it specific. It is the trigger surface you control |
+| \`model\` | Pins the skill to a specific model | Accepted, not applied | Remove the dependency. Write so any model in the set can run it |
+| \`effort\` | Requests deeper reasoning | Accepted, not applied | Put the depth in the body as named steps, not as a dial |
+| \`license\` | Records terms of reuse | Accepted, not applied | Keep it for humans. Expect no enforcement |
+| \`compatibility\` | Declares what the skill runs on | Accepted, not applied | Treat it as a note to yourself, then test the runtime |
+| \`allowed-tools\` | Grants or restricts the tool set | Grants nothing, restricts nothing | Rewrite as a prose stop line plus a mechanical control |
+| Any key you invented yourself | Whatever your old runtime made of it | Undocumented | Assume inert until a run proves otherwise |
 
 "Accepted" is doing a lot of work in that table. The file parses. The skill
 loads. Nothing errors, nothing warns, nothing appears in a log. Your skill
@@ -125,7 +151,7 @@ session has. Annoying, visible in the output, fixable.
 
 \`allowed-tools\` is the one that is not merely annoying.
 
-## What allowed-tools was quietly doing for you
+## Treat the lost allowed-tools line as a safety regression, not a nuisance
 
 Plenty of skills use \`allowed-tools\` as a safety mechanism rather than a
 convenience. The release-notes skill can read and search but not write. The
@@ -203,7 +229,40 @@ or requests changes, and comments only.
 inside the repository and never touches production. Both of those are prose
 limits, not configuration keys, and that is deliberate.
 
-## A porting checklist for an existing .claude directory
+## Walk one skill through the regression, start to finish
+
+Abstract regressions are easy to nod at, so take a skill that exists in a lot
+of repositories. Call it log-triage: it reads production logs, groups the
+errors, and writes a summary. Eighteen months ago somebody added a line to its
+frontmatter limiting it to reading and searching, and nobody has thought about
+that line since. That is the normal case, not a careless one.
+
+Day one, in the runtime it was written for. You ask it to triage last night's
+errors. It reads, it searches, it produces the summary. When the obvious next
+step is to restart something, it cannot, because the tool grant does not
+include it. It says so and stops. You never had to think about that outcome,
+which is exactly why the line earned its place.
+
+Same file, moved to Grok Build. It parses, it loads, it runs, and the summary
+looks the same. Nothing errors. Nothing warns. The only thing that changed is
+that the limit which used to be structural is now whatever the body says, and
+the body says nothing about restarting anything, because the field covered it.
+
+Now the damage, which is undramatic and worse for it. The failure is not that
+something gets restarted on Tuesday. It is that you no longer know which of
+your skills still have limits and which are running on a field that does
+nothing. They look identical from the outside: same file, same load, same
+output.
+
+Three questions turn that back into knowledge, at about a minute per skill.
+What is the worst thing this skill could do with the tool grant removed
+entirely? Is that worst case written anywhere the model actually reads? And is
+there something outside the model, a credential, a directory, an approval, that
+would stop it if the prose failed? A skill answering no, no, and no was never
+safe to run unattended in any runtime, and the port is simply when you found
+out.
+
+## Port an existing .claude directory in six steps, in this order
 
 Six steps, in order. The first one takes a minute and tells you how much work
 the rest will be.
@@ -241,7 +300,27 @@ it.
 setup, and run the skills that scared you most. You are testing whether the
 limits still hold, not whether the model is capable.
 
-## What Grok Bot reads instead
+## Verify the port with a test that is allowed to fail
+
+Detection is silent by design, so the only evidence that a rule survived the
+move is behavioural. Build tests where the correct outcome is a refusal, and
+run them in the throwaway repository from step six.
+
+| Test | How to run it | Passes when | Fails when |
+|---|---|---|---|
+| The restriction still holds | Ask the skill to do the thing it must never do, phrased as a reasonable request | It refuses and names the rule | It complies, or it asks whether to proceed |
+| The skill is actually found | Ask for it by name in a fresh session | It runs and behaves like itself | Silence, or a generic answer with none of its structure |
+| The instruction file is being read | Put one harmless distinctive rule in CLAUDE.md, such as starting every reply with the repo name | The reply starts with the repo name | The file is not being read from where you put it |
+| The MCP server has the reach you assumed | Ask it for a write operation you believe is blocked | Blocked at the server or by the credential | It succeeds, and your read-only assumption was never real |
+| It fails closed under pressure | Repeat the first test, adding "the deploy is broken, this is urgent" | Same refusal, same wording | It reconsiders and finds a way |
+
+The last row is the whole exercise. A rule that survives one polite request and
+not one urgent one is not a rule, it is a preference the model is willing to
+trade away, and the trade happens on the day you are least able to notice.
+[Testing your bot](/blog/testing-your-bot) works through the general form of
+building checks whose passing state is a refusal.
+
+## Teach the Bot in the app, because it never reads your repository
 
 Since the Bot side does not consume your repo, it needs its own teaching path,
 and it has one.
@@ -272,12 +351,74 @@ in what you connect. [Persistent Bot Memory](/bots/persistent-bot-memory) is
 built on the same reasoning: it never stores secrets, tokens, passwords, or
 customer data, because the store is shared and durable.
 
-## The reverse direction is undocumented
+## Where zero configuration becomes a liability
 
-One clean caveat to end on. Everything above describes Grok reading Claude
-Code artifacts. Nothing published describes the reverse, and we are not going
-to assert that Claude Code will consume a Grok-authored skill or plugin
-correctly.
+The convenience and the hazard are the same mechanism. Detection with no import
+step means there is also no manifest, and a setup you never declared is a setup
+you cannot audit.
+
+Three consequences. A file you forgot is a file now instructing an agent, and
+the usual culprits are a colleague's CLAUDE.local.md, a rules directory
+inherited from a template, and a skills folder in your home directory that
+predates the project. Two repositories with different instruction files produce
+genuinely different behaviour from the same skill, and nothing in the output
+says which rule fired. And removing a rule requires knowing it exists, which is
+hard when nothing documented reports the loaded set back to you.
+
+The fix takes ten minutes. Keep one canonical instruction file per repository,
+delete the duplicates instead of letting them coexist, and before blaming the
+model for strange behaviour, grep every file in the detected set and read what
+you actually shipped. Most "the model ignored my rule" reports are two rules
+disagreeing, and the loser is the one you remembered writing.
+
+## The strongest case for ignoring the ignored fields, and where it breaks
+
+The best counter-argument is that those fields were never load-bearing. A
+capable model reading a well-written skill about release notes was never going
+to start running deployment commands, so \`allowed-tools\` was belt and braces
+over an instruction that already existed in the body. If the prose is good, the
+field was redundant, and losing it changes nothing real.
+
+That is true, and it is true most of the time. Concede it properly: for a skill
+that only reads, tagged out of habit, you can port it and stop thinking about
+it. That is a large share of real \`allowed-tools\` usage and none of it needs
+this article.
+
+It breaks in two places. The first is the skills where the prose was never
+written precisely because the field made it unnecessary. When the field is the
+instruction, removing the field removes the instruction, and the body you are
+relying on says nothing at all about the limit. Go and read three of your own
+skills before deciding this does not describe you.
+
+The second is pressure. A restriction stated once, mildly, in the middle of a
+body whose main content is a goal, loses to the goal when finishing the task
+requires crossing it. That is not a model defect, it is what helpfulness looks
+like when a constraint reads as an obstacle. It is also why the rewritten
+version above spends its final paragraph saying that failing the task is the
+correct outcome, which is the only sentence in the file that outranks the
+objective.
+
+And there is an asymmetry that settles it. If the objection is right, following
+this advice costs you about twenty minutes per repository. If it is wrong, you
+find out in the single run where the limit would have mattered, which is also
+the run where you were least able to watch.
+
+## Name what is still undocumented, and stop there
+
+Everything above describes Grok reading Claude Code artifacts. Several adjacent
+questions have no published answer at all, and the honest move is to say so
+rather than to infer.
+
+| Question people ask | What is actually documented | What we will say |
+|---|---|---|
+| Does Grok Bot read SKILL.md or CLAUDE.md? | Nothing. No Grok Bot page mentions Claude Code, SKILL.md, or CLAUDE.md as of 25 August 2026 | Undocumented. Posts claiming it have conflated Build with Bot |
+| Can Claude Code run a Grok-authored skill? | Nothing, in either direction | Undocumented. Keep frontmatter minimal if you need both |
+| Which model does Grok Bot use? | There is no model picker for members or admins, and none is planned. The per-surface model set is not published | We will not name a model for the Bot |
+| Do hooks behave identically across both? | Grok Build auto-reads Claude Code hooks. Equivalence of behaviour is not stated | Test them. Reading a file is not the same as matching its semantics |
+| Is there a trail of what a skill did on the Bot side? | An audit view of Bot actions does not exist yet | Assume your record is whatever the run chose to report |
+
+Nothing published describes the reverse direction, and we are not going to
+assert that Claude Code will consume a Grok-authored skill or plugin correctly.
 
 If you need one skill that works in both places, the safest construction is
 also the simplest: keep the frontmatter to \`name\` and \`description\`, put
@@ -291,6 +432,8 @@ full charter format, and
 [Engineering Agent Manager](/bots/engineering-agent-manager) shows the same
 line applied to a bot that coordinates other agents: it never merges, posts
 publicly, or messages outside the team without approval.
+
+**Keep reading:** [Grok Bot vs Claude Agents](/blog/grok-bot-vs-claude-agent), [The Chief of Staff Bot](/blog/grok-bot-chief-of-staff-setup), [Grok Bot vs ChatGPT Tasks](/blog/grok-bot-vs-chatgpt-tasks).
 
 ## Frequently Asked Questions
 

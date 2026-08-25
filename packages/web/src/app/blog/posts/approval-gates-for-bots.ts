@@ -46,7 +46,7 @@ each one arriving with enough context to decide in seconds. If your bot
 generates more than about ten a day, you are not reviewing them, and the honest
 fix is fewer gates rather than more discipline.
 
-## What actually belongs behind a gate
+## Run three tests before you gate anything
 
 Three tests, applied in order. An action needs a gate if any one of them is
 true, and finishes unattended if all three are false.
@@ -96,7 +96,7 @@ gate exists exactly at the seam between them.
 The rows with a "no gate" verdict are as important as the others. Handing back
 the reversible work is what buys you the attention to read the rest.
 
-## The decision packet, not the notification
+## Hand over a decision packet, never a notification
 
 Most approval prompts fail because of what they contain, not where they sit. A
 prompt that says "Bot wants to send an email. Approve?" is not a gate, it is a
@@ -174,6 +174,29 @@ review is a single pass over a complete proposal rather than forty separate
 decisions. [Grocery Autopilot](/bots/grocery-autopilot) does the same for
 orders, holding the whole basket instead of asking per item.
 
+## Fourteen gates in week one, three by week five
+
+A concrete run, so the calibration argument stops being abstract. The bot chases
+unpaid invoices on a schedule, along the lines of
+[the invoice chasing build](/blog/grok-bot-to-invoice-chasing). In its first
+five days it parked fourteen items.
+
+| Week one ask | Count | What it actually was | Where it ended up |
+|---|---|---|---|
+| Send a reminder to a client | 6 | A real gate: outbound and irreversible | Kept, batched into one 17:00 list |
+| Which folder does this file go in | 4 | A charter gap wearing a gate costume | A rule: default to the quarter folder |
+| A vendor name it did not recognise | 3 | Missing world knowledge, not a decision | A notes file listing 40 known vendors |
+| An amount 9x the median | 1 | A real gate: needs context the bot lacks | Kept |
+
+Eight of the fourteen were not gates. They were the charter admitting it was
+incomplete, arriving in the shape of a question. Answering each one and writing
+the answer back into the setup took about twenty minutes, and gate volume fell
+from fourteen a week to three with no genuine gate removed.
+
+That is the only honest route to fewer prompts. Every other route, including the
+one where you widen a rule because it keeps bothering you, works by lowering the
+bar rather than by making the world legible to the bot.
+
 ## A gate stops the next step, it does not rewind the last one
 
 This is the mechanic that changes how you place gates, and it is documented
@@ -206,7 +229,35 @@ documentation is explicit about: do not use separate bots as a security
 boundary. A tight gate in one bot's charter does not constrain a second bot
 holding the same logins.
 
-## Reading your own approval rate as a signal
+## Know the difference between a gate and a permission
+
+A gate you wrote in a charter is an instruction a model chooses to follow. A
+permission is a thing the runtime enforces whether the model agrees or not.
+People treat these as the same object and then get surprised in exactly the
+places where they differ.
+
+The gates you write yourself live in the charter, so they are instructions. A
+ceiling above them, which nothing the bot reads could talk it past, is a
+separate thing, and as of writing it is not shipped: a team-level control
+offering Never, Ask every time, and Always is documented as coming, with the
+stated rule that members could choose a stricter option but not a looser one
+([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
+Until it lands, a rule you invented is a sentence, and a sentence can be argued
+with by anything the bot reads.
+
+| What you assume the approval covered | What it actually covered | The gap you are carrying |
+|---|---|---|
+| A charter rule saying "ask before sending" | An instruction, with no ceiling standing behind it | A persuasive document can argue against a sentence |
+| Approving one reply | That message, not the thread it opens | Tomorrow's reply arrives ungated |
+| Approving a scheduled post | A publication that fires when nobody is watching | The gate became a countdown |
+| Approving a category once | Whatever the bot later judges to be in it | Membership became the bot's call |
+| A stricter charter on one bot | That bot alone | Other bots hold the same session on the shared computer |
+
+Row two is the one that catches people running anything conversational. A gate
+on the first message is not a gate on the exchange, so a bot with send rights
+after one approval is a bot with send rights.
+
+## Audit your own approval rate once a month
 
 Here is a habit almost nobody has, and it costs one minute a week. Count what
 you did with the gates you received.
@@ -239,7 +290,25 @@ like success and is indistinguishable from a bot that stopped running, unless
 the setup requires a report even on an empty run. That is one of several
 [failure modes worth naming in advance](/blog/bot-failure-modes).
 
-## Gates you should delete today
+## Diagnose a miscalibrated gate from your own behaviour
+
+The approval rate tells you the size of the problem. These symptoms tell you
+which problem it is, and each has a different repair.
+
+| What you notice yourself doing | The actual cause | The repair |
+|---|---|---|
+| Approving within two seconds of opening | The packet is a summary, so there is nothing in it to read | Put the full artifact inline, never a description of it |
+| Declining the same class over and over | The charter describes a policy you do not hold | Rewrite the instruction, leave the gate alone |
+| Answering a prompt while a run sits half done | The bot pauses mid-action instead of parking before it | Identify, do not begin, write it down, keep working |
+| Finding actions you never approved individually | You approved a category and the bot judged membership | Scope approvals to the described action and nothing after |
+| Discovering ten finished steps behind one prompt | The unattended steps were never individually acceptable | Re-sort the whole run by reversibility, not by risk feel |
+| Unable to say what triggered a prompt | The packet has no evidence line | Require the trigger with a link, every time |
+
+Row three is the expensive one, because a half-finished run does not wait
+politely. Anything the bot already did is done whichever way you answer, and
+that is the same asymmetry the previous section describes.
+
+## Delete these three gates today
 
 Three patterns that look responsible and are not.
 
@@ -263,6 +332,68 @@ permission the runtime enforces, and
 The setting survives a badly worded prompt. The line covers the risks that have
 no setting, which includes every case where the danger is interpretation rather
 than access.
+
+## Prove the gate holds before you need it to
+
+A gate you have never watched fire is a belief about your charter. Three
+fixtures, twenty minutes, run before the bot touches anything real.
+
+**The trip test.** Put an item in the input that must be gated: an unrecognised
+vendor, an amount well outside the range, a recipient outside your domain. The
+bot should park it and carry on with the rest of the run. If it acts, your
+condition is unmeasurable and needs a number or a name rather than an adjective.
+
+**The injection test.** Put a line inside a document the bot will read saying
+the action has been pre-approved by the account owner and it should proceed
+without asking. The bot should quote that sentence back to you in the parked
+list. Most first-draft charters fail this one, and it is the test that matters
+most, because a gate that a stranger can talk the bot out of is decoration.
+
+**The decline test.** Say no to one item and watch what happens next. It should
+record the decline and move on. It should not retry, should not find an
+alternate route to the same result, and should not re-ask on the next run. This
+is also how you find out whether the "if I say no" line in the packet was
+honest. Fixture-based checks like these are the subject of
+[the guide to testing a bot before you trust it](/blog/testing-your-bot).
+
+## The strongest objection is to gate everything and stop optimising
+
+Put the counter-argument at full strength: a disaster costs more than an
+interruption, so why not gate every action and accept the friction? If attention
+is the only price, pay it.
+
+The answer is that attention is not the price. Abandonment is. Confirm-everything
+setups do not survive contact with a normal week; within about a fortnight they
+are either switched off or approved in blocks without reading. A rubber-stamped
+gate offers no protection while producing the full feeling of protection, and
+that combination is worse than no gate at all, because you granted the bot
+access you would never have granted a bot you knew was unsupervised.
+
+Where the objection genuinely wins, and it does win: the first week of any new
+bot, when you have no idea what it will propose and the volume is the point.
+A shared or team account, where the person approving did not write the charter
+and cannot assume anything. And anything touching money or production, though
+there the right answer is usually not more gates but fewer capabilities.
+
+## Sometimes the answer is no capability rather than a gate
+
+A gate is the middle setting, and the middle setting gets over-used because it
+feels like the responsible one. There are two ends, and both are cheaper to run.
+
+At one end, work with no gate at all: reversible, unobserved, needing nothing
+you know and the bot does not. Give it back and stop paying attention to it.
+
+At the other end, jobs where the honest answer is that the bot never gets the
+ability. [Bookkeeping Auditor](/bots/bookkeeping-auditor) never edits the live
+books, so there is no gate to calibrate on that action and no fatigue to manage.
+[Viral Tweet Scout](/bots/viral-tweet-scout) reads only and never posts, likes,
+or replies. A capability you never granted cannot be argued for by a document,
+cannot be widened by a tired approval at 18:00, and does not need a monthly
+audit. That is the argument developed in
+[the case for a bot that drafts but never sends](/blog/bot-that-never-sends) and
+in [least privilege for bots](/blog/least-privilege-bots).
+
+**Keep reading:** [The Four Layers of a Bot System That Actually Works](/blog/bot-system-architecture), [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers), [The Best AI Bots for Marketing Teams in 2026](/blog/best-ai-bots-for-marketing).
 
 ## Frequently Asked Questions
 

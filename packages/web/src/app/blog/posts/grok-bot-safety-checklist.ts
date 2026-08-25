@@ -21,7 +21,7 @@ watched run yet.
 This is the checklist to work through before that connection exists, in the
 order that actually matters.
 
-## The failure that actually happens
+## The real incidents are mundane and they share one shape
 
 Forget the science fiction version. The real incidents are mundane and they
 share a shape: a bot did something irreversible, correctly following an
@@ -37,7 +37,7 @@ Not one of those needs a malicious model. They need a vague charter and a
 connection with more rights than the job required. Both are yours to fix
 before you connect anything.
 
-## Pre-flight checklist: work through this before you click connect
+## Work through ten pre-flight lines before you click connect
 
 - [ ] **Name the job in one sentence.** If you cannot say what the bot owns in
       a sentence, you cannot say what it should never do either.
@@ -62,32 +62,51 @@ before you connect anything.
 - [ ] **Put a calendar reminder seven days out** to run the week-one review at
       the end of this article.
 
-Ten lines. Fifteen minutes. It is the cheapest insurance in this entire
-category, and almost nobody does it before the first connection rather than
-after the first incident.
+Ten lines. Fifteen minutes. The cheapest insurance in this category, and almost
+nobody runs it before the first connection rather than after the first incident.
 
-## What to connect first, and what never
+## Read the consent screen as a list of separate rights
+
+The consent screen is the only moment you see the whole grant in one place, and
+it is designed to be agreed with, not read. Providers bundle: "read, compose,
+send, and permanently delete" is one checkbox and four different futures.
+
+| What the screen says | What it actually grants | Do you need it in week one |
+|---|---|---|
+| "See your email messages and settings" | Full read of every thread and attachment, including archived mail | Yes, for any mail bot. This is the useful part |
+| "Manage drafts and send email" | Compose, and send as you, with no separate send toggle | Draft yes, send no. Take it only if drafts require it |
+| "Delete your email messages" | Permanent removal, past the point most tools restore from | No. There is no week-one job that needs it |
+| "See, edit, create and delete all of your Drive files" | Every file in the account, not the folder you had in mind | No. Scope to one folder, or read-only |
+| "View and manage your calendars" | Create, move, and cancel events, including invites | No. Read-only covers briefings and prep |
+| "Read, write, and post on your behalf" | Publishing under your name and identity | No, and rarely ever |
+| "Access your account balances and transactions" | Full financial history, sometimes with payment initiation attached | Read-only yes, initiation never |
+| "Offline access" or "refresh token" | The grant keeps working while you are signed out | Yes, by necessity. This is why revocation matters |
+
+That last row is worth sitting with. A bot that runs at 3am is a bot whose
+access outlives your session by design, which is what makes the revocation drill
+below a real control rather than a formality. Where a provider offers a narrower
+version of a connection, take the narrow one now and widen it in three weeks
+with evidence behind you.
+
+## Connect in order of reversibility, not order of usefulness
 
 Order your connections by how reversible the worst case is, not by how useful
 the tool sounds.
 
-**Connect early:** calendar in read-only mode, a notes or docs folder scoped
-to one directory, public web browsing, a read-only view of a CRM or helpdesk.
-These let a bot be genuinely useful while the worst realistic failure is a
-wrong summary.
+The early tier exists because those connections make a bot genuinely useful
+while the worst realistic failure is a wrong summary. The never tier exists
+because no charter makes a credential vault safe to expose to an automated
+agent.
 
-**Connect once you have watched a bot run for a week:** mail with read and
-draft rights, a chat workspace where the bot writes only to your own direct
-messages, a code host with comment-only rights.
+| Tier | Example connections | What has to be true first | Cost of the worst case |
+|---|---|---|---|
+| Day one | Calendar read-only, one docs folder, public web, CRM read-only | Nothing. Start here | A wrong summary you notice while reading it |
+| Week two | Mail read and draft, chat limited to your own direct messages, code host comment-only | One week of output you reviewed and would have approved unchanged | An embarrassing draft, caught before it moves |
+| Month two, deliberately | Anything that sends, posts, or moves money | A dedicated account, a spend ceiling in the charter, and a revocation drill you have run | A real message or a real charge, neither of which an approval undoes |
+| Never | Password manager, root admin on anything you cannot rebuild | Not applicable | Everything, and the recovery path runs through what you just exposed |
 
-**Connect late, deliberately, and on a dedicated account:** anything that
-moves money, anything with delete rights, anything that can post publicly
-under your name.
-
-**Never connect:** your password manager, and any tool whose only mode is full
-administrative access to something you cannot rebuild. There is no charter
-good enough to make a credential vault safe to expose to an automated agent,
-and no productivity gain worth it.
+The tiers are not a schedule. Three weeks of correct output earns one specific
+widening that you choose, not a promotion to the next row.
 
 The catalog reflects this ordering. [Lead Scout](/bots/lead-scout) is
 research-only and contacts nobody, so it is safe to run on day one.
@@ -141,7 +160,7 @@ instruction, and a bot with mail access is a bot that strangers can write to.
 Any setup that reads untrusted text should say so in the charter. The same
 logic covers calendar invites, shared documents, and web pages.
 
-## Dedicated accounts for anything financial
+## Give anything financial its own account and its own card
 
 The single highest-leverage structural decision is separating what a bot can
 reach from what your life depends on.
@@ -152,9 +171,9 @@ address for the bot's shopping and subscription work, a card with a low limit
 or a virtual card for anything that can transact, and a bank connection that
 is read-only wherever the provider supports it.
 
-This is not paranoia about the model. It is ordinary blast radius reduction.
-When a connection is wrong, the question that determines how bad your week
-gets is what else was reachable from it.
+This is not paranoia about the model, it is blast radius reduction. When a
+connection is wrong, what decides how bad your week gets is what else was
+reachable from it.
 
 The pattern shows up across the personal category for exactly this reason.
 [Grocery Autopilot](/bots/grocery-autopilot) holds every order until you
@@ -164,28 +183,93 @@ cancels nothing you have not individually approved.
 approve the full list, which is the correct shape for any bulk destructive
 action: propose the whole list, act only after one human yes.
 
+## You are not connecting a bot, you are connecting an account
+
+This is the assumption most people bring in wrong, and it changes what a
+connection means.
+
+All bots on a Grok Bot account share one persistent cloud computer. The
+documentation states it plainly: the computer is assigned to your user account,
+not to an individual bot. Each bot gets its own screen, which sounds like
+separation and is not. Browser cookies, signed-in sessions, files, and command
+line credentials are shared across every bot you run, and the docs draw the
+conclusion twice: the screens are separate work surfaces rather than separate
+security boundaries, and you should not use separate bots as a security
+boundary.
+
+Two consequences change decisions on the checklist above.
+
+A sign-in you perform for one bot is available to all of them. Sign into your
+bank in a browser on that computer so a finance bot can read balances, and the
+mail bot and the research bot are running inside a machine where that session
+exists. That is the argument for the dedicated account and the read-only
+connection: scoping the credential is the only leverage you keep.
+
+Deleting a bot is not a cleanup. It removes the bot and its routines, and leaves
+shared-computer files and browser sessions in place. Revocation therefore
+happens at the provider, not in the bot list.
+
+Two smaller facts for connect time: the computer browses from static egress IP
+addresses that some services flag, and Privacy Mode (Legacy) blocks Grok Bot
+entirely. The fuller treatment is in
+[what one shared computer means for bot security](/blog/grok-bot-shared-computer-security).
+
 ## Run the revocation drill before you need it
 
 Most people learn where the disconnect button lives during the incident. Do it
-now instead, while nothing is wrong.
+now instead, on the lowest-stakes connection you have.
 
-Connect one low-stakes tool. Then find and use the revoke control in both
-places, because they are genuinely two different places. The first is inside
-the bot runtime, where you remove the tool from the bot or the account. The
-second is in the provider's own security settings, the page listing
-third-party apps with access to your Google, Microsoft, X, or GitHub account.
-Revoking in the runtime does not always invalidate the grant on the provider
-side, and the provider side is the one that actually holds the keys.
+Start a timer and work the six steps in order.
 
-Do it once, time it, then reconnect. If it took you longer than two minutes to
-find both controls, write the two URLs into a note. When you need this, you
-will be in a hurry and you will not be thinking clearly.
+**One. Remove the tool from the bot.** In the runtime, take the connection off
+the bot that uses it. This stops the next scheduled run and nothing else.
 
-Add a rotation habit while you are there: once a month, open the provider's
-connected apps page and remove anything you do not currently recognise and
-use.
+**Two. Remove the connection from the account.** Same app, one level up. Every
+bot loses that connector, and the underlying grant is still live.
 
-## What each connection actually risks
+**Three. Revoke the grant at the provider.** The step people skip, and the only
+one that reaches the token. Google keeps it under Data and privacy, in
+third-party apps with account access. Microsoft keeps it under Privacy, in apps
+and services. GitHub lists authorised OAuth apps under Settings, Applications. X
+lists apps and sessions under Security and account access.
+
+**Four. Sign the browser session out on the computer itself.** A revoked OAuth
+grant does not end a browser session someone left signed in, and the shared
+computer carries cookies and sessions across every bot on the account. If any
+part of the workflow ran through a logged-in browser, this is where the access
+actually lives.
+
+**Five. Rotate the password and check 2FA** if the access was a plain sign-in
+rather than an OAuth grant. There is no token to revoke, so the password is the
+token.
+
+**Six. Prove it.** Run the bot. It should fail on that tool, visibly. A drill
+without a failed run is a drill you did not finish.
+
+| Where you revoke | What it stops | What it leaves running |
+|---|---|---|
+| Remove the tool from the bot | That bot's next run | Every other bot on the account, and any live session |
+| Remove the connection from the account | New calls through that connector | A browser session signed in on the shared computer |
+| Revoke the grant at the provider | The token itself, for every client that held it | A password-based login that never used OAuth |
+| Sign out the browser session | Cookie-based access from the shared browser | Files already written to the computer |
+| Rotate the password and 2FA | Any stored credential for that account | Anything already copied out of it |
+| Delete the bot | The bot and its routines | Shared-computer files and browser sessions, which stay |
+
+That final row surprises people, and it is documented rather than inferred:
+deleting a bot does not remove shared-computer files or browser sessions.
+Deleting is tidying, not security.
+
+Time the whole drill. If finding both control surfaces took longer than two
+minutes, write the URLs into a note now, because the day you need this you will
+be in a hurry and reading badly. Add a monthly habit of clearing anything on the
+connected apps page you no longer use.
+
+One more reason to practise rather than improvise: an approval controls the
+proposed action and does not reverse work already completed, so by the time you
+are revoking, the thing you were worried about has happened. The drill limits
+what happens next.
+
+## Price each connection by its worst realistic outcome
 
 Honest worst cases, assuming the charter is wrong rather than assuming
 malice. This table is the one to reread before adding any tool.
@@ -202,41 +286,107 @@ malice. This table is the one to reread before adding any tool.
 | Payments or card on file | Actual money | A real charge, the only item here an apology cannot reverse |
 | Social account, post rights | Your public voice | A public post from your handle, screenshotted before deletion |
 | Code host, write or merge | Your codebase | A broken main branch, or a secret committed to a public repo |
+| Helpdesk with agent rights | Customer conversations, in your company's voice | A reply published to a customer thread at 3am, which the tool also emails out |
+| Task tracker or wiki, write rights | Other people's queues and their page history | Tickets reassigned, or a tidy-up rewriting a page three teams link to |
+| A browser session left signed in | Every site that session reaches, for every bot | A research bot acting inside a real account because the cookie was simply there |
 | Password manager | Everything, forever | Not applicable. Do not connect this one at all |
 
-Read the right column as a design brief. Each of those outcomes has a specific
-charter line that prevents it, and writing that line takes less time than
-reading this paragraph.
+Read the right column as a design brief. Each outcome has a specific charter
+line that prevents it, and writing that line takes less time than reading this
+paragraph.
 
-## The week-one review
+Two rows behave unlike the others. The helpdesk row is the classic loophole: a
+charter saying "never send an email" does not stop a reply posted inside a
+ticket, which the helpdesk mails out anyway. The browser session row is the
+grant no consent screen ever showed you, because you made it by signing in.
+
+## Match each early symptom to what it is actually telling you
+
+Between the connection and the week-one review, things go slightly wrong in ways
+that are easy to explain away. Each has one likely cause and one right response.
+
+| What you notice | What it usually means | What to do about it |
+|---|---|---|
+| The bot's counts do not match the run log | It is reporting items considered rather than items handled | Require both numbers in the summary, separately named |
+| A draft quotes a thread it had no business reading | The grant is account-wide where you pictured one folder | Rescope the connection. Do not paper over a wide grant with a charter line |
+| It asked for approval, then proceeded on its own answer | Approval was never defined | "Approval is a new message from me after you have stopped" |
+| Sites refuse it that load instantly for you | Static egress IPs, flagged as datacenter addresses | Log the URL, mark the field unavailable, move on. Never work past a check |
+| Another bot used a session the first bot signed into | Shared computer, shared cookies, shared credentials | Scope the credential itself. Separate bots are not a boundary |
+| Nothing ran for two days and you did not notice | No failure notification and no review habit | Put the review on the calendar and require a run receipt |
+
+Take the middle rows seriously on the first occurrence. A draft quoting
+something it should not have seen is a scope problem, and telling the charter to
+"be careful with private threads" leaves the access exactly where it was.
+
+## Run the week-one review against reality, not the bot's summary
 
 Seven days after your first real connection, sit down for fifteen minutes and
 check reality rather than the bot's own account of reality.
 
-Open the sent folder. For a draft-only bot it should be exactly as you left
-it. If there is anything in there you did not send, stop and revoke before you
-do anything else.
+Six places, in this order, and not one of them is the bot's own report.
 
-Open the drafts and read all of them, including the ones you already approved.
-You are looking for the draft that was fine but for the wrong reason.
-
-Open the trash and the archive. Confirm nothing left the inbox that you did
-not expect, and that any labels the bot created are the ones named in the
-charter.
-
-Open the runtime's activity or run log and compare it against the bot's
-summaries. A bot reporting "handled 40" while the log shows 12 is a
-misunderstanding you want to find now.
-
-Open the provider's connected apps page and confirm the list matches what you
-intended. Nothing extra, nothing with broader scopes than you remember
-granting.
+| What you open | What good looks like | What a bad result is telling you |
+|---|---|---|
+| Sent folder | Exactly as you left it, for a draft-only bot | Stop and revoke before anything else. The boundary is not holding |
+| Drafts, including approved ones | Every draft is one you would have sent | A draft that was fine for the wrong reason means the charter is underspecified |
+| Trash and archive | Nothing left the inbox that you did not expect | A destructive right you did not mean to grant, or a charter that permits one |
+| Labels and folders | Only the names written in the charter | The bot is inventing structure, which is scope creep with a tidy face |
+| Run log against the bot's summaries | The counts agree | A bot reporting "handled 40" against a log showing 12 is a metric you will act on later |
+| Provider connected apps page | Matches what you intended, nothing extra | A scope wider than you remember, or a grant from a tool you dropped |
 
 Then make one decision: does this bot get more authority, the same, or less?
-Write the answer into the charter. That review is what
-[the day-by-day first week plan](/blog/grok-bot-first-week) is built around,
-and the reasoning behind the boundary line itself is in
+Write the answer into the charter with today's date beside it, so a month from
+now you can tell a considered widening from a busy-week one. That review is what
+[the day-by-day first week plan](/blog/grok-bot-first-week) is built around, and
+the boundary line itself is argued in
 [the case for bot boundaries](/blog/grok-bot-boundaries).
+
+## The case against all this ceremony, and what it gets right
+
+The strongest objection is not that the checklist is wrong. It is that it is
+expensive at the wrong moment. Pre-flight, a revocation drill, and a weekly
+review is an hour of overhead on a tool you might abandon in a fortnight, and
+most people who connect a mailbox without any of it are fine.
+
+That is true, and worth saying rather than pretending otherwise. The answer is
+in the shape of the risk rather than its frequency. These failures cluster in
+the first two weeks, before you have any calibration for how this setup goes
+wrong, and the two irreversible ones, a send and a delete, are available on day
+one if you granted them on day one. You are insuring the window where you are
+least equipped, not a steady background rate.
+
+The cost is lower than it reads, too. Four of the ten pre-flight lines are
+decisions you make anyway to write the charter, and the drill is a one-time ten
+minutes. What is left is the weekly review, and a bot whose output you never
+read is not a bot you are supervising.
+
+Where the objection wins outright: if the bot reads public pages and writes to a
+file you own, most of this is over-engineered.
+
+## Where this checklist is stricter than it needs to be
+
+Every rule here has a domain, and pretending otherwise is how a safety
+checklist becomes something people route around.
+
+Skip most of it for a bot with no account access: public web reading, a scratch
+folder you made for it, output landing in a file you own.
+[Lead Scout](/bots/lead-scout) is that shape. The pre-flight lines still apply,
+but the consent screen and revocation sections have nothing to act on. Compress
+it likewise for a throwaway account created for the bot, with no history and
+nothing else reachable from it.
+
+It is not strict enough in three cases. A shared team mailbox holds other
+people's mail, so the consent involved is not yours to give. A support inbox
+holds customer personal data, which usually carries a written obligation about
+where it may be copied, and a bot writing summaries is a bot copying. And a
+client-owned system runs under the client's policy, where the first step is
+asking rather than scoping.
+
+The general rule: this checklist is calibrated for your own accounts. Once other
+people's data is in scope, the question stops being how much risk you are
+willing to carry.
+
+**Keep reading:** [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers), [The Best AI Bots for Founders in 2026](/blog/best-ai-bots-for-founders), [The Best AI Bots for Marketing Teams in 2026](/blog/best-ai-bots-for-marketing).
 
 ## Frequently Asked Questions
 

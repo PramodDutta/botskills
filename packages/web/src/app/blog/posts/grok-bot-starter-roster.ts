@@ -45,17 +45,17 @@ machine, and the documentation is direct that separate bots are not a security
 boundary. Splitting a job across four bots gives you four things to review and
 exactly the same blast radius.
 
-## The three shapes of solo work
+## Cover three shapes of work before you double up on any one
 
 Almost everything a solo operator does recurringly falls into one of three
 shapes. Pick one bot per shape and the roster covers your week without any two
 bots answering the same question.
 
-| Shape | The job | What good output is | What it must never do |
-|---|---|---|---|
-| Watches | Something outside your control changes, and you need to know | A short diff: what changed, when, and why you should care | Interact with what it watches |
-| Drafts | A recurring artifact you write from a template in your head | A near-final draft you edit rather than rewrite | Send, post, or publish it |
-| Reconciles | Two sources that should agree and quietly do not | A list of mismatches with evidence, ranked | Fix the mismatch itself |
+| Shape | The job it covers | What good output is | Time to review | What it must never do |
+|---|---|---|---|---|
+| Watches | Something outside your control changes, and you need to know | A short diff: what changed, when, and why you should care | Under a minute on a quiet day | Interact with what it watches |
+| Drafts | A recurring artifact you write from a template in your head | A near-final draft you edit rather than rewrite | Two to ten minutes, scaling with volume | Send, post, or publish it |
+| Reconciles | Two sources that should agree and quietly do not | A ranked list of mismatches, each carrying its evidence | Five minutes weekly, more in the first month | Fix the mismatch itself |
 
 The three shapes fail in different ways, which is the real reason to cover all
 three before doubling up on any one. A watcher fails by being noisy. A drafter
@@ -65,7 +65,25 @@ modes at once, and those are the skills that make bot four through six work.
 
 Two watchers, by contrast, teach you nothing new and double your morning.
 
-## The roster, by name
+## Score the three shapes against the week you actually have
+
+The shapes are equally worth covering eventually. They are not equally urgent
+today, and the right first build is the one whose absence is already costing
+you something you can name.
+
+| If this is true of your week | Build first | Because | Do not build first |
+|---|---|---|---|
+| You hear about competitor or market changes from customers | Watcher | You are already paying the cost, in credibility rather than time | A drafter, saving minutes you currently have |
+| More than twenty messages a day need a real answer | Drafter | It is the largest recurring block, and the template genuinely is in your head | A reconciler, whose payoff is quarterly |
+| You have not opened your books, subscriptions, or CRM in a month | Reconciler | These surprises compound quietly and surface at the worst possible time | A watcher, adding a daily read to a week you cannot finish |
+| You are between customers and the week is light | Reconciler | Reconciliation needs uninterrupted attention that you will not have later | A watcher, which pays out over months you may not spend here |
+| Nothing above is clearly true | Drafter | It gives the fastest quality signal: you either sent the draft or rewrote it | Two of anything |
+
+The last column is the one to read twice. Every wrong first bot in that column
+is wrong for the same reason: it is a real job, correctly identified, that is
+not currently the one hurting you.
+
+## Hire these three by name, and swap only inside the shape
 
 Concrete recommendations, all real catalog listings you can adapt today.
 
@@ -102,7 +120,7 @@ setups worked out end to end,
 format all three inherit is in
 [the one-person company guide](/blog/one-person-company-grok-bot).
 
-## Promote, then hire
+## Promote a job through four stages before you hire for it
 
 The mistake underneath the twelve-bot weekend is hiring a bot for a job that
 has never been done. A job goes through four stages before it deserves a
@@ -148,7 +166,7 @@ the job is not ready. Do it by hand again and rewrite this note.
 Fill that in before writing a single line of charter. If you cannot, you have
 found the answer to whether the job is ready.
 
-## The disagreement nobody has settled
+## Two camps disagree about timing, and both measure the wrong variable
 
 There are two honest positions in circulation about when to promote, and they
 contradict each other.
@@ -171,10 +189,16 @@ matters, which is whether the procedure has stopped changing. A job you did
 daily for a week and improved every single day is not ready. A job you did
 three times over a month with identical steps is.
 
-## The readiness test
+## Run the readiness test: three conditions, no partial credit
 
 So here is a test, since nobody appears to have published one. Three
 conditions, all three required, no partial credit.
+
+| Condition | How you check it | What passing looks like | What failing looks like |
+|---|---|---|---|
+| Trigger, output, and stop line each fit in one unhedged sentence | Write all three down before you write any charter | Three sentences with no "usually", "depends", or "when it makes sense" | The stop line comes out as "use judgment", which is not a line |
+| The last three manual runs used the same steps | Compare your notes from the last three runs, not the last three weeks | Different inputs, identical procedure | You improved the process on the most recent run, which resets the count |
+| A wrong output is obvious in under ten seconds | Time yourself judging one past output without opening the source | You spot the error from the artifact alone | Verification costs as much as the job, so you quit verifying by week three |
 
 **One: you can state the trigger, the output, and the stop line without
 hedging.** Write all three in one sentence each. If any of them needs
@@ -201,6 +225,66 @@ Fail any condition and the job goes back to stage one. That is a cheap outcome.
 The expensive outcome is a bot running a procedure you were still inventing,
 producing output you cannot quickly check.
 
+## Follow one roster from day one to day thirty
+
+Abstract advice about three shapes is easy to agree with and hard to act on, so
+here is the whole month for a solo consultant who bills four clients and does
+her own books.
+
+**Day one.** She writes three promotion notes and finishes only one of them.
+Inbox triage passes: the trigger is 08:30 daily, the output is a sorted list
+plus drafts, the stop line is that nothing sends. Pricing watch fails condition
+two, because she has checked competitor pages exactly twice and did it
+differently each time. Bookkeeping fails condition three, because she cannot
+tell a good reconciliation from a bad one without opening the bank export. She
+builds one bot, not three.
+
+**Day two to day seven.** The drafter runs beside her, not instead of her. She
+reads every draft and records one number: how many she sent with light edits.
+Day two it is one out of nine. Day five it is five out of eleven, after she
+adds two lines to the charter about not answering questions the client has
+already asked in the same thread.
+
+**Day eight.** She does the competitor check by hand for the third time, using
+the same four pages in the same order. Condition two now passes, and the
+pricing watcher gets built with a threshold: report only a change to a listed
+price or a plan name, and say nothing at all otherwise.
+
+**Day fourteen.** The watcher has fired four times and three were noise, all of
+them a marketing page reword. She narrows it to two pages instead of four. This
+is the noise failure mode arriving exactly on schedule, and the fix is the
+charter rather than the model.
+
+**Day twenty-one.** Bookkeeping finally passes condition three, because she has
+defined what wrong looks like: any transaction above 200 with no matching
+invoice, and any invoice marked paid with no matching deposit. Two rules she
+can check at a glance. The reconciler goes in with those two rules and nothing
+else.
+
+**Day thirty.** Three bots, about eleven minutes of review each morning, and
+one retired experiment: a second drafter for proposals that she deleted on day
+eighteen because it was rewriting more than it drafted. The roster she is left
+with is exactly the roster this article recommends, and she arrived at it by
+failing the readiness test twice rather than by taking anyone's word for it.
+
+## Watch for these six failures in the first month
+
+Every one of these has a symptom you can notice in week two, and a fix that is
+almost never "use a better model".
+
+| Symptom in month one | What actually went wrong | The fix |
+|---|---|---|
+| You stopped opening one bot's output around day nine | The output was not worth a minute, usually because the sections are wrong | Rewrite the sections or retire it. Do not just lower the frequency |
+| Two bots report the same thing in different words | You built two of one shape and told yourself they were different jobs | Merge them, or narrow one until the overlap is gone |
+| The watcher fires daily with nothing in it | No threshold exists, so "no change" is being reported as news | Add a floor: report movement above a named size, otherwise say nothing |
+| Every draft gets rewritten from scratch | The template was not in your head, only the intent was | Back to stage one. Three manual runs, then write down the steps |
+| The reconciler flags twelve things and eleven are fine | It has no notion of an acceptable difference | Name the tolerance in units, and rank the list by size |
+| The roster survives a quiet week and collapses in a busy one | Review capacity dropped and nothing was retired to match | Retire one bot at the start of a busy week deliberately, not after it fails |
+
+The last row is the one that catches people in month two rather than month one.
+Review capacity is not a constant, and a roster sized for your best week is a
+roster that fails in your worst one.
+
 ## The cap is your review capacity
 
 Three is not a limit the runtime imposes. It is a limit your mornings impose.
@@ -225,9 +309,69 @@ is a small step. A first reconciler when you have never run one is a new
 failure mode to learn, which is fine, just not in the same week as anything
 else new.
 
-If you would rather follow a schedule than design one,
+## Where the three-bot rule stops applying
+
+Three is a solo-operator number, and it has an edge worth naming rather than
+defending.
+
+It stops applying when your business is one shape. A market researcher whose
+entire deliverable is a watch report should run four watchers, not one, because
+coverage of distinct sources is the product rather than a convenience. The
+underlying rule survives, it just resolves differently: cover the failure modes
+you will actually face, and for her all of them are noise.
+
+It stops applying for client work, where the constraint moves from shape to
+account. An agency running the same drafter for six clients has one procedure
+and six review queues, and the number that matters is minutes per morning, not
+distinct shapes. The roster stays three shapes wide and gets deeper per client.
+
+It bends, but less than people hope, for teams. Nothing here sits at team
+level: a routine attaches to a single bot, and deleting that bot deletes its
+routines with it. So a second person does not halve your review load unless
+they are running their own bot, on their own account, with their own charter.
+Two people sharing one account share a review queue, which is not the same as
+splitting one.
+
+And it stops applying entirely for anything that only runs once. A one-off
+research sprint is not a hire, it is a task. Do it in a conversation and delete
+the thread. The roster is for jobs that recur, and a job that happens once has
+no promotion path to be at any stage of.
+
+## The strongest case for building twelve anyway, and when it holds
+
+The best argument against everything above is that bots are cheap, exploration
+is genuinely valuable, and you cannot know which of twelve ideas is useful
+until you have seen twelve outputs. Reasoning about a bot in advance is worse
+than running one for two days. On that view, the twelve-bot weekend is not
+indiscipline, it is a survey, and this article is telling people to plan
+carefully in a domain where the planning is more expensive than the experiment.
+
+That argument holds, and it holds in one specific configuration: the twelve are
+disposable and you have already decided when they die. Build twelve on Saturday
+with a delete-by date of Friday, read every output once, keep the two that
+surprised you, and remove the rest whether or not they were promising. Under
+those conditions you learn more in a week than three months of careful
+promotion will teach you.
+
+It fails on the part nobody executes, which is the deletion. Exploration bots
+that were never explicitly killed become production bots by default, and they
+arrive in production without a stop line, without a stated trigger, and without
+anybody having decided they were worth a permanent slot in the morning. Six
+weeks later you have eleven bots, three of which you read, and no memory of
+which category each one started in.
+
+So run the survey if you want the survey. Write the delete-by date first, in
+the same place you write the charter, and treat a bot that outlives it without
+an explicit promotion as a failure of the experiment rather than a result of
+it.
+
+Keep reading: if you would rather follow a schedule than design one,
 [the first week plan](/blog/grok-bot-first-week) walks the same ground day by
-day.
+day, and
+[the boundaries guide](/blog/grok-bot-boundaries) covers how to phrase the stop
+line that condition one of the readiness test asks you for.
+
+**Keep reading:** [Grok Bot Setup Guide](/blog/grok-bot-setup-guide), [No Spend Cap](/blog/grok-bot-spend-cap-and-token-burn), [The Charter Template](/blog/grok-bot-starter-charter-template).
 
 ## Frequently Asked Questions
 

@@ -22,7 +22,7 @@ marketing site mean nothing, and the twentieth is the one that tells you they
 just repositioned. A bot is worth building here only if you spend your design
 effort on the filter rather than on the fetch.
 
-## Why a raw page diff fires on a cookie banner
+## A raw page diff fires on a cookie banner, not on a repositioning
 
 Understand what a modern marketing page actually is before you diff one. It is
 not a document. It is a template rendered with a build hash, an analytics
@@ -51,7 +51,7 @@ That table is the actual product of this setup. Everything else is plumbing.
 The bot's job is to reach the bottom five rows and never bother you with the
 top three.
 
-## Four surfaces that actually move
+## Point the bot at four surfaces, not at a competitor
 
 Do not point the bot at a competitor. Point it at four specific surfaces, each
 with a different meaning and a different useful cadence.
@@ -80,7 +80,32 @@ region they did not sell to, or three roles on a team that did not exist last
 quarter each tell you where the money is going before the product shows it.
 Check weekly and report only new postings, never the total count.
 
-## From diff to claim: what a report line has to contain
+## Know what each signal predicts, and how far ahead
+
+The trap after the noise problem is a subtler one: treating every confirmed
+change as the same kind of fact. A price change is a fact about today. A job
+posting is a hypothesis about next year. Mixing them in one report is how a
+hiring inference ends up leading a weekly digest and getting repeated on a
+sales call as though it were news.
+
+| Signal | What it actually predicts | Lead time | What to do with it |
+|---|---|---|---|
+| A price, seat minimum, or billing period changes | Their positioning against you, already live | None | Answer it this week. Update your comparison page |
+| A tier is renamed | Repackaging, usually ahead of a segment push | Weeks | Note it, wait for the second signal |
+| A feature moves up a tier | They found what people will pay more for | None | Check whether it is in your lower tier. That is a talk track |
+| Homepage headline or subhead changes | Who they now think they sell to | Weeks to months | Expect the new objection on your next five calls |
+| A new changelog entry | What actually shipped, as opposed to what marketing implies | None | Read it. This is the least noisy surface you have |
+| A docs page for something unannounced | A launch that has not happened | Weeks | Interesting, not actionable. It may be cancelled |
+| A first infrastructure or security hire | An enterprise push and a compliance story | Two to three quarters | File it. Revisit if a second signal lands |
+| A solutions engineer in a region they did not sell to | Geographic expansion that is already funded | Months | Tells you where they will show up, not what they will do |
+| Three roles on a team that did not exist last quarter | A new product line | Two to four quarters | The highest-value slow signal in the set |
+
+Report the top rows and the bottom rows in different places. Pricing and
+changelog entries belong in a same-day note. Hiring belongs in a monthly
+timeline where it can accumulate, because a single posting means almost nothing
+and four related postings mean a great deal.
+
+## Make every reported change quote itself
 
 The line between a useful watcher and a noise generator is whether the bot is
 allowed to report a change without quoting it.
@@ -102,7 +127,35 @@ optional line beginning with a word that marks it as reading rather than fact.
 You want the bot's read. You want to always be able to see what it is a read
 of.
 
-## The noise filter, as rules the bot runs before it reports
+## Extract the tracked block before you diff anything
+
+Most people build this backwards: fetch the page, diff it, then try to filter
+the result. Filtering after the fact means writing rules against noise you have
+already generated. The order that works is extract, normalise, then compare, so
+that most of the noise never becomes a diff at all.
+
+| Step | What it removes | What it wrongly removes if overdone |
+|---|---|---|
+| Select the region by a stable anchor, meaning heading text rather than a CSS class | Nav, footer, chat widget, consent banner | A section that moved under a different heading, which you then never see again |
+| Take rendered visible text only | Markup, attributes, inline scripts, structured data blocks | Anything that exists only in structured data, such as a price in schema markup |
+| Collapse whitespace and line breaks | Reflow noise from a template change | Nothing. This step is safe |
+| Drop pure hex and digit tokens inside filenames and query strings | Build hashes, cache busters, session identifiers | Actual prices, if you apply it to prose. Keep it to filenames and query strings |
+| Compare the set of list items, not their order | Carousel and testimonial shuffles | A genuine reordering of pricing tiers, which is real signal. Exempt the pricing page |
+| Require the change to survive the next scheduled check | Experiment arms, mid-deploy states, regional variants | One cycle of latency on genuine news |
+
+Column three is the reason to write this out rather than improvise it. Every
+noise reduction is also a blindness, and the two that bite are stripping digits
+too widely, which hides the exact numbers you are watching for, and comparing
+sets instead of order on a pricing page, where the order of the tiers is part of
+the message.
+
+The stable-anchor rule deserves one more sentence. Anchoring on a CSS class
+feels precise and breaks on the next redesign, and it breaks silently: the
+extractor returns nothing, the diff is empty, and your watcher reports calm for
+a month. Anchor on the text of a heading you expect to persist, and treat the
+anchor going missing as an alert in its own right.
+
+## Write the noise filter as rules, because taste varies run to run
 
 Write the filter as explicit rules in the charter rather than hoping the model
 exercises taste. Taste varies run to run. Rules do not.
@@ -119,7 +172,7 @@ That last one is the highest-value rule and almost nobody writes it. It costs
 you one cycle of latency and it removes an entire category of embarrassing
 report: the A/B variant you happened to be served once.
 
-## The competitor watch charter, pasteable
+## Paste this competitor watch charter and change only the URLs
 
 \`\`\`text
 You are my Competitor Watch for [competitor A, competitor B, competitor C].
@@ -215,7 +268,7 @@ Two more clauses worth keeping: never gate on a paywall, and never touch a
 support channel. A bot that opens a support chat to ask about pricing has
 contacted a person at a competitor, whatever the charter meant to say.
 
-## What your watcher looks like from the other side
+## Assume your watcher is legible from the other side
 
 Worth knowing before you set a frequency: your bot is not invisible.
 
@@ -232,7 +285,7 @@ frequency increase multiplies both the token spend and the noise volume, which
 is a rare case where the cheap option is also the better one. Daily on pricing
 and changelogs, weekly on copy and hiring, is the shape that holds up.
 
-## The failure that matters here: mistaking an A/B test for a strategy shift
+## Mistaking an experiment for a strategy shift is the failure that costs you
 
 Every job has one characteristic failure. Here it is reporting a change that
 was never a decision.
@@ -255,7 +308,28 @@ run. And when something matters enough to act on, open the page yourself before
 you act. The bot's job is to make sure you know to look, not to be the last
 word on what a competitor is doing.
 
-## Measuring signal: the two-week noise count
+## Diagnose the watcher from what the report does not say
+
+A monitoring bot fails quietly, which makes it different from every other bot
+in this catalog. A drafting bot that breaks produces nothing and you notice. A
+watcher that breaks produces "No qualifying changes" and you feel covered.
+
+| Symptom | Cause | Fix |
+|---|---|---|
+| The same page alerts every single day | The tracked region still includes a footer, chat widget, or rotating element | Re-anchor inside the main content, on heading text |
+| Three weeks of "No qualifying changes" | The selector broke after a redesign and the extractor returns nothing | Require a heartbeat: quote the current headline every run, changed or not |
+| A reported quote is empty or cut off | The page renders its content in the browser after load | Wait for the content region, or drop the page from the set |
+| A change reported, then gone next week | An experiment arm or a regional variant | Two-check confirmation, and always report the first-seen date |
+| Forty job postings reported at once | The snapshot was lost or the careers URL moved | Diff only when a prior snapshot exists. Otherwise say "baseline established" |
+| The pricing page changed but looks identical | Geolocated or currency-varying pricing tied to the egress address | Pin the locale in the URL where the site supports it, and note the variance |
+| Nothing from a competitor who obviously shipped | They moved the changelog to another host or an RSS feed | Re-verify all four URLs monthly |
+
+Row two is the one worth building for on day one. The heartbeat costs a line in
+the report and converts the worst failure in this category, silent blindness,
+into an obvious one: the day the quoted headline is blank, you know the watcher
+is broken rather than the competitor is quiet.
+
+## Measure the misses, not the alerts
 
 Do not measure alerts sent. That number rewards exactly the behavior you are
 trying to suppress.
@@ -274,7 +348,30 @@ worse failure than three false alerts, because you will never see it in the
 report. Do this manual sweep monthly, permanently. It is the only feedback
 signal a filter of this kind has.
 
-## When watching should become acting
+## The strongest objection: watching competitors rarely changes what you do
+
+The honest case against this whole project is that most competitor monitoring
+is anxiety with a schedule attached. Companies that chase features lose. The
+weekly digest gets read, nods happen, nothing is decided, and the real cost is
+not the tokens, it is the attention spent looking sideways instead of at your
+own customers.
+
+That argument is right about feature-chasing and wrong about the other three
+surfaces, and the difference is whether the signal creates an obligation you
+already have. A price change is an obligation: the next prospect who asks will
+ask this week, and "I did not know" is the worst available answer. A headline
+change is an obligation: it is a new objection that will arrive on your calls
+whether or not you saw it coming. A changelog entry is an obligation when it
+lands on the feature your last three lost deals mentioned.
+
+So test it rather than assuming either way. For each of the four surfaces,
+write down the last decision it actually changed. If a surface has not changed
+a decision in a quarter, stop watching it and take the review time back. That
+turns a vague habit into a maintained list, and in practice most people find
+pricing and changelogs pay for themselves while the homepage watch was mostly
+entertainment.
+
+## Point every expansion inward, never at the competitor
 
 The obvious expansions are the wrong ones, and they are the ones people reach
 for first.
@@ -297,6 +394,8 @@ same discipline described in
 [the one-person company guide](/blog/one-person-company-grok-bot), and it is
 what keeps the watcher trustworthy, because a bot that both watches and
 responds has an incentive to find something.
+
+**Keep reading:** [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Run a Content Calendar](/blog/grok-bot-to-content-calendar).
 
 ## Frequently Asked Questions
 

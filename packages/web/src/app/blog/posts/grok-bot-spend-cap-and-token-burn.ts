@@ -18,7 +18,7 @@ allowance is not published as a number anywhere. Anything past that allowance
 bills on demand. So the only ceiling in the system is the one you write into
 each bot yourself, and this is how to write it.
 
-## What the documentation actually says about spend
+## Start from what the documentation actually commits to
 
 Two pages carry the load here, and both are worth reading in full before you
 schedule anything.
@@ -32,51 +32,65 @@ eligible subscriptions include a weekly usage allowance, and usage beyond that
 allowance is billed on demand, derived from model and token cost.
 
 Notice what is missing. The size of the weekly allowance is not published. Not
-in dollars, not in credits, not in runs. If you have read a third-party post
-quoting a figure, that figure was invented, and you should treat everything
-else on that page with the same suspicion. We are not going to guess at it
-either.
+in dollars, not in credits, not in runs. If you have read a post quoting a
+figure, that figure was invented, and you should treat the rest of that page
+with the same suspicion. We are not going to guess at it either.
 
-One more documented gap matters for this topic: an audit view of bot actions
-does not exist yet, per the same enterprise page. You cannot go back on Friday
-and ask which of your six bots consumed the week. That absence is the reason
-the rest of this article is about per-bot discipline rather than dashboards.
+One more documented gap matters here: an audit view of bot actions does not
+exist yet, per the same enterprise page. You cannot go back on Friday and ask
+which of your six bots consumed the week. That absence is why the rest of this
+article is about per-bot discipline rather than dashboards.
 
-Which subscription you hold does not change any of the arithmetic below. For
-completeness, as of writing the cheapest paid path is Cursor Pro+ at $60 a
-month ([cursor.com/pricing](https://cursor.com/pricing)), after eligibility
-widened on 21 August 2026
-([x.ai news](https://x.ai/news/grok-bot-more-plans)). Check both pages rather
-than trusting this sentence in a month.
+Which subscription you hold does not change any of the arithmetic below.
+Eligibility widened on 21 August 2026
+([x.ai news](https://x.ai/news/grok-bot-more-plans)), and the current list of
+eligible plans lives on [cursor.com/pricing](https://cursor.com/pricing) and
+[x.ai/pricing](https://x.ai/pricing). Read those rather than trusting a figure
+quoted in an article, including this one. What no plan buys you is a ceiling.
 
-## What actually burns usage
+## Rank the five levers by how much each one multiplies
 
 Five inputs explain nearly every unit a bot consumes. Four of them are
 familiar from any agent runtime. The fifth is specific to a bot that drives a
 real computer, and it is the one people underestimate.
 
-**Run frequency.** How often the bot wakes up. This multiplies everything
-else, which makes it the most powerful control you have and the one set most
+**Run frequency.** How often the bot wakes up. It multiplies everything else,
+which makes it the most powerful control you have and the one set most
 carelessly.
 
 **Context size per run.** The charter, the memory file, and whatever the bot
-pulled in to do the job. The first two are small and yours to prune. The third
-is not bounded unless you bound it.
+pulled in. The first two are small and yours to prune. The third is not
+bounded unless you bound it.
 
 **Tool calls.** Each fetch, search, read, and write is separate work. A bot
 that checks six sources does roughly six times the work of one that checks the
 best source, before it writes a word.
 
 **Retries.** A run that breaks halfway and starts again costs the failed
-attempt plus the successful one. This is the driver that produces horror
-stories rather than mild overspend.
+attempt plus the successful one. This is the driver behind horror stories
+rather than mild overspend.
 
 **Browser work.** Grok Bot operates a persistent cloud computer, with each bot
 getting its own screen on it
 ([computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)). Getting a
-number out of a web app means loading pages, waiting for them, observing them,
-scrolling, and clicking. Getting the same number from an API means one
-request. Same answer, very different amount of work.
+number out of a web app means loading pages, waiting, observing, scrolling,
+clicking. Getting the same number from an API means one request. Same answer,
+very different amount of work.
+
+Only one of the five is unbounded by default, and that column is why the rest
+of this article exists.
+
+| Lever | What it multiplies | Who decides it | Bounded without a clause? | Where the cap goes |
+|---|---|---|---|---|
+| Run frequency | Every other lever, linearly | A dropdown you set once | Yes, the schedule is the bound | The trigger, then restated in the charter |
+| Context per run | Reading and reasoning cost inside one run | Partly you, partly what the bot pulled in | No, whatever it fetched sets the size | An input ceiling naming pages and page counts |
+| Tool calls | Work done per run, independent of context | The charter, and the model's improvisation | No, "check a few sources" has no number | A numeric call budget per run |
+| Browser steps | Cost of every answer that lives behind a login | The route you asked for | Weakly, a page has finite elements | Prefer an API or an export, then cap page loads |
+| Retries | The entire run, once per attempt | Nothing, unless you write it | No, and this is the only true no | A hard attempt limit plus a no-alternate-routes clause |
+
+Read the fourth column downward. Frequency looks scary because the multiplier
+is large, but it is a number you chose. Retries are dangerous because nobody
+chooses them and nothing stops them.
 
 | What the bot does | Cost shape | Cheaper route to the same answer |
 |---|---|---|
@@ -98,30 +112,64 @@ mysterious. Consider what happens when a bot meets a login wall.
 It does not throw an exception. It observes a screen, forms a theory, and acts
 on the theory. The password did not take, so perhaps the field was not
 focused. Perhaps the page had not finished loading. Perhaps there is a
-different sign-in button. Each of those theories is reasonable, each one costs
-a full cycle of observation and reasoning and action, and none of them are
-going to work, because the actual cause is a password change or a device
-challenge that no amount of clicking will resolve.
+different sign-in button. Each theory is reasonable, each costs a full cycle
+of observation and reasoning and action, and none will work, because the
+actual cause is a password change or a device challenge that no amount of
+clicking resolves.
 
 A loop like that is polite. It reports that it is still trying. It does not
 know it is expensive, because nothing in the loop is aware of cost.
 
-Two things stop it, and you need both. The first is a hard retry ceiling in
-the charter: two attempts at any single step, then stop. The second is naming
-the specific walls that mean stop immediately rather than stop after two
-tries. Device challenges and captchas belong in that category, and treating
-them as a full stop is a safety decision that happens to be a cost decision
-too. [Flight Check-In](/bots/flight-check-in) is built exactly this way: it
-stops for a human at every 2FA or captcha and never tries to get past one.
+Two things stop it, and you need both. A hard retry ceiling in the charter:
+two attempts at any single step, then stop. And a named list of walls that
+mean stop immediately rather than stop after two tries. Device challenges and
+captchas belong there, and treating them as a full stop is a safety decision
+that happens to be a cost decision. [Flight Check-In](/bots/flight-check-in)
+is built exactly this way: it stops for a human at every 2FA or captcha and
+never tries to get past one.
 
-There is a related trap in how approvals work. The docs are direct that an
-approval controls the proposed action and does not reverse work already
-completed
-([approvals, security and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)).
-So an approval prompt is not a refund. By the time you see it, the bot has
+Approvals do not help here. The docs are direct that an approval controls the
+proposed action and does not reverse work already completed
+([approvals, security and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)),
+so an approval prompt is not a refund. By the time you see it, the bot has
 already done everything it did to get there, including forty minutes of
 fruitless clicking. Approvals protect you from the action. Retry ceilings
 protect you from the approach.
+
+## Walk one blocked login through the loop, attempt by attempt
+
+Here is the loop written out. The scenario is illustrative rather than
+measured: a [subscription pruner](/bots/subscription-pruner) signs into a
+billing portal on Monday, and over the weekend the vendor added a device
+verification step. Nothing errors. The bot simply cannot get in, and it does
+not know that.
+
+| Attempt | What it sees | Theory it forms | What it does | Cost of the attempt |
+|---|---|---|---|---|
+| 1 | Login form | Ordinary sign-in | Types credentials, submits | One page load, one form fill |
+| 2 | A verification prompt | The page had not finished loading | Reloads, retypes, submits | Full cycle again |
+| 3 | The same prompt | The field lost focus | Clicks the field first, retypes | Full cycle again |
+| 4 | The same prompt | This sign-in path is wrong | Navigates to a different login URL | New page tree to observe |
+| 5 | The same prompt again | The session is stale | Clears state, starts from the home page | Longest cycle yet |
+| 6 | Same | There may be a help page for this | Searches the vendor's docs | New site, new pages |
+| 7 | Same | A support article may hold the answer | Reads the article, tries again | Long input plus another cycle |
+
+Note the turn at attempt 4. Up to there the bot is retrying the same step,
+which a retry ceiling of two would have stopped. From attempt 4 onward it is
+trying a different route to the same goal, and a retry ceiling does not touch
+that, because each route gets a fresh count. This is why the charter below
+carries two clauses rather than one: a limit on attempts, and a ban on looking
+for another way in.
+
+The correct behaviour is a stop at attempt 2 with a one-line report: the
+billing portal now asks for device verification, no data collected, your
+action needed. That costs almost nothing and gives you the only thing you
+wanted, which is to know.
+
+The tell that this is happening to you is a bot that says it is "still working
+on it" across several updates without producing partial output. Progress
+without output is the signature of a loop, and it is worth interrupting by
+hand, because nothing else will.
 
 ## Frequency is a dropdown that multiplies everything
 
@@ -141,8 +189,8 @@ invisible at the moment you click it.
 | Once a day | 30 | 1x | Briefs, digests, change reports |
 | Weekdays only | 22 | 0.7x | Anything tied to a working week |
 
-The question that settles it: what is the shortest delay that would actually
-change a decision you make? You are not repricing at 3am, so
+The question that settles it: what is the shortest delay that would change a
+decision you make? You are not repricing at 3am, so
 [Competitor Pricing Watch](/bots/competitor-pricing-watch) reads public pages
 on a daily cadence rather than polling. You are not answering mail while
 asleep, so [Inbox Triage](/bots/inbox-triage) works twice a day. Where you
@@ -155,11 +203,11 @@ picking a trigger type are in
 [the scheduling guide](/blog/grok-bot-scheduling). This article is about the
 ceiling, not the estimate.
 
-## Charter clauses that act as a soft cap
+## Turn each lever into a charter clause you can paste
 
 Since the runtime has no cap, the charter is where the cap goes. Here is a
 complete one you can paste and adapt. Every block below maps to one of the
-five drivers above.
+five levers above.
 
 \`\`\`text
 You are my Competitor Pricing Watch.
@@ -203,44 +251,88 @@ from converting one blocked attempt into six creative ones. Without it, a
 retry ceiling of two just means two attempts per route, and routes are
 unlimited.
 
-| Charter block | Driver it caps | What it prevents |
+The self-report block is the odd one out: it caps nothing. It exists because
+no audit view does, and a line reporting pages, calls, retries and ceilings
+hit is the only per-bot number you will ever have.
+
+## Measure your own per-run cost before you schedule anything
+
+You are estimating against an allowance whose size is not published, so an
+estimate built from published figures is impossible. Measure instead. The
+whole procedure takes a working week and it is the only honest input to a
+schedule decision.
+
+Run the bot manually, not on a routine, five times over two or three days,
+against your real data rather than a tidy sample. Note your account usage
+before the first run and after the fifth, and divide. That is your per-run
+cost for this charter, this data, this month. It does not transfer to another
+bot and it will drift, which is the point of re-checking it.
+
+Then run the check that can fail. Multiply the per-run figure by the schedule
+you were about to pick. If hourly gives you 720 runs in a month and the
+arithmetic makes you wince, the schedule was wrong, not the bot. Pick the
+coarser cadence and multiply again.
+
+Measure a second time with the input ceiling removed, on a day when the source
+material is unusually long. The gap between the two figures is what the
+ceiling is buying. No gap means it is set too loose to bind. The broader habit
+of testing a setup rather than trusting it is in
+[the bot testing guide](/blog/testing-your-bot).
+
+## Match the symptom to the charter clause that is missing
+
+Usage problems announce themselves in specific ways. Each row has a different
+cause and a different fix, and treating them all as "the bot is expensive" is
+how people end up switching runtimes instead of adding a line.
+
+| Symptom | Likely cause | The clause that fixes it |
 |---|---|---|
-| Run budget | Frequency | A dropdown that quietly multiplies by 288 |
-| Retry ceiling | Retries | The unbounded driver becoming bounded |
-| Input ceiling | Context size, browser work | One transcript outweighing a week |
-| Output ceiling | Output length | Paying for a report you skim |
-| Self-report | Nothing directly | Gives you the numbers no audit view provides |
-| Where you stop | Discretionary spend | An invoice you did not authorise |
+| Usage climbs on days you did nothing | A poll running on a dead weekend | A run budget with weekdays named, or an event trigger |
+| One bot's week looks like a normal month | A retry loop nobody interrupted | Two attempts per step, plus no alternate routes |
+| Reports arrive fine, usage keeps rising | Tool calls growing as the bot gets thorough | A numeric ceiling on tool calls and page loads |
+| A single day spikes, the rest are flat | One very long document read whole | An input ceiling with a page limit and a skip list |
+| Every bot rose at once | A source got slower, so every run does more waiting and observing | Prefer an API or an export over the browser route |
+| You cannot tell which bot it was | Two jobs living in one bot | Split them, one job per bot, and re-measure |
+| Usage looks fine, output stopped being read | Nothing technical at all | The weekly review below, and a kill decision |
+
+The last row is the most common and the least discussed. A bot whose output
+you skip is not a cost problem in the runtime, it is a cost problem in the
+roster, and no clause fixes it.
 
 ## No audit view means you keep the ledger
 
 Since an audit view of bot actions does not exist yet, you cannot answer
 "which bot burned the week" after the fact. Four habits substitute for it.
 
-**One job per bot.** A bot doing four things has four cost profiles blended
-into one signal, and you cannot tune any of them. Splitting is the only way to
-get attributable usage out of an environment that does not attribute anything.
+**One job per bot.** A bot doing four things blends four cost profiles into
+one signal, and you cannot tune any of them. Splitting is the only way to get
+attributable usage out of an environment that attributes nothing.
 
-**Make every bot report its own consumption.** The self-report line in the
-charter above is not a billing figure, it is a proxy you own: pages, calls,
-retries, ceilings hit. A bot whose retry count jumps from one to nine has told
-you something a dashboard would have, if there were a dashboard.
+**Make every bot report its own consumption.** The self-report line is not a
+billing figure, it is a proxy you own: pages, calls, retries, ceilings hit.
 
 **Keep the run history you care about outside the run history.** The app
 retains a limited number of recent run records per routine, so anything you
-want to compare across weeks has to be written somewhere durable by the bot
-itself. There is more on that short evidence window in
+compare across weeks has to be written somewhere durable by the bot itself.
+More on that short evidence window in
 [the routines guide](/blog/grok-bot-routines-vs-triggers).
 
 **Match your review cadence to the billing cadence.** The allowance is
 described as weekly, so review weekly. A monthly review of a weekly meter is
 three weeks of blind spot by design.
 
-## The eleven minute weekly review
+## Run an eleven minute roster review before the allowance rolls
 
 Put it on the calendar for the same day each week, before the allowance rolls.
-List every bot in one place. For each one, three columns: what triggers it,
-when you last used its output, and whether last week's runs hit a ceiling.
+List every bot in one place. For each one, four columns: what triggers it,
+when you last used its output, whether last week's runs hit a ceiling, and the
+retry count from its self-report line.
+
+Read the retry column first. It is the only one that can tell you about a
+runaway in progress rather than a habit that formed slowly. A bot whose
+retries went from one to nine has changed behaviour, and the cause is almost
+always outside the bot: a login expired, a page redesigned, a vendor added a
+step.
 
 Then one decision per bot, and only three options are allowed.
 
@@ -254,11 +346,64 @@ original frequency was aspiration rather than need.
 **Keep it.** Which now means something, because it was compared against the
 alternative.
 
+Two rules keep the review honest. Coarsen at most one bot per week, so next
+week's numbers have a single explanation. And write the decision down next to
+the bot, because "we discussed this one" is the thought that protects a dead
+bot for four months running.
+
 A roster review is itself a reasonable thing to give a bot, and
 [Bot Advisor](/bots/bot-advisor) exists for that job. Its boundary is the
 right one: it never deletes or rewrites another bot without your explicit
 say-so. You want the review automated and the pruning manual, never the other
-way around.
+way around. Once the list is long enough that the review stops fitting in
+eleven minutes, the structural fixes are in
+[the multi-bot teams guide](/blog/multi-bot-teams).
+
+## Answer the case for letting a bot finish the job
+
+The strongest argument against everything above: caps make bots worse. A bot
+that stops at twelve tool calls with half an answer has cost you the run and
+given you nothing, and now you do the job yourself with a partial report as a
+distraction. A bot that pushed on for another twenty calls would have finished
+it. Better to pay for completion than to pay for interruption.
+
+It is right that a ceiling landing mid-task produces the worst outcome: you
+paid and got nothing usable. The fix is not a higher ceiling, it is a narrower
+job. A ceiling that keeps firing is telling you the bot was asked for more
+than one run's worth of work, and the answer is to split the task.
+
+It is wrong that pushing on gets you completion. The runs that blow through a
+ceiling are overwhelmingly the ones that were never going to complete, because
+what made them long was a wall rather than a workload. A run that succeeds
+does so on a fairly predictable amount of work. A run that fails does not
+converge at all, which is the point of the walkthrough above.
+
+One version of the objection is worth conceding outright. For a genuine
+one-off, a migration, a bulk cleanup, an annual reconciliation, a hard ceiling
+is the wrong tool and you should supervise instead. Ceilings are for things
+that run unattended. Attended work has you as its ceiling.
+
+## Name the jobs a hard ceiling genuinely ruins
+
+Every rule here has a domain. Three kinds of work sit outside it.
+
+**Deep research sweeps.** A brief that legitimately requires twenty sources
+cannot run under a six-page-load cap. Run these on demand while you are at the
+desk, not on a routine, and let the cap be your attention.
+
+**First runs of anything.** The first execution of a new charter is a
+measurement, not a production run. Ceilings hide what the natural cost of the
+job actually is, so measure without them and add them afterwards.
+
+**Jobs whose value is in the tail.** Some outputs are worth the long version:
+a quarterly review, a full competitive teardown, a year-end reconciliation.
+Coarsen the frequency hard instead. Four expensive runs a year is a rounding
+error next to a cheap run every hour.
+
+The common thread is that ceilings are a control for unattended, repeating
+work. When a job is attended, rare, or exploratory, the honest control is you
+deciding to run it, and the clause that still applies in every case is the
+spend one: the bot never buys anything, whatever else it is allowed to do.
 
 ## The boundary is the only hard stop you own
 
@@ -278,6 +423,8 @@ than politeness is laid out in
 [the bot boundaries guide](/blog/grok-bot-boundaries). Spend is just the
 version of the argument where the cost of getting it wrong arrives as an
 invoice.
+
+**Keep reading:** [The Starter Roster](/blog/grok-bot-starter-roster), [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers), [The Best AI Bots for Founders in 2026](/blog/best-ai-bots-for-founders).
 
 ## Frequently Asked Questions
 

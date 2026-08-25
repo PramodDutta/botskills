@@ -27,7 +27,7 @@ wrong target, and the reason is worth being precise about: you cannot
 tell a correct match from an incorrect one by looking at the output,
 because both of them look like a matched row.
 
-## Ninety receipts, one statement, and a deadline
+## Target the awkward fifth, because the easy four fifths are free
 
 The work has a shape that most automation ignores. Roughly four fifths of
 it is trivial and worth almost nothing to automate, because those lines
@@ -67,7 +67,27 @@ The uniqueness row looks like housekeeping and is doing something
 important. It is covered in the failure section, and it is the single
 rule that catches the worst error this bot can make.
 
-## Confidence bands instead of a yes or no
+## Give each of the six awkward shapes its own rule
+
+Those five evidence rules handle the easy majority on their own. The
+fourteen lines that took two hours are awkward in six specific ways, and
+each one defeats a different rule. Naming them is what stops the bot
+inventing its own accommodation.
+
+| Shape | Which rule it defeats | The rule that handles it |
+|---|---|---|
+| One payout covering six invoices | Uniqueness, since one line needs many receipts | Allow one-to-many only when the components sum EXACTLY to the line. List every component and the sum. Any rounding adjustment makes it UNMATCHED |
+| Posted on the 31st, receipt dated the 28th | Date, if the window is written as a month | Keep the window in days, never months, and print the gap in days so a drift you tolerated stays visible |
+| A partial refund | Amount, because netting makes two wrong numbers agree | Match a credit to its original charge by reference, never by amount. A refund that happens to explain a mismatch is UNMATCHED |
+| A conversion off by the spread | Amount, since it will never be exact to the cent | Require the implied rate and its source on the line. An unexplained residual is PROBABLE, never MATCHED |
+| An annual renewal you forgot | Date, because the receipt is thirteen months old | Search the whole archive before declaring no receipt found, and put a recurring charge with no receipt anywhere at the top |
+| A descriptor nothing like the vendor name | Merchant, because similarity is not identity | Resolve through mapping.md or fail. Never infer a vendor from a descriptor that merely looks close |
+
+The middle column is why a general instruction like "be careful with edge
+cases" does nothing. Each shape has one specific rule it will bend, and a
+model asked to be careful bends whichever rule lets it finish.
+
+## Give the bot three bands so doubt has somewhere honest to go
 
 A binary matched flag forces the bot into a decision it does not have the
 evidence for. Three bands give it somewhere honest to put the awkward
@@ -89,6 +109,27 @@ rather than a coin flip.
 Say the preference out loud in the charter. Left alone, a competent model
 optimises for a tidy report with few loose ends, which is the exact
 opposite of what you want from this one.
+
+## Read the band straight off the evidence combination
+
+Bands described in prose leave room for interpretation, and interpretation
+is the thing being removed. Written as a lookup, there is nothing to
+interpret: four inputs go in, one band comes out.
+
+| Amount | Date | Merchant | Receipt | Band | Your move |
+|---|---|---|---|---|---|
+| Exact | In window | In mapping | Unused | MATCHED | Nothing |
+| Exact after a stated rate | In window | In mapping | Unused | PROBABLE | Check the rate once, then promote it yourself |
+| Exact | In window | Not in mapping | Unused | PROBABLE | Add the mapping entry. This row shrinks month over month |
+| Exact | Outside window | In mapping | Unused | UNMATCHED | Ask why the gap exists before accepting it |
+| Exact | In window | In mapping | Already used | UNMATCHED | Stop here. This row hides real charges |
+| Exact, two candidates | In window | In mapping | Both unused | UNMATCHED | A tie is never a match. Choose by hand |
+| Differs, unexplained | In window | In mapping | Unused | UNMATCHED | State the difference in the report, in currency |
+
+Two rows carry all the value. The third is the learning loop: every
+PROBABLE from an unknown descriptor becomes a mapping entry and stops
+appearing. The fifth is the alarm, and it is the only row where the
+correct response is to stop the run rather than annotate the line.
 
 ## The unmatched pile is the product
 
@@ -115,7 +156,34 @@ mapping file grows, while the match rate stays honest. A bot whose
 unmatched pile empties in month two has not learned anything. It has
 started guessing.
 
-## The reconciliation charter with its matching rules
+## Track the unmatched count across six months, not the match rate
+
+Follow the ninety-four line statement from the opening across half a
+year and the shape of a healthy build becomes obvious. These are the
+numbers from that running example rather than a measurement of anything,
+but the pattern is the point.
+
+| Month | Lines | MATCHED | PROBABLE | UNMATCHED | Mapping entries | Reading |
+|---|---|---|---|---|---|---|
+| One | 94 | 76 | 4 | 14 | 0 | The honest baseline. The pile is your two hours, itemised |
+| Two | 91 | 81 | 5 | 5 | 11 | Descriptors resolved. The biggest single drop you will see |
+| Three | 97 | 86 | 4 | 7 | 15 | Up two, because three new vendors arrived. Expected |
+| Four | 95 | 88 | 3 | 4 | 18 | Settling. The residue is genuinely awkward, not unlearned |
+| Five | 99 | 91 | 3 | 5 | 19 | Flat is the target state, not a plateau to fix |
+| Six | 96 | 96 | 0 | 0 | 19 | Stop. Nothing got better, the bands collapsed |
+
+Month six is the failure and it is the one that looks like success. A
+statement with a hundred lines contains awkward cases every month
+regardless of how good your mapping file is, because refunds, aggregated
+payouts, and currency spreads are properties of how vendors bill rather
+than gaps in your configuration. Zero unmatched means the bot stopped
+escalating, which means the rules were relaxed somewhere.
+
+The floor is not zero. On a book this size it settles somewhere around
+three to six lines a month, and holding steady there is what winning
+looks like.
+
+## Paste the reconciliation charter with its evidence rules intact
 
 \`\`\`text
 You are my Expense Reconciliation bot.
@@ -200,7 +268,50 @@ Those two numbers plus the receipt total have to add up. When they do
 not, a receipt was used twice, and the arithmetic tells you before the
 books do.
 
-## The boundary: it never moves money and never files anything
+## Follow one double-use match to the charge it hid
+
+Here is the whole failure in one vendor.
+
+The statement shows \`CLDFLARE* SUB 4900\` twice in June, on the 3rd and
+the 17th, both 49.00. The receipts folder has one receipt from that
+vendor, dated 3 June, for 49.00.
+
+Without the uniqueness rule, both lines match it. Amount exact on both.
+Merchant resolves through the mapping file on both. The date window
+covers the 3rd outright and reaches the 17th if anyone widened the window
+even slightly. Two green rows. The summary reads 94 lines, 94 matched,
+unmatched pile empty, and it is the best-looking report the bot has ever
+produced.
+
+What actually happened is that a card update created a second
+subscription, and you are now paying 49.00 twice a month to a vendor you
+believe you pay once. Nothing in the report says so. The duplicate will
+run until somebody reads a statement line by line, which is the job you
+automated away.
+
+The arithmetic catches it without any cleverness at all:
+
+\`\`\`text
+Receipts available in the folder      88
+Receipts the bot reports as consumed  89
+Receipts reported left over            0
+89 + 0 = 89, and 89 does not equal 88.
+One receipt was used twice. Find it before anything is filed.
+\`\`\`
+
+With uniqueness enforced, the same month reads differently. The 3rd
+matches. The 17th comes back UNMATCHED with the reason "receipt already
+consumed", and because it is a charge with no receipt from a known
+vendor, it lands at the top of the report where the charter puts things
+you most need to see. One line, thirty seconds, and a recurring
+overcharge caught in its first month rather than its fourteenth.
+
+The same shape hides three other things worth catching: a vendor billing
+twice after a plan change, a renewal that came back at a much higher
+price against last year's receipt, and a card number being used by
+somebody who is not you.
+
+## Close two verbs permanently: moving money and filing
 
 Two verbs stay closed permanently, and they are closed for different
 reasons.
@@ -245,7 +356,7 @@ version of that review is in
 reasoning about which verbs stay closed is in
 [the guide to bot boundaries](/blog/grok-bot-boundaries).
 
-## The reversal test at month end
+## Attack ten matched rows instead of reading them
 
 Do not check whether the matches look right. Try to break them.
 
@@ -275,6 +386,69 @@ the output file is the evidence, not the run history. If this is early in
 your build order,
 [the first week plan](/blog/grok-bot-first-week) covers how to introduce
 a bot like this without giving it authority it has not earned.
+
+## Answer the objection that your expense tool already does this
+
+The obvious counter: expense platforms have matched receipts to card
+feeds for a decade. Why build anything?
+
+Because they are good at exactly the part that was already cheap. A tool
+with a live card feed and a forwarding address will match the easy four
+fifths automatically and well. That is real value and it is not what this
+bot is for.
+
+Three things they do less well. Receipts outside the tool stay outside
+it: a vendor portal that will not email, a shared drive, a photo of
+paper. Aggregated payouts covering several invoices usually need a human
+either way. And most importantly, a matched row in an expense tool
+arrives without its evidence. You are shown a green tick, not the amounts
+compared, the rate used, or a count proving no receipt was consumed
+twice. The uniqueness arithmetic that catches the double use is the part
+almost nothing surfaces.
+
+Their unmatched pile also tends to be a tab rather than a report. It has
+no reason codes, no ranking, and no line at the top saying which charges
+have no receipt and no known vendor, which is the one thing you actually
+needed to read.
+
+Where the objection wins outright: if every vendor already mails receipts
+into a tool with a card feed, and your books are single entity and single
+currency, building this is a hobby. Keep the tool and point a much
+smaller bot at the residue: the leftovers tab, once a month, with reason
+codes and the consumed-plus-leftover check.
+
+## Recognise where receipt matching stops being the right shape
+
+Four situations break the model in this article, and it is worth knowing
+which one you are in before you spend an afternoon.
+
+Cash and mileage have no statement line to match against. There is
+nothing to reconcile, only a claim to substantiate, and a matching bot
+has no opinion worth having about it.
+
+Multiple entities or multiple cards need the uniqueness rule to carry a
+scope. A receipt legitimately appearing in two sets of books is not a
+double use, and without "one line per period per entity" written into the
+charter, every intercompany recharge becomes a false alarm.
+
+Tax treatment is not matching. A row can be perfectly MATCHED on amount,
+date, merchant, and uniqueness while sitting in the wrong VAT or GST
+category entirely, and nothing in this design would notice. Keep that as
+a separate review by a person who knows the rules, and never let a
+matched band imply a correct category.
+
+Ledger work is a different bot with different stakes, because a posted
+transaction is not a draft document. That belongs in
+[the Grok Bot QuickBooks guide](/blog/grok-bot-quickbooks). The recurring
+charges this run surfaces belong in
+[a subscription audit](/blog/grok-bot-to-subscription-audit), and the
+cancelling that follows belongs with
+[Subscription Cancellation Advisor](/bots/subscription-cancellation-advisor),
+which never cancels anything without your explicit approval of that
+specific subscription. Three narrow bots with three closed verbs beat one
+reconciler that grew a cancel button.
+
+**Keep reading:** [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Monitor Competitors](/blog/grok-bot-to-competitor-monitoring).
 
 ## Frequently Asked Questions
 

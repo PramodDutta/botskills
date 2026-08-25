@@ -51,7 +51,7 @@ meeting on the 30th" is useful even when it turns out to be wrong, because you
 can disagree with it in one second. A row that says "day 12, send follow-up" is
 not, because you have to go and reconstruct the reasoning yourself.
 
-## Designing a cadence: the count matters more than the copy
+## Design the cadence as numbers, not as guidance
 
 Give a bot no cadence and it will follow up on everything, forever, because
 nothing in its instructions tells it to stop. That is how a pipeline turns into
@@ -80,6 +80,28 @@ counter to zero. An out-of-office is not a reply, and the charter has to say so,
 because a bot that treats an auto responder as engagement will restart a
 five-touch sequence on a person who is on a beach.
 
+## Set the cadence to the shape of the deal, not to a default
+
+Five touches at 3, 7, 14, 25 and 40 is a sane default and a bad universal. The
+right cadence follows how the decision actually gets made, and the two things
+that vary are how many people are involved and how long the buying window
+stays open.
+
+| Deal shape | Touches | Days from your last outbound | End state |
+|---|---|---|---|
+| Self-serve trial under 100 a month | 3 | 2, 6, 14 | Nurture list. A fourth touch reads as pressure |
+| SMB, one decision maker, 2 to 6 weeks | 5 | 3, 7, 14, 25, 40 | Dormant, revisit at 90 days |
+| Mid-market, 2 to 4 stakeholders | 5 | 5, 12, 21, 35, 55 | Dormant with a named re-entry trigger |
+| Enterprise with procurement | 4 | 7, 21, 45, 75 | Never dormant. Move to a quarterly check |
+| Conference or event lead | 2 | 1, 5 | Dormant immediately |
+| Inbound demo request gone quiet | 3 | 2, 5, 12 | Dormant, and find out whether they bought elsewhere |
+
+Two rules survive across all six rows. The intervals stretch and never
+compress, because accelerating on someone who has not replied is the clearest
+possible signal that nobody is reading their silence. And the count exists as a
+number in the charter, whatever number you choose, because the alternative is
+not a longer cadence, it is an infinite one.
+
 ## Every follow-up carries something new, or it does not go out
 
 Here is the part that separates a follow-up sequence from spam, and it is not
@@ -101,7 +123,30 @@ This produces a queue that is shorter than you expect, and shorter is the point.
 Eight prospects due today of whom three have something to say is a better
 morning than eleven drafts you have to read and delete.
 
-## The sales follow up bot charter
+## Count what an empty touch actually costs you
+
+"It cannot hurt to check in" is the assumption underneath every bloated
+sequence, and it is wrong in four separate ways. None of them appear in your
+reply rate, which is why the habit survives.
+
+| What it costs | The mechanism | When you find out |
+|---|---|---|
+| Their attention | They open it, find nothing, and now owe you a reply they do not want to write | Never. This one is invisible by design |
+| Your credibility | You have demonstrated that you will write without having anything to say | Around touch three |
+| Your touch budget | One of five spent on nothing, so the real news lands at day 40 instead of day 14 | When something genuine finally happens |
+| The option to come back | A polite non-answer is easier to give than a real one, and it closes the thread | At the close-the-loop note, when there is nothing left to reopen |
+
+Silence is not the absence of a move. It is a held option, and the option has
+real value: it lets you arrive later with a release, a customer story, or a
+price change and be read properly. Every empty touch spends a little of that
+option to buy nothing.
+
+That is why the content rule belongs in the charter as a gate rather than as a
+tone note. A bot told to be relevant will decide it is being relevant. A bot
+told to name the new thing in one sentence before it may draft will sometimes
+fail to name one, and that failure is the product.
+
+## Paste this follow-up desk charter and change only the numbers
 
 \`\`\`text
 You are my Follow-Up Desk.
@@ -175,7 +220,7 @@ If you want the general version of the argument, it is in
 [why an approval is a gate rather than an undo](/blog/grok-bot-approval-rules-reversibility)
 covers the reversibility point in detail.
 
-## Anti-spam law sits underneath all of this
+## Anti-spam law follows your recipient, not your office
 
 Commercial email is regulated, and the rules differ by where your recipient is
 rather than where you are. In the United States, CAN-SPAM governs commercial
@@ -216,7 +261,26 @@ that account, so the check happens again in your head at approval time. If a
 draft says "last contact: 22nd, they asked for a pause", you will catch it even
 in a Friday batch.
 
-## Reading your own queue the way a prospect would
+## Read the failure from the queue, not from the reply rate
+
+Reply rate moves too slowly and has too many causes to debug anything. The
+queue itself tells you what is wrong within a day.
+
+| Symptom | Cause | Fix |
+|---|---|---|
+| The queue is eight items every single day | The content rule is advice, not a gate | Make it name the new thing before a draft may exist |
+| Two emails reached one prospect in four days | Intervals counted from drafts, not from your sent mail | Count from your last outbound, recomputed each run |
+| A sequence restarted on someone who is away | An auto-reply was treated as engagement | Exclude auto-replies by name in the reset rule |
+| A draft referenced a meeting that was cancelled | No interrupt check before drafting | Re-read the account across every visible channel first |
+| Someone who asked to stop received touch four | Opt-out left to the bot's judgment | Mechanical rule: any stop wording goes dormant that run |
+| Every draft could belong to any prospect | The bot found a template and is filling it | Run the stripped-signature read below |
+| The holding list is always empty | It is manufacturing reasons to write | Have it state the new thing first, then decide whether to draft |
+
+The empty holding list is the one to watch for. It looks like a productive bot
+and it is the exact signature of a bot that has stopped applying the only rule
+that separates a follow-up from a nuisance.
+
+## Read your own queue the way a prospect would
 
 The check for this bot is deliberately awkward. Take yesterday's queue, strip
 the greeting and the signature from each draft, and read them as a stack. If you
@@ -238,7 +302,49 @@ two months, cut the cadence to three and get the time back.
 Approval edit rate. If you rewrite more than half of what it drafts, the problem
 is upstream in the context you give it, not in the drafting instructions.
 
-## Earning more rope, one field at a time
+## Score the busy-versus-cold read against what actually happened
+
+The busy-or-cold verdict is the only judgment this bot makes, so it is the only
+thing worth grading. After thirty days, take every opportunity where the bot
+called it and check what happened.
+
+| The bot said | What happened | What it means | What to change |
+|---|---|---|---|
+| Leans busy | They replied | The read was right | Nothing |
+| Leans busy | They never replied | Optimism: it is treating any evidence as a reason to wait | Require a dated signal, not an inference, before it may say busy |
+| Leans cold | They replied | Pessimism, and the cheaper of the two errors | Check whether you stopped writing because of the label |
+| Leans cold | They never replied | The read was right | Nothing |
+
+The bottom-left cell carries a question that matters more than the accuracy
+number. If your own behaviour changed because the row said "leans cold", then
+the label is functioning as a decision and the bot has quietly acquired the
+authority to close deals by describing them. Keep the verdict as an input you
+argue with, not a status you act on, and keep the cadence running underneath it
+until the touch count actually runs out.
+
+## The strongest objection: your approval step is what loses the deal
+
+The serious argument for autosend is not laziness, it is latency. The premise
+of this whole build is that timing wins deals. If a draft sits in your queue
+for three days waiting for approval, you have rebuilt the exact delay the bot
+was supposed to remove, and you have added a review chore on top.
+
+Measure it before you argue about it. Track the gap between draft created and
+message sent for a fortnight. If the median is under a few hours, the objection
+is theoretical for you. If it is over a day, it is real, and the fix is a
+shorter queue and a fixed ten-minute slot in the morning, not a send
+permission. A queue of three drafts gets cleared. A queue of eleven gets
+postponed, which is how the latency appeared in the first place.
+
+Where the objection wins outright: messages that carry no claim and no
+commitment. A scheduling link somebody explicitly asked for, or a receipt, is
+not really a follow-up. Where it loses: anything containing a price, a date, a
+promise, or a reference to a conversation, which is every message in the
+cadence above. Autosend trades a rare error you would have caught for a common
+one nobody sees, and in a pipeline the common invisible error is the expensive
+one.
+
+## Widen this bot into the CRM, never toward the outbox
 
 Widen this bot slowly and never in the direction of sending. There is real room
 underneath that ceiling.
@@ -262,6 +368,8 @@ nothing it drafts. One week where you send its drafts unedited when you agree
 with them, which tells you fast whether the writing is actually usable. Then CRM
 write access for dates and notes. The send button stays yours permanently, and
 that is not a training-wheels phase you graduate from.
+
+**Keep reading:** [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Monitor Competitors](/blog/grok-bot-to-competitor-monitoring).
 
 ## Frequently Asked Questions
 

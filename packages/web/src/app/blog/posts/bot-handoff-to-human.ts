@@ -90,7 +90,7 @@ a human at every 2FA or captcha and never tries to get past one. That is a
 safety decision and a cost decision at the same time, since the alternative is a
 bot patiently theorising at a wall for forty minutes.
 
-## The escalation that wastes the most time
+## Ban the four phrases that hand the whole problem back
 
 "I need help" is not a handoff. Neither is "should I proceed?", "please
 confirm", or "let me know how you want to handle this." Each of those hands the
@@ -117,7 +117,7 @@ recommends, and what happens if you say nothing. You reply with one word.
 The third row is not longer because it is verbose. It is longer because it
 contains the work.
 
-## Anatomy of a handoff worth reading
+## Write every handoff in six parts and drop none of them
 
 Six parts, in this order. Drop any of them and the message gets more expensive
 for you to process.
@@ -179,7 +179,35 @@ until 09:15 should say so and hold. A stop that genuinely cannot wait belongs in
 a channel you actually watch, and if the job produces those regularly, the job
 is not ready to be unattended.
 
-## The handoff block, ready to paste
+## Route each handoff by how fast the decision decays
+
+Not every stop deserves the same channel, and the sorting criterion is decay:
+how much worse the answer gets while it waits. Most handoffs decay slowly and
+belong in one end-of-run list. A small number decay in minutes, and those are
+the only ones worth interrupting for.
+
+| The stop | Decay | Where it should arrive | The default it should carry |
+|---|---|---|---|
+| Ambiguity about where something files | Days | End-of-run list | Stays unfiled until you answer |
+| A vendor or sender with no history | Days | End-of-run list | Held, nothing done |
+| An amount far outside its range | Hours | End-of-run list, first item | Skipped this run, raised again tomorrow |
+| A customer thread awaiting a reply | Same day | A channel you genuinely watch | Draft held past 18:00, never sent |
+| A 2FA prompt or captcha mid-session | Minutes | Immediate | Run marked failed, retried next cycle |
+| Anything irreversible | Stops instantly, message can still batch | End-of-run list | Nothing happens without you |
+
+The last row is the one people get backwards. Stopping immediately and messaging
+immediately are separate decisions. The bot should always halt before an
+irreversible step and can still deliver the ask in the evening batch, because
+nothing is decaying while it waits.
+
+There is a device constraint worth planning around. On iPhone you can pause and
+resume a routine, while editing, history, testing, and deleting all require the
+desktop app ([mobile](https://docs.x.ai/grok-bot/mobile)). So a handoff that can
+only be resolved by changing the charter is a handoff that waits for a laptop,
+whatever channel it arrived in. Write the defaults on the assumption that you
+are holding a phone.
+
+## Paste this handoff block into any charter
 
 This drops into any charter. The last two clauses are the ones people leave out
 and then wonder why the bot kept going.
@@ -255,7 +283,7 @@ last twenty runs, find the two or three decisions that could have gone either
 way, and check whether any rule in your charter would have caught them. Usually
 none would.
 
-## Tuning the rate without lowering the bar
+## Cut the causes of handoffs, never the rules
 
 The goal is not fewer handoffs. It is fewer handoffs about the same thing.
 
@@ -281,6 +309,115 @@ carefully designed setup becomes an unattended one without anybody deciding to
 make it unattended. If you want fewer stops, make the world clearer to the bot.
 The reasoning behind treating that line as structure rather than preference is
 in [the bot boundaries guide](/blog/grok-bot-boundaries).
+
+## Four weeks of stop reasons, tallied by rule
+
+Here is what that tuning looks like as numbers. An
+[inbox triage bot](/bots/inbox-triage) running daily across a busy mailbox,
+counting stops by rule number for four weeks.
+
+| Rule | Week 1 | Week 4 | What changed in between |
+|---|---|---|---|
+| 1. Ambiguous instruction | 9 | 2 | Two charter sentences rewritten to name the destination folder outright |
+| 2. Unrecognised entity | 14 | 3 | A notes file listing 60 regular senders, clients, and projects |
+| 3. Out-of-range value | 1 | 1 | Nothing. The threshold was measured rather than guessed |
+| 4. Irreversible action | 6 | 6 | Nothing, and nothing should |
+| 5. Repeated failure | 4 | 0 | One expired login, fixed once |
+| 6. Credential wall | 2 | 2 | Nothing. Two sites demand 2FA weekly and always will |
+
+Thirty-six stops in week one, fourteen in week four, and the shape of the drop
+is the diagnosis. Rules 1, 2, and 5 fell because the world got clearer to the
+bot. Rules 3, 4, and 6 stayed flat, which is exactly right: they describe
+conditions in the world rather than gaps in the setup.
+
+Now read it the other way. If rule 4 had fallen from six to two, nobody made
+anything clearer. Somebody widened a rule, or the bot found a reading of the
+charter that let it keep going. A flat rule that starts declining is the single
+most important signal this tally produces, and it only exists because you kept
+the count.
+
+## Answer your last five handoffs with one word each
+
+Here is a check that can fail, and takes two minutes. Open the last five
+handoffs and try to answer each with a single word, without opening the item,
+the source, or anything else. Count how many you managed.
+
+Below four, the format is broken, and you can usually name which of the six
+parts went missing. Missing identifier means you had to search. Missing content
+means you had to open the artifact. Missing recommendation means you had to do
+the analysis the bot already did and threw away.
+
+Two more counts worth taking at the same time. First, how many parked items are
+older than the default they stated? Any item sitting past its own default with
+nothing having happened means the default line is decorative, and the queue is
+growing rather than draining. Second, pick one handoff and ask whether the bot
+could have answered it from a notes file you could write in five minutes. If
+yes, that is not a handoff, that is a missing fact, and it belongs in
+[the guide to shaping what a bot remembers](/blog/grok-bot-memory).
+
+## What a broken handoff loop looks like week to week
+
+Each of these has a distinct cause, and the wrong fix makes the next one worse.
+
+| What you see | The actual cause | The fix |
+|---|---|---|
+| The same question returns every week | You answered in chat and never updated the setup | Write the answer into the charter, then reply |
+| A parked queue you have stopped opening | No default clause, so nothing expires and nothing pressures either side | Every handoff states what happens if you never reply |
+| The bot re-asks about an item you decided | Re-asking was never forbidden | Add the line: ask once and wait |
+| You get the stop but cannot find the item | The message has no identifier | Require an ID, link, or path on line one |
+| Every stop lands at 06:40 | The routine runs for the bot's convenience, not yours | Move the schedule so handoffs arrive when you can act |
+| The bot finished anyway, by another route | Only the primary route was forbidden | Forbid alternate routes to the same result explicitly |
+| A rule was skipped because a document said it was fine | Content was read as instruction | The found-instructions block, in every charter |
+
+Row five is the cheapest win on the list and almost nobody takes it. Scheduling
+is a handoff design decision, not just a cost one, and the reasoning for picking
+run times deliberately is in
+[the routines and triggers guide](/blog/grok-bot-routines-vs-triggers).
+
+## The objection is that a bot which stops has not automated anything
+
+Stated properly: if you still have to make decisions, what did delegation buy
+you? Every handoff is a task you are doing, so a bot with a handoff rate above
+zero is a bot that moved work around rather than removing it.
+
+The comparison is wrong, and that is the whole answer. The alternative to
+answering three questions is not answering zero questions. It is doing all forty
+items and making all forty decisions. A bot that handles 37 and stops on 3 has
+removed the 37, and the 3 it kept are precisely the ones where your judgment was
+the input nobody else had.
+
+Where the objection wins is a real case worth naming. If the stop rate stays
+above roughly a quarter of items after you have written the answers back into
+the charter twice, the job is not delegable at this scope. The move then is to
+split it: carve out the mechanical portion, give the bot that, and keep the
+judgment portion yourself. Fighting that with better handoff formatting is
+polishing the wrong surface.
+
+## Where a handoff rule cannot save you
+
+Three limits, and none of them are fixed by writing a better stop rule.
+
+**A handoff assumes a reader.** On holiday, asleep, or in a week that went
+sideways, every default fires and the queue grows. Write the defaults as though
+you will not reply, because some weeks you will not, and a default of "waits
+forever" is a decision you should make on purpose rather than by omission.
+
+**Handoffs catch surprises, not wrong objectives.** A bot doing entirely the
+wrong job, correctly and confidently, trips no rule at all. Nothing is ambiguous
+to it, no entity is unfamiliar, no value is out of range. That failure is only
+visible in what the bot reports about its own choices, which is the argument in
+[the bot observability guide](/blog/bot-observability), and it is the reason
+these two habits belong together.
+
+**A stopped bot stops only itself.** All bots on your account share one
+persistent cloud computer, with browser cookies, signed-in sessions, and
+command-line credentials shared across them, and the documentation states
+plainly that separate bots are not a security boundary. A careful stop rule in
+one charter does nothing about a second bot reaching the same account with a
+looser one. What that means for a whole roster is worked through in
+[the guide to running a team of bots](/blog/multi-bot-teams).
+
+**Keep reading:** [Grok Bot and Shopify](/blog/grok-bot-shopify), [Grok Bot and Stripe](/blog/grok-bot-stripe), [How to Build a Grok Bot That Can Clean Up Stale Docs](/blog/grok-bot-to-doc-cleanup).
 
 ## Frequently Asked Questions
 

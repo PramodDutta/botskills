@@ -102,6 +102,25 @@ change you can compare against the record it came from.
 [PR Review Sentinel](/bots/pr-review-sentinel) comments and never merges, which
 means every action it takes leaves a permalink by construction.
 
+## Sort claims by class, because each class fails in its own way
+
+"Require receipts" gets applied unevenly because people hear it as being about
+actions. It is about claims, and a report holds six kinds, each failing its own
+way.
+
+| Claim class | A typical sentence | Evidence that makes it checkable | How a bad one still reads well |
+|---|---|---|---|
+| Existence | "The draft is saved" | Path, plus the first line of what was written | The path it meant to write, never confirmed |
+| Mutation | "Set the status to paid" | Record ID, field, old value, new value | A new value with no old value, hiding a no-op |
+| Absence | "No competitor price changes" | URL, response status, timestamp, the figure read | A clean sweep produced by a page that never loaded |
+| Judgment | "Not relevant to you" | Item ID plus the phrase or rule it matched | A reason that restates the conclusion |
+| External state | "That invoice is still unpaid" | Where it looked, when, the number on screen | A stale view reported in the present tense |
+| Aggregate | "Handled 40 messages" | Examined count and acted count, separately | One number merging seen with touched |
+
+The absence row holds most of the damage and gets instrumented least, because an
+empty result feels like nothing happened. Something did happen: the bot looked.
+Make it prove that, and harden the absence claims before the mutation ones.
+
 ## Make the bot report what it skipped
 
 This is the part almost nobody writes into a charter, and it is where silent
@@ -134,7 +153,7 @@ one-line reason each. Judgment skips are the bot's model of your priorities
 made visible, and reading ten of them tells you more about whether the charter
 is working than reading a hundred successful actions.
 
-## A run log the bot writes and never edits
+## Append your own run log and forbid the bot from editing it
 
 The run history belongs to the product. The run log belongs to you. Have the
 bot append one line per run to a durable file, in a format you can read with
@@ -197,7 +216,7 @@ The tradeoffs of that shared machine are covered in
 question of what belongs in a durable file versus a run history is part of
 [the routines guide](/blog/grok-bot-routines-vs-triggers).
 
-## The report format that survives being skimmed
+## Write the report for the week you start skimming it
 
 You will skim. Design for it. A report you read properly for three days and
 then stop reading is worse than a shorter report you actually read for a year,
@@ -224,7 +243,41 @@ week is one you answer.
 boundary makes the report the product: it never sends an email, so every draft
 it produces is a claim with an artifact behind it that you can open.
 
-## Spot-checking: sample three runs, not thirty
+## Pick an evidence tier before you pick a tool
+
+Not every bot needs the full apparatus, and pretending otherwise is how people
+end up with none of it. Pick a tier per bot, based on what that bot can reach.
+
+| Tier | Setup cost | What it answers on Friday | Use it when |
+|---|---|---|---|
+| 0. Read the report | Nothing | Nothing, once the message scrolls away | The worst case is a bad draft |
+| 1. Receipts in the report | Three charter lines | Whether one claim is true, while you still have the message | Read-only watchers and researchers |
+| 2. Receipts plus an append-only run log | One file, four charter lines | Whether the numbers drifted for weeks | Anything scheduled. The default |
+| 3. Run log kept off the shared computer | A sheet, database, or repo | The above, and it survives a deleted bot | Money, customers, a repository |
+| 4. Independent reconciliation | A script reading the system of record | Whether the work landed, without asking the bot | One silent miss is expensive |
+
+Tier 2 for almost everything, tier 3 once a bot's output feeds a decision you
+make a week later. Avoid tier 0 with a bot that can write anywhere. A tier 2 log
+doubles as a cost signal, as
+[the guide to keeping bot costs predictable](/blog/bot-cost-control) develops.
+
+## Break the bot on purpose before you trust its log
+
+A log you have never seen fail is a log you have no reason to believe. Break the
+bot in four ways you control. This is the check that can fail, and on a first
+setup it usually does.
+
+| Break it this way | The run should report | If it reports anything else |
+|---|---|---|
+| Sign out of one connected account | Failed or partial, skipped_failed above zero, a named error | Every future outage looks like a quiet week |
+| Point a watched URL at a 404 | The URL and the status code | The absence row above, live in your setup |
+| Feed it a genuinely ambiguous item | The item in judgment skips, with a reason | Your skip reporting covers rule skips only |
+| Rename the log file | It recreates the file and says so | Comparisons vanish months before you look |
+
+Rerun all four after any charter change touching tools or scope, as
+[the guide to testing a bot before you trust it](/blog/testing-your-bot) sets out.
+
+## Sample three runs a week instead of rereading all thirty
 
 Reading every output is not observability, it is supervision, and supervision
 is the thing bots were supposed to remove. Once a bot has a week of clean runs,
@@ -249,6 +302,99 @@ keeps reporting success on a shrinking slice of the world. A column of numbers
 in an append-only file makes that visible in five seconds and nothing else
 does.
 
+## Thirty days of an invoice filer, from clean to quietly wrong
+
+The whole argument as one bot: the charter above, reading a mailbox, matching
+supplier invoices, once a day at 18:00. Three log lines, from day 1, 19 and 30.
+
+\`\`\`text
+2026-07-01T18:02:11+01:00 | invoice-filer | ok | examined=23 | acted=6 |
+skipped_rule=17 | skipped_failed=0 | skipped_judgment=0 | retries=0 | ids=INV-8841,INV-8843,...
+
+2026-07-19T18:01:52+01:00 | invoice-filer | ok | examined=17 | acted=4 |
+skipped_rule=13 | skipped_failed=0 | skipped_judgment=0 | retries=0 | ids=INV-9033,INV-9036,...
+
+2026-07-30T18:02:40+01:00 | invoice-filer | ok | examined=9 | acted=2 |
+skipped_rule=7 | skipped_failed=0 | skipped_judgment=0 | retries=0 | ids=INV-9120,INV-9121
+\`\`\`
+
+Every run reports ok. Nothing failed. Every receipt on day 30 resolves to a real
+invoice, correctly described, so spot-checking that report passes. The bot is
+neither lying nor broken.
+
+On day 19 a supplier moved to a new sending domain. The charter names senders
+explicitly, so those invoices match no rule. They are not filed, and not skipped
+either, because skip counts cover only items the bot looked at. Fourteen
+invoices a month now sit where the bot cannot see them, and no single report is
+capable of saying so.
+
+The only signal is the examined column falling from 23 to 9, which is why the
+weekly comparison has to run against a file rather than run history. At a daily
+cadence the twenty surviving records on day 30 cover days 11 to 30, and inside
+that window a decline from 17 to 9 reads like a slow month. The comparison you
+needed was day 1 against day 30, and day 1 was deleted on day 21. By then you
+read only the verdict line, which is healthy, and which makes one column of
+numbers the entire distance between you and a two-week miss.
+
+## What a failing evidence setup looks like from the outside
+
+None of these announce themselves. Each is a Friday you have not had yet.
+
+| What you notice | What is actually going on | The fix |
+|---|---|---|
+| Three weeks of "no changes detected" | The watcher lost access and reports the empty result as a clean one | Require URL, status, and examined count every run, empty ones included |
+| No receipt opened in a month | You crossed from reading to trusting with no sampling step between | Ten minutes weekly, one receipt at random |
+| A receipt resolves to a record that does not match | The bot reported the action it intended, not the one it completed | Enforce it: no receipt, no claim |
+| Judgment skips always read "nothing relevant" | The charter permits a summary where it should demand a list | Require the list or an explicit zero, one reason each |
+| Retries climbing 0 to 6, nothing marked failed | A step is degrading and the retry ceiling absorbs it | Watch the retry column as a trend, not a threshold |
+
+That last row gets left out most. A retry ceiling works by hiding the thing it
+protects you from, so its count is the only place degradation surfaces.
+
+## The strongest objection is that the bot grades its own homework
+
+Take this seriously, because it is correct as far as it goes. Every receipt here
+is self-reported. A confused bot can produce an ID that does not exist, and a
+model that misread a page can report a figure that was never on it. Requiring
+receipts does not make a report true.
+
+What it does is make the report falsifiable at almost no cost. An assertion has
+no failure mode you can observe from your chair. A receipt has exactly one: you
+open it and it does not match. You are buying a four-second test a false claim
+can fail and a true one cannot. The odds run your way too, because fabrication
+is rarely a one-off, and twelve samples a month finds a systematic fabricator
+fast.
+
+The objection wins outright wherever one undetected miss is expensive.
+Self-reporting cannot tell you about work that never happened, since a bot that
+did not see something also cannot report not seeing it, which is exactly the
+invoice filer above. There, receipts are necessary and not sufficient, and tier
+4 is the answer: something reading the system of record and comparing.
+
+## Three places where receipts stop being able to help
+
+Every technique has a domain. This is the edge of this one.
+
+**Actions that leave no artifact.** A bot that read six pages and formed a view
+produced nothing to point at. The best evidence available is URLs with
+timestamps, which proves it looked and says nothing about what it concluded. For
+research work, receipts measure effort rather than accuracy.
+
+**Anything on the shared computer.** All bots on an account share one persistent
+cloud computer, with browser cookies, sessions, files, and command-line
+credentials shared across them
+([computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)). A log file
+there is writable by every bot you run, and append-only is a charter rule rather
+than a permission the filesystem enforces, so a local log is tamper-evident at
+best. Deleting a bot takes its routines and leaves everything it wrote behind,
+so the log outlives the bot while the run history does not. Both scale badly
+across a roster, as
+[the guide to running a team of bots](/blog/multi-bot-teams) works through.
+
+**Sequence.** A timestamp in the log is the bot's clock, not the record
+system's. To prove one change came before another, the log is a hint and the
+source is the answer.
+
 ## What you cannot observe, you have to forbid
 
 Here is where observability and the boundary meet, and why we treat the
@@ -270,6 +416,8 @@ do neither and describe the result as trusting the bot. The reasoning behind
 writing that line first is laid out in
 [the bot boundaries guide](/blog/grok-bot-boundaries), and it applies with
 extra force to anything you cannot watch.
+
+**Keep reading:** [How to Build a Grok Bot That Can Digest Your Newsletters](/blog/grok-bot-to-newsletter-digest), [Grok Bot and Zoom](/blog/grok-bot-zoom), [The Four Layers of a Bot System That Actually Works](/blog/bot-system-architecture).
 
 ## Frequently Asked Questions
 

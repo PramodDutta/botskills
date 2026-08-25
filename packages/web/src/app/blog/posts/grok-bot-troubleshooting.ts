@@ -56,7 +56,7 @@ you, and it may have been waiting for hours.
 Are the connections still authorised? A revoked connector is the most common
 cause of a routine that worked for six weeks and then stopped.
 
-## Failures of triggering
+## Triggering failures: nothing ran, or it ran wrong
 
 ### 1. The bot did nothing at all
 
@@ -71,7 +71,9 @@ Fix: check the run history first. If there is no run entry at all, the problem
 is upstream of the work. Confirm the routine is enabled, confirm the owning
 bot still exists, confirm the schedule is what you think it is, and check
 usage and billing. Only if there is a run entry that failed should you start
-looking at the task itself.
+looking at the task itself. Confirm the owning bot still exists first:
+routines belong to one bot and are deleted with it, so there is no orphaned
+routine to find.
 
 ### 2. The bot ran twice and did the work twice
 
@@ -86,6 +88,8 @@ Fix: lengthen the interval past the realistic run time, and add idempotency to
 the charter. Have the bot record the last processed identifier in a file and
 skip anything at or below it. If the runtime cannot prevent concurrent starts,
 instruct the bot to check for an in-progress marker and exit if it finds one.
+The marker that works is the identifier of the last item processed, written at
+the end of a run and read at the start of the next.
 The scheduling side of this is covered in
 [the Grok Bot scheduling guide](/blog/grok-bot-scheduling).
 
@@ -103,7 +107,8 @@ and the data is wrong, because the connected tool has its own timezone and its
 Fix: name the timezone explicitly in both the schedule setting and the charter
 text. For reporting, stop using relative words and write absolute ranges,
 then require the bot to state the exact range it used at the bottom of every
-report. An invisible mismatch becomes a line you can read.
+report. An invisible mismatch becomes a line you can read. The tell for the
+third variant is content that is correct and a window that is wrong.
 
 ### 4. The run succeeded and produced nothing, for eleven days
 
@@ -115,9 +120,11 @@ report, so an empty report and a broken bot look identical from outside.
 
 Fix: require a heartbeat. Every run sends a message even when the answer is
 "nothing changed", so absence becomes a signal rather than an ambiguity. One
-line a day is a small price for the ability to notice.
+line a day is a small price for the ability to notice. Put the count of records
+read in that line, not only the count of items found, so an empty result and an
+empty source stop looking identical.
 
-## Failures of the machine
+## Machine failures: stuck, unreachable, or out of usage
 
 ### 5. The bot appears stuck partway through
 
@@ -135,7 +142,9 @@ a password or a one-time code into the conversation; take over the screen,
 authenticate yourself, and let the bot resume with the session. The
 [Flight Check-In bot](/bots/flight-check-in) is built around exactly this
 posture: it stops for a human at every two-factor prompt or captcha and never
-tries to get past one.
+tries to get past one. Look at the screen before concluding anything: a bot
+parked on a question it asked reports nothing, which from outside is
+indistinguishable from a bot thinking hard.
 
 ### 6. The computer cannot be reached
 
@@ -150,7 +159,8 @@ app fully, quitting rather than closing the window. Take the recover option if
 one is offered. Then look for an update path for the agent computer. Reset is
 last, because recovery preserves durable files and logins while a reset
 restores a snapshot and can lose recent unsynced work. Reaching for reset
-first is the single most expensive mistake in this list.
+first is the single most expensive mistake in this list, and the ladder below
+sets out what each rung preserves before you climb it.
 
 ### 7. Everything stopped at once, mid-month
 
@@ -165,9 +175,28 @@ consuming the usage everything else was relying on.
 Fix: check usage and billing before debugging any individual bot. Then find
 the routine that burned it, which is usually the one with the shortest
 interval or the most browser work. Add a retry limit to its charter: after two
-failed attempts at the same step, stop and report rather than continue.
+failed attempts at the same step, stop and report rather than continue. With no
+product level cap to catch this for you, the counter line each bot writes at
+the end of a run is the only early warning available.
 
-## Failures of connection
+## Escalate the agent computer gently, in this order
+
+The rungs differ in what they preserve, not in how hard they try, so the order
+matters more than any step.
+
+| Step | What it does | What it preserves | Reach for it when |
+|---|---|---|---|
+| Retry or reopen the conversation | Nothing structural | Everything | Always, first |
+| Quit and restart the app | Clears client state | Everything | The window is stale |
+| Take the recover option | Repairs the machine in place | Durable files and logins | The computer is unreachable |
+| Update the agent computer | Moves to a newer image | Durable files and logins | Recovery did not take |
+| Reset | Restores the last snapshot | Only the snapshot | Nothing else worked |
+
+A reset is not a cleanup tool, and neither is deleting a bot, which leaves
+files and browser sessions on the shared computer untouched. To revoke access,
+sign out of the service and rotate the credential.
+
+## Connection failures: the tool is there and the data is not
 
 ### 8. A connector stopped working after a password change
 
@@ -180,9 +209,11 @@ of them notify the bot.
 
 Fix: reopen the connector, run the authentication action again, and confirm
 you are authorising with the right account, which is a real trap for anyone
-with a personal and a work login for the same service. On managed accounts,
-check whether an administrator needs to provision it. If reauthorising does
-not take, remove the connection and add it back. What each connection actually
+with a personal and a work login for the same service. The wrong one produces
+the worst version of this failure: a connector that works perfectly and returns
+somebody else's data. On managed accounts, check whether an administrator needs
+to provision it. If reauthorising does not take, remove the connection and add
+it back. What each connection actually
 grants is worth understanding before you reconnect, and
 [the Grok Bot permissions guide](/blog/grok-bot-permissions-explained) covers
 the tiers.
@@ -200,9 +231,10 @@ output rather than an error.
 Fix: put the requirement in the charter. Instruct the bot to state how many
 records it requested, how many it received, and to stop and report rather than
 summarise if those numbers differ. Then reduce frequency, because aggressive
-polling across several tools finds several ceilings.
+polling across several tools finds several ceilings. Requested against received
+also catches pagination that stopped early and a token that expired mid-run.
 
-## Failures of output
+## Output failures: it produced something, and it is wrong
 
 ### 10. The output is generic and could describe anyone
 
@@ -216,7 +248,9 @@ Fix: write the "what good looks like" section and make it testable. Specify
 length, format, and the requirement that every claim cite the message, record,
 or file it came from. Ban the phrases you keep seeing, such as "several items
 need attention". Ask for what was skipped as well as what was done, since the
-skipped list is where misunderstandings surface first.
+skipped list is where misunderstandings surface first. Include one example of a
+good line and one of a bad line, since a model calibrates from a pair of
+examples faster than from a paragraph of adjectives.
 
 ### 11. The bot invented a contact, a link, or a number
 
@@ -230,7 +264,8 @@ the path of least resistance.
 Fix: make "unknown" an acceptable and expected output. Instruct the bot to
 write "not found" rather than infer, to include the source reference for every
 factual claim, and to never construct an email address, phone number, or link
-it did not read directly. The
+it did not read directly. Note how specific that clause is: "never construct an
+email address" is enforceable, and "use good judgement" is not. The
 [Lead Scout bot](/bots/lead-scout) charter takes this approach: research and
 ranking only, with sources attached, and no contact with anyone.
 
@@ -244,12 +279,13 @@ never revisited, so they keep informing output long after they became wrong.
 
 Fix: date everything the bot remembers, and instruct it to prefer a freshly
 read source over a stored note whenever the two disagree, then flag the
-disagreement. Review its memory quarterly and delete what is stale. Keep
-secrets out entirely: the
+disagreement. Review its memory quarterly and delete what is stale, and date every note when
+it is written, since an undated note gets read in August with the confidence it
+had in March. Keep secrets out entirely: the
 [Persistent Bot Memory bot](/bots/persistent-bot-memory) never stores tokens,
 passwords, or customer data, which is the right rule for anything durable.
 
-## Failures of judgment
+## Judgment failures: the charter, the gates, and the send
 
 ### 13. The charter is too vague to be wrong
 
@@ -263,7 +299,9 @@ it.
 Fix: rewrite in three parts: what it owns, what good output looks like, and
 where it stops. Name the tools, the schedule, the format, and the limits. If
 you cannot write those three sections, you do not have a role yet, you have a
-task, and a task belongs inside an existing bot's charter. The structure is
+task, and a task belongs inside an existing bot's charter. The usable test:
+could someone else read the charter and the output side by side and tell you
+the bot was wrong? If they could not, neither can you. The structure is
 worked through in
 [the one-person company playbook](/blog/one-person-company-grok-bot).
 
@@ -280,7 +318,9 @@ remembering that require rules generally outrank allow rules. Then rewrite the
 boundary to name specific irreversible actions rather than whole categories of
 work. "Never send an external email" is enforceable and rare enough to stay
 meaningful. "Ask before acting" produces alert fatigue, which is how the one
-prompt that mattered gets approved without being read.
+prompt that mattered gets approved without being read. Track declines rather
+than approvals: a month with none means the gate is in the wrong place or you
+have stopped reading it.
 
 ### 15. The bot sent something it should not have
 
@@ -294,6 +334,8 @@ Fix: for anything irreversible, use both mechanisms. Keep the boundary in the
 charter for nuance, and add a runtime approval rule for the absolute, because
 a rule holds even when the reasoning goes sideways. Never press test on a
 routine that can send, post, spend, or delete until the boundary is in place.
+An approval controls the proposed action and does not reverse work already
+completed, which is why the gate belongs in front of the send.
 Here is the shape that survives both problems:
 
 \`\`\`text
@@ -327,6 +369,56 @@ Catalog listings encode the same idea as a required field, which is why the
 [Inbox Triage bot](/bots/inbox-triage) never sends and every draft waits for
 approval.
 
+## Map each failure to the clause that prevents it
+
+Most of the fifteen fall to one sentence, and those sentences group into the
+three sections every charter should have.
+
+| Failures | The clause that prevents them | Section |
+|---|---|---|
+| 2, 9 | State how many records you requested and how many arrived | Good output |
+| 3 | Name the timezone, print the exact range covered | What you own |
+| 4 | Report on every run, including empty ones | Good output |
+| 5, 7 | Two attempts at a step, then stop and report | Where you stop |
+| 10 | One example of a good line, one of a bad line | Good output |
+| 11 | Write "not found" rather than infer; never construct an address | Good output |
+| 12 | Prefer a fresh source over a stored note, and flag the difference | What you own |
+| 14, 15 | Name the irreversible actions, and never send | Where you stop |
+
+Nine of the fifteen fall to four sentences, which is the argument for writing
+a charter properly once rather than debugging it fortnightly.
+
+## Tell a documented limit from a bug before you report it
+
+Several things that feel like faults are published behaviour, and reporting one
+costs a week of waiting for an answer that already exists.
+
+| What you observe | What it is | What to do instead |
+|---|---|---|
+| No Linux desktop, Android, or iPad app | A documented limit | Use macOS, Windows, or iOS 18 and later |
+| On iPhone you can only pause and resume | A documented limit | Edit, test, and delete on desktop |
+| No model picker anywhere | Documented, and not planned to change | Stop looking for the setting |
+| Only the 20 newest run records survive | A documented limit | Have the bot write its own log |
+| Nothing stops a runaway before usage is gone | There is no Grok Bot spend cap | Write ceilings into every charter |
+| You cannot see what a bot did last month | No audit view exists yet | Keep the ledger in the reports |
+| A service blocks you as a datacenter address | Egress IPs are static, and get flagged | Use an export or a feed |
+| Grok Bot is unavailable entirely | Privacy Mode (Legacy) blocks it | Change the mode, or accept it |
+
+## Answer the objection that this is really the model being unreliable
+
+The reasonable counter to a list like this is that fifteen fixes for fifteen
+symptoms is working around a component that cannot be trusted, and that the
+honest answer is to supervise the thing instead.
+
+Count the entries. Four are triggering and scheduling, three are the machine or
+the usage, two are connections. Only six touch what the model produced, and five
+of those fall to a sentence about output rather than better reasoning. This is
+an operations problem wearing a model problem's clothes.
+
+Where the objection lands is entry 15. If a bot can take an irreversible action
+and your only control is a sentence it interprets, supervision genuinely is the
+answer, which is why that fix is a runtime rule as well as a charter line.
+
 ## What to include when you report it
 
 If none of the fifteen match, a good report gets a real answer faster than a
@@ -340,6 +432,8 @@ connection, while one that never worked points at the charter or the schedule.
 Check the vendor status page too, but do not treat a green status as proof
 your problem is local; incident acknowledgement usually lags real problems by
 a couple of hours.
+
+**Keep reading:** [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers), [The Best AI Bots for Founders in 2026](/blog/best-ai-bots-for-founders), [The Best AI Bots for Marketing Teams in 2026](/blog/best-ai-bots-for-marketing).
 
 ## Frequently Asked Questions
 

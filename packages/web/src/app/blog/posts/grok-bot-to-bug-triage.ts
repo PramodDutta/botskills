@@ -53,6 +53,29 @@ because an engineer will follow them, fail to reproduce, and close the issue as
 not reproducible. You have then used automation to convert a real bug into a
 closed ticket with a confident-looking history.
 
+## Grade the report before you decide what output to expect
+
+Not every issue can produce the same triage note, and a bot that produces the
+same confident block regardless of what it was given is the dangerous version of
+this tool. Reports arrive in five recognisable grades, and the correct output
+differs at each one.
+
+| Report you received | What is present | What the bot can honestly produce | What happens next |
+|---|---|---|---|
+| Numbered steps, expected and actual, environment, IDs | Everything | A repro attempt that is mostly a tidy copy, plus duplicate candidates | An engineer picks it up the same day |
+| A narrative paragraph with the facts buried | Most fields, unnormalised | A full repro attempt with one or two marked gaps | One clarifying message closes it |
+| Symptom plus a screenshot | Environment from the image, no steps | "No reproduction available" plus four to six questions | The question block is the deliverable |
+| One sentence, no image, no IDs | Almost nothing | The question block, every field marked not stated | Do not let it fill anything in |
+| A title, and a reporter gone quiet | Nothing | needs-info, the questions, a stated wait period | Park it. Never close as unreproducible |
+
+The bot does not need to name the grade. It makes the grade visible by citing
+the source of every field it fills in. A note where six of eight fields say "not
+stated" is self-evidently a bottom-tier report.
+
+That is also the honest answer to "how much time does this save". On the top two
+grades, minutes. On the bottom three, days, because the delay there is the round
+trip for information and the bot collapses three round trips into one.
+
 ## Reproduction is the entire job
 
 The reason to build triage around reproduction rather than around severity is
@@ -80,9 +103,66 @@ slow back and forth where you ask for one missing thing, wait a day, ask for the
 next. A bot that reads the whole thread and produces every question at once
 turns three round trips into one.
 
-## Pulling structure out of a messy report
+## Turn the checkout ticket from the top of this article into a note
 
-A few extraction rules that make the difference between a useful block and a
+Here is what a correctly behaved bot produces for that issue. It is worth
+reading for what it refuses to do as much as for what it fills in.
+
+\`\`\`text
+ISSUE #812   "checkout broken"
+
+REPRO ATTEMPT
+  Preconditions: not stated. Account type, cart contents, and payment
+    method are all unknown.
+  Steps: not stated. Reporter wrote "tried to pay and it just spins".
+  Expected: not stated. Inferred as "the order completes" from context.
+    Marked inferred, basis: the issue title and the checkout screenshot.
+  Actual: "it just spins" (reporter's words). Screenshot shows a spinner
+    over a darkened checkout panel with no error text.
+  NO REPRODUCTION AVAILABLE.
+
+ENVIRONMENT
+  Browser   Chrome 141        source: user agent on the web form
+  OS        macOS 15          source: user agent
+  Locale    en-GB             source: user agent
+  Build     2026.08.14-3      source: version string legible in the
+                              screenshot footer
+  Order ID  not found in body, comments, or attachments
+
+GAPS   (ask all five in one message)
+  1. Which payment method were you using?
+  2. Does it happen every time, or did it work earlier today?
+  3. What is the order or cart ID shown in the address bar?
+  4. Did any error text appear after waiting 30 seconds?
+  5. Was the address a saved one or newly entered?
+
+EVIDENCE FROM IMAGES
+  Screenshot 1: spinner overlay, footer build string 2026.08.14-3, URL
+  bar cropped out of frame, no visible error text.
+
+POSSIBLE DUPLICATE OF
+  #779  Overlap is the actual result only ("spinner forever"). #779
+        specifies a saved address and an Amex card; this report
+        specifies neither. NOT proposed as a duplicate: symptom overlap
+        without step overlap.
+
+SPLIT SUGGESTED
+  none
+\`\`\`
+
+The most valuable line in that note is the one in capitals. A bot willing to
+write NO REPRODUCTION AVAILABLE is one you can trust the rest of the time,
+because its confident blocks have been shown to mean something.
+
+The second most valuable part is the duplicate it declined to propose. It found
+#779, said why it looked similar, then said why that similarity is not evidence.
+That behaviour comes from one rule in the charter, not from the model being
+careful. Everything else in the note took under a minute and would have cost you
+fifteen, mostly spent squinting at a screenshot footer.
+
+## Pull structure out of a messy report with four extraction rules
+
+A few extraction rules make the difference between a useful block and a
 tidy-looking restatement.
 
 Quote, then interpret. Every field carries the reporter's own words alongside
@@ -103,7 +183,7 @@ One report, one bug. If a single issue describes two unrelated failures, the bot
 should say so and propose a split, without performing it. Multi-bug issues are a
 major source of things being fixed halfway and closed.
 
-## Deduplicating against a backlog you already have
+## Match duplicates on reproduction, never on title
 
 Duplicate detection is where a triage bot goes from convenient to genuinely
 valuable, and it is also where it does the most damage if you let it act.
@@ -121,7 +201,39 @@ seconds instead of re-reading both threads.
 
 And then it stops. The bot proposes. You merge.
 
-## The bug triage charter, pasteable
+## Score a duplicate candidate on five signals, not on one
+
+"Match on reproduction" is the principle. In practice a candidate has partial
+overlap on several axes at once, and the weights are not equal.
+
+| Signal | Weight | Why it earns that weight |
+|---|---|---|
+| Preconditions match | High | Causes live in state, not symptoms. Same account shape, flags, and data is the strongest evidence there is |
+| Steps overlap in the same order | High | Two reporters reaching the same failure by the same route rarely means two bugs |
+| Actual result matches, error text included | Medium | A shared error string is evidence. A shared visual symptom is not |
+| Environment matches, especially build | Medium | Confirmation, and decisive when one issue predates a known fix |
+| Time proximity to the same deploy | Low | A tiebreak between equal candidates, never a reason on its own |
+| Title similarity | None | Titles describe how the reporter felt. Say the zero weight in the charter |
+
+The pass itself is five steps, and the fifth is the one that makes it safe.
+
+1. Build the repro block for the new issue first. You cannot match on
+   reproduction you have not extracted.
+2. Search the backlog on precondition terms and actual-result terms. Do not
+   search on the title, and do not search on the reporter's adjectives.
+3. For each candidate, quote the overlapping steps from both issues side by
+   side. Quoting, rather than summarising, is what stops a loose paraphrase from
+   manufacturing an overlap that is not there.
+4. List the fields that differ, explicitly, including the ones that are missing
+   from one side.
+5. Write the distinguishing test: one sentence naming the observation that would
+   prove these are separate bugs. If the bot cannot write that sentence, the
+   candidate is not strong enough to propose.
+
+Then it stops, because step six is a human merging two issues, and no version of
+this list makes that step safe to automate.
+
+## Paste this charter and change only the label list
 
 \`\`\`text
 You are my Bug Triage bot. You reconstruct reproduction. You do not
@@ -147,6 +259,8 @@ EVIDENCE FROM IMAGES: what is legibly visible in each screenshot,
 POSSIBLE DUPLICATE OF: issue IDs only. For each: the overlapping steps
   quoted from BOTH issues, the fields that differ, and one sentence on
   what would prove them separate. Match on reproduction, never on title.
+  Title similarity carries zero weight. If you cannot write the
+  distinguishing sentence, do not propose the candidate at all.
 SPLIT SUGGESTED: if the issue describes two unrelated failures, say so
   and outline both. Do not split anything yourself.
 
@@ -193,8 +307,13 @@ symptom merges them. The provider timeout gets fixed, the merged issue closes,
 and the serialiser bug is now invisible: it has no open issue, and the one
 record of it is a comment on a closed thread saying "duplicate of".
 
-It resurfaces in four months as a customer escalation, and when someone searches
-the backlog they find a closed issue that says it was already handled.
+Follow the timeline and every step is individually reasonable. Week one, the
+merge happens unopposed, because the two reports genuinely look alike. Week two,
+the timeout is fixed and verified against the surviving issue, which reproduces
+and then stops, so the fix looks confirmed. Week three, it closes with a green
+tick. Month four, a customer escalates the serialiser bug, someone searches the
+backlog, and finds a closed issue that appears to describe it and appears to
+have been fixed. The search that should have found the bug is what hides it.
 
 That is the technical cost. The social cost is larger and it is the reason this
 boundary is drawn where it is. Someone took twenty minutes to write that report.
@@ -203,6 +322,27 @@ the same person, especially someone in support or QA who is doing you a favour
 by filing carefully, and they stop filing. You cannot recover that with an
 apology comment, because the thing you damaged was their estimate of whether
 reporting is worth the effort.
+
+## Count what a wrong duplicate closure actually costs
+
+Spell out the bill, because "be careful with duplicates" does not survive a busy
+week and an itemised cost does.
+
+| What it costs | Who pays it | When it surfaces | Recoverable? |
+|---|---|---|---|
+| The second bug becomes invisible | Customers who keep hitting it | Two to six months on, as an escalation | Technically yes, expensively |
+| The backlog asserts it was handled | The next person who searches | Every search on those terms | Only if they read the closed thread closely |
+| The reporter learns filing is noise | You, via reports never filed | Silently, and permanently | No, and they will never tell you |
+| Support re-reports it repeatedly | The support queue | Every recurrence | Yes, at full cost each time |
+| Trust in every other triage note | The whole team | The first time someone catches one | Slowly, by sampling |
+
+Row three is underestimated because it never shows up as an incident. A careful
+reporter who stops filing does not open a ticket about it. The signal is an
+absence, and absences appear in no dashboard.
+
+Row five is why the write surface stays small even when accuracy is good. One
+visible wrong closure costs the credibility of the hundred correct notes around
+it, and you cannot prove those hundred were right without redoing them.
 
 ## Labelling is reversible, closing is not
 
@@ -235,7 +375,25 @@ is in [approval rules and reversibility](/blog/grok-bot-approval-rules-reversibi
 and the way to write these limits as actions rather than as intentions is in
 [the guide to bot boundaries](/blog/grok-bot-boundaries).
 
-## How you know the triage held up
+## Diagnose a triage bot that has quietly stopped helping
+
+The failure is rarely dramatic. It is that the notes keep arriving and stop
+being worth reading. Six symptoms cover almost all of it.
+
+| Symptom | What is actually wrong | Fix |
+|---|---|---|
+| Repro blocks look complete, engineers cannot reproduce | The invention rule is not being enforced | Require the reporter's words per field, and accept "no reproduction available" |
+| Almost every issue gets a possible-duplicate | It is matching on symptom or on title | Require overlapping steps quoted from both issues, plus the distinguishing sentence |
+| Nothing ever gets labelled has-repro | The incoming reports genuinely lack steps | The bottleneck is your intake form, not the bot |
+| Triage notes are long and nobody reads them | The output has no fixed block order or field caps | Fix the block order, cap each field, put GAPS near the top |
+| Two issues on the same bug both sit untouched | Dedup only runs against newly opened issues | Rerun the pass when an issue is reopened, edited, or relabelled |
+| It set a priority or assigned someone | The write surface was described as an attitude | Enumerate the permitted labels and state that everything else is refused |
+
+The second row is the one to check first on any bot older than a month, because
+a dedup pass that proposes too much is functionally the same as one that
+proposes nothing: you stop reading the section.
+
+## Measure the bot with a blind reproduction test
 
 One check, and it is unusually clean for this job.
 
@@ -252,6 +410,11 @@ month, count how many you actually merged. If it is under about two thirds, it
 is matching on symptom rather than reproduction, and the fix is to require
 overlapping steps rather than overlapping outcomes.
 
+A third check costs nothing. Once a month, pick one issue where the bot wrote NO
+REPRODUCTION AVAILABLE and confirm that was the right call rather than a lazy
+one. Overusing the honest answer is a different problem from underusing it, and
+only sampling tells you which you have.
+
 Keep your own triage history in a file rather than relying on run records. Each
 routine keeps only its 20 most recent runs, so an hourly triage bot holds under
 a day of history, and no audit view of bot actions exists yet. If you want to
@@ -264,9 +427,35 @@ so this bot pairs naturally with
 handles the customer-facing side of the same pipeline with the same rule about
 never contacting anyone.
 
-## Where the bot's authority can grow
+## Answer the objection that severity was the part you wanted automated
 
-Grow it toward evidence, never toward disposition.
+The honest objection: reconstructing reproduction is not the expensive part of
+your week, deciding what to work on is. A bot that reads 34 issues and hands you
+a ranked list is the thing you actually wanted, and everything above explains
+why it will not do that.
+
+Half of that objection is right, and the right half is worth taking. Severity is
+two different things wearing one word.
+
+Part of it is a lookup. "Crash on the payment path, no workaround, more than one
+reporter" is a rule you could write on an index card, and anything on an index
+card the bot can apply consistently, probably better than a tired human at 6pm.
+If your team has a genuinely mechanical severity matrix, let the bot apply it.
+
+The other part is a judgment about this week: what is already shipping, who is
+on call, which customer renews on Friday, whether the person who would fix it is
+on leave. The bot sees none of that, and in most teams it dominates. A severity
+label that ignores it is not a wrong number, it is a confident number about the
+wrong question.
+
+The workable compromise is inputs rather than verdicts. Call the block IMPACT
+FACTS and fill it with observable things: which path is affected, whether a
+workaround appears in the thread, how many separate reports in seven days,
+whether it is a regression against a named deploy. Those are checkable, and with
+them in front of you the severity call takes ten seconds. Tedious part
+automated, accountable part human.
+
+## Grow its authority toward evidence, never toward disposition
 
 Good directions: let it pull the relevant log lines or trace for an identifier
 the reporter gave; let it check whether a reported regression matches a deploy
@@ -286,7 +475,11 @@ command-line credentials are shared across every bot on it. If one of your bots
 is authenticated to the repository, that authentication is available to all of
 them, and the documentation says plainly not to use separate bots as a security
 boundary. Branch protection and repository permissions are what actually
-constrain write access. The charter is a promise, not a permission.
+constrain write access. The charter is a promise, not a permission, and the
+difference is covered in
+[what a shared computer really isolates](/blog/grok-bot-shared-computer-security).
+
+**Keep reading:** [How to Build a Grok Bot That Can Triage Your Inbox](/blog/grok-bot-to-inbox-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Monitor Competitors](/blog/grok-bot-to-competitor-monitoring).
 
 ## Frequently Asked Questions
 

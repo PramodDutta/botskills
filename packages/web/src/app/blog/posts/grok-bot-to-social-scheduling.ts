@@ -27,7 +27,7 @@ So the shape here is: the bot drafts, the bot queues, the bot reminds. A human
 releases. That last sentence is the boundary, and it survives contact with more
 failure modes than any other design choice in this setup.
 
-## The gap between having something to say and saying it
+## Posts die in three gaps, and only two of them are automatable
 
 Watch where posts actually die and you will find three specific gaps, none of
 which is "I could not think of anything".
@@ -48,7 +48,7 @@ work models are good at when the raw material is yours. The occasion is a slot
 in a queue and a nudge at a fixed time, which is a scheduling problem rather
 than a judgment problem.
 
-## Two jobs that look like one
+## Separate drafting from scheduling, because only one is reversible
 
 Drafting and scheduling get bundled together in every tool, and separating them
 is what makes this bot safe to run daily.
@@ -80,7 +80,7 @@ The last row of the left column and the last row of the right column are the
 same test applied twice. If a draft would embarrass you as a screenshot with
 your name on it, it does not belong in the queue at all, released or not.
 
-## The queue a human releases
+## Batch the approvals into one release ritual, not a stream of popups
 
 The mechanism that makes this work is a queue with a release ritual, not a
 schedule with an approval popup. The difference is the batching.
@@ -105,6 +105,46 @@ two make the same point, and one contradicts something you said last week.
 Three slots, one review, and the queue is never more than a week deep. A deeper
 queue is not more productive, it is more stale, and stale is where the worst
 failures live.
+
+## Build the queue as four files, each with exactly one writer
+
+The architecture is four plain text files and no database. Each one has a
+single writer, and that constraint is what stops the bot and you from
+overwriting each other in a way nobody notices until a post goes out wrong.
+
+| File | Written by | Read by | What it is for |
+|---|---|---|---|
+| notes/social-raw.md | You, append-only | The bot, every weekday | Raw thoughts, four words is fine. The bot never edits it |
+| social/queue.md | The bot, rewritten each run | You, at the Friday review | Three slots, drafts, sources, claims, all status HELD |
+| social/published.md | You, when you post | You, monthly | What actually went out and when. The only real history |
+| social/claims.md | The bot, append-only. Add this later | The bot, when drafting | Every number and fact you have published, so a new draft can be checked against it |
+
+Two properties matter more than the file names. The queue is rewritten
+wholesale each run rather than appended, so a draft you rejected on Friday
+does not quietly reappear on Monday under a new slot. And the published log is
+written by you, because the bot has no way to know whether you pressed post.
+
+The published log looks like bookkeeping and turns out to be the file you use
+most. It feeds the evergreen question later, it is the only reliable answer to
+"did I already say this", and it is the difference between a queue that feels
+productive and one you can measure.
+
+## Pick a slot count you can actually clear on a Friday
+
+Three slots is a default, not a law. Choose by how much raw material you
+generate, not by what a content calendar template says.
+
+| Setup | Notes you must write weekly | Review time it costs | Fails when | Pick it if |
+|---|---|---|---|---|
+| One slot a week | Two or three real thoughts | Four minutes | Never, this is the resilient one | You are starting, or you have skipped the review twice |
+| Three slots a week | Six to eight rough notes | Ten minutes | Your notes thin out and drafts get invented | You already write notes most days |
+| Daily slots | A note every working day | Twenty minutes, every week | Almost always, within a month | Nothing here. This is a team's cadence, not a person's |
+| Slots plus ad hoc | Same as your slot count | Same, plus your own posts | Not really, ad hoc stays yours | You react to things and want the queue for the rest |
+
+The failure column is the useful one. Every setup above fails in the same
+direction: the queue asks for more raw material than you produce, and the bot
+fills the gap by inventing. Fewer slots is not less ambitious, it is the
+version that survives a bad month.
 
 ## Platform terms are a real constraint, not a formality
 
@@ -140,7 +180,34 @@ across every bot on it. Your social login is not fenced off from the bot that
 reads your email. The documentation says directly that separate bots are not a
 security boundary.
 
-## The social scheduling charter, pasteable
+## Sort each action into a risk band, then check that band yourself
+
+Since the rules differ by network and move, the useful thing is not a list of
+what each platform currently allows. It is a way to sort an action before you
+build it, so you know which ones need you to go and read something.
+
+| Risk band | Actions in it | What to check yourself | What a violation typically costs |
+|---|---|---|---|
+| Read only | Reading your own timeline, notifications, analytics | Whether automated reading is covered by the terms at all | Usually nothing, but rate limits apply |
+| Draft and stage locally | Writing to a file, producing variants, listing claims | Nothing. This never touches the platform | Nothing |
+| Publish via an official API or partner tool | Scheduling through a sanctioned integration | Whether your plan and use case qualify, and any labelling requirement | Access revoked, integration disabled |
+| Browser automation of a logged-in session | Driving the web app to post, reply, or follow | Whether automated access outside official APIs is permitted | Account review, degraded reach, suspension |
+| Engagement actions at volume | Likes, follows, replies, DMs on a schedule | Automation and authenticity rules, and any programme you are enrolled in | The strictest enforcement, and it is often silent |
+| Anything inside a monetisation or creator programme | Any of the above while enrolled | The programme's own authenticity terms, separately from the main terms | Lost payouts or standing, with no ban involved |
+
+Two things fall out of that table. The second row is where this bot lives, and
+it is the only row whose answer does not depend on which platform you are on.
+And the last row is the one people forget: a creator or partner programme
+carries its own rules, so being fine under the main terms is not the same as
+being fine.
+
+The practical rule is to write down, next to your charter, the date you last
+read the terms for each network you touch. Not because that protects you, but
+because it turns "I think it is allowed" into a checkable claim with an age on
+it. The same discipline applied to an X account is in
+[the X content automation risks guide](/blog/grok-bot-x-content-automation-risks).
+
+## Give the queue bot a charter that traces every claim to a source
 
 \`\`\`text
 You are my Social Queue bot. You draft and stage. I publish.
@@ -200,7 +267,7 @@ number makes any post better and the model knows it. Forcing every number to
 carry a source, and stripping the ones that cannot, kills that entire class of
 problem before you ever read the draft.
 
-## The post that went out during the outage
+## The queue is time-blind, and that is what turns a good post bad
 
 Here is the failure that actually happens with scheduled social content, and it
 has nothing to do with writing quality.
@@ -231,7 +298,34 @@ perfectly. It is wrong. The HOLD RULES block above is aimed exactly at this, and
 the check is worth running against your own back catalogue before you let
 anything recycle.
 
-## How you know the queue is worth keeping
+## Audit five drafts against their sources before you trust the tenth
+
+The CLAIMS block is a promise the bot makes about itself, and an unaudited
+self-report is not evidence. Run this once, in the second week, and it either
+passes or it saves you from publishing something invented.
+
+Take five drafts from the queue file. For each one, open the note or doc the
+SOURCE line points at and read it yourself. Then check three things in order.
+
+Does the source exist and say what the draft says it says? A source line that
+points at the right file but the wrong idea is the common failure, and it is
+invisible unless you open the file.
+
+Does every number, date, name, and outcome in the draft appear in the CLAIMS
+list? Anything present in the draft and absent from CLAIMS is the exact class
+of invented specific the block exists to catch, and its absence means the block
+is decorative.
+
+Does anything in CLAIMS carry no source? The charter says those get stripped
+from the draft and noted. If one survived into the draft body, the rule is not
+being applied and no amount of rewording will fix that without a stricter
+instruction.
+
+One failure across five drafts is a charter problem, not a model problem.
+Tighten the CLAIMS wording and re-run the audit on the next five before you
+release anything. Two clean rounds is enough to move on.
+
+## Measure released posts, not drafted ones
 
 Two measurements, and only one of them is about the bot.
 
@@ -253,7 +347,57 @@ most recent run records and no audit view of bot actions exists yet, so if you
 want to look back at what was drafted and when, the queue file has to be the
 history rather than the run log.
 
-## Earning a longer leash
+## Answer the case for letting a sanctioned tool publish on a schedule
+
+The strongest objection is not "let the bot post". It is narrower and much
+better: scheduling tools that publish through official APIs have existed for a
+decade, plenty of people use them without incident, and a human release step
+is precisely the bottleneck that turns three posts a week into one. If the
+publishing mechanism is sanctioned, the argument goes, the human is friction
+rather than safety.
+
+Half of that is right, and the half that is right is about the mechanism. A
+sanctioned scheduler publishing through an official integration is a different
+risk category from a bot driving your logged-in session from a datacenter
+address. If you are going to schedule, schedule that way.
+
+The half that is wrong is about the human. The release step is not there to
+approve the publishing method, it is there to approve the moment. Nothing
+about using a sanctioned tool tells you whether your product is down at 09:00
+on Wednesday, and nothing about an official API notices that the joke you
+queued reads differently after the news broke. The timing failure below is
+untouched by the mechanism.
+
+So the honest split: use a sanctioned scheduler if you want, and keep the
+decision about what enters it. A queue you fill deliberately on Friday and a
+tool that releases it on Monday is a reasonable setup. A model deciding
+unattended what your account says is not, whatever the transport.
+
+## Know when a drafting bot is the wrong tool entirely
+
+This design assumes a specific person: someone posting on their own account,
+mostly about work they are doing, with more ideas than published posts. Three
+situations sit outside it.
+
+**Reactive accounts.** If most of what you post is a response to something
+that happened today, there is nothing for a queue to carry. The bot would draft
+from stale notes while the actual job is reading and reacting fast.
+
+**Shared or brand accounts.** More than one person posting means the failure
+mode changes from "wrong timing" to "two people released the same idea", and
+the fix is a shared calendar with a named owner per slot, not a personal notes
+file. The queue file assumes exactly one writer.
+
+**Accounts where the writing is the product.** If your posts are the thing
+people follow you for, a drafting bot working from four-word notes will
+reliably produce your median post and never your best one. Use it for the alt
+text, the repurposing, and the claim ledger, and write the posts yourself.
+
+The tell in all three is the same: the edit ratio never improves. If you are
+still rewriting most drafts after a month of feeding the notes file properly,
+the bot is not miscalibrated, it is mismatched.
+
+## Widen toward preparation, never toward publication
 
 Widen this bot toward preparation, not toward publication.
 
@@ -283,6 +427,8 @@ rather than decorative. The general case is in
 first or second bot,
 [the one-person company guide](/blog/one-person-company-grok-bot) covers the
 charter format the queue bot inherits.
+
+**Keep reading:** [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Monitor Competitors](/blog/grok-bot-to-competitor-monitoring).
 
 ## Frequently Asked Questions
 

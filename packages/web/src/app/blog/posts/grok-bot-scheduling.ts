@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot Scheduling: Daily, Weekly, and Triggered Runs Explained',
+  title: 'Grok Bot Scheduling: Daily, Weekly, and Triggered Runs',
   description:
     'Set a Grok Bot schedule that survives timezones, overlapping runs and silent failures: trigger types, cron style thinking, and the intervals to never use.',
   date: '2026-08-25',
   category: 'Guide',
   content: `
-# Grok Bot Scheduling: Daily, Weekly, and Triggered Runs Explained
+# Grok Bot Scheduling: Daily, Weekly, and Triggered Runs
 
 A bot that only runs when you open the app is a chat window with extra steps.
 The scheduling layer is what turns a good charter into a standing job, and it
@@ -19,9 +19,9 @@ This is how to think about triggers, what each type is genuinely good for, and
 the four failure modes that account for almost every "my bot stopped working"
 complaint.
 
-## Three ways a bot starts working
+## Every run has a cause, and there are only four
 
-Every run has a cause. There are only three, and picking the wrong one is the
+Every run has a cause. There are only four, and picking the wrong one is the
 root of most scheduling pain.
 
 A schedule trigger fires on the clock. Daily at 07:30, every weekday, the
@@ -36,12 +36,22 @@ matching a filter, a pull request opens, a row lands in a table, a message
 posts to a channel. The bot runs because reality changed, which means it never
 runs for nothing.
 
-A manual run fires because you told it to, right now. This is not a lesser
-category. Manual is the correct trigger for anything you do irregularly but
-repeatedly, and it is always the right trigger for the first two weeks of a
-new bot's life while you are still reading every output.
+A manual run fires because you told it to, right now. Not a lesser category:
+manual is correct for anything you do irregularly but repeatedly, and it is
+always right for the first two weeks of a new bot's life, while you are still
+reading every output.
 
-## The trigger table
+A chained run fires because another run finished, and it is different from the
+other three because it is usually not a setting you switch on. A routine
+assigns a workflow to one bot, so you build chaining from the two things you do
+control: a shared file and a gap on the clock. The upstream job writes
+\`/state/reconciliation-2026-08.json\` at 09:00 and stops. The downstream job
+starts at 09:20, reads that file, and exits if it is missing or its timestamp
+is not from today. That twenty minute gap does the work a dependency graph
+would do elsewhere, and the exit rule is what stops the second job reporting on
+last month's data forever.
+
+## Match each trigger type to the work it is actually good at
 
 | Trigger type | Good fit | Failure mode to expect |
 |---|---|---|
@@ -51,9 +61,10 @@ new bot's life while you are still reading every output.
 | Monthly schedule | Invoicing checks, subscription audits, access reviews | Month-end collides with the same day every tool runs its own batch jobs |
 | Event trigger | Inbound email, new PR, new form submission, channel message | The matching rule silently stops matching after someone renames the label or channel |
 | Manual run | New bots, irregular work, anything with real consequences | Never gets run, so the bot decays into a bookmark |
+| Chained run | A second job that only makes sense once the first produced a file | The upstream job fails, the downstream one runs anyway and reports stale data as fresh |
 | High frequency polling | Almost nothing | Overlapping runs, duplicated work, rate limits, and a bill you did not plan for |
 
-## Cron thinking without cron syntax
+## Borrow cron's discipline without typing a cron expression
 
 You will probably never type a cron expression into a bot runtime, but the
 discipline behind cron is still the right discipline. Three questions, in
@@ -69,13 +80,36 @@ summary at 09:05 for a 09:00 standup is worthless. Work backwards from the
 deadline, add slack for a slow run, and set the trigger there. Fifteen minutes
 of buffer costs nothing and saves the whole output.
 
-What does the bot do when there is nothing to report? Decide this explicitly.
-"Say nothing" produces clean inboxes and silent failures that hide for weeks.
+What does the bot do when there is nothing to report? Decide explicitly. "Say
+nothing" produces clean inboxes and silent failures that hide for weeks.
 "Always report, even if the report is one line saying nothing changed" costs
-you two seconds a day and turns absence into a signal you will actually
-notice. For anything you rely on, pick the second one.
+two seconds a day and turns absence into a signal you notice. For anything you
+rely on, pick the second.
 
-## The timezone trap
+## Price each cadence by what it costs per useful finding
+
+Those three questions narrow the field. This table picks the winner, because
+the honest unit is not runs per month, it is what you spend to learn one thing
+you did not already know. Your subscription includes an allowance that resets
+weekly, anything past it is charged on demand against model and token cost, and
+no Grok Bot specific spend cap exists as of writing. A cadence mistake draws
+that allowance down daily until you notice.
+
+| Cadence | Runs per month | Findings per hundred runs | Deadline it can hit | Recommendation |
+|---|---|---|---|---|
+| Event trigger | As often as reality changes | Close to 100, since it only fires on a change | Minutes after the change | Default whenever the source emits events |
+| Hourly | About 720 | Low single digits for business data | Within the hour | Only for a source with no events and a same-day deadline |
+| Daily | 22 on weekdays, 30 otherwise | Moderate and predictable | Next morning | Right for briefs, digests, inbox passes |
+| Weekly | 4 or 5 | High, since a week of change is a report | Start of next week | Best for reviews, metrics, settled reconciliation |
+| Monthly | 1 | Highest per run, highest stakes if it fails | The following month | Billing, access reviews, subscription audits |
+| Chained | Follows the upstream job | Upstream's rate, minus its failures | Upstream finish plus your gap | Only with an exit-if-the-file-is-missing rule |
+| Manual | Whatever you remember | Very high while you still read every output | Whenever you sit down | Weeks one and two of every new bot |
+
+The third column is why hourly polling feels productive and is not. Ninety-plus
+runs in every hundred find nothing, and each still costs tokens, touches the
+connected tool, and pushes an older run record out of history.
+
+## Name the timezone in three places or the brief arrives at 3am
 
 This is the single most common scheduling bug, and it has three variants.
 
@@ -87,10 +121,9 @@ intended behaviour is written down.
 
 The second is subtler. Daylight saving moves your local clock but not
 necessarily the underlying schedule, and the two regions you care about do not
-switch on the same date. For a few weeks each spring and autumn, a bot
-coordinating with a team in another country will be an hour off. If a run is
-genuinely time-critical relative to a person in another region, anchor it to
-that person's timezone rather than yours.
+switch on the same date, so for a few weeks each spring and autumn a bot
+coordinating with another country is an hour off. The next section works that
+one through in full.
 
 The third is the one that bites reporting. Your bot fires at 07:00 local and
 asks a tool for "yesterday". Which yesterday? The tool's account timezone may
@@ -111,30 +144,59 @@ Summarise yesterday's orders.
 Asking the bot to state the range it used turns an invisible mismatch into a
 line you can read.
 
-## Overlapping runs, and why "every 5 minutes" is almost always wrong
+## Follow one weekly report through a full year of clock changes
+
+Abstract advice about daylight saving never survives contact with a real
+routine, so here is one worked through.
+
+You are in London, your contractor is in Kolkata, and your largest customer
+reads the same report in New York. The routine is Monday 08:00 Europe/London,
+which felt obvious because it is your Monday morning. Three regions, one
+setting, four different behaviours across the year, because the United States
+moves its clocks on 8 March 2026 and 1 November 2026 while the United Kingdom
+moves on 29 March 2026 and 25 October 2026, and India never moves at all.
+
+| Period in 2026 | London 08:00 equals | New York sees | Kolkata sees | What you notice |
+|---|---|---|---|---|
+| 1 Jan to 7 Mar | 08:00 UTC | 03:00 EST | 13:30 IST | The baseline everyone agreed to |
+| 9 Mar to 27 Mar | 08:00 UTC | 04:00 EDT | 13:30 IST | The report drifts an hour later for New York only, for three weeks |
+| 30 Mar to 23 Oct | 07:00 UTC | 03:00 EDT | 12:30 IST | New York returns to normal, Kolkata moves an hour earlier for seven months |
+| 26 Oct to 30 Oct | 08:00 UTC | 04:00 EDT | 13:30 IST | The March gap repeats for one week in the other direction |
+| 2 Nov onwards | 08:00 UTC | 03:00 EST | 13:30 IST | Back to the baseline, having moved four times |
+
+Nobody did anything wrong here and the schedule was never edited. It is the
+relationship between three zones that moves, four times a year, on different
+dates for different people.
+
+Two cheap fixes come out of it. Anchor the schedule to the timezone of whoever
+the deadline belongs to: if the report exists so New York can read it before
+their 09:00, set the routine in America/New_York and let your Monday morning
+float. Then make the bot print the conversion. A line reading
+\`Generated 2026-03-30 07:00 UTC for the week 2026-03-23 to 2026-03-29\` at the
+foot of every report turns all four transitions into something you can see
+rather than something you deduce from a complaint.
+
+## Stop reaching for every five minutes, you wanted an event trigger
 
 The instinct is understandable. You want to know quickly, so you set a short
 interval. Four things then go wrong at once.
 
 Runs overlap. If the job takes seven minutes and fires every five, run two
-starts while run one is still driving a browser. Depending on the runtime you
-either get a queue that grows all day, a refused start, or two runs competing
-for the same machine and the same login session. None of those are what you
-wanted.
+starts while run one is still driving a browser. That contention is real: all
+bots on an account share one persistent cloud computer, with browser cookies
+and signed-in sessions shared across them, and each bot gets its own screen
+rather than its own machine.
 
-Work gets duplicated. Run one drafts a reply to the new email. Run two, which
-started before run one finished writing its notes, sees the same email as new
-and drafts it again. Now you have two drafts, and if that action had been a
-send rather than a draft, you would have two sends.
+Work gets duplicated. Run one drafts a reply to the new email. Run two started
+before run one finished writing its notes, sees the same email as new, and
+drafts it again. Two drafts. Had that action been a send, two sends.
 
 You hit rate limits. Every connected tool has a ceiling, and a bot polling
-aggressively across several tools finds several ceilings. The symptom is not a
-clean error, it is a run that returns partial data and reports confidently on
-it.
+several tools aggressively finds several ceilings. The symptom is not a clean
+error, it is a run that returns partial data and reports confidently on it.
 
-The bill moves. High frequency polling burns compute for the overwhelming
-majority of runs where the answer is "nothing changed". You are paying to
-learn nothing, hundreds of times a day.
+The bill moves. High frequency polling burns compute on the overwhelming
+majority of runs where the answer is "nothing changed".
 
 The fix is almost always the same: you did not want a short interval, you
 wanted an event trigger. "Tell me within a minute when a customer emails about
@@ -156,17 +218,38 @@ Never process the same item twice.
 That state file is doing the job a queue would do in a real system, and it is
 worth the four lines.
 
-## What happens when a run fails
+## Learn the shape of a routine that fails without telling you
+
+A routine that crashes is a good day: you get an error, fix a connector, move
+on. The expensive version keeps producing something, so nothing looks broken,
+while the thing it was watching stopped being watched weeks ago. Six shapes
+account for nearly all of it.
+
+| What you see | What actually happened | Fix |
+|---|---|---|
+| The report arrives, nearly identical week after week | The source stopped updating, or the bot re-reads an export nobody refreshed | Make it state the source's own timestamp, and stop if that is not from this period |
+| One section has quietly been empty for a month | One connector lost authorisation while the others held, and empty reads like calm | Require it to name every source it read and every source it could not read |
+| Runs complete cleanly and act on zero items | The label, channel, or saved view the filter keys on was renamed upstream | Report candidates considered as well as items acted on. Zero considered is a broken filter |
+| Nothing arrives, and you assume a quiet week | The routine is paused, or the bot that owned it was deleted, taking its routines with it | Require a message on every run, so silence becomes evidence rather than ambiguity |
+| Something is wrong and the run history tells you nothing | Run history holds twenty records per routine as of writing, so a daily job's evidence lasts under three weeks | Make the output itself the archive. No audit view of bot actions exists yet |
+| It looks fine on your phone and produces nothing | On iPhone you can pause and resume only, while editing, history, and testing need desktop | Check from desktop before concluding anything about a routine you touched on mobile |
+
+The fourth row has a structural cause rather than a bug. Routines belong to a
+single bot and nothing about them is team-level, so deleting a bot you thought
+was redundant takes its schedule with it. Nobody is notified. The only thing
+that changes in your week is that a message stops arriving.
+
+## Diagnose a quiet routine by asking whether it ran at all
 
 Failures are not exceptional; they are Tuesday. A connector's authorisation
 expires, a page redesigns, a login gets challenged, an export times out. The
 question is not how to prevent that but how you find out.
 
-Check three things when a routine has gone quiet, in this order. Is the
-routine still enabled, and does the bot that owns it still exist? Are the
-connectors it depends on still authorised, or did a password change upstream
-revoke them silently? Does the run history show a failed run, or no run at
-all, which are two very different diagnoses.
+Check three things when a routine has gone quiet, in this order. Is the routine
+still enabled, and does the bot that owns it still exist? Are its connectors
+still authorised, or did a password change upstream revoke them silently? Does
+the run history show a failed run, or no run at all, which are two very
+different diagnoses.
 
 A failed run means the trigger fired and the work broke. No run at all means
 the trigger never fired, which points at the schedule, the timezone, the
@@ -174,17 +257,37 @@ enabled flag, or account access being paused. There is a longer list of
 symptoms and fixes in
 [the Grok Bot troubleshooting reference](/blog/grok-bot-troubleshooting).
 
-Two habits make failure survivable. First, the heartbeat: require a message on
-every run even when there is nothing to say, so silence becomes evidence.
-Second, be careful with test runs. A test run is a real run. If the routine
-can send, post, or purchase, testing it will send, post, or purchase, so give
-the routine a boundary before you ever press test.
+One habit makes the rest survivable, and it is not the heartbeat, which you
+already have. It is treating a test run as a real run. If the routine can send,
+post, or purchase, testing it will send, post, or purchase, so the boundary
+goes in before you press test rather than after.
 
-## Writing the schedule into the charter itself
+## Break one run on purpose before you trust the schedule
 
-Do not leave the timing entirely in a settings panel. Put it in the charter
-too, in words, so the bot's own brief describes when and why it wakes up. Here
-is a full example you can adapt:
+A schedule that has never failed in front of you is a schedule you have not
+tested. You tested the happy path, which was never the risk.
+
+Do this once on a read-only routine, in the week before you start relying on
+it. Rename the file, folder, or saved view the routine depends on so the source
+it expects is genuinely gone, then run it manually and read what arrives.
+
+Three outcomes, one pass. A message naming the missing source and stopping is
+a pass. Silence is a fail, because every future failure will now look identical
+to a quiet week. A normal-looking report with one section quietly empty is the
+worst result, because the routine is now capable of being confidently wrong on
+a schedule, and no successful run would ever have shown you that.
+
+Rename the source back and run again. It should recover without you touching
+the charter; if it does not, the routine has hidden state and you want to know
+in August rather than November. Then trigger it twice within a few minutes and
+confirm the second run does not repeat the first, which is the state file
+earning its keep, and open the run history on desktop to confirm both runs were
+recorded.
+
+## Write the schedule into the charter, not just the settings panel
+
+Do not leave the timing only in a settings panel. Put it in the charter too, so
+the bot's own brief describes when and why it wakes up:
 
 \`\`\`text
 You are my Morning Brief.
@@ -216,17 +319,16 @@ If a connector is not authorised, say which one and stop.
 Never guess at content you could not actually read.
 \`\`\`
 
-The last block is the reason this is safe to leave running unattended. A brief
-bot that can also reply is a brief bot that can embarrass you at 06:45 while
-you are asleep. Catalog listings encode that same line as a required field:
-the [Chief of Staff Briefing bot](/bots/chief-of-staff-briefing) never sends,
+The last block is why this is safe to leave running unattended. A brief bot
+that can also reply is a brief bot that can embarrass you at 06:45 while you
+are asleep. Catalog listings carry the same line as a required field: the
+[Chief of Staff Briefing bot](/bots/chief-of-staff-briefing) never sends,
 schedules, or acts externally without approval, and the
-[Standup Scribe bot](/bots/standup-scribe) posts only to your own DM, never to
-a shared channel. The reasoning behind treating that line as structure rather
-than politeness is laid out in
+[Standup Scribe bot](/bots/standup-scribe) posts only to your own DM. Why that
+line is structure rather than politeness is argued in
 [the one-person company playbook](/blog/one-person-company-grok-bot).
 
-## A weekly layout that holds up
+## Stagger the week so five bots do not arrive as one blur
 
 Schedules compete. Five bots all firing at 07:00 produce five notifications
 you skim as one blur, and they compete for the same connectors at the same
@@ -243,15 +345,67 @@ moment. Stagger them, and give each slot a purpose.
 | Event driven | Inbound that needs a fast human decision | Fires only when reality changed |
 
 Notice the monthly slot avoids the first of the month. Every billing system,
-payroll run, and reporting job in your stack fires on the 1st, so that is
+payroll run, and reporting job in your stack fires on the 1st, which is
 precisely when APIs are slowest and data is least settled. The third working
-day costs you nothing and removes a whole class of flaky run.
+day costs nothing and removes a whole class of flaky run.
 
-Start with one scheduled bot, not seven. Watch the
-[Competitor Pricing Watch bot](/bots/competitor-pricing-watch) style of
-read-only job for a week before you schedule anything that writes. Scheduling
-is easy to add and hard to audit, and a calendar full of routines nobody reads
-is worse than no automation at all.
+Start with one scheduled bot, not seven. Watch a read-only job like the
+[Competitor Pricing Watch bot](/bots/competitor-pricing-watch) for a week
+before you schedule anything that writes.
+
+## Answer the objection that schedules only produce unread reports
+
+The strongest argument against any of this is usually correct, so state it
+properly. Scheduled output gets skimmed. A report that arrives whether or not
+it has anything to say trains you to ignore it, and within a month you have
+automated the production of noise. On-demand is better, because asking a
+question means you wanted the answer.
+
+That is right about most scheduled reports, for a specific reason. A report you
+skim is one where the interesting content and the empty content look identical
+on arrival. If the subject reads "Weekly summary" whether there are three
+problems or none, the only way to find out is to open it, and opening it is the
+cost you stop paying around week five.
+
+The fix is not discipline, it is making the shape of the message carry the
+finding. A brief whose first line is either "nothing to flag" or "3 items need
+you today" is readable in the notification preview, and you open it only when
+it earned that. Put the count in the subject too. The heartbeat that makes
+silence detectable now costs a glance rather than a click.
+
+Where the objection wins outright: anything you would only act on if you were
+already thinking about it. Competitor research, idea generation, market
+summaries. No deadline, no threshold, so a schedule adds volume and nothing
+else, and they belong on a manual trigger you fire when the question is live.
+
+## Recognise where clock scheduling stops being the right tool
+
+Every recommendation in this article assumes the work has a rhythm. Three
+common cases do not, and forcing them onto a clock is how good bots become
+annoying ones.
+
+Work that depends on someone else finishing first is not a schedule. If the
+report needs a colleague's numbers and they file them somewhere between Monday
+and Thursday, a Monday routine reports on stale data three weeks in four. Use
+the chained pattern with the exit-if-missing rule, or accept the lag and run it
+Friday.
+
+Work with a legal or contractual deadline should never run on the deadline.
+Put the routine several days ahead so a failed run still leaves time to do it
+by hand. A compliance check scheduled on the due date has turned a soft failure
+into a hard one.
+
+Work that is genuinely irregular stays manual, and that is not a failure of
+nerve. A routine that fires unattended needs a line it will not cross, so
+anything you cannot write that line for is not ready for a schedule. Which
+actions deserve that treatment is argued in
+[the guide to bot boundaries](/blog/grok-bot-boundaries), the mechanical
+difference between a routine and a trigger is covered in
+[routines versus triggers](/blog/grok-bot-routines-vs-triggers), and the
+[first week plan](/blog/grok-bot-first-week) sequences what goes on a clock
+first.
+
+**Keep reading:** [Why Grok Bot Needs a Cursor Account and Every Way To Get Access](/blog/grok-bot-cursor-account-explained), [Grok Bot Examples](/blog/grok-bot-examples), [Grok Bot Permissions Explained](/blog/grok-bot-permissions-explained).
 
 ## Frequently Asked Questions
 

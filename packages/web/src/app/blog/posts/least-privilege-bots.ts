@@ -55,7 +55,31 @@ for perfectly good engineering reasons. A setup built on "the minimum grant
 that does the job" is correct under both models. A setup built on "the risky
 bot is sandboxed" is correct only while a specific implementation detail holds.
 
-## Least privilege, translated for bots
+## Price every connection by its blast radius, not by its convenience
+
+Once the roster shares everything, the useful question about any connection
+stops being "does this bot need it" and becomes "what does the whole account
+now reach." That is a different number, and it is the one to write down before
+you click authorise.
+
+| What you connect | What the roster can now reach | Worst realistic outcome |
+|---|---|---|
+| Mail, read only | Every message ever received, not the twelve from today | Old contracts and personal correspondence quoted in a summary you forward |
+| Mail, read plus send | The above, plus your identity with everyone in it | A message in your name, already delivered, that you first see in the reply |
+| Calendar, full access | Attendee lists, descriptions, attachments, past meetings | A client name surfacing in a brief for a different client |
+| A repository token with push | Branch history, secrets in config files, CI triggers | A commit or a workflow run nobody reviewed |
+| A signed-in browser session for any SaaS | That product, at your permission level, for every bot | Actions the vendor logs as you, taken under your seat |
+| A credential written to a file on the machine | The credential, to every bot, indefinitely | A key that outlives the bot it was created for |
+
+The third column is the one to argue with. If it does not feel serious, the
+connection is probably fine. If reading it makes you want to add a condition,
+the condition belongs in the connection rather than in a charter clause.
+
+Notice the last row has no "current task" at all. A key in a file on the shared
+machine is scoped to nothing, and no permission screen will show it to you
+again.
+
+## Translate least privilege into terms a recurring job survives
 
 The classic definition is that a component should hold only the permissions
 required for its current task, for only as long as it needs them. Two words in
@@ -131,6 +155,36 @@ reach rather than any one grant. There is a fuller breakdown of what each verb
 grants in
 [the permissions guide](/blog/grok-bot-permissions-explained).
 
+## Order your connections by how hard they are to undo
+
+Most people connect in the order the setup screen presents, which is arbitrary,
+or in the order the bot asks, which is worse: the bot asks for whatever makes
+the current step easier. Connect in order of reversibility instead, hardest to
+undo last, and stop when the bot works.
+
+This matters more here than in ordinary software because of one documented
+sentence: "An approval controls the proposed action. It does not reverse work
+already completed." An approval is a gate in front of an action, not an undo
+behind it. The question for each grant is what state the world is in one second
+after you say yes.
+
+| Tier | Connections | If it goes wrong | Connect when |
+|---|---|---|---|
+| 1, fully reversible | Public page reads, a scratch document the bot owns, a private draft folder | Delete the output, nothing else changed | Day one |
+| 2, reversible with effort | Labels and folders in mail, versioned document edits, a comment on a pull request | An hour of cleanup and an explanation | After a week of clean tier 1 output |
+| 3, visible to others | Anything posted, messaged, or written to a shared record | Someone acted on it before you noticed | Only with a named action and audience |
+| 4, irreversible | Sending, purchasing, cancelling, deleting, account creation, accepting terms | Nothing you click afterwards helps | Usually never, and never during setup |
+
+Two things fall out. Tier 4 is where the botskills catalog puts its boundaries,
+which is why so many listings read as a refusal to take the obvious final step.
+And tier ordering gives you a reason to stop early: if the bot is useful after
+tier 2, tier 3 was a habit rather than a requirement.
+
+One trap belongs in tier 4 even though it looks like cleanup. Deleting a bot
+removes the bot and its routines, but not shared-computer files or browser
+sessions. The account keeps whatever the bot signed into, so deletion feels
+like revocation and is not.
+
 ## Money gets its own account, always
 
 Everything above is about degrees. This one is a hard line.
@@ -200,7 +254,32 @@ isolation the platform does not provide, but it can state which tools this bot
 is supposed to be using, which converts a silent overreach into something you
 can catch in a report.
 
-## The monthly revocation pass
+## Narrow grants cost you capability, and that is the trade
+
+The honest objection is that this makes the bot worse. A process that can only
+read and draft is a research intern, not leverage. You wanted to stop doing the
+work, and now you approve every piece of it, which is the same work in a
+different hat.
+
+That objection is right about one thing and wrong about the thing that matters.
+
+It is right that narrow grants cost capability. The table above has a column
+admitting exactly that, and pretending otherwise would be dishonest. A triage
+bot that cannot send will not answer anyone.
+
+It is wrong about where review cost comes from. Review cost is a function of
+output shape, not of permission tier. A bot handing you one complete proposal
+costs a single glance whether it can act or not. A bot handing you eleven
+fragments costs eleven decisions either way. If approving feels like doing the
+work again, the fix is a better output contract, and widening in response to
+that feeling is how a permission gets granted for a reason unrelated to trust.
+
+The objection does win in one case: high volume, genuinely reversible work
+where a mistake costs a minute. Filing, labelling, tagging, moving files in a
+folder you own. Grant those and stop reviewing them. That is tier 2, and where
+the leverage actually lives.
+
+## Run a fifteen-minute revocation pass on the same day each month
 
 Connections accumulate in one direction unless something pushes back. Put
 fifteen minutes on the calendar, the same day each month, and go through every
@@ -227,7 +306,7 @@ its boundary is the right one: it never deletes or rewrites another bot without
 your explicit say-so. You want detection automated and pruning deliberate,
 never the reverse.
 
-## Why later never comes
+## You will not disconnect it later, and the reason is structural
 
 "I will disconnect it after this task" is the most reliably broken promise in
 this whole subject, and it is worth understanding why, because the fix is
@@ -257,6 +336,60 @@ governs the bot you wrote it for. The connection list governs every bot you
 will create at 11pm in six weeks to do something quick, and that bot will
 inherit every grant without inheriting any of the care.
 
+## Check the grant list against what the bot actually touched
+
+A revocation review asks which connections are still needed, and the connection
+screen cannot answer that: it shows what is granted, never what was used. As of
+writing there is no audit view of bot actions, so you build the usage side
+yourself, and it takes one clause.
+
+Require every run to end with a tool line: what it read from, what it wrote to,
+and anything it opened that was not on its allowed list. Two monthly
+comparisons then become possible.
+
+Compare the tool lines against the connection list. A connection absent from
+every tool line for thirty days is a grant with no job, and the answer is
+revocation rather than a note to revisit it.
+
+Compare the tool lines against the charter's allowed list. Anything appearing
+that should not is one of two things: the bot reaching past its instructions,
+or the bot using a signed-in session another bot established. Both are worth an
+evening, and neither is visible any other way.
+
+Then verify from outside the runtime. Most SaaS products keep a security page
+listing recent sessions and their addresses, attributed to you rather than to a
+bot. Read one after a month. Two things usually surprise people: the number of
+sessions, and that the addresses are static datacenter ranges, which is normal
+here and which some services flag on their own.
+
+## Where connecting less stops being the answer
+
+Least privilege is the control that works here, and it still has edges.
+
+It is not a substitute for isolation and never becomes one. Connecting less
+shrinks the blast radius; it does not partition it. If your work requires two
+credential sets that must not meet, this runtime cannot give you that on one
+account, and no arrangement of charters changes it.
+
+Not every connection deposits a credential on the machine. Hosted MCP sign-in
+tokens stay with Cursor's backend and are never stored on the computer, so that
+family leaves no secret in a file for the roster to read. It is still an
+account-wide capability, but the key-outliving-its-bot problem does not apply.
+
+There is an operating-system boundary underneath, worth not overrating. The
+computer is a managed Linux VM and the bot runs as a non-root user, which
+constrains what any bot does to the machine. It does nothing to separate one
+bot from another, which was never its purpose.
+
+Some controls are documented as coming rather than shipped, and planning around
+them is a mistake. A team-level ceiling on local execution with Never, Ask
+every time, and Always, where members may choose a stricter option but not a
+looser one, is future work. So is an admin Kill that deletes the VM while
+durable storage is kept. Until those land, the account-level connection list is
+the whole control surface. Where the environment must be shut out rather than
+narrowed, Privacy Mode (Legacy) blocks Grok Bot outright, which is a policy
+decision rather than a permission one.
+
 ## Declare the privileges in the charter too
 
 One last piece, because charters and platform settings are different
@@ -275,6 +408,8 @@ the charter for intent and for everything the platform has no toggle for, and
 make sure the two never contradict each other. When they do, the platform wins
 and your charter has become fiction, which is worse than having written
 nothing, because you will believe it.
+
+**Keep reading:** [Approval Gates](/blog/approval-gates-for-bots), [Keeping Bot Costs Predictable as Usage Grows](/blog/bot-cost-control), [The Seven Ways Bot Setups Fail, and How to Prevent Each](/blog/bot-failure-modes).
 
 ## Frequently Asked Questions
 

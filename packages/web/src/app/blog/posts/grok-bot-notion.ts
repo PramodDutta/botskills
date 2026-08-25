@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot and Notion: Setups, Permissions, and What to Automate First',
+  title: 'Grok Bot and Notion: Permissions and What to Automate',
   description:
     'A Grok Bot Notion setup that respects your schema: page versus database operations, the sharing model that caps blast radius, and why Notion is the best bot memory.',
   date: '2026-08-25',
   category: 'Tutorial',
   content: `
-# Grok Bot and Notion: Setups, Permissions, and What to Automate First
+# Grok Bot and Notion: Permissions and What to Automate
 
 Ask a bot to "tidy up the project tracker" in Notion and you will get one of
 two outcomes. Either it appends a few blocks to a page, which is harmless, or
@@ -48,7 +48,7 @@ schema is running a migration on a production table that eleven people have
 built views against. Notion will not warn it about the difference, so your
 charter has to.
 
-## Pages, blocks, and databases are three different operations
+## Treat append, add row, and edit schema as three different permissions
 
 Here is the same instruction, "add this week's research", applied at each
 level, with what actually happens.
@@ -58,13 +58,9 @@ previous versions, so recovery is a few clicks. This is the operation you want
 a bot doing constantly.
 
 Creating a page inside a database adds a row and fills its properties. The
-risk is not the row, it is the property values, which is a subtlety worth
-knowing: writing an option that does not exist into a select property will
-generally create that option rather than reject it. Ask for "Priority: Urgent"
-in a database whose options are High, Medium, and Low, and you now have four
-options, your filtered views silently miss rows, and nobody notices for a
-month. Type coercion has the same shape: a date written into a text property
-is accepted, and the rollup that depended on it stops working.
+risk is not the row, it is the property values, and that turns out to be the
+most Notion-specific hazard in this whole article. It gets its own section
+below.
 
 Editing the database schema is the destructive one. Renaming a property
 updates every reference the UI can find and breaks the ones it cannot,
@@ -75,6 +71,40 @@ undo.
 
 The rule that follows is simple and should be in every Notion charter:
 **the bot may add rows and append blocks. It may never change the schema.**
+
+## A select value you write can be a schema change
+
+Here is the failure that is specific to Notion, and the reason a spreadsheet
+mental model gets people into trouble. In most tools, data and structure are
+different things and writing the wrong data produces an error. In Notion, the
+option list of a select property is part of the schema, so writing an
+unexpected value into it does not fail. It generally widens the schema.
+
+Ask for "Priority: Urgent" in a database whose options are High, Medium, and
+Low, and you now have four options. Nothing errors. Your filtered views quietly
+stop matching those rows, your grouped board grows a column nobody created, and
+the first person to notice is whoever trusts a count a month later.
+
+| What the bot writes | What generally happens | What breaks | How you find out |
+|---|---|---|---|
+| A select value not in the list | The option is created | Filtered views stop matching those rows | A month later, when a number looks wrong |
+| A multi-select value not in the list | The option is created | Grouped views grow a stray group | Only if you open that view |
+| A date string into a text property | Accepted as text | Every rollup, sort, and filter that assumed a date | The rollup returns nothing and does not complain |
+| A number with a currency symbol into a number property | Rejected or coerced, depending | Blank cells where you expected values | By reading the rows by hand |
+| A relation to a page that does not exist | Left empty | Rollups depending on that relation | Silently, again |
+| A person property filled with a non-member | Cannot resolve, left blank | Assignment views miss the row | When somebody asks why it is unassigned |
+
+Confirm the exact behaviour rather than trusting the table, because it takes
+two minutes and this product changes. Duplicate the database, have the bot
+write one row of each kind into the copy, read what landed, then delete the
+copy. Do that once, before the first real run, and you will know which of these
+six rows are dangerous in your workspace as of today.
+
+The design conclusion is the important part. If writing a value can alter
+structure, then "the bot may only add rows" is not by itself a safe boundary.
+The safe boundary is "the bot may only add rows using these exact values", with
+the option lists written out in full and a designated fallback for anything
+that does not fit.
 
 ## Sharing is the real permission, not the capability list
 
@@ -118,7 +148,35 @@ Then check the sharing list monthly, because the leak here is not a permission
 change, it is somebody nesting a sensitive page under a shared parent and
 inheriting access without noticing.
 
-## Why Notion is the best long-term memory of the five tools
+## Opt-in sharing is the inverse of a mailbox, and that is the advantage
+
+It is worth being precise about why the sharing model is better rather than
+just different, because the comparison is what tells you how much you are
+throwing away when you share a top-level page.
+
+| Tool | What one granted permission reaches by default | How you narrow it | Who widens it without telling you |
+|---|---|---|---|
+| Notion | Nothing at all, until a human shares a page | Share exactly one subtree | Anyone who nests a page under the shared parent |
+| Gmail | The entire mailbox | Barely. The scopes are coarse | Everyone who emails you enlarges the surface |
+| Slack | Whatever channels it is a member of | Invite it to named channels only | Anyone who invites it into another channel |
+| Google Drive | The folder and everything beneath it | Share single files, or one folder | Anyone who moves a file into that folder |
+| GitHub | The repository, or the whole organisation by token scope | A per-repository token | An admin changing token policy |
+
+Notion is the only row that starts at zero. In
+[a Gmail setup](/blog/grok-bot-gmail) read access means the whole mailbox, and
+in Drive the permissions flow downhill from whichever folder you shared.
+[Slack](/blog/grok-bot-slack) and [GitHub](/blog/grok-bot-github) sit somewhere
+in between. Notion inverts the default: your blast radius becomes a decision you
+make once, on purpose, rather than a limitation you spend the rest of the setup
+working around, which is the practical shape of
+[least privilege](/blog/least-privilege-bots) in a tool that actually supports
+it.
+
+Which is why sharing a top-level page is the single most wasteful thing you can
+do here. It converts the one integration with a real containment story into all
+the others, and it does it in one click that looks like convenience.
+
+## Put your long-term bot memory in Notion, not in a chat log
 
 If you run several bots, one of them should own a persistent memory, and
 Notion is the strongest place to put it. Compare honestly against the
@@ -152,7 +210,7 @@ which makes it the highest-value target and the worst possible place for a
 credential. Memory holds durable facts about how you work, not the keys to
 anything.
 
-## Schema awareness: teach the bot your properties before it writes
+## Make the bot echo your schema back before it writes a single row
 
 Most bad Notion writes come from a bot guessing at your schema. The fix is a
 short first-run step that costs you five minutes once.
@@ -204,7 +262,34 @@ though it produces more rows. Append-only memory means the history of what the
 bot believed is visible, which is the only practical way to debug a bot that
 started answering something wrong.
 
-## The restructuring accident and how to make it impossible
+## Restructuring is the one Notion act with no clean undo
+
+Before the defences, be honest about what recovery actually covers, because
+"Notion has version history" is the sentence that talks people into granting
+update capability.
+
+| The act | Recovery path | What comes back | What does not |
+|---|---|---|---|
+| A block edited | Page version history | The previous content | Nothing, if you notice in time |
+| A page archived | Trash, restorable for a period | The page and its properties | Nothing, if you notice in time |
+| A page permanently deleted | None | Nothing | Everything on it |
+| A property renamed | Rename it back by hand | The data | Every external reference keyed on the old name, silently |
+| A property type changed | Change it back | Values that round-trip cleanly | Values that could not convert |
+| A select option deleted | Recreate the option | Nothing automatically | That value on every row that had it |
+| One row's value overwritten | History on that row | The old value | Nothing, but you must find each row yourself |
+
+Read the pattern rather than the rows. Content recovery is good and structural
+recovery is manual, partial, or absent, and the recoverable cases all depend on
+somebody noticing within the retention window. Confirm what your own workspace
+plan retains, since that varies, and treat every row below the third as
+something you plan never to need.
+
+The other half is that structural damage announces itself late. A renamed
+property does not break the page you are looking at. It breaks a view somebody
+else opens on Thursday, and an integration keyed on the old name that fails
+quietly in between.
+
+## Make the restructuring accident impossible, not merely unlikely
 
 The single worst Notion bot outcome is a reorganized database, and it usually
 arrives through a request that sounds like maintenance: clean this up,
@@ -238,7 +323,46 @@ restraint from the other side, keeping every draft and edit waiting for your
 review, and the [bot advisor](/bots/bot-advisor) never deletes or rewrites
 another bot without your say-so.
 
-## A knowledge-base charter you can paste
+## Read the Notion failure from the view that stopped working
+
+Notion problems present as a view behaving oddly rather than as an error, so
+the symptom is usually two steps away from the cause.
+
+| Symptom | Cause | Fix |
+|---|---|---|
+| A filtered view suddenly shows fewer rows | The bot created a new select option the filter does not include | Close the option list in the charter, and count options weekly |
+| A rollup returns zero and no error | A date or number went into a text property | Check the property type, not the value |
+| The bot says it cannot find the database | The page moved out of the shared subtree, or sharing was revoked | Re-share the parent, and have it echo the schema every run |
+| Near-duplicate rows appear daily | No check for an existing row on the same subject | Require a search before every write |
+| A paragraph a human wrote was replaced | Update capability was granted | Withdraw update, or restrict it to pages the bot created |
+| It wrote into the wrong database | Two databases share a name | Address databases by link, never by name |
+| Memory answers are confidently wrong | Rows with no source, or a superseded row still sitting there | Enforce the required Source column and the supersedes rule |
+
+The first row is the one that costs the most, because a view quietly missing
+rows looks exactly like a quiet week. The cheapest guard is a line in the
+weekly report stating the current option count for every select property. When
+that number moves and you did not move it, you know what happened before a
+filter misleads you.
+
+## Automate in this order, cheapest reversal first
+
+The order matters more than the list, because each step earns the next. Sort by
+what it costs to undo, not by what it saves.
+
+| Job | Capability needed | Cost to reverse | Order |
+|---|---|---|---|
+| A dated log appended to a page it owns | Insert | Delete one block | 1. Proves the plumbing |
+| Memory rows with a required source link | Insert | Delete a row | 2. Compounds from week one |
+| A weekly gaps report on unsourced or conflicting facts | Read only | Nothing. It is a report | 3. Best ratio of value to risk |
+| Meeting notes captured into structured rows | Insert | Delete rows | 4 |
+| Drafting into a content calendar | Insert | Delete a draft page | 5. Needs review discipline |
+| Tidying an existing team database | Update | Often nothing | Last, or never |
+
+Notice that the first five need read and insert only. The one job that needs
+update capability is also the one whose mistakes cannot be undone, which is a
+convenient coincidence: withhold update, and the ordering enforces itself.
+
+## Start with the librarian, because its whole job is additive
 
 If you want one Notion bot rather than several, make it the librarian. It has
 the best ratio of value to risk of anything on this list, because its entire
@@ -260,6 +384,8 @@ are unsourced is a genuinely different tool.
 For how this bot fits alongside the rest of a small operation, and why the
 stop line belongs in the charter rather than in your memory, see the
 [one-person company guide](/blog/one-person-company-grok-bot).
+
+**Keep reading:** [Grok Bot and Airtable](/blog/grok-bot-airtable), [Grok Bot and Discord](/blog/grok-bot-discord), [Grok Bot and Google Calendar](/blog/grok-bot-google-calendar).
 
 ## Frequently Asked Questions
 

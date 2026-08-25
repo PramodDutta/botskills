@@ -21,7 +21,38 @@ every morning cleaning up what happened overnight.
 
 This is the system: six roles worth staffing first, the charter format that
 makes a bot safe to leave unattended, and the single line in that charter that
-does most of the work.
+does most of the work. It also covers the parts that never make the viral
+thread, including what one shared cloud computer means for six bots on one
+account, what the cheapest working access path actually costs as of writing,
+and how to tell at the end of month one whether any of it paid.
+
+## Count what routes through you before you hire a single bot
+
+Do not start with the bot menu. Start with a list of last week, written from
+your calendar and your sent folder rather than from memory, because memory
+edits out the twenty-minute jobs that are the entire problem.
+
+Three columns: the task, how many times it happened, how many separate tools it
+touched. Twenty minutes of honest listing produces something that sorts cleanly
+into four kinds of work, and only the first kind is worth a bot in month one.
+
+| Kind of work | Example from a solo week | Route it to | Why |
+|---|---|---|---|
+| Recurring, multi-tool, checkable | The morning brief built from calendar, inbox, and one channel | A bot, this week | Daily correction cycles, and a wrong answer is obvious in ten seconds |
+| Recurring, single tool, one step | Filing newsletters into a folder | A native filter or rule | A bot is a heavier instrument than the job needs, and it costs usage every run |
+| Rare and high stakes | The quarterly investor update | You, still | Four runs a year gives a charter no chance to improve |
+| Judgment heavy and irreversible | Answering an unhappy customer | You, with a bot preparing the packet | The preparation is delegable, the send is not |
+
+Now add up the hours in row one. If the honest total is under three hours a
+week, you do not have a staffing problem yet, you have a focus problem, and a
+roster of bots will bury it under new output to review. If the total is six
+hours or more, every hour you spend writing charters in the next fortnight
+comes back inside the month.
+
+The second useful number from that list is how many of those tasks you could
+check in under sixty seconds. That is your real capacity. A bot you cannot
+verify quickly is a bot you will stop reading, and an unread bot is worse than
+no bot, because it is still acting.
 
 ## Stop writing prompts, start writing roles
 
@@ -45,10 +76,18 @@ Bookkeeping Auditor. Talent Scout. If the name would look strange on an org
 chart, the scope is probably wrong: either too vague to run unattended, or so
 narrow it may as well be a single prompt.
 
-## The charter, in three sections
+There is a second test that catches the vague ones. Write the sentence "this
+week the bot was worth it because ______" and try to finish it with a number.
+"Because it drafted 34 usable emails" passes. "Because it helped me stay
+organized" describes a bot you will delete in three weeks without ever noticing
+the week it stopped being useful.
 
-Brief a bot the way you would brief someone on their first day. Three
-sections, in this order, and the third is the one that matters most.
+## Brief a bot the way you brief a first-day hire
+
+Someone joining on Monday asks three questions before lunch: what am I
+responsible for, how will you know if I did it well, and what should I check
+with you first. Those three questions are the three sections of a charter, in
+that order, and the third is the one that matters most.
 
 \`\`\`text
 You are my Outbound SDR.
@@ -70,8 +109,18 @@ Never buy or import a purchased list.
 If a reply mentions legal, pricing terms, or a contract, stop and ask me.
 \`\`\`
 
-Sections one and two are the job description. Section three is what lets you
-close your laptop.
+Each section has a test that tells you when it is finished. The first section
+is done when the bot could run tomorrow without you present and you would still
+know what it was supposed to produce. The second is done when every line
+contains something countable: a word limit, a number of items, a format, a
+banned phrase. "Be concise" fails that test and "never more than three
+sentences" passes it.
+
+The third section is done when you can read the daily summary and tell whether
+the line held. That is a stricter bar than it sounds. "Never do anything
+inappropriate" cannot be checked from a summary. "Never contact the same person
+twice in 30 days" can, as long as you also ask the bot to report the
+deduplication count it applied.
 
 **A bot that has to ask about everything is useless. A bot that never asks is
 dangerous.** The charter is where you draw that line once, deliberately,
@@ -81,9 +130,11 @@ customer something strange.
 
 Every bot in the botskills.sh catalog carries that line as a required field.
 It is the first thing on the page, before the prompt, because it is the fact
-that determines whether you can hand the bot real access.
+that determines whether you can hand the bot real access. The longer argument
+for why one refusal outperforms a page of instructions is in
+[the case for a boundary line](/blog/grok-bot-boundaries).
 
-## The six roles worth staffing first
+## Staff six roles first, and let the seventh wait
 
 Do not hire twelve bots in a weekend. Six roles cover the surface area of a
 solo operation, and each one maps to work that is recurring, multi-tool, and
@@ -103,6 +154,23 @@ its job, and the refusals are what make the set safe to run in parallel. Scout
 gathers but never reaches out. Quill writes but never posts. Ledger counts but
 never pays.
 
+That column carries more weight than it looks like it does. Six bots on one
+account are not six sandboxes. On Grok Bot, every bot on an account shares one
+persistent cloud computer: each bot gets its own screen, but the files, the
+browser cookies, and the signed-in sessions underneath are the account's, not
+the bot's. The xAI documentation states the consequence plainly, telling you
+not to use separate bots as a security boundary. So the refusal written into
+each charter is not a courtesy layered on top of real isolation. In a six-bot
+roster it is most of the isolation you have, which is exactly why it is a
+required field on every listing rather than a suggestion in a style guide.
+
+Hire in the order that column implies. Start with a bot whose refusal covers
+every irreversible verb it could reach, which in practice means Scout or Guide,
+both read-and-draft. Add Quill and Ledger next, since one produces drafts and
+one produces findings. Forge and Chief of Staff come last, Forge because
+repository write access is a different risk class and Chief of Staff because
+coordination is only a job once there is something to coordinate.
+
 A Chief of Staff bot is worth building once you have three or four others,
 because coordination becomes its own job. Give it one instruction that pays
 for itself:
@@ -112,6 +180,10 @@ Read the roster of bots I have created. For each, tell me what it owns,
 where it overlaps with another bot, and where there is a gap nothing covers.
 Recommend what to add, merge, or retire. Do not create or delete anything.
 \`\`\`
+
+Run that monthly. The overlap report is what stops a roster from quietly
+growing two bots that both watch competitor pricing and disagree about what
+they saw.
 
 ## Teach once, then schedule
 
@@ -129,6 +201,24 @@ Anything that passes all three is a routine waiting to be lifted off your
 plate. Anything that fails one is a bad first choice, not because a bot cannot
 do it, but because you will not be able to tell whether it did it correctly.
 
+Know the limits of the recording before you design a process around it. As of
+writing, teach-by-demonstration on Grok Bot captures visible computer
+interaction for up to ten minutes, records no microphone audio, covers browser
+workflows only, is not available from the iPhone app, and produces a draft
+skill rather than a finished one. That shapes what you record: a ten-minute cap
+means you demonstrate one clean segment of a process rather than the whole
+end-to-end job, and no audio means every explanation you would have narrated
+out loud has to be typed into the charter instead.
+
+Routines have their own arithmetic worth knowing on day one. A routine belongs
+to exactly one bot, a bot tops out at 50 routines, and the app keeps only the
+20 most recent run records for each. Deleting the bot deletes its routines with
+it, and nothing lives at team level. Two consequences follow. Your evidence
+window is 20 runs, so a daily routine gives you four weeks of history and an
+hourly one gives you less than a day. And the routine is never the only copy of
+a process worth keeping: the charter belongs in a file you own, with the
+routine as a convenience built on top of it.
+
 Then give the routine a reason to fire. Two trigger types cover nearly
 everything:
 
@@ -144,7 +234,9 @@ mentions pricing, draft a reply from my template and park it for review.
 Never send.
 \`\`\`
 
-Both examples end the same way, and that is not an accident.
+Both examples end the same way, and that is not an accident. The full
+comparison of when each trigger type is the right one is in
+[routines versus triggers](/blog/grok-bot-routines-vs-triggers).
 
 ## Connect the minimum, not the maximum
 
@@ -153,20 +245,82 @@ bot you ever create can reach it. That convenience is also the risk, because
 the blast radius of a single connection is every bot on the account, including
 ones you have not written yet.
 
+On a shared cloud computer the same logic extends past the connector list. A
+browser session your Scout signs into is a session your Quill inherits. A
+credential typed into a command line sits on the machine, not on a screen. And
+deleting a bot does not clean any of that up: the files and the signed-in
+sessions belong to the account, not to the bot you removed. If you have been
+assuming that retiring a bot revokes what it could reach, that is the
+assumption to drop first, and [what the shared computer actually
+covers](/blog/grok-bot-shared-computer-security) walks through it item by item.
+
 Practical rules that cost nothing:
 
 - Connect only what you are using this week. Add the rest when a bot needs it.
-- Prefer a dedicated account for anything financial rather than your primary.
+- Prefer a dedicated account for anything financial rather than your primary,
+  because the separation you want exists at the account level and cannot be
+  manufactured at the bot level.
 - For tools without a native connector, let the bot hit the login wall and
   hand you the screen. You authenticate; it resumes with a session, not a
   stored credential.
-- Review connections monthly and remove what no bot uses.
+- Review connections monthly and remove what no bot uses. Removal is the step
+  everyone skips, which is why [least privilege for
+  bots](/blog/least-privilege-bots) spends most of its length on the
+  revocation pass rather than the granting one.
 
 Treat the first month as probation. Give bots reversible, low-stakes work,
 watch the early runs more closely than feels necessary, and expand authority
 only after a bot has earned it on small things.
 
-## A realistic first fortnight
+## Work through thirty days of one Outbound SDR
+
+Abstract advice about charters produces a charter that reads well and ships
+nothing usable. Here is one bot, followed from its first run to the end of the
+month, using the SDR charter from earlier.
+
+**Day one.** The bot runs at 07:00 and reports: 40 prospects pulled, 40 emails
+drafted, 0 skipped. That zero is the first problem. Any real list of 40
+companies contains records with missing titles, dead domains, and two people at
+the same account. A bot that skipped nothing did not check anything. You read
+six drafts and four of them open with a line that could have been written about
+any company in the industry.
+
+**The three corrections that matter.** They go into the charter, not into a
+reply, because the next scheduled run starts from the charter and has never
+seen your reply.
+
+\`\`\`text
+// WHAT GOOD LOOKS LIKE  (revised day 2)
+The specific line must reference something dated in the last 90 days:
+a launch, a hire, a funding note, a published post. Name the source.
+If you cannot find one, skip the prospect. Do not write a generic opener.
+
+// SUMMARY SHAPE  (added day 4)
+Report five numbers: pulled, researched, drafted, skipped, deduplicated.
+List every skipped prospect with a one-word reason.
+
+// WHERE YOU STOP  (added day 9)
+Never draft to a personal free-mail address.
+If two prospects share a company domain, draft to one and skip the other.
+\`\`\`
+
+**Day thirty.** The same bot reports 40 pulled, 31 drafted, 9 skipped with
+reasons, 3 deduplicated. You read four drafts instead of six, because the skip
+list tells you exactly where the judgment calls were.
+
+| Signal | Day one | Day thirty | What the change means |
+|---|---|---|---|
+| Skipped, with reasons | 0 | 9 | The bot is applying a rule instead of filling a quota |
+| Drafts you rewrote | 4 of the 6 you read | 0 of the 4 you read | The quality block finally contains checkable rules |
+| Minutes spent reviewing | 25 | 6 | Review time falls as the summary gets specific, not as the model gets smarter |
+| Lines in the charter | 12 | 19 | Seven pieces of your judgment that used to live only in your head |
+
+The last row is the actual asset. After a month the valuable artifact is not
+the drafts, it is a nineteen-line file that encodes where your judgment differs
+from the default. That file is what you paste into the second bot, which is why
+month two costs a fraction of the effort month one did.
+
+## Spend week one on one bot and week two on a team of three
 
 Week one, one bot. Pick the least dangerous recurring task you have, usually a
 morning brief or a research digest, and let it run for five days while you
@@ -178,13 +332,163 @@ Week two, add two more and put them in one group so they can hand work to each
 other. This is where a set of bots starts behaving like a team rather than a
 folder of shortcuts: one gathers, one drafts, one reviews, and you approve.
 Give the group an objective rather than a task list, because a task list means
-you already did the decomposition yourself.
+you already did the decomposition yourself. The mechanics of handoff between
+bots, including what a lead bot is actually allowed to lead, are covered in
+[running multiple bots as a team](/blog/multi-bot-teams).
 
 By the end of the fortnight you will have a clear read on which of your work
 is genuinely delegable and which needs you. That answer is worth more than the
-automation.
+automation. If you would rather follow a fixed schedule than design one, [the
+day-by-day first week plan](/blog/grok-bot-first-week) is this same fortnight
+written as a checklist.
 
-## What people get wrong
+## Price the cheapest path before you count the hours saved
+
+Access to Grok Bot is gated by subscription, and the gate moved on 21 August
+2026 when eligibility widened. That change makes most advice published before
+it wrong about the entry price, so read the current plan page before you take
+any number, including these.
+
+| Path | Price as of writing | Includes Grok Bot | Sensible when |
+|---|---|---|---|
+| Cursor Hobby | Free | No | You are evaluating the editor, not bots |
+| Cursor Pro | $20/mo | No | The most common wrong assumption on this list |
+| Cursor Pro+ | $60/mo | Yes | Cheapest paid path for one person |
+| Cursor Ultra | $200/mo | Yes | Heavy daily use across a full roster |
+| Cursor Teams Standard | $40/user/mo | Yes | Two or more people, cheapest per seat |
+| Cursor Teams Premium | $120/user/mo | Yes | A team that has outgrown Standard's usage |
+| SuperGrok | $30/mo | No | You want the assistant, not the bots |
+| SuperGrok Plus | $100/mo | Yes | You already live in the Grok apps |
+| SuperGrok Heavy | Not published | Yes | Rarely the right first purchase for one person |
+| A one-time trial | Free, once | Yes | Deciding whether any of this fits your week |
+
+Two details save people money. If you hold both a Cursor and a SuperGrok
+subscription, Grok Bot draws on whichever has more usage available, so paying
+for both to "get more" is rarely the lever people assume it is. And there is no
+Grok Bot specific spend cap as of writing: the subscription carries a weekly
+usage allowance, and work beyond it bills on demand from actual model and token
+cost. The absence of a hard ceiling is the reason a cost limit belongs in the
+charter, which is the argument [bot cost control](/blog/bot-cost-control) makes
+at length.
+
+Against those numbers, put the hours from the first table in this article. Six
+hours a week of recurring multi-tool work is roughly 26 hours a month, and you
+do not need a spreadsheet to compare that with a $60 line item. What you do
+need is honesty about the review time. If six hours of work becomes four hours
+of reviewing bot output, the trade is far worse than it looked, and the fix is
+a sharper quality block rather than a bigger plan.
+
+## Six ways a solo roster fails in its first month
+
+None of these are model failures. Every one is a configuration failure with a
+recognizable symptom.
+
+| Symptom | What is actually happening | The fix |
+|---|---|---|
+| Two bots state contradicting facts about your own product | Each holds its own copy of the facts inside its own charter | Move shared facts into one context file that both read at startup |
+| A bot reports a clean run daily and produces nothing you use | The quality block contains no countable rule | Add word limits, item counts, and a named output shape |
+| The same correction gets made every few days | Corrections are typed in chat, and chat ends with the run | Every correction goes into the charter file with a dated changelog line |
+| Output silently stops for several days | A connected tool's session expired and the failure was quiet | Require a failure report with timestamp and reason; never allow a silent skip |
+| Reviewing bot output eats the morning you were freeing up | More bots than your check capacity supports | Retire the bot with the lowest usable-output rate, not the newest one |
+| A bot took an action you did not expect | No irreversible verb was named in the stop line | Name the verb: send, post, pay, delete, merge, cancel, book |
+
+The middle two rows account for most abandoned rosters. Both are cheap to fix
+and neither is obvious in week one, which is why they survive into month two
+before anyone names them. The wider catalogue of what goes wrong and why is in
+[bot failure modes](/blog/bot-failure-modes).
+
+## Prove the roster is doing what you think it is doing
+
+There is no audit view of bot actions as of writing, so the ledger is yours to
+keep. Once a week, run a check that is capable of failing. A check that always
+passes is decoration.
+
+\`\`\`text
+For each bot I run, report from the last seven days:
+  - number of scheduled runs that fired, and any that did not
+  - number of outputs I marked as used, versus produced
+  - every action taken outside this workspace, with a link
+  - every item you skipped, with the reason
+  - any instruction you received that conflicted with your charter
+
+Then answer one question directly: name anything you did in the last
+seven days that your stop line arguably forbade. If there is nothing,
+say "none" and quote the line you checked against.
+Report only. Change nothing.
+\`\`\`
+
+The last paragraph is the part that can fail, and it should fail at least once
+in your first month. If every bot answers "none" every week from day one, you
+have probably written stop lines so vague that nothing could contradict them,
+which is a worse result than one honest flag.
+
+Pair that with a hard check you run yourself rather than ask about. Search your
+sent folder, your shared channels, and your trash across the window the bots
+ran in. Zero entries you did not create is the pass condition for any
+draft-only roster. Asking a bot whether it sent something and searching for
+what was sent are different classes of evidence, and only one of them survives
+a bot that misunderstood its own charter. That distinction is the whole subject
+of [bot observability](/blog/bot-observability).
+
+## The strongest objection: you replaced the work with managing the work
+
+Here is the best argument against everything above, and it deserves a straight
+answer rather than a dismissal.
+
+A solo operator who builds six bots has not removed a bottleneck. They have
+converted execution work into review work, added a maintenance surface that did
+not exist before, and taken on a monthly bill. The bots produce more output
+than the person can read, so quality drifts down while volume goes up, and the
+arrangement flatters itself, because volume is easy to count and quality is
+not.
+
+That objection is correct in three situations. It is correct when your week
+does not contain enough recurring multi-tool work to clear the first table in
+this article. It is correct when you cannot check a bot's output in under a
+minute, because then review time scales with volume and the trade never closes.
+And it is correct in the first fortnight of any roster, when you are paying the
+setup cost and receiving almost nothing back.
+
+It stops being correct at the point where a bot's output stops needing edits,
+because that is when review changes from rewriting to approving, and approving
+is roughly constant time regardless of volume. That transition is not automatic
+and it is not the model's job. It happens when the quality block gets specific
+enough, which usually takes two to three weeks per bot and shows up exactly as
+the day-one to day-thirty table above.
+
+So the honest version of the claim is narrower than the viral version. A
+one-person company with bots is not a company that does more while you sleep.
+It is a company where the recurring, checkable, multi-tool work happens without
+you, and everything else still waits on you exactly as it did before.
+
+## Where a one-person company still needs the person
+
+Every recommendation has a domain, and this one has clear edges.
+
+Anything where being wrong is expensive and unrecoverable stays with you. An
+approval gate helps less here than people expect, because an approval controls
+the action being proposed and does not reverse work already completed. If a bot
+has already published, already paid, or already messaged, approving or denying
+the next step does nothing about the last one.
+
+Relationship work stays with you. A bot can assemble the context packet for a
+difficult customer conversation, and that packet is genuinely valuable, but the
+conversation itself is the product in that moment, so delegating it is a
+category error rather than an efficiency.
+
+Anything without a stable definition of good output stays with you until the
+definition exists. Positioning, pricing, and hiring judgment fail the checkable
+test on purpose, because you are still forming the opinion a charter would have
+to encode.
+
+And anything the platform does not reach stays with you for now. As of writing
+there is no Linux desktop app, no Android app, and no iPad app, and the iPhone
+app is a pause-and-resume remote rather than a place to build. If your working
+machine is a Linux laptop, that is a real constraint on this whole approach,
+and [the supported platforms breakdown](/blog/grok-bot-supported-platforms)
+covers the options honestly.
+
+## Three mistakes that show up in almost every first roster
 
 **Automating the wrong end first.** The temptation is to automate the thing
 you hate most, which is usually also the thing with the least stable steps and
@@ -193,10 +497,13 @@ satisfying one becomes possible after you trust the setup.
 
 **Charters written as wishes.** "Be helpful and use good judgment" is not a
 charter. It gives the bot no way to be wrong, which means it gives you no way
-to correct it. Specific outputs, specific limits.
+to correct it. Specific outputs, specific limits. The reliable test is whether
+a line contains a number, a named format, or a named verb.
 
 **Skipping the stop line because it feels like paperwork.** It is the opposite
-of paperwork. It is the clause that lets you leave the thing running.
+of paperwork. It is the clause that lets you leave the thing running, and on a
+platform where every bot shares one computer, it is doing more of the safety
+work than the platform is.
 
 If you want to skip the blank page, every listing on botskills.sh is a
 paste-ready setup with its boundary already written, ranked by how many people
@@ -208,6 +515,8 @@ constrains a bot](/blog/grok-bot-boundaries), which is the single line this
 whole system rests on, and [a day-by-day plan for your first
 week](/blog/grok-bot-first-week) if you would rather follow a schedule than
 design one.
+
+**Keep reading:** [The Chief of Staff Bot](/blog/grok-bot-chief-of-staff-setup), [Every Grok Bot Integration and What Each One Unlocks](/blog/grok-bot-integrations-list), [Give Every Bot One Source of Truth](/blog/grok-bot-obsidian-knowledge-base).
 
 ## Frequently Asked Questions
 

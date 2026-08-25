@@ -37,6 +37,14 @@ Attention work is different. It is checking every changed file against a fixed
 list of questions, without getting bored, without deciding that this file is
 probably fine, and without stopping at file nine of twenty.
 
+The degradation is predictable enough to plan around. A reviewer reads the
+first two files carefully, forms a hypothesis about what the change is doing,
+then reads the remaining eighteen for confirmation of that hypothesis rather
+than for defects. That is not laziness, it is how reading works, and it is why
+the bug is so often in the file that looked boring. A bot has no hypothesis to
+protect. It applies question four to file seventeen with the effort it applied
+to file one, which is the only capability here worth buying.
+
 | Attention work (give it to the bot) | Judgment work (keep it) |
 |---|---|
 | Which changed files altered behavior without touching a test | Whether the feature is worth building at all |
@@ -71,7 +79,16 @@ line 61 and nothing about the fourteen call sites in three other services. A
 human reviewer sees a small change and reads it as low risk. The bot has no
 sense of visual size, which for once is the advantage.
 
-## Secrets, and why one catch pays for the whole setup
+Four is the right number to start with, and the list is meant to be tuned
+rather than copied. Spend twenty minutes on your last ten incidents and ask
+what was visible in the diff that shipped them. If three of them were
+migrations that ran before the code that needed them, replace one row with a
+migration ordering check. If none of them was ever a secret, keep the secret
+row anyway, because that row is insurance rather than a hit rate. What you must
+not do is grow the list to nine, since each addition dilutes the attention of
+the person reading the output, which is the resource you are conserving.
+
+## One caught secret pays for the whole setup
 
 Every other finding on that list is a normal review comment. A secret is a
 different class of event, because it is the only one where merging makes the
@@ -93,7 +110,14 @@ tidy summary of the rest of the diff. A comment that lists a suspected
 credential as item four of six, under a heading about naming conventions, is a
 comment that gets skimmed.
 
-## The reviewer charter, pasteable
+Expect false positives and accept them. Test fixtures contain key-shaped
+strings, base64 blobs look like entropy, and example config files are full of
+placeholder tokens. A detector tuned never to cry wolf is tuned to miss the one
+that matters, so tune it the other way and make the noise cheap: one line, path
+and pattern class, dismissed in five seconds. That is the cost of a false
+positive. A false negative costs you a rotated production credential.
+
+## Start from this charter and change only the bracketed parts
 
 \`\`\`text
 You are my PR Reviewer for [org/repo].
@@ -146,7 +170,29 @@ The stop-after-secrets rule and the two-question cap are the clauses doing the
 most work. Both exist to protect the reader's attention, which is the resource
 the whole setup is supposed to conserve.
 
-## Choosing the trigger: on open, on force-push, and never on every comment
+## Decide the review depth by what the diff touches
+
+The charter above names four areas where the bot stops rather than analyzes.
+That clause looks like caution and it is actually about signal: a review bot is
+most useful where the checks are mechanical, and least useful exactly where the
+consequences are largest, because those are the diffs whose correctness depends
+on context it does not have.
+
+| What the diff touches | What the bot does | What it must not do |
+|---|---|---|
+| Tests, docs, styling | Full review, usually silent | Comment on formatting the linter owns |
+| Ordinary application code | Full review against the four checks | Opine on the design |
+| Config and feature flags | Flag any key changed with no docs change | Guess at the runtime effect |
+| Database migrations | Flag the file, tag a human, stop | Assess whether the migration is safe |
+| Auth and permissions | Flag the file, tag a human, stop | Reason about the threat model |
+| Payments and billing | Flag the file, tag a human, stop | Anything else at all |
+
+The bottom three rows are the ones that make the setup trustworthy. A bot that
+produces a confident paragraph about a migration ordering problem is worse than
+one that says nothing, because a paragraph invites agreement and silence
+invites a look.
+
+## Trigger on new commits, and never on a new comment
 
 A review bot has one honest trigger: a new commit reached the branch. That is
 when the thing being reviewed changed. Everything else generates a comment
@@ -157,6 +203,14 @@ happens, seven comments land, and the bot posts seven reviews of an unchanged
 diff. Now the thread is 60 percent bot, and the author scrolls past all of it
 to find the human reply.
 
+A force push deserves its own note, because it is the one event where the diff
+can change without any new commit appearing in the usual sense. History gets
+rewritten, and the review you posted twenty minutes ago may now refer to lines
+that no longer exist in the form you read them. Treat a force push as new
+commits for triggering purposes, and treat it as a signal for a human: on a
+branch under review, a rewritten history is a thing worth a person looking at
+rather than a thing a bot should quietly re-analyze.
+
 Two practical notes on the runtime. A routine is assigned to a single bot, so
 your reviewer routine lives with your reviewer bot and does not exist at team
 level. The app keeps only the twenty most recent run records for a routine, so
@@ -166,10 +220,21 @@ deleting the bot deletes its routines with it, which matters more than it
 sounds when the reviewer is the piece of your workflow everyone quietly
 depends on.
 
-## Where the line sits: comment, never approve, never merge
+## Draw the line at comment, never approve, never merge
 
-There are three GitHub actions a review bot can technically take, and only one
+There are five GitHub actions a review bot can technically take, and only one
 of them is safe.
+
+| Action | What it changes | Reversible | Verdict |
+|---|---|---|---|
+| Comment | Nothing. It is information | Delete it | Give it this |
+| Apply a label from a closed list | Metadata only | Remove the label | Safe later |
+| Request changes | Blocks the PR, records a rejection | Dismiss the review | Human |
+| Approve | Can satisfy a required-reviews rule | Dismiss the review | Human, always |
+| Merge or push | Your default branch, CI, everyone's next pull | A second commit, never an absence | Human, permanently |
+
+The reversibility column is doing the sorting, and the verdict column follows
+from it rather than from how clever the bot is.
 
 A comment is information. Anyone can delete it, nobody is blocked by it, and it
 carries exactly the authority the reader chooses to give it.
@@ -194,7 +259,7 @@ delegate. The catalog listing for the
 [PR Review Sentinel](/bots/pr-review-sentinel) states that boundary directly:
 it never merges, approves, pushes, or requests changes, and it comments only.
 
-## The wall you build outside the charter
+## Build the wall outside the charter, with branch protection
 
 Here is the part specific to code review that has no equivalent in a mail bot
 or a research bot, and it is why a review bot can be one of the safer things
@@ -205,12 +270,21 @@ will not merge. A protection rule means it cannot merge, regardless of what the
 charter says, what the model decides, or what a hostile comment in an issue
 thread talks it into. Set both and depend on the second.
 
-On the default branch: require a pull request before merging, require at least
-one approving review from a human account, require status checks to pass, block
-force pushes, and block branch deletion. Then the step people skip: do not add
-the bot's account to the bypass list, and never grant it the administration
-permission, because a bot that can edit branch protection is a bot that branch
-protection no longer protects you from.
+On the default branch, set these five and check the bypass list afterwards.
+
+| Rule | What it stops | Why the charter cannot |
+|---|---|---|
+| Require a pull request before merging | A direct push to the default branch | A charter clause is read, not enforced |
+| Require an approving review from a human account | The bot's approval satisfying the gate | The bot cannot know which rule it satisfied |
+| Require status checks to pass | Merging around a red build | The bot has no view of the merge queue |
+| Block force pushes | History rewrites that erase the reviewed diff | Nothing in a prompt survives a rewritten branch |
+| Block branch deletion | Losing the branch and its review thread | The bot has no way to undo it |
+
+Then the step people skip: do not add the bot's account to the bypass list, and
+never grant it the administration permission, because a bot that can edit
+branch protection is a bot that branch protection no longer protects you from.
+Check that list again after any change to your org's roles, since a bypass
+granted to a team quietly includes every account added to that team later.
 
 This layer defends against something a charter fundamentally cannot reach. A
 review bot reads PR descriptions, commit messages, and code comments, which is
@@ -229,7 +303,7 @@ writing limits as charter clauses plus external enforcement is covered in
 families to grant and refuse are in
 [the GitHub integration guide](/blog/grok-bot-github).
 
-## How this bot fails: the confident nitpick flood
+## Expect the failure to be volume rather than error
 
 Every job has one characteristic failure. For a review bot it is not being
 wrong. It is being voluminous.
@@ -252,7 +326,30 @@ sentence the bot is allowed to post. Then reread its last ten comments in one
 sitting, which is the only way to see the flood, because one comment at a time
 always looks reasonable.
 
-## Proving it worked: the change-per-comment rate
+## Answer the objection that CI and the linter already cover this
+
+The strongest argument against a review bot is that everything on its catch
+list belongs in CI. A secret scanner is a CI job. Coverage thresholds are a CI
+job. Type checks catch signature changes. Adding a language model to that stack
+is adding an unreliable component where a deterministic one already works.
+
+That argument wins outright on two of the four checks. If your secret scanning
+is a required status check, do not have a bot duplicate it, and if your build
+fails when an exported signature breaks a caller, the bot has nothing to add.
+Deterministic beats probabilistic every single time the deterministic version
+exists.
+
+It loses on the other two, and on a third thing nobody counts. Coverage
+tooling tells you a percentage, not that this specific behavior change arrived
+without a test, and the two are different questions with different answers.
+Nothing in CI reads the PR description and notices that three of the files have
+no relationship to what the change claims to do. And the practical point: the
+checks you would need to write for each of these are a week of work each,
+whereas the charter is an afternoon. If a check earns its place, promote it
+into CI later and delete that row from the charter. The bot is a cheap way to
+find out which checks are worth building.
+
+## Measure changes per comment, not pull requests reviewed
 
 Do not measure PRs reviewed. That number goes up whether the bot is useful or
 not.
@@ -272,7 +369,28 @@ reviewed diff. That is the number the bot exists to move, and it is the only
 one that tells you the catch list is aimed at the right four things for your
 codebase rather than for a generic one.
 
-## When to widen the authority past comments
+## Where a review bot stops earning its slot
+
+Three situations, and in all three the honest answer is to turn it off for
+those repositories rather than tune it.
+
+Generated code. A diff that is mostly lockfile churn, compiled protobufs, or
+schema output has no attention work in it, and a bot reviewing it produces
+volume proportional to the generated lines. Exclude those paths by name.
+
+Very large refactors. A rename touching four hundred files defeats the useful
+checks, because behavior changed in a thousand places and no test changed
+anywhere, which is correct. The bot will report that faithfully and it will be
+noise.
+
+Repositories where you are the only committer. The value here comes from
+catching what a tired reviewer skips, and if you wrote the code and you are
+also the reviewer, a scheduled sweep of the whole codebase is a better shape
+than a per-diff comment. The
+[Codebase Hardening Auditor](/bots/codebase-hardening-auditor) is built for
+that pattern and works only in the repository.
+
+## Widen toward more information, never toward more authority
 
 Widen in the direction of more information, never in the direction of more
 authority. The two feel similar and are not.
@@ -297,6 +415,8 @@ are building out a wider engineering roster, the
 shape of limit for coordination work, and the
 [Codebase Hardening Auditor](/bots/codebase-hardening-auditor) applies the same
 read-only discipline to scheduled sweeps rather than to a single diff.
+
+**Keep reading:** [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Monitor Competitors](/blog/grok-bot-to-competitor-monitoring).
 
 ## Frequently Asked Questions
 

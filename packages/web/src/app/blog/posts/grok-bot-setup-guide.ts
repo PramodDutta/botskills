@@ -23,7 +23,7 @@ bot](/blog/how-to-create-a-grok-bot). If you are not yet sure what a bot is
 versus a chat assistant, start with [the plain
 explanation](/blog/what-is-a-grok-bot) and come back.
 
-## What setup actually involves
+## Do these four things in order, or you will redo two of them
 
 Setup is four things, and only one of them is software:
 
@@ -37,14 +37,67 @@ runtime means redoing them, and building the bot before connections exist means
 your first run fails for a reason that has nothing to do with your charter,
 which is the most demoralizing way to start.
 
+There is a step zero that costs two minutes and saves an evening: confirm the
+machine you actually work on is supported. That check belongs before the
+payment screen, not after it, and it is the next section.
+
 Budget about ninety minutes end to end, most of it spent on step four.
 
-## Account and access: the parts that gate bot creation
+## Check the device you work on before you pay anything
+
+Platform support for Grok Bot is narrower than most coverage implies, and the
+gaps are not the ones people guess.
+
+| Platform | Supported as of writing | What that means for setup |
+|---|---|---|
+| macOS, Apple silicon | Yes | Full build, edit, schedule, and review |
+| macOS, Intel | Yes | Same as Apple silicon |
+| Windows x64 | Yes | A first-class desktop, not a fallback |
+| Windows Arm64 | Yes | Also first class, which surprises people |
+| iPhone, iOS 18 or later | Yes, partially | Pause and resume only; editing, history, testing, and deleting need a desktop |
+| Linux desktop | No | xAI's FAQ answers this one with a flat no |
+| Android | No | No app at all, so no remote control either |
+| iPad | No | The iPhone app is not an iPad app |
+
+Two consequences shape your setup. If your only machine runs Linux, the hosted
+path is closed to you today and the honest options are a Mac or Windows machine
+you already have access to, or a self-hosted runtime. And if you were planning
+to build and tune charters from your phone during a commute, plan differently:
+the phone is a remote control for a running bot, not a place to author one.
+[The full platform breakdown](/blog/grok-bot-supported-platforms) covers what
+each surface can and cannot do.
+
+## Confirm the plan unlocks scheduling, not just a smarter model
 
 Bot features sit behind paid tiers on hosted platforms, and the specific tier
-moves. As of writing, treat any article's plan name or price as stale, this one
-included, and read the current plan page directly before paying. What you are
-checking for is not the model, it is three capabilities:
+moves. Eligibility widened on 21 August 2026, which quietly made a large amount
+of published advice wrong about the entry price. Treat any article's plan name
+or price as stale, this one included, and read the current plan page directly
+before paying.
+
+| Plan | Price as of writing | Includes Grok Bot |
+|---|---|---|
+| Cursor Hobby | Free | No |
+| Cursor Pro | $20/mo | No |
+| Cursor Pro+ | $60/mo | Yes, and it is the cheapest paid path |
+| Cursor Ultra | $200/mo | Yes |
+| Cursor Teams Standard | $40/user/mo | Yes |
+| Cursor Teams Premium | $120/user/mo | Yes |
+| SuperGrok | $30/mo | No |
+| SuperGrok Plus | $100/mo | Yes |
+| SuperGrok Heavy | Not published | Yes |
+| A one-time trial | Free, once | Yes, for individuals |
+
+The two rows that catch people are Cursor Pro at $20 and SuperGrok at $30. Both
+are the plan directly below an eligible one, and both are what someone
+remembers paying for when they say "I already have it." If you hold both a
+Cursor and a SuperGrok subscription, Grok Bot draws on whichever has more usage
+available rather than adding them together. [How the account and plan chain
+actually works](/blog/grok-bot-cursor-account-explained) has the full picture
+including the corporate history behind it.
+
+Whatever plan you land on, what you are checking for is not the model. It is
+three capabilities:
 
 - **Scheduling.** Can a task run at a time you set, with nobody watching?
 - **Tool access.** Can it reach an inbox, a calendar, a browser, a repository?
@@ -56,6 +109,11 @@ all. It runs conversations. That distinction is the entire difference between a
 chat window and a teammate, and it is worth confirming before your card is
 charged.
 
+One thing no plan gives you is a model picker. Grok Bot does not offer model
+selection to members or to admins, and xAI has said it does not plan to. If
+your setup depends on pinning a specific model version, that is a constraint to
+design around now rather than discover in week three.
+
 ## Grok Bot or Rakazo: pick the runtime before you build
 
 Two runtimes dominate the paste-ready setups people share right now, and they
@@ -65,9 +123,10 @@ where your credentials live.
 | | Grok Bot (xAI) | Rakazo (open source) |
 |---|---|---|
 | Where it runs | Hosted by the vendor | Your machine or your server |
-| Model | xAI's models | Bring your own |
+| Model | Fixed set, no picker | Bring your own |
 | Setup effort | Account and connections | Install, configure, supply keys |
 | Credentials | Stored with the platform | Stay in your environment |
+| Desktop platforms | macOS and Windows only | Wherever you can run it, Linux included |
 | Best when | You want it working today | You need data to stay in-house |
 | Worst when | Policy forbids vendor-held tokens | Nobody on hand to maintain it |
 
@@ -80,6 +139,37 @@ The setups on botskills.sh are written against both, because a charter is
 portable in a way that a UI walkthrough is not. The prompt, the tools it
 expects, and the boundary all travel; only the place you paste them changes.
 
+## Learn what one shared computer means before you connect an account
+
+This is the part of hosted setup that most guides skip, and it changes which
+accounts you are willing to attach.
+
+On Grok Bot, all the bots on an account share a single persistent cloud
+computer. Each bot gets its own screen on that machine, which looks like
+separation and is not. Files written by one bot, browser cookies, signed-in
+sessions, and credentials typed into a command line all live on the account's
+computer, reachable from any screen. xAI's documentation states the conclusion
+directly and tells you not to use separate bots as a security boundary.
+
+Three practical consequences for setup:
+
+- Creating a second bot does not create a second sandbox. If you were planning
+  to keep a risky experiment away from your real accounts by giving it its own
+  bot, that plan does not work. Use a separate account.
+- Deleting a bot does not remove the files or browser sessions it created.
+  Cleanup is a separate action you take on the computer itself.
+- The machine underneath is a managed Linux VM and the bot runs as a non-root
+  user, so the isolation that does exist is between the VM and everything else,
+  not between one bot and its neighbour.
+
+Two smaller facts worth knowing before you connect anything. Outbound traffic
+uses static egress IPs, and some services flag datacenter addresses, so a
+login that works from your laptop can behave differently from the bot's
+browser. And there is no audit view of bot actions as of writing, which means
+the record of what your bots did is whatever you instructed them to report.
+[What the shared computer actually covers](/blog/grok-bot-shared-computer-security)
+goes through the full list.
+
 ## Connect the minimum set of tools
 
 Connections are usually account-level rather than per-bot. Attach an inbox once
@@ -89,7 +179,8 @@ yet and bots you copied from a stranger. That is the real reason to be stingy.
 Four rules that cost nothing:
 
 - Connect only what this week's bot needs. Add the rest on demand.
-- Use a dedicated account for anything financial rather than your primary.
+- Use a dedicated account for anything financial rather than your primary. On a
+  shared computer, the account boundary is the only real one you can draw.
 - For tools with no native connector, let the bot hit the login wall and hand
   you the screen. You authenticate, it resumes with a session rather than a
   stored password.
@@ -107,7 +198,9 @@ Report only. Do not disconnect or change anything.
 \`\`\`
 
 That last line matters. An audit bot with the ability to revoke access is a
-worse problem than the stale connections it found.
+worse problem than the stale connections it found. The longer argument for
+granting narrowly and revoking on a schedule is in [least privilege for
+bots](/blog/least-privilege-bots).
 
 ## Build one bot: a morning brief that touches nothing
 
@@ -148,6 +241,45 @@ If you would rather start from a reviewed setup than a blank page, the
 its boundary already written, and the [inbox triage bot](/bots/inbox-triage)
 is the natural second one because it never sends and every draft waits for you.
 
+## Decide where the charter lives before you paste it
+
+The runtime holds a working copy of your charter. That copy is not a backup,
+and treating it as one is a setup mistake you only discover at the worst
+moment.
+
+The platform's own retention is narrower than people assume. A routine belongs
+to exactly one bot, a bot tops out at 50 routines, only the 20 most recent run
+records are kept per routine, and deleting a bot deletes its routines with it.
+Nothing lives at team level. So the entire history of how a bot came to behave
+the way it does, every correction and every reason, exists only where you chose
+to put it.
+
+Put it in a file you own and can diff. A repository, a notes vault with
+version history, or any document that records what changed and when. One file
+per bot, named after the role, with a changelog block at the bottom:
+
+\`\`\`text
+// morning-brief.charter.txt
+[the four blocks go here]
+
+// CHANGELOG
+2026-08-25  Created. Four sections, one schedule trigger, no write access.
+2026-08-27  Added QUIET section after two useful items were dropped silently.
+2026-08-29  Added empty-result clause; a broken calendar link produced a
+            perfectly formatted brief that said nothing was on.
+\`\`\`
+
+Three things that buys you, none of which the runtime provides. The charter
+survives you deleting the bot, so a retired setup can be revived without
+reconstructing a month of tuning from memory. It moves between runtimes, which
+is the whole reason a paste-ready charter is portable while a UI walkthrough is
+not. And the changelog answers the question you will actually ask, which is
+never "what does this bot do" but "what changed last Tuesday, because the
+output got worse."
+
+The habit costs about ten seconds per edit. Skipping it costs the afternoon you
+spend trying to remember which of four changes caused the drift.
+
 ## Verify the run instead of trusting the schedule
 
 A schedule that quietly fails looks identical to a quiet week. This is the most
@@ -162,14 +294,42 @@ Verify three things after the first scheduled run, not after the manual test:
 | It read what you think | Compare the brief against the actual sources | Every source you listed appears somewhere, including as "nothing" |
 | It stopped where it should | Search sent items, channels, and the trash | Zero outbound actions, zero deletions |
 
-Then set the failure behaviour explicitly, because most runtimes will not shout
-on your behalf:
+The third row is the one that has to be done by searching rather than by
+asking. A bot's own report that it sent nothing is an assertion, and an empty
+sent folder is evidence. Those are different things, and only the second one
+survives a bot that misread its own charter.
+
+Know how much history you get. A routine keeps only its 20 most recent run
+records, so a daily bot gives you about four weeks of evidence and an hourly
+one gives you less than a day before the earliest runs fall off the end. If a
+run matters for a record you will want later, the charter has to write it
+somewhere you keep, not rely on the run log.
+
+## Set the failure path before you need it
+
+Most runtimes will not shout on your behalf. Silence is the default, and
+silence is indistinguishable from success.
 
 \`\`\`text
 If a scheduled run fails or a source is unreachable, retry once after
 ten minutes. If it fails again, send me a one-line message that says
 FAILED, the timestamp, and the reason. Never skip a run silently.
+
+If you produce a brief with no items in any section, still send it,
+and say which sources you successfully read to produce an empty result.
 \`\`\`
+
+The second clause catches the failure the first one misses. A bot with a broken
+connection can produce a perfectly formatted brief that says "nothing" in every
+section, and that output looks like a quiet Tuesday rather than a dead
+integration. Making it name the sources it actually reached turns an ambiguous
+empty result into a checkable one.
+
+Retry counts are worth being conservative about. A retry loop that runs
+unattended is the classic way to spend an unexpected amount of usage, and there
+is no Grok Bot specific spend cap as of writing: the subscription includes a
+weekly allowance and work beyond it bills on demand from actual model and token
+cost. One retry, then a report, is the safe default for a first bot.
 
 ## Six setup failures and the fix for each
 
@@ -183,24 +343,89 @@ FAILED, the timestamp, and the reason. Never skip a run silently.
 | Bot did something you did not expect | No boundary was written | Add the stop line before the next run |
 
 Five of the six are charter problems wearing an infrastructure costume. That
-ratio holds up in practice: the runtime is rarely the thing that is broken.
+ratio holds up in practice: the runtime is rarely the thing that is broken. For
+the symptoms that genuinely are infrastructure, [the troubleshooting
+guide](/blog/grok-bot-troubleshooting) sorts them by where the failure actually
+lives.
+
+## Every setup decision, with the cost of getting it wrong
+
+Five decisions carry the whole setup. This is what each one costs when you pick
+badly, which is a better guide than a list of pros and cons.
+
+| Decision | The options | Pick this unless | Cost of the wrong pick |
+|---|---|---|---|
+| Where it runs | Hosted or self-hosted | Policy or Linux forces self-hosted, then self-host | Redoing every connection, and possibly a credential rotation |
+| Which plan | The eligible tiers above | You qualify for the one-time trial, then trial first | A month of subscription for a capability you never used |
+| What to connect | Calendar and inbox, or everything | A specific charter needs more, then add exactly that | An account-wide grant that every future bot inherits |
+| First bot's authority | Read-only or read-and-write | Never, for a first bot | An irreversible action in the week you understand the least |
+| Trigger type | Schedule or event | The work is genuinely reactive, then use an event | An unreadable run history and a bot you cannot reason about |
+
+Row three is the one that is hardest to walk back. Revoking a connection is
+easy, but a session that was live while a bot was running has already been
+usable, and an approval controls the action being proposed rather than
+reversing work already done.
+
+## Where this setup path does not apply
+
+Four situations where the ninety-minute path above is the wrong plan.
+
+**Linux-only shops.** There is no Linux desktop app. The realistic route is a
+self-hosted runtime, and the setup arc changes shape entirely because you own
+the install, the model keys, and the updates.
+
+**Organizations on Privacy Mode (Legacy).** That setting blocks Grok Bot
+outright, so no amount of correct plan selection will produce a bot. Confirm
+the workspace setting before anyone buys a seat.
+
+**Teams that need per-bot isolation.** It does not exist. If your compliance
+requirement is that the finance bot cannot reach the marketing bot's sessions,
+the unit of separation available to you is an account, not a bot. A team-level
+ceiling on local execution has been described as coming, with members able to
+choose stricter but not looser settings, and as of writing it has not shipped.
+
+**Anything that needs a formal audit trail today.** There is no audit view of
+bot actions yet. You can build a serviceable substitute by having every bot
+write an append-only log it never edits, but that is a charter convention you
+maintain, not a platform guarantee, and it will not satisfy an auditor who
+wants a system record.
+
+## The objection: ninety minutes of ceremony for a morning brief
+
+The fair criticism of this guide is that it is a lot of process for a bot that
+summarizes your calendar. You could have the same brief in ten minutes by
+pasting a prompt and setting a schedule, and for one bot that is true.
+
+The reason to do it the long way is that almost nothing on this list is per
+bot. The plan check, the platform check, the runtime decision, the connection
+policy, and the failure convention are account-level facts you establish once
+and reuse for every bot you ever build. The second bot takes fifteen minutes.
+The fifth takes five.
+
+The part that genuinely is per bot is the charter, and that is also the part
+that pays back the most, because a charter with a checkable quality block turns
+review from rewriting into approving. If you are going to run one bot forever
+and never a second, skip to the charter and the verification step. If you
+expect a roster, the ninety minutes is amortized across all of it.
 
 ## The one-sitting checklist
 
 Work down this list in order and you have a running bot at the end of an
 afternoon:
 
-1. Confirm the plan supports scheduling, tool access, and saved bots.
-2. Choose hosted or self-run, and write down why.
-3. Connect only calendar and inbox. Nothing else yet.
-4. Run the connection audit prompt and read the output.
-5. Paste the morning brief charter and set one schedule trigger.
-6. Trigger it manually once and read the brief like a manager.
-7. Let one scheduled run happen. Verify it fired, read correctly, and wrote
+1. Confirm your machine is a supported platform.
+2. Confirm the plan supports scheduling, tool access, and saved bots.
+3. Choose hosted or self-run, and write down why.
+4. Connect only calendar and inbox. Nothing else yet.
+5. Run the connection audit prompt and read the output.
+6. Save the charter in a file you own, then paste it in and set one schedule
+   trigger.
+7. Trigger it manually once and read the brief like a manager.
+8. Let one scheduled run happen. Verify it fired, read correctly, and wrote
    nothing.
-8. Add the failure-report instruction.
-9. Run it for five days, correcting only in the charter.
-10. Add a second, still read-only bot such as the [competitor pricing watch
+9. Add the failure-report instruction and the empty-result clause.
+10. Run it for five days, correcting only in the charter.
+11. Add a second, still read-only bot such as the [competitor pricing watch
     bot](/bots/competitor-pricing-watch), which reads public pages and never
     fills a form.
 
@@ -208,6 +433,8 @@ Nothing on that list grants a bot the ability to send, spend, or delete. That
 is deliberate. Setup is the phase where you build the habit of writing a stop
 line, and it is much easier to widen a bot's authority later than to explain
 why it emailed a customer during week one.
+
+**Keep reading:** [The Chief of Staff Bot](/blog/grok-bot-chief-of-staff-setup), [Self-Hosting Rakazo](/blog/rakazo-self-hosting-guide), [Bot Boundaries](/blog/grok-bot-boundaries).
 
 ## Frequently Asked Questions
 

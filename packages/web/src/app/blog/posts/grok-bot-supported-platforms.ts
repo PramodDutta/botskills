@@ -14,7 +14,7 @@ deserves an essay. So here is the table, then the parts that are actually
 interesting: what the phone app can and cannot do, why there is no Linux client
 on a product whose bots live on Linux, and what to do about it today.
 
-## Which platforms are supported today
+## Check your machine against the supported list first
 
 | Platform | Supported | Notes |
 |---|---|---|
@@ -36,6 +36,30 @@ If you are on macOS or Windows, you are done reading the compatibility section.
 Everyone else, keep going, because the situation is more workable than the
 table suggests.
 
+## Match where the work happens to what your machine has to do
+
+The supported list answers "can I install it". The more useful question is what
+your machine is actually needed for, because the answer is smaller than people
+assume and it changes which workaround is worth the effort.
+
+| The thing | Where it happens | What your own machine must be |
+|---|---|---|
+| The bot's browsing, file work, and command line | The persistent cloud computer, a managed Linux VM | Nothing. It continues with your laptop shut |
+| Creating and editing routines | A desktop client | macOS or Windows |
+| Testing a routine before you trust it | A desktop client | macOS or Windows |
+| Reading a routine's run history | A desktop client | macOS or Windows |
+| Teaching by demonstration | Your own browser session, recorded | macOS or Windows, browser workflows only |
+| Pausing and resuming a routine | Either client | Anything supported, iPhone included |
+| Deleting a routine | A desktop client | macOS or Windows |
+
+The first row is the one worth internalising. The bot's work is not happening on
+your hardware, which is why this is a question about access rather than about
+horsepower.
+
+Every other row lands on a desktop, and notice which rows those are: create,
+test, read history, delete. That is not occasional admin, it is the entire build
+and review loop. The phone covers exactly one row.
+
 ## Windows is a first-class desktop, on both architectures
 
 Windows gets the full client on x64 and on Arm64. The second one is worth
@@ -47,7 +71,7 @@ There is no documented feature split between the macOS and Windows clients.
 Treat them as the same product for planning purposes, and if you hit a
 difference in practice, that is a bug report rather than an expected limit.
 
-## The Linux irony
+## The computer your bots use is Linux, and your desktop cannot be
 
 Here is the part that makes people laugh and then swear. The computer your bots
 actually work on is a managed Linux virtual machine, with the bot running on it
@@ -73,7 +97,7 @@ job. That reframes the Linux problem. You are not looking for a way to run a
 heavy runtime on Linux. You are looking for any supported screen from which to
 configure and watch.
 
-## What the iPhone app can and cannot do
+## Treat the iPhone app as a stop button, not a pocket desktop
 
 The mobile app is far more limited than "there is an iOS app" implies, and the
 limits are specific enough to design around.
@@ -99,7 +123,7 @@ So the phone is a stop button. That is genuinely useful and it is not a
 substitute for a computer. You cannot build a bot from your phone, you cannot
 check what one did from your phone, and you cannot delete one from your phone.
 
-## The design consequence of a stop-only phone
+## Let the phone's limits decide what your bots are allowed to do
 
 Follow that through and it becomes a rule about what your bots are allowed to
 do, not just a note about app features.
@@ -126,7 +150,7 @@ at every 2FA prompt and captcha rather than trying to get past one, which is
 exactly the behaviour you want from a bot that runs while you are travelling and
 cannot open a laptop.
 
-## If you are on Linux today, your real options
+## Rank the Linux workarounds by how well they hold up
 
 In rough order of how well they work.
 
@@ -150,7 +174,39 @@ button for routines you have no way to create.
 
 **Wait.** A legitimate answer, covered below.
 
-## Android and iPad: what to actually do
+## Drive a supported client remotely from the machine you actually use
+
+The list above quietly assumes you have to sit in front of the supported
+machine. You do not, and that distinction is the one most write-ups miss. There
+is a difference between owning a second computer and reaching one.
+
+If your Linux desktop is where you work, a Windows or macOS box somewhere else
+on your network, driven over remote desktop or screen sharing, gives you the
+full client without giving up your environment. You keep your window manager,
+your shell, and your keyboard, and the supported client is one window among the
+rest. None of this is a documented or supported configuration, so treat the
+table below as a method to test rather than a promise.
+
+| Option | What it gets you | What it costs | Where it falls down |
+|---|---|---|---|
+| Old laptop on the desk, used directly | The full client, permanently | A machine you probably already own | Desk space, and a second keyboard |
+| Mini PC in a cupboard, over remote desktop | Full client, driven from Linux | A small always-on box plus setup | Your remote desktop tool has to be pleasant enough for real work |
+| A work-issued Windows or macOS laptop | Free, already in your bag | Nothing | Policy. Read it before you install anything |
+| A hosted Windows desktop | No hardware at all | A recurring bill on top of the subscription | Undocumented, untested, and another vendor in the chain |
+| Windows in a VM or dual boot | No second machine | An afternoon, plus a licence | Undocumented. Test on a trial before committing |
+| An iPhone as the only device | A pause button | Nothing | Everything else. Not viable |
+
+Two things make remote access work better here than it would for most desktop
+software. The heavy work is on the cloud computer, so you are not pushing large
+files or long-running jobs across the link. And the browser sessions your bots
+depend on live on that cloud machine too, not on the box you are remoting into,
+so nothing you care about is trapped behind the remote session.
+
+The honest caveat: we have not benchmarked the client, and none of this appears
+in the documentation. Run a trial before you buy hardware for it, and start with
+the machine you already have rather than the one you would enjoy buying.
+
+## Solve Android and iPad by getting one supported desktop
 
 Android has no app and there is no documented alternative path. iPad is listed
 as unsupported alongside Linux desktop and Android. You will find suggestions
@@ -162,7 +218,7 @@ For both, the practical answer is the same as for Linux: the phone or tablet is
 not the problem to solve. Get one supported desktop and the mobile situation
 becomes a convenience question rather than a blocker.
 
-## Who should wait
+## Wait if you are in one of these four situations
 
 An honest list, because the workarounds above are not free.
 
@@ -178,6 +234,68 @@ An honest list, because the workarounds above are not free.
 - **Your workspace uses Privacy Mode (Legacy).** It blocks Grok Bot entirely, so
   no client on any platform will help until that changes. Check this before you
   spend an afternoon on setup.
+
+## Run five checks before you build a week around this
+
+The compatibility table is the first gate and not the only one. Four of these
+five have nothing to do with your operating system, and every one of them can
+fail after you have already installed a client.
+
+| Check | How to run it | What a failure means |
+|---|---|---|
+| Your workspace is not on Privacy Mode (Legacy) | Ask your admin, or look at the workspace setting | Grok Bot is blocked entirely. No client on any platform helps |
+| Your subscription actually includes Grok Bot | Compare your plan against the eligible list | The hardware question is moot until the plan changes |
+| The client runs on the machine you intend to use | Install it and create one throwaway routine | Your control surface plan needs different hardware |
+| Pausing from the iPhone really stops a run | Start a slow routine, pause it from the phone, watch | Your only remote lever is untested. Tighten the boundary instead |
+| The sites your bot needs will accept its traffic | Run one routine against the real target site | Static egress IPs, and some services flag datacenter addresses |
+
+The eligibility row catches more people than the platform table does. Access is
+tied to specific plans rather than to having an account: SuperGrok Plus and
+SuperGrok Heavy on one side, and Cursor Pro+, Ultra, and the Cursor Teams plans
+on the other, with the entry Cursor tiers not included
+([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). Buying a laptop before
+checking that line is an expensive way to discover it.
+
+The last row is the one nobody tests deliberately, and it fails quietly. The
+cloud computer browses from static egress IPs, and some services flag datacenter
+addresses
+([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)). If
+the one site your whole bot depends on is such a service, no amount of platform
+planning saves the idea, and you would rather learn that in ten minutes than in
+week three.
+
+## The platform list matters less than it looks, and here is where that is wrong
+
+The strongest argument against everything above goes like this. The work happens
+on a cloud machine. The client is a control surface. A control surface is a
+small thing to ship, the supported list has moved before, and building your life
+around today's list is planning against a snapshot.
+
+That argument is partly right, and it is worth saying so. The list is a product
+decision rather than a technical limit, and betting hardware money against it is
+a bad bet. If your answer is to wait, you are not being timid.
+
+Three things stop it being a formality today.
+
+The build and review loop is desktop only. Creating, editing, testing, reading
+run history, and deleting are all desktop actions, so without a supported
+desktop you do not have a slow version of the product, you have a pause button.
+
+There is no audit view of bot actions yet
+([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)), so
+the run history on a desktop client is the closest thing you have to a record.
+Being away from a desktop is not just inconvenient, it is a period you cannot
+reconstruct afterwards.
+
+And an approval controls the proposed action rather than reversing work already
+completed
+([approvals, security and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)).
+Time spent away from a supported machine is therefore time when your only
+available response to a bad run is a pause that does not undo anything.
+
+So hold both positions. Do not buy hardware you would not otherwise want, and do
+design your bots for the constraint as it exists this week rather than the one
+you hope ships next quarter.
 
 ## A charter for a stop-only remote control
 
@@ -215,6 +333,8 @@ should leave running are the ones where stopping late costs you nothing. That
 is a smaller class of bot than most people start with, and it is the class that
 still works six months in. What a full roster built on that principle looks like
 is in [the one-person company guide](/blog/one-person-company-grok-bot).
+
+**Keep reading:** [Grok Bot Permissions Explained](/blog/grok-bot-permissions-explained), [Grok Bot Prompts That Actually Work](/blog/grok-bot-prompts-that-work), [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers).
 
 ## Frequently Asked Questions
 

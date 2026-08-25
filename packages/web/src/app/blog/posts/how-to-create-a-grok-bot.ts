@@ -61,6 +61,12 @@ boundaries you have not decided, and a bot with undecided boundaries will drift
 into whatever the last message asked for. If the name would look strange in a
 list of job titles, go back to step one.
 
+There is a second reason the name matters that only shows up later. Every bot
+on an account shares one cloud computer, so when you have five bots and
+something unexpected appears in a file or a browser session, the only thing
+that tells you which bot to look at is whether its name predicts its scope.
+"Assistant 2" tells you nothing at the exact moment you need to know something.
+
 Two working examples of the naming discipline in the botskills.sh catalog: the
 [inbox triage bot](/bots/inbox-triage) sorts and drafts and does nothing else,
 and the [standup scribe bot](/bots/standup-scribe) writes the update and posts
@@ -99,8 +105,47 @@ stop. Do not draft it.
 \`\`\`
 
 The first two blocks are the job description. The third is quality control,
-and it is where most first drafts are too vague to be useful. "Be concise" does
-nothing. "Under 120 words" is a rule the bot can follow and you can check.
+and it is where most first drafts are too vague to be useful. The fourth is the
+one clause that lets you leave the bot running.
+
+One clarification worth making now if you arrived here from a coding agent.
+The charter is plain instruction text you paste into the bot, not a file the
+runtime discovers on disk. Grok Build, the coding product, reads Claude Code
+marketplaces, plugins, skills, MCP configuration, and CLAUDE.md files with no
+setup. Grok Bot is a different product and its documentation never mentions any
+of those files. Conflating the two is the single most common mistake in this
+topic, and [what Grok actually does with Claude Code
+skills](/blog/grok-bot-claude-code-skills-compatibility) sorts out which
+behaviour belongs to which product.
+
+## Make the quality block countable or it does nothing
+
+This is the block that decides whether you are still running the bot in three
+weeks, and almost every first draft of it is a list of adjectives.
+
+The test is mechanical. Read each line and ask whether you could mark it pass
+or fail from the output alone, without knowing what you meant. If you cannot,
+the bot cannot either.
+
+| Vague line people write | What it becomes when it is checkable |
+|---|---|
+| "Be concise" | "Drafts are under 120 words" |
+| "Sound like me" | "No greeting longer than one line. Never open with 'I hope this finds you well'" |
+| "Prioritize what matters" | "The three REPLY items in priority order, most time-sensitive first" |
+| "Do not make things up" | "If a message needs a fact you do not have, say what is missing instead of inventing it" |
+| "Give me a good summary" | "Counts per bucket, then three items, then anything unclassified with the reason" |
+| "Handle edge cases sensibly" | "Anything you could not classify goes in its own section with a one-word reason" |
+
+The right column has a property the left column does not: every line can be
+violated. A rule that cannot be broken is not a rule, it is a mood, and a bot
+given a mood will produce output you feel vaguely unhappy with and cannot
+correct.
+
+There is a shortcut for finding these. Take last week's version of the work
+that you did by hand, and write down the three things you would change about a
+new hire's attempt at it. Those three sentences, made countable, are your
+quality block. A wider catalogue of the phrasings that survive real weeks is in
+[the prompt patterns reference](/blog/grok-bot-prompts-that-work).
 
 ## Step 4: Pick exactly one trigger
 
@@ -123,9 +168,17 @@ wrong you will not know which path produced it. Start with a schedule. Schedules
 are easier to reason about, easier to pause, and they produce a tidy run
 history you can read down like a log.
 
+Know how much of that log you get to keep. A routine retains only its 20 most
+recent run records, so a daily bot holds about four weeks of evidence and an
+hourly one loses today's earliest runs before the afternoon. If a run needs to
+be recoverable later, the charter has to write it somewhere you own rather than
+rely on the platform's history.
+
 One detail worth setting deliberately: what happens on failure. A bot that
 skips silently teaches you it is working when it is not. Make failure loud in
-the charter, because the runtime will not do it for you.
+the charter, because the runtime will not do it for you. The full comparison of
+schedule and event behaviour is in [routines versus
+triggers](/blog/grok-bot-routines-vs-triggers).
 
 ## Step 5: Write the stop line before you write anything clever
 
@@ -147,6 +200,15 @@ A bot that has to ask about everything is useless. A bot that never asks is
 dangerous. The stop line is where you settle that trade once, calmly, instead
 of relitigating it at 11pm when something strange has already gone out.
 
+Two things people expect to do this job for them and which do not. Creating a
+second, more careful bot is not isolation: all bots on an account share one
+cloud computer, its files, and its browser sessions, and xAI's documentation
+says plainly that separate bots are not a security boundary. And an approval
+prompt is not an undo: it governs the action being proposed, and it does not
+reverse work already completed. The stop line is the control that operates
+before either of those matters. [The case for a boundary
+line](/blog/grok-bot-boundaries) is the longer version of this argument.
+
 ## Step 6: Run it once by hand and read the output like a manager
 
 Before you let the schedule fire, trigger the bot manually and read the first
@@ -162,6 +224,40 @@ output as if a new hire produced it. You are checking four things:
 The fourth row is the real test. A draft you have to rewrite is a draft you may
 as well have written. When the answer is no, the fix is almost always in the
 "what good looks like" block, and almost never in the model.
+
+The third row is the one people misread. Zero skips on the first run is not a
+clean sheet, it is a warning. Any real inbox contains messages that are
+genuinely ambiguous, so a bot that classified every single one of them either
+guessed or quietly applied a rule you never wrote.
+
+## Prove the stop line holds instead of assuming it
+
+A boundary you have never tested is a sentence, not a control. On day one,
+before the schedule takes over, run one check that is capable of failing.
+
+\`\`\`text
+Two questions, answer both directly and change nothing.
+
+1. Quote your stop line back to me verbatim.
+2. If I asked you right now to send the top REPLY draft, what would you
+   do? Answer with the action you would take, not with what you should do.
+
+Then list every action you took during your last run that touched
+anything outside this workspace, with a link for each. If there were
+none, say "none".
+\`\`\`
+
+Two answers count as a pass: the bot quotes the line accurately, and it says it
+would decline and park the draft. Anything hedged, anything that offers to send
+"if you confirm", tells you the line is in the charter but not in force, and
+that is a charter problem you fix now rather than discover on a Thursday.
+
+Then verify by search rather than by question. Look in your sent folder, your
+trash, and any shared channel over the window the bot ran in. Asking a bot what
+it did and searching for what it did are different classes of evidence, and
+only the second one survives a bot that misunderstood its own charter. Once you
+have more than one bot, [the full test routine](/blog/testing-your-bot) covers
+running these checks against a copy rather than the live setup.
 
 ## Step 7: Correct in the charter, never in chat
 
@@ -188,6 +284,125 @@ After two weeks that changelog is the most valuable part of the file, because
 it is a record of exactly where your judgment differs from the default, which
 is the thing you will want when you create your second bot.
 
+## The seven decisions, and what each one costs if you skip it
+
+Here is the whole walkthrough as one table. The right column is the useful one:
+skipping a step does not produce an error message, it produces a specific
+disappointment three weeks later.
+
+| Decision | The wrong-but-tempting answer | What skipping it costs |
+|---|---|---|
+| What it owns | "Everything about my inbox" | A bot with no definition of done, so no run is ever wrong or right |
+| The name | "Assistant" | Scope drifts toward whatever you asked for most recently |
+| The four blocks | One paragraph of prose | Output shape changes week to week and you cannot say why |
+| The quality bar | "Be helpful and concise" | Nothing to correct against, so every fix is a fresh opinion |
+| One trigger | A schedule and an event | Two behaviours under one name, and no way to tell which ran |
+| The stop line | "It will not do anything bad" | The one irreversible action nobody named is the one it takes |
+| Where corrections live | The chat thread | The same mistake every few days, forever |
+
+Row four and row seven cause most abandonments. Neither announces itself: a bot
+with a vague quality bar and chat-only corrections works acceptably for about
+nine days and then quietly stops being worth the review time.
+
+## Watch one charter change over its first month
+
+Here is the Inbox Triage bot above, followed from its first run to day thirty,
+because the charter you write on day one is never the one that works.
+
+**Day one.** It reports 61 messages: 12 REPLY, 20 READ, 29 IGNORE, 0
+unclassified. That zero is the first thing to distrust, and the drafts are
+polite and slightly generic. You read four and rewrite three.
+
+**Three corrections, each triggered by a specific run.**
+
+\`\`\`text
+// WHAT GOOD LOOKS LIKE  (revised day 3)
+Every draft answers the question actually asked in the first sentence.
+No draft restates the incoming message back to the sender.
+
+// WHAT YOU OWN  (revised day 6)
+Anything you cannot place in one bucket with confidence goes to a fourth
+bucket, UNCLEAR, with a one-word reason. Do not force a bucket.
+
+// WHERE YOU STOP  (added day 14)
+Never draft a reply to a thread with more than four participants.
+Summarize it under NEEDS ME instead.
+\`\`\`
+
+**Day thirty.** It reports 58 messages: 9 REPLY, 22 READ, 24 IGNORE, 3 UNCLEAR.
+You read three drafts and send all three unchanged.
+
+| Signal | Day one | Day thirty | What changed |
+|---|---|---|---|
+| Unclassified items surfaced | 0 | 3 | The bot stopped forcing a bucket to look decisive |
+| Drafts rewritten | 3 of the 4 read | 0 of the 3 read | The quality block acquired testable sentences |
+| Minutes spent on the inbox | 22 | 7 | Review moved from rewriting to approving |
+| Lines in the charter | 17 | 23 | Six pieces of judgment that used to be re-explained weekly |
+
+The last row is the actual output of the month. The drafts were disposable; the
+23-line file is not, and it is what makes the second bot take twenty minutes
+instead of a week.
+
+## Five ways a new bot goes wrong in week one
+
+These are charter faults, not platform faults, and each has a distinct
+signature in the output.
+
+| What you see | What is actually wrong | The edit |
+|---|---|---|
+| Every item classified, nothing ever unclear | No bucket exists for ambiguity, so it guesses to look decisive | Add an UNCLEAR bucket and require a reason |
+| Drafts read well but answer the wrong question | The quality block describes tone but never content | Require the first sentence to answer the question asked |
+| The bot summarizes what it intended to do | You asked for a summary, not for evidence | Require a link, message ID, or file path per claim |
+| Output shape changes between runs | The format block is prose that reads like guidance | Rewrite it as a numbered list of named sections |
+| It did something adjacent to its job, not in it | The owned work is described broadly and the stop line names no verb | Narrow the owned work, then name the irreversible verb |
+
+Row one is the most under-diagnosed. A bot that never reports uncertainty is
+not more capable than one that does, it is less honest, and the difference only
+becomes visible when a confidently misfiled message turns out to have mattered.
+
+## The objection: this is a lot of structure for one prompt
+
+The honest counter-argument is that people create useful bots all the time by
+pasting three sentences and setting a schedule, and seven steps looks like
+process for its own sake.
+
+That objection is right in two cases. If the job is genuinely simple and
+entirely reversible, such as summarizing a podcast queue into a note only you
+read, three sentences will do and the ceremony buys you nothing. And if you are
+still deciding whether bots are useful at all, a quick disposable bot is a
+better experiment than a careful one, because the point of that first attempt
+is information, not reliability.
+
+It stops being right the moment the bot touches something you would not want a
+stranger touching, or the moment you plan to stop reading every output. Both of
+those are thresholds rather than gradual slopes. The seven steps are not a
+quality ritual, they are the minimum needed to make a bot's behaviour
+predictable without supervision, and predictability is the only thing that
+makes unattended running acceptable.
+
+The middle path is real: create the disposable version first, run it for two
+days, and use what annoys you as the raw material for the proper charter. That
+is faster than designing from theory and it produces a better quality block,
+because your corrections come from real output rather than from imagination.
+
+## Where the seven steps do not fit the job
+
+Three kinds of work where this walkthrough is the wrong tool.
+
+**One-off work.** If you will run it twice, write a prompt. A charter earns its
+cost through correction cycles, and two runs give you none.
+
+**Work with no stable definition of good.** Positioning, pricing, and hiring
+judgment fail the checkable test on purpose, because you are still forming the
+opinion the quality block would have to encode. A bot can gather inputs for
+those decisions; it cannot own them yet.
+
+**Work that must not be delegated even when it succeeds.** A difficult customer
+conversation is the product in that moment. A bot can build the context packet,
+and that packet is genuinely useful, but the conversation is not a task to
+route away. The clean way to draw that split is covered in [designing the
+handoff to a human](/blog/bot-handoff-to-human).
+
 ## What to create second
 
 Wait until the first bot has run clean for five consecutive days. Then pick a
@@ -202,6 +417,8 @@ own, the [25 Grok bot examples](/blog/grok-bot-examples) are organized by job
 with each one's stop line already written. If you want to sharpen the charter
 itself, the [prompt patterns reference](/blog/grok-bot-prompts-that-work) is a
 list of the shapes that reliably survive a real week.
+
+**Keep reading:** [The Chief of Staff Bot](/blog/grok-bot-chief-of-staff-setup), [Your First Week With Grok Bot](/blog/grok-bot-first-week), [The Charter Template](/blog/grok-bot-starter-charter-template).
 
 ## Frequently Asked Questions
 

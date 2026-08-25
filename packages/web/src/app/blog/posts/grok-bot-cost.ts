@@ -16,7 +16,7 @@ eighty eight times a day and reading a large page each time.
 That is a usage shape problem, not a pricing problem, and it is the part you
 can actually control.
 
-## Why this article has no price list
+## Get today's price from the vendor, never from an article
 
 Rates change. Plans get renamed, limits get raised, promotional tiers appear
 and vanish, and a number written into an article in August is a liability by
@@ -38,7 +38,7 @@ underneath.
 That arithmetic is what this article is about, because it is stable even when
 the rates are not.
 
-## The five things that actually move your bill
+## Trace every unit of cost back to one of five inputs
 
 Every unit of cost in a bot setup traces back to one of five inputs. Learn
 these and you can estimate any setup on the back of an envelope.
@@ -72,7 +72,32 @@ reason to know which of your bots eat them.
 | Long documents | Full transcripts, PDFs, exports | Summarize once, store the summary, reuse it |
 | Output length | "Write a full report" every run | Ask for five lines, expand on request |
 
-## Why every five minutes is the most expensive mistake
+## Frequency multiplies, scope adds, and that difference decides the bill
+
+The five drivers are not equal, and treating them as a flat list is why people
+tune the wrong one. Two multiply. The other three add inside the multiplier.
+
+An additive lever changes what one run costs. A multiplicative lever changes how
+many times you pay for it. Halving your context file is a real saving applied to
+a schedule you never questioned.
+
+| Lever | What it does to the bill | Multiplies or adds | The ceiling to write down |
+|---|---|---|---|
+| Run frequency | Scales every other input at once | Multiplies everything | A fixed clock, plus "never more than once per hour" |
+| Retry rate | Scales the failing runs, without a limit | Multiplies a subset | "Retry twice, then stop and report" |
+| Sources per run | One fetch each, then times the clock | Adds inside the multiplier | "Read at most 5 sources, highest priority first" |
+| Context or memory file | Charged on every run, forever, silently | Adds inside the multiplier | A hard line count, pruned monthly |
+| Output length | Charged on write, and again as carried context | Adds inside the multiplier | "5 lines by default, long version on request" |
+| Document length | One item can outweigh a month of runs | Adds, effectively unbounded | "Over 20 pages, summary and tables only" |
+
+So fix the multipliers first: set the clock, then set the retry ceiling. Only
+then prune the context file or cap the report, because those edits are now
+landing on a number of runs you chose on purpose.
+
+Document length is the exception. It is additive but has no natural ceiling, so
+one long PDF can outweigh everything else you did that week. Cap it early.
+
+## Treat the schedule dropdown as the most expensive field in the form
 
 Frequency multiplies everything else, so a schedule chosen without thinking is
 the fastest way to a bill you cannot explain. Hold the work per run constant
@@ -106,7 +131,32 @@ schedule. An event trigger runs when something happens, so it costs in
 proportion to real activity. A five minute poll costs the same on a dead
 Sunday as it does during a launch.
 
-## A worked estimate you fill in yourself
+## Pick the cadence from how fast the answer goes stale
+
+"How often do I want this" is the wrong question, because the honest answer is
+always "constantly". Ask how long the answer stays true instead. Slower than
+that and you are working from stale information. Faster and you are paying to
+re-derive an answer that has not moved.
+
+| The work | The answer stays true for | Cadence to pick | What a faster clock buys |
+|---|---|---|---|
+| Competitor pricing pages | Days | Once a day | Nothing. You will not reprice at 3am |
+| Inbox triage and reply drafting | Hours | Twice a weekday | A shorter queue, at 12x the runs |
+| Morning brief from calendar and mail | One day | Once, before you start | A second brief you will not open |
+| Long transcript or PDF summary | Forever, the item is fixed | Once per item, never scheduled | Repeat payment for identical output |
+| Deploy or incident watch | Seconds | Event trigger, never a poll | Real value. Polling this is the worst case |
+
+Two rows go wrong in opposite directions. The transcript never changes, so any
+schedule at all pays repeatedly for a fixed answer. The incident row is where
+people reach for a two minute poll to do what an event trigger covers in a
+fraction of the runs.
+
+When you cannot tell, start one step slower and let the misses teach you. A
+daily bot that should run twice a day announces itself in a week, because you
+catch yourself checking the source in the afternoon. A fifteen minute bot that
+should run daily announces itself on the invoice.
+
+## Estimate with a formula whose every term you can measure
 
 Here is the formula. Every symbol is something you can measure in an
 afternoon, and none of them are prices.
@@ -148,6 +198,39 @@ real per-run figure for your actual charter and your actual data. Multiply
 that by the schedule you are considering. Estimating from someone else's
 numbers is guessing. Estimating from three days of your own is arithmetic.
 
+## Run the model once on a real bot before you build three
+
+The formula is worthless until your own numbers are in it once. Spend an hour on
+your first bot and every bot after that takes five minutes. Here is the exercise
+on an inbox triage bot, the most common first hire and a usefully awkward cost
+shape.
+
+| Term | Where the number comes from | What the measurement gave |
+|---|---|---|
+| R, runs per day | The schedule you are weighing | 2 on weekdays, so 44 a month |
+| C, charter | Fixed, unchanged run to run | 310 words |
+| M, memory or context | The file it rereads at startup | 900 words, plus 200 a week |
+| F, fetched material | What it actually pulled in | 40 subject lines, 6 full bodies |
+| O, output | The report it wrote | 5 lines, capped by the charter |
+| Y, retry rate | Failed runs over total, across 3 days | 1 in 12, so 0.08 |
+
+Three things jump out before you multiply anything.
+
+M is growing and nobody decided that. At two hundred words a week the context
+file doubles in a month, and it is charged on every run. Prune it monthly or cap
+it.
+
+F is the largest term and the only one that varies with the world rather than
+your settings. Forty subject lines is the mailbox. Six opened bodies is a choice
+the bot made, so the lever is the filter, not the clock.
+
+Y at 0.08 is fine and worth watching. At 0.3 you are paying for a third more
+runs than you scheduled, and the cause is almost always a login that quietly
+expired rather than anything you changed.
+
+That is the whole value of doing this once. You are not computing a bill, you
+are finding which of the six terms on your own list is actually large.
+
 ## Write the budget into the charter
 
 Cost limits belong in the setup, in the same place as every other limit,
@@ -181,7 +264,33 @@ The failure clause is the one people skip and then pay for. A bot without an
 explicit retry ceiling can burn an entire day of budget on one broken login,
 and it will do it politely, reporting that it is still trying.
 
-## Where solo operators actually overspend
+## Your bill is a step, not a slope
+
+On a hosted runtime the arithmetic does not turn into money in a straight line.
+Grok Bot subscriptions come with a weekly usage allowance, and anything past it
+is served on demand and billed from the model and token cost
+([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). There is a flat region and
+then a sloped one, and the interesting week is the one where you cross.
+
+Under the allowance, halving a schedule changes your invoice by nothing. Over
+it, the same edit is the whole saving. What crosses you is correlated demand: a
+launch week or a support incident makes the inbox bot, the research bot, and the
+digest bot all read more on the same days. Each one stayed inside its normal
+range. Together they crossed.
+
+Two facts belong next to that. There is no Grok Bot specific spend cap as of
+writing
+([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)), so
+no setting in the product will stop a runaway for you. And there is no model
+picker for members or admins, with billing following whichever model actually
+served the request, per the same page, so downgrading to a cheaper model is a
+lever you do not have.
+
+That leaves three controls: how often it runs, how much it reads, and how much
+it writes. Which is why the charter clauses above are not a nice-to-have. They
+are the ceiling, because nothing else in the stack provides one.
+
+## Audit the four places solo operators reliably leak usage
 
 **Duplicated reading.** Three bots that each read the same newsletter every
 morning. Have one read it, write a short digest to a shared file, and let the
@@ -203,6 +312,95 @@ what [the Bot Advisor setup](/bots/bot-advisor) is for, and its boundary is
 the right one for the job: it never deletes or rewrites another bot without
 your explicit say-so.
 
+## The bot that works and nobody reads is your most expensive one
+
+There are two ways a bot wastes money, and the cheap one is what everybody
+worries about. A broken bot is loud: it fails, you notice within days, you fix
+it or delete it.
+
+The expensive failure runs correctly, produces accurate output on schedule, and
+changes nothing you do. Nothing about it looks wrong, so it survives for months.
+Every run is charged, every report is filed, and the value is zero.
+
+Measure usage per decision changed, not per run. Decide the rule in advance so
+the count stays honest: a changed decision is a message you sent, a call you
+made, a task you dropped, a price you went back to look at. Reading the output
+and thinking "good, nothing to do" does not count. That may be worth something
+as reassurance, but price it as reassurance.
+
+Count over four weeks and put each bot in a row.
+
+| What four weeks showed | What it means | What to do about it |
+|---|---|---|
+| Changed a decision most days it ran | Earning its usage comfortably | Leave it. Consider widening its scope |
+| Changed a decision 3 to 8 times | Real value, wrong cadence | Halve the frequency, change nothing else |
+| Changed a decision once or twice | The value is event-shaped, not scheduled | Convert to an event trigger, or run it on demand |
+| Changed nothing, output was correct | Working and worthless | Delete it. Tuning cannot fix a job you do not need |
+| Changed nothing, output was also wrong | Broken, and cheap to have found out | Fix or delete now, do not leave it running |
+
+The fourth row stings, because it usually holds a bot you were proud of.
+Deleting a correct bot feels like throwing away work. It is not: the work was
+learning the shape of the job, and that part stays with you.
+
+## Work backwards from the usage screen to the cause
+
+When the number is higher than you expected, the temptation is to turn
+everything down at once. Do the opposite: read the pattern first, because the
+pattern names the cause.
+
+| What the usage screen shows | Likely cause | How to confirm it | The fix |
+|---|---|---|---|
+| Flat every day, weekends included | A schedule with no weekday rule | Compare a Saturday against a Wednesday | Add "do not run on weekends" |
+| One bot is most of the total | It reads a long document each run | Look at what it fetched, not how often | Summarize once, store it, reuse it |
+| Climbing weekly, schedule unchanged | A context or memory file growing | Check its length against last month | Prune to a hard line count monthly |
+| One day is many times the others | A retry loop on a broken login or captcha | Look for repeated identical runs | Retry ceiling of two, then report |
+| Steady usage, output stopped helping | Scope drift, which is not a cost problem | Read the last five reports end to end | Rewrite the charter, not the schedule |
+
+The last row matters because it is the one where cost tuning is the wrong tool
+entirely. A bot that has drifted is not overpriced, it is misaimed, and turning
+its frequency down just buys you less of the wrong thing.
+
+## Prove the tuning worked with a number you wrote down first
+
+Every cost change is an experiment, and an experiment without a recorded before
+value is a guess about whether the last three edits helped.
+
+Write down average daily usage over the last full week, quiet days included.
+Change exactly one lever. Wait a full week rather than three days, because a
+week contains the weekend and the Monday spike. Then compare.
+
+The check that can actually fail is the second one, and most people skip it: ask
+what the change cost you in usefulness. Does the skip ledger now contain things
+you wanted? Have you started opening the source yourself? If usage fell by half
+and you now check that source manually twice a week, you saved nothing. You
+moved the cost onto your afternoon, which is the more expensive account.
+
+A change that survives both checks is permanent. One that fails the second gets
+reverted, and the real answer is usually a narrower scope at the original
+cadence rather than the same scope run less often.
+
+## The strongest argument against tuning any of this
+
+Here is the honest objection. For a solo operator running three or four bots on
+daily schedules, none of this may ever reach an invoice. Usage sits inside the
+included allowance every week, the arithmetic is academic, and the afternoon
+spent optimising it returns nothing. A fifth bot would have been worth more.
+
+The objection wins under four conditions together: a small roster, no schedule
+tighter than hourly, no bot that reads long documents, and an allowance you have
+never crossed. If all four hold, stop reading and go build something.
+
+It stops winning the moment one of them breaks, and they break quietly: the
+roster grows past eight bots because each one seemed free, a schedule gets
+tightened during a busy week and never loosened, a research bot starts being
+handed PDFs, a login expires and the retry loop finds it at 2am.
+
+So split tuning from insurance. Tuning is optional and often not worth the hour.
+Insurance is two clauses and four minutes, worth writing even if the objection
+holds completely: a retry ceiling, and a boundary against initiating any spend.
+Those stop the runaway rather than the drift, and the runaway is the only
+version of this that produces a number nobody predicted.
+
 ## Cost control and the boundary are the same line
 
 The boundary field on every botskills.sh listing exists for safety, but it
@@ -217,6 +415,8 @@ on the invoice, and the asking costs you one line in a morning summary.
 Note that this is separate from usage cost, which accrues just by running. The
 boundary stops discretionary spend. The schedule and scope clauses stop the
 rest. You want both, and the charter above has both.
+
+**Keep reading:** [Grok Bot vs Lindy](/blog/grok-bot-vs-lindy), [Grok Bot vs Make](/blog/grok-bot-vs-make), [Grok Bot vs n8n](/blog/grok-bot-vs-n8n).
 
 ## Frequently Asked Questions
 

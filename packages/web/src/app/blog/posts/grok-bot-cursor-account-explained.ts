@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Why Grok Bot Needs a Cursor Account and Every Way To Get Access',
+  title: 'Why Grok Bot Needs a Cursor Account, and How To Get Access',
   description:
     'Grok Bot Cursor account confusion, settled: the real ownership chain, every eligible plan priced and dated, and the $60 path most published guides still miss.',
   date: '2026-08-25',
   category: 'Guide',
   content: `
-# Why Grok Bot Needs a Cursor Account and Every Way To Get Access
+# Why Grok Bot Needs a Cursor Account, and How To Get Access
 
 You went to try Grok Bot and it asked you to sign in with Cursor, a code
 editor you may have never opened. Then you checked a guide, saw a number like
@@ -94,6 +94,72 @@ not published anywhere primary at the time of writing. You will find confident
 figures for it in circulating articles. Do not plan a budget on those, and do
 not repeat them. Check [x.ai/pricing](https://x.ai/pricing) directly.
 
+## What an eligible tier buys beyond the door being open
+
+The natural next question is what a $200 plan gets you that a $60 plan does
+not, in bot terms. The honest answer is that for Grok Bot itself, the
+differences people assume exist mostly do not, and the ones that do exist are
+not published as numbers.
+
+Editor-side benefits do differ between Cursor tiers, and this page is not going
+to quote them, because they are not the subject and they move faster than an
+article can. What follows is the Grok Bot side, where every row is documented.
+
+| What buyers expect to vary by tier | Does it? | The documented position |
+|---|---|---|
+| Which model your bots run | No | "Grok Bot has no model picker, for members or admins. We do not plan to allow admin or user choice." Fixed set per surface with automatic failover |
+| A spend cap or budget limit | No | "There is no Grok Bot-specific spend cap yet" |
+| How much work is included | Yes, but no figure is published | Subscriptions include a weekly usage allowance; overflow is on-demand, billed from model and token cost |
+| Isolation between your bots | No | One persistent cloud computer per account, one screen per bot, cookies and credentials shared |
+| Which devices you can use | No | macOS on Apple silicon and Intel, Windows on x64 and Arm64, iPhone on iOS 18+. No Linux desktop, Android, or iPad |
+| An audit trail of what a bot did | No | An audit view of Bot actions does not exist yet, on any plan |
+| Team control over local execution | Not yet | Documented as coming: Never, Ask every time, or Always, where members may choose stricter but not looser |
+| An admin kill switch | Not yet | Documented as coming: Kill deletes the VM, durable storage is kept |
+
+Two more facts belong in the same picture. Privacy Mode (Legacy) blocks Grok
+Bot entirely, which is a setting rather than a plan, so no upgrade fixes it.
+And the machine your bots run on is a managed Linux VM where the bot runs as a
+non-root user, with static egress IPs, which matters because some services
+flag datacenter IP addresses and will challenge a bot that a human would sail
+past.
+
+What genuinely differs, then, is seats and the administrative surface around
+them, plus whatever allowance each plan carries. The rest of the list is the
+same product on every tier. If you are choosing between Pro+ and Ultra purely
+to get a better bot, you are choosing on a difference that is not documented to
+exist.
+
+## Why the licensing runs through Cursor at all
+
+The shared-owner fact explains that it is possible. It does not explain why
+they built it this way, and the why is useful because it tells you what the
+Cursor account actually is.
+
+Grok Bot needs three things before it can run anything for you: an identity,
+an entitlement check against that identity, and a billing relationship for
+work beyond the included allowance. Cursor already operated all three at scale
+for a paying subscriber base. Building a second one inside xAI would have meant
+two identity systems for one parent company, three days before the acquisition
+that made them siblings even closed.
+
+There is a documented detail that shows this is an architectural choice rather
+than a checkout convenience. Hosted MCP sign-in tokens stay with Cursor's
+backend and are never stored on the computer your bots use. The credentials for
+hosted integrations live on the account side, deliberately kept off the shared
+machine. That is a trust boundary decision, and it puts Cursor's backend on the
+authoritative side of it.
+
+Two more behaviours only make sense if one system can see both entitlements at
+once. The trial is documented as one-time for an individual, which requires a
+durable identity rather than a fresh email address. And when you hold both a
+Cursor and a SuperGrok subscription, Grok Bot uses whichever has more usage,
+which requires a single place that can read both balances and choose.
+
+The practical takeaway is small but worth stating plainly: your Cursor account
+is an entitlement record, not a product you have to adopt. You never have to
+open the editor. Treat it the way you treat an app store account for a piece of
+software you bought once.
+
 ## The two plans that trip almost everyone
 
 **Cursor Pro at $20 a month does not include Grok Bot.** This is the single
@@ -113,6 +179,26 @@ than upgrading, compare $60 for Cursor Pro+ against $100 for SuperGrok Plus and
 pick on the other benefits, because for Grok Bot access alone the Cursor side
 is currently the cheaper door.
 
+## When the bot will not start, and which fact explains it
+
+Most access problems are one of seven things, and only two of them are fixed by
+spending money. Find your symptom before you upgrade anything.
+
+| Symptom | The fact behind it | What actually fixes it |
+|---|---|---|
+| Sign-in works, the bot never activates, you pay $20 | Cursor Pro does not include Grok Bot | Upgrade to Pro+ at $60 |
+| Same, and you pay $30 on the xAI side | SuperGrok does not include it; Plus at $100 does | Upgrade to Plus, or take the Cursor door at $60 |
+| Nothing appears at all across a whole organisation | Privacy Mode (Legacy) blocks Grok Bot entirely | An admin changes the setting. No plan upgrade fixes this |
+| There is no desktop app for your machine | There is no Linux desktop app, and the docs say so directly | Use macOS or Windows. A subscription buys nothing usable on Linux desktop |
+| Nothing on your tablet | There is no iPad app; iPhone needs iOS 18 or later | iPhone or desktop only |
+| A site challenges the bot that never challenges you | Static egress IPs, and some services flag datacenter addresses | Hand the bot the screen at the challenge. Do not build a workaround |
+| You used the trial and want another | The trial is documented as one-time for an individual | A paid tier is the only remaining path |
+
+The third row is the one that wastes the most money, because it looks exactly
+like an entitlement problem. Someone upgrades a seat, nothing changes, they
+upgrade the whole team, still nothing. Check the Privacy Mode setting before
+you touch a plan.
+
 ## The trial, and why it is worth planning
 
 A one-time trial is documented as an eligibility path for individuals
@@ -125,6 +211,12 @@ by hand every week, write the charter before you start the trial, connect the
 minimum number of services it needs, and see whether the output is something
 you would have shipped. That answers the purchase question properly. Watching
 a bot open a browser does not.
+
+Have the charter written before the clock starts. The setup, the first run, and
+the first round of corrections are the part that tells you whether the job is
+delegable, and you want all three inside the window rather than one of them.
+[The first week plan](/blog/grok-bot-first-week) is a day-by-day version of
+exactly that, and it fits a trial better than it fits a subscription.
 
 ## Why every guide you read quotes the wrong number
 
@@ -212,27 +304,91 @@ More on how usage actually accumulates is in
 statement, given it never trades or moves money and only makes
 recommendations.
 
+## What to check before your renewal date
+
+The renewal mechanics of the entitlement itself are not documented on any
+primary source at the time of writing, so treat anything confident you read
+about them, including guesses, as unverified. What you can control is the
+review you do before the date, and there are five things worth checking.
+
+Re-read the eligibility list. It moved twice in the ten days around launch, on
+11 and 21 August 2026. A list with that recent a history of change is not a
+list you should assume is the same one you bought against.
+
+Check the tier you are actually on, not the one you remember buying. If you
+upgraded from Pro to Pro+ for the bot, a downgrade back to Pro is what removes
+access, and downgrades are easy to make absent-mindedly during a cost review.
+
+Do not treat a lapse as a reset. The trial is documented as one-time, so
+cancelling and resubscribing later does not restore a trial you already used.
+
+Drop the plan that is not earning its place. If you hold both a Cursor and a
+SuperGrok subscription, the second one is not extra bot headroom, because Grok
+Bot uses whichever has more usage rather than pooling them. Renewal is the
+natural moment to act on that.
+
+Reconcile the actual statements rather than the quoted price. The subscription
+is an allowance and overflow bills on demand, so the renewal figure is not your
+total cost for the period. Nothing in the product will attribute that overflow
+to a particular bot, because there is no audit view of bot actions yet, which
+means your own record of what ran is the only breakdown that exists. A
+[Bookkeeping Auditor](/bots/bookkeeping-auditor) is a sensible thing to point
+at the statements, since it flags discrepancies with evidence and never edits
+the live books.
+
+## The honest case for waiting a month
+
+The strongest argument against buying access today is not the price. It is that
+you would be buying into a beta whose governance features are documented as
+coming rather than shipped.
+
+Grok Bot launched in beta on 11 August 2026. There is no audit view of bot
+actions. There is no Grok Bot specific spend cap, and no allowance figure is
+published, so you cannot model your cost before you spend it. The team-level
+ceiling on local execution, with Never, Ask every time, and Always, is
+described as coming. So is the admin Kill that deletes the VM while keeping
+durable storage. If either of those is load-bearing for your organisation, you
+are buying a promise rather than a feature.
+
+The counter-argument is narrower than enthusiasts claim and stronger than
+sceptics allow. If you are an individual whose worst case is a wasted draft,
+waiting costs you a month of charter corrections, and charter corrections are
+the thing that compounds. The product improving does not improve your
+instructions. Those only improve by running.
+
+So the split is clean. If you need an audit trail or a hard spending ceiling for
+compliance reasons, wait, and check the two coming features rather than the
+price. If you are one person testing whether a recurring job is delegable, the
+one-time trial exists precisely so you can answer that without the
+subscription, and it is the correct move.
+
 ## Picking your path
 
-**On Cursor Pro at $20 already.** Upgrade to Pro+ at $60. Cheapest route, one
-click, no new account.
+Match the path to your situation rather than to the headline number, then check
+the last column before you pay anything.
 
-**On SuperGrok at $30 already.** Getting there through your existing product
-means Plus at $100. Getting there through Cursor means Pro+ at $60. Choose on
-what else you want, not on the bot.
+| You are | Paying today | Path | Cost | The reason |
+|---|---|---|---|---|
+| One person on Cursor Pro | $20/month | Upgrade to Pro+ | $60/month | Cheapest paid route, one click, no new account |
+| One person on SuperGrok | $30/month | Pro+ via Cursor, or Plus via xAI | $60 or $100/month | Choose on the other benefits; for bot access alone Cursor is the cheaper door |
+| One person paying nothing | Nothing | One-time trial first, then decide | Free, then $60/month | The trial answers the purchase question, and only answers it once |
+| Already wanting Ultra for its own reasons | Any | Cursor Ultra | $200/month | Buy it for what else it gives you. It is not documented to give a better bot |
+| A team of three or more | Mixed | Cursor Teams Standard | $40/user/month | Covers everyone and ends the per-person upgrade conversation |
+| A team wanting more admin surface | Mixed | Cursor Teams Premium | $120/user/month | Confirm what you need exists first: no audit view or spend cap yet, on any tier |
+| On a Linux desktop only | Any | No path today | Not applicable | There is no Linux desktop app. The subscription would buy nothing you can run |
+| In an org using Privacy Mode (Legacy) | Any | No path until the setting changes | Not applicable | It blocks Grok Bot entirely, regardless of plan |
 
-**A team of three or more.** Cursor Teams Standard at $40 per user per month
-covers everyone and removes the per-person upgrade conversation.
+Two rows in that table are refusals, and they are the ones worth reading first,
+because both describe people who would otherwise pay and get nothing.
 
-**Still evaluating.** Take the one-time trial, with a real job prepared in
-advance.
+Whichever row you are, read the two pricing pages before you commit. This
+article is dated 25 August 2026, the eligibility list changed twice in the
+fortnight before it, and the sources linked throughout are the only versions
+that are current by definition. If you are building a whole operation on top of
+this, [the one-person company guide](/blog/one-person-company-grok-bot) covers
+what that looks like once the billing question is settled.
 
-**Anything else.** Read the two pricing pages before you commit. This article
-is dated 25 August 2026, the eligibility list changed twice in the fortnight
-before it, and the sources linked throughout are the only versions that are
-current by definition. If you are building a whole operation on top of this,
-[the one-person company guide](/blog/one-person-company-grok-bot) covers what
-that looks like once the billing question is settled.
+**Keep reading:** [Self-Describing CLIs](/blog/grok-bot-whop-cli-commerce), [Rakazo Permissions and Audit Logging, Explained](/blog/rakazo-permissions-audit), [Grok Bot vs OpenAI Computer Use](/blog/grok-bot-vs-openai-operator).
 
 ## Frequently Asked Questions
 

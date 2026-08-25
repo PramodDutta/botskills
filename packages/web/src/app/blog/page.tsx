@@ -17,6 +17,7 @@ const ORDER = [
   'Safety',
   'Comparison',
   'Playbook',
+  'Migration',
   'Announcement',
 ];
 

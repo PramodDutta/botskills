@@ -73,16 +73,41 @@ notice references contractual terms and consequences, and it is the point at
 which the message stops being between two people and starts being between two
 companies.
 
+The practical difference shows up in three places. A reminder is addressed to a
+person and forwards internally without embarrassing anyone, which is usually how
+it gets paid. A dunning notice is addressed to a company and written knowing a
+third party may read it later. A reminder can be warm and still work; a dunning
+notice that tries to be warm reads as confused about its own purpose.
+
+They also fail differently, which makes the distinction operational rather than
+stylistic. A reminder sent too early costs little. A dunning notice sent too
+early is hard to walk back, because you cannot un-invoke the contract in the
+next email. That asymmetry is why the move into the last two rows is the one
+place the bot must never advance on its own.
+
 The bot can draft all five. It cannot decide which one applies, because moving
 a client from stage three to stage four is a judgment about a relationship, not
 a function of the date. Have it propose the stage based on age and flag the
 transition for you.
 
-## The escalation ladder, day by day
+## Write the escalation ladder as explicit days
 
 Write the ladder as explicit days rather than as a vague sense of escalation,
 because the whole point is removing your discretion from the timing while
 keeping it on the content.
+
+| Day | Document | Goes to | Must contain | Must never |
+|---|---|---|---|---|
+| Minus 3 | Courtesy note | Your contact | Amount, due date, link | Read like a chase |
+| Plus 3 | First reminder | Your contact | Invoice number, amount, link | Apologise for invoicing |
+| Plus 10 | Second reminder | Your contact | The payment run question | Change tone |
+| Plus 21 | Same words, wider list | Contact and finance | Identical wording, one new name | Sharpen a word |
+| Plus 35 | Formal notice | Finance, contact copied | Invoice date, terms, agreed late fee | Threaten |
+| Plus 60 | No draft at all | You | The full history and one question | Draft anything |
+
+Keep this table beside the charter. Most ladders fail on the day 21 row, where
+the instinct is a firmer email and the effective move is the same email to one
+more person.
 
 Day minus three: a courtesy note before the due date. This one is worth more
 than it looks. It catches the missing purchase order and the wrong-inbox
@@ -144,7 +169,23 @@ One structural rule as well: three sentences for stages one and two. Length
 reads as anxiety, and a short note is easier to forward internally, which is
 usually what has to happen for you to get paid.
 
-## The chaser charter, pasteable
+Tone is not one dial turned up gradually. It changes shape by stage, and each
+stage fails in its own way.
+
+| Stage | The register | The opening move | The failure here |
+|---|---|---|---|
+| Courtesy note | Almost administrative | Confirm it arrived and is queued | Sounding like an early chase |
+| First reminder | Assume an oversight | State the invoice and the link | Explaining why you need the money |
+| Second reminder | Curious, not pointed | Ask when the payment run is | Repeating yourself at more length |
+| Recipient escalation | Unchanged from day 10 | Add finance, one line of why | Rewriting the message too |
+| Formal notice | Plain and factual | Restate the terms as a record | Reaching for legal phrasing |
+| Day 60 handoff | Not the bot's register | Hand the history to you | Composing anything |
+
+The last column is the useful one. Every failure there is a way of sounding
+anxious, and anxiety in a payment chase reads as an admission that you expect
+not to be paid.
+
+## Fill the bracketed parts of this chaser charter
 
 \`\`\`text
 You are my Invoice Chaser.
@@ -214,8 +255,19 @@ rather than the invoice number. A card payment shows up three days after it was
 made. Each of these makes an invoice look unpaid when the money is sitting in
 your account.
 
-So the bot needs an explicit unclear state, and it needs to prefer that state
-over a confident guess. An invoice it cannot confidently classify goes on a
+| What actually happened | Why it reads as unpaid | What the bot must do |
+|---|---|---|
+| One transfer covering two invoices | The amount matches neither | Mark both unclear |
+| Withholding tax deducted at source | Short by a percentage | Unclear, and name the shortfall |
+| Reference is the purchase order number | No invoice number to match on | Unclear |
+| A card payment still settling | Absent from the feed entirely | Anything under two business days is unknown |
+| A part payment on account | A balance genuinely is open | Unclear, unless you allow balance chases |
+| A credit note applied | The invoice was reduced, not paid | Unclear, and show the note |
+
+Every row resolves to the same instruction, which is the point: the bot is not
+asked to be clever about payments, it is asked to recognise six shapes and
+decline to guess. So it needs an explicit unclear state, and it needs to prefer
+that state over a confident guess. An invoice it cannot confidently classify goes on a
 short list for you to eyeball, and no chase is drafted. That list is a
 thirty-second job for a human and it is the single control that prevents the
 failure this whole setup has to avoid.
@@ -230,7 +282,7 @@ approval. Anything touching money in the catalog carries this shape, including
 [Personal CFO](/bots/personal-cfo), which never trades or moves money and
 issues recommendations only.
 
-## Why this one never sends
+## This one never sends, and the arithmetic is one-sided
 
 Most draft-only boundaries in a bot roster are about quality. This one is about
 arithmetic.
@@ -330,7 +382,42 @@ nobody reads is just a place where problems go to be silently ignored, and with
 no audit view of bot actions available as of writing, the ledger of what
 happened is the one you keep.
 
-## The only expansion worth making
+## Answer the objection that a draft-only chaser saves no time
+
+The strongest argument against this design is that the work was never writing
+the emails, it was deciding to write them, and a bot producing six drafts you
+still have to read and send has moved the chore rather than removed it.
+
+Half of that is right, and the move is the mechanism. A draft in front of you
+takes eleven seconds and no decision, because the decision was made when you
+wrote the ladder. A blank compose window takes four minutes and asks you to
+decide, on that morning, about that client, in whatever mood you are in.
+Invoices do not reach ninety days because the email is hard to write.
+
+The other half is a real cost. This bot earns its place once you have enough
+invoices that tracking them is itself the work. Below roughly five open a month,
+a calendar reminder does the same job. Above that, tracking is where the failure
+lives, and drafting is a side effect of tracking well.
+
+## Where an invoice chaser stops being the right tool
+
+Three situations where the ladder above is the wrong instrument.
+
+Clients on genuinely long terms. If the agreement says sixty days, a chase at
+day three past the invoice date is a chase against your own contract. Anchor
+every day in the ladder to the agreed due date, never to the invoice date.
+
+A retainer or a subscription. Recurring billing failures are a payments
+problem, not a collections problem, and the fix is a card update rather than a
+persuasive email. Keep them out of the ladder entirely.
+
+Anything disputed. The moment a client says the work was not as agreed, this
+stops being a payment schedule and becomes a conversation about scope. A bot
+drafting reminders into a dispute is actively damaging, which is why the
+charter stops on any reply. If a reply arrived, the ladder is over until you
+restart it.
+
+## Widen it inward, toward your own visibility
 
 Almost every widening of this bot is a bad idea, which is unusual and worth
 stating plainly.
@@ -361,6 +448,8 @@ charter. It is a shorter path from draft to sent: drafts in one place, reviewed
 in one sitting, once a day, in under three minutes. That habit is what makes a
 draft-only bot faster than an automatic one, because the review was always the
 part that determined whether any of this was worth doing.
+
+**Keep reading:** [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Monitor Competitors](/blog/grok-bot-to-competitor-monitoring).
 
 ## Frequently Asked Questions
 

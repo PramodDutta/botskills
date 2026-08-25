@@ -52,7 +52,7 @@ included allowance is not published as a number anywhere, and any figure
 written into an article in August is a liability by October. Everything below
 is stated in relative terms, which stays true when the rates move.
 
-## The four levers you can actually pull
+## Only four levers are genuinely under your control
 
 Plenty of things affect usage. Only four of them are under your direct control,
 and knowing which is which stops you from optimising the ones you cannot move.
@@ -85,7 +85,7 @@ why it is the difference between an expensive month and an inexplicable one.
 The right column is the whole method. A lever without a written bound is not
 controlled, it is just currently behaving.
 
-## Why browser work costs more than an API call
+## Browser work costs more, and varies far more, than an API call
 
 This is the fact that separates bot cost from ordinary agent cost, and it is
 worth internalising before you design any workflow.
@@ -123,7 +123,7 @@ come from. Pages change layout, sessions expire, elements move. So the
 expensive route is also the flaky route, and flakiness converts directly into
 the one lever with no ceiling.
 
-## Relative cost by interval, per bot and per roster
+## Read the interval table as an index, never as money
 
 Here is the interval table, stated as an index rather than as money, and with
 the column that the usual version of this table leaves out.
@@ -152,6 +152,31 @@ on them so a surge cannot become a bill. Use schedules where the ceiling
 matters more than the average. A daily schedule has an ugly average and a
 beautiful worst case, and for a roster you are trying to make boring, the worst
 case is the number you actually care about.
+
+## Match the cadence to the decision it feeds
+
+Scheduling arguments become tractable the moment you stop asking how fresh the
+data could be and start asking what decision the output feeds, and how often
+that decision actually gets made.
+
+| What the output feeds | How stale it can be | Cadence that fits | What faster buys you |
+|---|---|---|---|
+| A call you make each morning | Overnight | Once, before you start | Nothing. You were asleep |
+| A weekly planning session | Six days | Weekly, the day before | A number you will not open |
+| A reply you owe within a day | Half a day | Twice on weekdays | Minutes, at double the volume |
+| Something you must catch fast | Under an hour | Event trigger with a daily cap | Real coverage, if events are real |
+| A monthly report | Four weeks | Monthly, plus one mid-month check | Nothing you would act on |
+| Curiosity about a competitor | Weeks | Weekly | A checking habit, which is also a cost |
+
+The right-hand column ends most arguments. A bot polling hourly to feed a
+decision you make on Monday morning produces 167 results nobody reads and one
+that matters, and the 167 are not free in usage or in attention.
+
+The genuine exception is the fourth row, where the output is not a decision
+input but a warning. There the cost of being late is real, so pay for the
+frequency, and pay for it with an event trigger and a daily cap rather than
+with a tight poll. That is the one case where the ceiling matters more than the
+average, and the pairing is what makes it affordable.
 
 ## Write the ceiling where the product has none
 
@@ -206,7 +231,7 @@ between two Tuesdays, you have found the change before the invoice does. The
 broader case for making bots report their own numbers is in
 [the bot observability guide](/blog/bot-observability).
 
-## The per-bot unit you should know by heart
+## Learn one unit per bot and keep it in your head
 
 For each bot, you want one number in your head: what a normal run costs in your
 own units. Not in currency, which changes. In calls, pages, and items, which do
@@ -234,7 +259,56 @@ episode length happens to be, so its variance is inherent. The right response is
 to trigger it per episode rather than on a schedule, so the cost tracks real
 input instead of the clock.
 
-## Which bot earned its usage this month
+## Forecast the roster from six unit lines
+
+Once every bot reports its own counters, a roster forecast becomes arithmetic
+instead of a feeling. Here is the shape, using six bots with a median unit
+measured over three days of manual runs.
+
+| Bot | Median unit per run | Cadence | Runs a month | What it dominates |
+|---|---|---|---|---|
+| Inbox triage | 9 calls, 0 pages, 40 items | Twice on weekdays | 44 | Item count |
+| Standup scribe | 4 calls, 0 pages, 12 items | Weekdays | 22 | Nothing, and that is fine |
+| Competitor watch | 7 calls, 6 pages, 6 items | Weekly | 4 | Variance, by a distance |
+| Lead scout | 14 calls, 9 pages, 20 items | Weekdays | 22 | Page count, so total volume |
+| KPI report | 6 calls, 2 pages, 1 item | Monthly | 1 | A rounding error |
+| Podcast summariser | Whatever the episode is | Per episode | 5 to 12 | Unforecastable by design |
+
+Two things fall out that a total never shows you. First, the roster's page load
+volume is dominated by one bot, so if next month's number surprises you, that
+is where to look before you look anywhere else. Second, five of the six lines
+are forecastable and one is not, and knowing which one is which is worth more
+than a tighter estimate of the total. That last row is honest rather than
+sloppy: [Podcast Summarizer](/bots/podcast-summarizer) consumes whatever the
+episode length is, which is why triggering it per episode keeps the cost
+tracking real input rather than the clock.
+
+Keep the table itself. It is fifteen minutes to build, five minutes a month to
+refresh, and it converts every future scheduling question into a comparison
+against a number you already measured. The per-run arithmetic underneath it,
+including a formula whose every term you can measure yourself, is in
+[the Grok Bot cost breakdown](/blog/grok-bot-cost).
+
+## Check the forecast against what actually happened
+
+A forecast nobody tests is a number that makes you feel organised. Give it a
+check that can fail.
+
+At the end of each month, compare the volume you predicted against what the
+self-report lines actually recorded. If actual volume sits within about a
+quarter of predicted, the model is working and you can plan on it. If it is
+more than a quarter high, do not adjust the forecast, because the forecast is
+not the thing that changed. Find the bot whose unit moved, and ask what changed
+in its world: a source that got busier, a page that started loading slower, a
+retry that began firing where it never used to.
+
+That distinction is the whole discipline. A model that keeps getting revised
+upward is not a bad model, it is a correct model reporting drift, and the drift
+is the finding. Because an audit view of bot actions does not exist yet, the
+self-report lines are your only ledger, which is the case argued in
+[the bot observability guide](/blog/bot-observability).
+
+## Ask each month which bots earned their usage
 
 Once a month, list every bot with four columns: its job, its cadence, its unit,
 and the date you last used its output. Then one decision per bot, and only three
@@ -258,6 +332,50 @@ A roster review is itself a reasonable thing to delegate, provided the pruning
 stays manual. [Bot Advisor](/bots/bot-advisor) exists for the job and never
 deletes or rewrites another bot without your explicit say-so. You want the
 listing automated and the killing deliberate, never the other way around.
+
+## Answer the objection that this is over-engineering a small bill
+
+The strongest argument against everything above is that a handful of bots costs
+less than a lunch, and that building units, forecasts, and monthly reviews
+around it is elaborate procrastination. For a two bot roster on a fixed
+allowance, that is correct, and you should skip to the retry ceiling clause and
+do nothing else.
+
+It stops being correct at the point where three things become true at once: the
+number of bots exceeds what you can hold in your head, at least one of them
+touches a source whose size you do not control, and overflow is billed rather
+than refused. That combination is not exotic, it is what a working roster looks
+like by month three, and it is the moment when a surprise stops being a
+curiosity and starts being something you have to explain.
+
+The other half of the answer is that none of this is really about money. A
+counter line that doubles between two Tuesdays is a signal that a bot's job
+changed without a decision being made, and that is worth catching whether or
+not it costs anything. The measurement is a debugging tool that happens to also
+produce a budget.
+
+## Where predictability is the wrong thing to optimise
+
+Predictability is a property worth paying for, and it is not free, so it is
+worth naming where the payment stops making sense.
+
+Anything genuinely investigative loses most of its value under a cap. A
+research bot chasing an unclear question does variable work because the question
+is variable, and a hard ceiling of ten tool calls turns a real answer into a
+partial one delivered on time. For that shape, run it on demand, watch it, and
+accept that its cost tracks the question rather than the clock.
+
+The second case is a job with a real deadline attached to money, where being
+late costs more than being expensive. A ceiling that stops a run halfway is the
+wrong control there. Use a report-and-continue rule instead: the bot tells you
+it passed the expected volume and keeps going, so you learn about it rather
+than discovering a half-finished job.
+
+And the third is the first month of any new bot. You have no unit yet, so
+every bound you set is a guess, and a guess that is too tight produces
+truncated output you then blame on the model. Run it loose, measure, then
+bound. Bounding before measuring is how people conclude that a workable bot
+does not work.
 
 ## Growth changes the shape, not just the size
 
@@ -285,6 +403,8 @@ run and an invoice you did not authorise. There is no toggle for it, which is
 exactly why it belongs in the charter, and the general argument for writing that
 line before you write the workflow is in
 [the bot boundaries guide](/blog/grok-bot-boundaries).
+
+**Keep reading:** [Grok Bot and Discord](/blog/grok-bot-discord), [Grok Bot and Google Drive](/blog/grok-bot-google-drive), [Grok Bot and HubSpot](/blog/grok-bot-hubspot).
 
 ## Frequently Asked Questions
 

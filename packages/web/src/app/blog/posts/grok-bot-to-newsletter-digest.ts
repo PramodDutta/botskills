@@ -71,7 +71,29 @@ Then the summary step gets easy, because it only runs on three or four items and
 you can afford to be generous with them: what it says, why it reaches you, and
 what you would do about it.
 
-## Four filters that kill most of what arrives
+## Decide which senders belong in the label before you tune anything
+
+The filters operate on whatever is in the label, so the label is the first
+decision and most people never make it deliberately. Sort your subscriptions
+into these four kinds and the tuning that follows gets much easier.
+
+| Kind of sender | Example | Why it earns a place | Verdict |
+|---|---|---|---|
+| Vendors you pay | Release notes, billing mail, status updates | Almost every override category arrives here | Always in the label, never unsubscribed |
+| Primary sources | A project's announce list, a regulator, a research group | Novelty passes them because there is no other route | In the label |
+| Industry newsletters | A weekly roundup of your field | Occasional genuine finds, high filler ratio | In the label, and the first candidates to prune |
+| Aggregators and link digests | A daily list of links from across the web | Everything in them exists somewhere you could reach | Out. Novelty will kill every item anyway |
+
+The last row is worth acting on before you build anything. An aggregator whose
+items all fail the novelty test is pure processing cost, week after week, for
+an output that is structurally always empty. Move those out of the label and
+the bot gets cheaper and no less useful on the same day.
+
+The first row is the opposite case, and it is counterintuitive. The senders you
+find least readable are the ones most worth scanning, because deprecations,
+price changes, and policy updates arrive there and nowhere else.
+
+## Run four filters in order, each killing a distinct category
 
 Run these in order. Each one is cheap and each one removes a distinct category.
 
@@ -95,15 +117,49 @@ Three newsletters covering the same announcement should produce at most one
 line, attributed to whichever covered it first or best, not three near-identical
 entries.
 
-Above all four sits a small override list, because the filters are tuned to
-throw things away and some categories must never be thrown away regardless of
-source. Deprecation and sunset notices for anything you use. Price or plan
-changes from a vendor you pay. Security incidents and breaches. Terms of service
-or policy changes. Acquisitions involving a company on your list. These skip the
-filters entirely, and they are the reason a vendor newsletter you never read is
-still worth having the bot scan.
+The order is not arbitrary. Relevance runs first because it is a lookup rather
+than a judgment and removes the most volume for the least work. Novelty runs
+before actionability because a rehash is not worth reasoning about. The
+already-known check runs last, because it only makes sense on items that passed
+everything else.
 
-## What a digest looks like when it is doing its job
+| Filter | The question it asks | What it removes | How it fails | The tune signal |
+|---|---|---|---|---|
+| Relevance | Does this name something in my profile? | The bulk of the volume, in one pass | Your profile is written as themes, so everything matches | Digest length tracks inbox volume instead of staying flat |
+| Novelty | Is there a primary source I had no other route to? | Commentary, roundups, hot takes | It rejects a first report because the topic feels familiar | Discard log full of items you later read elsewhere |
+| Actionability | Would I do anything differently, including nothing? | Interesting reading that changes no decision | It gets soft and passes anything plausible | Digest is always the same length regardless of the week |
+| Already known | Have I surfaced this before? | Duplicate coverage of one announcement | It suppresses a genuine follow-up as a duplicate | An item disappears between the week it broke and the week it mattered |
+
+The fourth column is the reason each filter is worth naming separately. They
+fail in different directions, which means a digest that feels wrong is
+diagnosable rather than just disappointing.
+
+## Put consequence above interest with a standing override list
+
+Above all four filters sits a small override list, because the filters are
+tuned to throw things away and some categories must never be thrown away
+regardless of source or how boring they read.
+
+| Override category | What it looks like in the wild | Why the filters miss it | Usual sender |
+|---|---|---|---|
+| Deprecation and sunset | "v2 endpoints retire in 90 days", near the bottom | No opinion, no news value, buried | The vendor's own release mail |
+| Price or plan change | A footnote about seat pricing or a tier being renamed | Reads as marketing, so novelty rejects it | Billing or product mail you filter away |
+| Security incident or breach | A disclosure, an advisory, a forced password reset | Arrives from a sender you never opened | Status pages, security lists |
+| Terms or policy change | "Updates to our terms, effective 1 October" | Legally worded, indistinguishable from noise | Legal or no-reply addresses |
+| Acquisition on your list | A vendor or competitor is acquired | Novelty passes it, relevance may not name the acquirer | Trade newsletters, press mail |
+| Support window ending | An OS, runtime, or library version losing support | Purely factual, no framing to catch on | Project announce lists |
+
+These skip the filters entirely, which is why a vendor newsletter you never
+read is still worth having the bot scan. Keep the list short and keep it in
+nouns: each row above is a phrase family the bot can match, not a mood it has
+to infer.
+
+Add to it only from evidence. When the monthly recall check further down finds
+something the filter dropped that you wanted, the fix is a new row here, named
+as a category. It is never an instruction to be more thorough, because "be
+more thorough" reopens the volume you built this thing to close.
+
+## Give every surviving item three lines and no more
 
 Short, boring in shape, and never the same length twice.
 
@@ -113,17 +169,42 @@ naming which criterion matched, because that is what lets you tune the filter.
 The third is the link to the primary source, not to the newsletter that
 mentioned it.
 
-Under the items sits the part almost nobody builds and everyone needs: the
-discard log. One line per dropped item, sender and subject and which filter
-killed it. You will not read it most weeks. You will read it the week you
-suspect something got lost, and its existence is the only thing that makes the
-filter auditable rather than a black box that you slowly stop trusting.
-
 Then a single line at the end listing which senders produced nothing at all this
 week. Over two months that line becomes the most useful output the bot makes,
 for reasons covered further down.
 
-## The newsletter digest charter, pasteable
+## Make the filter auditable with a discard log you read once a month
+
+Under the items sits the part almost nobody builds and everyone needs. One line
+per dropped item: sender, subject, and which filter killed it. Nothing else. A
+discard log with summaries in it is a second digest, and you will stop reading
+both.
+
+You will not read it most weeks. You will read it the week you suspect
+something got lost, and its existence is the only thing that makes the filter
+auditable rather than a black box you slowly stop trusting. A filter you cannot
+inspect gets abandoned about six weeks in, not because it failed but because
+you cannot tell whether it failed.
+
+Read it deliberately once a month, and read the filter column rather than the
+subjects. The distribution is the signal:
+
+- Almost everything killed by relevance is healthy. That filter is meant to do
+  the bulk of the work.
+- A large novelty pile means your subscriptions overlap. That is a
+  subscriptions problem, and the fix is unsubscribing, not tuning.
+- A large actionability pile means items are naming your tools but not
+  changing anything, which usually means your profile lists tools you no
+  longer make decisions about.
+- Anything killed by already-known that is actually a follow-up rather than a
+  repeat is a real miss, and it is the one failure this log is best at
+  catching.
+
+Keep the logs as dated files rather than as chat messages. Each routine keeps
+only its 20 most recent run records, so a log you want to compare across a
+quarter has to live somewhere you control.
+
+## Encode the filters as an ordered charter, not as a preference
 
 \`\`\`text
 You are my Newsletter Digest bot. Your job is to throw almost all of it
@@ -196,6 +277,37 @@ busy week produces a digest you skim, which is the original problem. With a hard
 cap and no visibility into what was held back, you lose trust in it. The marker
 gives you both.
 
+## Follow one week of forty-one issues down to three lines
+
+Here is the funnel on the week this article opened with, so you can see where
+the volume actually goes. The counts are an illustration of the shape rather
+than a measurement of your inbox, and the point is the ratio between stages,
+not the numbers themselves.
+
+| Stage | Entering | Surviving | What happened here |
+|---|---|---|---|
+| Arrived in the label | 41 | 41 | Seven days of subscriptions |
+| Override sweep | 41 | 39 | An API deprecation notice and a plan change pulled out and held, never filtered |
+| Relevance | 39 | 11 | 28 named nothing on the profile. No judgment about quality involved |
+| Novelty | 11 | 4 | 7 were commentary on stories that ran everywhere |
+| Actionability | 4 | 2 | 2 were interesting and changed no decision |
+| Already known | 2 | 1 | One announcement had been surfaced on Tuesday |
+| Final digest | 1, plus 2 overrides | 3 | Three lines, one of them a genuine find |
+
+Read the relevance row first. It removed nearly three quarters of the volume in
+a single lookup, without reading for quality, and that is the row doing the work
+a summariser cannot do at all.
+
+Then read the top row and the bottom row together. The two items that made the
+digest most worth having, the deprecation and the plan change, never went
+through the filters at all. If you had built only the filters, this week would
+have produced one line and you would have found out about the API retirement in
+about eleven weeks.
+
+The three lines that come out look like almost nothing next to 41 issues, and
+that is the correct proportion. A digest that turned 41 into 12 has not
+selected, it has summarised.
+
 ## "Nothing this week" is the success signal
 
 Most digest bots cannot produce an empty output, and the reason is structural
@@ -215,7 +327,7 @@ regardless of what arrived, the bot is filling a template, and the fix is to
 tighten the actionability filter and re-read a discard log to see what it is
 promoting to reach quota.
 
-## The issue the filter threw away
+## The item that mattered most did not look important
 
 Here is the failure that matters for this job. It is quiet, it is delayed, and
 you will not notice it happening.
@@ -240,7 +352,39 @@ thorough. And keep the originals intact, which is exactly what the read-only
 boundary in the charter buys you: an audit is only possible while the source
 still exists.
 
-## Why the bot never unsubscribes for you
+## Answer the case that filtering is how you stop learning anything new
+
+The serious objection to this design is not that the bot drops something
+important. That is the failure the override list exists for. The serious
+objection is that a filter built from your current interests can only ever
+return your current interests, and the reason people subscribe to more than
+they read is that occasionally something arrives from a direction they were not
+looking in and changes how they think.
+
+Filter on a named profile and you have built a machine that confirms the
+profile. The essay that would have changed your mind about a market you are not
+in fails relevance on line one.
+
+That is true, and worth conceding without wriggling. Selection buys speed and
+costs range. Here is the honest split.
+
+For work you already committed to, range is not what you need. If you are
+deciding whether to migrate off a vendor this quarter, an unexpected essay
+about another industry is a cost rather than a benefit.
+
+For deciding what to work on next, range is the whole point and a filtered
+digest is the wrong instrument. That reading is a different activity on a
+different cadence: an hour on a Sunday, from sources you picked deliberately,
+with no relevance test at all.
+
+So run both, and keep them separate. The digest handles the operational
+question, which is what changed that affects things you already do. The
+wandering read handles the strategic one. What does not work is asking one
+weekly output to do both, because whichever criterion you write, it will
+quietly optimise for one and starve the other. If the wandering read keeps
+getting skipped, the fix is to protect the hour, not to loosen the filter.
+
+## Keep the unsubscribe click for yourself, for three mail-specific reasons
 
 It is tempting. The bot can see precisely which senders have produced nothing
 for two months, and unsubscribing is one click.
@@ -280,7 +424,7 @@ session available to this bot is available to every bot you run, and the
 documentation says plainly not to use separate bots as a security boundary. Grant
 the narrowest mail scope that lets it read one label, and nothing broader.
 
-## How you know the digest earns its slot
+## Check the digest on three clocks, weekly, monthly, and quarterly
 
 Three checks, run on different clocks.
 
@@ -304,6 +448,8 @@ so a weekly digest holds under five months of run history at best and none of th
 detail you want. Write it down where you control it. If this is one of your first
 bots, [the one-person company guide](/blog/one-person-company-grok-bot) covers
 the charter format the digest inherits.
+
+**Keep reading:** [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Monitor Competitors](/blog/grok-bot-to-competitor-monitoring).
 
 ## Frequently Asked Questions
 

@@ -80,7 +80,7 @@ Keep the list in a file the bot rereads each run rather than in the charter.
 Milestones change as your product changes, and a checklist buried in a prompt is
 a checklist nobody updates.
 
-## A context packet a human reads five minutes before the call
+## Assemble a two-page packet ninety minutes before every call
 
 This is the output people underestimate and it is probably the highest-value
 thing the bot produces, because it converts a task you skip into one that
@@ -96,6 +96,20 @@ have asked that is still unanswered, anything they said at kickoff about what
 they were trying to achieve, and any commitment either side made that has not
 been kept.
 
+| Packet section | Where the bot gets it | Cap | Why it earns the space |
+|---|---|---|---|
+| Who is on the invite, and their role | Calendar occurrence plus mail signatures | 5 lines | A new name on a call is usually the reason for it |
+| Last three exchanges per attendee | Mail threads filtered to those addresses | 3 each | Stops you repeating what was said last Tuesday |
+| Milestone state, dated, with evidence | The milestone file and its evidence links | 1 line each | Makes "how is it going" a checkable answer |
+| Unanswered questions | Inbound messages with no answering reply | No cap | What a human cannot reliably reconstruct |
+| Stated goal from kickoff | Kickoff notes, first thread, or deal record | 2 lines | Six weeks in, everyone discusses plan, not goal |
+| Broken commitments, both sides | The dated commitment log the bot keeps | No cap | Bad news reaches you before it reaches them |
+
+Two rows have no cap on purpose. Unanswered questions and broken commitments
+are short on a healthy account, so getting long is itself the signal. The rest
+are capped, because a packet that grows with account age stops being read at
+the point the account gets complicated.
+
 The unanswered-questions section is the one that earns the packet's place. In a
 long onboarding, customers ask things that get lost in a thread, and the second
 time someone has to ask you the same question is the moment they start
@@ -109,7 +123,7 @@ complete it is. Facts with dates, not narrative summary. You want "asked about
 SSO on the 11th, unanswered", not "the customer has expressed interest in
 security features".
 
-## Stall detection: what a stuck account looks like in data
+## Write the stall conditions as numbers, not as a request to watch
 
 Write the stall conditions as thresholds rather than as a request to watch for
 problems. A bot asked to use judgment about whether an onboarding is healthy will
@@ -129,13 +143,33 @@ the one that predicts the outcome, because a customer who has not used the
 product for their own work by week three usually never does, no matter how many
 milestones show green.
 
+| Condition | What it catches | What it misses | First move |
+|---|---|---|---|
+| Same milestone unmoved for 7 days | Mutual waiting, each side expecting the other | An account cruising easy milestones, stuck on the hard one | Name the blocker and its owner |
+| No inbound from them in 10 days | Disengagement, including accounts that look busy your side | A champion on holiday, which looks identical | Check whether anyone else there replies |
+| Day 21, no self-run workflow | The strongest predictor of the outcome | Long implementations where day 21 is genuinely early | Ask what a first real run needs |
+| A commitment past its promised date | The promise quietly rotting | Commitments made verbally, never written down | Restate it in writing, as a draft |
+
+That fourth row is missing from most onboarding tooling and is the cheapest to
+add. Whenever either side writes "I will send that over," the bot logs a
+commitment with an owner and a date, then flags it when the date passes without
+evidence. Your own broken commitments appear in the same list, which is
+uncomfortable and correct: roughly half of stalls wait on something you
+promised.
+
 For each stalled account the bot writes two things: what specifically is blocked,
 and the one question that would unblock it. Not a status, a diagnosis. "Waiting
 on the data file promised on the 6th by their ops lead; the unblocking question
 is whether they need a template" is actionable at a glance. "Stalled at data
 import" sends you back into the threads.
 
-## The customer onboarding bot charter
+Set the day counts against your own median onboarding rather than these
+numbers. If your typical implementation runs sixty days, day 21 is early and
+the flag cries wolf until you stop reading it. Take the median day of the first
+self-run workflow across your last ten onboardings, and set the threshold a
+week past that.
+
+## Paste this charter and change only the milestone file
 
 \`\`\`text
 You are my Onboarding Desk.
@@ -224,6 +258,28 @@ Note the CRM clause in the charter too. It is not customer-facing, but a health
 score or stage written by a bot becomes a fact that other people act on, and it
 will be quoted in a forecast by someone who never saw the evidence behind it.
 
+## Sort every output by who ends up reading it
+
+"Never send" is the headline rule and it is too coarse to run a desk on,
+because this bot produces six different things carrying different risk. Sort
+them by audience instead, and the boundary stops being one prohibition and
+becomes a routing rule.
+
+| Output | Who ends up reading it | Who releases it | Why |
+|---|---|---|---|
+| Daily board | You | The bot, straight to you | No external reader, no risk |
+| Stall diagnosis | You | The bot, straight to you | An internal opinion; a wrong one costs a chat |
+| Pre-call packet | Whoever takes the call | The bot, to that person | Internal, but name sources so no gap is quoted as fact |
+| Draft reply to a customer | The customer, eventually | You, every time | Irreversible, and it cannot see the human context |
+| Internal handoff note | Colleagues, months later | You, after one read | It becomes the account history and outlives your memory |
+| CRM field or health score | Anyone reading a forecast | You, for fields nobody forecasts on | A bot-written number gets quoted by people who never saw the evidence |
+
+The last two rows catch people out, because neither is customer-facing and both
+feel safe. A handoff note written by a bot and never read becomes the account
+history, and the next person treats it as observation rather than inference.
+Read it once before it lands. Every "you" in that third column should cost a
+glance, not a rewrite.
+
 ## The failure that reaches the customer: a milestone marked done by inference
 
 The characteristic failure here is not a bad draft. It is a green board.
@@ -247,6 +303,45 @@ the bot records it as a commitment with a date and an owner, and it appears on
 the board as outstanding until evidence arrives. A commitment that ages past its
 promised date becomes its own flag. That single mechanism turns the most common
 source of false greens into the most useful early-warning signal you have.
+
+## One stalled account, from flag to unblocked
+
+Here is the whole loop on one account, because the value of this bot is not the
+board, it is what the board causes on a Tuesday morning.
+
+\`\`\`text
+BOARD, 08:00, Tue 25 Aug
+
+STALLED  Halden Logistics            day 24 since kickoff
+  Last complete:  Account created, 2026-08-06 (evidence: account
+                  record, created 06 Aug 14:22)
+  Next:           Data imported. Unmoved 12 days.
+  Their last in:  2026-08-13 (12 days)
+  Commitment:     "sending the file over Friday" - Priya Raman,
+                  ops lead, promised 2026-08-08. 17 days overdue.
+  Blocked on:     The export from their old system. They have not
+                  said whether they can produce the format.
+  One question:   "Can your current system export CSV, or should we
+                  take a database dump instead?"
+  Owner here:     you.  30-day review booked for 28 Aug.
+\`\`\`
+
+That costs fifteen seconds and replaces a search through six weeks of threads.
+Three things in it are visible only because the bot maintained them rather than
+inferring them. The commitment has an owner and a date, so "17 days overdue" is
+a fact rather than a feeling. The milestone did not advance on "sending it over
+Friday," which is where a status-update board goes green. And the blocker is a
+diagnosis, not a stage name.
+
+The action is a two-line message asking that one question, sent by you at
+08:02. Priya replies at 11:00: their system exports XML only, which nobody
+established in twenty-four days of politeness. The real blocker was a format
+question that took one sentence to surface.
+
+Then the loop closes properly. The bot does not mark data imported when Priya
+says the XML is coming. It logs a new commitment with her name and a date, and
+the milestone stays open until a record count appears in the product. You walk
+into the 28 Aug review knowing the account before you dial.
 
 ## Verifying it: shadow one account through a full cycle
 
@@ -272,6 +367,51 @@ later. If accounts the board called fully onboarded churn at the same rate as th
 ones it flagged, the checklist is measuring activity rather than adoption, and
 the milestones need rewriting toward things the customer did rather than things
 you did.
+
+## Your CRM already has an onboarding board
+
+The reasonable objection is that this exists. Every CRM and customer success
+tool ships onboarding stages, task lists, and health scores, built by people
+who have thought about it longer than you have.
+
+They beat a bot at what they own: shared visibility, reporting, and a record
+other people act on. If your team already keeps that board current, keep it.
+
+The gap is that a CRM records what someone entered, and the failure here is
+nobody entering anything. A stage sits at "Data import" for twelve days because
+moving it is a task assigned to a busy person, and nothing in the system
+distinguishes an accurate stage from a stale one. Health scores have the
+reverse problem: computed from product telemetry, they see logins and miss the
+thread where a customer asked the same question twice.
+
+A bot adds the reading, not the recording. It goes through mail, the product,
+the calendar, and your files, and produces the evidence that justifies a stage
+change. The honest arrangement is the bot proposing and the CRM holding, which
+is why the charter forbids CRM writes: a field changed without a human is a
+fact nobody vouched for.
+
+## Where an onboarding desk stops being reliable
+
+Three limits, and the second gets discovered late.
+
+It cannot see what happened on a call. Most of what determines an onboarding is
+said out loud: a restructure mentioned in passing, an offhand deadline, the
+reason they bought. None reaches a system the bot reads, so the board covers
+the written half of the relationship. Where a call produced something
+load-bearing, a human writes it down.
+
+Its own memory is short. A routine belongs to one bot, the app keeps only the
+20 most recent run records for it, and there is no audit view of bot actions as
+of writing. A daily board loses its history in under a month, which is the
+window pattern analysis needs. Append every board to a document you own from
+day one; the history you did not keep cannot be reconstructed.
+
+And the customer data it reads is reachable by every other bot you run. All
+bots on an account share one persistent cloud computer, with browser cookies,
+signed-in sessions, and files shared across the roster, and the documentation
+is explicit that separate bots are not a security boundary. Deleting this bot
+does not remove those sessions. If you handle customer data under a contractual
+commitment, settle that before you connect anything.
 
 ## Widening it: internal first, external never
 
@@ -307,6 +447,8 @@ security boundary. Whatever customer data this bot can reach, every other bot on
 that account can reach too, and deleting the bot does not remove the sessions.
 [The one-person company guide](/blog/one-person-company-grok-bot) covers how to
 keep that access narrow when you are the only person deciding.
+
+**Keep reading:** [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Monitor Competitors](/blog/grok-bot-to-competitor-monitoring).
 
 ## Frequently Asked Questions
 

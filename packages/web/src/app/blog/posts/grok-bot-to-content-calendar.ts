@@ -44,7 +44,7 @@ The second job is arriving early. A draft that lands the night before is a
 draft you publish or skip. A draft that lands three days early is one you edit,
 which is where the quality difference actually lives.
 
-## Six states a piece moves through
+## Move every piece through six states and never skip one
 
 The whole system rests on every piece having exactly one state at any time, and
 the states being few enough that you can hold them in your head.
@@ -94,7 +94,35 @@ the file is how you steer the bot, in the same way that correcting a charter
 beats correcting a bot in chat. The general pattern for durable state is in
 [the guide to bot memory](/blog/grok-bot-memory).
 
-## The calendar charter, pasteable
+## Choose the calendar's home for editability, not for features
+
+Five places the file can live, ranked by the only criterion that predicts
+whether the system survives month two.
+
+| Where it lives | Fixable from your phone | Survives a deleted bot | History you can read back | Best for |
+|---|---|---|---|---|
+| The bot's conversation | No | No | No | Nothing. This is the failure case |
+| A spreadsheet | Yes | Yes | Version history, if the tool keeps it | Most people. Start here |
+| A Notion database | Yes | Yes | Page history per row | Anyone already living in Notion |
+| An Airtable base | Yes | Yes | Revision history per field | Several channels with different fields |
+| A markdown table in a repository | Awkward | Yes | Full diffs, permanently | Writers whose drafts already live in the repo |
+
+Column one decides it. The question is not which tool has the better fields, it
+is whether you will actually correct a wrong cell at 22:00 from a phone. A
+calendar you will not correct becomes a calendar that lies, which is precisely
+the drift failure described further down. Setup specifics per tool are in
+[the Notion guide](/blog/grok-bot-notion),
+[the Google Sheets guide](/blog/grok-bot-google-sheets), and
+[the Airtable guide](/blog/grok-bot-airtable).
+
+One boundary worth copying from the catalog:
+[Marketing Calendar Sync](/bots/marketing-calendar-sync) touches only your local
+calendar and never edits the shared Notion source. Where a shared document is
+the team's source of truth, the bot reads it and writes somewhere else, because
+the moment a bot can rewrite the thing everyone else edits, one bad run costs
+more than the whole calendar saves.
+
+## Paste this calendar charter and change three things
 
 \`\`\`text
 You are my Content Calendar Manager.
@@ -189,6 +217,19 @@ first. An approval controls a proposed action and does not reverse work already
 completed, which is the whole reason the gate has to sit before publication
 rather than after it.
 
+Spell the asymmetry out per channel, because "you can just delete it" is what
+people say right up until they try.
+
+| Channel | What deleting the post removes | What it leaves in place |
+|---|---|---|
+| Newsletter | The web archive copy | Every inbox it already landed in |
+| Blog post | The page | Feed readers that already pulled it, plus caches and scraper copies |
+| Social post | The post and its replies | Screenshots, quote posts, and everyone who already read it |
+| Podcast or video | The listing | Downloads already sitting on devices |
+
+Every row's right-hand column is larger than its left, and none of it is
+recoverable by any action available to you afterwards.
+
 Publishing is also the one action in this pipeline that speaks in your voice to
 people who did not opt into reading a machine. Everything upstream is
 production. Publication is a statement, and the person who made the statement
@@ -211,7 +252,7 @@ never posts to your account. That consistency is not a coincidence, and the
 reasoning behind it is in
 [the guide to bot boundaries](/blog/grok-bot-boundaries).
 
-## Where a calendar bot goes wrong: the plan that drifts from what shipped
+## The plan quietly stops describing what actually shipped
 
 Every job fails in its own particular way. A calendar bot fails by keeping a
 beautiful plan that no longer describes reality.
@@ -237,7 +278,38 @@ Second, make recording a publication a two-second action for you, which in
 practice means pasting a URL into one cell. A reconciliation step the human
 finds tedious is a reconciliation step that stops happening.
 
-## The check that tells you it is working: slots filled, not drafts produced
+## Eight weeks of state counts, and why the backlog grew
+
+Numbers make the diagnosis concrete. One writer, one calendar bot, two runs a
+week, four slots planned per week from the start.
+
+| State on Friday | Week 1 | Week 8 |
+|---|---|---|
+| Backlog | 12 | 19 |
+| Slotted | 4 | 4 |
+| Outlined | 0 | 1 |
+| Drafted | 1 | 3 |
+| Approved | 0 | 2 |
+| Published that week | 1 | 4 |
+
+Week one planned four and shipped one. The three that died died differently. One
+was never drafted, because the drafting run was scheduled for Friday and two
+slots sat earlier in the week. One was drafted and never read. One was read and
+rejected, because the voice samples in the charter were three years old.
+
+Three causes, three unrelated fixes: the drafting run moved to Tuesday, the plan
+dropped from four slots to three for a fortnight until the review backlog
+cleared, and the voice samples were replaced with three pieces written in the
+last six months. None of those is a prompt improvement, which is the point.
+
+The line worth staring at is the backlog going from 12 to 19. That looks like
+failure and is the opposite. A working calendar consumes ideas more slowly than
+a working brain produces them, so the backlog should grow. A shrinking backlog
+means either you stopped having ideas or the bot is filling slots with whatever
+is nearest, and both of those show up as weak published pieces about a month
+later.
+
+## Count published slots, never drafts produced
 
 Drafts produced is a vanity number. A bot can produce nine drafts a week and
 leave you exactly where you started.
@@ -262,7 +334,7 @@ four, the bot is scheduling your existing habits, which is fine but small. If
 two of them exist only because a slot demanded something and the backlog had a
 candidate, the system is doing the job it was built for.
 
-## Handing over more: from drafts to scheduled drafts
+## Widen toward preparation, never toward release
 
 Widen this bot in the direction of preparation, never in the direction of
 release.
@@ -290,6 +362,66 @@ its charter says. If you want the calendar bot to be genuinely unable to
 publish, the account it would need must not be signed in on that machine.
 Keeping the tooling itself out of reach is the same discipline described in
 [the one-person company guide](/blog/one-person-company-grok-bot).
+
+## Seven ways a calendar bot fails, and the fix for each
+
+None of these are model failures. Every one is a missing sentence in the setup,
+and the wrong repair usually makes the next week worse.
+
+| What you notice | The actual cause | The fix |
+|---|---|---|
+| Backlog grows, slotted count never moves | The planning run treats assignment as optional | Instruct it to fill every empty slot in the next 14 days |
+| Drafts keep arriving the night before | The drafting run sits too close to the earliest slot | Move drafting at least three days ahead of the first slot |
+| Every slot filled, half the pieces weak | The charter has no way to say there is no candidate | Allow "no candidate, suggest skipping" as a valid output |
+| Two drafts on nearly the same topic | The bot has no record of what actually published | Reconcile published rows against the live channels first |
+| It rewrote a row you edited by hand | It treats its own context as the source of truth | State it: if the file and your memory disagree, the file wins |
+| A piece has been slotted since March | Nothing ages assignments out | The 21-day rule, with the move reported back to you |
+| Drafts piling up unread | More slots than review capacity | Cut slots, never cut review |
+
+The last two rows are the ones people fix backwards. Faced with unread drafts,
+the instinct is to ask for shorter drafts. The number to change is the number of
+slots, because review capacity is fixed and slot count is the only variable you
+actually control.
+
+## The objection is that a bot which cannot publish saves you nothing
+
+The strong version: clicking publish is the last mile, and if a human still has
+to be present at the moment of release, the dependency was moved rather than
+removed. Every other step is preparation you could have skipped anyway.
+
+Time the steps and the argument dissolves. Choosing which of nineteen backlog
+items belongs in Thursday's slot, with a reason, takes real minutes. Turning a
+premise into an outline and an outline into a full first draft takes an hour or
+more. Reading a piece you commissioned and clicking publish takes under two
+minutes. A bot that removes the first two and keeps the third has removed
+essentially all of the labour and none of the accountability.
+
+Where the objection genuinely wins is worth naming plainly. High-volume
+programmatic output, where nobody reads any single piece before release and the
+value is coverage rather than craft, is a real category and this design is not
+built for it. The risk profile there is different too, and what goes wrong when
+volume outruns review on a public account is covered in
+[the guide to automating social content without losing your account](/blog/grok-bot-x-content-automation-risks).
+
+## Three places where a calendar bot stops being the right tool
+
+**Reactive channels.** A bot planning fourteen days ahead is the wrong shape for
+anything whose value is being first. Keep those channels out of the calendar
+entirely rather than creating slots you will always fill late.
+
+**More than one author.** A routine assigns a workflow to one bot, nothing
+exists at team level, and deleting the bot deletes its routines. The file can be
+shared with a team; the bot cannot. In practice one person owns the bot and
+everyone else edits the calendar, and you should decide who that person is
+before you build it rather than after they go on leave.
+
+**Judging quality.** The bot can tell you a slot is filled. It cannot tell you a
+piece is worth reading, and the state machine will happily report six healthy
+counts across a month of forgettable work. That is exactly why the monthly check
+asks whether two of the last four pieces exist only because a slot demanded
+them, rather than asking whether the counts look right.
+
+**Keep reading:** [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Monitor Competitors](/blog/grok-bot-to-competitor-monitoring).
 
 ## Frequently Asked Questions
 

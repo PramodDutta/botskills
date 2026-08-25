@@ -28,23 +28,22 @@ summarises what a candidate actually wrote, against requirements you actually
 published. It never advances anyone and never eliminates anyone. Its output is
 evidence. A person makes every call.
 
-## Two hundred applications and one question you actually have
+## Separate the lookup from the judgment before you automate either
 
 Notice what you are really doing when you read an application at speed. You are
 not forming a rounded view of a human being in forty seconds. You are running a
 lookup: does this document contain evidence of the four things I said I needed?
 
 That lookup is mechanical and miserable, and it is where the time goes. The
-judgment part, deciding what a piece of evidence is worth, whether an unusual
-background is a risk or the most interesting thing in the pile, whether you want
-to spend an hour talking to this person, takes you seconds once the evidence is
-in front of you.
+judgment part, deciding what a piece of evidence is worth and whether an unusual
+background is a risk or the most interesting thing in the pile, takes seconds
+once the evidence is in front of you.
 
 A bot that does the lookup and stops is genuinely useful. A bot that continues
-into the judgment is doing the part that was never the bottleneck, and it is
-doing it worse than you, without accountability, at 200 times your speed.
+into the judgment is doing the part that was never the bottleneck, worse than
+you, without accountability, at 200 times your speed.
 
-## The only scope that survives scrutiny
+## Write the may and may-never columns before you write the charter
 
 Write the split down before you write a single line of the charter, because
 every bad version of this bot comes from letting the second column leak into the
@@ -90,12 +89,31 @@ human the relevant passages. All of them get interesting the moment the software
 is the thing that filters. That is a large difference in obligation for a small
 difference in charter text, and it is available to you for free.
 
-There is a second reason that has nothing to do with regulators. A screening bot
-that rejects produces no defensible record. When a candidate asks why, or a
-colleague asks how you narrowed 214 to 12, "the model preferred these" is not an
-answer you want to give, and it is not an answer you can improve on later. An
-extraction bot leaves a trail of quotes tied to requirements you published,
-which is the kind of record that survives being asked about.
+There is a second reason that has nothing to do with regulators. A bot that
+rejects produces no defensible record. When a candidate asks why, or a colleague
+asks how you narrowed 214 to 12, "the model preferred these" is not an answer
+you can improve on later. An extraction bot leaves a trail of quotes tied to
+requirements you published, which survives being asked about.
+
+## Three ways teams automate screening, and what each one costs
+
+Almost everyone reaches for one of four options, usually without naming which.
+The columns that matter are not accuracy and speed. They are what the software
+decides, and what you can say afterwards when somebody asks you why.
+
+| Approach | What the software does | Time saved | What you say when asked why | Verdict |
+|---|---|---|---|---|
+| ATS knockout questions | Auto-rejects on form answers before any human looks | Most | "The form rejected you" | Avoid wherever a wrong rejection matters |
+| Score and rank | Emits an ordered list with numbers attached | High | "The model preferred these" | Avoid. This is the regulated shape |
+| Evidence extraction | Quotes and locations against requirements you published | Moderate, and it removes the dull part | "Here is what you wrote, here is the requirement, here is my reasoning" | Use this |
+| Read everything by hand | Nothing | None | "I read all of them" | Correct, until volume exceeds your capacity |
+
+The last row is not a joke option. It is the honest baseline the other three are
+measured against, and the moment you cannot commit to it the real question is
+what you do about the shortfall. Reducing intake is one answer: close the
+posting early, narrow the requirements, ask for a short work sample everyone
+completes. Letting software absorb the shortfall quietly is the answer this
+article exists to argue against.
 
 ## A summariser inherits the bias of whatever it summarises
 
@@ -118,17 +136,78 @@ and demanding a verbatim quote as the answer. There is much less room for style
 to masquerade as substance when the output format is "requirement, present or
 not, exact sentence, page or section".
 
-Two rules make the difference real rather than cosmetic:
+Two rules make that defence real rather than cosmetic, and both are worth
+arguing properly rather than asserting: no totals, and no ordering.
 
-No totals. The moment you sum the requirement column you have rebuilt a score,
-and a score has an implicit threshold, and a threshold is a decision. Leave the
-matrix unsummed on purpose.
+## A total is a score with an unwritten threshold
 
-No ordering. Output candidates in a fixed, arbitrary order, application ID or
-arrival time. Sorting by anything derived from content is ranking, whatever you
-call the column.
+Summing the requirement column looks like the most innocent thing in this
+entire setup. It is the step that rebuilds everything the scope was designed to
+remove.
 
-## The applicant screening charter, pasteable
+Start with the arithmetic. To add four requirements together you need weights,
+and adding them unweighted is not the absence of a weighting decision, it is the
+decision that R1 and R4 matter equally. Nobody ever made that call out loud. It
+arrived with the plus sign.
+
+Then the total produces an ordinal, and an ordinal invites a cut. Someone opens
+the fours, then the threes, and stops. That stopping point is a threshold, and
+the property that makes it dangerous is not that it exists but that it was never
+written anywhere. A published requirement can be challenged, corrected, or
+audited. A cut line that lives in how tired you were on Thursday cannot be, and
+neither you nor the candidate can reconstruct it a month later.
+
+The total also destroys the only information that was useful. "R1 evidenced, R2
+not found, R3 evidenced, R4 ambiguous" tells you exactly what to do next: open
+the file and look for R2. "3 out of 4" tells you nothing at all while feeling
+like it told you something, and two candidates on 3 out of 4 can be missing
+completely different things and reading as identical.
+
+So leave the matrix unsummed, deliberately, and resist the urge to add a count
+column because it would look tidy. Tidy is the failure mode here.
+
+## Ordering is ranking with the word taken out
+
+The same argument applies to sorting, and it survives every rename people try.
+
+| What the column is called | What it does mechanically | Why it is still selection |
+|---|---|---|
+| "Sorted by relevance" | Derives a key from content and orders on it | The key is a score without a name |
+| "Top matches first" | The same, with an implied cut at the fold | Position replaces the threshold |
+| "Grouped by strength" | Buckets on a derived key | A bucket is a coarse score |
+| A confidence or fit column | Assigns a number or a grade per person | This is simply a score |
+| Traffic lights | Three-value score in colour | Colour is not a hedge |
+| "Suggested first reads" | Names a subset to open first | A shortlist with softer wording |
+| "Collapse the ones with nothing found" | Hides rows | Elimination performed by the interface |
+
+The reason a fixed arbitrary order matters is not pedantry about definitions. It
+is that attention decays down a list. You read the first twenty blocks
+carefully and the last twenty quickly, and you will do that whatever you promise
+yourself. When the order is derived from content, that decay lands
+systematically on the same kind of candidate every time. When the order is
+application ID or arrival time, the decay is still there and it falls randomly,
+which is the difference between an imperfect process and a patterned one.
+
+## Write requirements the bot can actually check
+
+Everything above depends on R1 to R4 being facts a document can evidence. Most
+job postings are not written that way, and a vague requirement is precisely
+where the model's discretion, and therefore its bias, walks back in.
+
+| What the posting says | Why the bot cannot check it | The checkable rewrite |
+|---|---|---|
+| "Strong communication skills" | No sentence evidences this, so it quotes whatever sounds confident | "Has published documentation, a written spec, or an article. Quote it." |
+| "5+ years of experience" | Overlapping roles and contracts make this arithmetic, and it will do the arithmetic | "States a role matching X with dates. Quote the dates as written." |
+| "Startup mindset" | A culture proxy that tracks age and background | Drop it, or: "has worked at a company under 50 people. Quote the line." |
+| "Modern data tooling" | The set is unbounded, so it invents membership | "Mentions dbt, Airflow, or Dagster. Quote the mention." |
+| "Degree in a relevant field" | Relevance is a judgment, and the institution is an identity signal | "States a completed degree. Quote the subject, never the institution." |
+| "Can hit the ground running" | Not a fact about any document | Delete it. It is a hope, not a requirement |
+
+Run this exercise before the bot exists. If a requirement cannot be rewritten
+into something a quote can evidence, it is not a screening criterion, it is an
+interview question, and it should be asked of a person by a person.
+
+## Paste this application reader charter and change only the requirements
 
 \`\`\`text
 You are my Application Reader. You do not screen people. You read
@@ -201,7 +280,7 @@ a known trick, and the honest way to handle it is to surface it to the human
 rather than to silently penalise, because you cannot always tell the difference
 between an attempt at manipulation and a template someone downloaded.
 
-## The candidate the extraction quietly buried
+## Treat every not found as a file to open, not a candidate to drop
 
 The failure mode that matters here is not a bad hire. It is a silent
 elimination, and it will not look like an elimination when it happens.
@@ -235,7 +314,29 @@ eyes on all 214, then the bot is not what is filtering people, your capacity is,
 and you should shorten the posting or close the role earlier rather than let
 software absorb the shortfall invisibly.
 
-## How you know the screening is honest
+## Catch a bad extraction run before you trust a single block
+
+An extraction run fails in ways that look like ordinary output. Each symptom
+below has one cause, and reading the symptom saves you from tuning the wrong
+part of the charter.
+
+| Symptom | Cause | Fix |
+|---|---|---|
+| A quote does not appear in the source | The model wrote plausible text instead of extracting | Stop the run. Every quote in that batch is now unverified |
+| Almost every block says ambiguous for one requirement | That requirement is not a checkable fact | Rewrite the requirement, not the charter |
+| One requirement returns not found far more than the others | Either it is vague, or a file format is silently failing | Read WHERE I LOOKED before you touch the wording |
+| The output names a country, a school, or a graduation year | Identity detail leaked past the prohibition | Tighten the omit rule, then run the identity swap |
+| Two runs over the same folder disagree | Output format is loose enough to leave room | Close the template. Treat disagreement as a coverage bug |
+| 190 blocks came back for 214 applications | Files failed to open and nothing said so | Require a reconciliation line: files seen, blocks produced, difference explained |
+| A block describes the candidate in a sentence | Free-form generation crept back in | Delete any instruction that invites a summary or an impression |
+| A document contains text addressed to the reader | An injection attempt, or a template someone downloaded | Surface it under CONTRADICTIONS and change nothing else |
+
+Row six is the one that hides. A run that quietly covered 190 of 214
+applications has eliminated 24 people without a single line of the charter being
+violated, which is the same failure as the buried candidate above arriving
+through a different door.
+
+## Run three audits, and only one of them measures harm to candidates
 
 Three checks, and the third is the one nobody runs.
 
@@ -257,7 +358,32 @@ for any requirement. If they differ, the bot is reading identity signals, and no
 amount of prohibition text in the charter has stopped it. That is a finding you
 want before a candidate finds it for you.
 
-## Widening the scope without crossing the line
+## The strongest objection: a human reading 214 files is biased too
+
+The best argument against everything here is that you are protecting a process
+that was never fair. Human screeners are demonstrably influenced by names,
+schools, and formatting, they are worse when tired, and they are inconsistent
+between Tuesday and Friday. Handing that to a model is not obviously a
+downgrade, and pretending otherwise is a comfortable story.
+
+That is largely true, and structured extraction does not answer it by claiming
+neutrality. It answers with three properties the model does not have. A human
+decision has an author who can be asked what they were thinking. The evidence
+sits in quotes tied to published requirements, so the reasoning can be
+re-examined months later. And a tired reader's inconsistency lands unevenly,
+while a model's tendency is applied identically to all 214, which is exactly
+the mechanism that turns individual unfairness into a pattern large enough to
+show up in an adverse impact analysis.
+
+Where the objection genuinely wins is volume. At two thousand applications no
+human reads them all, and this article has no scope that keeps everyone in. The
+honest response at that scale is to shrink the intake rather than expand the
+software: close the posting earlier, publish fewer and sharper requirements,
+or set a short work sample that everyone completes and a human marks. Those
+options are unglamorous. They are also the only ones where you can still answer
+the question of why a particular person did not get through.
+
+## Grow the bot toward more evidence, never toward decisions
 
 There is real room to grow this bot, and none of it points toward decisions.
 
@@ -295,6 +421,8 @@ folder you can actually clear, and clear it when the role closes. The same
 reversibility logic applies to a support queue, which
 [the support triage setup](/blog/grok-bot-to-support-triage) works through from
 the other direction.
+
+**Keep reading:** [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Monitor Competitors](/blog/grok-bot-to-competitor-monitoring).
 
 ## Frequently Asked Questions
 

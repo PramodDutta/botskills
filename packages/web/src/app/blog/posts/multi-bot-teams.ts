@@ -42,7 +42,7 @@ capable bots with fuzzy ones, every time, at any model quality. This is why the
 argument survives a change of runtime. Better models make each bot better at
 its job and do nothing at all about two bots having the same job.
 
-## One job nobody else has
+## Give every bot one job that no other bot has
 
 The rule is exclusive ownership. Each bot owns a job, and no other bot has that
 job or any part of it. Not "mostly owns." Not "owns it, but the other one helps
@@ -78,7 +78,7 @@ own direct message and never to a shared channel.
 anything outbound. [Content Planner Manager](/bots/content-planner-manager)
 never publishes, which keeps it cleanly separate from anything that does.
 
-## What overlapping scopes actually produce
+## Overlapping scopes produce four failures, and the silent one is worst
 
 It is worth being specific about the failure modes, because they show up in
 different disguises and people misdiagnose them as model problems.
@@ -108,7 +108,27 @@ bot needs to contribute, it writes a proposal somewhere else and the owner
 merges it. This is the same discipline that keeps a code repository sane, and
 it exists for the same reason.
 
-## The lead bot, and what it is allowed to lead
+## Decide between another bot, another routine, and nothing at all
+
+Every recurring task looks like a reason to build a bot. It usually is not, and
+the two cheaper answers are what keep a roster legible.
+
+| The situation | The right move | Why not a new bot |
+|---|---|---|
+| Same source and destination, new cadence | A second routine on the existing bot | A new bot would share a destination, which is the write collision rule |
+| Same job, slightly wider scope | Widen the existing charter | Two charters covering one job is the ownership test failing on day one |
+| A genuinely different job with its own destination | A new bot | Nothing to reuse, and ownership stays exclusive |
+| Output you would not miss for a week | Nothing. Do not build it | A roster's ceiling is your reading capacity, not your budget |
+| A bot that keeps failing at one step | Fix that bot's charter | A helper bot doubles maintenance and hides the original fault |
+| Coordination across four or more bots | One lead bot, read-only | The one genuinely separate job, described next |
+
+The fourth row saves the most and gets argued with the most. A bot whose output
+you would not miss is not free: it holds standing permissions, draws on the
+weekly allowance, and adds a name to every list you maintain, as
+[the guide to keeping a roster from running away with spend](/blog/grok-bot-spend-cap-and-token-burn)
+sets out.
+
+## Let the lead bot read everything and change nothing
 
 Once you pass three or four bots, coordination becomes its own job, and it
 should be a bot rather than a habit you maintain by hand. But a lead bot is a
@@ -182,7 +202,7 @@ current.
 
 **Sequencing is not a feature.** You cannot say "run B after A finishes." You
 can only pick clock times and leave gaps, or have B check whether A wrote its
-output before doing anything. The second is more robust and it requires a
+output before doing anything. The second survives a missed run, and it needs a
 shared file, which is the next section.
 
 **Deleting a bot is a destructive schedule change.** The routines go with it,
@@ -194,6 +214,26 @@ to notice when a routine goes quiet, put it on your most permanent bot, because
 the failure where you lose the watcher is the failure you never find out about.
 The mechanics of that watcher pattern are in
 [the routines and triggers guide](/blog/grok-bot-routines-vs-triggers).
+
+## Price those per-bot limits at three bots and at eight
+
+The numbers look generous read one at a time. Read them against a roster growing
+month by month and it becomes clear which one actually binds.
+
+| The documented limit | At 3 bots | At 8 bots | What it forces on you |
+|---|---|---|---|
+| 50 routines per bot | Nowhere near it | Still nowhere near it, at 400 possible | Nothing. It never becomes your problem |
+| 20 run records per routine | Three short histories, weeks each at daily cadence | Eight, and an hourly routine cycles inside a day | An append-only log per bot, or no cross-week evidence |
+| Nothing exists at team level | Three cadences fit in your head | Eight will not, and no screen shows them together | A roster file by hand, reread weekly |
+| Routines are deleted with the bot | One deletion, one thing to check | One deletion can silently orphan three bots | A depends-on column, checked before deleting |
+| A routine belongs to one bot | Sequencing is a clock-gap problem | Sequencing is a file-check problem across eight | Have B read whether A wrote, never guess by clock |
+
+The instructive part is which limit binds. Fifty routines per bot is far past
+anything a person can read, so quota is never the ceiling. The three that bite
+are all about visibility: a short run history, no team-level view, and a
+deletion that takes schedules with it. A roster stops scaling because you can no
+longer see it, and the fix for all three is the same file, as
+[the bot observability guide](/blog/bot-observability) works through.
 
 ## A shared file is the only team memory you get
 
@@ -246,7 +286,42 @@ can end up quoted in a summary file and read by the lead. Treating everything
 in the shared state as data rather than as instruction is what stops that chain
 from turning into a command channel.
 
-## Growing the roster without growing the chaos
+## A five-bot roster, from week one to month three
+
+A roster that survived three months, and the two things that went wrong on the
+way. Five bots, added one a week, each running a full week before the next.
+
+\`\`\`text
+/state/roster.md   you maintain this by hand, the bots only read it
+
+bot              owns                          writes        cadence       depends on
+inbox-triage     mailbox sorting and drafts    inbox.md      daily 07:00   -
+lead-scout       account research and ranking  pipeline.md   Mon 06:00     -
+content-planner  the editorial calendar        content.md    Mon and Thu   -
+standup-scribe   the engineering digest        standup.md    daily 09:15   -
+chief-of-staff   the brief, and only the brief brief.md      daily 17:30   all four
+\`\`\`
+
+The depends-on column pays for itself, because it is the only place a deletion
+cascade is visible before it happens.
+
+Month two broke twice. The triage charter was widened to summarise anything from
+a prospect domain, which quietly reached into [Lead Scout](/bots/lead-scout)
+territory. Two account summaries started arriving each Monday, differing
+slightly, and reconciling them was work that had not existed a fortnight
+earlier. The fix was one line in the never-touches column of
+[Inbox Triage](/bots/inbox-triage), not a change to either job.
+
+Then the coordinator's brief stopped arriving for nine days and nobody noticed,
+because a brief saying everything is current and a brief that never arrives are
+the same experience in a busy week. The roster file gained a last-brief date and
+the reverse pass caught it.
+
+By month three: five bots, eleven routines, one writer per file, and a weekly
+pass that takes six minutes. Neither failure was a model problem, and neither
+would have been caught by a better prompt.
+
+## Add one bot a week, and run a reverse pass every month
 
 Add one bot at a time, and let each one run for a week before adding the next.
 The reason is not caution for its own sake, it is that overlap is only visible
@@ -272,6 +347,77 @@ of the roster, which is covered in
 [the shared computer security guide](/blog/grok-bot-shared-computer-security).
 Retiring a bot properly means removing its state file, signing out anything it
 signed into, and telling the bots that read its output that the input is gone.
+
+## Name the single owner of everything your roster produced last week
+
+Here is a check that can fail, and it takes ten minutes on a roster of five.
+List everything your bots produced last week: every report, every file written,
+every draft. Beside each item write the name of the one bot that owns it, from
+memory, before you go and look.
+
+Two signals come out. Any item with two names is an overlap you have not paid
+for yet, and it arrives later as two numbers that disagree. Any item you cannot
+answer without checking means you have passed your reading capacity, because a
+roster you cannot enumerate is one you are not supervising.
+
+Then run the destination version, which is the one most likely to fail on an
+established roster. List every file, tracker, sheet, and record any bot writes
+to, and put exactly one name against each. Destinations accumulate quietly as
+charters widen, so this catches collisions the job-level test misses, and any
+destination carrying two names is a silent data loss waiting for two runs to
+overlap.
+
+Last, take the bot you would least like to lose and ask what breaks if it stops.
+If the answer is that the coordinator reads its file, check the coordinator
+would say so when that file goes stale. If not, that is a one-line change to the
+brief format and the cheapest insurance here.
+
+## What a roster looks like once the edges have blurred
+
+Each symptom has a distinct cause, and the instinctive fix usually makes the
+roster worse.
+
+| What you notice | The actual cause | The fix |
+|---|---|---|
+| Two reports carry the same number with different values | Two bots derive it by different routes at different times | One bot owns the number, the other reads its file |
+| An update you made yesterday has vanished | Two writers on one destination, last write wins, silently | Exactly one writer per destination, always |
+| A bot has started having opinions about another's job | Its own job produced nothing that day and its charter has no stop | Fill in the never-touches column for every bot |
+| A bot has been quiet for nine days | An absent report and a clean report look identical | Require output on empty runs, plus a last-seen date in the roster |
+| The coordinator restarted a failing job forty times | The lead was given the ability to remediate | Read-only over the roster, no exceptions |
+| Deleting one bot broke two others | Routines went with it and nothing downstream was told | The depends-on column, checked before every deletion |
+
+The instinctive fix for row three is more instructions for the wandering bot.
+The correct fix is to state what it never touches, because a helpful disposition
+plus an empty result set will always find something to do.
+
+## The objection is that one capable bot beats five narrow ones
+
+At full strength, because it is the best argument against everything above: one
+bot with a broad charter and access to everything holds full context, cannot
+duplicate its own work, cannot contradict another bot, and needs no roster file,
+no shared state protocol, and no coordinator. Every problem in this article is
+one you created by splitting.
+
+It is right about the coordination cost and wrong about what replaces it. A
+broad bot does contradict itself, just invisibly: two runs a week apart make
+different judgment calls and only one ever reaches you. It has one blended
+failure mode, so when output is wrong you cannot tell which part of the charter
+caused it, and you retest everything after every edit. And it holds one blended
+permission set, the union of everything any part of the job needs, all the time.
+
+Note what the objection does not win on, though people assume it does. Splitting
+into five bots buys almost no isolation, because all bots on the account share
+one persistent cloud computer and its signed-in sessions, and the docs say
+plainly not to use separate bots as a security boundary. Split for legibility,
+not containment.
+
+Where the generalist genuinely wins is early: low volume, one reader,
+exploratory work whose shape you do not know yet, and any period where you are
+still learning what you want delegated. Start there, and split a job once it has
+stabilised enough to describe in a sentence, which is the progression in
+[the starter roster guide](/blog/grok-bot-starter-roster).
+
+**Keep reading:** [Approval Gates](/blog/approval-gates-for-bots), [Keeping Bot Costs Predictable as Usage Grows](/blog/bot-cost-control), [The Seven Ways Bot Setups Fail, and How to Prevent Each](/blog/bot-failure-modes).
 
 ## Frequently Asked Questions
 
@@ -312,7 +458,7 @@ nothing at team level, and deleting a bot also deletes its routines. So
 scheduling has to be configured bot by bot, and any picture of what your roster
 does across a week is something you maintain yourself in a file. There is also
 no way to say run B after A finishes, so sequencing is done either by leaving
-clock gaps or, more robustly, by having B check whether A wrote its output to a
+clock gaps or, more reliably, by having B check whether A wrote its output to a
 shared file before proceeding.
 `,
 };

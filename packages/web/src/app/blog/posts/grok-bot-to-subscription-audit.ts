@@ -24,7 +24,7 @@ that would make you flinch if anyone put it in front of you.
 
 Nobody puts it in front of you. That is the job.
 
-## Eleven charges for a tool you cannot name
+## Finding the charge is easy, naming it is where people stop
 
 The reason this stays undone is that it is three separate research tasks stacked
 on top of each other, and only the first one is easy.
@@ -69,7 +69,45 @@ the bot flag any recurring charge whose amount changed, in either direction,
 rather than only reporting the current figure. A charge that grew 130 percent
 over a year is more interesting than one you have paid identically since 2024.
 
-## Matching a charge to actual usage
+## Sweep statements and mail as two separate passes
+
+Most people point a bot at the statements and stop, because that is where the
+money is. The statement pass tells you what left the account. The mail pass
+tells you what it was. Run them separately, in that order, and reconcile at the
+end. Each answers a question the other cannot.
+
+The statement pass is arithmetic. Group by merchant descriptor and look for a
+repeating amount on a recognisable interval. Treat as recurring anything from
+one descriptor appearing three or more times at a consistent gap, plus anything
+appearing exactly once above a threshold you set, because a single large charge
+thirteen months ago is an annual plan you have not seen renew yet.
+
+The mail pass is identification, and it is what actually resolves the
+eight-character descriptor. Search renewal notices, receipts, invoices, payment
+confirmations, plan change confirmations, and card-updated notices. Each
+carries a different fact, which is why the search terms matter more here than
+anywhere else in the charter.
+
+| Signal the bot finds | What it identifies | What it does not tell you |
+|---|---|---|
+| A card charge with a merchant descriptor | The billing entity, amount, and date | The product name, or which account it belongs to |
+| A receipt or invoice in mail | The product, plan tier, often the seat count | Whether anyone used it |
+| A renewal notice | The next charge date and the term length | Whether the price changed |
+| A plan change confirmation | When the amount moved, and which way | Who authorised it, on a shared account |
+| A card-updated or payment-failed notice | The vendor intends to keep billing you | Nothing about value |
+| A login or security email | A date somebody used the product | Which person, on a shared login |
+| The vendor's own billing page | Seats, current plan, next charge, cancellation path | Anything about the last twelve months |
+
+Reconcile the two passes and three buckets fall out. Charges matched to a
+product go in the main table. Receipts with no matching charge mean a payment
+method you did not give the bot, usually PayPal or an app store, and that gap
+matters more than the charge it hides. Charges with no matching mail go in the
+unidentified section until you resolve them by hand.
+
+Write those resolutions into a file the bot reads every run, not into a chat
+reply. A descriptor you decode once should never cost a second evening.
+
+## Report evidence of use, never a verdict
 
 This is the part that turns a list of charges into a decision, and it is where
 you should set expectations honestly with yourself. The bot will not always be
@@ -98,7 +136,7 @@ A design tool holding the only copies of your brand assets is a different
 decision from a design tool you tried once, even if both show zero logins this
 quarter.
 
-## The subscription audit bot charter
+## Paste this charter and change only the account list
 
 \`\`\`text
 You are my Subscription Auditor.
@@ -170,6 +208,18 @@ schedule the decision for the renewal date rather than to act today.
 And cancelling breaks things silently. Auth flows, embeds, domains, scheduled
 jobs that authenticate against a service nobody remembers connecting.
 
+| What cancelling costs | When it bites | The cheaper move |
+|---|---|---|
+| Data deleted after a retention window | Anything holding files, history, or exports you never took | Export first, then decide, with the export named in the row |
+| Grandfathered price gone for good | Any plan bought over a year ago | Downgrade to the cheapest paid tier, keep the account alive |
+| Remainder of a prepaid term | Annual plans cancelled mid-term | Diarise the renewal date and decide then, for free |
+| A dependency you forgot | Auth providers, domains, embeds, scheduled jobs | Search your own files for the vendor name before deciding |
+| A seat someone else uses | Shared team tools on your personal card | Ask before cancelling, which no bot can do for you |
+
+The middle column turns this from a warning into a procedure. Each row says
+which charges you can decide tonight and which need something done first, and
+the bot can label them if you put those five categories in the charter.
+
 None of that is visible in the charge. All of it is one-way. An approval controls
 the proposed action rather than reversing work already completed, so there is no
 version of "let it cancel and I will approve afterwards" that means anything.
@@ -207,10 +257,60 @@ instead. Have the bot produce two lists, CANCEL NOW and DECIDE BEFORE, with the
 second one carrying dates, and the audit becomes something you can finish in
 twenty minutes.
 
+| Row lands in | Which charges | What you do with it tonight |
+|---|---|---|
+| CANCEL NOW | Monthly, self-serve, no export needed, nothing references it | Open the settings link in the row and finish it |
+| EXPORT FIRST | Anything holding data you would miss | Take the export, then move the row to CANCEL NOW |
+| DECIDE BEFORE | Annual or quarterly plans, sorted by renewal date | Put the date in your calendar and close the tab |
+| NEEDS ME | Requires a login the bot does not have, or contacting support | Ten minutes each, batched into one sitting |
+| KEEP | Grandfathered price, or a live dependency | Nothing, but the row stays so next month is faster |
+
+Five buckets is the maximum anyone acts on at 11pm. Make the bot assign them
+rather than sorting by cost, because sorting by cost puts the expensive
+irreversible decisions at the top, which is the wrong place for them.
+
 Write the total at the top in annualised terms. Not because it is more accurate
 than the monthly figure, but because $47 a month and $564 a year are the same
 fact with very different motivational properties, and this task only gets done
 when someone is motivated.
+
+## Work one unidentified descriptor end to end
+
+The unidentified section is where an audit becomes useful or becomes a list you
+close. Here is one row followed all the way through.
+
+The statement pass produces this and nothing else:
+
+\`\`\`text
+UNIDENTIFIED
+  descriptor: SP* HLIO SVCS     amount: $29.00     seen: 11 times
+  interval:   monthly, 3rd of the month
+  first seen: 2025-10-03        last seen: 2026-08-03
+  account:    business card ending 4471
+  annualised: $348
+\`\`\`
+
+The SP prefix is a payment processor, so the real vendor is underneath it. The
+bot's next step is the mail pass, restricted: search receipts within three days
+either side of any of those eleven dates, rather than searching for the
+descriptor, which appears nowhere in a receipt. That date-window trick resolves
+most of these, and it is the single most useful line to put in the charter.
+
+The receipt from 2026-03-03 names the product, a scheduling tool, and shows the
+plan went from one seat to three in January, which explains an amount change
+the first pass had flagged. A login email dated 2026-04-12 is the last observed
+use. A search of your own files finds the tool's booking link embedded in an
+email signature: a live dependency nobody would have remembered.
+
+The finished row reads: scheduling tool, $29 monthly, $348 annualised, next
+charge 2026-09-03, grew from one seat to three on 2026-01-14, last observed use
+2026-04-12 via login email, referenced by your email signature, cancellation
+path self-serve in account settings. Bucket: KEEP, with a note to drop back to
+one seat.
+
+The charge that looked like waste is a live dependency priced two seats too
+high, and the right action is a downgrade nobody finds by reading a statement.
+That is what the extra fields buy.
 
 ## The failure that stings: an annual plan read as dead
 
@@ -238,7 +338,7 @@ The third is the sequencing rule above: annual plans go on the DECIDE BEFORE
 list with a date, never on CANCEL NOW. Deciding at renewal, when you can see a
 full year of behaviour, is both safer and free.
 
-## Verification: reconcile the report against one full statement
+## Reconcile the first report against one full statement, line by line
 
 The check is a reconciliation, and you only have to do it properly once.
 
@@ -262,6 +362,50 @@ keep billing you for a subscription you killed in March.
 Next-charge dates should be right. Pick two and check them against the vendor.
 Wrong dates make the DECIDE BEFORE list useless, and a wrong date is invisible
 until it is expensive.
+
+## My bank app already lists my subscriptions
+
+The strongest objection is that this problem is solved. Most banking apps,
+several card issuers, and a handful of consumer apps detect recurring merchants
+and show you a list, free, with no charter to write.
+
+Use them. They are good at the first task, finding repeated charges on the
+cards they can see, and if that is all you need, stop here.
+
+They fail at the other three. Each sees one institution, so a business card at
+one bank plus a personal card at another plus an app store plus PayPal gives
+four partial lists and no total. They resolve descriptors to a merchant rather
+than a product, so the eight-character string stays eight characters. They
+cannot read your mail, so they will not tell you the seat count went from one
+to three or that a price rise was emailed in June. And nothing in a payments
+feed records whether anyone logged in.
+
+The dividing line is simple. A bank feed answers "what am I paying for." An
+audit bot answers "what should I still be paying for," which needs mail, files,
+and evidence of use in one place. If the free list already got you to cancel
+three things, that is a win and this article is optional.
+
+## Where a subscription audit stops being trustworthy
+
+Three limits, and the third is the one that bites teams.
+
+Anything the bot cannot sign into stays invisible in the way that matters. The
+vendor page is where seats, plan tier, and the cancellation path live, so a
+subscription behind a login it lacks is a row with three empty fields. Mark it
+NEEDS ME rather than letting the bot guess, and expect that pile to be larger
+than you assumed, since bots run from static datacenter addresses that some
+services challenge on sight.
+
+Its own history is short. A routine belongs to one bot, the app keeps only the
+20 most recent run records for it, and there is no audit view of bot actions as
+of writing. A monthly audit ages out of the runtime's memory in under two
+years: fine for the current picture, useless year on year. Append each run to a
+document you own.
+
+And a shared card breaks the reasoning. Once two people spend on one account,
+absence of evidence in your mail is not evidence of disuse, because the login
+emails go to somebody else. There the usage column should read "unknown, shared
+payment method" rather than "no observed use," and every row starts at NEEDS ME.
 
 ## Widening it: a renewal watch instead of an annual purge
 
@@ -302,6 +446,8 @@ logins narrow and deliberate, which is the same conclusion
 dedicated accounts for anything financial, and it is the practical version of
 [the boundary argument](/blog/grok-bot-approval-rules-reversibility) about
 approvals not being undo buttons.
+
+**Keep reading:** [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Monitor Competitors](/blog/grok-bot-to-competitor-monitoring).
 
 ## Frequently Asked Questions
 

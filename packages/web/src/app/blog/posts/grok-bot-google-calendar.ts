@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot and Google Calendar: Setups, Permissions, and What to Automate First',
+  title: 'Grok Bot and Google Calendar: Permissions and What to Automate',
   description:
     'A Grok Bot Google Calendar setup that proposes instead of schedules: free/busy versus full detail, the timezone failures to expect, and why it never sends an invite.',
   date: '2026-08-25',
   category: 'Tutorial',
   content: `
-# Grok Bot and Google Calendar: Setups, Permissions, and What to Automate First
+# Grok Bot and Google Calendar: Permissions and What to Automate
 
 The calendar bot failure everyone eventually has looks like this. You ask it
 to find a time for a review with the team. It finds one, and then, because
@@ -21,12 +21,12 @@ suggestion. The bot did nothing wrong by its own lights: you asked it to find
 a time, and creating an event is what finding a time means in an API where
 propose and schedule are the same endpoint with a different field populated.
 
-Google Calendar was in the first wave of Grok connectors as of writing, and
-the connector list changes, so confirm what your account offers at connect
-time. The scope families and the failure modes below are what actually
-determine whether this integration is useful or embarrassing.
+Whether your account offers a Google Calendar connector is something to
+confirm at connect time rather than assume, since that list changes. However
+you reach the calendar, the scope families and the failure modes below are what
+decide whether this integration is useful or embarrassing.
 
-## The invite that went out to eleven people
+## Treat a calendar write with attendees as an outbound message
 
 Start with the asymmetry, because it decides everything else.
 
@@ -110,7 +110,27 @@ meeting is a moment you chose. The [chief of staff briefing](/bots/chief-of-staf
 bot in the catalog is built on the same principle, and states it as a
 boundary: it never sends, schedules, or acts externally without your approval.
 
-## Timezone failures and how each one looks
+## Decide how far into the calendar the bot may reach
+
+Those three patterns plus the two extremes give you five positions, and the
+choice is not a matter of taste. Each has a different answer to the only
+question that matters: who finds out when the bot gets it wrong.
+
+| Position | Access it needs | Who sees a mistake | Undo | Recommendation |
+|---|---|---|---|---|
+| Brief only, no scheduling | Free/busy, or event read | Nobody but you | Delete the message | Start here, and many people should stay here |
+| Text proposal in the brief | Free/busy, or event read | Nobody but you | Ignore the suggestion | Best value per unit of risk in the list |
+| Hold blocks on your calendar | Write to your own calendar, no attendees | Nobody, since no attendee is attached | Delete the hold | Add in week two, once the brief has been right for a week |
+| Draft event, attendees empty | Write to your own calendar | Nobody until you add people and send | Delete before sending | Correct when you schedule the same shape of meeting weekly |
+| Create event with attendees | Write plus attendee population | Everyone invited, twice if you cancel | None. A cancellation is a second notification, not an undo | Not in the first weeks, and narrowly if ever |
+
+The undo column is the whole argument. Four of these five fail privately, and
+the fifth fails in eleven inboxes. The documentation is blunt about what an
+approval buys you here: an approval controls the proposed action, and it does
+not reverse work already completed. There is nothing left to click once an
+invitation has gone out.
+
+## Recognise each timezone failure by its signature
 
 Calendars are where time arithmetic goes wrong, and the failures are specific
 enough to name. Each one has a recognizable signature.
@@ -153,6 +173,40 @@ A wrong conversion becomes visible in the brief, which costs you a second,
 instead of becoming visible on somebody else's calendar, which costs you a
 reschedule and a small amount of credibility.
 
+## Follow one three-region review from request to confirmed slot
+
+Here is the request in full: find 45 minutes next Thursday for a review with
+you in London, a contractor in Kolkata, and a customer in San Francisco.
+
+A bot that treats this as a search problem returns a slot. A bot that treats it
+as an arithmetic problem returns the actual answer, which is that no slot
+exists. Take 09:00 to 18:00 local as everyone's working day. London is 08:00 to
+17:00 UTC. Kolkata is 03:30 to 12:30 UTC. San Francisco is 16:00 to 01:00 UTC.
+London overlaps Kolkata until 12:30 and overlaps San Francisco from 16:00, and
+Kolkata and San Francisco never overlap at all. The three-way intersection is
+empty, and no amount of searching produces one.
+
+So the correct output is not a time. It is the constraint, plus a ranked set of
+compromises with the cost attached to a named person.
+
+| Option | London | Kolkata | San Francisco | Who pays |
+|---|---|---|---|---|
+| A. 16:30 UTC | 17:30 Thu | 22:00 Thu | 09:30 Thu | Kolkata, a late evening |
+| B. 12:00 UTC | 13:00 Thu | 17:30 Thu | 05:00 Thu | San Francisco, a very early start |
+| C. 08:00 UTC | 09:00 Thu | 13:30 Thu | 01:00 Thu | San Francisco, and it is not a real option |
+
+On day one the bot proposes A and B, rejects C in one line, and states that no
+slot sits inside all three working windows. You forward the two options and
+pick one. Nothing was written to anyone's calendar.
+
+By day thirty the charter has learned what the first run could not know: the
+contractor actually works 11:00 to 20:00 IST, and the customer blocks Thursday
+mornings. Those two facts live in the charter as declared working hours rather
+than in your head, option A stops being a compromise, and the brief now
+proposes one slot instead of three. That is what improvement looks like here.
+Not a smarter model, a charter that has absorbed four sentences of ground
+truth.
+
 ## Recurring events are where calendar bots go to die
 
 A recurring meeting is not a series of events. It is one rule plus a list of
@@ -175,7 +229,29 @@ Three constraints worth putting in the charter verbatim:
   the brief and let a human make it. This happens rarely enough that
   automating it has almost no value and a large downside.
 
-## The daily brief charter, calendar edition
+## Trace a calendar symptom back to the write that caused it
+
+Calendar problems arrive as reports from other people, which is exactly why
+they are hard to diagnose: you are told about the effect, days later, by
+someone who does not know a bot was involved. These six cover nearly all of it.
+
+| What someone tells you | The write behind it | Fix in the charter |
+|---|---|---|
+| "I got an invite you did not mention" | The bot populated the attendee list, or edited an event you own, which re-notifies everyone attached | Ban attendee population outright. Holds carry no attendees, so they notify nobody |
+| "That meeting you declined is back" | The bot recreated it from a stale read, or responded on your behalf | Ban accept, decline, and tentative. An RSVP is a message, not a state change |
+| "We were an hour off, but only in March" | The recurring slot is pinned to a fixed UTC offset rather than a named zone | Require named IANA zones everywhere, and ban fixed offsets in recurring events |
+| "You moved every standup, not just Tuesday's" | The bot edited the recurrence rule instead of a single instance | Ban series edits. Single instances only, and only events the bot created |
+| "Your calendar looks completely full" | Holds accumulate because nothing deletes them | Require every hold to carry an expiry, and delete expired holds at the start of each run |
+| The bot suddenly cannot read a calendar it read yesterday | The signed-in browser session it depended on was signed out or challenged. Egress addresses are static, and some services flag datacenter IPs | Have it name the source it could not read and stop, rather than reporting an empty day as a free one |
+
+The last row has a cause worth understanding rather than fixing. Every bot on
+your account works on one shared, persistent computer, and browser cookies and
+signed-in sessions are shared across all of them, so a Google session is
+account-wide rather than per-bot. Another bot signing out, or a challenge on
+any of them, takes your calendar reader down too. Deleting a bot does not clean
+up those sessions either.
+
+## Paste a calendar brief that can hold a slot but never invite
 
 The calendar brief is the highest-value read-only bot most people can run, and
 it is worth more than any scheduling automation. Here is a version that
@@ -226,7 +302,30 @@ database, [marketing calendar sync](/bots/marketing-calendar-sync) runs one
 way on purpose: it touches only your local calendar and never edits the shared
 source.
 
-## Week one boundary: never send an invite
+## Test the notification default against a calendar you own
+
+The scope table earlier flagged the row that is not a scope: whether a write
+notifies attendees is a parameter, and its effective default differs between
+the raw API, the web interface, and whatever wrapper sits in front of both.
+That is not a thing to reason about. It is a thing to find out, once, in
+fifteen minutes, before the bot touches a calendar with real people on it.
+
+Create a second calendar you own and an address you control that is not your
+main one. Then run four checks and write down what actually happened.
+
+| Check | What you do | Pass looks like | Fail means |
+|---|---|---|---|
+| Silent create | Have the bot create an event on your test calendar with no attendees | No mail arrives anywhere | Something is notifying on creation alone, so even holds are visible |
+| Attendee create | Have it create one with your throwaway address attached | Mail arrives, which is expected | Nothing arrives, which is worse: you cannot tell invited from not |
+| Silent edit | Have it move that event by an hour | You learn whether an edit re-notifies in your setup | An edit that re-notifies makes every correction a second interruption |
+| Delete | Delete the event with the attendee still attached | A cancellation notice arrives | Confirms there is no quiet delete once anyone is attached |
+
+The second check is the one people skip and the one that matters. A setup where
+invitations do not visibly send is not safe, it is one where you have lost the
+ability to tell the difference, and you will hear which it was from a colleague
+rather than from your own inbox.
+
+## Keep the invitation yours, then widen it narrowly if ever
 
 Every integration in this series has one action that should stay yours in the
 first weeks. For a mailbox it is send. For a code repository it is merge. For
@@ -255,6 +354,54 @@ one, is the argument in the
 [one-person company guide](/blog/one-person-company-grok-bot), and the reason
 every listing on botskills.sh declares its boundary before its prompt is
 explained in the [botskills introduction](/blog/introducing-botskills).
+
+## Answer the objection that proposing saves you nothing
+
+The honest counter-argument: the reason you wanted a calendar bot was to stop
+doing scheduling. A bot that hands you three options and waits has moved the
+work by about ninety seconds and added a review step. If you still have to
+write the email, what exactly did it do?
+
+Take the parts apart and the answer is most of it. Scheduling a cross-region
+meeting is four jobs: establish everyone's real availability, do the timezone
+arithmetic, choose a slot and justify it, then send the invitation. The first
+two are tedious, error-prone, and completely mechanical, and they are where the
+minutes actually go. The third is judgment you were always going to apply. Only
+the fourth is irreversible, and it is the one that takes four seconds.
+
+So the split is not even. The bot takes the slow, boring, checkable work and
+leaves you the fast, consequential part.
+
+Where the objection wins outright: high-volume internal scheduling of a
+repeated meeting shape, with a fixed attendee list, one timezone, and no
+external participants. A weekly internal sync in a single office has none of
+the risk described in this article, and holding it back behind a proposal step
+is ceremony. Widen there first, keep the list of addresses explicit, and leave
+everything cross-region and external on the proposal path.
+
+## Recognise where a calendar bot stops being the right tool
+
+Three situations defeat everything above, and it is cheaper to know them now.
+
+Shared team and resource calendars are not your calendar. Rooms, equipment, and
+on-call rotas often have booking rules the API does not express, and a bot
+that holds a room for a slot you never confirm is taking it from a colleague.
+Keep holds on your own calendar only.
+
+External scheduling links solve this better than any bot can. If the meeting is
+with someone outside your company and you already have a booking page, the
+right automation is the link, because it moves the timezone arithmetic to the
+person who knows their own constraints.
+
+Delegated and tenant-managed calendars change who is accountable. If an
+administrator owns the policy, the bot's behaviour is a compliance question
+rather than a preference, and mail and calendar are usually one object in that
+world rather than two. [Grok Bot with Outlook](/blog/grok-bot-outlook) covers
+what changes once an administrator owns the policy, and the timing side of any
+recurring brief, including what a silently failing routine looks like, sits in
+[Grok Bot scheduling](/blog/grok-bot-scheduling).
+
+**Keep reading:** [Grok Bot and X](/blog/grok-bot-x-twitter), [Grok Bot and Zoom](/blog/grok-bot-zoom), [Bots for Marketers](/blog/bots-for-marketers).
 
 ## Frequently Asked Questions
 
