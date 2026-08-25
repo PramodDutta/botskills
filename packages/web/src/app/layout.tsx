@@ -88,6 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <b>Build</b>
                 <Link href="/agents">Add a bot</Link>
                 <Link href="/agents">API docs</Link>
+                <a href="https://github.com/PramodDutta/botskills">GitHub</a>
               </div>
               <div className="col">
                 <b>API</b>

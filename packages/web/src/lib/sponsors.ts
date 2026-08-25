@@ -1,7 +1,18 @@
 // Sponsor inventory. P0: file-based; P1: sponsors table fed by Polar webhooks.
-// Demo entries are FICTIONAL brands that show how sold inventory looks; each
-// renders with a small "demo" tag and is replaced when a real sponsor books.
-// Never list a real company that has not bought the slot.
+//
+// Three states, and the distinction is the whole point of running ads on a
+// directory that sells trust:
+//   demo     - FICTIONAL brand, shows how sold inventory looks, tagged "demo"
+//   featured - REAL project we rate, linked for free, tagged "free pick"
+//   sponsor  - REAL paid booking (none yet), untagged
+// Never present a real project as though it bought the slot, and never let the
+// "slots taken" counter include anything but paid bookings.
+//
+// Featured links are ordinary follow links on purpose. rel="sponsored" is for
+// paid placement; these are unpaid picks, so the traffic and the link equity
+// are real. Demo entries stay nofollow because the brands do not exist.
+
+export type SponsorKind = 'demo' | 'featured' | 'sponsor';
 
 export interface Sponsor {
   id: string;
@@ -9,43 +20,58 @@ export interface Sponsor {
   line: string;
   cta: string;
   url: string;
-  demo: boolean;
+  kind: SponsorKind;
   slot?: boolean;
+  /** @deprecated read `kind` instead; kept so existing components compile */
+  demo: boolean;
+}
+
+function featured(id: string, name: string, line: string, cta: string, url: string): Sponsor {
+  return { id, name, line, cta, url, kind: 'featured', demo: false };
+}
+function demo(id: string, name: string, line: string, cta: string): Sponsor {
+  return { id, name, line, cta, url: '/sponsor', kind: 'demo', demo: true };
+}
+function openSlot(id: string, line: string): Sponsor {
+  return { id, name: 'Your tool here', line, cta: 'Book this slot', url: '/sponsor', kind: 'sponsor', slot: true, demo: false };
 }
 
 export const RAIL_CAP = 8;
 export const MARQUEE_CAP = 8;
 
 export const railSponsors: Sponsor[] = [
-  { id: 'd1', name: 'Mailgrove', line: 'Warm up inboxes before your bot ever sends.', cta: 'Start free', url: '/sponsor', demo: true },
-  { id: 'd2', name: 'Quotaboard', line: 'Pipeline dashboards your Lead Scout can write to.', cta: 'See a demo', url: '/sponsor', demo: true },
-  { id: 'd3', name: 'Deskhawk', line: 'Ticket triage that plays nicely with bot drafts.', cta: 'Try Deskhawk', url: '/sponsor', demo: true },
-  { id: 's1', name: 'Your tool here', line: 'A card in this rail, visible the whole scroll.', cta: 'Book this slot', url: '/sponsor', demo: false, slot: true },
+  featured('f1', 'QASkills.sh', 'QA skills your coding agent can install in one command.', 'Browse skills', 'https://qaskills.sh'),
+  featured('f2', 'Rakazo', 'Open-source, self-hosted runtime for the bots in this directory.', 'View the repo', 'https://github.com/elie222/rakazo'),
+  featured('f3', 'botdirectory.ai', 'Where most of this catalogue came from, MIT licensed.', 'Visit', 'https://botdirectory.ai'),
+  openSlot('s1', 'A card in this rail, visible the whole scroll.'),
 ];
 
 export const marqueeSponsors: Sponsor[] = [
-  { id: 'm1', name: 'Mailgrove', line: '', cta: '', url: '/sponsor', demo: true },
-  { id: 'm2', name: 'Quotaboard', line: '', cta: '', url: '/sponsor', demo: true },
-  { id: 'm3', name: 'Deskhawk', line: '', cta: '', url: '/sponsor', demo: true },
-  { id: 'm4', name: 'Formlark', line: '', cta: '', url: '/sponsor', demo: true },
-  { id: 'm5', name: 'Notewheel', line: '', cta: '', url: '/sponsor', demo: true },
+  featured('m1', 'QASkills.sh', '', '', 'https://qaskills.sh'),
+  featured('m2', 'Rakazo', '', '', 'https://github.com/elie222/rakazo'),
+  featured('m3', 'OpenMausBot', '', '', 'https://github.com/milind-soni/OpenMausBot'),
+  featured('m4', 'EvalDog', '', '', 'https://evaldog.com'),
+  featured('m5', 'botdirectory.ai', '', '', 'https://botdirectory.ai'),
+  demo('m6', 'Notewheel', '', ''),
 ];
 
-// Edge inventory: the flipping cards on the far left and right of wide
-// viewports, botdirectory's "edge" placement. Demo brands only until sold.
-export const EDGE_CAP = 6;
 export const edgeSponsors: Sponsor[] = [
-  { id: 'e1', name: 'Mailgrove', line: 'Inbox warmup for bot senders.', cta: 'Start free', url: '/sponsor', demo: true },
-  { id: 'e2', name: 'Quotaboard', line: 'Dashboards bots can write to.', cta: 'See a demo', url: '/sponsor', demo: true },
-  { id: 'e3', name: 'Deskhawk', line: 'Ticket triage, bot-friendly.', cta: 'Try it', url: '/sponsor', demo: true },
-  { id: 'e4', name: 'Formlark', line: 'Forms your bots can file.', cta: 'Build one', url: '/sponsor', demo: true },
-  { id: 'e5', name: 'Notewheel', line: 'Notes with an API first.', cta: 'Get a key', url: '/sponsor', demo: true },
-  { id: 'e6', name: 'Your tool here', line: 'Edge card on every page.', cta: 'Book this slot', url: '/sponsor', demo: false, slot: true },
+  featured('e1', 'QASkills.sh', 'Installable QA skills for coding agents.', 'Browse', 'https://qaskills.sh'),
+  featured('e2', 'Rakazo', 'Self-host the runtime, own the credentials.', 'Repo', 'https://github.com/elie222/rakazo'),
+  featured('e3', 'OpenMausBot', 'Apache-2.0 desktop alternative with portable teams.', 'Repo', 'https://github.com/milind-soni/OpenMausBot'),
+  featured('e4', 'EvalDog', 'Evals for the prompts your bots run on.', 'Try it', 'https://evaldog.com'),
+  featured('e5', 'botdirectory.ai', 'The original Grok Bot directory.', 'Visit', 'https://botdirectory.ai'),
+  openSlot('e6', 'Edge card on every page.'),
 ];
 
-export function railTaken(): number {
-  return railSponsors.filter((s) => !s.slot && !s.demo).length;
+/** Paid bookings only. A scarcity counter that counts free picks is a lie. */
+export function paidCount(list: Sponsor[]): number {
+  return list.filter((s) => s.kind === 'sponsor' && !s.slot).length;
 }
-export function marqueeTaken(): number {
-  return marqueeSponsors.filter((s) => !s.demo).length;
-}
+
+// Kept as named helpers because the components read them directly. Both count
+// paid bookings only, which is why they currently return zero and the site says
+// so rather than inventing scarcity.
+export const railTaken = () => paidCount(railSponsors);
+export const marqueeTaken = () => paidCount(marqueeSponsors);
+export const edgeTaken = () => paidCount(edgeSponsors);
