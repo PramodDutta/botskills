@@ -69,7 +69,8 @@ export default async function HomePage() {
                 <span key={m.id} className="spon">
                   <span className="sq" />
                   {m.name}
-                  <span className="demo-tag mono">demo</span>
+                  {m.kind === 'demo' && <span className="demo-tag mono">demo</span>}
+                  {m.kind === 'featured' && <span className="demo-tag mono">free pick</span>}
                 </span>
               ))}
               <span className="spon slot">
