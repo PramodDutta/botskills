@@ -28,7 +28,13 @@ other backends.
 - **Code**: Prettier style (single quotes, 2-space, 100 width), TypeScript
   strict. Server components fetch data; client components ('use client') own
   all interactivity; icons/functions never cross the boundary.
-- **Node 20.x pinned** (Neon driver breaks on 24).
+- **Node 24.x pinned.** Moved off 20 on 2026-08-25, before Vercel stopped building it
+  on Oct 1. The old rule said the Neon driver breaks on 24; that was tested rather than
+  inherited, and it does not apply here. Every call site uses the HTTP query path
+  (`neon()` as a tagged template) and never `Pool`, `Client` or `neonConfig`. The
+  historical incompatibility was in the WebSocket path. Verified on 24 in production:
+  reads, a write, and a read-after-write round trip. Pin the exact major, never `>=20`,
+  or the next major gets adopted the day it ships.
 
 ## Load-bearing patterns
 
