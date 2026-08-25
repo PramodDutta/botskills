@@ -6,7 +6,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://botskills.sh'),
-  title: { default: 'botskills.sh: Grok Bot Skills Directory', template: '%s | botskills.sh' },
+  title: { default: 'Grok Bot Skills Directory | botskills.sh', template: '%s | botskills.sh' },
   description:
     'The go-to directory for Grok bot skills: paste-ready Grok Bot and Rakazo setups ranked by copies, each declaring the one thing it never does without you.',
 };

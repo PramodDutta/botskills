@@ -6,10 +6,11 @@ export const revalidate = 300;
 import { Leaderboard } from '@/components/leaderboard';
 
 export const metadata: Metadata = {
-  title: 'Grok Bot Skills: the go-to directory',
+  title: 'Grok Bot Skills: Install Guide and Full List',
   description:
     'Every Grok bot skill in one place: paste-ready setups ranked by copies, each with its integrations and a hard boundary. Copy a skill, paste it into Grok Bot, done.',
   alternates: { canonical: 'https://botskills.sh/grok-bot' },
+  openGraph: { url: 'https://botskills.sh/grok-bot' },
 };
 
 export default async function GrokBotPage() {
@@ -19,7 +20,7 @@ export default async function GrokBotPage() {
     <main className="wrap">
       <div className="hero">
         <span className="kicker">Runtime hub</span>
-        <h1>Grok bot skills</h1>
+        <h1>Grok Bot skills: install guide and full list</h1>
         <p className="sub">
           {rows.length} paste-ready skills for Grok Bot, ranked by copies. A skill is one file:
           what the bot does, what it connects to, and the one thing it never does without you.

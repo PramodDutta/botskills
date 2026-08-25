@@ -16,9 +16,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const bot = getBot(slug);
   if (!bot) return { title: 'Bot not found' };
   return {
-    title: bot.name,
+    title: `${bot.name}: Grok Bot Skill`,
     description: bot.description,
     alternates: { canonical: `https://botskills.sh/bots/${slug}` },
+    openGraph: { url: `https://botskills.sh/bots/${slug}` },
   };
 }
 

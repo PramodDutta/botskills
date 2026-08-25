@@ -13,6 +13,12 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
         ],
       },
+      {
+        // Agents may crawl the API (robots.txt allows it); search engines
+        // must not index the raw JSON and markdown duplicates of bot pages.
+        source: '/api/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
     ];
   },
 };

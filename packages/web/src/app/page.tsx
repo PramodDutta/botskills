@@ -6,6 +6,12 @@ export const revalidate = 300;
 import { CATEGORIES } from '@botskills/shared';
 import { Leaderboard } from '@/components/leaderboard';
 import { LiveNow } from '@/components/live-now';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: { canonical: 'https://botskills.sh' },
+  openGraph: { url: 'https://botskills.sh' },
+};
 import { SponsorRail } from '@/components/sponsor-rail';
 import { marqueeSponsors, marqueeTaken, MARQUEE_CAP } from '@/lib/sponsors';
 
@@ -106,7 +112,7 @@ export default async function HomePage() {
         </div>
         <div className="avstrip">
           {rows.slice(0, 10).map((r) => (
-            <Link key={r.slug} href={`/bots/${r.slug}`} className="av" title={r.name}>
+            <Link key={r.slug} href={`/bots/${r.slug}`} className="av" aria-label={`${r.name}: Grok bot skill`} title={r.name}>
               {r.name.slice(0, 2).toUpperCase()}
             </Link>
           ))}
@@ -142,7 +148,7 @@ export default async function HomePage() {
         <div className="shead"><h2>Categories</h2></div>
         <div className="pills">
           {CATEGORIES.map((c) => (
-            <Link key={c.id} href={`/api/bots?category=${c.id}`} className="pill">
+            <Link key={c.id} href={`/bots?category=${c.id}`} className="pill">
               {c.name} <b>{catCount(c.id)}</b>
             </Link>
           ))}

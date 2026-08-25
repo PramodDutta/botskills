@@ -1,7 +1,11 @@
 import Link from 'next/link';
 import { postList } from './posts';
 
-export const metadata = { title: 'Blog' };
+export const metadata = {
+  title: 'Blog',
+  alternates: { canonical: 'https://botskills.sh/blog' },
+  openGraph: { url: 'https://botskills.sh/blog' },
+};
 
 export default function BlogPage() {
   return (

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     'Accounts are launching soon on botskills.sh: keep your upvotes across devices, follow bots, and publish under your handle. Join the waitlist.',
   alternates: { canonical: 'https://botskills.sh/signup' },
+  robots: { index: false, follow: true },
 };
 
 export default function SignupPage() {

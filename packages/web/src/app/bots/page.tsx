@@ -4,7 +4,13 @@ import { getBoardRows } from '@/lib/board';
 export const revalidate = 300;
 import { Leaderboard } from '@/components/leaderboard';
 
-export const metadata = { title: 'All bots' };
+export const metadata = {
+  title: 'All Grok Bot Skills',
+  description:
+    'Every bot skill in the directory: search by integration, filter by category, sorted by verified copies. Each bot declares its hard boundary.',
+  alternates: { canonical: 'https://botskills.sh/bots' },
+  openGraph: { url: 'https://botskills.sh/bots' },
+};
 
 export default async function BotsPage() {
   const rows = await getBoardRows();

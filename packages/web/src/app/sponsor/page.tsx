@@ -4,6 +4,8 @@ export const metadata: Metadata = {
   title: 'Sponsor',
   description:
     'Reach people setting up bots for Grok Bot and Rakazo. Flat monthly slots, no auction, category-exclusive.',
+  alternates: { canonical: 'https://botskills.sh/sponsor' },
+  openGraph: { url: 'https://botskills.sh/sponsor' },
 };
 
 // P0 static page. P1 wires live slot counts from the sponsors table and a
