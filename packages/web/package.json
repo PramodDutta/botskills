@@ -21,11 +21,11 @@
     "simple-icons": "^13.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.14.0",
+    "@types/node": "^24.13.3",
     "@types/react": "^19.0.0",
     "typescript": "^5.6.0"
   },
   "engines": {
-    "node": ">=20 <21"
+    "node": "24.x"
   }
 }
