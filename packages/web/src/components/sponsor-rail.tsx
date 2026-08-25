@@ -1,26 +1,28 @@
 import Link from 'next/link';
-import { railSponsors, railOpenCount, RAIL_CAP } from '@/lib/sponsors';
+import { railSponsors, railTaken, RAIL_CAP } from '@/lib/sponsors';
 
-// botdirectory-pattern rail: sticky beside the leaderboard on desktop, a strip
-// on mobile. Real sponsors render logo+line+custom CTA; placeholders sell the
-// slot with the live open count (never hardcoded).
+// botdirectory-pattern rail: sticky beside the leaderboard on desktop. Demo
+// entries are fictional brands showing how sold inventory looks; the corner
+// tag says so. Taken counts come from real (non-demo) bookings only.
 export function SponsorRail() {
-  const open = railOpenCount();
   return (
     <aside className="rail" aria-label="Sponsors">
       <div className="rail-head mono">SPONSORS</div>
       {railSponsors.map((s) => (
-        <Link key={s.id} href={s.url} className={`rail-card${s.placeholder ? ' is-slot' : ''}`}>
+        <Link key={s.id} href={s.url} className={`rail-card${s.slot ? ' is-slot' : ''}`}>
           <span className="sq" />
           <span className="rail-txt">
-            <span className="rail-name">{s.name}</span>
+            <span className="rail-name">
+              {s.name}
+              {s.demo && <span className="demo-tag mono">demo</span>}
+            </span>
             <span className="rail-line">{s.line}</span>
             <span className="rail-cta">{s.cta} →</span>
           </span>
         </Link>
       ))}
       <Link href="/sponsor" className="rail-book">
-        {RAIL_CAP - open} of {RAIL_CAP} taken · <b>$360/mo</b>
+        {railTaken()} of {RAIL_CAP} taken · <b>$360/mo</b>
       </Link>
     </aside>
   );

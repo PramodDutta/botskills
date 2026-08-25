@@ -6,7 +6,7 @@ export const revalidate = 300;
 import { CATEGORIES } from '@botskills/shared';
 import { Leaderboard } from '@/components/leaderboard';
 import { SponsorRail } from '@/components/sponsor-rail';
-import { marqueeOpenCount, MARQUEE_CAP } from '@/lib/sponsors';
+import { marqueeSponsors, marqueeTaken, MARQUEE_CAP } from '@/lib/sponsors';
 
 export default async function HomePage() {
   const rows = await getBoardRows();
@@ -26,14 +26,21 @@ export default async function HomePage() {
         </p>
       </div>
 
-      {/* Sponsor marquee (botdirectory pattern), placeholder inventory */}
+      {/* Sponsor marquee (botdirectory pattern); demo brands are fictional */}
       <div className="marquee" aria-label="Sponsors">
         <div className="marquee-in">
           {[1, 2].map((k) => (
             <span key={k} className="marquee-seg">
-              <span className="spon"><span className="sq" />Your tool here</span>
-              <span className="spon"><span className="sq" />Sponsor slot</span>
-              <span className="spon slot"><Link href="/sponsor">Advertise · {MARQUEE_CAP - marqueeOpenCount()} of {MARQUEE_CAP} taken · $120/mo</Link></span>
+              {marqueeSponsors.map((m) => (
+                <span key={m.id} className="spon">
+                  <span className="sq" />
+                  {m.name}
+                  <span className="demo-tag mono">demo</span>
+                </span>
+              ))}
+              <span className="spon slot">
+                <Link href="/sponsor">Advertise · {marqueeTaken()} of {MARQUEE_CAP} taken · $120/mo</Link>
+              </span>
             </span>
           ))}
         </div>
@@ -52,7 +59,7 @@ export default async function HomePage() {
                 <span className="av">{r.name.slice(0, 2).toUpperCase()}</span>
                 <span className="nm">{r.name}</span>
               </span>
-              <span className="tag">{r.category}</span>
+              <span className={`tag tag-${r.category}`}>{r.category}</span>
               <span className="rstats mono">
                 <span><b>{r.copies.toLocaleString('en-US')}</b> copies</span>
                 <span><b>{r.delta7d >= 0 ? '+' : ''}{r.delta7d}</b> 7d</span>
