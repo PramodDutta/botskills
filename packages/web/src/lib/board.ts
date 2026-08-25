@@ -48,6 +48,7 @@ export async function getBoardRows(): Promise<BoardRow[]> {
     description: b.description,
     category: b.category,
     contributor: b.author,
+    integrations: b.integrations as string[],
     runtimes: b.runtimes as string[],
     runtimeBadges: (b.runtimes as string[]).map(badge),
     copies: counts.total.get(b.slug) ?? 0,

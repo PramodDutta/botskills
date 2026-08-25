@@ -31,6 +31,18 @@ export const marqueeSponsors: Sponsor[] = [
   { id: 'm5', name: 'Notewheel', line: '', cta: '', url: '/sponsor', demo: true },
 ];
 
+// Edge inventory: the flipping cards on the far left and right of wide
+// viewports, botdirectory's "edge" placement. Demo brands only until sold.
+export const EDGE_CAP = 6;
+export const edgeSponsors: Sponsor[] = [
+  { id: 'e1', name: 'Mailgrove', line: 'Inbox warmup for bot senders.', cta: 'Start free', url: '/sponsor', demo: true },
+  { id: 'e2', name: 'Quotaboard', line: 'Dashboards bots can write to.', cta: 'See a demo', url: '/sponsor', demo: true },
+  { id: 'e3', name: 'Deskhawk', line: 'Ticket triage, bot-friendly.', cta: 'Try it', url: '/sponsor', demo: true },
+  { id: 'e4', name: 'Formlark', line: 'Forms your bots can file.', cta: 'Build one', url: '/sponsor', demo: true },
+  { id: 'e5', name: 'Notewheel', line: 'Notes with an API first.', cta: 'Get a key', url: '/sponsor', demo: true },
+  { id: 'e6', name: 'Your tool here', line: 'Edge card on every page.', cta: 'Book this slot', url: '/sponsor', demo: false, slot: true },
+];
+
 export function railTaken(): number {
   return railSponsors.filter((s) => !s.slot && !s.demo).length;
 }

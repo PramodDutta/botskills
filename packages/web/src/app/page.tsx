@@ -18,12 +18,24 @@ export default async function HomePage() {
     <main className="wrap">
       {/* Compact hero, TrustMRR-style: the board is the hero */}
       <div className="hero">
-        <span className="kicker">The Grok Bot skills directory</span>
-        <h1>The leaderboard of bots that get real work done</h1>
+        <span className="kicker">Works with <Link href="/grok-bot">Grok Bot</Link> and <Link href="/rakazo">Rakazo</Link></span>
+        <h1>The Grok Bot skills directory</h1>
         <p className="sub">
-          Paste-ready Grok bot skills ranked by copies, with full Rakazo support. Every bot
-          declares its integrations and the one thing it never does without you.
+          Bots that get real work done, ranked by copies. Set one up with a single prompt,
+          and every bot declares the one thing it never does without you.
         </p>
+        <div className="explore-row">
+          <span className="explore-label">Explore:</span>
+          {CATEGORIES.map((c) => (
+            <Link key={c.id} href={`/bots?category=${c.id}`}>{c.name}</Link>
+          ))}
+        </div>
+        <div className="explore-row tools">
+          <span className="explore-label">Popular tools:</span>
+          {['Gmail', 'Slack', 'GitHub', 'Notion', 'X', 'Salesforce'].map((t) => (
+            <Link key={t} href={`/bots?q=${t.toLowerCase()}`}>{t}</Link>
+          ))}
+        </div>
       </div>
 
       {/* Sponsor marquee (botdirectory pattern); demo brands are fictional */}
