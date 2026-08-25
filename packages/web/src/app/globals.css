@@ -1,0 +1,80 @@
+/* Token system from the approved mockup (docs/mockup). Dark-first. */
+:root {
+  --ground: #0b0e12; --surface: #12161c; --raise: #171c24; --ink: #e8edf2;
+  --muted: #8b97a3; --line: #232a33; --line2: #2d3641;
+  --accent: #f0a63b; --accent-ink: #0b0e12;
+  --pos: #7fd06c; --neg: #e06c6c; --verify: #9be15d;
+  --gb: #c9d6ff; --gb-bg: #1d2740; --rk: #ffd9c9; --rk-bg: #3c2417;
+  --sans: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    --ground: #f7f8fa; --surface: #ffffff; --raise: #f0f2f5; --ink: #141a21;
+    --muted: #5d6a76; --line: #e2e7ec; --line2: #d3dae1;
+    --accent: #c97d0a; --accent-ink: #ffffff;
+    --pos: #2e7d32; --neg: #b3261e; --verify: #3f8f1f;
+    --gb: #2b3f77; --gb-bg: #e3eaff; --rk: #8a3d1a; --rk-bg: #ffe9df;
+  }
+}
+:root[data-theme='light'] {
+  --ground: #f7f8fa; --surface: #ffffff; --raise: #f0f2f5; --ink: #141a21;
+  --muted: #5d6a76; --line: #e2e7ec; --line2: #d3dae1;
+  --accent: #c97d0a; --accent-ink: #ffffff;
+  --pos: #2e7d32; --neg: #b3261e; --verify: #3f8f1f;
+  --gb: #2b3f77; --gb-bg: #e3eaff; --rk: #8a3d1a; --rk-bg: #ffe9df;
+}
+* { box-sizing: border-box; }
+body { background: var(--ground); color: var(--ink); font-family: var(--sans);
+  font-size: 15px; line-height: 1.55; margin: 0; }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 1020px; margin: 0 auto; padding: 0 1.1rem; }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+.site-header { border-bottom: 1px solid var(--line); }
+.hrow { display: flex; align-items: center; gap: 1.2rem; padding: 0.7rem 0; }
+.logo { font-weight: 800; display: flex; align-items: center; gap: 0.45rem; }
+.logo .dot { width: 10px; height: 10px; border-radius: 2px; background: var(--accent); }
+.logo .tld { color: var(--muted); font-weight: 500; }
+.site-header nav { display: flex; gap: 1rem; font-size: 0.86rem; color: var(--muted); }
+.site-header nav a:hover { color: var(--ink); }
+.site-footer { border-top: 1px solid var(--line); margin-top: 3rem; padding: 1.2rem 0 2.2rem;
+  color: var(--muted); font-size: 0.8rem; }
+
+.hero { padding: 2.2rem 0 1.2rem; }
+.kicker { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent); }
+h1 { font-size: clamp(1.6rem, 4.5vw, 2.3rem); font-weight: 800; letter-spacing: -0.03em;
+  line-height: 1.1; margin: 0.4rem 0; }
+.sub { color: var(--muted); max-width: 60ch; }
+
+.board { border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+  background: var(--surface); margin-top: 1rem; }
+.board-scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 0.86rem; }
+th { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); text-align: left;
+  padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--line); background: var(--raise); }
+td { padding: 0.58rem 0.8rem; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: var(--raise); }
+td.rank { font-family: var(--mono); color: var(--muted); width: 2.4rem; }
+.nm { font-weight: 600; }
+.ds { font-size: 0.76rem; color: var(--muted); }
+.rt { display: inline-block; font-family: var(--mono); font-size: 0.62rem; font-weight: 700;
+  padding: 0.1rem 0.38rem; border-radius: 5px; margin-right: 0.25rem; }
+.rt-grok-bot { color: var(--gb); background: var(--gb-bg); }
+.rt-rakazo { color: var(--rk); background: var(--rk-bg); }
+.boundary { font-size: 0.74rem; color: var(--muted); font-style: italic; }
+
+.detail { padding: 2rem 0; }
+.detail pre { background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 1rem 1.1rem; font-family: var(--mono); font-size: 0.8rem; line-height: 1.6;
+  overflow-x: auto; white-space: pre-wrap; }
+.meta-row { display: flex; gap: 1.4rem; flex-wrap: wrap; color: var(--muted);
+  font-size: 0.82rem; margin: 0.6rem 0 1rem; }
+.callout { border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  border-radius: 10px; background: var(--surface); padding: 0.8rem 1rem; margin: 1rem 0; }
+
+article.post { max-width: 70ch; }
+article.post pre { white-space: pre-wrap; }

@@ -1,0 +1,12 @@
+{
+  "name": "botskills",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "engines": { "node": ">=20 <21" },
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "db:seed": "node packages/web/scripts/seed.mjs"
+  },
+  "devDependencies": { "turbo": "^2.3.0" }
+}
