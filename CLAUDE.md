@@ -28,6 +28,21 @@ other backends.
 - **Code**: Prettier style (single quotes, 2-space, 100 width), TypeScript
   strict. Server components fetch data; client components ('use client') own
   all interactivity; icons/functions never cross the boundary.
+- **Do not bump `@neondatabase/serverless` to 1.x without upgrading drizzle-orm first.**
+  1.0.0 removed the ability to call the query function as a plain function, and
+  drizzle-orm 0.36.4 does exactly that (`this.client(query, params, ...)` in
+  `neon-http/session.cjs`). The shim that supports both driver generations
+  (`this.clientQuery = client.query ?? client;`) arrived in drizzle-orm 0.40.1.
+  Order: drizzle to >= 0.40.1 first, verify, then the driver.
+  This trap is silent. The peer range is `>=0.10.0` and optional, so the install
+  is clean, the build passes, and `tsc` passes; it fails only when a query runs.
+  Check before trusting a green build:
+  `grep -c clientQuery packages/web/node_modules/drizzle-orm/neon-http/session.cjs`
+  must be non-zero. It is currently 0.
+  Dormant today only because the drizzle `db` proxy in `src/db/index.ts` is not
+  imported anywhere; all six live query sites use raw `neon()` tagged templates.
+  It bites whoever first uses `db`.
+
 - **Node 24.x pinned.** Moved off 20 on 2026-08-25, before Vercel stopped building it
   on Oct 1. The old rule said the Neon driver breaks on 24; that was tested rather than
   inherited, and it does not apply here. Every call site uses the HTTP query path
