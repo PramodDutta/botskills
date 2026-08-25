@@ -34,7 +34,7 @@ what to never do. That artifact travels in four ways.
 | The runtime itself | Your own account's skills and routines | Whatever you built | You build it | Nothing, it does not leave your account | None |
 | GitHub repositories | Files under version control | Unbounded, unindexed | Commit it | Whatever the repo's schema requires | Repo search |
 | Posts on X | Screenshots and pasted prompts | Enormous, unsearchable in practice | Someone posts it | Usually nothing | Engagement |
-| botskills.sh | Dedicated directory | 37 setups, 32 of them imported from botdirectory under MIT | PR reviewed against a schema | Integrations, runtimes, and a required boundary line | Recorded copies |
+| botskills.sh | Dedicated directory | 37 setups, all written here | PR reviewed against a schema | Integrations, runtimes, and a required boundary line | Recorded copies |
 
 Read that table as a statement about trade-offs, not a scoreboard. Coverage and
 curation pull against each other. The largest source has the least structure.
@@ -184,6 +184,32 @@ account and the post becomes a durable, versioned file with an attributed
 contributor. That is a better answer than a bookmark folder, and it is the
 feature we would most like to have.
 
+## Provenance is the thing that actually differs
+
+Every source can hand you working text. What they differ on is how much of the
+setup's history survives the trip, and history is what you need when the bot
+does something surprising three weeks later.
+
+\`\`\`mermaid
+flowchart TD
+  A["Someone builds a bot that works"] --> B{"How does it reach you?"}
+  B -->|"posted on X"| C["A screenshot or a thread"]
+  B -->|"pushed to a repo"| D["A file under version control"]
+  B -->|"submitted to a directory"| E["A listing with fixed fields"]
+  B -->|"the runtime's own sharing"| F["Stays inside one account"]
+  C --> G["You retype it.<br/>No version, no author trail,<br/>no stated limits"]
+  D --> H["You clone it.<br/>History and diffs,<br/>but no schema to compare across"]
+  E --> I["You copy it.<br/>Comparable fields,<br/>but someone had to review it first"]
+  F --> J["You cannot get it at all"]
+  G --> K["A bot running against your accounts"]
+  H --> K
+  I --> K
+\`\`\`
+
+Read the arrows rather than the boxes. Everything converges on the same place, a
+bot holding real credentials, and the only question is how much you knew about
+it before it got there.
+
 ## Where botskills.sh sits, stated plainly
 
 Three specifics, so you can judge us on the same axes.
@@ -193,10 +219,17 @@ our schema and one sentence naming the action the bot never takes without you.
 [Lead Scout](/bots/lead-scout) never contacts anyone. [Inbox Triage](/bots/inbox-triage)
 never sends an email. [PR Review Sentinel](/bots/pr-review-sentinel) never merges,
 approves, pushes, or requests changes. A submission without one does not pass
-review. This is our only real design opinion and it is not free: it adds
-friction to every submission, and someone has to write the line by hand for
-every import. We are newer and roughly a sixth the size, and that requirement is
-part of why.
+review. This is our only real design opinion and it is not free: it is the one
+field nobody can automate, because deciding what a bot must never do requires
+understanding what the job costs when it goes wrong. We are newer and smaller,
+and that requirement is part of why.
+
+**Every listing is written here.** The catalogue started with 32 of its 37
+entries imported from botdirectory under MIT, credited and licensed properly.
+Those 32 have since been rewritten from scratch, which is why the median setup
+went from roughly 110 words to roughly 360. We say this because the earlier
+version of this article disclosed the imports, and a disclosure that quietly
+stops being true is worse than never having made it.
 
 **Ranking comes from recorded copies, not from self-reporting.** The leaderboard
 counts copy events from the database and sorts on them. With no reachable
@@ -204,11 +237,11 @@ database it returns zeros rather than a plausible-looking number, because a
 fabricated count is worse than an empty one.
 
 **We sell sponsor slots and we do not put our own products in them.** Flat
-monthly rates, no auction, one sponsor per category, rotation so every sponsor
-gets an equal share. Placement never changes a listing's rank, because rank
-comes from copies. On any directory, ours included, the questions worth asking
-are who operates it, whether paid placement is labelled, and whether payment can
-move a listing up the list. Ask them of us.
+monthly rates, no auction, one sponsor per category. Every booked slot renders
+on every matching page load, so nobody is splitting a rotation. Placement never
+changes a listing's rank, because rank comes from copies. On any directory, ours
+included, the questions worth asking are who operates it, whether paid placement
+is labelled, and whether payment can move a listing up the list. Ask them of us.
 
 ## The strongest objection: a required boundary field is a checkbox
 
