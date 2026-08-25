@@ -5,7 +5,7 @@ version: 1.0.0
 author: botskills.sh
 license: MIT
 category: marketing
-integrations: [maxfusion]
+integrations: [google-drive]
 runtimes: [grok-bot]
 boundary: Never launches a campaign, edits a live ad, or spends a credit; every variant is written to a draft file for a human to move.
 tags: [ad-copy, creative-variants, drafts]
