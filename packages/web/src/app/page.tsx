@@ -60,7 +60,7 @@ export default async function HomePage() {
         </div>
       </div>
 
-      {/* Sponsor marquee (botdirectory pattern); demo brands are fictional */}
+      {/* Sponsor marquee. Demo brands are fictional; free picks are real. */}
       <div className="marquee" aria-label="Sponsors">
         <div className="marquee-in">
           {[1, 2].map((k) => (

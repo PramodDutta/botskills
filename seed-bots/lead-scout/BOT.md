@@ -2,7 +2,7 @@
 name: Lead Scout
 description: Finds and ranks warm leads overnight from public signals and hands you a scored sheet with evidence links, never touching a single prospect.
 version: 1.0.0
-author: kristaletz
+author: botskills.sh
 license: MIT
 category: sales
 integrations: [x, sheets]

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { railSponsors, FOUNDING_SLOTS } from '@/lib/sponsors';
 
-// botdirectory-pattern rail: sticky beside the leaderboard on desktop. Demo
+// Sponsor rail: sticky beside the leaderboard on desktop. Demo
 // entries are fictional brands showing how sold inventory looks; the corner
 // tag says so. Taken counts come from real (non-demo) bookings only.
 export function SponsorRail() {

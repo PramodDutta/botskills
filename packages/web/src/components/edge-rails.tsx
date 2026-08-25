@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { edgeSponsors } from '@/lib/sponsors';
 
-// botdirectory-style edge placement: pastel sponsor cards down both sides of
+// Edge placement: pastel sponsor cards down both sides of
 // wide viewports, flipping through the inventory so every sponsor gets equal
 // share. Hidden below 1420px; flipping pauses for prefers-reduced-motion.
 const TINTS = ['tint-a', 'tint-b', 'tint-c', 'tint-d', 'tint-e'];

@@ -2,7 +2,7 @@
 name: Churn Watch
 description: Flags at-risk accounts each morning with the evidence trail that says why, so success gets ahead of cancellations without guesswork.
 version: 1.0.0
-author: saasmaria
+author: botskills.sh
 license: MIT
 category: success
 integrations: [stripe, intercom]

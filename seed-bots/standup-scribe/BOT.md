@@ -2,7 +2,7 @@
 name: Standup Scribe
 description: Drafts your daily standup from yesterday's commits, merged PRs, and calendar, delivered to your DM before the meeting.
 version: 1.0.0
-author: ericz
+author: botskills.sh
 license: MIT
 category: ops
 integrations: [github, slack, google-calendar]
