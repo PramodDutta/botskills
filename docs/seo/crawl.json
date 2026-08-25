@@ -1,0 +1,211 @@
+[
+ {
+  "url": "https://botskills.sh",
+  "status": 200,
+  "final": "https://www.botskills.sh/",
+  "title": "botskills.sh: Grok Bot Skills Directory",
+  "title_len": 39,
+  "desc_len": 153,
+  "canonical": "",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/blog",
+  "status": 200,
+  "final": "https://www.botskills.sh/blog",
+  "title": "Blog | botskills.sh",
+  "title_len": 19,
+  "desc_len": 153,
+  "canonical": "",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/agents",
+  "status": 200,
+  "final": "https://www.botskills.sh/agents",
+  "title": "For agents: read, install, and author bots | botskills.sh",
+  "title_len": 57,
+  "desc_len": 125,
+  "canonical": "https://botskills.sh/agents",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/grok-bot",
+  "status": 200,
+  "final": "https://www.botskills.sh/grok-bot",
+  "title": "Grok Bot Skills: the go-to directory | botskills.sh",
+  "title_len": 51,
+  "desc_len": 163,
+  "canonical": "https://botskills.sh/grok-bot",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/rakazo",
+  "status": 200,
+  "final": "https://www.botskills.sh/rakazo",
+  "title": "Rakazo skills | botskills.sh",
+  "title_len": 28,
+  "desc_len": 159,
+  "canonical": "https://botskills.sh/rakazo",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/account-expert",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/account-expert",
+  "title": "Account Expert | botskills.sh",
+  "title_len": 29,
+  "desc_len": 76,
+  "canonical": "https://botskills.sh/bots/account-expert",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/account-growth-coach",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/account-growth-coach",
+  "title": "Account Growth Coach | botskills.sh",
+  "title_len": 35,
+  "desc_len": 84,
+  "canonical": "https://botskills.sh/bots/account-growth-coach",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/bot-advisor",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/bot-advisor",
+  "title": "Bot Advisor | botskills.sh",
+  "title_len": 26,
+  "desc_len": 77,
+  "canonical": "https://botskills.sh/bots/bot-advisor",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/churn-early-warning",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/churn-early-warning",
+  "title": "Churn Early Warning | botskills.sh",
+  "title_len": 34,
+  "desc_len": 71,
+  "canonical": "https://botskills.sh/bots/churn-early-warning",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/churn-watch",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/churn-watch",
+  "title": "Churn Watch | botskills.sh",
+  "title_len": 26,
+  "desc_len": 132,
+  "canonical": "https://botskills.sh/bots/churn-watch",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/competitor-pricing-watch",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/competitor-pricing-watch",
+  "title": "Competitor Pricing Watch | botskills.sh",
+  "title_len": 39,
+  "desc_len": 50,
+  "canonical": "https://botskills.sh/bots/competitor-pricing-watch",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/content-idea-generator",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/content-idea-generator",
+  "title": "Content Idea Generator | botskills.sh",
+  "title_len": 37,
+  "desc_len": 66,
+  "canonical": "https://botskills.sh/bots/content-idea-generator",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/email-purger",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/email-purger",
+  "title": "Email Purger | botskills.sh",
+  "title_len": 27,
+  "desc_len": 87,
+  "canonical": "https://botskills.sh/bots/email-purger",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/inbox-triage",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/inbox-triage",
+  "title": "Inbox Triage | botskills.sh",
+  "title_len": 27,
+  "desc_len": 133,
+  "canonical": "https://botskills.sh/bots/inbox-triage",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/lead-scout",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/lead-scout",
+  "title": "Lead Scout | botskills.sh",
+  "title_len": 25,
+  "desc_len": 140,
+  "canonical": "https://botskills.sh/bots/lead-scout",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/meeting-double",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/meeting-double",
+  "title": "Meeting Double | botskills.sh",
+  "title_len": 29,
+  "desc_len": 83,
+  "canonical": "https://botskills.sh/bots/meeting-double",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/pr-review-sentinel",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/pr-review-sentinel",
+  "title": "PR Review Sentinel | botskills.sh",
+  "title_len": 33,
+  "desc_len": 137,
+  "canonical": "https://botskills.sh/bots/pr-review-sentinel",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/bots/standup-scribe",
+  "status": 200,
+  "final": "https://www.botskills.sh/bots/standup-scribe",
+  "title": "Standup Scribe | botskills.sh",
+  "title_len": 29,
+  "desc_len": 123,
+  "canonical": "https://botskills.sh/bots/standup-scribe",
+  "h1_count": 1,
+  "og": true
+ },
+ {
+  "url": "https://botskills.sh/blog/introducing-botskills",
+  "status": 200,
+  "final": "https://www.botskills.sh/blog/introducing-botskills",
+  "title": "Introducing botskills.sh: a leaderboard of bots that get real work done | botski",
+  "title_len": 86,
+  "desc_len": 168,
+  "canonical": "https://botskills.sh/blog/introducing-botskills",
+  "h1_count": 0,
+  "og": true
+ }
+]

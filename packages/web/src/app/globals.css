@@ -334,3 +334,16 @@ td.ints { white-space: nowrap; }
   :root:not([data-theme='light']) .tint-c, :root:not([data-theme='light']) .tint-d,
   :root:not([data-theme='light']) .tint-e { background: var(--raise); }
 }
+
+.live-now { display: inline-flex; align-items: center; gap: 0.45rem;
+  font-size: 0.82rem; font-weight: 600; color: var(--pos); margin: 0.2rem 0 0.5rem; }
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--pos);
+  animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: 0.35; } }
+@media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } }
+.prose h1 { font-size: 1.7rem; margin: 0.4rem 0 0.8rem; }
+.prose h2 { font-size: 1.2rem; margin: 1.4rem 0 0.5rem; border: none; padding: 0; }
+.prose p, .prose li { max-width: 68ch; }
+.prose ol, .prose ul { padding-left: 1.2rem; }
+.prose code { background: var(--raise); border: 1px solid var(--line);
+  padding: 0.05rem 0.3rem; border-radius: 5px; font-size: 0.85em; }

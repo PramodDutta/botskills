@@ -1,6 +1,6 @@
 ---
 name: Competitor Pricing Watch
-description: Set up a new bot for me that checks every 6 hours.
+description: Watches the competitor pricing pages you list every six hours and sends a diff of old versus new with one line on what the change probably means.
 version: 1.0.0
 author: ericzakariasson
 license: MIT

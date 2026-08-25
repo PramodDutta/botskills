@@ -80,6 +80,13 @@ const stmts = [
     created_at timestamp NOT NULL DEFAULT now()
   )`,
   `CREATE UNIQUE INDEX IF NOT EXISTS signups_email_source_idx ON signups (email, source)`,
+  `CREATE TABLE IF NOT EXISTS visit_events (
+    id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+    visitor_hash text NOT NULL,
+    path text NOT NULL DEFAULT '/',
+    created_at timestamp NOT NULL DEFAULT now()
+  )`,
+  `CREATE INDEX IF NOT EXISTS visit_recent_idx ON visit_events (created_at)`,
 ];
 
 for (const s of stmts) await sql(s);

@@ -5,6 +5,7 @@ import { getBoardRows } from '@/lib/board';
 export const revalidate = 300;
 import { CATEGORIES } from '@botskills/shared';
 import { Leaderboard } from '@/components/leaderboard';
+import { LiveNow } from '@/components/live-now';
 import { SponsorRail } from '@/components/sponsor-rail';
 import { marqueeSponsors, marqueeTaken, MARQUEE_CAP } from '@/lib/sponsors';
 
@@ -14,12 +15,27 @@ export default async function HomePage() {
   const recent = rows.slice(-4).reverse(); // stand-in for created_at until DB
   const catCount = (id: string) => bots.filter((b) => b.category === id).length;
 
+  const itemList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Grok Bot skills leaderboard',
+    numberOfItems: rows.length,
+    itemListElement: rows.slice(0, 10).map((r, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: r.name,
+      url: `https://botskills.sh/bots/${r.slug}`,
+    })),
+  };
+
   return (
     <main className="wrap">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
       {/* Compact hero, TrustMRR-style: the board is the hero */}
       <div className="hero">
         <span className="kicker">Works with <Link href="/grok-bot">Grok Bot</Link> and <Link href="/rakazo">Rakazo</Link></span>
         <h1>The Grok Bot skills directory</h1>
+        <LiveNow />
         <p className="sub">
           Bots that get real work done, ranked by copies. Set one up with a single prompt,
           and every bot declares the one thing it never does without you.

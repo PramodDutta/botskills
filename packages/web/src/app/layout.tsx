@@ -23,6 +23,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  '@id': 'https://botskills.sh/#org',
+                  name: 'botskills.sh',
+                  url: 'https://botskills.sh',
+                  logo: 'https://botskills.sh/icon.svg',
+                },
+                {
+                  '@type': 'WebSite',
+                  name: 'botskills.sh',
+                  url: 'https://botskills.sh',
+                  publisher: { '@id': 'https://botskills.sh/#org' },
+                },
+              ],
+            }),
+          }}
+        />
         <header className="site-header">
           <div className="wrap hrow">
             <Link href="/" className="logo">

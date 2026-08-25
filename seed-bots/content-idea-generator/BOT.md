@@ -1,6 +1,6 @@
 ---
 name: Content Idea Generator
-description: Set up a new bot for me I can trigger for video and content ideas.
+description: Studies your existing content, audience, and current trends, then generates ranked video and content ideas with a hook and a brief outline for each concept.
 version: 1.0.0
 author: farzyness
 license: MIT
