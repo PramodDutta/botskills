@@ -18,7 +18,7 @@ export default function SponsorPage() {
         One sponsor per category, and rotation gives every sponsor an equal share.
       </p>
       <div className="callout">
-        <b>Launch pricing.</b> Rail card $99/mo. Marquee logo $59/mo. Promoted row and
+        <b>Launch pricing.</b> Rail card $360/mo. Marquee logo $120/mo. Promoted row and
         takeover by conversation. Self-serve checkout arrives with the sponsor system;
         until then, email hello@botskills.sh and the slot goes live within a day.
       </div>

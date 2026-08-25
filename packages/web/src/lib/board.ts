@@ -6,6 +6,9 @@ import type { BoardRow } from '@/components/leaderboard';
 // stable between builds, and clearly not shipped as real numbers: the trust
 // note on the page states copies come from telemetry, so this module must be
 // replaced by the copy_events rollup BEFORE the site deploys publicly.
+// Rendered as a visible chip beside every leaderboard heading while true.
+export const DEMO_METRICS = true;
+
 function hash(s: string): number {
   let h = 2166136261;
   for (let i = 0; i < s.length; i++) {

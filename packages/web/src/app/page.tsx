@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getAllBots } from '@/lib/bots';
-import { getBoardRows } from '@/lib/board';
+import { getBoardRows, DEMO_METRICS } from '@/lib/board';
 import { CATEGORIES } from '@botskills/shared';
 import { Leaderboard } from '@/components/leaderboard';
 
@@ -14,11 +14,11 @@ export default function HomePage() {
     <main className="wrap">
       {/* Compact hero, TrustMRR-style: the board is the hero */}
       <div className="hero">
-        <span className="kicker">Skills for Grok Bot &amp; Rakazo</span>
+        <span className="kicker">The Grok Bot skills directory</span>
         <h1>The leaderboard of bots that get real work done</h1>
         <p className="sub">
-          Paste-ready bot setups ranked by copies. Every bot declares its integrations and the one
-          thing it never does without you.
+          Paste-ready Grok bot skills ranked by copies, with full Rakazo support. Every bot
+          declares its integrations and the one thing it never does without you.
         </p>
       </div>
 
@@ -63,6 +63,7 @@ export default function HomePage() {
       <section>
         <div className="shead">
           <h2>Leaderboard</h2>
+          {DEMO_METRICS && <span className="chip-sample">sample data</span>}
           <span className="hint">most copied, all time</span>
         </div>
         <div className="avstrip">

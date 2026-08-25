@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pnpm --filter @botskills/shared build && pnpm --filter @botskills/web build",
+  "outputDirectory": "packages/web/.next",
+  "installCommand": "pnpm install",
+  "framework": "nextjs"
+}

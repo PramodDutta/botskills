@@ -5,9 +5,9 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://botskills.sh'),
-  title: { default: 'botskills.sh: Skills for Grok Bot & Rakazo', template: '%s | botskills.sh' },
+  title: { default: 'botskills.sh: Grok Bot Skills Directory', template: '%s | botskills.sh' },
   description:
-    'Paste-ready bot setups for Grok Bot and Rakazo, ranked by copies. Every bot declares its integrations and the one thing it never does without you.',
+    'The go-to directory for Grok bot skills: paste-ready Grok Bot and Rakazo setups ranked by copies, each declaring the one thing it never does without you.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -30,6 +30,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
             <nav>
               <Link href="/">Leaderboard</Link>
+              <Link href="/grok-bot">Grok Bot</Link>
+              <Link href="/rakazo">Rakazo</Link>
               <Link href="/bots">Bots</Link>
               <Link href="/blog">Blog</Link>
               <Link href="/sponsor">Sponsor</Link>
@@ -47,7 +49,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="cols">
               <div className="col">
                 <b>botskills.sh</b>
-                <span>Skills for Grok Bot &amp; Rakazo</span>
+                <span>Grok bot skills, plus Rakazo</span>
+                <span>Independent. Not affiliated with xAI.</span>
                 <span>© 2026</span>
               </div>
               <div className="col">

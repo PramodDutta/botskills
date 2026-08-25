@@ -165,3 +165,8 @@ td.who { color: var(--muted); font-size: 0.78rem; white-space: nowrap; }
 .site-footer .col { display: flex; flex-direction: column; gap: 0.3rem; min-width: 8.5rem; }
 .site-footer .col b { color: var(--ink); font-size: 0.78rem; }
 .site-footer .col a:hover { color: var(--ink); }
+
+.chip-sample { font-family: var(--mono); font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
+  border: 1px dashed var(--accent); border-radius: 5px; padding: 0.1rem 0.4rem;
+  vertical-align: 2px; }

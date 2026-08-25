@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getBoardRows } from '@/lib/board';
+import { getBoardRows, DEMO_METRICS } from '@/lib/board';
 import { Leaderboard } from '@/components/leaderboard';
 
 export const metadata = { title: 'All bots' };
@@ -10,7 +10,8 @@ export default function BotsPage() {
     <main className="wrap">
       <div className="hero">
         <h1>All bots</h1>
-        <p className="sub">{rows.length} bot skills, ranked by copies.</p>
+        <p className="sub">{rows.length} bot skills, ranked by copies.{' '}
+          {DEMO_METRICS && <span className="chip-sample">sample data</span>}</p>
       </div>
       <Leaderboard rows={rows} />
       <p className="trustnote">
