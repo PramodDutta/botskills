@@ -1,0 +1,711 @@
+[
+ {
+  "slug": "one-person-company-grok-bot",
+  "title": "How to Build a One-Person Company With Grok Bot",
+  "category": "Guide",
+  "keyword": "one person company grok bot",
+  "cluster": "grok-core",
+  "priority": 1,
+  "note": "Rides a 5.3M-view X post by @sairahul1 (2026-08-19). Write ORIGINAL: our own charter framework, our catalog bots as the roster, boundary field as the through-line. Cite the post as the trend source, never reproduce it."
+ },
+ {
+  "slug": "how-to-create-a-grok-bot",
+  "title": "How to Create a Grok Bot: Step by Step for Your First Setup",
+  "category": "Guide",
+  "keyword": "how to create a grok bot",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-setup-guide",
+  "title": "Grok Bot Setup Guide: From Install to First Working Bot",
+  "category": "Guide",
+  "keyword": "grok bot setup",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-prompts-that-work",
+  "title": "Grok Bot Prompts That Actually Work: 20 Patterns With Examples",
+  "category": "Reference",
+  "keyword": "grok bot prompts",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-examples",
+  "title": "Grok Bot Examples: 25 Real Setups People Run Daily",
+  "category": "Reference",
+  "keyword": "grok bot examples",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "what-is-a-grok-bot",
+  "title": "What Is a Grok Bot? The Plain Explanation for Non-Engineers",
+  "category": "Guide",
+  "keyword": "what is a grok bot",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-vs-chatgpt-tasks",
+  "title": "Grok Bot vs ChatGPT Tasks: Which Runs Your Recurring Work",
+  "category": "Comparison",
+  "keyword": "grok bot vs chatgpt tasks",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-scheduling",
+  "title": "Grok Bot Scheduling: Daily, Weekly, and Triggered Runs Explained",
+  "category": "Guide",
+  "keyword": "grok bot schedule",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-integrations-list",
+  "title": "Every Grok Bot Integration and What Each One Unlocks",
+  "category": "Reference",
+  "keyword": "grok bot integrations",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-permissions-explained",
+  "title": "Grok Bot Permissions Explained: What You Are Actually Granting",
+  "category": "Guide",
+  "keyword": "grok bot permissions",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-troubleshooting",
+  "title": "Grok Bot Troubleshooting: 15 Failures and Their Fixes",
+  "category": "Reference",
+  "keyword": "grok bot not working",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-memory",
+  "title": "Grok Bot Memory: What It Remembers and How to Shape It",
+  "category": "Guide",
+  "keyword": "grok bot memory",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-cost",
+  "title": "Grok Bot Cost: What You Pay and How Usage Adds Up",
+  "category": "Guide",
+  "keyword": "grok bot pricing",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-safety-checklist",
+  "title": "The Grok Bot Safety Checklist Before You Connect Your Inbox",
+  "category": "Guide",
+  "keyword": "grok bot safety",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-boundaries",
+  "title": "Bot Boundaries: The One Line Every Setup Prompt Needs",
+  "category": "Guide",
+  "keyword": "ai bot boundaries",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-first-week",
+  "title": "Your First Week With Grok Bot: A Day-by-Day Plan",
+  "category": "Guide",
+  "keyword": "grok bot getting started",
+  "cluster": "grok-core"
+ },
+ {
+  "slug": "grok-bot-gmail",
+  "title": "Grok Bot + Gmail: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot gmail",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-slack",
+  "title": "Grok Bot + Slack: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot slack",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-github",
+  "title": "Grok Bot + GitHub: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot github",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-notion",
+  "title": "Grok Bot + Notion: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot notion",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-google-calendar",
+  "title": "Grok Bot + Google Calendar: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot google calendar",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-google-sheets",
+  "title": "Grok Bot + Google Sheets: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot google sheets",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-x-twitter",
+  "title": "Grok Bot + X: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot x",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-salesforce",
+  "title": "Grok Bot + Salesforce: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot salesforce",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-stripe",
+  "title": "Grok Bot + Stripe: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot stripe",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-linear",
+  "title": "Grok Bot + Linear: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot linear",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-intercom",
+  "title": "Grok Bot + Intercom: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot intercom",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-hubspot",
+  "title": "Grok Bot + HubSpot: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot hubspot",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-airtable",
+  "title": "Grok Bot + Airtable: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot airtable",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-quickbooks",
+  "title": "Grok Bot + QuickBooks: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot quickbooks",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-zoom",
+  "title": "Grok Bot + Zoom: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot zoom",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-google-drive",
+  "title": "Grok Bot + Google Drive: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot google drive",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-outlook",
+  "title": "Grok Bot + Outlook: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot outlook",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-discord",
+  "title": "Grok Bot + Discord: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot discord",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-shopify",
+  "title": "Grok Bot + Shopify: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot shopify",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-jira",
+  "title": "Grok Bot + Jira: Setups, Permissions, and What to Automate First",
+  "category": "Tutorial",
+  "keyword": "grok bot jira",
+  "cluster": "integrations"
+ },
+ {
+  "slug": "grok-bot-to-inbox-triage",
+  "title": "How to Build a Grok Bot That Can Triage your Inbox",
+  "category": "Tutorial",
+  "keyword": "grok bot inbox triage",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-standup",
+  "title": "How to Build a Grok Bot That Can Write your Standup",
+  "category": "Tutorial",
+  "keyword": "grok bot standup",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-lead-research",
+  "title": "How to Build a Grok Bot That Can Research Leads Overnight",
+  "category": "Tutorial",
+  "keyword": "grok bot lead research",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-churn-watch",
+  "title": "How to Build a Grok Bot That Can Catch Churn Early",
+  "category": "Tutorial",
+  "keyword": "grok bot churn watch",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-expense-reconciliation",
+  "title": "How to Build a Grok Bot That Can Reconcile Expenses",
+  "category": "Tutorial",
+  "keyword": "grok bot expense reconciliation",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-pr-review",
+  "title": "How to Build a Grok Bot That Can Review Pull Requests",
+  "category": "Tutorial",
+  "keyword": "grok bot pr review",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-competitor-monitoring",
+  "title": "How to Build a Grok Bot That Can Monitor Competitors",
+  "category": "Tutorial",
+  "keyword": "grok bot competitor monitoring",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-content-calendar",
+  "title": "How to Build a Grok Bot That Can Run a Content Calendar",
+  "category": "Tutorial",
+  "keyword": "grok bot content calendar",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-meeting-prep",
+  "title": "How to Build a Grok Bot That Can Prep For Meetings",
+  "category": "Tutorial",
+  "keyword": "grok bot meeting prep",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-invoice-chasing",
+  "title": "How to Build a Grok Bot That Can Chase Unpaid Invoices",
+  "category": "Tutorial",
+  "keyword": "grok bot invoice chasing",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-support-triage",
+  "title": "How to Build a Grok Bot That Can Triage Support Tickets",
+  "category": "Tutorial",
+  "keyword": "grok bot support triage",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-hiring-screening",
+  "title": "How to Build a Grok Bot That Can Screen Job Applicants",
+  "category": "Tutorial",
+  "keyword": "grok bot hiring screening",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-social-scheduling",
+  "title": "How to Build a Grok Bot That Can Schedule Social Posts",
+  "category": "Tutorial",
+  "keyword": "grok bot social scheduling",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-bug-triage",
+  "title": "How to Build a Grok Bot That Can Triage Bugs",
+  "category": "Tutorial",
+  "keyword": "grok bot bug triage",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-newsletter-digest",
+  "title": "How to Build a Grok Bot That Can Digest your Newsletters",
+  "category": "Tutorial",
+  "keyword": "grok bot newsletter digest",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-sales-followup",
+  "title": "How to Build a Grok Bot That Can Follow Up With Prospects",
+  "category": "Tutorial",
+  "keyword": "grok bot sales followup",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-kpi-reporting",
+  "title": "How to Build a Grok Bot That Can Report Weekly Kpis",
+  "category": "Tutorial",
+  "keyword": "grok bot kpi reporting",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-doc-cleanup",
+  "title": "How to Build a Grok Bot That Can Clean Up Stale Docs",
+  "category": "Tutorial",
+  "keyword": "grok bot doc cleanup",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-subscription-audit",
+  "title": "How to Build a Grok Bot That Can Audit Subscriptions",
+  "category": "Tutorial",
+  "keyword": "grok bot subscription audit",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "grok-bot-to-customer-onboarding",
+  "title": "How to Build a Grok Bot That Can Onboard New Customers",
+  "category": "Tutorial",
+  "keyword": "grok bot customer onboarding",
+  "cluster": "jobs"
+ },
+ {
+  "slug": "rakazo-vs-grok-bot",
+  "title": "Rakazo vs Grok Bot: Which Runtime Should Run Your Bots",
+  "category": "Comparison",
+  "keyword": "rakazo vs grok bot",
+  "cluster": "rakazo"
+ },
+ {
+  "slug": "rakazo-self-hosting-guide",
+  "title": "Self-Hosting Rakazo: The Complete Setup Walkthrough",
+  "category": "Guide",
+  "keyword": "rakazo self host",
+  "cluster": "rakazo"
+ },
+ {
+  "slug": "rakazo-model-choice",
+  "title": "Choosing a Model for Rakazo: Cost, Speed, and Tool Use",
+  "category": "Guide",
+  "keyword": "rakazo model",
+  "cluster": "rakazo"
+ },
+ {
+  "slug": "rakazo-sandbox-options",
+  "title": "Rakazo Sandbox Options: Docker, E2B, Daytona, or Your Mac",
+  "category": "Reference",
+  "keyword": "rakazo sandbox",
+  "cluster": "rakazo"
+ },
+ {
+  "slug": "migrate-grok-bot-to-rakazo",
+  "title": "Migrating a Grok Bot Setup to Rakazo Without Rewriting It",
+  "category": "Migration",
+  "keyword": "migrate grok bot to rakazo",
+  "cluster": "rakazo"
+ },
+ {
+  "slug": "rakazo-routines",
+  "title": "Rakazo Routines: Markdown Automations You Can Read and Edit",
+  "category": "Guide",
+  "keyword": "rakazo routines",
+  "cluster": "rakazo"
+ },
+ {
+  "slug": "rakazo-permissions-audit",
+  "title": "Rakazo Permissions and the Audit Log, Explained",
+  "category": "Guide",
+  "keyword": "rakazo permissions",
+  "cluster": "rakazo"
+ },
+ {
+  "slug": "open-source-bot-runtimes",
+  "title": "Open Source Bot Runtimes Compared in 2026",
+  "category": "Comparison",
+  "keyword": "open source bot runtime",
+  "cluster": "rakazo"
+ },
+ {
+  "slug": "botdirectory-alternatives",
+  "title": "Bot Directory Alternatives: Where to Find Grok Bot Setups",
+  "category": "Comparison",
+  "keyword": "bot directory alternative",
+  "cluster": "comparisons"
+ },
+ {
+  "slug": "grok-bot-vs-lindy",
+  "title": "Grok Bot vs Lindy: Agents, Cost, and Where Each Wins",
+  "category": "Comparison",
+  "keyword": "grok bot vs lindy",
+  "cluster": "comparisons"
+ },
+ {
+  "slug": "grok-bot-vs-zapier",
+  "title": "Grok Bot vs Zapier: When a Bot Beats a Workflow",
+  "category": "Comparison",
+  "keyword": "grok bot vs zapier",
+  "cluster": "comparisons"
+ },
+ {
+  "slug": "grok-bot-vs-make",
+  "title": "Grok Bot vs Make: Automation With and Without an Agent",
+  "category": "Comparison",
+  "keyword": "grok bot vs make",
+  "cluster": "comparisons"
+ },
+ {
+  "slug": "grok-bot-vs-n8n",
+  "title": "Grok Bot vs n8n: Self-Hosted Automation Compared",
+  "category": "Comparison",
+  "keyword": "grok bot vs n8n",
+  "cluster": "comparisons"
+ },
+ {
+  "slug": "grok-bot-vs-claude-agent",
+  "title": "Grok Bot vs Claude Agents: Two Models of Delegation",
+  "category": "Comparison",
+  "keyword": "grok bot vs claude",
+  "cluster": "comparisons"
+ },
+ {
+  "slug": "grok-bot-vs-openai-operator",
+  "title": "Grok Bot vs OpenAI Operator: Computer Use Compared",
+  "category": "Comparison",
+  "keyword": "grok bot vs operator",
+  "cluster": "comparisons"
+ },
+ {
+  "slug": "best-ai-bots-for-founders",
+  "title": "The Best AI Bots for Founders in 2026",
+  "category": "Comparison",
+  "keyword": "best ai bots for founders",
+  "cluster": "comparisons"
+ },
+ {
+  "slug": "best-ai-bots-for-sales",
+  "title": "The Best AI Bots for Sales Teams in 2026",
+  "category": "Comparison",
+  "keyword": "best ai bots for sales",
+  "cluster": "comparisons"
+ },
+ {
+  "slug": "best-ai-bots-for-support",
+  "title": "The Best AI Bots for Customer Support in 2026",
+  "category": "Comparison",
+  "keyword": "best ai bots for support",
+  "cluster": "comparisons"
+ },
+ {
+  "slug": "best-ai-bots-for-marketing",
+  "title": "The Best AI Bots for Marketing Teams in 2026",
+  "category": "Comparison",
+  "keyword": "best ai bots for marketing",
+  "cluster": "comparisons"
+ },
+ {
+  "slug": "best-ai-bots-for-developers",
+  "title": "The Best AI Bots for Developers in 2026",
+  "category": "Comparison",
+  "keyword": "best ai bots for developers",
+  "cluster": "comparisons"
+ },
+ {
+  "slug": "bot-prompt-engineering",
+  "title": "Bot Prompt Engineering: Writing Setups That Survive Contact",
+  "category": "Guide",
+  "keyword": "bot prompt engineering",
+  "cluster": "craft"
+ },
+ {
+  "slug": "approval-gates-for-bots",
+  "title": "Approval Gates: Designing Bots That Ask Before They Act",
+  "category": "Guide",
+  "keyword": "ai agent approval",
+  "cluster": "craft"
+ },
+ {
+  "slug": "bot-that-never-sends",
+  "title": "Building a Bot That Drafts But Never Sends",
+  "category": "Tutorial",
+  "keyword": "ai bot draft not send",
+  "cluster": "craft"
+ },
+ {
+  "slug": "bot-failure-modes",
+  "title": "The Seven Ways Bot Setups Fail, and How to Prevent Each",
+  "category": "Reference",
+  "keyword": "ai agent failure modes",
+  "cluster": "craft"
+ },
+ {
+  "slug": "testing-your-bot",
+  "title": "How to Test a Bot Setup Before You Trust It",
+  "category": "Guide",
+  "keyword": "test ai agent",
+  "cluster": "craft"
+ },
+ {
+  "slug": "bot-observability",
+  "title": "Watching What Your Bot Did: Logs, Audits, and Receipts",
+  "category": "Guide",
+  "keyword": "ai agent observability",
+  "cluster": "craft"
+ },
+ {
+  "slug": "least-privilege-bots",
+  "title": "Least Privilege for Bots: Connect the Minimum, Not the Maximum",
+  "category": "Guide",
+  "keyword": "ai agent least privilege",
+  "cluster": "craft"
+ },
+ {
+  "slug": "bot-handoff-to-human",
+  "title": "Designing the Handoff: When Your Bot Should Stop and Ask",
+  "category": "Guide",
+  "keyword": "ai agent human handoff",
+  "cluster": "craft"
+ },
+ {
+  "slug": "multi-bot-teams",
+  "title": "Running a Team of Bots Without Chaos",
+  "category": "Guide",
+  "keyword": "multi agent team",
+  "cluster": "craft"
+ },
+ {
+  "slug": "bot-cost-control",
+  "title": "Keeping Bot Costs Predictable as Usage Grows",
+  "category": "Guide",
+  "keyword": "ai agent cost control",
+  "cluster": "craft"
+ },
+ {
+  "slug": "bots-for-founders",
+  "title": "Bots for Solo Founders: The Five That Earn Their Keep",
+  "category": "Guide",
+  "keyword": "ai bots for founders",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-sales-reps",
+  "title": "Bots for Sales Reps: Research, Follow-Up, and Pipeline Hygiene",
+  "category": "Guide",
+  "keyword": "ai bots for sales reps",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-marketers",
+  "title": "Bots for Marketers: Calendar, Drafts, and Competitor Watch",
+  "category": "Guide",
+  "keyword": "ai bots for marketers",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-support-leads",
+  "title": "Bots for Support Leads: Triage Without Touching Customers",
+  "category": "Guide",
+  "keyword": "ai bots for support",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-engineers",
+  "title": "Bots for Engineers: Review, Triage, and Standups",
+  "category": "Guide",
+  "keyword": "ai bots for engineers",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-recruiters",
+  "title": "Bots for Recruiters: Screening and Scheduling, Safely",
+  "category": "Guide",
+  "keyword": "ai bots for recruiters",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-finance",
+  "title": "Bots for Finance: Reconciliation and Expense Review",
+  "category": "Guide",
+  "keyword": "ai bots for finance",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-agencies",
+  "title": "Bots for Agencies: Client Reporting on Autopilot",
+  "category": "Guide",
+  "keyword": "ai bots for agencies",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-ecommerce",
+  "title": "Bots for Ecommerce: Orders, Reviews, and Restocks",
+  "category": "Guide",
+  "keyword": "ai bots for ecommerce",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-consultants",
+  "title": "Bots for Consultants: Research and Deliverable Drafts",
+  "category": "Guide",
+  "keyword": "ai bots for consultants",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-product-managers",
+  "title": "Bots for Product Managers: Feedback Synthesis and Specs",
+  "category": "Guide",
+  "keyword": "ai bots for product managers",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-writers",
+  "title": "Bots for Writers: Research, Outlines, and Repurposing",
+  "category": "Guide",
+  "keyword": "ai bots for writers",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-teachers",
+  "title": "Bots for Educators: Planning and Feedback Support",
+  "category": "Guide",
+  "keyword": "ai bots for teachers",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-real-estate",
+  "title": "Bots for Real Estate: Listings, Leads, and Follow-Up",
+  "category": "Guide",
+  "keyword": "ai bots for real estate",
+  "cluster": "roles"
+ },
+ {
+  "slug": "bots-for-personal-life",
+  "title": "Bots for Personal Life: Groceries, Bills, and Travel",
+  "category": "Guide",
+  "keyword": "personal ai bots",
+  "cluster": "roles"
+ }
+]

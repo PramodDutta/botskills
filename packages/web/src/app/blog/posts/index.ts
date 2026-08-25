@@ -5,6 +5,7 @@
 // Batch arrays, when they arrive, spread at the END (last write wins on slug).
 
 import { post as introducingBotskills } from './introducing-botskills';
+import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 
 export interface BlogPost {
   title: string;
@@ -16,8 +17,10 @@ export interface BlogPost {
 
 export const posts: Record<string, BlogPost> = {
   'introducing-botskills': introducingBotskills,
+  'one-person-company-grok-bot': onePersonCompanyGrokBot,
 };
 
 export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'introducing-botskills', ...introducingBotskills },
+  { slug: 'one-person-company-grok-bot', ...onePersonCompanyGrokBot },
 ];
