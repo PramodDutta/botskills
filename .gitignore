@@ -9,3 +9,8 @@ dist/
 
 # TypeScript incremental build cache
 *.tsbuildinfo
+
+# Raw upstream imports kept locally as source material for original rewrites.
+# Not published: they carry another project's attribution and the catalogue is
+# now entirely our own work.
+import-staging/
