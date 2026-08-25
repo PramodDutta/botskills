@@ -4,6 +4,8 @@ import { neon } from '@neondatabase/serverless';
 if (!process.env.DATABASE_URL) { console.error('DATABASE_URL not set'); process.exit(1); }
 const sql = neon(process.env.DATABASE_URL);
 
+// driver 0.10: neon() is a tagged-template function only; no .query method.
+const run = (frag) => sql(frag);
 const stmts = [
   `CREATE TABLE IF NOT EXISTS bots (
     id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -66,6 +68,6 @@ const stmts = [
   )`,
 ];
 
-for (const s of stmts) await sql.query(s);
+for (const s of stmts) await sql(s);
 const t = await sql`SELECT table_name FROM information_schema.tables WHERE table_schema='public' ORDER BY 1`;
 console.log('tables:', t.map((r) => r.table_name).join(', '));
