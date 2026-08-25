@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import { getAllBots } from '@/lib/bots';
-import { getBoardRows, DEMO_METRICS } from '@/lib/board';
+import { getBoardRows } from '@/lib/board';
+
+export const revalidate = 300;
 import { CATEGORIES } from '@botskills/shared';
 import { Leaderboard } from '@/components/leaderboard';
 import { SponsorRail } from '@/components/sponsor-rail';
 import { marqueeOpenCount, MARQUEE_CAP } from '@/lib/sponsors';
 
-export default function HomePage() {
-  const rows = getBoardRows();
+export default async function HomePage() {
+  const rows = await getBoardRows();
   const bots = getAllBots();
   const recent = rows.slice(-4).reverse(); // stand-in for created_at until DB
   const catCount = (id: string) => bots.filter((b) => b.category === id).length;
@@ -65,7 +67,6 @@ export default function HomePage() {
       <section>
         <div className="shead">
           <h2>Leaderboard</h2>
-          {DEMO_METRICS && <span className="chip-sample">sample data</span>}
           <span className="hint">most copied, all time</span>
         </div>
         <div className="avstrip">
@@ -80,9 +81,8 @@ export default function HomePage() {
           <SponsorRail />
         </div>
         <p className="trustnote">
-          <span className="tick">✓</span> Copies are counted by install telemetry and refreshed
-          hourly, not self-reported. Telemetry ships before launch; numbers shown in development
-          are placeholders.
+          <span className="tick">✓</span> Copies are counted by install telemetry, not
+          self-reported. Every count starts at zero and is earned.
         </p>
       </section>
 

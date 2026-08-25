@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { getBoardRows, DEMO_METRICS } from '@/lib/board';
+import { getBoardRows } from '@/lib/board';
+
+export const revalidate = 300;
 import { Leaderboard } from '@/components/leaderboard';
 
 export const metadata: Metadata = {
@@ -10,8 +12,8 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://botskills.sh/grok-bot' },
 };
 
-export default function GrokBotPage() {
-  const rows = getBoardRows().filter((r) => r.runtimes.includes('grok-bot'));
+export default async function GrokBotPage() {
+  const rows = (await getBoardRows()).filter((r) => r.runtimes.includes('grok-bot'));
 
   return (
     <main className="wrap">
@@ -39,7 +41,6 @@ export default function GrokBotPage() {
       <section>
         <div className="shead">
           <h2>Most copied Grok bot skills</h2>
-          {DEMO_METRICS && <span className="chip-sample">sample data</span>}
           <Link href="/bots" className="hint">All bots →</Link>
         </div>
         <Leaderboard rows={rows} />
