@@ -359,3 +359,29 @@ td.ints { white-space: nowrap; }
   max-width: 100%;
   height: auto;
 }
+
+/* Licence and attribution: present for compliance and credit, deliberately
+   quiet. It is reference material, and on imported bots it can run longer than
+   the prompt it belongs to. */
+.attrib {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+.attrib summary {
+  cursor: pointer;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.attrib pre {
+  margin-top: 0.6rem;
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: var(--muted);
+  background: none;
+  border: none;
+  padding: 0;
+  white-space: pre-wrap;
+}

@@ -68,6 +68,15 @@ export default async function BotPage({ params }: Props) {
         Raw file: <code className="mono">/api/bots/{bot.slug}/content</code> · JSON:{' '}
         <code className="mono">/api/bots</code>
       </p>
+      {bot.attribution && (
+        // Kept out of the copy but not out of the page: the upstream MIT licence
+        // requires the notice travel with the work, and the contributor deserves
+        // the credit. Collapsed because it is reference material, not the product.
+        <details className="attrib">
+          <summary>Licence and attribution</summary>
+          <pre>{bot.attribution}</pre>
+        </details>
+      )}
     </main>
   );
 }
