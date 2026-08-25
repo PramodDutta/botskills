@@ -29,7 +29,7 @@ function EdgeCard({ offset }: { offset: number }) {
   return (
     <Link
       href={s.url}
-      rel={s.kind === 'demo' ? 'nofollow' : undefined}
+      rel={s.kind === 'demo' ? 'nofollow' : s.kind === 'sponsor' ? 'sponsored' : undefined}
       className={`edge-card ${TINTS[i % TINTS.length]}${flip ? ' flipping' : ''}${s.slot ? ' is-slot' : ''}`}
     >
       <span className="edge-logo">{s.name.slice(0, 1)}</span>

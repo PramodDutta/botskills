@@ -259,7 +259,7 @@ article.post pre { white-space: pre-wrap; }
   font-size: 0.92rem; padding: 0.6rem 1rem; border-radius: 999px; outline: none; }
 .signup-form input[type='email']:focus { border-color: var(--accent); }
 
-/* ---- flipping edge ads (botdirectory pattern) ---- */
+/* ---- flipping edge ads ---- */
 .edge { position: fixed; top: 50%; transform: translateY(-50%); z-index: 15;
   display: none; flex-direction: column; gap: 0.8rem; width: 168px; }
 .edge-left { left: 18px; } .edge-right { right: 18px; }
@@ -438,7 +438,7 @@ article.post pre { white-space: pre-wrap; }
   font-size: 0.92rem; padding: 0.6rem 1rem; border-radius: 999px; outline: none; }
 .signup-form input[type='email']:focus { border-color: var(--accent); }
 
-/* ---- flipping edge ads (botdirectory pattern) ---- */
+/* ---- flipping edge ads ---- */
 .edge { position: fixed; top: 50%; transform: translateY(-50%); z-index: 15;
   display: none; flex-direction: column; gap: 0.8rem; width: 168px; }
 .edge-left { left: 18px; } .edge-right { right: 18px; }
