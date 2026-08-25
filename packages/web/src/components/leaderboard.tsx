@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IntegrationIcon } from '@/components/integration-icon';
 
 export interface BoardRow {
@@ -27,10 +27,18 @@ const CATEGORIES = ['productivity', 'sales', 'marketing', 'ops', 'success', 'per
 function VoteButton({ slug, votes }: { slug: string; votes: number }) {
   const key = `voted:${slug}`;
   const [count, setCount] = useState(votes);
-  const [voted, setVoted] = useState(
-    typeof window !== 'undefined' && localStorage.getItem(key) === '1',
-  );
+  // Read localStorage after mount, never during render: the server cannot know
+  // this visitor already voted, so seeding state from it hydrates mismatched.
+  const [voted, setVoted] = useState(false);
   const [nudge, setNudge] = useState(false);
+
+  useEffect(() => {
+    try {
+      if (localStorage.getItem(key) === '1') setVoted(true);
+    } catch {
+      // storage blocked; the vote endpoint dedupes server-side anyway
+    }
+  }, [key]);
 
   async function vote(e: React.MouseEvent) {
     e.preventDefault();
@@ -77,11 +85,34 @@ export function Leaderboard({ rows }: { rows: BoardRow[] }) {
       [r.name, r.description, r.category, r.contributor, ...r.integrations, ...r.runtimes]
         .join(' ').toLowerCase().includes(needle),
     );
-  filtered = [...filtered].sort((a, b) =>
-    sort === 'copies' ? b.copies - a.copies :
-    sort === 'votes' ? b.votes - a.votes :
-    a.name.localeCompare(b.name),
-  );
+
+  // A search for "inbox" must not rank "Flight Check-In" above "Inbox Triage".
+  // Name matches beat body matches, and an exact name beats a prefix.
+  const relevance = (r: BoardRow) => {
+    const name = r.name.toLowerCase();
+    if (name === needle) return 0;
+    if (name.startsWith(needle)) return 1;
+    if (name.includes(needle)) return 2;
+    if (r.integrations.some((i) => i.toLowerCase().includes(needle))) return 3;
+    return 4;
+  };
+
+  filtered = [...filtered].sort((a, b) => {
+    if (needle) {
+      const d = relevance(a) - relevance(b);
+      if (d !== 0) return d;
+    }
+    return sort === 'copies' ? b.copies - a.copies :
+      sort === 'votes' ? b.votes - a.votes :
+      a.name.localeCompare(b.name);
+  });
+
+  // Medals mean "most copied of everything". Once the view is searched,
+  // filtered, or re-sorted, the row's all-time rank no longer matches its
+  // position, so showing a bronze medal on the first row reads as a bug.
+  // In any narrowed view we number by position instead.
+  const isCanonicalRanking = !needle && !cat && sort === 'copies';
+
   const visible = filtered.slice(0, shown);
   const remaining = filtered.length - shown;
 
@@ -123,9 +154,13 @@ export function Leaderboard({ rows }: { rows: BoardRow[] }) {
                 </tr>
               </thead>
               <tbody>
-                {visible.map((r) => (
+                {visible.map((r, pos) => (
                   <tr key={r.slug}>
-                    <td className="rank">{r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank}</td>
+                    <td className="rank">
+                      {isCanonicalRanking
+                        ? r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank
+                        : pos + 1}
+                    </td>
                     <td>
                       <Link href={`/bots/${r.slug}`} className="bot-cell">
                         <span className="bot-txt">

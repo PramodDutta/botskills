@@ -19,7 +19,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${bot.name}: Grok Bot Skill`,
     description: bot.description,
     alternates: { canonical: `https://botskills.sh/bots/${slug}` },
-    openGraph: { url: `https://botskills.sh/bots/${slug}` },
   };
 }
 

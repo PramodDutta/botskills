@@ -6,7 +6,6 @@ export const metadata = {
   description:
     'Guides, references and safety playbooks for running Grok Bot and Rakazo setups: charters, boundaries, integrations, and what the docs actually say.',
   alternates: { canonical: 'https://botskills.sh/blog' },
-  openGraph: { url: 'https://botskills.sh/blog' },
 };
 
 // Grouping beats a flat list once the corpus is large: it gives every article an
