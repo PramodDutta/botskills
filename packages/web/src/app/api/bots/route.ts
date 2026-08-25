@@ -29,7 +29,10 @@ export async function GET(request: Request) {
 
   return NextResponse.json({
     total: bots.length,
-    bots: bots.map(({ prompt: _prompt, ...meta }) => ({
+    // `prompt` and `attribution` are both withheld: this endpoint is a catalogue
+    // index, not a copy of the work, so the upstream notice belongs with the file
+    // at content_url rather than repeated on every row.
+    bots: bots.map(({ prompt: _prompt, attribution: _attribution, ...meta }) => ({
       ...meta,
       copies: counts.get(meta.slug) ?? 0,
       content_url: `https://botskills.sh/api/bots/${meta.slug}/content`,

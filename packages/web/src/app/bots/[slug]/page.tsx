@@ -69,12 +69,12 @@ export default async function BotPage({ params }: Props) {
         <code className="mono">/api/bots</code>
       </p>
       {bot.attribution && (
-        // Kept out of the copy but not out of the page: the upstream MIT licence
-        // requires the notice travel with the work, and the contributor deserves
-        // the credit. Collapsed because it is reference material, not the product.
+        // The MIT licence asks that the notice be included, not that it be loud.
+        // So: one quiet line, the full text one click away, and nothing in the
+        // copy. Its own heading is stripped, since the summary already says it.
         <details className="attrib">
-          <summary>Licence and attribution</summary>
-          <pre>{bot.attribution}</pre>
+          <summary>{bot.license} licence and source</summary>
+          <pre>{bot.attribution.replace(/^#{2,3}\s*Licen[sc]e and attribution\s*\n+/i, '')}</pre>
         </details>
       )}
     </main>
