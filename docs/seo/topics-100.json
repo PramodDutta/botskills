@@ -707,5 +707,125 @@
   "category": "Guide",
   "keyword": "personal ai bots",
   "cluster": "roles"
+ },
+ {
+  "slug": "grok-bot-vs-openclaw-vs-hermes-vs-buzz",
+  "title": "Grok Bot vs OpenClaw vs Hermes vs Buzz: Which Agent Platform Fits Your Setup",
+  "category": "Comparison",
+  "keyword": "grok bot vs openclaw",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-chief-of-staff-setup",
+  "title": "The Chief of Staff Bot: The First Setup Everyone Says To Build",
+  "category": "Guide",
+  "keyword": "chief of staff bot",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-cursor-account-explained",
+  "title": "Why Grok Bot Needs a Cursor Account and Every Way To Get Access",
+  "category": "Guide",
+  "keyword": "grok bot cursor account",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-claude-code-skills-compatibility",
+  "title": "Reusing Your CLAUDE.md, Skills and MCP Servers in Grok Bot",
+  "category": "Guide",
+  "keyword": "grok bot claude code skills",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-shared-computer-security",
+  "title": "One Computer, Many Screens: What Grok Bot Actually Isolates",
+  "category": "Safety",
+  "keyword": "grok bot security",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-approval-rules-reversibility",
+  "title": "Draw the Approval Line on Reversibility, Not Task Size",
+  "category": "Guide",
+  "keyword": "grok bot approvals",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-spend-cap-and-token-burn",
+  "title": "No Spend Cap: How To Keep a Grok Bot Roster From Running Away",
+  "category": "Guide",
+  "keyword": "grok bot spend cap",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-supported-platforms",
+  "title": "Grok Bot on Windows, Linux and iPad: What Actually Works",
+  "category": "Reference",
+  "keyword": "grok bot windows linux",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-routines-vs-triggers",
+  "title": "Schedules vs Event Triggers: Building Routines That Do Not Fail Silently",
+  "category": "Guide",
+  "keyword": "grok bot routines",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-obsidian-knowledge-base",
+  "title": "Give Every Bot One Source of Truth: Obsidian Vaults as Agent Memory",
+  "category": "Guide",
+  "keyword": "grok bot obsidian",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-whop-cli-commerce",
+  "title": "Agent-Driven Commerce: Why Self-Describing CLIs Beat Prompt Lists",
+  "category": "Guide",
+  "keyword": "agent cli commerce",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-for-designers-figma-motion",
+  "title": "Grok Bot for Designers: Figma Production, Motion Prototypes, and Slop Control",
+  "category": "Playbook",
+  "keyword": "grok bot figma",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-x-content-automation-risks",
+  "title": "Automating X Content With Bots Without Losing Monetization",
+  "category": "Safety",
+  "keyword": "automate x posts bot",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-starter-roster",
+  "title": "The Starter Roster: Which Three Bots To Hire First",
+  "category": "Playbook",
+  "keyword": "first ai bots to build",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
+ },
+ {
+  "slug": "grok-bot-avoiding-ai-slop",
+  "title": "How To Stop Your Bot Producing AI Slop",
+  "category": "Craft",
+  "keyword": "ai slop prevention",
+  "cluster": "x-signal",
+  "source": "viral X posts mined 2026-08-25; facts DISPUTED across posts, verify before asserting"
  }
 ]

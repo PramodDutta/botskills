@@ -103,6 +103,14 @@ for you is close. If you run a setup your team relies on, publish it: the
 format takes ten minutes, the boundary line is the only hard part worth
 sweating, and your handle stays on the listing.
 
+If you would rather start reading than browsing, the two pieces that explain
+the whole approach are [why every setup needs a boundary
+line](/blog/grok-bot-boundaries) and [a day-by-day plan for your first
+week](/blog/grok-bot-first-week). If you would rather start running something
+today, [Chief of Staff](/bots/chief-of-staff) is the setup most people build
+first and [Inbox Triage](/bots/inbox-triage) is the safest place to learn what
+a draft-only boundary feels like in practice.
+
 Copy a bot, put it to work, and tell us what it should never do without you.
 `,
 };

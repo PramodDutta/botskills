@@ -3,7 +3,7 @@ import type { BlogPost } from './index';
 export const post: BlogPost = {
   title: 'How to Build a One-Person Company With Grok Bot',
   description:
-    'A working system for running a company alone with Grok Bot: the six roles worth hiring first, the charter that makes a bot safe to leave running, and the boundary line that decides everything.',
+    'Run a company alone with Grok Bot: the six roles worth hiring first, the charter that makes a bot safe to leave running, and the one line that decides it.',
   date: '2026-08-25',
   category: 'Guide',
   content: `
@@ -89,14 +89,14 @@ Do not hire twelve bots in a weekend. Six roles cover the surface area of a
 solo operation, and each one maps to work that is recurring, multi-tool, and
 stable enough to define.
 
-| Role | Owns | Where it stops |
-|---|---|---|
-| Chief of Staff | Coordination, priorities, the nightly review | Escalates conflicts, spending, external messages |
-| Scout | Inbound research, signals, competitor moves | Never contacts anyone |
-| Quill | Content drafts from research | Never publishes |
-| Forge | Code, automation, deploys | Never merges or ships without review |
-| Guide | Customers, follow-up, context packets | Customer email stays a draft |
-| Ledger | Reconciliation, anomalies, receipts | Never moves money |
+| Role | Owns | Where it stops | Start from |
+|---|---|---|---|
+| Chief of Staff | Coordination, priorities, the nightly review | Escalates conflicts, spending, external messages | [Chief of Staff](/bots/chief-of-staff) |
+| Scout | Inbound research, signals, competitor moves | Never contacts anyone | [Lead Scout](/bots/lead-scout) |
+| Quill | Content drafts from research | Never publishes | [Content Idea Generator](/bots/content-idea-generator) |
+| Forge | Code, automation, deploys | Never merges or ships without review | [PR Review Sentinel](/bots/pr-review-sentinel) |
+| Guide | Customers, follow-up, context packets | Customer email stays a draft | [Inbox Triage](/bots/inbox-triage) |
+| Ledger | Reconciliation, anomalies, receipts | Never moves money | [Bookkeeping Auditor](/bots/bookkeeping-auditor) |
 
 Notice the right column. Every role is defined as much by its refusal as by
 its job, and the refusals are what make the set safe to run in parallel. Scout
@@ -202,6 +202,12 @@ If you want to skip the blank page, every listing on botskills.sh is a
 paste-ready setup with its boundary already written, ranked by how many people
 have actually copied it. Take one, adapt the charter to your stack, and let it
 run for a week before you give it anything that matters.
+
+Two things worth reading next: [how to write a boundary that actually
+constrains a bot](/blog/grok-bot-boundaries), which is the single line this
+whole system rests on, and [a day-by-day plan for your first
+week](/blog/grok-bot-first-week) if you would rather follow a schedule than
+design one.
 
 ## Frequently Asked Questions
 
