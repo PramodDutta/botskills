@@ -66,6 +66,20 @@ const stmts = [
     state text NOT NULL DEFAULT 'open',
     created_at timestamp NOT NULL DEFAULT now()
   )`,
+  `CREATE TABLE IF NOT EXISTS vote_events (
+    id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+    bot_slug text NOT NULL,
+    voter_hash text NOT NULL,
+    created_at timestamp NOT NULL DEFAULT now()
+  )`,
+  `CREATE UNIQUE INDEX IF NOT EXISTS vote_once_idx ON vote_events (bot_slug, voter_hash)`,
+  `CREATE TABLE IF NOT EXISTS signups (
+    id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+    email text NOT NULL,
+    source text NOT NULL DEFAULT 'accounts-waitlist',
+    created_at timestamp NOT NULL DEFAULT now()
+  )`,
+  `CREATE UNIQUE INDEX IF NOT EXISTS signups_email_source_idx ON signups (email, source)`,
 ];
 
 for (const s of stmts) await sql(s);

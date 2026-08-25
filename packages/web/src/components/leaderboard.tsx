@@ -14,26 +14,86 @@ export interface BoardRow {
   runtimeBadges: string[];
   copies: number;
   delta7d: number;
+  votes: number;
   isNew: boolean;
 }
 
 const MEDALS = ['\u{1F947}', '\u{1F948}', '\u{1F949}'];
 const PAGE = 25;
 
+function VoteButton({ slug, votes }: { slug: string; votes: number }) {
+  const key = `voted:${slug}`;
+  const [count, setCount] = useState(votes);
+  const [voted, setVoted] = useState(
+    typeof window !== 'undefined' && localStorage.getItem(key) === '1',
+  );
+  const [nudge, setNudge] = useState(false);
+
+  async function vote(e: React.MouseEvent) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (voted) { setNudge(true); setTimeout(() => setNudge(false), 2600); return; }
+    setVoted(true);
+    setCount((c) => c + 1);
+    try { localStorage.setItem(key, '1'); } catch {}
+    fetch('/api/telemetry/vote', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ slug }),
+    }).catch(() => {});
+    setNudge(true);
+    setTimeout(() => setNudge(false), 2600);
+  }
+
+  return (
+    <span className="votewrap">
+      <button className={`votebtn${voted ? ' voted' : ''}`} onClick={vote} aria-label={`Upvote ${slug}`}>
+        ▲ <span className="mono">{count}</span>
+      </button>
+      {nudge && (
+        <span className="vote-nudge">
+          Counted. <Link href="/signup">Create an account</Link> to keep votes across devices.
+        </span>
+      )}
+    </span>
+  );
+}
+
 export function Leaderboard({ rows }: { rows: BoardRow[] }) {
   const [shown, setShown] = useState(PAGE);
-  const visible = rows.slice(0, shown);
-  const remaining = rows.length - shown;
+  const [q, setQ] = useState('');
+
+  const needle = q.trim().toLowerCase();
+  const filtered = needle
+    ? rows.filter((r) =>
+        [r.name, r.description, r.category, r.contributor, ...r.runtimes]
+          .join(' ')
+          .toLowerCase()
+          .includes(needle),
+      )
+    : rows;
+  const visible = filtered.slice(0, shown);
+  const remaining = filtered.length - shown;
 
   return (
     <div className="board">
+      <div className="board-search">
+        <input
+          type="search"
+          placeholder={`Search ${rows.length} bots: name, integration, category...`}
+          value={q}
+          onChange={(e) => { setQ(e.target.value); setShown(PAGE); }}
+          aria-label="Search bots"
+        />
+      </div>
       <div className="board-scroll">
         <table>
           <thead>
             <tr>
-              <th>#</th><th>Bot</th><th>Contributor</th>
+              <th>#</th><th>Bot</th><th>Category</th><th>Contributor</th>
               <th style={{ textAlign: 'right' }}>Copies</th>
               <th style={{ textAlign: 'right' }}>7d</th>
+              <th style={{ textAlign: 'right' }}>Votes</th>
             </tr>
           </thead>
           <tbody>
@@ -57,13 +117,20 @@ export function Leaderboard({ rows }: { rows: BoardRow[] }) {
                     </span>
                   </Link>
                 </td>
+                <td><span className={`tag tag-${r.category}`}>{r.category}</span></td>
                 <td className="who mono">@{r.contributor}</td>
                 <td className="num mono">{r.copies.toLocaleString('en-US')}</td>
-                <td className={`num mono ${r.delta7d >= 0 ? 'up' : 'dn'}`}>
-                  {r.delta7d >= 0 ? '▲' : '▼'} {Math.abs(r.delta7d)}
+                <td className={`num mono ${r.delta7d > 0 ? 'up' : ''}`}>
+                  {r.delta7d > 0 ? `▲ ${r.delta7d}` : '·'}
                 </td>
+                <td className="num"><VoteButton slug={r.slug} votes={r.votes} /></td>
               </tr>
             ))}
+            {visible.length === 0 && (
+              <tr><td colSpan={7} className="ds" style={{ textAlign: 'center', padding: '1.4rem' }}>
+                No bots match &quot;{q}&quot;.
+              </td></tr>
+            )}
           </tbody>
         </table>
       </div>

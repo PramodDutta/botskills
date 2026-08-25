@@ -236,3 +236,26 @@ article.post pre { white-space: pre-wrap; }
 .demo-tag { font-size: 0.55rem; font-weight: 600; letter-spacing: 0.06em;
   text-transform: uppercase; color: var(--muted); border: 1px solid var(--line2);
   border-radius: 4px; padding: 0 0.28rem; margin-left: 0.4rem; vertical-align: 2px; }
+
+.board-search { padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line); }
+.board-search input { width: 100%; border: 1px solid var(--line); background: var(--raise);
+  color: var(--ink); font-family: var(--sans); font-size: 0.88rem;
+  padding: 0.55rem 0.9rem; border-radius: 999px; outline: none; }
+.board-search input:focus { border-color: var(--accent); background: var(--surface); }
+.votewrap { position: relative; display: inline-block; }
+.votebtn { border: 1px solid var(--line); background: var(--surface); color: var(--muted);
+  font-family: var(--sans); font-size: 0.76rem; font-weight: 650;
+  border-radius: 999px; padding: 0.28rem 0.65rem; cursor: pointer; white-space: nowrap; }
+.votebtn:hover { border-color: var(--accent); color: var(--ink); }
+.votebtn.voted { border-color: var(--accent); color: var(--accent); background: var(--surface); }
+.votebtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.vote-nudge { position: absolute; right: 0; top: calc(100% + 6px); z-index: 30;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  box-shadow: var(--shadow-lift); padding: 0.5rem 0.7rem; font-size: 0.72rem;
+  color: var(--muted); width: 200px; text-align: left; }
+.vote-nudge a { color: var(--accent); font-weight: 650; }
+.signup-form { display: flex; gap: 0.6rem; margin-top: 1rem; flex-wrap: wrap; }
+.signup-form input[type='email'] { flex: 1; min-width: 240px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); font-family: var(--sans);
+  font-size: 0.92rem; padding: 0.6rem 1rem; border-radius: 999px; outline: none; }
+.signup-form input[type='email']:focus { border-color: var(--accent); }
