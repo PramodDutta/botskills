@@ -4,8 +4,14 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { EdgeRails } from '@/components/edge-rails';
 import './globals.css';
 
+// Both are optional so the build succeeds with neither set, which is how every
+// external client in this app is wired. Set them in Vercel and redeploy.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const GSC_TOKEN = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://botskills.sh'),
+  ...(GSC_TOKEN ? { verification: { google: GSC_TOKEN } } : {}),
   title: { default: 'Grok Bot Skills Directory | botskills.sh', template: '%s | botskills.sh' },
   description:
     'The go-to directory for Grok bot skills: paste-ready Grok Bot and Rakazo setups ranked by copies, each declaring the one thing it never does without you.',
@@ -21,6 +27,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
         />
+        {GA_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`,
+              }}
+            />
+          </>
+        )}
       </head>
       <body>
         <script
