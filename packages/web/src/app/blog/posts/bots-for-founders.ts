@@ -342,6 +342,8 @@ covers it, and the pipeline seat is worked out end to end in
 
 **Keep reading:** [Grok Bot and Intercom](/blog/grok-bot-intercom), [Grok Bot and Jira](/blog/grok-bot-jira), [Grok Bot and Linear](/blog/grok-bot-linear).
 
+This sits inside a wider guide: [Bots For Every Role](/blog/bots-for-every-role) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What are the best AI bots for founders?

@@ -380,6 +380,12 @@ reading until you have two bots. Both are worth reading the day you do.
 
 **Keep reading:** [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers), [The Best AI Bots for Founders in 2026](/blog/best-ai-bots-for-founders), [The Best AI Bots for Marketing Teams in 2026](/blog/best-ai-bots-for-marketing).
 
+This sits inside a wider guide: [The Complete Guide to AI Bots That Do Real Work](/blog/ai-bots-complete-guide) covers the whole territory.
+
+This sits inside a wider guide: [Bots For Every Role](/blog/bots-for-every-role) covers the whole territory.
+
+This sits inside a wider guide: [Writing Bot Setups That Survive Contact](/blog/writing-bot-setups-complete-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### Is a Grok bot the same thing as a chatbot?

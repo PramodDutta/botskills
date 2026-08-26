@@ -418,6 +418,10 @@ rest. You want both, and the charter above has both.
 
 **Keep reading:** [Grok Bot vs Lindy](/blog/grok-bot-vs-lindy), [Grok Bot vs Make](/blog/grok-bot-vs-make), [Grok Bot vs n8n](/blog/grok-bot-vs-n8n).
 
+This sits inside a wider guide: [Self-Hosting AI Agents](/blog/self-hosting-ai-agents-guide) covers the whole territory.
+
+This sits inside a wider guide: [What AI Bots Actually Cost](/blog/what-ai-bots-cost) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### How much does Grok Bot cost per month?

@@ -727,6 +727,8 @@ forty minutes is not ceremony.
 
 **Keep reading:** [The Chief of Staff Bot](/blog/grok-bot-chief-of-staff-setup), [Grok Bot Setup Guide](/blog/grok-bot-setup-guide), [The Starter Roster](/blog/grok-bot-starter-roster).
 
+This sits inside a wider guide: [Writing Bot Setups That Survive Contact](/blog/writing-bot-setups-complete-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What should an AI bot prompt template actually contain?

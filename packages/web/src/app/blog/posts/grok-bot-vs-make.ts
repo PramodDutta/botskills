@@ -390,6 +390,8 @@ different scenario engine and lands in the same place.
 
 **Keep reading:** [Give Every Bot One Source of Truth](/blog/grok-bot-obsidian-knowledge-base), [Grok Bot vs Claude Agents](/blog/grok-bot-vs-claude-agent), [Grok Bot vs n8n](/blog/grok-bot-vs-n8n).
 
+This sits inside a wider guide: [The Complete Guide to AI Bots That Do Real Work](/blog/ai-bots-complete-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### Can Grok Bot replace Make scenarios?

@@ -406,6 +406,8 @@ line before you write the workflow is in
 
 **Keep reading:** [Grok Bot and Discord](/blog/grok-bot-discord), [Grok Bot and Google Drive](/blog/grok-bot-google-drive), [Grok Bot and HubSpot](/blog/grok-bot-hubspot).
 
+This sits inside a wider guide: [What AI Bots Actually Cost](/blog/what-ai-bots-cost) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### How do I keep AI agent costs predictable as I add more bots?

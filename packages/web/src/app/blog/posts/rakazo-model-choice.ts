@@ -480,6 +480,8 @@ what each one isolates.
 
 **Keep reading:** [Grok Bot Cost](/blog/grok-bot-cost), [Grok Bot vs Lindy](/blog/grok-bot-vs-lindy), [Grok Bot vs OpenAI Computer Use](/blog/grok-bot-vs-openai-operator).
 
+This sits inside a wider guide: [Every AI Agent Platform Compared](/blog/ai-agent-platforms-compared) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### Which Rakazo model should I start with?

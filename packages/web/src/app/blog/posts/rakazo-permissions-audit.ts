@@ -434,6 +434,8 @@ that a schedule and its prompt do, which is the subject of
 
 **Keep reading:** [Grok Bot Permissions Explained](/blog/grok-bot-permissions-explained), [Why Grok Bot Needs a Cursor Account and Every Way To Get Access](/blog/grok-bot-cursor-account-explained), [Grok Bot Scheduling](/blog/grok-bot-scheduling).
 
+This sits inside a wider guide: [Self-Hosting AI Agents](/blog/self-hosting-ai-agents-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### Does Rakazo ask for approval before a bot sends an email?

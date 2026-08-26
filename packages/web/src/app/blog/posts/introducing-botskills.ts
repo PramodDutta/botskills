@@ -280,6 +280,8 @@ Copy a bot, put it to work, and tell us what it should never do without you.
 
 **Keep reading:** [Why Grok Bot Needs a Cursor Account and Every Way To Get Access](/blog/grok-bot-cursor-account-explained), [Grok Bot Examples](/blog/grok-bot-examples), [Grok Bot for Designers](/blog/grok-bot-for-designers-figma-motion).
 
+This sits inside a wider guide: [The Complete Guide to AI Bots That Do Real Work](/blog/ai-bots-complete-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What is botskills.sh?

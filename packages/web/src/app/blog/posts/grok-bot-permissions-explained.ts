@@ -389,6 +389,12 @@ version to run before you connect a mailbox at all.
 
 **Keep reading:** [Rakazo Permissions and Audit Logging, Explained](/blog/rakazo-permissions-audit), [Why Grok Bot Needs a Cursor Account and Every Way To Get Access](/blog/grok-bot-cursor-account-explained), [Grok Bot Prompts That Actually Work](/blog/grok-bot-prompts-that-work).
 
+This sits inside a wider guide: [Bot Security](/blog/bot-security-complete-guide) covers the whole territory.
+
+This sits inside a wider guide: [Connecting Bots To Your Tools Without Handing Over Everything](/blog/bot-integrations-complete-guide) covers the whole territory.
+
+This sits inside a wider guide: [When Bots Go Wrong](/blog/when-bots-go-wrong) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### Does a read-only connection mean a bot cannot cause harm?

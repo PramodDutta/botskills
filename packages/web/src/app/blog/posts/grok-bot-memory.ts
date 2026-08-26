@@ -460,6 +460,8 @@ charter format those lines slot into is covered in
 
 **Keep reading:** [How to Build a Grok Bot That Can Follow Up With Prospects](/blog/grok-bot-to-sales-followup), [How to Build a Grok Bot That Can Write Your Standup](/blog/grok-bot-to-standup), [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers).
 
+This sits inside a wider guide: [Bot Security](/blog/bot-security-complete-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### Does Grok Bot remember things between runs?

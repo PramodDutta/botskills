@@ -427,6 +427,8 @@ the evidence.
 
 **Keep reading:** [Rakazo Routines](/blog/rakazo-routines), [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers), [The Best AI Bots for Founders in 2026](/blog/best-ai-bots-for-founders).
 
+This sits inside a wider guide: [What AI Bots Actually Cost](/blog/what-ai-bots-cost) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### How many routines can one Grok Bot have?

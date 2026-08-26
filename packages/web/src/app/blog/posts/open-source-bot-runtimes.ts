@@ -384,6 +384,8 @@ walks through in detail, and it is the reason
 
 **Keep reading:** [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers), [The Best AI Bots for Founders in 2026](/blog/best-ai-bots-for-founders), [The Best AI Bots for Marketing Teams in 2026](/blog/best-ai-bots-for-marketing).
 
+This sits inside a wider guide: [Self-Hosting AI Agents](/blog/self-hosting-ai-agents-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What is the best open source AI agent runtime in 2026?

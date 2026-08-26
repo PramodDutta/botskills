@@ -409,6 +409,8 @@ one.
 
 **Keep reading:** [Bots for Consultants](/blog/bots-for-consultants), [The Best AI Bots for Sales Teams in 2026](/blog/best-ai-bots-for-sales), [The Best AI Bots for Customer Support in 2026](/blog/best-ai-bots-for-support).
 
+This sits inside a wider guide: [The Delegation Playbook](/blog/bot-delegation-playbook) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What is a draft only bot?

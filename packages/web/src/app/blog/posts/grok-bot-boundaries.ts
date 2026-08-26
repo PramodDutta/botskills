@@ -418,6 +418,10 @@ pre-flight version for anything touching your mailbox is in
 
 **Keep reading:** [Why Grok Bot Needs a Cursor Account and Every Way To Get Access](/blog/grok-bot-cursor-account-explained), [Every Grok Bot Integration and What Each One Unlocks](/blog/grok-bot-integrations-list), [Give Every Bot One Source of Truth](/blog/grok-bot-obsidian-knowledge-base).
 
+This sits inside a wider guide: [Bot Security](/blog/bot-security-complete-guide) covers the whole territory.
+
+This sits inside a wider guide: [Writing Bot Setups That Survive Contact](/blog/writing-bot-setups-complete-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What is a bot boundary?

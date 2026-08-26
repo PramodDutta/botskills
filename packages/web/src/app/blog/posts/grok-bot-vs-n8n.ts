@@ -393,6 +393,12 @@ same trade with real jobs attached.
 
 **Keep reading:** [Where to Find Grok Bot Setups](/blog/botdirectory-alternatives), [Grok Bot vs Make](/blog/grok-bot-vs-make), [Grok Bot Alternatives Compared](/blog/grok-bot-vs-openclaw-vs-hermes-vs-buzz).
 
+This sits inside a wider guide: [The Complete Guide to AI Bots That Do Real Work](/blog/ai-bots-complete-guide) covers the whole territory.
+
+This sits inside a wider guide: [Every AI Agent Platform Compared](/blog/ai-agent-platforms-compared) covers the whole territory.
+
+This sits inside a wider guide: [Self-Hosting AI Agents](/blog/self-hosting-ai-agents-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### Is n8n open source?

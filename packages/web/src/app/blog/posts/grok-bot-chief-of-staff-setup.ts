@@ -450,6 +450,8 @@ coordination is not a speculative need, it is the actual backlog.
 
 **Keep reading:** [Grok Bot Setup Guide](/blog/grok-bot-setup-guide), [The Charter Template](/blog/grok-bot-starter-charter-template), [Grok Bot for Designers](/blog/grok-bot-for-designers-figma-motion).
 
+This sits inside a wider guide: [Bots For Every Role](/blog/bots-for-every-role) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What does a chief of staff bot actually do?

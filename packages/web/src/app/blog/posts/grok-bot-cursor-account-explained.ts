@@ -390,6 +390,8 @@ what that looks like once the billing question is settled.
 
 **Keep reading:** [Self-Describing CLIs](/blog/grok-bot-whop-cli-commerce), [Rakazo Permissions and Audit Logging, Explained](/blog/rakazo-permissions-audit), [Grok Bot vs OpenAI Computer Use](/blog/grok-bot-vs-openai-operator).
 
+This sits inside a wider guide: [What AI Bots Actually Cost](/blog/what-ai-bots-cost) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### Why does Grok Bot ask me to sign in with Cursor?

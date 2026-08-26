@@ -436,6 +436,8 @@ grid.
 
 **Keep reading:** [Grok Bot Examples](/blog/grok-bot-examples), [Rakazo Routines](/blog/rakazo-routines), [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers).
 
+This sits inside a wider guide: [Self-Hosting AI Agents](/blog/self-hosting-ai-agents-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### Is Rakazo a drop-in replacement for Grok Bot?

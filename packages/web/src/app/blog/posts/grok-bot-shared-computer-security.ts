@@ -403,6 +403,10 @@ your bots run on is Linux. The desk you drive it from cannot be.
 
 **Keep reading:** [Every Grok Bot Integration and What Each One Unlocks](/blog/grok-bot-integrations-list), [Give Every Bot One Source of Truth](/blog/grok-bot-obsidian-knowledge-base), [Grok Bot Prompts That Actually Work](/blog/grok-bot-prompts-that-work).
 
+This sits inside a wider guide: [Bot Security](/blog/bot-security-complete-guide) covers the whole territory.
+
+This sits inside a wider guide: [Connecting Bots To Your Tools Without Handing Over Everything](/blog/bot-integrations-complete-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### Does each Grok Bot get its own computer?

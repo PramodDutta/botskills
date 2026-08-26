@@ -395,6 +395,10 @@ in [least privilege for bots](/blog/least-privilege-bots).
 
 **Keep reading:** [The Four Layers of a Bot System That Actually Works](/blog/bot-system-architecture), [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers), [The Best AI Bots for Marketing Teams in 2026](/blog/best-ai-bots-for-marketing).
 
+This sits inside a wider guide: [The Delegation Playbook](/blog/bot-delegation-playbook) covers the whole territory.
+
+This sits inside a wider guide: [Connecting Bots To Your Tools Without Handing Over Everything](/blog/bot-integrations-complete-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What are AI approval gates?

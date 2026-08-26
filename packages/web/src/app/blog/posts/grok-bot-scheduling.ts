@@ -407,6 +407,8 @@ first.
 
 **Keep reading:** [Why Grok Bot Needs a Cursor Account and Every Way To Get Access](/blog/grok-bot-cursor-account-explained), [Grok Bot Examples](/blog/grok-bot-examples), [Grok Bot Permissions Explained](/blog/grok-bot-permissions-explained).
 
+This sits inside a wider guide: [When Bots Go Wrong](/blog/when-bots-go-wrong) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What is the shortest sensible interval for a Grok Bot schedule?

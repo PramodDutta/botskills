@@ -323,6 +323,8 @@ abandoned all five by the end of the month.
 
 **Keep reading:** [Grok Bot vs Lindy](/blog/grok-bot-vs-lindy), [Grok Bot vs n8n](/blog/grok-bot-vs-n8n), [Grok Bot vs OpenAI Computer Use](/blog/grok-bot-vs-openai-operator).
 
+This sits inside a wider guide: [Bots For Every Role](/blog/bots-for-every-role) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What are the best AI bots for founders?

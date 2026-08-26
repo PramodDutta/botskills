@@ -459,6 +459,8 @@ your own judgment in the setup. Keep it somewhere you control.
 
 **Keep reading:** [Grok Bot for Designers](/blog/grok-bot-for-designers-figma-motion), [Grok Bot Permissions Explained](/blog/grok-bot-permissions-explained), [Grok Bot on Windows, Linux and iPad](/blog/grok-bot-supported-platforms).
 
+This sits inside a wider guide: [Writing Bot Setups That Survive Contact](/blog/writing-bot-setups-complete-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### How long should a Grok bot prompt be?

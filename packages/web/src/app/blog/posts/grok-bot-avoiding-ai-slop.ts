@@ -459,6 +459,8 @@ thing you get to a bot telling you where to look.
 
 **Keep reading:** [The Best AI Bots for Sales Teams in 2026](/blog/best-ai-bots-for-sales), [The Best AI Bots for Customer Support in 2026](/blog/best-ai-bots-for-support), [Where to Find Grok Bot Setups](/blog/botdirectory-alternatives).
 
+This sits inside a wider guide: [Writing Bot Setups That Survive Contact](/blog/writing-bot-setups-complete-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What exactly is AI slop?

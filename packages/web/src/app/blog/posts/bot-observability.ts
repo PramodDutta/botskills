@@ -419,6 +419,10 @@ extra force to anything you cannot watch.
 
 **Keep reading:** [How to Build a Grok Bot That Can Digest Your Newsletters](/blog/grok-bot-to-newsletter-digest), [Grok Bot and Zoom](/blog/grok-bot-zoom), [The Four Layers of a Bot System That Actually Works](/blog/bot-system-architecture).
 
+This sits inside a wider guide: [The Delegation Playbook](/blog/bot-delegation-playbook) covers the whole territory.
+
+This sits inside a wider guide: [When Bots Go Wrong](/blog/when-bots-go-wrong) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What does observability mean for an AI agent?

@@ -426,6 +426,12 @@ invoice.
 
 **Keep reading:** [The Starter Roster](/blog/grok-bot-starter-roster), [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers), [The Best AI Bots for Founders in 2026](/blog/best-ai-bots-for-founders).
 
+This sits inside a wider guide: [The Delegation Playbook](/blog/bot-delegation-playbook) covers the whole territory.
+
+This sits inside a wider guide: [What AI Bots Actually Cost](/blog/what-ai-bots-cost) covers the whole territory.
+
+This sits inside a wider guide: [When Bots Go Wrong](/blog/when-bots-go-wrong) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### Does Grok Bot have a spend cap?

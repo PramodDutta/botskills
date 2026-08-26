@@ -411,6 +411,10 @@ nothing, because you will believe it.
 
 **Keep reading:** [Approval Gates](/blog/approval-gates-for-bots), [Keeping Bot Costs Predictable as Usage Grows](/blog/bot-cost-control), [The Seven Ways Bot Setups Fail, and How to Prevent Each](/blog/bot-failure-modes).
 
+This sits inside a wider guide: [Bot Security](/blog/bot-security-complete-guide) covers the whole territory.
+
+This sits inside a wider guide: [Connecting Bots To Your Tools Without Handing Over Everything](/blog/bot-integrations-complete-guide) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### What does least privilege mean for an AI agent?

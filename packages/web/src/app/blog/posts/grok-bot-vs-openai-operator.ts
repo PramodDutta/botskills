@@ -416,6 +416,8 @@ For the wider argument about where any of these belong, see
 
 **Keep reading:** [Grok Bot vs Claude Agents](/blog/grok-bot-vs-claude-agent), [Choosing a Model for Rakazo](/blog/rakazo-model-choice), [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers).
 
+This sits inside a wider guide: [Every AI Agent Platform Compared](/blog/ai-agent-platforms-compared) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### Is OpenAI Operator still available?

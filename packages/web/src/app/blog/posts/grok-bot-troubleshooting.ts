@@ -435,6 +435,8 @@ a couple of hours.
 
 **Keep reading:** [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers), [The Best AI Bots for Founders in 2026](/blog/best-ai-bots-for-founders), [The Best AI Bots for Marketing Teams in 2026](/blog/best-ai-bots-for-marketing).
 
+This sits inside a wider guide: [When Bots Go Wrong](/blog/when-bots-go-wrong) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### My Grok Bot is not working at all. What should I check first?

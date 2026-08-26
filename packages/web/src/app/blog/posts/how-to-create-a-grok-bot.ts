@@ -420,6 +420,8 @@ list of the shapes that reliably survive a real week.
 
 **Keep reading:** [The Chief of Staff Bot](/blog/grok-bot-chief-of-staff-setup), [Your First Week With Grok Bot](/blog/grok-bot-first-week), [The Charter Template](/blog/grok-bot-starter-charter-template).
 
+This sits inside a wider guide: [Bots For Every Role](/blog/bots-for-every-role) covers the whole territory.
+
 ## Frequently Asked Questions
 
 ### How long does it take to create a working Grok bot?
