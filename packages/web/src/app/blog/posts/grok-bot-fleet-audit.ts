@@ -9,11 +9,11 @@ export const post: BlogPost = {
   content: `
 # Audit the Grok Bots You Already Built Before You Hire More
 
-Nobody plans a fleet of nine bots. You build one that works, then a second for a
-job the first kept drifting into, then three during a week when everything felt
-automatable, then two more from a thread you read on a Sunday. Six weeks later
-you have a roster nobody wrote down, two bots doing the same job slightly
-differently, and a signed-in session belonging to a bot you deleted in July.
+Nobody plans a fleet of nine bots. You build one that works, a second for a job
+the first kept drifting into, three more during a week when everything felt
+automatable, then two from a thread you read on a Sunday. Six weeks later you
+have a roster nobody wrote down, two bots doing one job slightly differently, and
+a signed-in session belonging to a bot you deleted in July.
 
 The pressure right now is to add. Every demo shows one prompt producing four
 named teammates with roles and a hierarchy, and the implied next step is always a
@@ -29,10 +29,10 @@ wearing a clipboard.
 
 ## List every named bot, its job, and the verb it must never do
 
-Start with the thing that does not exist yet, which is a written roster. No audit
-view of bot actions exists on the platform, so there is no page listing your
-bots, their runs, or their permissions. Your roster is whatever you can
-reconstruct from the app plus memory, and reconstruction is the first finding.
+Start with the thing that does not exist yet: a written roster. No audit view of
+bot actions exists, so no page lists your bots, their runs, or their permissions.
+Your roster is whatever you reconstruct from the app plus memory, and the
+reconstruction is the first finding.
 
 Three columns per bot, and the third is the one that matters. Name, one-sentence
 job, and the verb it must never perform. If you cannot fill the third column from
@@ -46,7 +46,6 @@ count.
 | Content helper | Writes posts and captions | Unclear | No, says "use good judgement" |
 | Invoice chaser | Drafts overdue invoice reminders | Never sends? | Ambiguous, sent once in July |
 | Research bot | Summarises competitor pages | Nothing named | No |
-| Calendar bot | Books internal meetings | Never invites externals | Partly |
 
 The right-hand column is your audit in miniature. Two "no" rows and one
 "ambiguous" row is a normal starting position, and the ambiguous one is the
@@ -70,7 +69,6 @@ charters and you must read both to know what can happen to it.
 | Two bots read the same source | Duplicate work, two answers, no tiebreak | Keep the narrower one |
 | Two bots write the same artefact | Silent overwrites on a shared machine | Keep one writer, make the other read-only |
 | You always ask both then compare | You are the merge step | Collapse into one with a better brief |
-| One was built because the other drifted | The drift was a briefing problem | Fix the brief, retire the second bot |
 | Both have the same integration attached | Two paths to the same permission | Disconnect the one you use less |
 
 Keep the narrower one. When two bots could own a job, tighter scope is easier to
@@ -117,10 +115,8 @@ variants nobody chose, added during a week when scheduling felt like progress.
 
 | What you find | What it means | Action |
 |---|---|---|
-| A bot with 30+ routines | It is several bots wearing one name | Split by job, or delete the variants |
 | Routines that never produced output | Scheduled into a signed-out session or a dead path | Delete, do not fix |
 | Two routines on the same schedule | Duplicate work, or a forgotten retry | Keep one |
-| A routine you cannot explain | Added during a burst, purpose lost | Delete it. You will notice if it mattered |
 | Run records all showing errors | The job has been failing quietly | Fix the job or retire the bot |
 
 The twenty-record window matters before you investigate. A routine that has
@@ -132,14 +128,13 @@ anything.
 ## Find plugins that can post or pay and disconnect the unused ones
 
 Integrations accumulate faster than bots. You connect something to try it, the
-trial ends, the connection stays. The audit question is not "is this connected"
-but "can this send, spend, or publish, and does any current bot need it".
-
-Sort every connection into three buckets and act on the middle one hardest.
+trial ends, the connection stays. The audit question is not whether something is
+connected but whether it can send, spend, or publish, and whether any current bot
+needs it. Sort every connection by capability and act on the send-capable ones
+first.
 
 | Connection type | Example capability | If no current bot needs it |
 |---|---|---|
-| Read-only | Reads a doc, a sheet, a page | Low priority, disconnect when convenient |
 | Can post or publish | Social scheduler, site deploy, blog | Disconnect now |
 | Can send to people | Mail, DM, SMS, ticket replies | Disconnect now |
 | Can move money | Payments, ads, subscriptions | Disconnect now, and check for charges |
@@ -272,10 +267,8 @@ charters descended from the same paste, all carrying the same non-boundary.
 |---|---|---|
 | Be careful with sensitive data | Not an action, cannot be checked | Never open [account]. Never paste credentials |
 | Use good judgement | Delegates the boundary to the model | Never send. Never merge. Never pay |
-| Only act when confident | Confidence is not a permission | Ask before any action outside this chat |
 | Ask if unsure | The bot decides what unsure means | Ask before every send, on the exact text |
 | Do not do anything risky | Risk is undefined | List the three actions that are off limits |
-| Follow best practices | Means nothing operationally | Name the practice as a verb |
 | Keep me informed | Compatible with acting first | Report before acting, not after |
 
 The test is whether a stranger could tell from the output alone whether the rule
@@ -316,22 +309,20 @@ Hire freely there, then audit before anything gains a send.
 
 ## Verify the audit by picking one retired bot and confirming it is gone
 
-An audit report is a claim, and the cheap way to test it is to follow one
-recommendation all the way through and check what actually happened.
+An audit report is a claim, and the cheap test is to follow one recommendation
+through and check what happened.
 
-Pick the bot you retired. Delete it, then verify the three things deletion does
-and does not do. Its routines should be gone, since routines die with the bot.
-Its sessions should still be there, because deletion does not remove them, and if
-you assumed otherwise this is where you find out. Its files should still be on
-the shared computer for the same reason.
+Pick the bot you retired and delete it, then verify what deletion does and does
+not do. Its routines should be gone, since routines die with the bot. Its
+sessions should still be signed in, and its files should still be on the shared
+computer, because deletion removes neither. If you assumed otherwise, this is
+where you find out.
 
 | Check | How you run it | Failure looks like |
 |---|---|---|
 | Bot gone | Look for it in the app | Still listed, or paused rather than deleted |
 | Routines gone | Its schedule produces nothing next cycle | An output arrives from a bot you retired |
 | Sessions still signed in | Open the browser on the shared computer | You assumed deletion cleaned them |
-| Files still present | List the workspace | You assumed deletion cleaned those too |
-| No new sends | Check the sent folder for the audit window | Anything you did not send yourself |
 | Boundary rewrites held | Re-read the two charters you fixed | The old paste is back |
 
 The sent-folder check is the one to run regardless of what the report said. There

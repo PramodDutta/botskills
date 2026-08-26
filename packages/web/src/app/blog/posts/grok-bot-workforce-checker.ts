@@ -33,10 +33,10 @@ lies to you.
 Stuck is not a feeling about a bot. It is a comparison between the last time
 something appeared and a number you wrote down in advance.
 
-That number is per bot, not global. A morning briefing bot that has produced
-nothing by 10am is late. A weekly competitor scan that has produced nothing since
-Tuesday is fine. Without the per-bot number, the foreman has to guess, and a
-guessing watchdog either shouts constantly or never.
+That number is per bot. A morning briefing that produced nothing by 10am is late.
+A weekly competitor scan silent since Tuesday is fine. Without the per-bot
+number, the foreman guesses, and a guessing watchdog either shouts constantly or
+never.
 
 Three signals are worth checking on every pass, and all three are visible from
 the outside.
@@ -46,7 +46,6 @@ the outside.
 | Last output time | Newest message or file from that bot | Past the SLA you named for that bot |
 | Repeated error | Same error line on consecutive attempts | The identical error appears three times |
 | Frozen run | A run still marked in progress with an unchanged screen | No screen change across two scans |
-| Missed routine | A routine that was due and produced nothing | Due time passed with no output |
 | Waiting approval | An approval request sitting untouched | Untouched past the SLA for that bot |
 
 The last two rows are different from the first three, and the difference matters
@@ -97,7 +96,6 @@ one.
 
 | Situation | Nag the sibling | Page you | Why |
 |---|---|---|---|
-| Output late by 30 minutes, no error | Yes, once | No | Might still finish |
 | Same error three times | Yes, once | No, not yet | The bot may recover on the next run |
 | Sign-in challenge or expired token | No point | Yes | Only a person can complete it |
 | Approval untouched past SLA | No | Yes | Only your click clears it |
@@ -151,7 +149,6 @@ finished.
 | One bot stuck, others fine | A job-specific block | Report it as one bot |
 | A bot stuck on a page needing sign-in | Another bot may have signed that account out | Name the account, ask you to check state |
 | Writes failing across bots | Disk filling on the shared VM | Hand to housekeeping, do not delete anything |
-| A bot recovered without being touched | A shared lock cleared | Say so, and do not claim credit |
 
 The wording matters when you read this at speed. "The invoice bot is dead" sends
 you to the invoice bot. "Three bots stopped writing within four minutes, all of
@@ -277,7 +274,6 @@ exactly like a fleet that is healthy.
 | Three separate "bot dead" reports at once | Shared session or disk treated as three failures | Report the shared dependency as one cause |
 | Nothing reported for a week | Every SLA is too generous, or the scan is not running | Check the daily one-line summary exists |
 | A bot got restarted and nobody did it | The foreman has write access it should not have | Remove it. Nag, page, or silence only |
-| Reports a routine as missed when it never existed | Routines were assumed from the job description | Read routines per bot, not the roster's intent |
 
 The first row costs you a week. A watchdog with no data produces a reassuring
 report, because reassurance is the shape status output usually takes, which is

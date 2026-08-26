@@ -34,11 +34,10 @@ to act outside.
 ## Write the outcome as a finished artifact, not as a vibe
 
 An outcome field passes only if you could recognise the finished thing on sight.
-"Improve onboarding" fails that test. "A one-page table of the seven onboarding
-emails, one row each, with the subject line, the first sentence, the call to
-action, and a column marking which ones mention price" passes it, because there
-is exactly one shape that satisfies it and you will know in four seconds whether
-you got it.
+"Improve onboarding" fails. "A one-page table of the seven onboarding emails, one
+row each, with the subject line, the first sentence, the call to action, and a
+column marking which mention price" passes, because one shape satisfies it and
+you will know in four seconds whether you got it.
 
 This is not tidiness. A vague outcome forces the bot to pick a scope, and
 scope-picking is where a helpful agent does the most damage. Asked to improve
@@ -52,7 +51,6 @@ so none of it was disobedient.
 | Look into churn | Time window, cohort, data source | A list of accounts that cancelled in July with plan, tenure, and stated reason |
 | Clean up the docs | Which docs, what counts as clean | A list of pages last edited before Jan with the broken links in each |
 | Help with the launch | Everything, in every direction | A checklist of the 12 launch tasks with owner and status pulled from the tracker |
-| Research competitors | How many, which axes, how deep | A 5-row comparison on price, free tier, and support hours, each cell cited |
 
 Read the right-hand column and notice how boring it is. That is the tell. A good
 outcome field sounds mechanical because it has taken the interesting decisions
@@ -60,9 +58,9 @@ away from the bot and kept them with you.
 
 ## Name sources the bot may read, and what it must not invent
 
-The second field is an allowlist, and it does two jobs at once. It tells the bot
-where to look, and it makes silence about everything else the expected
-behaviour rather than a failure to be helpful about.
+The second field is an allowlist doing two jobs. It tells the bot where to look,
+and it makes silence about everything else the expected behaviour rather than a
+failure of helpfulness.
 
 Write the sources as things you can point at. This Notion page. This folder in
 Drive. The last eight weeks of the shared inbox. Then add the sentence that does
@@ -270,7 +268,6 @@ trailing clause that quietly contains a send.
 | keep it up to date | Overwrite a live artifact on a schedule | Name the artifact and require a diff for approval |
 | close the loop with them | Contact a human | Draft the message. A person sends it |
 | clean that up | Delete files that belong to another bot | Archive with a retention window, never delete |
-| get it approved | Chase people, in their inbox | Produce the approval request. You send it |
 | make sure it goes out Friday | Schedule a publish | Prepare, label as scheduled by nobody, hand over |
 | loop in the customer | Email an external party | Never. External contact is a human action |
 | take it from here | Everything | Rewrite the brief. This is not a brief |
@@ -321,7 +318,6 @@ mentions sending. That is the finding.
 |---|---|---|
 | Blank field scan | Ask a second bot which of the five is missing | It names one you thought you had filled |
 | Hidden verb scan | Ask which irreversible actions the brief permits | It lists an action you did not intend to allow |
-| Source honesty | Ask what it would do with a fact absent from your sources | It says it would infer, rather than write unknown |
 | Cap obedience | Run the brief and count the rows | More rows than your cap, or no note about cuts |
 | Reviewer reality | Ask who approves and what the click does | It cannot name the action, only the person |
 | Refusal test | Blank the sources field deliberately and run it | It works anyway, which means the rule is decorative |
