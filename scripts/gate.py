@@ -12,10 +12,15 @@ import os, re, sys
 
 D = os.path.join(os.path.dirname(__file__), '..', 'packages/web/src/app/blog/posts')
 D = os.path.normpath(D)
-BOTS = os.environ.get('BOTSLUGS', '/tmp/botslugs.txt')
-valid_bots = set()
-if os.path.exists(BOTS):
-    valid_bots = {l.split('::')[0].strip() for l in open(BOTS) if '::' in l}
+# Derive bot slugs from the catalogue itself. This used to read a scratch file,
+# which went stale the moment the catalogue grew and produced false failures on
+# perfectly good links. The directory is the source of truth the site builds from.
+SEED = os.path.join(D, '..', '..', '..', '..', '..', 'seed-bots')
+SEED = os.path.normpath(SEED)
+valid_bots = (
+    {d for d in os.listdir(SEED) if os.path.exists(os.path.join(SEED, d, 'BOT.md'))}
+    if os.path.isdir(SEED) else set()
+)
 
 EXEMPT = {'introducing-botskills'}  # the launch announcement, not an SEO article
 

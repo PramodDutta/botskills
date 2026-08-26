@@ -1,0 +1,786 @@
+{
+ "pillars": [
+  {
+   "slug": "ai-bots-complete-guide",
+   "title": "The Complete Guide to AI Bots That Do Real Work",
+   "keyword": "ai bots",
+   "category": "Guide",
+   "cluster": "pillar",
+   "brief": "the master hub: what a bot is, the six roles, charters, boundaries, first month. Links to 25+ existing articles."
+  },
+  {
+   "slug": "bot-security-complete-guide",
+   "title": "Bot Security: What You Are Actually Granting",
+   "keyword": "bot security",
+   "category": "Safety",
+   "cluster": "pillar",
+   "brief": "isolation, scopes, credentials, prompt injection, revocation, audit. Anchors on the shared-computer facts."
+  },
+  {
+   "slug": "bot-delegation-playbook",
+   "title": "The Delegation Playbook: What To Hand Over and What To Keep",
+   "keyword": "ai delegation",
+   "category": "Playbook",
+   "cluster": "pillar",
+   "brief": "reversibility, approval gates, the ambiguous middle, what never to automate, per role."
+  },
+  {
+   "slug": "ai-agent-platforms-compared",
+   "title": "Every AI Agent Platform Compared",
+   "keyword": "ai agent platforms",
+   "category": "Comparison",
+   "cluster": "pillar",
+   "brief": "hub over all 12 comparison articles: Grok Bot, Rakazo, OpenClaw, Hermes, Buzz, Lindy, Zapier, Make, n8n, Claude, OpenAI."
+  },
+  {
+   "slug": "bot-integrations-complete-guide",
+   "title": "Connecting Bots To Your Tools Without Handing Over Everything",
+   "keyword": "bot integrations",
+   "category": "Guide",
+   "cluster": "pillar",
+   "brief": "hub over all 20 integration tutorials: scope families, blast radius, ordering by reversibility."
+  },
+  {
+   "slug": "bots-for-every-role",
+   "title": "Bots For Every Role: The Complete Directory",
+   "keyword": "ai bots by role",
+   "category": "Reference",
+   "cluster": "pillar",
+   "brief": "hub over the 15 role playbooks and 77 catalogue bots, with the named risk per role."
+  },
+  {
+   "slug": "writing-bot-setups-complete-guide",
+   "title": "Writing Bot Setups That Survive Contact",
+   "keyword": "bot prompt engineering",
+   "category": "Guide",
+   "cluster": "pillar",
+   "brief": "hub over the craft cluster: charters, output contracts, evidence rules, testing, failure modes."
+  },
+  {
+   "slug": "self-hosting-ai-agents-guide",
+   "title": "Self-Hosting AI Agents: The Honest Guide",
+   "keyword": "self host ai agents",
+   "category": "Guide",
+   "cluster": "pillar",
+   "brief": "hub over the 8 Rakazo articles plus open-source runtimes. Includes the finding that self-hosted defaults are often looser."
+  },
+  {
+   "slug": "what-ai-bots-cost",
+   "title": "What AI Bots Actually Cost",
+   "keyword": "ai agent cost",
+   "category": "Guide",
+   "cluster": "pillar",
+   "brief": "hub over cost, spend cap, cost control. Shape of the bill, no invented prices."
+  },
+  {
+   "slug": "when-bots-go-wrong",
+   "title": "When Bots Go Wrong: The Complete Reference",
+   "keyword": "ai agent failures",
+   "category": "Reference",
+   "cluster": "pillar",
+   "brief": "hub over troubleshooting, failure modes, observability, handoff. Symptom to cause to fix."
+  }
+ ],
+ "articles": [
+  {
+   "slug": "how-to-automate-support-triage",
+   "title": "How To Automate Support Triage Without Touching Customers",
+   "keyword": "support triage automation",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-qbr-prep",
+   "title": "How To Automate Quarterly Business Review Prep",
+   "keyword": "qbr automation",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-help-center-updates",
+   "title": "How To Keep A Help Center Current Automatically",
+   "keyword": "help center automation",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-changelog-writing",
+   "title": "How To Turn Shipped Tickets Into A Changelog",
+   "keyword": "changelog automation",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-track-customer-promises",
+   "title": "How To Track Every Promise Your Team Made A Customer",
+   "keyword": "customer commitment tracking",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-account-tiering",
+   "title": "How To Tier Accounts Without Guessing",
+   "keyword": "account tiering",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-call-follow-ups",
+   "title": "How To Turn Call Transcripts Into Follow-Ups",
+   "keyword": "call follow up automation",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-coach-sales-calls-with-ai",
+   "title": "How To Coach Sales Calls With A Bot That Never Calls Anyone",
+   "keyword": "ai sales coaching",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-keep-sales-decks-current",
+   "title": "How To Stop Shipping Decks With Stale Pricing",
+   "keyword": "sales deck maintenance",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-deal-desk",
+   "title": "How To Automate The Deal Desk Without Approving Anything",
+   "keyword": "deal desk automation",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-build-a-prospect-research-sheet",
+   "title": "How To Build A Prospect Sheet Where Every Cell Has A Source",
+   "keyword": "prospect research automation",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-win-loss-analysis",
+   "title": "How To Write An Honest Win Loss Memo From The Record",
+   "keyword": "win loss analysis",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-answer-security-questionnaires",
+   "title": "How To Answer Security Questionnaires Without Guessing",
+   "keyword": "security questionnaire automation",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-meeting-prep",
+   "title": "How To Walk Into Every Meeting Prepared",
+   "keyword": "meeting prep automation",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-maintain-an-org-chart",
+   "title": "How To Keep A Buying Committee Map Current",
+   "keyword": "org chart mapping",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-forecast-hygiene",
+   "title": "How To Catch Deals That Are Quietly Slipping",
+   "keyword": "sales forecast hygiene",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-linkedin-research",
+   "title": "How To Research On LinkedIn Without Risking The Account",
+   "keyword": "linkedin research automation",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-inbound-qualification",
+   "title": "How To Qualify Inbound Without Replying To Anyone",
+   "keyword": "inbound lead qualification",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-expense-categorisation",
+   "title": "How To Categorise Expenses And Keep The Exceptions",
+   "keyword": "expense automation",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "how-to-automate-invoice-reconciliation",
+   "title": "How To Reconcile Invoices Without Moving Money",
+   "keyword": "invoice reconciliation",
+   "cluster": "jobs-from-catalogue",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-zendesk",
+   "title": "Bots and Zendesk: Permissions and What To Automate",
+   "keyword": "zendesk automation bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-jira-service-management",
+   "title": "Bots and Jira Service Management: Permissions and Limits",
+   "keyword": "jira service management bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-asana",
+   "title": "Bots and Asana: Permissions and What To Automate",
+   "keyword": "asana bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-clickup",
+   "title": "Bots and ClickUp: Permissions and What To Automate",
+   "keyword": "clickup bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-monday",
+   "title": "Bots and Monday.com: Permissions and What To Automate",
+   "keyword": "monday com bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-figma",
+   "title": "Bots and Figma: What They Can And Cannot Touch",
+   "keyword": "figma bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-gong",
+   "title": "Bots and Gong: Call Data Without Contacting Anyone",
+   "keyword": "gong automation",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-mixpanel",
+   "title": "Bots and Product Analytics: Reading Without Rewriting",
+   "keyword": "product analytics bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-supabase",
+   "title": "Bots and Your Database: The Read-Only Rule",
+   "keyword": "database bot access",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-aws",
+   "title": "Bots and Cloud Consoles: Why Read-Only Is Not Optional",
+   "keyword": "cloud console bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-calendly",
+   "title": "Bots and Scheduling Tools: Proposing Versus Booking",
+   "keyword": "scheduling bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-docusign",
+   "title": "Bots and E-Signature: The One Thing They Never Do",
+   "keyword": "esignature bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-webflow",
+   "title": "Bots and Your CMS: Draft Only, Always",
+   "keyword": "cms bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-mailchimp",
+   "title": "Bots and Email Marketing: Why Send Is The Hard Line",
+   "keyword": "email marketing bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bots-and-whatsapp",
+   "title": "Bots and Messaging Apps: Consent And Reach",
+   "keyword": "messaging bot",
+   "cluster": "integrations",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bot-charter-anti-patterns",
+   "title": "Twelve Charter Mistakes That Cost People Money",
+   "keyword": "bot charter mistakes",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "how-to-audit-a-bot-you-inherited",
+   "title": "How To Audit A Bot Somebody Else Wrote",
+   "keyword": "audit ai agent",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "bot-permission-review-checklist",
+   "title": "The Monthly Permission Review, Step By Step",
+   "keyword": "ai agent permission review",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "prompt-injection-for-operators",
+   "title": "Prompt Injection Explained For People Who Run Bots",
+   "keyword": "prompt injection agents",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "bot-incident-response",
+   "title": "What To Do In The First Ten Minutes After A Bot Misfires",
+   "keyword": "ai agent incident response",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "how-to-sandbox-a-bot",
+   "title": "How To Give A Bot Less Than It Asks For",
+   "keyword": "sandbox ai agent",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "credential-hygiene-for-bots",
+   "title": "Credential Hygiene When Every Bot Shares One Machine",
+   "keyword": "ai agent credentials",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "bot-output-verification",
+   "title": "How To Check A Bot's Work Without Redoing It",
+   "keyword": "verify ai agent output",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "when-not-to-use-a-bot",
+   "title": "Nine Jobs You Should Not Give A Bot",
+   "keyword": "when not to automate",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "bot-handover-documentation",
+   "title": "What To Write Down Before Someone Else Runs Your Bots",
+   "keyword": "ai agent documentation",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "measuring-bot-roi",
+   "title": "How To Tell If A Bot Is Actually Saving You Time",
+   "keyword": "ai agent roi",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "bot-versioning-and-rollback",
+   "title": "How To Change A Bot Without Breaking Monday",
+   "keyword": "ai agent versioning",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "multi-tenant-bot-risk",
+   "title": "Running Bots For Clients Without Leaking Between Them",
+   "keyword": "agency ai agent isolation",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "bot-data-retention",
+   "title": "What Your Bot Remembers And How Long It Should",
+   "keyword": "ai agent data retention",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "compliance-and-ai-agents",
+   "title": "AI Agents And Compliance: The Questions Auditors Ask",
+   "keyword": "ai agent compliance",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "ai-agents-vs-rpa",
+   "title": "AI Agents vs RPA: Which Breaks Less",
+   "keyword": "ai agents vs rpa",
+   "cluster": "comparisons",
+   "category": "Comparison"
+  },
+  {
+   "slug": "ai-agents-vs-hiring",
+   "title": "When A Bot Is Cheaper Than A Hire, And When It Is Not",
+   "keyword": "ai agent vs hiring",
+   "cluster": "comparisons",
+   "category": "Comparison"
+  },
+  {
+   "slug": "build-vs-buy-ai-agents",
+   "title": "Build Or Buy: The AI Agent Decision",
+   "keyword": "build vs buy ai agents",
+   "cluster": "comparisons",
+   "category": "Comparison"
+  },
+  {
+   "slug": "hosted-vs-self-hosted-agents",
+   "title": "Hosted Or Self-Hosted: What You Actually Trade",
+   "keyword": "self hosted vs hosted ai",
+   "cluster": "comparisons",
+   "category": "Comparison"
+  },
+  {
+   "slug": "agent-frameworks-compared",
+   "title": "Agent Frameworks Compared For People Who Ship",
+   "keyword": "ai agent frameworks",
+   "cluster": "comparisons",
+   "category": "Comparison"
+  },
+  {
+   "slug": "mcp-vs-connectors",
+   "title": "MCP Servers vs Native Connectors: When Each Wins",
+   "keyword": "mcp vs connectors",
+   "cluster": "comparisons",
+   "category": "Comparison"
+  },
+  {
+   "slug": "single-agent-vs-multi-agent",
+   "title": "One Capable Agent Or Five Narrow Ones",
+   "keyword": "single vs multi agent",
+   "cluster": "comparisons",
+   "category": "Comparison"
+  },
+  {
+   "slug": "chat-vs-scheduled-agents",
+   "title": "Chat Assistants vs Scheduled Agents",
+   "keyword": "chat vs scheduled ai",
+   "cluster": "comparisons",
+   "category": "Comparison"
+  },
+  {
+   "slug": "open-source-vs-commercial-agents",
+   "title": "Open Source Or Commercial: The Licence Questions That Matter",
+   "keyword": "open source ai agents",
+   "cluster": "comparisons",
+   "category": "Comparison"
+  },
+  {
+   "slug": "ai-agents-vs-workflow-builders",
+   "title": "Agents vs Workflow Builders: The Variance Question",
+   "keyword": "ai agents vs workflow automation",
+   "cluster": "comparisons",
+   "category": "Comparison"
+  },
+  {
+   "slug": "bots-for-solo-consultants",
+   "title": "Bots For Solo Consultants Who Bill By The Hour",
+   "keyword": "ai bots consultants",
+   "cluster": "roles-and-industries",
+   "category": "Guide"
+  },
+  {
+   "slug": "bots-for-customer-success-teams",
+   "title": "Bots For Customer Success Teams",
+   "keyword": "ai bots customer success",
+   "cluster": "roles-and-industries",
+   "category": "Guide"
+  },
+  {
+   "slug": "bots-for-revops",
+   "title": "Bots For RevOps: Hygiene Without Headcount",
+   "keyword": "ai bots revops",
+   "cluster": "roles-and-industries",
+   "category": "Guide"
+  },
+  {
+   "slug": "bots-for-technical-writers",
+   "title": "Bots For Technical Writers",
+   "keyword": "ai bots technical writing",
+   "cluster": "roles-and-industries",
+   "category": "Guide"
+  },
+  {
+   "slug": "bots-for-data-teams",
+   "title": "Bots For Data Teams: Reporting Without Rewriting",
+   "keyword": "ai bots data teams",
+   "cluster": "roles-and-industries",
+   "category": "Guide"
+  },
+  {
+   "slug": "bots-for-security-teams",
+   "title": "Bots For Security Teams: Triage, Never Remediation",
+   "keyword": "ai bots security teams",
+   "cluster": "roles-and-industries",
+   "category": "Guide"
+  },
+  {
+   "slug": "bots-for-hr-teams",
+   "title": "Bots For HR: The Narrow Defensible Scope",
+   "keyword": "ai bots hr",
+   "cluster": "roles-and-industries",
+   "category": "Guide"
+  },
+  {
+   "slug": "bots-for-finance-teams",
+   "title": "Bots For Finance Teams",
+   "keyword": "ai bots finance teams",
+   "cluster": "roles-and-industries",
+   "category": "Guide"
+  },
+  {
+   "slug": "bots-for-nonprofits",
+   "title": "Bots For Small Nonprofits",
+   "keyword": "ai bots nonprofits",
+   "cluster": "roles-and-industries",
+   "category": "Guide"
+  },
+  {
+   "slug": "bots-for-freelancers",
+   "title": "Bots For Freelancers Working Alone",
+   "keyword": "ai bots freelancers",
+   "cluster": "roles-and-industries",
+   "category": "Guide"
+  },
+  {
+   "slug": "first-bot-in-an-hour",
+   "title": "Your First Bot In An Hour",
+   "keyword": "first ai bot",
+   "cluster": "getting-started",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-glossary",
+   "title": "The Bot Glossary: Terms That Actually Matter",
+   "keyword": "ai agent glossary",
+   "cluster": "getting-started",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-setup-checklist",
+   "title": "The Pre-Flight Checklist Before Any Bot Runs",
+   "keyword": "ai agent checklist",
+   "cluster": "getting-started",
+   "category": "Guide"
+  },
+  {
+   "slug": "common-bot-questions",
+   "title": "The Twenty Questions People Ask Before Their First Bot",
+   "keyword": "ai agent faq",
+   "cluster": "getting-started",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-mistakes-week-one",
+   "title": "Seven Mistakes Everyone Makes In Week One",
+   "keyword": "ai agent mistakes",
+   "cluster": "getting-started",
+   "category": "Guide"
+  },
+  {
+   "slug": "how-bots-actually-work",
+   "title": "How Bots Actually Work, Without The Hype",
+   "keyword": "how ai agents work",
+   "cluster": "getting-started",
+   "category": "Guide"
+  },
+  {
+   "slug": "choosing-your-first-bot-job",
+   "title": "How To Pick The First Job To Hand Over",
+   "keyword": "first automation task",
+   "cluster": "getting-started",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-trial-run-method",
+   "title": "How To Trial A Bot For A Week Before Trusting It",
+   "keyword": "test ai agent",
+   "cluster": "getting-started",
+   "category": "Guide"
+  },
+  {
+   "slug": "reading-a-bot-listing",
+   "title": "How To Read A Bot Listing Before You Paste It",
+   "keyword": "evaluate ai agent prompt",
+   "cluster": "getting-started",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-vocabulary-for-managers",
+   "title": "Explaining Bots To Someone Who Approves The Budget",
+   "keyword": "ai agents for managers",
+   "cluster": "getting-started",
+   "category": "Guide"
+  },
+  {
+   "slug": "running-bots-as-a-team",
+   "title": "Running Bots When More Than One Person Depends On Them",
+   "keyword": "team ai agents",
+   "cluster": "operations",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-on-call",
+   "title": "Who Is On Call For A Bot",
+   "keyword": "ai agent on call",
+   "cluster": "operations",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-change-management",
+   "title": "Changing A Bot Without Surprising Anyone",
+   "keyword": "ai agent change management",
+   "cluster": "operations",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-capacity-planning",
+   "title": "How Many Bots Can One Person Actually Review",
+   "keyword": "ai agent capacity",
+   "cluster": "operations",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-retirement",
+   "title": "How To Retire A Bot Properly",
+   "keyword": "retire ai agent",
+   "cluster": "operations",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-naming-conventions",
+   "title": "Naming Bots So You Can Find Them In A Year",
+   "keyword": "ai agent naming",
+   "cluster": "operations",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-runbooks",
+   "title": "Writing A Runbook For A Bot That Fails At 3am",
+   "keyword": "ai agent runbook",
+   "cluster": "operations",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-escalation-paths",
+   "title": "Designing The Escalation Path Before You Need It",
+   "keyword": "ai agent escalation",
+   "cluster": "operations",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-shadow-mode",
+   "title": "Running A Bot In Shadow Mode First",
+   "keyword": "shadow mode ai agent",
+   "cluster": "operations",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-post-mortems",
+   "title": "Writing The Post Mortem After A Bot Gets It Wrong",
+   "keyword": "ai agent post mortem",
+   "cluster": "operations",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-boundaries-by-tool",
+   "title": "The Boundary Line For Every Tool You Might Connect",
+   "keyword": "bot boundaries by tool",
+   "cluster": "craft-safety",
+   "category": "Reference"
+  },
+  {
+   "slug": "what-a-bot-cannot-do",
+   "title": "What Bots Still Cannot Do In 2026",
+   "keyword": "ai agent limitations",
+   "cluster": "getting-started",
+   "category": "Guide"
+  },
+  {
+   "slug": "bots-and-your-calendar",
+   "title": "Letting A Bot Near Your Calendar",
+   "keyword": "calendar automation risk",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "bot-review-fatigue",
+   "title": "Approval Fatigue And How To Notice It Early",
+   "keyword": "approval fatigue",
+   "cluster": "operations",
+   "category": "Guide"
+  },
+  {
+   "slug": "bots-that-read-email",
+   "title": "What Changes When A Bot Can Read Your Email",
+   "keyword": "email access ai agent",
+   "cluster": "craft-safety",
+   "category": "Safety"
+  },
+  {
+   "slug": "automating-the-boring-half",
+   "title": "Automating The Boring Half Of Any Job",
+   "keyword": "automate repetitive work",
+   "cluster": "getting-started",
+   "category": "Guide"
+  },
+  {
+   "slug": "bot-team-topologies",
+   "title": "Four Shapes A Bot Roster Can Take",
+   "keyword": "multi agent architecture",
+   "cluster": "operations",
+   "category": "Guide"
+  },
+  {
+   "slug": "evidence-rules-for-bots",
+   "title": "Making A Bot Show Its Work",
+   "keyword": "ai agent evidence",
+   "cluster": "craft-safety",
+   "category": "Guide"
+  },
+  {
+   "slug": "bots-and-regulated-industries",
+   "title": "Bots In Regulated Industries: Where The Line Sits",
+   "keyword": "ai agents regulated industries",
+   "cluster": "roles-and-industries",
+   "category": "Safety"
+  },
+  {
+   "slug": "the-quiet-day-problem",
+   "title": "Why A Bot That Always Finds Something Is Broken",
+   "keyword": "ai agent false positives",
+   "cluster": "craft-safety",
+   "category": "Guide"
+  }
+ ]
+}

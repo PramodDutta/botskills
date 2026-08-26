@@ -5,6 +5,7 @@ import { isValidElement } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeSanitize from 'rehype-sanitize';
+import rehypeSlug from 'rehype-slug';
 import { MermaidBlock } from '@/components/mermaid-block';
 
 /** Pull the source out of the <code> child of a fenced ```mermaid block. */
@@ -21,7 +22,10 @@ export function PostBody({ content }: { content: string }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeSanitize]}
+      // rehype-slug must run AFTER sanitize: sanitize strips unknown attributes, so
+      // adding ids first would have them removed again. Pillar pages carry a table
+      // of contents whose links are inert without these.
+      rehypePlugins={[rehypeSanitize, rehypeSlug]}
       components={{
         pre({ children, ...props }) {
           const chart = mermaidSource(children);
