@@ -8,8 +8,12 @@
 
 
 
+
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
+import { post as aiAgentPlatformsCompared } from './ai-agent-platforms-compared';
+import { post as aiBotsCompleteGuide } from './ai-bots-complete-guide';
 import { post as approvalGatesForBots } from './approval-gates-for-bots';
 import { post as bestAiBotsForDevelopers } from './best-ai-bots-for-developers';
 import { post as bestAiBotsForFounders } from './best-ai-bots-for-founders';
@@ -17,10 +21,13 @@ import { post as bestAiBotsForMarketing } from './best-ai-bots-for-marketing';
 import { post as bestAiBotsForSales } from './best-ai-bots-for-sales';
 import { post as bestAiBotsForSupport } from './best-ai-bots-for-support';
 import { post as botCostControl } from './bot-cost-control';
+import { post as botDelegationPlaybook } from './bot-delegation-playbook';
 import { post as botFailureModes } from './bot-failure-modes';
 import { post as botHandoffToHuman } from './bot-handoff-to-human';
+import { post as botIntegrationsCompleteGuide } from './bot-integrations-complete-guide';
 import { post as botObservability } from './bot-observability';
 import { post as botPromptEngineering } from './bot-prompt-engineering';
+import { post as botSecurityCompleteGuide } from './bot-security-complete-guide';
 import { post as botSystemArchitecture } from './bot-system-architecture';
 import { post as botThatNeverSends } from './bot-that-never-sends';
 import { post as botdirectoryAlternatives } from './botdirectory-alternatives';
@@ -28,6 +35,7 @@ import { post as botsForAgencies } from './bots-for-agencies';
 import { post as botsForConsultants } from './bots-for-consultants';
 import { post as botsForEcommerce } from './bots-for-ecommerce';
 import { post as botsForEngineers } from './bots-for-engineers';
+import { post as botsForEveryRole } from './bots-for-every-role';
 import { post as botsForFinance } from './bots-for-finance';
 import { post as botsForFounders } from './bots-for-founders';
 import { post as botsForMarketers } from './bots-for-marketers';
@@ -114,7 +122,17 @@ import { post as grokBotWhopCliCommerce } from './grok-bot-whop-cli-commerce';
 import { post as grokBotXContentAutomationRisks } from './grok-bot-x-content-automation-risks';
 import { post as grokBotXTwitter } from './grok-bot-x-twitter';
 import { post as grokBotZoom } from './grok-bot-zoom';
+import { post as howToAutomateAccountTiering } from './how-to-automate-account-tiering';
+import { post as howToAutomateCallFollowUps } from './how-to-automate-call-follow-ups';
+import { post as howToAutomateChangelogWriting } from './how-to-automate-changelog-writing';
+import { post as howToAutomateDealDesk } from './how-to-automate-deal-desk';
+import { post as howToAutomateHelpCenterUpdates } from './how-to-automate-help-center-updates';
+import { post as howToAutomateQbrPrep } from './how-to-automate-qbr-prep';
+import { post as howToAutomateSupportTriage } from './how-to-automate-support-triage';
+import { post as howToCoachSalesCallsWithAi } from './how-to-coach-sales-calls-with-ai';
 import { post as howToCreateAGrokBot } from './how-to-create-a-grok-bot';
+import { post as howToKeepSalesDecksCurrent } from './how-to-keep-sales-decks-current';
+import { post as howToTrackCustomerPromises } from './how-to-track-customer-promises';
 import { post as leastPrivilegeBots } from './least-privilege-bots';
 import { post as migrateGrokBotToRakazo } from './migrate-grok-bot-to-rakazo';
 import { post as multiBotTeams } from './multi-bot-teams';
@@ -125,8 +143,12 @@ import { post as rakazoRoutines } from './rakazo-routines';
 import { post as rakazoSandboxOptions } from './rakazo-sandbox-options';
 import { post as rakazoSelfHostingGuide } from './rakazo-self-hosting-guide';
 import { post as rakazoVsGrokBot } from './rakazo-vs-grok-bot';
+import { post as selfHostingAiAgentsGuide } from './self-hosting-ai-agents-guide';
 import { post as testingYourBot } from './testing-your-bot';
+import { post as whatAiBotsCost } from './what-ai-bots-cost';
 import { post as whatIsAGrokBot } from './what-is-a-grok-bot';
+import { post as whenBotsGoWrong } from './when-bots-go-wrong';
+import { post as writingBotSetupsCompleteGuide } from './writing-bot-setups-complete-guide';
 
 export interface BlogPost {
   title: string;
@@ -139,6 +161,8 @@ export interface BlogPost {
 export const posts: Record<string, BlogPost> = {
   'introducing-botskills': introducingBotskills,
   'one-person-company-grok-bot': onePersonCompanyGrokBot,
+  'ai-agent-platforms-compared': aiAgentPlatformsCompared,
+  'ai-bots-complete-guide': aiBotsCompleteGuide,
   'approval-gates-for-bots': approvalGatesForBots,
   'best-ai-bots-for-developers': bestAiBotsForDevelopers,
   'best-ai-bots-for-founders': bestAiBotsForFounders,
@@ -146,10 +170,13 @@ export const posts: Record<string, BlogPost> = {
   'best-ai-bots-for-sales': bestAiBotsForSales,
   'best-ai-bots-for-support': bestAiBotsForSupport,
   'bot-cost-control': botCostControl,
+  'bot-delegation-playbook': botDelegationPlaybook,
   'bot-failure-modes': botFailureModes,
   'bot-handoff-to-human': botHandoffToHuman,
+  'bot-integrations-complete-guide': botIntegrationsCompleteGuide,
   'bot-observability': botObservability,
   'bot-prompt-engineering': botPromptEngineering,
+  'bot-security-complete-guide': botSecurityCompleteGuide,
   'bot-system-architecture': botSystemArchitecture,
   'bot-that-never-sends': botThatNeverSends,
   'botdirectory-alternatives': botdirectoryAlternatives,
@@ -157,6 +184,7 @@ export const posts: Record<string, BlogPost> = {
   'bots-for-consultants': botsForConsultants,
   'bots-for-ecommerce': botsForEcommerce,
   'bots-for-engineers': botsForEngineers,
+  'bots-for-every-role': botsForEveryRole,
   'bots-for-finance': botsForFinance,
   'bots-for-founders': botsForFounders,
   'bots-for-marketers': botsForMarketers,
@@ -243,7 +271,17 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-x-content-automation-risks': grokBotXContentAutomationRisks,
   'grok-bot-x-twitter': grokBotXTwitter,
   'grok-bot-zoom': grokBotZoom,
+  'how-to-automate-account-tiering': howToAutomateAccountTiering,
+  'how-to-automate-call-follow-ups': howToAutomateCallFollowUps,
+  'how-to-automate-changelog-writing': howToAutomateChangelogWriting,
+  'how-to-automate-deal-desk': howToAutomateDealDesk,
+  'how-to-automate-help-center-updates': howToAutomateHelpCenterUpdates,
+  'how-to-automate-qbr-prep': howToAutomateQbrPrep,
+  'how-to-automate-support-triage': howToAutomateSupportTriage,
+  'how-to-coach-sales-calls-with-ai': howToCoachSalesCallsWithAi,
   'how-to-create-a-grok-bot': howToCreateAGrokBot,
+  'how-to-keep-sales-decks-current': howToKeepSalesDecksCurrent,
+  'how-to-track-customer-promises': howToTrackCustomerPromises,
   'least-privilege-bots': leastPrivilegeBots,
   'migrate-grok-bot-to-rakazo': migrateGrokBotToRakazo,
   'multi-bot-teams': multiBotTeams,
@@ -254,13 +292,19 @@ export const posts: Record<string, BlogPost> = {
   'rakazo-sandbox-options': rakazoSandboxOptions,
   'rakazo-self-hosting-guide': rakazoSelfHostingGuide,
   'rakazo-vs-grok-bot': rakazoVsGrokBot,
+  'self-hosting-ai-agents-guide': selfHostingAiAgentsGuide,
   'testing-your-bot': testingYourBot,
+  'what-ai-bots-cost': whatAiBotsCost,
   'what-is-a-grok-bot': whatIsAGrokBot,
+  'when-bots-go-wrong': whenBotsGoWrong,
+  'writing-bot-setups-complete-guide': writingBotSetupsCompleteGuide,
 };
 
 export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'introducing-botskills', ...introducingBotskills },
   { slug: 'one-person-company-grok-bot', ...onePersonCompanyGrokBot },
+  { slug: 'ai-agent-platforms-compared', ...aiAgentPlatformsCompared },
+  { slug: 'ai-bots-complete-guide', ...aiBotsCompleteGuide },
   { slug: 'approval-gates-for-bots', ...approvalGatesForBots },
   { slug: 'best-ai-bots-for-developers', ...bestAiBotsForDevelopers },
   { slug: 'best-ai-bots-for-founders', ...bestAiBotsForFounders },
@@ -268,10 +312,13 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'best-ai-bots-for-sales', ...bestAiBotsForSales },
   { slug: 'best-ai-bots-for-support', ...bestAiBotsForSupport },
   { slug: 'bot-cost-control', ...botCostControl },
+  { slug: 'bot-delegation-playbook', ...botDelegationPlaybook },
   { slug: 'bot-failure-modes', ...botFailureModes },
   { slug: 'bot-handoff-to-human', ...botHandoffToHuman },
+  { slug: 'bot-integrations-complete-guide', ...botIntegrationsCompleteGuide },
   { slug: 'bot-observability', ...botObservability },
   { slug: 'bot-prompt-engineering', ...botPromptEngineering },
+  { slug: 'bot-security-complete-guide', ...botSecurityCompleteGuide },
   { slug: 'bot-system-architecture', ...botSystemArchitecture },
   { slug: 'bot-that-never-sends', ...botThatNeverSends },
   { slug: 'botdirectory-alternatives', ...botdirectoryAlternatives },
@@ -279,6 +326,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'bots-for-consultants', ...botsForConsultants },
   { slug: 'bots-for-ecommerce', ...botsForEcommerce },
   { slug: 'bots-for-engineers', ...botsForEngineers },
+  { slug: 'bots-for-every-role', ...botsForEveryRole },
   { slug: 'bots-for-finance', ...botsForFinance },
   { slug: 'bots-for-founders', ...botsForFounders },
   { slug: 'bots-for-marketers', ...botsForMarketers },
@@ -365,7 +413,17 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-x-content-automation-risks', ...grokBotXContentAutomationRisks },
   { slug: 'grok-bot-x-twitter', ...grokBotXTwitter },
   { slug: 'grok-bot-zoom', ...grokBotZoom },
+  { slug: 'how-to-automate-account-tiering', ...howToAutomateAccountTiering },
+  { slug: 'how-to-automate-call-follow-ups', ...howToAutomateCallFollowUps },
+  { slug: 'how-to-automate-changelog-writing', ...howToAutomateChangelogWriting },
+  { slug: 'how-to-automate-deal-desk', ...howToAutomateDealDesk },
+  { slug: 'how-to-automate-help-center-updates', ...howToAutomateHelpCenterUpdates },
+  { slug: 'how-to-automate-qbr-prep', ...howToAutomateQbrPrep },
+  { slug: 'how-to-automate-support-triage', ...howToAutomateSupportTriage },
+  { slug: 'how-to-coach-sales-calls-with-ai', ...howToCoachSalesCallsWithAi },
   { slug: 'how-to-create-a-grok-bot', ...howToCreateAGrokBot },
+  { slug: 'how-to-keep-sales-decks-current', ...howToKeepSalesDecksCurrent },
+  { slug: 'how-to-track-customer-promises', ...howToTrackCustomerPromises },
   { slug: 'least-privilege-bots', ...leastPrivilegeBots },
   { slug: 'migrate-grok-bot-to-rakazo', ...migrateGrokBotToRakazo },
   { slug: 'multi-bot-teams', ...multiBotTeams },
@@ -376,6 +434,10 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'rakazo-sandbox-options', ...rakazoSandboxOptions },
   { slug: 'rakazo-self-hosting-guide', ...rakazoSelfHostingGuide },
   { slug: 'rakazo-vs-grok-bot', ...rakazoVsGrokBot },
+  { slug: 'self-hosting-ai-agents-guide', ...selfHostingAiAgentsGuide },
   { slug: 'testing-your-bot', ...testingYourBot },
+  { slug: 'what-ai-bots-cost', ...whatAiBotsCost },
   { slug: 'what-is-a-grok-bot', ...whatIsAGrokBot },
+  { slug: 'when-bots-go-wrong', ...whenBotsGoWrong },
+  { slug: 'writing-bot-setups-complete-guide', ...writingBotSetupsCompleteGuide },
 ];
