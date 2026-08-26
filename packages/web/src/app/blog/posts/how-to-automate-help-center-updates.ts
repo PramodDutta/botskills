@@ -436,6 +436,8 @@ communication with durable task documentation.
 
 **Keep reading:** [How to Build a Grok Bot That Can Clean Up Documentation](/blog/grok-bot-to-doc-cleanup), [How To Turn Shipped Tickets Into A Changelog](/blog/how-to-automate-changelog-writing).
 
+Related: [How To Keep A Buying Committee Map Current](/blog/how-to-maintain-an-org-chart).
+
 ## Frequently Asked Questions
 
 ### What should trigger help center automation?

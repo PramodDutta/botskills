@@ -628,7 +628,7 @@ from a lock-in into a preference, the argument in
 [the delegation playbook](/blog/bot-delegation-playbook) is written runtime-first
 rather than vendor-first.
 
-**Keep reading:** [Rakazo vs Grok Bot](/blog/rakazo-vs-grok-bot), [Grok Bot Alternatives Compared](/blog/grok-bot-vs-openclaw-vs-hermes-vs-buzz), [Open Source Bot Runtimes Compared in 2026](/blog/open-source-bot-runtimes).
+**Keep reading:** [Grok Bot vs ChatGPT Work](/blog/grok-bot-vs-chatgpt-work), [Grok Bot vs Claude Cowork](/blog/grok-bot-vs-claude-cowork), [Rakazo vs Grok Bot](/blog/rakazo-vs-grok-bot).
 
 ## Frequently Asked Questions
 

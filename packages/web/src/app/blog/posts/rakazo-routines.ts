@@ -391,6 +391,8 @@ and the cron string does not, which is covered in
 
 **Keep reading:** [Schedules vs Event Triggers](/blog/grok-bot-routines-vs-triggers), [Choosing a Model for Rakazo](/blog/rakazo-model-choice), [Rakazo Permissions and Audit Logging, Explained](/blog/rakazo-permissions-audit).
 
+Related: [Bots and Your Database](/blog/bots-and-supabase).
+
 ## Frequently Asked Questions
 
 ### Are Rakazo routines stored as files you can version control?

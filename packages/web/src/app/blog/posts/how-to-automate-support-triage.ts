@@ -410,6 +410,8 @@ hears only from a person authorized to speak.
 
 **Keep reading:** [How to Build a Grok Bot That Can Triage Support Tickets](/blog/grok-bot-to-support-triage), [How to Build a Grok Bot That Can Hand Work Back to a Human](/blog/bot-handoff-to-human).
 
+Related: [How To Qualify Inbound Without Replying To Anyone](/blog/how-to-automate-inbound-qualification).
+
 ## Frequently Asked Questions
 
 ### What should support triage automation do first?

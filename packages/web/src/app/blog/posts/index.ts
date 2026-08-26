@@ -10,6 +10,14 @@
 
 
 
+
+
+
+
+
+
+
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aiAgentPlatformsCompared } from './ai-agent-platforms-compared';
@@ -31,6 +39,15 @@ import { post as botSecurityCompleteGuide } from './bot-security-complete-guide'
 import { post as botSystemArchitecture } from './bot-system-architecture';
 import { post as botThatNeverSends } from './bot-that-never-sends';
 import { post as botdirectoryAlternatives } from './botdirectory-alternatives';
+import { post as botsAndAsana } from './bots-and-asana';
+import { post as botsAndAws } from './bots-and-aws';
+import { post as botsAndClickup } from './bots-and-clickup';
+import { post as botsAndFigma } from './bots-and-figma';
+import { post as botsAndJiraServiceManagement } from './bots-and-jira-service-management';
+import { post as botsAndMixpanel } from './bots-and-mixpanel';
+import { post as botsAndMonday } from './bots-and-monday';
+import { post as botsAndSupabase } from './bots-and-supabase';
+import { post as botsAndZendesk } from './bots-and-zendesk';
 import { post as botsForAgencies } from './bots-for-agencies';
 import { post as botsForConsultants } from './bots-for-consultants';
 import { post as botsForEcommerce } from './bots-for-ecommerce';
@@ -59,6 +76,7 @@ import { post as grokBotDiscord } from './grok-bot-discord';
 import { post as grokBotExamples } from './grok-bot-examples';
 import { post as grokBotFirstWeek } from './grok-bot-first-week';
 import { post as grokBotForDesignersFigmaMotion } from './grok-bot-for-designers-figma-motion';
+import { post as grokBotFreeTrial } from './grok-bot-free-trial';
 import { post as grokBotGithub } from './grok-bot-github';
 import { post as grokBotGmail } from './grok-bot-gmail';
 import { post as grokBotGoogleCalendar } from './grok-bot-google-calendar';
@@ -111,7 +129,10 @@ import { post as grokBotToSubscriptionAudit } from './grok-bot-to-subscription-a
 import { post as grokBotToSupportTriage } from './grok-bot-to-support-triage';
 import { post as grokBotTroubleshooting } from './grok-bot-troubleshooting';
 import { post as grokBotVsChatgptTasks } from './grok-bot-vs-chatgpt-tasks';
+import { post as grokBotVsChatgptWork } from './grok-bot-vs-chatgpt-work';
 import { post as grokBotVsClaudeAgent } from './grok-bot-vs-claude-agent';
+import { post as grokBotVsClaudeCowork } from './grok-bot-vs-claude-cowork';
+import { post as grokBotVsGrokBuild } from './grok-bot-vs-grok-build';
 import { post as grokBotVsLindy } from './grok-bot-vs-lindy';
 import { post as grokBotVsMake } from './grok-bot-vs-make';
 import { post as grokBotVsN8n } from './grok-bot-vs-n8n';
@@ -122,17 +143,27 @@ import { post as grokBotWhopCliCommerce } from './grok-bot-whop-cli-commerce';
 import { post as grokBotXContentAutomationRisks } from './grok-bot-x-content-automation-risks';
 import { post as grokBotXTwitter } from './grok-bot-x-twitter';
 import { post as grokBotZoom } from './grok-bot-zoom';
+import { post as howToAnswerSecurityQuestionnaires } from './how-to-answer-security-questionnaires';
 import { post as howToAutomateAccountTiering } from './how-to-automate-account-tiering';
 import { post as howToAutomateCallFollowUps } from './how-to-automate-call-follow-ups';
 import { post as howToAutomateChangelogWriting } from './how-to-automate-changelog-writing';
 import { post as howToAutomateDealDesk } from './how-to-automate-deal-desk';
+import { post as howToAutomateExpenseCategorisation } from './how-to-automate-expense-categorisation';
+import { post as howToAutomateForecastHygiene } from './how-to-automate-forecast-hygiene';
 import { post as howToAutomateHelpCenterUpdates } from './how-to-automate-help-center-updates';
+import { post as howToAutomateInboundQualification } from './how-to-automate-inbound-qualification';
+import { post as howToAutomateInvoiceReconciliation } from './how-to-automate-invoice-reconciliation';
+import { post as howToAutomateMeetingPrep } from './how-to-automate-meeting-prep';
 import { post as howToAutomateQbrPrep } from './how-to-automate-qbr-prep';
 import { post as howToAutomateSupportTriage } from './how-to-automate-support-triage';
+import { post as howToAutomateWinLossAnalysis } from './how-to-automate-win-loss-analysis';
+import { post as howToBuildAProspectResearchSheet } from './how-to-build-a-prospect-research-sheet';
 import { post as howToCoachSalesCallsWithAi } from './how-to-coach-sales-calls-with-ai';
 import { post as howToCreateAGrokBot } from './how-to-create-a-grok-bot';
 import { post as howToKeepSalesDecksCurrent } from './how-to-keep-sales-decks-current';
+import { post as howToMaintainAnOrgChart } from './how-to-maintain-an-org-chart';
 import { post as howToTrackCustomerPromises } from './how-to-track-customer-promises';
+import { post as isGrokBotWorthIt } from './is-grok-bot-worth-it';
 import { post as leastPrivilegeBots } from './least-privilege-bots';
 import { post as migrateGrokBotToRakazo } from './migrate-grok-bot-to-rakazo';
 import { post as multiBotTeams } from './multi-bot-teams';
@@ -180,6 +211,15 @@ export const posts: Record<string, BlogPost> = {
   'bot-system-architecture': botSystemArchitecture,
   'bot-that-never-sends': botThatNeverSends,
   'botdirectory-alternatives': botdirectoryAlternatives,
+  'bots-and-asana': botsAndAsana,
+  'bots-and-aws': botsAndAws,
+  'bots-and-clickup': botsAndClickup,
+  'bots-and-figma': botsAndFigma,
+  'bots-and-jira-service-management': botsAndJiraServiceManagement,
+  'bots-and-mixpanel': botsAndMixpanel,
+  'bots-and-monday': botsAndMonday,
+  'bots-and-supabase': botsAndSupabase,
+  'bots-and-zendesk': botsAndZendesk,
   'bots-for-agencies': botsForAgencies,
   'bots-for-consultants': botsForConsultants,
   'bots-for-ecommerce': botsForEcommerce,
@@ -208,6 +248,7 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-examples': grokBotExamples,
   'grok-bot-first-week': grokBotFirstWeek,
   'grok-bot-for-designers-figma-motion': grokBotForDesignersFigmaMotion,
+  'grok-bot-free-trial': grokBotFreeTrial,
   'grok-bot-github': grokBotGithub,
   'grok-bot-gmail': grokBotGmail,
   'grok-bot-google-calendar': grokBotGoogleCalendar,
@@ -260,7 +301,10 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-to-support-triage': grokBotToSupportTriage,
   'grok-bot-troubleshooting': grokBotTroubleshooting,
   'grok-bot-vs-chatgpt-tasks': grokBotVsChatgptTasks,
+  'grok-bot-vs-chatgpt-work': grokBotVsChatgptWork,
   'grok-bot-vs-claude-agent': grokBotVsClaudeAgent,
+  'grok-bot-vs-claude-cowork': grokBotVsClaudeCowork,
+  'grok-bot-vs-grok-build': grokBotVsGrokBuild,
   'grok-bot-vs-lindy': grokBotVsLindy,
   'grok-bot-vs-make': grokBotVsMake,
   'grok-bot-vs-n8n': grokBotVsN8n,
@@ -271,17 +315,27 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-x-content-automation-risks': grokBotXContentAutomationRisks,
   'grok-bot-x-twitter': grokBotXTwitter,
   'grok-bot-zoom': grokBotZoom,
+  'how-to-answer-security-questionnaires': howToAnswerSecurityQuestionnaires,
   'how-to-automate-account-tiering': howToAutomateAccountTiering,
   'how-to-automate-call-follow-ups': howToAutomateCallFollowUps,
   'how-to-automate-changelog-writing': howToAutomateChangelogWriting,
   'how-to-automate-deal-desk': howToAutomateDealDesk,
+  'how-to-automate-expense-categorisation': howToAutomateExpenseCategorisation,
+  'how-to-automate-forecast-hygiene': howToAutomateForecastHygiene,
   'how-to-automate-help-center-updates': howToAutomateHelpCenterUpdates,
+  'how-to-automate-inbound-qualification': howToAutomateInboundQualification,
+  'how-to-automate-invoice-reconciliation': howToAutomateInvoiceReconciliation,
+  'how-to-automate-meeting-prep': howToAutomateMeetingPrep,
   'how-to-automate-qbr-prep': howToAutomateQbrPrep,
   'how-to-automate-support-triage': howToAutomateSupportTriage,
+  'how-to-automate-win-loss-analysis': howToAutomateWinLossAnalysis,
+  'how-to-build-a-prospect-research-sheet': howToBuildAProspectResearchSheet,
   'how-to-coach-sales-calls-with-ai': howToCoachSalesCallsWithAi,
   'how-to-create-a-grok-bot': howToCreateAGrokBot,
   'how-to-keep-sales-decks-current': howToKeepSalesDecksCurrent,
+  'how-to-maintain-an-org-chart': howToMaintainAnOrgChart,
   'how-to-track-customer-promises': howToTrackCustomerPromises,
+  'is-grok-bot-worth-it': isGrokBotWorthIt,
   'least-privilege-bots': leastPrivilegeBots,
   'migrate-grok-bot-to-rakazo': migrateGrokBotToRakazo,
   'multi-bot-teams': multiBotTeams,
@@ -322,6 +376,15 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'bot-system-architecture', ...botSystemArchitecture },
   { slug: 'bot-that-never-sends', ...botThatNeverSends },
   { slug: 'botdirectory-alternatives', ...botdirectoryAlternatives },
+  { slug: 'bots-and-asana', ...botsAndAsana },
+  { slug: 'bots-and-aws', ...botsAndAws },
+  { slug: 'bots-and-clickup', ...botsAndClickup },
+  { slug: 'bots-and-figma', ...botsAndFigma },
+  { slug: 'bots-and-jira-service-management', ...botsAndJiraServiceManagement },
+  { slug: 'bots-and-mixpanel', ...botsAndMixpanel },
+  { slug: 'bots-and-monday', ...botsAndMonday },
+  { slug: 'bots-and-supabase', ...botsAndSupabase },
+  { slug: 'bots-and-zendesk', ...botsAndZendesk },
   { slug: 'bots-for-agencies', ...botsForAgencies },
   { slug: 'bots-for-consultants', ...botsForConsultants },
   { slug: 'bots-for-ecommerce', ...botsForEcommerce },
@@ -350,6 +413,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-examples', ...grokBotExamples },
   { slug: 'grok-bot-first-week', ...grokBotFirstWeek },
   { slug: 'grok-bot-for-designers-figma-motion', ...grokBotForDesignersFigmaMotion },
+  { slug: 'grok-bot-free-trial', ...grokBotFreeTrial },
   { slug: 'grok-bot-github', ...grokBotGithub },
   { slug: 'grok-bot-gmail', ...grokBotGmail },
   { slug: 'grok-bot-google-calendar', ...grokBotGoogleCalendar },
@@ -402,7 +466,10 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-to-support-triage', ...grokBotToSupportTriage },
   { slug: 'grok-bot-troubleshooting', ...grokBotTroubleshooting },
   { slug: 'grok-bot-vs-chatgpt-tasks', ...grokBotVsChatgptTasks },
+  { slug: 'grok-bot-vs-chatgpt-work', ...grokBotVsChatgptWork },
   { slug: 'grok-bot-vs-claude-agent', ...grokBotVsClaudeAgent },
+  { slug: 'grok-bot-vs-claude-cowork', ...grokBotVsClaudeCowork },
+  { slug: 'grok-bot-vs-grok-build', ...grokBotVsGrokBuild },
   { slug: 'grok-bot-vs-lindy', ...grokBotVsLindy },
   { slug: 'grok-bot-vs-make', ...grokBotVsMake },
   { slug: 'grok-bot-vs-n8n', ...grokBotVsN8n },
@@ -413,17 +480,27 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-x-content-automation-risks', ...grokBotXContentAutomationRisks },
   { slug: 'grok-bot-x-twitter', ...grokBotXTwitter },
   { slug: 'grok-bot-zoom', ...grokBotZoom },
+  { slug: 'how-to-answer-security-questionnaires', ...howToAnswerSecurityQuestionnaires },
   { slug: 'how-to-automate-account-tiering', ...howToAutomateAccountTiering },
   { slug: 'how-to-automate-call-follow-ups', ...howToAutomateCallFollowUps },
   { slug: 'how-to-automate-changelog-writing', ...howToAutomateChangelogWriting },
   { slug: 'how-to-automate-deal-desk', ...howToAutomateDealDesk },
+  { slug: 'how-to-automate-expense-categorisation', ...howToAutomateExpenseCategorisation },
+  { slug: 'how-to-automate-forecast-hygiene', ...howToAutomateForecastHygiene },
   { slug: 'how-to-automate-help-center-updates', ...howToAutomateHelpCenterUpdates },
+  { slug: 'how-to-automate-inbound-qualification', ...howToAutomateInboundQualification },
+  { slug: 'how-to-automate-invoice-reconciliation', ...howToAutomateInvoiceReconciliation },
+  { slug: 'how-to-automate-meeting-prep', ...howToAutomateMeetingPrep },
   { slug: 'how-to-automate-qbr-prep', ...howToAutomateQbrPrep },
   { slug: 'how-to-automate-support-triage', ...howToAutomateSupportTriage },
+  { slug: 'how-to-automate-win-loss-analysis', ...howToAutomateWinLossAnalysis },
+  { slug: 'how-to-build-a-prospect-research-sheet', ...howToBuildAProspectResearchSheet },
   { slug: 'how-to-coach-sales-calls-with-ai', ...howToCoachSalesCallsWithAi },
   { slug: 'how-to-create-a-grok-bot', ...howToCreateAGrokBot },
   { slug: 'how-to-keep-sales-decks-current', ...howToKeepSalesDecksCurrent },
+  { slug: 'how-to-maintain-an-org-chart', ...howToMaintainAnOrgChart },
   { slug: 'how-to-track-customer-promises', ...howToTrackCustomerPromises },
+  { slug: 'is-grok-bot-worth-it', ...isGrokBotWorthIt },
   { slug: 'least-privilege-bots', ...leastPrivilegeBots },
   { slug: 'migrate-grok-bot-to-rakazo', ...migrateGrokBotToRakazo },
   { slug: 'multi-bot-teams', ...multiBotTeams },

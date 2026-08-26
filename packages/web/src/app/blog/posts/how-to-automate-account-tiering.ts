@@ -375,6 +375,8 @@ account reviews, use the [QBR preparation tutorial](/blog/how-to-automate-qbr-pr
 
 **Keep reading:** [How To Automate The Deal Desk Without Approving Anything](/blog/how-to-automate-deal-desk), [How To Automate Support Triage Without Touching Customers](/blog/how-to-automate-support-triage), [How To Coach Sales Calls With A Bot That Never Calls Anyone](/blog/how-to-coach-sales-calls-with-ai).
 
+Related: [How To Answer Security Questionnaires Without Guessing](/blog/how-to-answer-security-questionnaires).
+
 ## Frequently Asked Questions
 
 ### What is account tiering automation?

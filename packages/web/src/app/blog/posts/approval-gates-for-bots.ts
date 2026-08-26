@@ -399,6 +399,8 @@ This sits inside a wider guide: [The Delegation Playbook](/blog/bot-delegation-p
 
 This sits inside a wider guide: [Connecting Bots To Your Tools Without Handing Over Everything](/blog/bot-integrations-complete-guide) covers the whole territory.
 
+Related: [Bots and Figma](/blog/bots-and-figma).
+
 ## Frequently Asked Questions
 
 ### What are AI approval gates?

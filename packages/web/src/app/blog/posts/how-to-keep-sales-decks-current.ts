@@ -376,6 +376,8 @@ decision faster and better documented, not invisible.
 
 **Keep reading:** [How To Coach Sales Calls With A Bot That Never Calls Anyone](/blog/how-to-coach-sales-calls-with-ai), [How To Keep A Help Center Current Automatically](/blog/how-to-automate-help-center-updates), [How To Turn Call Transcripts Into Follow-Ups](/blog/how-to-automate-call-follow-ups).
 
+Related: [How To Keep A Buying Committee Map Current](/blog/how-to-maintain-an-org-chart).
+
 ## Frequently Asked Questions
 
 ### What is sales deck maintenance?

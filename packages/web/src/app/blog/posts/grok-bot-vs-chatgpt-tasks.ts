@@ -390,7 +390,7 @@ your existing agent config, you are reading about the other one, and
 [the compatibility breakdown](/blog/grok-bot-claude-code-skills-compatibility)
 separates them properly.
 
-**Keep reading:** [Grok Bot for Designers](/blog/grok-bot-for-designers-figma-motion), [Grok Bot Prompts That Actually Work](/blog/grok-bot-prompts-that-work), [Grok Bot Scheduling](/blog/grok-bot-scheduling).
+**Keep reading:** [Grok Bot vs ChatGPT Work](/blog/grok-bot-vs-chatgpt-work), [Grok Bot Prompts That Actually Work](/blog/grok-bot-prompts-that-work), [Grok Bot Scheduling](/blog/grok-bot-scheduling).
 
 ## Frequently Asked Questions
 

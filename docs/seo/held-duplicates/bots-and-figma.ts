@@ -1,25 +1,27 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot for Designers: Production Work and Slop Control',
+  title: 'Bots and Figma: What They Can And Cannot Touch',
   description:
-    'AI bots for designers, split honestly: which repetition is worth handing over, how to prototype motion properly, and what stops the output turning into slop.',
+    'Build a figma bot that handles repetitive production work while components, shared styles, publishing, comments, and design judgment stay human-owned.',
   date: '2026-08-25',
-  category: 'Playbook',
+  category: 'Tutorial',
   content: `
-# Grok Bot for Designers: Production Work and Slop Control
+# Bots and Figma: What They Can And Cannot Touch
 
 You spent Tuesday afternoon pasting forty-one product names and prices into a
-card component, one at a time, because the data lived in a spreadsheet and the
-component did not care. Nothing about that afternoon required a designer. All
-of it required someone who would not make a typo on card thirty-seven.
+Figma card component, one at a time, because the data lived in a spreadsheet.
+Nothing about that afternoon required new design judgment. All of it required
+someone who would not make a typo on card thirty-seven.
 
 That is the actual shape of the opportunity, and it is much less exciting than
-the pitch. A bot is not going to decide what to make. It is going to do the
-part of your week that is careful repetition, and it will do it while you are
-doing the part that is not.
+the pitch. A Figma bot should not decide what your product looks like. It can
+prepare a change list, inspect a file, populate a controlled duplicate, and
+report inconsistencies while you do the work requiring taste and context. Its
+permanent boundary is simple: never edit the source file, publish a library,
+post a comment, or change sharing without approval for the exact action.
 
-## A design week splits into repetition and judgment
+## Make Figma work concrete: A design week splits into repetition and judgment
 
 Write down everything you did last week and sort it into two columns. The sort
 is easier than people expect, because the test is simple: if you handed the
@@ -46,7 +48,7 @@ judgment column does not shrink as the models improve, because the entries in
 it are not blocked on capability. They are blocked on taste and on context
 that exists in your head and in three Slack threads.
 
-## Sort each handover by blast radius, not by difficulty
+## Make Figma work concrete: Sort each handover by blast radius, not by difficulty
 
 The repetition column tells you what a bot could do. It does not tell you what
 to hand over first, and the usual instinct, start with the hardest thing that
@@ -77,7 +79,7 @@ master component, and never touches a file another person has open.** Those are
 the places where one mistake propagates into everybody else's work instantly and
 cannot be pulled back.
 
-## Set up four repetition jobs, in this order
+## Make Figma work concrete: Set up four repetition jobs, in this order
 
 Content population. Give the bot a data source and a component, and have it
 produce the populated instances. The output is boring, checkable at a glance,
@@ -105,7 +107,7 @@ to study: it generates variants, and its stated boundary is that it never
 spends credits or launches anything without an explicit go. That line is the
 whole design of the bot, not a caveat on the end of it.
 
-## The judgment half is not a capability gap you can wait out
+## Make Figma work concrete: The judgment half is not a capability gap you can wait out
 
 It is worth being precise about why the second column stays yours, because
 "AI can't be creative" is a bad argument that will age badly.
@@ -125,7 +127,7 @@ specify your way out of a decision you have not made yet.
 So the split is not "hard versus easy". It is "the spec determines the output"
 versus "producing the spec is the work".
 
-## Answer the strongest objection: taste is a capability the models will get
+## Make Figma work concrete: Answer the strongest objection: taste is a capability the models will get
 
 The best argument against that split is not that models are creative. It is
 that the split is a snapshot.
@@ -157,7 +159,7 @@ competent stranger would produce what you would, the task has already moved into
 the repetition column whatever anyone's release notes say. That test survives
 every model upgrade, which is why it is the test.
 
-## Apply a system across fifty artboards without silent drift
+## Make Figma work concrete: Apply a system across fifty artboards without silent drift
 
 This is the highest-value repetition job and also the one with the nastiest
 failure mode, so it deserves its own rules.
@@ -178,7 +180,7 @@ Then the completeness check is arithmetic rather than trust. If the enumeration
 says fifty and the report has fifty lines, you know. If it says forty-six, you
 know that too, which is the entire point.
 
-## Build a playground around the motion spec instead of copying a screenshot
+## Make Figma work concrete: Build a playground around the motion spec instead of copying a screenshot
 
 Here is the technique that actually works for motion, and it is the opposite of
 what people try first.
@@ -257,7 +259,7 @@ The same trick generalises. Any time you catch yourself describing a quality in
 adjectives, ask instead for a harness that makes the underlying parameter
 adjustable, and go move it.
 
-## Replace every adjective in a brief with a reference artefact
+## Make Figma work concrete: Replace every adjective in a brief with a reference artefact
 
 Adjectives are where visual briefs go to die. "Clean", "modern", "premium",
 "bold but approachable" are words that mean something to you because you have
@@ -284,7 +286,7 @@ three approved past pieces, and a written note about what made each one work.
 That folder is worth more than any prompt you will write, and unlike a prompt it
 gets better every time a client approves something.
 
-## The anti-example list is the half everyone skips
+## Make Figma work concrete: The anti-example list is the half everyone skips
 
 Good references tell a bot where to aim. They do not tell it what to avoid,
 and avoiding is most of what taste is.
@@ -326,7 +328,7 @@ stops happening. The wider argument for why this test works, and how to apply it
 to writing as well as visuals, is in
 [the anatomy of slop and how to stop producing it](/blog/grok-bot-avoiding-ai-slop).
 
-## Look with a human eye where small inconsistencies multiply
+## Make Figma work concrete: Look with a human eye where small inconsistencies multiply
 
 Some errors are additive and some are multiplicative, and only the second kind
 should scare you.
@@ -361,7 +363,7 @@ warning that separate bots are
 If you design for competing clients, that is a real constraint on how you
 organise credentials and asset folders, and no charter instruction fixes it.
 
-## Diagnose design output from the shape of what went wrong
+## Make Figma work concrete: Diagnose design output from the shape of what went wrong
 
 Most of these look like success at first glance, which is why they reach a
 client review rather than getting caught at your desk.
@@ -380,7 +382,7 @@ failure here that a zoomed-out review will not catch. Correct-looking wrong data
 is invisible at any zoom level, so it needs a different check: five random rows
 against the source, every run, forever.
 
-## Paste this design production charter and adapt the folders
+## Make Figma work concrete: Paste this design production charter and adapt the folders
 
 \`\`\`text
 ROLE
@@ -420,7 +422,7 @@ Every asset with its licence and source URL.
 Anything that looked wrong to you but that I did not ask about.
 \`\`\`
 
-## Run one job end to end: forty-one cards from a spreadsheet
+## Make Figma work concrete: Run one job end to end: forty-one cards from a spreadsheet
 
 The job from the opening paragraph, done properly, from a standing start.
 
@@ -444,7 +446,7 @@ rather than the bot working. That ratio is the target. If your review time is
 shrinking toward zero, you have stopped checking, and the multiplicative failure
 above is waiting for you.
 
-## Judge it after ten working days on three countable numbers
+## Make Figma work concrete: Judge it after ten working days on three countable numbers
 
 Do not judge this on whether the output looked good. Judge it on three
 countable things after ten working days.
@@ -466,8 +468,6 @@ after, see [how a competitor watcher should be scoped](/bots/competitor-website-
 which is a good study in a bot whose whole job is to look and never touch.
 
 **Keep reading:** [The Four Layers of a Bot System That Actually Works](/blog/bot-system-architecture), [Bots for Agencies](/blog/bots-for-agencies), [Bots for Ecommerce](/blog/bots-for-ecommerce).
-
-Related: [Bots and Figma](/blog/bots-and-figma).
 
 ## Frequently Asked Questions
 

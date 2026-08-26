@@ -433,7 +433,7 @@ full charter format, and
 line applied to a bot that coordinates other agents: it never merges, posts
 publicly, or messages outside the team without approval.
 
-**Keep reading:** [Grok Bot vs Claude Agents](/blog/grok-bot-vs-claude-agent), [The Chief of Staff Bot](/blog/grok-bot-chief-of-staff-setup), [Grok Bot vs ChatGPT Tasks](/blog/grok-bot-vs-chatgpt-tasks).
+**Keep reading:** [Grok Bot vs Grok Build](/blog/grok-bot-vs-grok-build), [Grok Bot vs Claude Agents](/blog/grok-bot-vs-claude-agent), [The Chief of Staff Bot](/blog/grok-bot-chief-of-staff-setup).
 
 ## Frequently Asked Questions
 

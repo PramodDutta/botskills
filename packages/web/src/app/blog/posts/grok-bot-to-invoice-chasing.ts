@@ -451,6 +451,8 @@ part that determined whether any of this was worth doing.
 
 **Keep reading:** [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Catch Churn Early](/blog/grok-bot-to-churn-watch), [How to Build a Grok Bot That Can Monitor Competitors](/blog/grok-bot-to-competitor-monitoring).
 
+Related: [How To Reconcile Invoices Without Moving Money](/blog/how-to-automate-invoice-reconciliation).
+
 ## Frequently Asked Questions
 
 ### Should an invoice chasing bot send emails automatically?

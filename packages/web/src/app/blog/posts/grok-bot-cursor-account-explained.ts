@@ -388,7 +388,7 @@ that are current by definition. If you are building a whole operation on top of
 this, [the one-person company guide](/blog/one-person-company-grok-bot) covers
 what that looks like once the billing question is settled.
 
-**Keep reading:** [Self-Describing CLIs](/blog/grok-bot-whop-cli-commerce), [Rakazo Permissions and Audit Logging, Explained](/blog/rakazo-permissions-audit), [Grok Bot vs OpenAI Computer Use](/blog/grok-bot-vs-openai-operator).
+**Keep reading:** [Grok Bot Free Trial](/blog/grok-bot-free-trial), [Self-Describing CLIs](/blog/grok-bot-whop-cli-commerce), [Grok Bot vs OpenAI Computer Use](/blog/grok-bot-vs-openai-operator).
 
 This sits inside a wider guide: [What AI Bots Actually Cost](/blog/what-ai-bots-cost) covers the whole territory.
 

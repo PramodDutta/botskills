@@ -401,11 +401,13 @@ later, with the FAQ answering the Linux desktop question with a flat no, and no
 Android or iPad client ([FAQ](https://docs.x.ai/grok-bot/faq)). The computer
 your bots run on is Linux. The desk you drive it from cannot be.
 
-**Keep reading:** [Every Grok Bot Integration and What Each One Unlocks](/blog/grok-bot-integrations-list), [Give Every Bot One Source of Truth](/blog/grok-bot-obsidian-knowledge-base), [Grok Bot Prompts That Actually Work](/blog/grok-bot-prompts-that-work).
+**Keep reading:** [Grok Bot vs Claude Cowork](/blog/grok-bot-vs-claude-cowork), [Every Grok Bot Integration and What Each One Unlocks](/blog/grok-bot-integrations-list), [Give Every Bot One Source of Truth](/blog/grok-bot-obsidian-knowledge-base).
 
 This sits inside a wider guide: [Bot Security](/blog/bot-security-complete-guide) covers the whole territory.
 
 This sits inside a wider guide: [Connecting Bots To Your Tools Without Handing Over Everything](/blog/bot-integrations-complete-guide) covers the whole territory.
+
+Related: [How To Answer Security Questionnaires Without Guessing](/blog/how-to-answer-security-questionnaires).
 
 ## Frequently Asked Questions
 

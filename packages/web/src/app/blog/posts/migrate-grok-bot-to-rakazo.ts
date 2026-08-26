@@ -404,6 +404,8 @@ For what to check once the logs start accumulating, see
 
 **Keep reading:** [Self-Hosting Rakazo](/blog/rakazo-self-hosting-guide), [Bot Boundaries](/blog/grok-bot-boundaries), [The Chief of Staff Bot](/blog/grok-bot-chief-of-staff-setup).
 
+Related: [Bots and Product Analytics](/blog/bots-and-mixpanel).
+
 ## Frequently Asked Questions
 
 ### Can I export a Grok Bot and import it into Rakazo?

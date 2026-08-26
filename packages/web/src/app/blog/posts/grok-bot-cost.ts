@@ -416,7 +416,7 @@ Note that this is separate from usage cost, which accrues just by running. The
 boundary stops discretionary spend. The schedule and scope clauses stop the
 rest. You want both, and the charter above has both.
 
-**Keep reading:** [Grok Bot vs Lindy](/blog/grok-bot-vs-lindy), [Grok Bot vs Make](/blog/grok-bot-vs-make), [Grok Bot vs n8n](/blog/grok-bot-vs-n8n).
+**Keep reading:** [Grok Bot Free Trial](/blog/grok-bot-free-trial), [Grok Bot vs ChatGPT Work](/blog/grok-bot-vs-chatgpt-work), [Grok Bot vs n8n](/blog/grok-bot-vs-n8n).
 
 This sits inside a wider guide: [Self-Hosting AI Agents](/blog/self-hosting-ai-agents-guide) covers the whole territory.
 

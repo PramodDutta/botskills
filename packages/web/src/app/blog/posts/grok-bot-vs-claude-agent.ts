@@ -405,7 +405,7 @@ marketing on either side implies. If you are working out where the first one
 goes, [the one-person company setup](/blog/one-person-company-grok-bot) is a
 reasonable map.
 
-**Keep reading:** [Give Every Bot One Source of Truth](/blog/grok-bot-obsidian-knowledge-base), [Grok Bot vs Lindy](/blog/grok-bot-vs-lindy), [Grok Bot vs Make](/blog/grok-bot-vs-make).
+**Keep reading:** [Grok Bot vs Claude Cowork](/blog/grok-bot-vs-claude-cowork), [Give Every Bot One Source of Truth](/blog/grok-bot-obsidian-knowledge-base), [Grok Bot vs Lindy](/blog/grok-bot-vs-lindy).
 
 This sits inside a wider guide: [Every AI Agent Platform Compared](/blog/ai-agent-platforms-compared) covers the whole territory.
 

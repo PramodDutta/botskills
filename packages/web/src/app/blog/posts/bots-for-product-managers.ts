@@ -462,6 +462,8 @@ the pipe, including how triage decides what ever becomes feedback at all.
 
 **Keep reading:** [Grok Bot and Stripe](/blog/grok-bot-stripe), [How to Build a Grok Bot That Can Triage Bugs](/blog/grok-bot-to-bug-triage), [How to Build a Grok Bot That Can Run a Content Calendar](/blog/grok-bot-to-content-calendar).
 
+Related: [Bots and Product Analytics](/blog/bots-and-mixpanel).
+
 ## Frequently Asked Questions
 
 ### What are the best AI bots for product managers?

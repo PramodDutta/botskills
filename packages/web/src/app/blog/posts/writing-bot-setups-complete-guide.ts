@@ -749,6 +749,12 @@ is what the assembled thing looks like when it works.
 
 **Keep reading:** [The charter template](/blog/grok-bot-starter-charter-template), [How to test a bot setup before you trust it](/blog/testing-your-bot), [The seven ways bot setups fail](/blog/bot-failure-modes).
 
+Related: [Bots and Figma](/blog/bots-and-figma).
+
+Related: [Bots and Product Analytics](/blog/bots-and-mixpanel).
+
+Related: [Bots and Your Database](/blog/bots-and-supabase).
+
 ## Frequently Asked Questions
 
 ### What is bot prompt engineering, and how is it different from prompting?

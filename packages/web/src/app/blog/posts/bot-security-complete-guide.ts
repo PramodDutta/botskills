@@ -718,6 +718,8 @@ own hands.
 
 **Keep reading:** [One Computer, Many Screens](/blog/grok-bot-shared-computer-security), [Least Privilege for Bots](/blog/least-privilege-bots), [The Complete Guide to AI Bots That Do Real Work](/blog/ai-bots-complete-guide).
 
+Related: [How To Answer Security Questionnaires Without Guessing](/blog/how-to-answer-security-questionnaires).
+
 ## Frequently Asked Questions
 
 ### Is it safe to give an AI bot access to my email?

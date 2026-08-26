@@ -181,7 +181,7 @@ when they are official.
 
 Headlines should state one change in a short line. The body can use two
 sentences: what changed, then what it means for the task. Avoid "exciting,"
-"powerful," "seamless," and other claims without evidence. Do not mention an
+"powerful," "frictionless," and other claims without evidence. Do not mention an
 internal implementation unless customers need it to use or understand the
 change.
 
@@ -479,7 +479,7 @@ Describe the task or failure a customer recognizes, using official product
 labels and vocabulary found in confirmed tickets. State what changed in one
 short headline, then use two factual sentences for the new behavior and its
 practical meaning. Leave out branch names and internal architecture unless users
-need them to act. Avoid claims such as faster, seamless, safer, or highly
+need them to act. Avoid claims such as faster, frictionless, safer, or highly
 requested unless direct evidence supports them. Customer language is not hype.
 It is a precise description of the surface people use, backed by the release
 record that proves the change shipped.
