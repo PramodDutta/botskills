@@ -1,0 +1,61 @@
+name: Suggest a bot
+description: Suggest a bot setup for the directory. You do not need to write the file yourself.
+title: "[bot] "
+labels: [new-bot]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Prefer to send a pull request? See [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md).
+        Otherwise fill this in and we will write the file.
+  - type: input
+    id: name
+    attributes:
+      label: What should the bot be called?
+      placeholder: Agent Inbox
+    validations: { required: true }
+  - type: textarea
+    id: job
+    attributes:
+      label: What job does it own?
+      description: One or two sentences. What does the operator hand to it, and what comes back?
+    validations: { required: true }
+  - type: input
+    id: boundary
+    attributes:
+      label: What must it never do without asking?
+      description: >
+        Name the single irreversible action it stops at. Send, pay, delete,
+        publish, merge. This is required for every listing.
+      placeholder: Never sends until I approve the exact text and recipients.
+    validations: { required: true }
+  - type: input
+    id: integrations
+    attributes:
+      label: What does it need connected?
+      placeholder: gmail, slack
+    validations: { required: true }
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: [productivity, sales, marketing, ops, success, personal]
+    validations: { required: true }
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: Runtime
+      options: [grok-bot, rakazo, both]
+    validations: { required: true }
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Your prompt, if you have one
+      description: Paste it as is. We will edit it to house style and send it back to you before it goes live.
+  - type: checkboxes
+    id: ran-it
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have actually run this and it did what I described.
+          required: true
