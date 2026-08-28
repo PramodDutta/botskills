@@ -58,3 +58,33 @@ correction beside it.
   codebase or secret access to Grok Bot.
 - Guide read times, publication dates, and internal xAI headcount claims are not
   product facts and are not citable as such.
+
+## From docs.x.ai/grok-bot/use-cases, read 2026-08-28
+
+Eight documented use cases, each with an explicit boundary. The boundary
+wording is quoted from the page and is worth reproducing exactly, because these
+are the product's own words on what a bot must not do.
+
+| Use case | Documented boundary |
+|---|---|
+| Sales Outbound | "Skip anyone already in an active sequence. Return a review list; do not send or enroll anyone." |
+| Talent Scout | "Do not contact anyone." Approvals required before external outreach; respect candidate privacy and regional requirements. |
+| Paid Media | "Do not change budgets or send the message." |
+| Expense Manager | "Do not send messages or change reimbursements." |
+| Product Performance | "Do not change alerts or production settings." |
+| Bug Reproduction | "Do not use production customer data." |
+| Account Health | "Do not contact customers or edit the CRM." |
+| Chief of Staff | "Do not send messages or change meetings." |
+
+Every one of the eight is draft-or-report only. Not one of the documented use
+cases has the bot take an outward action. That is the strongest available
+support for the never-send posture across our catalogue: it is not our house
+rule, it is the shape of every example the vendor publishes.
+
+## From docs.x.ai/grok-bot/get-started, read 2026-08-28
+
+- The page names one worked example Bot, "Piper", whose job is product
+  performance. Its documented instructions include preserving links and
+  screenshots, separating evidence from hypotheses, returning a short summary
+  with the highest-impact issue first, and never changing production settings.
+- No other templates or starter bots are named on that page.
