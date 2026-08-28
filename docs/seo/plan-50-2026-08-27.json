@@ -1,0 +1,351 @@
+{
+ "generated": "2026-08-27",
+ "count": 51,
+ "method": "two-stage audit: token-overlap collision check, then intent-level semantic dedup against all 279 published titles",
+ "articles": [
+  {
+   "slug": "rotate-vendor-access-after-a-bad-grok-bot-incident",
+   "title": "Rotate Vendor Access After a Bad Grok Bot Incident",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "delete-a-grok-bot-safely is a planned teardown. grok-bot-shared-computer-security is architecture. This is the incident rotate: deleting a bot does not remove cookies, files, or command-line credentials, so logout is a person at the vendor."
+  },
+  {
+   "slug": "should-overflow-push-you-to-a-higher-plan",
+   "title": "Should Overflow Push You to a Higher Grok Bot Plan",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "cheapest-way-into-grok-bot and grok-bot-cursor-pro-plus pick the door in. grok-bot-no-spend-cap-ops is weekly ops without a cap. This is the after-spike upgrade decision. Eligible plans are documented. Overflow has no published dollar figure. SuperGrok Heavy has no published price, so it stays unnamed as a price."
+  },
+  {
+   "slug": "score-whether-this-grok-bot-paid-for-itself",
+   "title": "Score Whether This Grok Bot Paid for Itself",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "grok-bot-cost and what-ai-bots-cost explain pricing shape. grok-bot-no-audit-log-yet says keep receipts. This is the measurement method: 20 run records are not a ledger, there is no spend cap, and you score hours saved against overflow you actually saw. No invented allowance."
+  },
+  {
+   "slug": "pto-coverage-for-a-live-grok-bot",
+   "title": "PTO Coverage for a Live Grok Bot",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "grok-bot-on-call is who gets paged at 3am. how-to-pause-a-grok-bot-on-iphone and grok-bot-iphone-cannot-edit are capability pages. This is planned absence: routines are not team-level, iPhone is pause and resume only, and the cover person cannot inherit the computer."
+  },
+  {
+   "slug": "what-survives-if-you-drop-grok-bot",
+   "title": "What Survives If You Drop Grok Bot",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "delete-a-grok-bot-safely and grok-bot-retirement are per-bot. This is canceling access: named-bot delete does not wipe files or browser sessions, hosted MCP tokens stay with Cursor's backend, and coming-soon admin Kill is not shipped and would still keep durable storage."
+  },
+  {
+   "slug": "replace-a-va-shift-with-a-grok-bot",
+   "title": "Replace a VA Browser Shift with a Grok Bot",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "grok-bot-vs-zapier and grok-bot-vs-n8n compare automation vendors. teach-grok-bot-by-demonstration is the 10-minute recording how-to. This is the VA replacement decision: demo is browser-only, no microphone, desktop only, approvals do not reverse completed work, and the vendor session lives on the shared computer."
+  },
+  {
+   "slug": "move-a-nightly-csv-pull-onto-grok-bot",
+   "title": "Move a Nightly CSV Pull onto a Grok Bot",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "grok-bot-scheduling and how-to-schedule-a-grok-bot-routine are the clock. grok-bot-runs-with-laptop-closed is what keeps running. This is the migration decision for one export: a routine assigns to one bot, max 50, 20 run records, no team-level schedule."
+  },
+  {
+   "slug": "why-is-this-grok-bot-in-someone-elses-dashboard",
+   "title": "Why Is This Grok Bot in Someone Else's Dashboard",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "grok-bot-one-computer-many-screens and grok-bot-shared-computer-security explain the architecture. grok-bot-login-failed is auth. This is the wrong-console incident: cookies are shared across bots, screens are not security boundaries, and delete does not sign you out."
+  },
+  {
+   "slug": "prove-grok-bot-to-a-risk-committee",
+   "title": "Prove Grok Bot to a Risk Committee",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "how-to-answer-security-questionnaires fills a vendor form. grok-bot-for-security-teams is using a bot for security work. grok-bot-safety-checklist is an operator list. explain-grok-bot-to-your-boss is budget. This is the committee pack: no audit view, no spend cap, no model picker, shared computer, approval is not undo, Privacy Mode blocks the product, hosted MCP tokens stay on Cursor's backend."
+  },
+  {
+   "slug": "move-grok-bot-work-from-personal-to-work",
+   "title": "Move Grok Bot Work from a Personal Seat to Work",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "grok-bot-both-subscriptions is which usage pool is consumed. grok-bot-teams-standard is the $40 path. migrate-grok-bot-to-rakazo is a different product. This is the move: no documented transfer of a named bot, the computer stays on the old user account, copy text, recreate, then sign out leftover sessions on the personal computer."
+  },
+  {
+   "slug": "grok-bot-devils-advocate",
+   "title": "Add a Disruptor Bot That Disagrees on Purpose and Never Sends",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "grok-bot-grok-imagine-storyboard",
+   "title": "Storyboard With Grok Imagine Without Dumping Unreviewed Shots Anywhere Public",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "grok-bot-paper-trading",
+   "title": "Paper Trades Only: A Grok Bot Desk That Never Places a Real Order",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "grok-bot-directory-business",
+   "title": "Research a Directory Page a Day Without Letting the Bot Publish It",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "grok-bot-deepseek-routing",
+   "title": "Route Cheap Work Off Grok Bot Without Inventing a Model Picker",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "grok-bot-vision-md",
+   "title": "Give a Repo a VISION.md So Bots Triage Issues Without Merging Them",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "grok-bot-grok-ship",
+   "title": "A PR Factory Bot That Opens Drafts and Never Merges",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "grok-bot-stayingapi-compare",
+   "title": "Compare Booking Prices With a Plugin, Then Hand Checkout Back to You",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "grok-bot-sponsorship-inbox-score",
+   "title": "Score Sponsor Email Before You Open It, Then Draft and Do Not Send",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "grok-bot-vs-genspark",
+   "title": "Grok Bot vs Genspark: Teammate vs Workspace",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "bots-and-docusign",
+   "title": "Bots and E-Signature: The One Thing They Never Do",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "bots-and-webflow",
+   "title": "Bots and Your CMS: Draft Only, Always",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "bots-and-whatsapp",
+   "title": "Bots and Messaging Apps: Consent And Reach",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "measuring-bot-roi",
+   "title": "How To Tell If A Bot Is Actually Saving You Time",
+   "track": "problem-intent",
+   "category": "Guide",
+   "why_new": "from existing plan list, pre-dates the last 100"
+  },
+  {
+   "slug": "watch-listings-without-bidding",
+   "title": "Watch Listings Against a Written Spec Without Ever Bidding",
+   "track": "orphan-bot",
+   "bot": "bargain-scout",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "turn-bookmarks-into-bot-triggers",
+   "title": "Grade a Month of Bookmarks, Then Turn the Keepers Into Triggers",
+   "track": "orphan-bot",
+   "bot": "bookmark-skill-grader",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "route-work-through-one-bot",
+   "title": "The One Bot You Talk To: Routing Work Instead of Doing It",
+   "track": "orphan-bot",
+   "bot": "chief-of-staff-router",
+   "category": "Playbook"
+  },
+  {
+   "slug": "voice-note-to-crm-fields",
+   "title": "Turn the Voice Note You Record Leaving a Meeting Into CRM Fields",
+   "track": "orphan-bot",
+   "bot": "crm-from-your-phone",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "find-the-clip-that-answers-the-objection",
+   "title": "Index Your Demos by Objection So You Can Find the Ninety Seconds",
+   "track": "orphan-bot",
+   "bot": "demo-clip-library",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "storyboard-before-you-generate",
+   "title": "Storyboard the Scenes Before You Generate a Single Shot",
+   "track": "orphan-bot",
+   "bot": "grok-imagine-storyboard",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "the-seams-between-gtm-teams",
+   "title": "The Work That Falls Between Marketing, Sales and Success",
+   "track": "orphan-bot",
+   "bot": "gtm-chief-of-staff",
+   "category": "Playbook"
+  },
+  {
+   "slug": "icp-roster-reverified-weekly",
+   "title": "Keep One ICP Roster Current Instead of Rebuilding It Monthly",
+   "track": "orphan-bot",
+   "bot": "linkedin-icp-prospect-tracker",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "build-the-discovery-slide-mid-call",
+   "title": "Build the Discovery Slide From What They Actually Said, Mid Call",
+   "track": "orphan-bot",
+   "bot": "live-discovery-slide",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "price-a-listing-from-photos-not-titles",
+   "title": "Judge a Marketplace Listing by Its Photos, Not Its Title",
+   "track": "orphan-bot",
+   "bot": "marketplace-listing-scout",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "log-paper-trades-with-a-written-stop",
+   "title": "Log Paper Trades Against a Written Thesis and a Written Stop",
+   "track": "orphan-bot",
+   "bot": "paper-trading-desk",
+   "category": "Safety"
+  },
+  {
+   "slug": "run-one-play-across-many-accounts",
+   "title": "Run One Sales Play Across Many Accounts Without Losing the Step",
+   "track": "orphan-bot",
+   "bot": "sales-play-autopilot",
+   "category": "Playbook"
+  },
+  {
+   "slug": "counter-from-your-own-rate-history",
+   "title": "Build a Sponsorship Counter From Your Own Past Rates",
+   "track": "orphan-bot",
+   "bot": "sponsorship-negotiator",
+   "category": "Playbook"
+  },
+  {
+   "slug": "what-is-actually-broken-behind-a-ticket",
+   "title": "Work Out What Is Actually Broken Behind a Support Ticket",
+   "track": "orphan-bot",
+   "bot": "support-resolution-agent",
+   "category": "Tutorial"
+  },
+  {
+   "slug": "bot-versioning-and-rollback",
+   "title": "Version a Bot Charter So You Can Roll Back a Bad Edit",
+   "track": "ops-gap",
+   "category": "Reference"
+  },
+  {
+   "slug": "bot-data-retention",
+   "title": "What a Bot Keeps, What It Drops, and What You Must Keep Yourself",
+   "track": "ops-gap",
+   "category": "Reference"
+  },
+  {
+   "slug": "bot-capacity-planning",
+   "title": "How Many Routines and Bots Before It Stops Being Manageable",
+   "track": "ops-gap",
+   "category": "Reference"
+  },
+  {
+   "slug": "bot-glossary",
+   "title": "Bot, Skill, Routine, Charter, Computer: The Terms, Defined",
+   "track": "ops-gap",
+   "category": "Reference"
+  },
+  {
+   "slug": "build-vs-buy-ai-agents",
+   "title": "Build Your Own Agent or Buy One That Already Runs",
+   "track": "decision",
+   "category": "Comparison"
+  },
+  {
+   "slug": "single-agent-vs-multi-agent",
+   "title": "One Bot With Many Jobs, or Many Bots With One Job Each",
+   "track": "decision",
+   "category": "Comparison"
+  },
+  {
+   "slug": "chat-vs-scheduled-agents",
+   "title": "Asking an Agent Versus Leaving One Running",
+   "track": "decision",
+   "category": "Comparison"
+  },
+  {
+   "slug": "ai-agents-vs-workflow-builders",
+   "title": "Agents Versus Zapier and Make: When Each One Wins",
+   "track": "decision",
+   "category": "Comparison"
+  },
+  {
+   "slug": "move-a-zap-to-a-bot",
+   "title": "Move a Zapier Zap to a Bot Without Losing the Audit Trail",
+   "track": "migration",
+   "category": "Migration"
+  },
+  {
+   "slug": "move-a-make-scenario-to-a-bot",
+   "title": "Move a Make Scenario to a Bot, One Step at a Time",
+   "track": "migration",
+   "category": "Migration"
+  },
+  {
+   "slug": "move-an-n8n-workflow-to-a-bot",
+   "title": "Move an n8n Workflow to a Bot and Keep the Failure Handling",
+   "track": "migration",
+   "category": "Migration"
+  },
+  {
+   "slug": "move-an-iphone-shortcut-to-a-bot",
+   "title": "When an iPhone Shortcut Should Become a Bot Instead",
+   "track": "migration",
+   "category": "Migration"
+  },
+  {
+   "slug": "retire-the-automation-you-replaced",
+   "title": "Retire the Automation You Replaced, Before It Fires Twice",
+   "track": "migration",
+   "category": "Migration"
+  }
+ ]
+}
