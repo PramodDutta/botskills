@@ -26,8 +26,8 @@ export default function SponsorPage() {
         <b>Founding rate.</b> Rail card $99/mo. Marquee logo $29/mo. Promoted row and
         takeover by conversation. {FOUNDING_SLOTS} founding slots, and the rate is locked
         for twelve months from the day you take one. It goes up as the audience does. Email{' '}
-        <a href="mailto:hello@botskills.sh">hello@botskills.sh</a> and the slot goes live
-        within a day.
+        <a href="mailto:contact@thetestingacademy.com">contact@thetestingacademy.com</a>{' '}
+        and the slot goes live within a day.
       </div>
 
       <h2>What you get, and where it renders</h2>
