@@ -34,6 +34,10 @@
 
 
 
+
+
+
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aiAgentPlatformsCompared } from './ai-agent-platforms-compared';
@@ -110,6 +114,9 @@ import { post as grokBotCost } from './grok-bot-cost';
 import { post as grokBotCrmHygiene } from './grok-bot-crm-hygiene';
 import { post as grokBotCursorAccountExplained } from './grok-bot-cursor-account-explained';
 import { post as grokBotCursorProPlus } from './grok-bot-cursor-pro-plus';
+import { post as grokBotDeepseekRouting } from './grok-bot-deepseek-routing';
+import { post as grokBotDevilsAdvocate } from './grok-bot-devils-advocate';
+import { post as grokBotDirectoryBusiness } from './grok-bot-directory-business';
 import { post as grokBotDiscord } from './grok-bot-discord';
 import { post as grokBotEnterpriseWaitlist } from './grok-bot-enterprise-waitlist';
 import { post as grokBotEvidenceRules } from './grok-bot-evidence-rules';
@@ -117,6 +124,7 @@ import { post as grokBotExamples } from './grok-bot-examples';
 import { post as grokBotExecutiveBriefing } from './grok-bot-executive-briefing';
 import { post as grokBotExpenseManager } from './grok-bot-expense-manager';
 import { post as grokBotFalsePositives } from './grok-bot-false-positives';
+import { post as grokBotFigmaProductionFiles } from './grok-bot-figma-production-files';
 import { post as grokBotFirstWeek } from './grok-bot-first-week';
 import { post as grokBotFirstmate } from './grok-bot-firstmate';
 import { post as grokBotFivePartBrief } from './grok-bot-five-part-brief';
@@ -125,8 +133,10 @@ import { post as grokBotForAccountants } from './grok-bot-for-accountants';
 import { post as grokBotForAgenciesIsolation } from './grok-bot-for-agencies-isolation';
 import { post as grokBotForCustomerSuccess } from './grok-bot-for-customer-success';
 import { post as grokBotForDesignersFigmaMotion } from './grok-bot-for-designers-figma-motion';
+import { post as grokBotForGtmTeams } from './grok-bot-for-gtm-teams';
 import { post as grokBotForHr } from './grok-bot-for-hr';
 import { post as grokBotForLawyers } from './grok-bot-for-lawyers';
+import { post as grokBotForMobileAppTeams } from './grok-bot-for-mobile-app-teams';
 import { post as grokBotForNonprofits } from './grok-bot-for-nonprofits';
 import { post as grokBotForRevops } from './grok-bot-for-revops';
 import { post as grokBotForSecurityTeams } from './grok-bot-for-security-teams';
@@ -138,6 +148,7 @@ import { post as grokBotGmail } from './grok-bot-gmail';
 import { post as grokBotGoogleCalendar } from './grok-bot-google-calendar';
 import { post as grokBotGoogleDrive } from './grok-bot-google-drive';
 import { post as grokBotGoogleSheets } from './grok-bot-google-sheets';
+import { post as grokBotGrokImagineStoryboard } from './grok-bot-grok-imagine-storyboard';
 import { post as grokBotGroupChat } from './grok-bot-group-chat';
 import { post as grokBotHobbyAndProExclusion } from './grok-bot-hobby-and-pro-exclusion';
 import { post as grokBotHostedMcpTokens } from './grok-bot-hosted-mcp-tokens';
@@ -166,6 +177,7 @@ import { post as grokBotOneComputerManyScreens } from './grok-bot-one-computer-m
 import { post as grokBotOutlook } from './grok-bot-outlook';
 import { post as grokBotOverwatchSharedVm } from './grok-bot-overwatch-shared-vm';
 import { post as grokBotPaidMedia } from './grok-bot-paid-media';
+import { post as grokBotPaperTrading } from './grok-bot-paper-trading';
 import { post as grokBotPermissionsExplained } from './grok-bot-permissions-explained';
 import { post as grokBotPluginMissing } from './grok-bot-plugin-missing';
 import { post as grokBotPlugins2026 } from './grok-bot-plugins-2026';
@@ -227,6 +239,7 @@ import { post as grokBotToSubscriptionAudit } from './grok-bot-to-subscription-a
 import { post as grokBotToSupportTriage } from './grok-bot-to-support-triage';
 import { post as grokBotTranscriptapiVsBrowser } from './grok-bot-transcriptapi-vs-browser';
 import { post as grokBotTroubleshooting } from './grok-bot-troubleshooting';
+import { post as grokBotVisionMd } from './grok-bot-vision-md';
 import { post as grokBotVsChatgptAgent } from './grok-bot-vs-chatgpt-agent';
 import { post as grokBotVsChatgptTasks } from './grok-bot-vs-chatgpt-tasks';
 import { post as grokBotVsChatgptWork } from './grok-bot-vs-chatgpt-work';
@@ -294,9 +307,13 @@ import { post as howToWriteAGrokBotCharter2026 } from './how-to-write-a-grok-bot
 import { post as isGrokBotWorthIt } from './is-grok-bot-worth-it';
 import { post as leastPrivilegeBots } from './least-privilege-bots';
 import { post as migrateGrokBotToRakazo } from './migrate-grok-bot-to-rakazo';
+import { post as moveANightlyCsvPullOntoGrokBot } from './move-a-nightly-csv-pull-onto-grok-bot';
+import { post as moveGrokBotWorkFromPersonalToWork } from './move-grok-bot-work-from-personal-to-work';
 import { post as multiBotTeams } from './multi-bot-teams';
 import { post as openSourceBotRuntimes } from './open-source-bot-runtimes';
 import { post as pickTheFirstGrokBotJob } from './pick-the-first-grok-bot-job';
+import { post as proveGrokBotToARiskCommittee } from './prove-grok-bot-to-a-risk-committee';
+import { post as ptoCoverageForALiveGrokBot } from './pto-coverage-for-a-live-grok-bot';
 import { post as rakazoModelChoice } from './rakazo-model-choice';
 import { post as rakazoPermissionsAudit } from './rakazo-permissions-audit';
 import { post as rakazoRoutines } from './rakazo-routines';
@@ -304,14 +321,22 @@ import { post as rakazoSandboxOptions } from './rakazo-sandbox-options';
 import { post as rakazoSelfHostingGuide } from './rakazo-self-hosting-guide';
 import { post as rakazoVsGrokBot } from './rakazo-vs-grok-bot';
 import { post as readAGrokBotListing } from './read-a-grok-bot-listing';
+import { post as replaceAVaShiftWithAGrokBot } from './replace-a-va-shift-with-a-grok-bot';
+import { post as rotateVendorAccessAfterABadGrokBotIncident } from './rotate-vendor-access-after-a-bad-grok-bot-incident';
+import { post as scoreWhetherThisGrokBotPaidForItself } from './score-whether-this-grok-bot-paid-for-itself';
 import { post as selfHostingAiAgentsGuide } from './self-hosting-ai-agents-guide';
 import { post as shareAGrokBot } from './share-a-grok-bot';
+import { post as shouldOverflowPushYouToAHigherPlan } from './should-overflow-push-you-to-a-higher-plan';
+import { post as sixBotsToAChannel } from './six-bots-to-a-channel';
 import { post as teachGrokBotByDemonstration } from './teach-grok-bot-by-demonstration';
 import { post as testingYourBot } from './testing-your-bot';
+import { post as thePmAttentionList } from './the-pm-attention-list';
 import { post as whatAiBotsCost } from './what-ai-bots-cost';
 import { post as whatIsAGrokBot } from './what-is-a-grok-bot';
+import { post as whatSurvivesIfYouDropGrokBot } from './what-survives-if-you-drop-grok-bot';
 import { post as whenBotsGoWrong } from './when-bots-go-wrong';
 import { post as whyGrokBotHasNoLinuxApp } from './why-grok-bot-has-no-linux-app';
+import { post as whyIsThisGrokBotInSomeoneElsesDashboard } from './why-is-this-grok-bot-in-someone-elses-dashboard';
 import { post as writingBotSetupsCompleteGuide } from './writing-bot-setups-complete-guide';
 
 export interface BlogPost {
@@ -399,6 +424,9 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-crm-hygiene': grokBotCrmHygiene,
   'grok-bot-cursor-account-explained': grokBotCursorAccountExplained,
   'grok-bot-cursor-pro-plus': grokBotCursorProPlus,
+  'grok-bot-deepseek-routing': grokBotDeepseekRouting,
+  'grok-bot-devils-advocate': grokBotDevilsAdvocate,
+  'grok-bot-directory-business': grokBotDirectoryBusiness,
   'grok-bot-discord': grokBotDiscord,
   'grok-bot-enterprise-waitlist': grokBotEnterpriseWaitlist,
   'grok-bot-evidence-rules': grokBotEvidenceRules,
@@ -406,6 +434,7 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-executive-briefing': grokBotExecutiveBriefing,
   'grok-bot-expense-manager': grokBotExpenseManager,
   'grok-bot-false-positives': grokBotFalsePositives,
+  'grok-bot-figma-production-files': grokBotFigmaProductionFiles,
   'grok-bot-first-week': grokBotFirstWeek,
   'grok-bot-firstmate': grokBotFirstmate,
   'grok-bot-five-part-brief': grokBotFivePartBrief,
@@ -414,8 +443,10 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-for-agencies-isolation': grokBotForAgenciesIsolation,
   'grok-bot-for-customer-success': grokBotForCustomerSuccess,
   'grok-bot-for-designers-figma-motion': grokBotForDesignersFigmaMotion,
+  'grok-bot-for-gtm-teams': grokBotForGtmTeams,
   'grok-bot-for-hr': grokBotForHr,
   'grok-bot-for-lawyers': grokBotForLawyers,
+  'grok-bot-for-mobile-app-teams': grokBotForMobileAppTeams,
   'grok-bot-for-nonprofits': grokBotForNonprofits,
   'grok-bot-for-revops': grokBotForRevops,
   'grok-bot-for-security-teams': grokBotForSecurityTeams,
@@ -427,6 +458,7 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-google-calendar': grokBotGoogleCalendar,
   'grok-bot-google-drive': grokBotGoogleDrive,
   'grok-bot-google-sheets': grokBotGoogleSheets,
+  'grok-bot-grok-imagine-storyboard': grokBotGrokImagineStoryboard,
   'grok-bot-group-chat': grokBotGroupChat,
   'grok-bot-hobby-and-pro-exclusion': grokBotHobbyAndProExclusion,
   'grok-bot-hosted-mcp-tokens': grokBotHostedMcpTokens,
@@ -455,6 +487,7 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-outlook': grokBotOutlook,
   'grok-bot-overwatch-shared-vm': grokBotOverwatchSharedVm,
   'grok-bot-paid-media': grokBotPaidMedia,
+  'grok-bot-paper-trading': grokBotPaperTrading,
   'grok-bot-permissions-explained': grokBotPermissionsExplained,
   'grok-bot-plugin-missing': grokBotPluginMissing,
   'grok-bot-plugins-2026': grokBotPlugins2026,
@@ -516,6 +549,7 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-to-support-triage': grokBotToSupportTriage,
   'grok-bot-transcriptapi-vs-browser': grokBotTranscriptapiVsBrowser,
   'grok-bot-troubleshooting': grokBotTroubleshooting,
+  'grok-bot-vision-md': grokBotVisionMd,
   'grok-bot-vs-chatgpt-agent': grokBotVsChatgptAgent,
   'grok-bot-vs-chatgpt-tasks': grokBotVsChatgptTasks,
   'grok-bot-vs-chatgpt-work': grokBotVsChatgptWork,
@@ -583,9 +617,13 @@ export const posts: Record<string, BlogPost> = {
   'is-grok-bot-worth-it': isGrokBotWorthIt,
   'least-privilege-bots': leastPrivilegeBots,
   'migrate-grok-bot-to-rakazo': migrateGrokBotToRakazo,
+  'move-a-nightly-csv-pull-onto-grok-bot': moveANightlyCsvPullOntoGrokBot,
+  'move-grok-bot-work-from-personal-to-work': moveGrokBotWorkFromPersonalToWork,
   'multi-bot-teams': multiBotTeams,
   'open-source-bot-runtimes': openSourceBotRuntimes,
   'pick-the-first-grok-bot-job': pickTheFirstGrokBotJob,
+  'prove-grok-bot-to-a-risk-committee': proveGrokBotToARiskCommittee,
+  'pto-coverage-for-a-live-grok-bot': ptoCoverageForALiveGrokBot,
   'rakazo-model-choice': rakazoModelChoice,
   'rakazo-permissions-audit': rakazoPermissionsAudit,
   'rakazo-routines': rakazoRoutines,
@@ -593,14 +631,22 @@ export const posts: Record<string, BlogPost> = {
   'rakazo-self-hosting-guide': rakazoSelfHostingGuide,
   'rakazo-vs-grok-bot': rakazoVsGrokBot,
   'read-a-grok-bot-listing': readAGrokBotListing,
+  'replace-a-va-shift-with-a-grok-bot': replaceAVaShiftWithAGrokBot,
+  'rotate-vendor-access-after-a-bad-grok-bot-incident': rotateVendorAccessAfterABadGrokBotIncident,
+  'score-whether-this-grok-bot-paid-for-itself': scoreWhetherThisGrokBotPaidForItself,
   'self-hosting-ai-agents-guide': selfHostingAiAgentsGuide,
   'share-a-grok-bot': shareAGrokBot,
+  'should-overflow-push-you-to-a-higher-plan': shouldOverflowPushYouToAHigherPlan,
+  'six-bots-to-a-channel': sixBotsToAChannel,
   'teach-grok-bot-by-demonstration': teachGrokBotByDemonstration,
   'testing-your-bot': testingYourBot,
+  'the-pm-attention-list': thePmAttentionList,
   'what-ai-bots-cost': whatAiBotsCost,
   'what-is-a-grok-bot': whatIsAGrokBot,
+  'what-survives-if-you-drop-grok-bot': whatSurvivesIfYouDropGrokBot,
   'when-bots-go-wrong': whenBotsGoWrong,
   'why-grok-bot-has-no-linux-app': whyGrokBotHasNoLinuxApp,
+  'why-is-this-grok-bot-in-someone-elses-dashboard': whyIsThisGrokBotInSomeoneElsesDashboard,
   'writing-bot-setups-complete-guide': writingBotSetupsCompleteGuide,
 };
 
@@ -681,6 +727,9 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-crm-hygiene', ...grokBotCrmHygiene },
   { slug: 'grok-bot-cursor-account-explained', ...grokBotCursorAccountExplained },
   { slug: 'grok-bot-cursor-pro-plus', ...grokBotCursorProPlus },
+  { slug: 'grok-bot-deepseek-routing', ...grokBotDeepseekRouting },
+  { slug: 'grok-bot-devils-advocate', ...grokBotDevilsAdvocate },
+  { slug: 'grok-bot-directory-business', ...grokBotDirectoryBusiness },
   { slug: 'grok-bot-discord', ...grokBotDiscord },
   { slug: 'grok-bot-enterprise-waitlist', ...grokBotEnterpriseWaitlist },
   { slug: 'grok-bot-evidence-rules', ...grokBotEvidenceRules },
@@ -688,6 +737,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-executive-briefing', ...grokBotExecutiveBriefing },
   { slug: 'grok-bot-expense-manager', ...grokBotExpenseManager },
   { slug: 'grok-bot-false-positives', ...grokBotFalsePositives },
+  { slug: 'grok-bot-figma-production-files', ...grokBotFigmaProductionFiles },
   { slug: 'grok-bot-first-week', ...grokBotFirstWeek },
   { slug: 'grok-bot-firstmate', ...grokBotFirstmate },
   { slug: 'grok-bot-five-part-brief', ...grokBotFivePartBrief },
@@ -696,8 +746,10 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-for-agencies-isolation', ...grokBotForAgenciesIsolation },
   { slug: 'grok-bot-for-customer-success', ...grokBotForCustomerSuccess },
   { slug: 'grok-bot-for-designers-figma-motion', ...grokBotForDesignersFigmaMotion },
+  { slug: 'grok-bot-for-gtm-teams', ...grokBotForGtmTeams },
   { slug: 'grok-bot-for-hr', ...grokBotForHr },
   { slug: 'grok-bot-for-lawyers', ...grokBotForLawyers },
+  { slug: 'grok-bot-for-mobile-app-teams', ...grokBotForMobileAppTeams },
   { slug: 'grok-bot-for-nonprofits', ...grokBotForNonprofits },
   { slug: 'grok-bot-for-revops', ...grokBotForRevops },
   { slug: 'grok-bot-for-security-teams', ...grokBotForSecurityTeams },
@@ -709,6 +761,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-google-calendar', ...grokBotGoogleCalendar },
   { slug: 'grok-bot-google-drive', ...grokBotGoogleDrive },
   { slug: 'grok-bot-google-sheets', ...grokBotGoogleSheets },
+  { slug: 'grok-bot-grok-imagine-storyboard', ...grokBotGrokImagineStoryboard },
   { slug: 'grok-bot-group-chat', ...grokBotGroupChat },
   { slug: 'grok-bot-hobby-and-pro-exclusion', ...grokBotHobbyAndProExclusion },
   { slug: 'grok-bot-hosted-mcp-tokens', ...grokBotHostedMcpTokens },
@@ -737,6 +790,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-outlook', ...grokBotOutlook },
   { slug: 'grok-bot-overwatch-shared-vm', ...grokBotOverwatchSharedVm },
   { slug: 'grok-bot-paid-media', ...grokBotPaidMedia },
+  { slug: 'grok-bot-paper-trading', ...grokBotPaperTrading },
   { slug: 'grok-bot-permissions-explained', ...grokBotPermissionsExplained },
   { slug: 'grok-bot-plugin-missing', ...grokBotPluginMissing },
   { slug: 'grok-bot-plugins-2026', ...grokBotPlugins2026 },
@@ -798,6 +852,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-to-support-triage', ...grokBotToSupportTriage },
   { slug: 'grok-bot-transcriptapi-vs-browser', ...grokBotTranscriptapiVsBrowser },
   { slug: 'grok-bot-troubleshooting', ...grokBotTroubleshooting },
+  { slug: 'grok-bot-vision-md', ...grokBotVisionMd },
   { slug: 'grok-bot-vs-chatgpt-agent', ...grokBotVsChatgptAgent },
   { slug: 'grok-bot-vs-chatgpt-tasks', ...grokBotVsChatgptTasks },
   { slug: 'grok-bot-vs-chatgpt-work', ...grokBotVsChatgptWork },
@@ -865,9 +920,13 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'is-grok-bot-worth-it', ...isGrokBotWorthIt },
   { slug: 'least-privilege-bots', ...leastPrivilegeBots },
   { slug: 'migrate-grok-bot-to-rakazo', ...migrateGrokBotToRakazo },
+  { slug: 'move-a-nightly-csv-pull-onto-grok-bot', ...moveANightlyCsvPullOntoGrokBot },
+  { slug: 'move-grok-bot-work-from-personal-to-work', ...moveGrokBotWorkFromPersonalToWork },
   { slug: 'multi-bot-teams', ...multiBotTeams },
   { slug: 'open-source-bot-runtimes', ...openSourceBotRuntimes },
   { slug: 'pick-the-first-grok-bot-job', ...pickTheFirstGrokBotJob },
+  { slug: 'prove-grok-bot-to-a-risk-committee', ...proveGrokBotToARiskCommittee },
+  { slug: 'pto-coverage-for-a-live-grok-bot', ...ptoCoverageForALiveGrokBot },
   { slug: 'rakazo-model-choice', ...rakazoModelChoice },
   { slug: 'rakazo-permissions-audit', ...rakazoPermissionsAudit },
   { slug: 'rakazo-routines', ...rakazoRoutines },
@@ -875,13 +934,21 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'rakazo-self-hosting-guide', ...rakazoSelfHostingGuide },
   { slug: 'rakazo-vs-grok-bot', ...rakazoVsGrokBot },
   { slug: 'read-a-grok-bot-listing', ...readAGrokBotListing },
+  { slug: 'replace-a-va-shift-with-a-grok-bot', ...replaceAVaShiftWithAGrokBot },
+  { slug: 'rotate-vendor-access-after-a-bad-grok-bot-incident', ...rotateVendorAccessAfterABadGrokBotIncident },
+  { slug: 'score-whether-this-grok-bot-paid-for-itself', ...scoreWhetherThisGrokBotPaidForItself },
   { slug: 'self-hosting-ai-agents-guide', ...selfHostingAiAgentsGuide },
   { slug: 'share-a-grok-bot', ...shareAGrokBot },
+  { slug: 'should-overflow-push-you-to-a-higher-plan', ...shouldOverflowPushYouToAHigherPlan },
+  { slug: 'six-bots-to-a-channel', ...sixBotsToAChannel },
   { slug: 'teach-grok-bot-by-demonstration', ...teachGrokBotByDemonstration },
   { slug: 'testing-your-bot', ...testingYourBot },
+  { slug: 'the-pm-attention-list', ...thePmAttentionList },
   { slug: 'what-ai-bots-cost', ...whatAiBotsCost },
   { slug: 'what-is-a-grok-bot', ...whatIsAGrokBot },
+  { slug: 'what-survives-if-you-drop-grok-bot', ...whatSurvivesIfYouDropGrokBot },
   { slug: 'when-bots-go-wrong', ...whenBotsGoWrong },
   { slug: 'why-grok-bot-has-no-linux-app', ...whyGrokBotHasNoLinuxApp },
+  { slug: 'why-is-this-grok-bot-in-someone-elses-dashboard', ...whyIsThisGrokBotInSomeoneElsesDashboard },
   { slug: 'writing-bot-setups-complete-guide', ...writingBotSetupsCompleteGuide },
 ];

@@ -1,5 +1,9 @@
 # botskills.sh article writer spec
 
+> The numbers below are the ones `scripts/gate.py` actually enforces. If you
+> change the gate, change this file in the same commit. They drifted apart once
+> and every article written to the stale spec was rejected.
+
 Non-negotiable. Every bullet is a gate; a miss means the article is rejected.
 
 ## File shape
@@ -27,10 +31,10 @@ Do NOT touch `index.ts`. Registration is handled centrally. Write only your own 
 
 - `content` is a template literal. Any backtick inside it MUST be escaped as \` (code fences become \`\`\`). Any `${` MUST be escaped as \${. Getting this wrong breaks the build for everyone.
 - ZERO em dashes anywhere in the file. Use a comma, period, colon, parentheses, or "->". Grep your own file before finishing.
-- >= 1400 words of body content.
+- >= 3000 words of body content. (gate.py enforces 3000; this line said 1400 until 2026-08-28 and produced rejected drafts.)
 - H1 on the first line, exactly equal to `title`.
-- 6 or more `##` sections.
-- >= 1 markdown table with a header separator row.
+- 13 or more `##` sections.
+- >= 4 markdown tables with header separator rows.
 - >= 1 fenced code block showing a real, pasteable bot charter or config, for any technical topic.
 - Ends with a `## Frequently Asked Questions` section containing exactly 4 `###` questions, each answered in 60-110 words of prose (no lists inside answers). These are the AI-citation surface, so each answer must stand alone without the surrounding article.
 - `description`: 140-170 characters, contains the target keyword, reads like a promise not a summary.
