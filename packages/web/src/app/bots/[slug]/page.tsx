@@ -62,7 +62,22 @@ export default async function BotPage({ params }: Props) {
         <b>Boundary:</b> {bot.boundary}
       </div>
       <h2>Setup prompt</h2>
-      <CopyButton slug={bot.slug} prompt={bot.prompt} />
+      <div className="prompt-actions">
+        <CopyButton slug={bot.slug} prompt={bot.prompt} />
+        {bot.shareUrl && (
+          // Only rendered when a real share link exists. The id is minted by
+          // Grok Bot when someone shares a Bot they built; it cannot be derived
+          // from this file, so most bots will never have one.
+          <a
+            className="add-btn"
+            href={bot.shareUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Add to Grok Bot
+          </a>
+        )}
+      </div>
       <pre>{bot.prompt}</pre>
       <p className="ds">
         Raw file: <code className="mono">/api/bots/{bot.slug}/content</code> · JSON:{' '}

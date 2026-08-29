@@ -17,3 +17,8 @@ import-staging/
 
 # Video capture frames and renders (31MB of build artifacts)
 .video/
+
+# Playwright
+packages/web/test-results/
+packages/web/playwright-report/
+packages/web/blob-report/

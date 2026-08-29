@@ -45,6 +45,9 @@ export const botFrontmatterSchema = z.object({
   // The hard limit, rendered on every surface. Required by design.
   boundary: z.string().min(8).max(160),
   tags: z.array(z.string()).default([]),
+  // Optional. Only ever a share link copied from a real Bot in Grok Bot,
+  // which mints the id. Never construct one. Absent on almost every bot.
+  shareUrl: z.string().url().startsWith('https://x.ai/bot/').optional(),
 });
 export type BotFrontmatter = z.infer<typeof botFrontmatterSchema>;
 
@@ -95,6 +98,7 @@ export function parseBotMd(slug: string, raw: string): ParsedBot {
     runtimes: parseInlineArray(get('runtimes') ?? ''),
     boundary: get('boundary'),
     tags: parseInlineArray(get('tags') ?? ''),
+    shareUrl: get('shareUrl'),
   };
 
   const parsed = botFrontmatterSchema.parse(candidate);
