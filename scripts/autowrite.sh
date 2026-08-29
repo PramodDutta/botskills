@@ -23,6 +23,16 @@ for round in 1 2 3 4 5 6; do
   NEW=$(git ls-files --others --exclude-standard -- "$P" | xargs -n1 basename 2>/dev/null | sed 's/\.ts$//')
   [ -z "$NEW" ] && { echo "[$(date +%H:%M)] round $round produced nothing, stopping"; break; }
 
+  # Duplication gate BEFORE anything is registered or pushed. This loop pushes
+  # unattended, and shipping a near-duplicate is the one mistake that is not
+  # cheaply recoverable: it costs the whole cluster, not one page.
+  BEFORE=$(python3 scripts/dupecheck.py 2>/dev/null | tail -1 | grep -oE '[0-9]+$')
+  if [ "${BEFORE:-0}" -gt 1 ]; then
+    echo "[$(date +%H:%M)] round $round ABORTED: dupecheck reports $BEFORE pairs (baseline is 1)"
+    python3 scripts/dupecheck.py 2>/dev/null | tail -6
+    break
+  fi
+
   python3 scripts/register.py > /tmp/reg.txt 2>&1; tail -1 /tmp/reg.txt
   # commit index.ts plus exactly the files it now references, never a superset
   git add -- "$P/index.ts"
