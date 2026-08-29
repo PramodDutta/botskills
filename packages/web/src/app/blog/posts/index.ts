@@ -47,6 +47,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -161,6 +162,7 @@ import { post as findTheClipThatAnswersTheObjection } from './find-the-clip-that
 import { post as firstGrokBotInAnHour } from './first-grok-bot-in-an-hour';
 import { post as fleetChiefOfStaffStillOneComputer } from './fleet-chief-of-staff-still-one-computer';
 import { post as flightCheckInReminderNeverBooks } from './flight-check-in-reminder-never-books';
+import { post as forecastNotesNeverChangeTheNumber } from './forecast-notes-never-change-the-number';
 import { post as grokBot2faPrompt } from './grok-bot-2fa-prompt';
 import { post as grokBotAccountHealth } from './grok-bot-account-health';
 import { post as grokBotAgentmail } from './grok-bot-agentmail';
@@ -177,6 +179,7 @@ import { post as grokBotBugReproduction } from './grok-bot-bug-reproduction';
 import { post as grokBotCalendarManager } from './grok-bot-calendar-manager';
 import { post as grokBotCannotSeeFiles } from './grok-bot-cannot-see-files';
 import { post as grokBotCannotSendEmail } from './grok-bot-cannot-send-email';
+import { post as grokBotCaptchaWall } from './grok-bot-captcha-wall';
 import { post as grokBotChiefOfStaffSetup } from './grok-bot-chief-of-staff-setup';
 import { post as grokBotClaudeCodeSkillsCompatibility } from './grok-bot-claude-code-skills-compatibility';
 import { post as grokBotClipYoutubePodcast } from './grok-bot-clip-youtube-podcast';
@@ -191,6 +194,7 @@ import { post as grokBotDeepseekRouting } from './grok-bot-deepseek-routing';
 import { post as grokBotDevilsAdvocate } from './grok-bot-devils-advocate';
 import { post as grokBotDirectoryBusiness } from './grok-bot-directory-business';
 import { post as grokBotDiscord } from './grok-bot-discord';
+import { post as grokBotDuplicateDrafts } from './grok-bot-duplicate-drafts';
 import { post as grokBotEnterpriseWaitlist } from './grok-bot-enterprise-waitlist';
 import { post as grokBotEvidenceRules } from './grok-bot-evidence-rules';
 import { post as grokBotExamples } from './grok-bot-examples';
@@ -204,13 +208,18 @@ import { post as grokBotFivePartBrief } from './grok-bot-five-part-brief';
 import { post as grokBotFleetAudit } from './grok-bot-fleet-audit';
 import { post as grokBotForAccountants } from './grok-bot-for-accountants';
 import { post as grokBotForAgenciesIsolation } from './grok-bot-for-agencies-isolation';
+import { post as grokBotForConsultantsClientIsolation } from './grok-bot-for-consultants-client-isolation';
 import { post as grokBotForCustomerSuccess } from './grok-bot-for-customer-success';
 import { post as grokBotForDesignersFigmaMotion } from './grok-bot-for-designers-figma-motion';
+import { post as grokBotForEcommerceOps } from './grok-bot-for-ecommerce-ops';
 import { post as grokBotForEngineersOpsNotMerge } from './grok-bot-for-engineers-ops-not-merge';
+import { post as grokBotForFinanceTeamsNeverPay } from './grok-bot-for-finance-teams-never-pay';
 import { post as grokBotForFoundersWeekOne } from './grok-bot-for-founders-week-one';
+import { post as grokBotForFreelancers } from './grok-bot-for-freelancers';
 import { post as grokBotForGtmTeams } from './grok-bot-for-gtm-teams';
 import { post as grokBotForHr } from './grok-bot-for-hr';
 import { post as grokBotForLawyers } from './grok-bot-for-lawyers';
+import { post as grokBotForMarketersNeverPublish } from './grok-bot-for-marketers-never-publish';
 import { post as grokBotForMobileAppTeams } from './grok-bot-for-mobile-app-teams';
 import { post as grokBotForNonprofits } from './grok-bot-for-nonprofits';
 import { post as grokBotForRevops } from './grok-bot-for-revops';
@@ -571,6 +580,7 @@ export const posts: Record<string, BlogPost> = {
   'first-grok-bot-in-an-hour': firstGrokBotInAnHour,
   'fleet-chief-of-staff-still-one-computer': fleetChiefOfStaffStillOneComputer,
   'flight-check-in-reminder-never-books': flightCheckInReminderNeverBooks,
+  'forecast-notes-never-change-the-number': forecastNotesNeverChangeTheNumber,
   'grok-bot-2fa-prompt': grokBot2faPrompt,
   'grok-bot-account-health': grokBotAccountHealth,
   'grok-bot-agentmail': grokBotAgentmail,
@@ -587,6 +597,7 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-calendar-manager': grokBotCalendarManager,
   'grok-bot-cannot-see-files': grokBotCannotSeeFiles,
   'grok-bot-cannot-send-email': grokBotCannotSendEmail,
+  'grok-bot-captcha-wall': grokBotCaptchaWall,
   'grok-bot-chief-of-staff-setup': grokBotChiefOfStaffSetup,
   'grok-bot-claude-code-skills-compatibility': grokBotClaudeCodeSkillsCompatibility,
   'grok-bot-clip-youtube-podcast': grokBotClipYoutubePodcast,
@@ -601,6 +612,7 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-devils-advocate': grokBotDevilsAdvocate,
   'grok-bot-directory-business': grokBotDirectoryBusiness,
   'grok-bot-discord': grokBotDiscord,
+  'grok-bot-duplicate-drafts': grokBotDuplicateDrafts,
   'grok-bot-enterprise-waitlist': grokBotEnterpriseWaitlist,
   'grok-bot-evidence-rules': grokBotEvidenceRules,
   'grok-bot-examples': grokBotExamples,
@@ -614,13 +626,18 @@ export const posts: Record<string, BlogPost> = {
   'grok-bot-fleet-audit': grokBotFleetAudit,
   'grok-bot-for-accountants': grokBotForAccountants,
   'grok-bot-for-agencies-isolation': grokBotForAgenciesIsolation,
+  'grok-bot-for-consultants-client-isolation': grokBotForConsultantsClientIsolation,
   'grok-bot-for-customer-success': grokBotForCustomerSuccess,
   'grok-bot-for-designers-figma-motion': grokBotForDesignersFigmaMotion,
+  'grok-bot-for-ecommerce-ops': grokBotForEcommerceOps,
   'grok-bot-for-engineers-ops-not-merge': grokBotForEngineersOpsNotMerge,
+  'grok-bot-for-finance-teams-never-pay': grokBotForFinanceTeamsNeverPay,
   'grok-bot-for-founders-week-one': grokBotForFoundersWeekOne,
+  'grok-bot-for-freelancers': grokBotForFreelancers,
   'grok-bot-for-gtm-teams': grokBotForGtmTeams,
   'grok-bot-for-hr': grokBotForHr,
   'grok-bot-for-lawyers': grokBotForLawyers,
+  'grok-bot-for-marketers-never-publish': grokBotForMarketersNeverPublish,
   'grok-bot-for-mobile-app-teams': grokBotForMobileAppTeams,
   'grok-bot-for-nonprofits': grokBotForNonprofits,
   'grok-bot-for-revops': grokBotForRevops,
@@ -974,6 +991,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'first-grok-bot-in-an-hour', ...firstGrokBotInAnHour },
   { slug: 'fleet-chief-of-staff-still-one-computer', ...fleetChiefOfStaffStillOneComputer },
   { slug: 'flight-check-in-reminder-never-books', ...flightCheckInReminderNeverBooks },
+  { slug: 'forecast-notes-never-change-the-number', ...forecastNotesNeverChangeTheNumber },
   { slug: 'grok-bot-2fa-prompt', ...grokBot2faPrompt },
   { slug: 'grok-bot-account-health', ...grokBotAccountHealth },
   { slug: 'grok-bot-agentmail', ...grokBotAgentmail },
@@ -990,6 +1008,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-calendar-manager', ...grokBotCalendarManager },
   { slug: 'grok-bot-cannot-see-files', ...grokBotCannotSeeFiles },
   { slug: 'grok-bot-cannot-send-email', ...grokBotCannotSendEmail },
+  { slug: 'grok-bot-captcha-wall', ...grokBotCaptchaWall },
   { slug: 'grok-bot-chief-of-staff-setup', ...grokBotChiefOfStaffSetup },
   { slug: 'grok-bot-claude-code-skills-compatibility', ...grokBotClaudeCodeSkillsCompatibility },
   { slug: 'grok-bot-clip-youtube-podcast', ...grokBotClipYoutubePodcast },
@@ -1004,6 +1023,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-devils-advocate', ...grokBotDevilsAdvocate },
   { slug: 'grok-bot-directory-business', ...grokBotDirectoryBusiness },
   { slug: 'grok-bot-discord', ...grokBotDiscord },
+  { slug: 'grok-bot-duplicate-drafts', ...grokBotDuplicateDrafts },
   { slug: 'grok-bot-enterprise-waitlist', ...grokBotEnterpriseWaitlist },
   { slug: 'grok-bot-evidence-rules', ...grokBotEvidenceRules },
   { slug: 'grok-bot-examples', ...grokBotExamples },
@@ -1017,13 +1037,18 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'grok-bot-fleet-audit', ...grokBotFleetAudit },
   { slug: 'grok-bot-for-accountants', ...grokBotForAccountants },
   { slug: 'grok-bot-for-agencies-isolation', ...grokBotForAgenciesIsolation },
+  { slug: 'grok-bot-for-consultants-client-isolation', ...grokBotForConsultantsClientIsolation },
   { slug: 'grok-bot-for-customer-success', ...grokBotForCustomerSuccess },
   { slug: 'grok-bot-for-designers-figma-motion', ...grokBotForDesignersFigmaMotion },
+  { slug: 'grok-bot-for-ecommerce-ops', ...grokBotForEcommerceOps },
   { slug: 'grok-bot-for-engineers-ops-not-merge', ...grokBotForEngineersOpsNotMerge },
+  { slug: 'grok-bot-for-finance-teams-never-pay', ...grokBotForFinanceTeamsNeverPay },
   { slug: 'grok-bot-for-founders-week-one', ...grokBotForFoundersWeekOne },
+  { slug: 'grok-bot-for-freelancers', ...grokBotForFreelancers },
   { slug: 'grok-bot-for-gtm-teams', ...grokBotForGtmTeams },
   { slug: 'grok-bot-for-hr', ...grokBotForHr },
   { slug: 'grok-bot-for-lawyers', ...grokBotForLawyers },
+  { slug: 'grok-bot-for-marketers-never-publish', ...grokBotForMarketersNeverPublish },
   { slug: 'grok-bot-for-mobile-app-teams', ...grokBotForMobileAppTeams },
   { slug: 'grok-bot-for-nonprofits', ...grokBotForNonprofits },
   { slug: 'grok-bot-for-revops', ...grokBotForRevops },
