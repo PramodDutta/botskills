@@ -430,7 +430,7 @@
    "distinct_from": "",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-for-gtm-teams",
-   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
+   "write_rule": "SUBJECT IS THE HANDOFF GAP itself: work nobody owns between marketing, sales and success. The twin covers GTM roles; this covers the seams where a task dies. Lead with three concrete dropped-ball scenarios and who should have caught each. Must clear dupecheck at 20% before registering."
   },
   {
    "slug": "icp-roster-reverified-weekly",
@@ -696,7 +696,7 @@
    "distinct_from": "watch-listings-without-bidding",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-amazon-cart",
-   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
+   "write_rule": "SUBJECT IS SPEC-SHEET TO CART fidelity: matching a written spec to a listing, variant traps (size, pack count, renewed), and price-per-unit maths. The twin covers the cart bot generally. Must clear dupecheck at 20% before registering."
   },
   {
    "slug": "flight-check-in-reminder-never-books",
@@ -902,7 +902,7 @@
    "distinct_from": "grok-bot-crm-hygiene",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-marketing-os",
-   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
+   "write_rule": "SUBJECT IS THE AUDIT ARTEFACT: what a written stack audit contains, how to evidence each row, what overlap and orphan tools look like on paper. The twin covers the marketing-os bot. Must clear dupecheck at 20% before registering."
   },
   {
    "slug": "ad-creative-drafts-never-go-live",
@@ -1012,7 +1012,7 @@
    "distinct_from": "grok-bot-calendar-manager,grok-bot-to-meeting-prep",
    "risk": "same-subject-as-live",
    "live_twin": "bot-that-never-sends",
-   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
+   "write_rule": "SUBJECT IS SCHEDULING, not the send boundary. Timezone arithmetic, double-booking against a calendar the bot can only read, buffer rules, what happens when two proposed slots both get taken. The never-send rule gets ONE sentence and a link to /blog/bot-that-never-sends. Must clear dupecheck at 20% before registering."
   },
   {
    "slug": "prospecting-sheet-from-public-pages",
@@ -1038,7 +1038,7 @@
    "distinct_from": "grok-bot-sales-outbound",
    "risk": "same-subject-as-live",
    "live_twin": "bot-that-never-sends",
-   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
+   "write_rule": "SUBJECT IS VOICE CAPTURE, not the send boundary. How to build a voice sample the bot can imitate, what it gets wrong (rhythm, hedging, in-jokes), how to test a draft reads as you. Never-send gets ONE sentence and a link to /blog/bot-that-never-sends. Must clear dupecheck at 20% before registering."
   },
   {
    "slug": "call-follow-up-drafter-human-sends",
@@ -1088,7 +1088,7 @@
    "distinct_from": "grok-bot-to-meeting-prep",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-to-meeting-prep",
-   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
+   "write_rule": "SUBJECT IS THE CLOSED-FOLDER METHOD: why prep from a folder you filled beats prep from live mail, what to put in the folder, how to tell the brief is stale. Twin covers meeting prep broadly. Must clear dupecheck at 20% before registering."
   },
   {
    "slug": "deck-updater-never-presents",
@@ -1114,7 +1114,7 @@
    "distinct_from": "deck-updater-never-presents",
    "risk": "same-subject-as-live",
    "live_twin": "bot-that-never-sends",
-   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
+   "write_rule": "SUBJECT IS LOCALIZATION QA, not the send boundary. Text expansion breaking layout, currency and date formats, fonts with no glyph coverage, what a human reviewer must check per locale. Never-send gets ONE sentence and a link to /blog/bot-that-never-sends. Must clear dupecheck at 20% before registering."
   },
   {
    "slug": "brand-deck-keeper-never-edits-figma-live",
@@ -1368,7 +1368,7 @@
    "distinct_from": "grok-bot-to-pr-review,grok-bot-vs-cursor-background-agent",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-to-pr-review",
-   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
+   "write_rule": "SUBJECT IS REVIEWING AN EXPORTED DIFF: what a bot can judge from a diff with no repo access, what it cannot (build, tests, runtime), and how to phrase a comment that a human can act on. Explicitly note the bot does not read SKILL.md, that is Grok Build. Must clear dupecheck at 20% before registering."
   },
   {
    "slug": "codebase-hardening-audit-never-patches-prod",
@@ -2114,7 +2114,7 @@
    "distinct_from": "grok-bot-vs-grok-build",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-claude-code-skills-compatibility",
-   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
+   "write_rule": "SUBJECT IS THE SURFACE MIX-UP: people compare Grok Bot to Claude Code and are comparing the wrong thing, because the SKILL.md surface is Grok Build. The twin is about compatibility; this is about the category error and how to tell which surface you actually want. Must clear dupecheck at 20% before registering."
   },
   {
    "slug": "grok-bot-vs-cursor-bugbot",
@@ -2452,7 +2452,7 @@
    "distinct_from": "grok-bot-for-customer-success,grok-bot-teams-standard",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-for-customer-success",
-   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
+   "write_rule": "SUBJECT IS SEAT TOPOLOGY: one bot per CSM versus a shared seat, and what breaks when a team shares one account. The twin covers CS use cases; this covers how to divide them across people. Must clear dupecheck at 20% before registering."
   },
   {
    "slug": "grok-bot-revops-across-seats",
@@ -3275,7 +3275,7 @@
   }
  ],
  "reviewed": "2026-08-29",
- "review_note": "Reviewed against a live corpus of 306 (plan built at 279). Two detector bugs were found and fixed: slug-token Jaccard over-flags the \"vs\" and \"for\" frames, and subject-overlap with a min() denominator let a one-token slug such as what-is-a-grok-bot swallow every slug beginning with \"what\". Corrected, the genuine same-subject overlap is 10, not the 36 first reported. Those keep a write_rule and a dupecheck gate. 2 inherited entries had corrupted slugs with no search intent and were repaired. A 15-article teaching track was added because the plan was only 25 percent explainer intent.",
+ "review_note": "Reviewed against a live corpus of 306 (plan built at 279). Two detector bugs were found and fixed: slug-token Jaccard over-flags the \"vs\" and \"for\" frames, and subject-overlap with a min() denominator let a one-token slug such as what-is-a-grok-bot swallow every slug beginning with \"what\". Corrected, the genuine same-subject overlap is 10, not the 36 first reported. Those keep a write_rule and a dupecheck gate. 2 inherited entries had corrupted slugs with no search intent and were repaired. A 15-article teaching track was added because the plan was only 25 percent explainer intent. Each of the 10 gated entries now carries a specific angle rather than a generic rule. Three of them shared one twin (bot-that-never-sends) and so also risked duplicating each other; their subjects were moved off the shared boundary onto domain work (scheduling, voice capture, localization QA) with the boundary reduced to one linked sentence.",
  "counts": {
   "total": 265,
   "written": 22,
