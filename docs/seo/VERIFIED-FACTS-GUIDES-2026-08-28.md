@@ -88,3 +88,37 @@ rule, it is the shape of every example the vendor publishes.
   screenshots, separating evidence from hypotheses, returning a short summary
   with the highest-impact issue first, and never changing production settings.
 - No other templates or starter bots are named on that page.
+
+## CORRECTION, 2026-08-29: a share path shipped
+
+Our article share-a-grok-bot stated there was no share button. That was true when
+written and is now wrong. It has been corrected. Anyone writing about sharing
+must use the facts below, not the earlier article.
+
+From docs.x.ai/grok-bot/faq, read 2026-08-29:
+
+- Verbatim: "Copy a public share link from the Bot. Anyone with the link can
+  preview it on x.ai and add a copy to their account."
+- Verbatim on what does NOT transfer: "They do not get your computer, logins, or
+  conversation history."
+- Verbatim warning: "Strip secrets and anything confidential before you share."
+  The reason given is that the link exposes the Bot's configuration.
+- The share page lives at x.ai/bot/<id> and renders the bot name, its author, a
+  truncated prompt, and an Add to Grok Bot control. Observed 2026-08-29.
+- The share page carries a disclaimer that the bot was created by a third-party
+  user rather than by xAI, and that it may act on the adder's behalf.
+
+## What this does and does not change
+
+Still true, and still the point of that article: a teammate who adds your shared
+bot needs their own eligible seat, starts on an empty computer, and must sign
+into every tool themselves. Sharing moves the recipe, never the kitchen.
+
+Now false, do not repeat: "there is no share button", "the product cannot copy a
+bot onto someone else", "you can only hand over the charter as text".
+
+New and worth its own coverage: the link publishes the configuration. A charter
+naming an internal hostname, quoting a customer, or carrying a token in an
+example is exposed to anyone who receives the URL. Every bot in our own
+catalogue is already written to be published, which is not true of a charter
+someone wrote for their own account.

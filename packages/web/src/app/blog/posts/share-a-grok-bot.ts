@@ -17,9 +17,15 @@ What you can share is text: the charter markdown, a /workspace pack saved as a d
 
 This page is that handoff. It is not the Teams Standard invoice ([Grok Bot on Cursor Teams Standard](/blog/grok-bot-teams-standard)), not the retainer leak ([Grok Bot for agencies](/blog/grok-bot-for-agencies-isolation)), and not the engineer who parked production keys next to a curious prompt ([do not use separate bots as a sandbox](/blog/grok-bot-not-a-sandbox)). Stay here if a product manager asked an intern to just use the research bot.
 
-## Refuse the Share Bot control that is not in the product
+## Read the share link for what it copies, which is the configuration only
 
-People look for Share because Docs, Slack, and Figma all have it. Cursor team billing has seats. The jump is: the bot is a named card, so it should copy onto someone else.
+People look for Share because Docs, Slack, and Figma all have it, and a share path does now exist: you can copy a public link from a Bot, and anyone with that link can preview it on x.ai and add a copy to their own account.
+
+What it copies is the configuration. Nothing else travels. The docs are explicit that the person who adds your bot does not get your computer, your logins, or your conversation history, and that is the whole of what Priya actually meant when she said just use the research bot.
+
+So the link is real and it is narrower than the word share implies. Jonah can add a bot shaped like Research Scout in about two seconds. He still needs his own eligible seat, he still starts with an empty computer, and he still has to sign into every tool himself. The link moves the recipe, never the kitchen.
+
+One warning that comes with it, straight from the docs: the link exposes the Bot's configuration, so strip secrets and anything confidential before you copy it. A charter that names an internal hostname, quotes a customer, or carries a token in an example is a charter you have now published to anyone who receives the URL.
 
 The product does not document that button. Do not invent one in an ops wiki. Do not tell Jonah to click Share next to Research Scout. Sidebar names are labels on screens, not org objects. [What a Grok bot is](/blog/what-is-a-grok-bot) is a named agent on a managed cloud computer assigned to the user.
 
@@ -120,7 +126,7 @@ Cursor Teams Standard at forty dollars per user per month includes Grok Bot. Tha
 
 Priya's Research Scout does not appear in Jonah's sidebar when ops adds his seat. His computer is empty. That is isolation working. It is also why just use the research bot is a request the product cannot honor.
 
-Teams Premium at one hundred twenty per user also includes Grok Bot. Same Bot product, still no share button, no model picker, no spend cap, no audit view. Privacy Mode (Legacy) blocks Grok Bot entirely. Confirm his account screen, not a Slack screenshot.
+Teams Premium at one hundred twenty per user also includes Grok Bot. Same Bot product, still no model picker, no spend cap, no audit view. A share link exists, and it copies configuration rather than access. Privacy Mode (Legacy) blocks Grok Bot entirely. Confirm his account screen, not a Slack screenshot.
 
 If Jonah is sampling for two weeks, the one-time trial may be the door ([the Grok Bot free trial](/blog/grok-bot-free-trial)). Do not put him on Priya's login to skip procurement. Hobby and Pro at twenty do not include Grok Bot. Pro+ at sixty does. SuperGrok at thirty does not. SuperGrok Plus at one hundred does. SuperGrok Heavy is eligible; this page will not print a dollar figure for it. Confirm [cursor.com/pricing](https://cursor.com/pricing) the morning you buy.
 
@@ -205,11 +211,11 @@ A paste of [Lead Scout](/bots/lead-scout) plus a charter plus three exported fil
 
 ### Is there a way to share a named Grok Bot with a teammate without sharing the account?
 
-No documented path exists. There is no Share Bot control, no viewer role on a named card, and no move of a bot, its computer, or its routines onto another person. All bots on an account share one persistent cloud computer assigned to that user, not to a bot. Screens are not security boundaries. If a teammate needs the same job, copy the charter as text, give them their own eligible seat, and recreate the bot on their computer. Confirm the live FAQ if you think a share path shipped after 27 August 2026.
+No documented path exists. There is no Share Bot control, no viewer role on a named card, and no move of a bot, its computer, or its routines onto another person. All bots on an account share one persistent cloud computer assigned to that user, not to a bot. Screens are not security boundaries. If a teammate needs the same job, copy the charter as text, give them their own eligible seat, and recreate the bot on their computer. A share link does exist and it copies the configuration to their account. It does not hand over the computer, the logins, or the conversation history, so the teammate still needs their own eligible seat.
 
-### If I cannot share the bot, what can I actually give the intern?
+### The share link copied the bot, so why does the intern still need a seat?
 
-You can give text and files you already own. Copy the charter markdown into a document they can open. Export the /workspace pack they need as a dated file, stripped of anything that should never have sat on a research screen. Paste a listing such as Lead Scout so they recreate the job shape and the boundary on their own seat. None of that copies cookies, sessions, CLI credentials, routines, or run records. If they must run Grok Bot, they need their own eligible account. A password is the computer, not a shortcut.
+Because the link copies the configuration and nothing that makes it run. The charter and its setup land in their account; the computer it ran on, the browser sessions signed into your tools, the command line credentials, the routines, and the conversation history all stay with you. Adding a shared bot hands someone the recipe on an empty machine. Executing it needs their own eligible account, and every tool it touches needs them to sign in as themselves. A password is the computer, not a shortcut around procurement.
 
 ### If we buy the intern a Teams seat, do they inherit my research bot?
 
