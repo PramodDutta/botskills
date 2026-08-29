@@ -43,6 +43,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -91,16 +92,24 @@ import { post as botdirectoryAlternatives } from './botdirectory-alternatives';
 import { post as botsAnd1password } from './bots-and-1password';
 import { post as botsAndAsana } from './bots-and-asana';
 import { post as botsAndAws } from './bots-and-aws';
+import { post as botsAndCalendly } from './bots-and-calendly';
 import { post as botsAndClickup } from './bots-and-clickup';
 import { post as botsAndDocusign } from './bots-and-docusign';
 import { post as botsAndFigma } from './bots-and-figma';
+import { post as botsAndJiraCloud } from './bots-and-jira-cloud';
 import { post as botsAndJiraServiceManagement } from './bots-and-jira-service-management';
+import { post as botsAndMailchimp } from './bots-and-mailchimp';
+import { post as botsAndMicrosoftTeams } from './bots-and-microsoft-teams';
 import { post as botsAndMixpanel } from './bots-and-mixpanel';
 import { post as botsAndMonday } from './bots-and-monday';
 import { post as botsAndOkta } from './bots-and-okta';
+import { post as botsAndPagerduty } from './bots-and-pagerduty';
+import { post as botsAndSubstack } from './bots-and-substack';
 import { post as botsAndSupabase } from './bots-and-supabase';
+import { post as botsAndTwilio } from './bots-and-twilio';
 import { post as botsAndWebflow } from './bots-and-webflow';
 import { post as botsAndWhatsapp } from './bots-and-whatsapp';
+import { post as botsAndWordpress } from './bots-and-wordpress';
 import { post as botsAndZendesk } from './bots-and-zendesk';
 import { post as botsForAgencies } from './bots-for-agencies';
 import { post as botsForConsultants } from './bots-for-consultants';
@@ -469,16 +478,24 @@ export const posts: Record<string, BlogPost> = {
   'bots-and-1password': botsAnd1password,
   'bots-and-asana': botsAndAsana,
   'bots-and-aws': botsAndAws,
+  'bots-and-calendly': botsAndCalendly,
   'bots-and-clickup': botsAndClickup,
   'bots-and-docusign': botsAndDocusign,
   'bots-and-figma': botsAndFigma,
+  'bots-and-jira-cloud': botsAndJiraCloud,
   'bots-and-jira-service-management': botsAndJiraServiceManagement,
+  'bots-and-mailchimp': botsAndMailchimp,
+  'bots-and-microsoft-teams': botsAndMicrosoftTeams,
   'bots-and-mixpanel': botsAndMixpanel,
   'bots-and-monday': botsAndMonday,
   'bots-and-okta': botsAndOkta,
+  'bots-and-pagerduty': botsAndPagerduty,
+  'bots-and-substack': botsAndSubstack,
   'bots-and-supabase': botsAndSupabase,
+  'bots-and-twilio': botsAndTwilio,
   'bots-and-webflow': botsAndWebflow,
   'bots-and-whatsapp': botsAndWhatsapp,
+  'bots-and-wordpress': botsAndWordpress,
   'bots-and-zendesk': botsAndZendesk,
   'bots-for-agencies': botsForAgencies,
   'bots-for-consultants': botsForConsultants,
@@ -840,16 +857,24 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'bots-and-1password', ...botsAnd1password },
   { slug: 'bots-and-asana', ...botsAndAsana },
   { slug: 'bots-and-aws', ...botsAndAws },
+  { slug: 'bots-and-calendly', ...botsAndCalendly },
   { slug: 'bots-and-clickup', ...botsAndClickup },
   { slug: 'bots-and-docusign', ...botsAndDocusign },
   { slug: 'bots-and-figma', ...botsAndFigma },
+  { slug: 'bots-and-jira-cloud', ...botsAndJiraCloud },
   { slug: 'bots-and-jira-service-management', ...botsAndJiraServiceManagement },
+  { slug: 'bots-and-mailchimp', ...botsAndMailchimp },
+  { slug: 'bots-and-microsoft-teams', ...botsAndMicrosoftTeams },
   { slug: 'bots-and-mixpanel', ...botsAndMixpanel },
   { slug: 'bots-and-monday', ...botsAndMonday },
   { slug: 'bots-and-okta', ...botsAndOkta },
+  { slug: 'bots-and-pagerduty', ...botsAndPagerduty },
+  { slug: 'bots-and-substack', ...botsAndSubstack },
   { slug: 'bots-and-supabase', ...botsAndSupabase },
+  { slug: 'bots-and-twilio', ...botsAndTwilio },
   { slug: 'bots-and-webflow', ...botsAndWebflow },
   { slug: 'bots-and-whatsapp', ...botsAndWhatsapp },
+  { slug: 'bots-and-wordpress', ...botsAndWordpress },
   { slug: 'bots-and-zendesk', ...botsAndZendesk },
   { slug: 'bots-for-agencies', ...botsForAgencies },
   { slug: 'bots-for-consultants', ...botsForConsultants },
