@@ -42,6 +42,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -69,15 +70,23 @@ import { post as botCharterAntiPatterns } from './bot-charter-anti-patterns';
 import { post as botCostControl } from './bot-cost-control';
 import { post as botDataRetention } from './bot-data-retention';
 import { post as botDelegationPlaybook } from './bot-delegation-playbook';
+import { post as botEscalationPaths } from './bot-escalation-paths';
 import { post as botFailureModes } from './bot-failure-modes';
+import { post as botGlossary } from './bot-glossary';
 import { post as botHandoffToHuman } from './bot-handoff-to-human';
+import { post as botHandoverDocumentation } from './bot-handover-documentation';
 import { post as botIncidentResponse } from './bot-incident-response';
 import { post as botIntegrationsCompleteGuide } from './bot-integrations-complete-guide';
 import { post as botObservability } from './bot-observability';
+import { post as botOutputVerification } from './bot-output-verification';
+import { post as botPermissionReviewChecklist } from './bot-permission-review-checklist';
+import { post as botPostMortems } from './bot-post-mortems';
 import { post as botPromptEngineering } from './bot-prompt-engineering';
 import { post as botSecurityCompleteGuide } from './bot-security-complete-guide';
 import { post as botSystemArchitecture } from './bot-system-architecture';
 import { post as botThatNeverSends } from './bot-that-never-sends';
+import { post as botTrialRunMethod } from './bot-trial-run-method';
+import { post as botVersioningAndRollback } from './bot-versioning-and-rollback';
 import { post as botdirectoryAlternatives } from './botdirectory-alternatives';
 import { post as botsAnd1password } from './bots-and-1password';
 import { post as botsAndAsana } from './bots-and-asana';
@@ -439,15 +448,23 @@ export const posts: Record<string, BlogPost> = {
   'bot-cost-control': botCostControl,
   'bot-data-retention': botDataRetention,
   'bot-delegation-playbook': botDelegationPlaybook,
+  'bot-escalation-paths': botEscalationPaths,
   'bot-failure-modes': botFailureModes,
+  'bot-glossary': botGlossary,
   'bot-handoff-to-human': botHandoffToHuman,
+  'bot-handover-documentation': botHandoverDocumentation,
   'bot-incident-response': botIncidentResponse,
   'bot-integrations-complete-guide': botIntegrationsCompleteGuide,
   'bot-observability': botObservability,
+  'bot-output-verification': botOutputVerification,
+  'bot-permission-review-checklist': botPermissionReviewChecklist,
+  'bot-post-mortems': botPostMortems,
   'bot-prompt-engineering': botPromptEngineering,
   'bot-security-complete-guide': botSecurityCompleteGuide,
   'bot-system-architecture': botSystemArchitecture,
   'bot-that-never-sends': botThatNeverSends,
+  'bot-trial-run-method': botTrialRunMethod,
+  'bot-versioning-and-rollback': botVersioningAndRollback,
   'botdirectory-alternatives': botdirectoryAlternatives,
   'bots-and-1password': botsAnd1password,
   'bots-and-asana': botsAndAsana,
@@ -802,15 +819,23 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'bot-cost-control', ...botCostControl },
   { slug: 'bot-data-retention', ...botDataRetention },
   { slug: 'bot-delegation-playbook', ...botDelegationPlaybook },
+  { slug: 'bot-escalation-paths', ...botEscalationPaths },
   { slug: 'bot-failure-modes', ...botFailureModes },
+  { slug: 'bot-glossary', ...botGlossary },
   { slug: 'bot-handoff-to-human', ...botHandoffToHuman },
+  { slug: 'bot-handover-documentation', ...botHandoverDocumentation },
   { slug: 'bot-incident-response', ...botIncidentResponse },
   { slug: 'bot-integrations-complete-guide', ...botIntegrationsCompleteGuide },
   { slug: 'bot-observability', ...botObservability },
+  { slug: 'bot-output-verification', ...botOutputVerification },
+  { slug: 'bot-permission-review-checklist', ...botPermissionReviewChecklist },
+  { slug: 'bot-post-mortems', ...botPostMortems },
   { slug: 'bot-prompt-engineering', ...botPromptEngineering },
   { slug: 'bot-security-complete-guide', ...botSecurityCompleteGuide },
   { slug: 'bot-system-architecture', ...botSystemArchitecture },
   { slug: 'bot-that-never-sends', ...botThatNeverSends },
+  { slug: 'bot-trial-run-method', ...botTrialRunMethod },
+  { slug: 'bot-versioning-and-rollback', ...botVersioningAndRollback },
   { slug: 'botdirectory-alternatives', ...botdirectoryAlternatives },
   { slug: 'bots-and-1password', ...botsAnd1password },
   { slug: 'bots-and-asana', ...botsAndAsana },
