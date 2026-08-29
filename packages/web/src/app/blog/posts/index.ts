@@ -46,6 +46,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -147,11 +148,19 @@ import { post as copyABotskillsListingOntoASecondSeat } from './copy-a-botskills
 import { post as counterFromYourOwnRateHistory } from './counter-from-your-own-rate-history';
 import { post as credentialHygieneForBots } from './credential-hygiene-for-bots';
 import { post as cursorTeamsPremiumAndGrokBot } from './cursor-teams-premium-and-grok-bot';
+import { post as cursorUltraAndGrokBot } from './cursor-ultra-and-grok-bot';
+import { post as dealDeskAutopilotNeverDiscounts } from './deal-desk-autopilot-never-discounts';
+import { post as deckUpdaterNeverPresents } from './deck-updater-never-presents';
 import { post as deleteAGrokBotSafely } from './delete-a-grok-bot-safely';
 import { post as downloadGrokBot } from './download-grok-bot';
 import { post as emailInjectionSentinelReadOnly } from './email-injection-sentinel-read-only';
+import { post as emailPurgerNeverEmptiesTrash } from './email-purger-never-empties-trash';
+import { post as enablementPackNeverEmailsTheRep } from './enablement-pack-never-emails-the-rep';
 import { post as explainGrokBotToYourBoss } from './explain-grok-bot-to-your-boss';
+import { post as findTheClipThatAnswersTheObjection } from './find-the-clip-that-answers-the-objection';
 import { post as firstGrokBotInAnHour } from './first-grok-bot-in-an-hour';
+import { post as fleetChiefOfStaffStillOneComputer } from './fleet-chief-of-staff-still-one-computer';
+import { post as flightCheckInReminderNeverBooks } from './flight-check-in-reminder-never-books';
 import { post as grokBot2faPrompt } from './grok-bot-2fa-prompt';
 import { post as grokBotAccountHealth } from './grok-bot-account-health';
 import { post as grokBotAgentmail } from './grok-bot-agentmail';
@@ -549,11 +558,19 @@ export const posts: Record<string, BlogPost> = {
   'counter-from-your-own-rate-history': counterFromYourOwnRateHistory,
   'credential-hygiene-for-bots': credentialHygieneForBots,
   'cursor-teams-premium-and-grok-bot': cursorTeamsPremiumAndGrokBot,
+  'cursor-ultra-and-grok-bot': cursorUltraAndGrokBot,
+  'deal-desk-autopilot-never-discounts': dealDeskAutopilotNeverDiscounts,
+  'deck-updater-never-presents': deckUpdaterNeverPresents,
   'delete-a-grok-bot-safely': deleteAGrokBotSafely,
   'download-grok-bot': downloadGrokBot,
   'email-injection-sentinel-read-only': emailInjectionSentinelReadOnly,
+  'email-purger-never-empties-trash': emailPurgerNeverEmptiesTrash,
+  'enablement-pack-never-emails-the-rep': enablementPackNeverEmailsTheRep,
   'explain-grok-bot-to-your-boss': explainGrokBotToYourBoss,
+  'find-the-clip-that-answers-the-objection': findTheClipThatAnswersTheObjection,
   'first-grok-bot-in-an-hour': firstGrokBotInAnHour,
+  'fleet-chief-of-staff-still-one-computer': fleetChiefOfStaffStillOneComputer,
+  'flight-check-in-reminder-never-books': flightCheckInReminderNeverBooks,
   'grok-bot-2fa-prompt': grokBot2faPrompt,
   'grok-bot-account-health': grokBotAccountHealth,
   'grok-bot-agentmail': grokBotAgentmail,
@@ -944,11 +961,19 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'counter-from-your-own-rate-history', ...counterFromYourOwnRateHistory },
   { slug: 'credential-hygiene-for-bots', ...credentialHygieneForBots },
   { slug: 'cursor-teams-premium-and-grok-bot', ...cursorTeamsPremiumAndGrokBot },
+  { slug: 'cursor-ultra-and-grok-bot', ...cursorUltraAndGrokBot },
+  { slug: 'deal-desk-autopilot-never-discounts', ...dealDeskAutopilotNeverDiscounts },
+  { slug: 'deck-updater-never-presents', ...deckUpdaterNeverPresents },
   { slug: 'delete-a-grok-bot-safely', ...deleteAGrokBotSafely },
   { slug: 'download-grok-bot', ...downloadGrokBot },
   { slug: 'email-injection-sentinel-read-only', ...emailInjectionSentinelReadOnly },
+  { slug: 'email-purger-never-empties-trash', ...emailPurgerNeverEmptiesTrash },
+  { slug: 'enablement-pack-never-emails-the-rep', ...enablementPackNeverEmailsTheRep },
   { slug: 'explain-grok-bot-to-your-boss', ...explainGrokBotToYourBoss },
+  { slug: 'find-the-clip-that-answers-the-objection', ...findTheClipThatAnswersTheObjection },
   { slug: 'first-grok-bot-in-an-hour', ...firstGrokBotInAnHour },
+  { slug: 'fleet-chief-of-staff-still-one-computer', ...fleetChiefOfStaffStillOneComputer },
+  { slug: 'flight-check-in-reminder-never-books', ...flightCheckInReminderNeverBooks },
   { slug: 'grok-bot-2fa-prompt', ...grokBot2faPrompt },
   { slug: 'grok-bot-account-health', ...grokBotAccountHealth },
   { slug: 'grok-bot-agentmail', ...grokBotAgentmail },
