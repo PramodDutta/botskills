@@ -45,6 +45,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -137,7 +138,15 @@ import { post as cheapestWayIntoGrokBot } from './cheapest-way-into-grok-bot';
 import { post as churnEarlyWarningStillNoCustomerMail } from './churn-early-warning-still-no-customer-mail';
 import { post as churnWinBackLoopDraftOnly } from './churn-win-back-loop-draft-only';
 import { post as codebaseHardeningAuditNeverPatchesProd } from './codebase-hardening-audit-never-patches-prod';
+import { post as competitorAdWatchNeverLaunchesAds } from './competitor-ad-watch-never-launches-ads';
+import { post as competitorPricingWatchNeverReprices } from './competitor-pricing-watch-never-reprices';
+import { post as competitorWebsiteWatchCouldNotCompute } from './competitor-website-watch-could-not-compute';
+import { post as complianceAndAiAgents } from './compliance-and-ai-agents';
+import { post as contentIdeasThatNeverBecomePosts } from './content-ideas-that-never-become-posts';
 import { post as copyABotskillsListingOntoASecondSeat } from './copy-a-botskills-listing-onto-a-second-seat';
+import { post as counterFromYourOwnRateHistory } from './counter-from-your-own-rate-history';
+import { post as credentialHygieneForBots } from './credential-hygiene-for-bots';
+import { post as cursorTeamsPremiumAndGrokBot } from './cursor-teams-premium-and-grok-bot';
 import { post as deleteAGrokBotSafely } from './delete-a-grok-bot-safely';
 import { post as downloadGrokBot } from './download-grok-bot';
 import { post as emailInjectionSentinelReadOnly } from './email-injection-sentinel-read-only';
@@ -531,7 +540,15 @@ export const posts: Record<string, BlogPost> = {
   'churn-early-warning-still-no-customer-mail': churnEarlyWarningStillNoCustomerMail,
   'churn-win-back-loop-draft-only': churnWinBackLoopDraftOnly,
   'codebase-hardening-audit-never-patches-prod': codebaseHardeningAuditNeverPatchesProd,
+  'competitor-ad-watch-never-launches-ads': competitorAdWatchNeverLaunchesAds,
+  'competitor-pricing-watch-never-reprices': competitorPricingWatchNeverReprices,
+  'competitor-website-watch-could-not-compute': competitorWebsiteWatchCouldNotCompute,
+  'compliance-and-ai-agents': complianceAndAiAgents,
+  'content-ideas-that-never-become-posts': contentIdeasThatNeverBecomePosts,
   'copy-a-botskills-listing-onto-a-second-seat': copyABotskillsListingOntoASecondSeat,
+  'counter-from-your-own-rate-history': counterFromYourOwnRateHistory,
+  'credential-hygiene-for-bots': credentialHygieneForBots,
+  'cursor-teams-premium-and-grok-bot': cursorTeamsPremiumAndGrokBot,
   'delete-a-grok-bot-safely': deleteAGrokBotSafely,
   'download-grok-bot': downloadGrokBot,
   'email-injection-sentinel-read-only': emailInjectionSentinelReadOnly,
@@ -918,7 +935,15 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'churn-early-warning-still-no-customer-mail', ...churnEarlyWarningStillNoCustomerMail },
   { slug: 'churn-win-back-loop-draft-only', ...churnWinBackLoopDraftOnly },
   { slug: 'codebase-hardening-audit-never-patches-prod', ...codebaseHardeningAuditNeverPatchesProd },
+  { slug: 'competitor-ad-watch-never-launches-ads', ...competitorAdWatchNeverLaunchesAds },
+  { slug: 'competitor-pricing-watch-never-reprices', ...competitorPricingWatchNeverReprices },
+  { slug: 'competitor-website-watch-could-not-compute', ...competitorWebsiteWatchCouldNotCompute },
+  { slug: 'compliance-and-ai-agents', ...complianceAndAiAgents },
+  { slug: 'content-ideas-that-never-become-posts', ...contentIdeasThatNeverBecomePosts },
   { slug: 'copy-a-botskills-listing-onto-a-second-seat', ...copyABotskillsListingOntoASecondSeat },
+  { slug: 'counter-from-your-own-rate-history', ...counterFromYourOwnRateHistory },
+  { slug: 'credential-hygiene-for-bots', ...credentialHygieneForBots },
+  { slug: 'cursor-teams-premium-and-grok-bot', ...cursorTeamsPremiumAndGrokBot },
   { slug: 'delete-a-grok-bot-safely', ...deleteAGrokBotSafely },
   { slug: 'download-grok-bot', ...downloadGrokBot },
   { slug: 'email-injection-sentinel-read-only', ...emailInjectionSentinelReadOnly },
