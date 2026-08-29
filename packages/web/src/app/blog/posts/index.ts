@@ -41,6 +41,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -49,6 +50,9 @@ import { post as accountTieringPackNeverChangesOwner } from './account-tiering-p
 import { post as adCreativeDraftsNeverGoLive } from './ad-creative-drafts-never-go-live';
 import { post as agentInboxIsNotGmailSend } from './agent-inbox-is-not-gmail-send';
 import { post as aiAgentPlatformsCompared } from './ai-agent-platforms-compared';
+import { post as aiAgentsVsHiring } from './ai-agents-vs-hiring';
+import { post as aiAgentsVsRpa } from './ai-agents-vs-rpa';
+import { post as aiAgentsVsWorkflowBuilders } from './ai-agents-vs-workflow-builders';
 import { post as aiBotsCompleteGuide } from './ai-bots-complete-guide';
 import { post as approvalFatigueAndTheBlanketYes } from './approval-fatigue-and-the-blanket-yes';
 import { post as approvalGatesForBots } from './approval-gates-for-bots';
@@ -57,8 +61,13 @@ import { post as bestAiBotsForFounders } from './best-ai-bots-for-founders';
 import { post as bestAiBotsForMarketing } from './best-ai-bots-for-marketing';
 import { post as bestAiBotsForSales } from './best-ai-bots-for-sales';
 import { post as bestAiBotsForSupport } from './best-ai-bots-for-support';
+import { post as bookingPipelineNeverChargesTheCard } from './booking-pipeline-never-charges-the-card';
+import { post as bookkeepingAuditorNeverPostsTheJournal } from './bookkeeping-auditor-never-posts-the-journal';
+import { post as botCapacityPlanning } from './bot-capacity-planning';
+import { post as botChangeManagement } from './bot-change-management';
 import { post as botCharterAntiPatterns } from './bot-charter-anti-patterns';
 import { post as botCostControl } from './bot-cost-control';
+import { post as botDataRetention } from './bot-data-retention';
 import { post as botDelegationPlaybook } from './bot-delegation-playbook';
 import { post as botFailureModes } from './bot-failure-modes';
 import { post as botHandoffToHuman } from './bot-handoff-to-human';
@@ -411,6 +420,9 @@ export const posts: Record<string, BlogPost> = {
   'ad-creative-drafts-never-go-live': adCreativeDraftsNeverGoLive,
   'agent-inbox-is-not-gmail-send': agentInboxIsNotGmailSend,
   'ai-agent-platforms-compared': aiAgentPlatformsCompared,
+  'ai-agents-vs-hiring': aiAgentsVsHiring,
+  'ai-agents-vs-rpa': aiAgentsVsRpa,
+  'ai-agents-vs-workflow-builders': aiAgentsVsWorkflowBuilders,
   'ai-bots-complete-guide': aiBotsCompleteGuide,
   'approval-fatigue-and-the-blanket-yes': approvalFatigueAndTheBlanketYes,
   'approval-gates-for-bots': approvalGatesForBots,
@@ -419,8 +431,13 @@ export const posts: Record<string, BlogPost> = {
   'best-ai-bots-for-marketing': bestAiBotsForMarketing,
   'best-ai-bots-for-sales': bestAiBotsForSales,
   'best-ai-bots-for-support': bestAiBotsForSupport,
+  'booking-pipeline-never-charges-the-card': bookingPipelineNeverChargesTheCard,
+  'bookkeeping-auditor-never-posts-the-journal': bookkeepingAuditorNeverPostsTheJournal,
+  'bot-capacity-planning': botCapacityPlanning,
+  'bot-change-management': botChangeManagement,
   'bot-charter-anti-patterns': botCharterAntiPatterns,
   'bot-cost-control': botCostControl,
+  'bot-data-retention': botDataRetention,
   'bot-delegation-playbook': botDelegationPlaybook,
   'bot-failure-modes': botFailureModes,
   'bot-handoff-to-human': botHandoffToHuman,
@@ -766,6 +783,9 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'ad-creative-drafts-never-go-live', ...adCreativeDraftsNeverGoLive },
   { slug: 'agent-inbox-is-not-gmail-send', ...agentInboxIsNotGmailSend },
   { slug: 'ai-agent-platforms-compared', ...aiAgentPlatformsCompared },
+  { slug: 'ai-agents-vs-hiring', ...aiAgentsVsHiring },
+  { slug: 'ai-agents-vs-rpa', ...aiAgentsVsRpa },
+  { slug: 'ai-agents-vs-workflow-builders', ...aiAgentsVsWorkflowBuilders },
   { slug: 'ai-bots-complete-guide', ...aiBotsCompleteGuide },
   { slug: 'approval-fatigue-and-the-blanket-yes', ...approvalFatigueAndTheBlanketYes },
   { slug: 'approval-gates-for-bots', ...approvalGatesForBots },
@@ -774,8 +794,13 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'best-ai-bots-for-marketing', ...bestAiBotsForMarketing },
   { slug: 'best-ai-bots-for-sales', ...bestAiBotsForSales },
   { slug: 'best-ai-bots-for-support', ...bestAiBotsForSupport },
+  { slug: 'booking-pipeline-never-charges-the-card', ...bookingPipelineNeverChargesTheCard },
+  { slug: 'bookkeeping-auditor-never-posts-the-journal', ...bookkeepingAuditorNeverPostsTheJournal },
+  { slug: 'bot-capacity-planning', ...botCapacityPlanning },
+  { slug: 'bot-change-management', ...botChangeManagement },
   { slug: 'bot-charter-anti-patterns', ...botCharterAntiPatterns },
   { slug: 'bot-cost-control', ...botCostControl },
+  { slug: 'bot-data-retention', ...botDataRetention },
   { slug: 'bot-delegation-playbook', ...botDelegationPlaybook },
   { slug: 'bot-failure-modes', ...botFailureModes },
   { slug: 'bot-handoff-to-human', ...botHandoffToHuman },
