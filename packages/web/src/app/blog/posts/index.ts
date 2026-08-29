@@ -44,6 +44,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -127,7 +128,15 @@ import { post as botsForSalesReps } from './bots-for-sales-reps';
 import { post as botsForSupportLeads } from './bots-for-support-leads';
 import { post as botsForTeachers } from './bots-for-teachers';
 import { post as botsForWriters } from './bots-for-writers';
+import { post as buildTheDiscoverySlideMidCall } from './build-the-discovery-slide-mid-call';
+import { post as buildVsBuyAiAgents } from './build-vs-buy-ai-agents';
+import { post as callCoachNeverJoinsTheCall } from './call-coach-never-joins-the-call';
+import { post as callFollowUpDrafterHumanSends } from './call-follow-up-drafter-human-sends';
+import { post as chatVsScheduledAgents } from './chat-vs-scheduled-agents';
 import { post as cheapestWayIntoGrokBot } from './cheapest-way-into-grok-bot';
+import { post as churnEarlyWarningStillNoCustomerMail } from './churn-early-warning-still-no-customer-mail';
+import { post as churnWinBackLoopDraftOnly } from './churn-win-back-loop-draft-only';
+import { post as codebaseHardeningAuditNeverPatchesProd } from './codebase-hardening-audit-never-patches-prod';
 import { post as copyABotskillsListingOntoASecondSeat } from './copy-a-botskills-listing-onto-a-second-seat';
 import { post as deleteAGrokBotSafely } from './delete-a-grok-bot-safely';
 import { post as downloadGrokBot } from './download-grok-bot';
@@ -513,7 +522,15 @@ export const posts: Record<string, BlogPost> = {
   'bots-for-support-leads': botsForSupportLeads,
   'bots-for-teachers': botsForTeachers,
   'bots-for-writers': botsForWriters,
+  'build-the-discovery-slide-mid-call': buildTheDiscoverySlideMidCall,
+  'build-vs-buy-ai-agents': buildVsBuyAiAgents,
+  'call-coach-never-joins-the-call': callCoachNeverJoinsTheCall,
+  'call-follow-up-drafter-human-sends': callFollowUpDrafterHumanSends,
+  'chat-vs-scheduled-agents': chatVsScheduledAgents,
   'cheapest-way-into-grok-bot': cheapestWayIntoGrokBot,
+  'churn-early-warning-still-no-customer-mail': churnEarlyWarningStillNoCustomerMail,
+  'churn-win-back-loop-draft-only': churnWinBackLoopDraftOnly,
+  'codebase-hardening-audit-never-patches-prod': codebaseHardeningAuditNeverPatchesProd,
   'copy-a-botskills-listing-onto-a-second-seat': copyABotskillsListingOntoASecondSeat,
   'delete-a-grok-bot-safely': deleteAGrokBotSafely,
   'download-grok-bot': downloadGrokBot,
@@ -892,7 +909,15 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'bots-for-support-leads', ...botsForSupportLeads },
   { slug: 'bots-for-teachers', ...botsForTeachers },
   { slug: 'bots-for-writers', ...botsForWriters },
+  { slug: 'build-the-discovery-slide-mid-call', ...buildTheDiscoverySlideMidCall },
+  { slug: 'build-vs-buy-ai-agents', ...buildVsBuyAiAgents },
+  { slug: 'call-coach-never-joins-the-call', ...callCoachNeverJoinsTheCall },
+  { slug: 'call-follow-up-drafter-human-sends', ...callFollowUpDrafterHumanSends },
+  { slug: 'chat-vs-scheduled-agents', ...chatVsScheduledAgents },
   { slug: 'cheapest-way-into-grok-bot', ...cheapestWayIntoGrokBot },
+  { slug: 'churn-early-warning-still-no-customer-mail', ...churnEarlyWarningStillNoCustomerMail },
+  { slug: 'churn-win-back-loop-draft-only', ...churnWinBackLoopDraftOnly },
+  { slug: 'codebase-hardening-audit-never-patches-prod', ...codebaseHardeningAuditNeverPatchesProd },
   { slug: 'copy-a-botskills-listing-onto-a-second-seat', ...copyABotskillsListingOntoASecondSeat },
   { slug: 'delete-a-grok-bot-safely', ...deleteAGrokBotSafely },
   { slug: 'download-grok-bot', ...downloadGrokBot },
