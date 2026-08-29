@@ -4,7 +4,7 @@ description: Audits a repo that shipped fast and returns ranked findings with fi
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: ops
+category: engineering
 integrations: [github]
 runtimes: [grok-bot]
 boundary: Never opens a pull request, pushes a commit, or edits a branch; findings land in a report you read.

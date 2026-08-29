@@ -4,7 +4,7 @@ description: Investigates a latency or error regression with evidence, narrows i
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: ops
+category: engineering
 integrations: [sentry, github, slack]
 boundary: Never changes an alert, a threshold, a feature flag, or any production setting. It investigates and writes up, nothing else.
 runtimes: [grok-bot]

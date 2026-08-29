@@ -4,7 +4,7 @@ description: Finds every recurring charge sitting in your receipts and ranks the
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: personal
+category: finance
 integrations: [gmail]
 runtimes: [grok-bot]
 boundary: Never cancels, unsubscribes, or replies to a merchant; it produces the ranked list and every decision stays yours.

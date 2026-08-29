@@ -4,7 +4,7 @@ description: Watches merged pull requests for customer-visible changes and propo
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: success
+category: support
 integrations: [intercom, github]
 runtimes: [grok-bot]
 boundary: Never publishes, edits, or unpublishes a help center article; each change ships as current text beside proposed text for a human to paste.

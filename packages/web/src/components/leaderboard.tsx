@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { IntegrationIcon } from '@/components/integration-icon';
+import { CATEGORY_IDS } from '@botskills/shared';
 
 export interface BoardRow {
   rank: number;
@@ -22,7 +23,8 @@ export interface BoardRow {
 
 const MEDALS = ['\u{1F947}', '\u{1F948}', '\u{1F949}'];
 const PAGE = 25;
-const CATEGORIES = ['productivity', 'sales', 'marketing', 'ops', 'success', 'personal'];
+// Imported, never re-listed: three copies of this list drifted apart once.
+const CATEGORIES = CATEGORY_IDS;
 
 function VoteButton({ slug, votes }: { slug: string; votes: number }) {
   const key = `voted:${slug}`;

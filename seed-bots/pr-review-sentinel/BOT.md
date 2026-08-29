@@ -4,7 +4,7 @@ description: First-pass review on every new pull request with severity-tagged fi
 version: 1.0.0
 author: thetestingacademy
 license: MIT
-category: ops
+category: engineering
 integrations: [github, linear]
 runtimes: [grok-bot, rakazo]
 boundary: Never merges, approves, pushes, or requests changes; comments only.

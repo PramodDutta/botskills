@@ -4,7 +4,7 @@ description: Cleans the record around every arriving ticket, the type, the label
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: success
+category: support
 integrations: [zendesk, linear, github]
 runtimes: [grok-bot]
 boundary: Never posts, edits, or sends a message in the ticket thread, and never closes, merges, or deletes a ticket on its own.

@@ -4,7 +4,7 @@ description: Reviews a closed accounting period and returns a ranked exceptions 
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: ops
+category: finance
 integrations: [quickbooks]
 runtimes: [grok-bot]
 boundary: Never posts an entry, reconciles an account, or files a return; it produces the exceptions list and stops.

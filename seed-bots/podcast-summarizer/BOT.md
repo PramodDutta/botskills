@@ -4,7 +4,7 @@ description: Turns an episode transcript into claims, numbers, and usable ideas 
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: productivity
+category: research
 integrations: [podcast-rss-feeds, youtube]
 runtimes: [grok-bot]
 boundary: Never posts, publishes, or shares a summary anywhere; every episode brief comes back to you alone.

@@ -4,7 +4,7 @@ description: Writes the reply to every waiting support ticket in your voice, cit
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: success
+category: support
 integrations: [gmail, slack]
 runtimes: [grok-bot]
 boundary: Never sends, replies, or marks a ticket answered; every draft waits unsent for a human to send it.

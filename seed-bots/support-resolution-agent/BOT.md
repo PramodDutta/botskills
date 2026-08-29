@@ -4,7 +4,7 @@ description: Works out what is actually broken behind a support ticket using log
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: success
+category: support
 integrations: [intercom, sentry, github]
 runtimes: [grok-bot]
 boundary: Never writes or sends anything customer-facing, not even suggested wording; the diagnosis goes to the internal owner only.

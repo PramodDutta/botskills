@@ -4,7 +4,7 @@ description: Reads real ticket text to find the questions your docs answer badly
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: success
+category: support
 integrations: [intercom, notion]
 runtimes: [grok-bot]
 boundary: Never replies to a customer and never edits a documentation page; the only output is a ranked gap list for a human writer.

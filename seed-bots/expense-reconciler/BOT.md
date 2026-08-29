@@ -4,7 +4,7 @@ description: Reconciles the week's expenses against receipts, flags policy excep
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: ops
+category: finance
 integrations: [gmail, google-drive, sheets]
 boundary: Never sends a message and never changes a reimbursement, an approval state, or an amount. It drafts and stops.
 runtimes: [grok-bot]

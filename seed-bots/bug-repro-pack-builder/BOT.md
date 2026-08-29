@@ -4,7 +4,7 @@ description: Turns a vague bug report into a reproduction pack with exact steps,
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: ops
+category: engineering
 integrations: [jira, github, sentry]
 boundary: Never uses production customer data and never runs against production. Staging and synthetic data only, every time.
 runtimes: [grok-bot]

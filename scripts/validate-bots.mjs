@@ -3,10 +3,10 @@
 // Lives in the repo so it cannot be clobbered by a scratch-dir collision.
 import fs from 'node:fs';
 import path from 'node:path';
-import { parseBotMd } from '../packages/shared/dist/index.js';
+import { parseBotMd, CATEGORY_IDS } from '../packages/shared/dist/index.js';
 
 const D = 'seed-bots';
-const CATEGORIES = new Set(['productivity', 'sales', 'marketing', 'ops', 'success', 'personal']);
+const CATEGORIES = new Set(CATEGORY_IDS);   // single source: packages/shared
 const fails = [];
 const rows = [];
 

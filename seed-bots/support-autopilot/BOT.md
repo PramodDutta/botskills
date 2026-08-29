@@ -4,7 +4,7 @@ description: Works the live support queue every ten minutes, leaving evidence-ba
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: success
+category: support
 integrations: [intercom, help-scout, slack]
 runtimes: [grok-bot]
 boundary: Never sends a reply and never changes a conversation's status, assignee, or tags; it leaves unsent drafts and internal notes only.

@@ -4,7 +4,7 @@ description: Re-reads every open ticket each hour and reports what went stale, g
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: success
+category: support
 integrations: [zendesk, slack]
 runtimes: [grok-bot]
 boundary: Never replies to, reassigns, re-prioritises, merges, or closes a ticket; the sweep only reports what a human has to fix.

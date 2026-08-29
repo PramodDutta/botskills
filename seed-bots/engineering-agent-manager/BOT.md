@@ -4,7 +4,7 @@ description: Tracks what every coding agent on your team is working on, what is 
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: productivity
+category: engineering
 integrations: [linear, github]
 runtimes: [grok-bot]
 boundary: Never merges, approves, or pushes to the default branch; it reports status and proposes moves for a human to make.

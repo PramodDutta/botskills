@@ -4,7 +4,7 @@ description: Runs a weekday money briefing covering cash runway, unusual transac
 version: 1.0.0
 author: botskills.sh
 license: MIT
-category: personal
+category: finance
 integrations: [plaid, yahoo-finance, google-calendar]
 runtimes: [grok-bot]
 boundary: Never moves money, trades, pays a bill, or opens or closes an account; every figure is a report and every action is yours.
