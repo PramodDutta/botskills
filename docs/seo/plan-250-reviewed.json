@@ -430,7 +430,7 @@
    "distinct_from": "",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-for-gtm-teams",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
   },
   {
    "slug": "icp-roster-reverified-weekly",
@@ -454,9 +454,7 @@
    "status": "planned",
    "why_new": "Catalog bot live-discovery-slide: live-discovery-slide",
    "distinct_from": "",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-vs-grok-build",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "price-a-listing-from-photos-not-titles",
@@ -516,9 +514,7 @@
    "status": "planned",
    "why_new": "Catalog bot support-resolution-agent: support-resolution-agent",
    "distinct_from": "",
-   "risk": "same-subject-as-live",
-   "live_twin": "what-is-a-grok-bot",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "bot-versioning-and-rollback",
@@ -578,9 +574,7 @@
    "status": "planned",
    "why_new": "decision",
    "distinct_from": "",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-vs-grok-build",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "single-agent-vs-multi-agent",
@@ -640,9 +634,7 @@
    "status": "planned",
    "why_new": "migration",
    "distinct_from": "",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-vs-make",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "move-an-n8n-workflow-to-a-bot",
@@ -654,9 +646,7 @@
    "status": "planned",
    "why_new": "migration",
    "distinct_from": "",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-vs-n8n",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "move-an-iphone-shortcut-to-a-bot",
@@ -706,7 +696,7 @@
    "distinct_from": "watch-listings-without-bidding",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-amazon-cart",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
   },
   {
    "slug": "flight-check-in-reminder-never-books",
@@ -912,7 +902,7 @@
    "distinct_from": "grok-bot-crm-hygiene",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-marketing-os",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
   },
   {
    "slug": "ad-creative-drafts-never-go-live",
@@ -984,9 +974,7 @@
    "status": "planned",
    "why_new": "salesforce-report-builder. Distinct from crm-hygiene (patch list) and for-revops.",
    "distinct_from": "grok-bot-crm-hygiene,grok-bot-for-revops",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-salesforce",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "deal-desk-autopilot-never-discounts",
@@ -1022,7 +1010,9 @@
    "status": "planned",
    "why_new": "prospect-meeting-booker. Distinct from calendar-manager (internal holds) and meeting-prep.",
    "distinct_from": "grok-bot-calendar-manager,grok-bot-to-meeting-prep",
-   "risk": "clear"
+   "risk": "same-subject-as-live",
+   "live_twin": "bot-that-never-sends",
+   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
   },
   {
    "slug": "prospecting-sheet-from-public-pages",
@@ -1046,7 +1036,9 @@
    "status": "planned",
    "why_new": "outbound-in-your-voice. Distinct from grok-bot-sales-outbound (first-touch research).",
    "distinct_from": "grok-bot-sales-outbound",
-   "risk": "clear"
+   "risk": "same-subject-as-live",
+   "live_twin": "bot-that-never-sends",
+   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
   },
   {
    "slug": "call-follow-up-drafter-human-sends",
@@ -1096,7 +1088,7 @@
    "distinct_from": "grok-bot-to-meeting-prep",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-to-meeting-prep",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
   },
   {
    "slug": "deck-updater-never-presents",
@@ -1120,7 +1112,9 @@
    "status": "planned",
    "why_new": "deck-localizer. Distinct from deck-updater.",
    "distinct_from": "deck-updater-never-presents",
-   "risk": "clear"
+   "risk": "same-subject-as-live",
+   "live_twin": "bot-that-never-sends",
+   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
   },
   {
    "slug": "brand-deck-keeper-never-edits-figma-live",
@@ -1132,9 +1126,7 @@
    "status": "planned",
    "why_new": "brand-deck-keeper. Distinct from grok-bot-for-designers-figma-motion and bots-and-figma (held).",
    "distinct_from": "grok-bot-for-designers-figma-motion",
-   "risk": "same-subject-as-live",
-   "live_twin": "bots-and-figma",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "org-chart-keeper-never-writes-hris",
@@ -1376,7 +1368,7 @@
    "distinct_from": "grok-bot-to-pr-review,grok-bot-vs-cursor-background-agent",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-to-pr-review",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
   },
   {
    "slug": "codebase-hardening-audit-never-patches-prod",
@@ -1436,9 +1428,7 @@
    "status": "planned",
    "why_new": "persistent-bot-memory. Distinct from not-a-sandbox and one-computer-many-screens.",
    "distinct_from": "grok-bot-not-a-sandbox,grok-bot-one-computer-many-screens",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-memory",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "firstmate-router-never-does-the-job",
@@ -1450,9 +1440,7 @@
    "status": "planned",
    "why_new": "firstmate-router. Distinct from route-work-through-one-bot (chief-of-staff-router).",
    "distinct_from": "route-work-through-one-bot",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-firstmate",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "fleet-chief-of-staff-still-one-computer",
@@ -1488,9 +1476,7 @@
    "status": "planned",
    "why_new": "agent-inbox. Distinct from to-inbox-triage and how-to-connect-gmail.",
    "distinct_from": "grok-bot-to-inbox-triage,how-to-connect-gmail-to-grok-bot",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-gmail",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "bot-advisor-never-creates-the-bot",
@@ -1634,9 +1620,7 @@
    "status": "planned",
    "why_new": "Distinct from telegram-fleet-door (catalog). Hedge Telegram bots API.",
    "distinct_from": "telegram-fleet-door-never-runs-commands",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-telegram-bridge",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "bots-and-calendly",
@@ -1852,9 +1836,7 @@
    "status": "planned",
    "why_new": "Distinct from bots-and-jira-service-management (live ITSM) and to-bug-triage.",
    "distinct_from": "bots-and-jira-service-management,grok-bot-to-bug-triage",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-jira",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "bots-and-confluence",
@@ -1902,9 +1884,7 @@
    "status": "planned",
    "why_new": "bots-and-mixpanel is held as a clone. This page is export-vs-console only.",
    "distinct_from": "grok-bot-product-investigation",
-   "risk": "same-subject-as-live",
-   "live_twin": "bots-and-mixpanel",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "bots-and-segment",
@@ -1976,9 +1956,7 @@
    "status": "planned",
    "why_new": "Hedge Salesforce. Distinct from bots-and-salesforce.",
    "distinct_from": "bots-and-salesforce,grok-bot-for-revops",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-salesforce",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-vs-hubspot-breeze",
@@ -1990,9 +1968,7 @@
    "status": "planned",
    "why_new": "Hedge HubSpot. Distinct from bots-and-hubspot.",
    "distinct_from": "bots-and-hubspot",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-hubspot",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-vs-intercom-fin",
@@ -2004,9 +1980,7 @@
    "status": "planned",
    "why_new": "Hedge Intercom Fin. Distinct from bots-and-intercom and to-support-triage.",
    "distinct_from": "bots-and-intercom,grok-bot-to-support-triage",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-intercom",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-vs-sierra",
@@ -2140,7 +2114,7 @@
    "distinct_from": "grok-bot-vs-grok-build",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-claude-code-skills-compatibility",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
   },
   {
    "slug": "grok-bot-vs-cursor-bugbot",
@@ -2164,9 +2138,7 @@
    "status": "planned",
    "why_new": "Hedge GitHub. Distinct from vs-copilot and vs-copilot-studio.",
    "distinct_from": "grok-bot-vs-microsoft-copilot,grok-bot-vs-copilot-studio",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-github",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-vs-amazon-q",
@@ -2310,9 +2282,7 @@
    "status": "planned",
    "why_new": "Distinct from bots-for-founders (catalog roster) and week-one-mistakes and pick-the-first.",
    "distinct_from": "bots-for-founders,grok-bot-week-one-mistakes,pick-the-first-grok-bot-job",
-   "risk": "same-subject-as-live",
-   "live_twin": "bots-for-founders",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-for-solopreneurs",
@@ -2348,9 +2318,7 @@
    "status": "planned",
    "why_new": "Distinct from bots-for-ecommerce and bots-and-shopify.",
    "distinct_from": "bots-for-ecommerce,bots-and-shopify",
-   "risk": "same-subject-as-live",
-   "live_twin": "bots-for-ecommerce",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-for-engineers-ops-not-merge",
@@ -2362,9 +2330,7 @@
    "status": "planned",
    "why_new": "Distinct from bots-for-engineers, vs-devin, vs-grok-build.",
    "distinct_from": "bots-for-engineers,grok-bot-vs-devin,grok-bot-vs-grok-build",
-   "risk": "same-subject-as-live",
-   "live_twin": "bots-for-engineers",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-for-marketers-never-publish",
@@ -2376,9 +2342,7 @@
    "status": "planned",
    "why_new": "Distinct from bots-for-marketers, paid-media, youtube-creators.",
    "distinct_from": "bots-for-marketers,grok-bot-paid-media",
-   "risk": "same-subject-as-live",
-   "live_twin": "bots-for-marketers",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-for-sales-managers",
@@ -2414,9 +2378,7 @@
    "status": "planned",
    "why_new": "From plan-100-v2. Distinct from help-center-updater and to-doc-cleanup.",
    "distinct_from": "help-center-updater-never-publishes-the-article,grok-bot-to-doc-cleanup",
-   "risk": "same-subject-as-live",
-   "live_twin": "bots-for-writers",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-for-teachers-never-grades-live",
@@ -2428,9 +2390,7 @@
    "status": "planned",
    "why_new": "Distinct from bots-for-teachers and for-students. Academic integrity.",
    "distinct_from": "bots-for-teachers,grok-bot-for-students",
-   "risk": "same-subject-as-live",
-   "live_twin": "bots-for-teachers",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-for-writers-never-posts",
@@ -2442,9 +2402,7 @@
    "status": "planned",
    "why_new": "Distinct from bots-for-writers and youtube-creators.",
    "distinct_from": "bots-for-writers",
-   "risk": "same-subject-as-live",
-   "live_twin": "bots-for-writers",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-for-consultants-client-isolation",
@@ -2456,9 +2414,7 @@
    "status": "planned",
    "why_new": "Distinct from bots-for-consultants and agencies-isolation.",
    "distinct_from": "bots-for-consultants,grok-bot-for-agencies-isolation",
-   "risk": "same-subject-as-live",
-   "live_twin": "bots-for-consultants",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-for-finance-teams-never-pay",
@@ -2470,9 +2426,7 @@
    "status": "planned",
    "why_new": "Distinct from bots-for-finance, for-accountants, personal-cfo.",
    "distinct_from": "bots-for-finance,grok-bot-for-accountants,personal-cfo-brief-never-moves-money",
-   "risk": "same-subject-as-live",
-   "live_twin": "bots-for-finance",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-for-recruiters-never-inmail",
@@ -2484,9 +2438,7 @@
    "status": "planned",
    "why_new": "Distinct from bots-for-recruiters, for-hr, talent-scout.",
    "distinct_from": "bots-for-recruiters,grok-bot-for-hr,grok-bot-talent-scout",
-   "risk": "same-subject-as-live",
-   "live_twin": "bots-for-recruiters",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "grok-bot-for-customer-success-teams-roster",
@@ -2500,7 +2452,7 @@
    "distinct_from": "grok-bot-for-customer-success,grok-bot-teams-standard",
    "risk": "same-subject-as-live",
    "live_twin": "grok-bot-for-customer-success",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "write_rule": "A live article covers this subject. Lead with the boundary case in the title, use a different structure from the twin, cite a different part of VERIFIED-FACTS, and clear dupecheck at 20% before registering."
   },
   {
    "slug": "grok-bot-revops-across-seats",
@@ -2512,9 +2464,7 @@
    "status": "planned",
    "why_new": "From plan-100-v2. Distinct from grok-bot-for-revops (already live). This is multi-seat ops, not the role page.",
    "distinct_from": "grok-bot-for-revops,grok-bot-teams-standard",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-for-revops",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "bot-charter-anti-patterns",
@@ -3018,9 +2968,7 @@
    "status": "planned",
    "why_new": "Hedge Lindy. Distinct from vs-lindy and move-a-zap.",
    "distinct_from": "grok-bot-vs-lindy,move-a-zap-to-a-bot",
-   "risk": "same-subject-as-live",
-   "live_twin": "grok-bot-vs-lindy",
-   "write_rule": "A live article already covers this subject. Do not restate it. Lead with the boundary case named in the title, use a different structure from the twin, and cite a different part of VERIFIED-FACTS. Must clear dupecheck at the 20% threshold before registering."
+   "risk": "clear"
   },
   {
    "slug": "copy-a-botskills-listing-onto-a-second-seat",
@@ -3129,15 +3077,210 @@
    "why_new": "Distinct from iphone-app and teams-standard. Eligibility is Cursor or xAI, not Family Sharing.",
    "distinct_from": "grok-bot-iphone-app,grok-bot-teams-standard",
    "risk": "clear"
+  },
+  {
+   "slug": "what-a-pasted-prompt-inherits",
+   "title": "What a Pasted Prompt Inherits the Moment It Runs",
+   "category": "Guide",
+   "facts_section": "Isolation",
+   "keyword": "what a pasted prompt inherits",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "screens-are-not-boundaries",
+   "title": "Screens Are Work Surfaces, Not Security Boundaries",
+   "category": "Safety",
+   "facts_section": "Isolation",
+   "keyword": "screens are not boundaries",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "where-a-bot-cookie-actually-lives",
+   "title": "Where a Bot Cookie Actually Lives and How Long It Stays",
+   "category": "Reference",
+   "facts_section": "Isolation",
+   "keyword": "where a bot cookie actually lives",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "why-deleting-a-bot-leaves-the-files",
+   "title": "Why Deleting a Bot Leaves the Files and the Sessions",
+   "category": "Safety",
+   "facts_section": "Isolation",
+   "keyword": "why deleting a bot leaves the files",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "what-an-approval-actually-governs",
+   "title": "What an Approval Actually Governs, and What It Cannot Undo",
+   "category": "Safety",
+   "facts_section": "Approvals",
+   "keyword": "what an approval actually governs",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "approval-fatigue-and-the-blanket-yes",
+   "title": "Approval Fatigue and the Blanket Yes That Undoes Your Boundary",
+   "category": "Safety",
+   "facts_section": "Approvals",
+   "keyword": "approval fatigue and the blanket yes",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "how-to-write-a-boundary-line",
+   "title": "How to Write a Boundary Line a Bot Cannot Argue With",
+   "category": "Guide",
+   "facts_section": "Boundaries",
+   "keyword": "how to write a boundary line",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "a-boundary-is-not-a-permission",
+   "title": "A Boundary Is Not a Permission, and the Difference Bites",
+   "category": "Reference",
+   "facts_section": "Boundaries",
+   "keyword": "a boundary is not a permission",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "what-makes-a-weak-boundary",
+   "title": "What Makes a Weak Boundary, With Six Real Examples",
+   "category": "Reference",
+   "facts_section": "Boundaries",
+   "keyword": "what makes a weak boundary",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "who-can-actually-run-grok-bot",
+   "title": "Who Can Actually Run Grok Bot, a Decision Tree",
+   "category": "Reference",
+   "facts_section": "Access",
+   "keyword": "who can actually run grok bot",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "why-the-model-behind-grok-bot-is-unpublished",
+   "title": "Why the Model Behind Grok Bot Is Not Published",
+   "category": "Reference",
+   "facts_section": "Models",
+   "keyword": "why the model behind grok bot is unpublished",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "what-you-cannot-cap",
+   "title": "What You Cannot Cap, and How to Budget Anyway",
+   "category": "Guide",
+   "facts_section": "Spend",
+   "keyword": "what you cannot cap",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "which-surface-reads-skill-md",
+   "title": "Which Surface Reads SKILL.md, and Why It Is Not This One",
+   "category": "Comparison",
+   "facts_section": "Grok Build",
+   "keyword": "which surface reads skill md",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "what-a-routine-is-and-where-it-dies",
+   "title": "What a Routine Is, and Where It Dies With the Bot",
+   "category": "Reference",
+   "facts_section": "Routines",
+   "keyword": "what a routine is and where it dies",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
+  },
+  {
+   "slug": "the-five-questions-before-your-first-bot",
+   "title": "The Five Questions to Answer Before Your First Bot",
+   "category": "Guide",
+   "facts_section": "Curriculum",
+   "keyword": "the five questions before your first bot",
+   "cluster": "teaching",
+   "priority": 1,
+   "status": "planned",
+   "risk": "clear",
+   "why_new": "Teaching track. The plan was 25 percent explainer intent and getting-started held only 7 entries, so the curriculum that turns a first-time reader into someone who can write a boundary was missing. Every claim sources to the named VERIFIED-FACTS section.",
+   "distinct_from": ""
   }
  ],
  "reviewed": "2026-08-29",
- "review_note": "Reviewed against a live corpus of 306 (plan was built at 279). Slug-token Jaccard over-flags the \"vs\" and \"for\" frames, so subject-token overlap was used instead: 36 entries are subject-identical to a live article and carry risk=same-subject-as-live plus a write_rule. They are kept because each names its twin and a distinct angle, but they are the group that produced 92-94% prose duplication in the codex batch, so dupecheck gates them. 2 inherited entries had corrupted slugs and slug-echo keywords with no search intent; both repaired.",
+ "review_note": "Reviewed against a live corpus of 306 (plan built at 279). Two detector bugs were found and fixed: slug-token Jaccard over-flags the \"vs\" and \"for\" frames, and subject-overlap with a min() denominator let a one-token slug such as what-is-a-grok-bot swallow every slug beginning with \"what\". Corrected, the genuine same-subject overlap is 10, not the 36 first reported. Those keep a write_rule and a dupecheck gate. 2 inherited entries had corrupted slugs with no search intent and were repaired. A 15-article teaching track was added because the plan was only 25 percent explainer intent.",
  "counts": {
-  "total": 250,
+  "total": 265,
   "written": 22,
-  "clear": 192,
-  "same_subject_risk": 36,
-  "repaired": 2
+  "clear": 233,
+  "same_subject_risk": 10,
+  "teaching_track": 15
  }
 }
