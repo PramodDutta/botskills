@@ -14,6 +14,7 @@ export const CATEGORIES = [
   { id: 'support', name: 'Support' },
   { id: 'research', name: 'Research' },
   { id: 'writing', name: 'Writing' },
+  { id: 'fun', name: 'Fun' },
 ] as const;
 export type CategoryId = (typeof CATEGORIES)[number]['id'];
 export const CATEGORY_IDS = CATEGORIES.map((c) => c.id);
