@@ -29,10 +29,17 @@ if os.path.exists(LEDGER):
         open(LEDGER, 'w').write('\n'.join(sorted(sent)) + '\n')
         print(f'ledger reconciled: released {len(set(prev)) - len(sent)} unwritten slug(s)')
 A = json.load(open(os.path.join(ROOT, 'docs/seo/plan-250-reviewed.json'), encoding='utf-8'))['articles']
-avail = [a for a in A if a.get('status') == 'planned' and a.get('risk') == 'clear'
+# Clear topics first. Only when they run out do the gated ones go out, and then
+# ONE per batch: they are subject-twins of live articles, so batching several
+# together would have them duplicate each other as well as their twins.
+clear = [a for a in A if a.get('status') == 'planned' and a.get('risk') == 'clear'
          and a['slug'] not in have and a['slug'] not in sent]
-avail.sort(key=lambda a: (a['priority'], a['slug']))
-batch = avail[:n]
+gated = [a for a in A if a.get('status') == 'planned' and a.get('risk') == 'same-subject-as-live'
+         and a['slug'] not in have and a['slug'] not in sent]
+clear.sort(key=lambda a: (a['priority'], a['slug']))
+gated.sort(key=lambda a: a['slug'])
+avail = clear + gated
+batch = clear[:n] if clear else gated[:1]
 if not batch:
     print('NOTHING AVAILABLE'); raise SystemExit(1)
 
@@ -77,6 +84,9 @@ Write these exactly, using the given slug, title, keyword and category:
 """
 for i, a in enumerate(batch, 1):
     brief += f'{i}. {a["slug"]} | "{a["title"]}" | {a["category"]} | kw: {a["keyword"]}\n'
+    if a.get('write_rule'):
+        brief += (f'   TWIN WARNING: /blog/{a.get("live_twin","")} already covers this subject.\n'
+                  f'   {a["write_rule"]}\n')
 brief += ('\nWhen done run: python3 scripts/gate.py ' + ' '.join(a['slug'] for a in batch)
           + '\nand fix anything it reports until it prints FAILURES: 0.\n')
 

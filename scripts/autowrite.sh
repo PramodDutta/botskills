@@ -15,7 +15,7 @@ for i in $(seq 1 30); do
 done
 probe || { echo "codex never came back, giving up"; exit 1; }
 
-for round in 1 2 3 4 5 6; do
+for round in $(seq 1 20); do
   python3 scripts/mkbrief.py 8 /tmp/auto.md || { echo "plan empty"; break; }
   echo "[$(date +%H:%M)] round $round dispatching"
   timeout 3300 codex exec -s workspace-write "$(cat /tmp/auto.md)" < /dev/null 2>&1 | tail -5
