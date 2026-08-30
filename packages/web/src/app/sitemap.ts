@@ -25,6 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/grok-bot`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
     { url: `${base}/rakazo`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/agents`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/grok-bot-facts`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/sponsor`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     ...getAllBots().map((b) => ({ url: `${base}/bots/${b.slug}`, lastModified: botMtime(b.slug) })),
     ...postList.map((p) => ({ url: `${base}/blog/${p.slug}`, lastModified: new Date(p.date) })),
   ];

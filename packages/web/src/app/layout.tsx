@@ -99,11 +99,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/">Leaderboard</Link>
                 <Link href="/bots">All bots</Link>
                 <Link href="/blog">Blog</Link>
+                <Link href="/grok-bot-facts">Fact check</Link>
               </div>
               <div className="col">
                 <b>Build</b>
                 <Link href="/agents">Add a bot</Link>
                 <Link href="/agents">API docs</Link>
+                <Link href="/sponsor">Sponsor</Link>
                 <a href="https://github.com/PramodDutta/botskills">GitHub</a>
               </div>
               <div className="col">

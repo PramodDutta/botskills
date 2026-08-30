@@ -594,3 +594,15 @@ td.ints { white-space: nowrap; }
   margin: 0.4rem 0 1rem; box-shadow: var(--shadow); }
 .add-btn:hover { border-color: var(--accent); color: var(--accent);
   box-shadow: var(--shadow-lift); }
+
+/* Lead magnet: the fact check, revealed after an email is left. */
+.facts-pack { margin-top: 2rem; }
+.facts-list { padding-left: 1.2rem; }
+.facts-list li { margin-bottom: 1.4rem; }
+.facts-list li b { display: block; color: var(--neg); font-size: 0.94rem; }
+.facts-list li p { margin: 0.35rem 0 0; }
+.signup-form { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;
+  margin: 1rem 0 0; }
+.signup-form input[type='email'] { flex: 1 1 16rem; padding: 0.6rem 0.9rem;
+  border: 1px solid var(--line2); border-radius: 999px; background: var(--surface);
+  color: var(--ink); font-family: var(--sans); font-size: 0.9rem; }

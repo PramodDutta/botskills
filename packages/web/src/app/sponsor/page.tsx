@@ -9,9 +9,10 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://botskills.sh/sponsor' },
 };
 
-// P1 wires live slot counts from the sponsors table and a Polar checkout per
-// tier (docs/SYSTEMS.md section 2). Until then: no scarcity claims, no invented
-// counters, and no traffic figure we cannot evidence.
+// Booking is by email on purpose. At four founding slots a checkout flow costs
+// more to build and maintain than it saves, and a reply lets us edit copy to the
+// site voice before anything renders. No scarcity claims, no invented counters,
+// and no traffic figure we cannot evidence.
 export default function SponsorPage() {
   return (
     <main className="wrap detail">
@@ -167,6 +168,32 @@ share is 100 percent, not a fraction split with the other sponsors.`}</pre>
           anything goes live.
         </li>
       </ul>
+
+      <h2>How booking works</h2>
+      <p>
+        By email, deliberately. There is no checkout to click and no card form on this
+        site. At four founding slots, a payment flow costs more to build and maintain
+        than it saves, and a reply lets us edit your copy to the site voice before
+        anything renders.
+      </p>
+      <ol>
+        <li>
+          Email <a href="mailto:contact@thetestingacademy.com">contact@thetestingacademy.com</a>{' '}
+          with the placement you want, your link, and one line of copy.
+        </li>
+        <li>
+          We reply with the edited copy for your approval, and an invoice. Nothing goes
+          live before you approve the wording.
+        </li>
+        <li>
+          Slot renders within a day of payment clearing. The rate is locked for twelve
+          months from that day.
+        </li>
+      </ol>
+      <p className="ds">
+        We never ask for card details over email, and we never ask for them on this site.
+        An invoice arrives from a payment provider you can verify before you pay it.
+      </p>
 
       <h2>House rules</h2>
       <p className="sub">
