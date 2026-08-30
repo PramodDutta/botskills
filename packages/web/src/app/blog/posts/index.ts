@@ -48,6 +48,8 @@
 
 
 
+
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -436,6 +438,7 @@ import { post as shouldOverflowPushYouToAHigherPlan } from './should-overflow-pu
 import { post as sixBotsToAChannel } from './six-bots-to-a-channel';
 import { post as teachGrokBotByDemonstration } from './teach-grok-bot-by-demonstration';
 import { post as testingYourBot } from './testing-your-bot';
+import { post as theCriticBot } from './the-critic-bot';
 import { post as theFiveQuestionsBeforeYourFirstBot } from './the-five-questions-before-your-first-bot';
 import { post as thePmAttentionList } from './the-pm-attention-list';
 import { post as whatAPastedPromptInherits } from './what-a-pasted-prompt-inherits';
@@ -854,6 +857,7 @@ export const posts: Record<string, BlogPost> = {
   'six-bots-to-a-channel': sixBotsToAChannel,
   'teach-grok-bot-by-demonstration': teachGrokBotByDemonstration,
   'testing-your-bot': testingYourBot,
+  'the-critic-bot': theCriticBot,
   'the-five-questions-before-your-first-bot': theFiveQuestionsBeforeYourFirstBot,
   'the-pm-attention-list': thePmAttentionList,
   'what-a-pasted-prompt-inherits': whatAPastedPromptInherits,
@@ -1265,6 +1269,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'six-bots-to-a-channel', ...sixBotsToAChannel },
   { slug: 'teach-grok-bot-by-demonstration', ...teachGrokBotByDemonstration },
   { slug: 'testing-your-bot', ...testingYourBot },
+  { slug: 'the-critic-bot', ...theCriticBot },
   { slug: 'the-five-questions-before-your-first-bot', ...theFiveQuestionsBeforeYourFirstBot },
   { slug: 'the-pm-attention-list', ...thePmAttentionList },
   { slug: 'what-a-pasted-prompt-inherits', ...whatAPastedPromptInherits },
