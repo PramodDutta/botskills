@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { FOUNDING_SLOTS } from '@/lib/sponsors';
+import { ContactForm } from '@/components/contact-form';
 
 export const metadata: Metadata = {
   title: 'Sponsor',
@@ -190,10 +191,13 @@ share is 100 percent, not a fraction split with the other sponsors.`}</pre>
           months from that day.
         </li>
       </ol>
-      <p className="ds">
-        We never ask for card details over email, and we never ask for them on this site.
-        An invoice arrives from a payment provider you can verify before you pay it.
+      <h3>Send the message here</h3>
+      <p>
+        This reaches the same mailbox as emailing us, and saves you writing the subject
+        line. If you would rather use your own client, that works too:{' '}
+        <a href="mailto:contact@thetestingacademy.com">contact@thetestingacademy.com</a>.
       </p>
+      <ContactForm />
 
       <h2>House rules</h2>
       <p className="sub">

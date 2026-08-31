@@ -106,6 +106,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/agents">Add a bot</Link>
                 <Link href="/agents">API docs</Link>
                 <Link href="/sponsor">Sponsor</Link>
+                <Link href="/contact">Contact</Link>
                 <a href="https://github.com/PramodDutta/botskills">GitHub</a>
               </div>
               <div className="col">
@@ -113,6 +114,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/api/bots">/api/bots</Link>
                 <Link href="/llms.txt">llms.txt</Link>
                 <Link href="/sponsor">Sponsor</Link>
+                <Link href="/contact">Contact</Link>
               </div>
             </div>
           </div>

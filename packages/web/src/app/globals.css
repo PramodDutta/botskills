@@ -609,3 +609,16 @@ td.ints { white-space: nowrap; }
 .signup-form input[type='email'] { flex: 1 1 16rem; padding: 0.6rem 0.9rem;
   border: 1px solid var(--line2); border-radius: 999px; background: var(--surface);
   color: var(--ink); font-family: var(--sans); font-size: 0.9rem; }
+
+/* Sponsor contact form. */
+.contact-form { display: flex; flex-direction: column; gap: 0.9rem; margin: 1.2rem 0 0;
+  max-width: 34rem; }
+.contact-form label { display: flex; flex-direction: column; gap: 0.3rem; }
+.contact-form label span { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
+.contact-form input[type='text'], .contact-form input[type='email'],
+.contact-form select, .contact-form textarea {
+  padding: 0.6rem 0.8rem; border: 1px solid var(--line2); border-radius: 10px;
+  background: var(--surface); color: var(--ink); font-family: var(--sans);
+  font-size: 0.9rem; width: 100%; }
+.contact-form textarea { resize: vertical; min-height: 6rem; }
+.contact-form .copy-btn { align-self: flex-start; }
