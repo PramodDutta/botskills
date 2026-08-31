@@ -46,12 +46,64 @@ test.describe('contact form', () => {
     // message. A false 'Got it' is the worst outcome this form can produce.
     // Scoped to the form: Next renders its own role=alert route announcer.
     const alert = page.locator('form.contact-form p[role="alert"]');
-    const confirmed = await page.getByText(/Got it/i).count();
+    const settled = page
+      .getByText(/Got it/i)
+      .or(page.getByText(/Saved\./))
+      .or(alert);
+    // Wait for the request to resolve before counting, otherwise this races the
+    // fetch and reads zero of everything.
+    await expect(settled.first()).toBeVisible({ timeout: 15_000 });
+    const confirmed = await page.getByText(/Got it|Saved\./).count();
     const failed = await alert.count();
     expect(confirmed + failed).toBeGreaterThan(0);
     if (confirmed === 0) {
       await expect(alert).toContainText(/contact@thetestingacademy\.com/);
     }
+  });
+
+  test('when the server cannot mail it, the sender is handed a prefilled mailto', async ({ page }) => {
+    // Simulate the production shape before a mail key exists: stored, not emailed.
+    await page.route('**/api/contact', (route) =>
+      route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ ok: true, stored: true, emailed: false }),
+      }),
+    );
+    await page.goto('/contact');
+    const form = page.locator('form.contact-form');
+    await form.locator('input[type="text"]:not([name="website"])').fill('Dana Okafor');
+    await form.locator('input[type="email"]').fill('dana@example.com');
+    await form.locator('select').selectOption('edge');
+    await form.locator('textarea').fill('We would like the edge card. Link goes to example.com.');
+    await page.getByRole('button', { name: /send message/i }).click();
+
+    const link = page.getByRole('link', { name: /open in my mail app/i });
+    await expect(link).toBeVisible({ timeout: 15_000 });
+    const href = await link.getAttribute('href');
+    expect(href).toContain('mailto:contact@thetestingacademy.com');
+    // The message must actually be in the body, not just the address.
+    expect(decodeURIComponent(href ?? '')).toContain('Dana Okafor');
+    expect(decodeURIComponent(href ?? '')).toContain('edge');
+    expect(decodeURIComponent(href ?? '')).toContain('Link goes to example.com');
+  });
+
+  test('when the server does mail it, no mailto handoff is shown', async ({ page }) => {
+    await page.route('**/api/contact', (route) =>
+      route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ ok: true, stored: true, emailed: true }),
+      }),
+    );
+    await page.goto('/contact');
+    const form = page.locator('form.contact-form');
+    await form.locator('input[type="text"]:not([name="website"])').fill('Dana Okafor');
+    await form.locator('input[type="email"]').fill('dana@example.com');
+    await form.locator('textarea').fill('A message long enough to pass validation here.');
+    await page.getByRole('button', { name: /send message/i }).click();
+    await expect(page.getByText(/Got it/i)).toBeVisible({ timeout: 15_000 });
+    await expect(page.getByRole('link', { name: /open in my mail app/i })).toHaveCount(0);
   });
 
   test('api rejects a message that is too short', async ({ request }) => {

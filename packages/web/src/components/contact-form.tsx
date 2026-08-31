@@ -16,6 +16,10 @@ export function ContactForm() {
   const [message, setMessage] = useState('');
   const [state, setState] = useState<'idle' | 'busy' | 'done' | 'error'>('idle');
   const [error, setError] = useState('');
+  // False when the server stored the message but could not mail it. The sender
+  // then gets a one click handoff to their own mail client, so the message
+  // still reaches the inbox rather than sitting in a table nobody watches.
+  const [serverEmailed, setServerEmailed] = useState(true);
   const honeypot = useRef<HTMLInputElement>(null);
 
   async function submit(e: React.FormEvent) {
@@ -35,6 +39,8 @@ export function ContactForm() {
         }),
       });
       if (res.ok) {
+        const body = (await res.json().catch(() => ({}))) as { emailed?: boolean };
+        setServerEmailed(body.emailed !== false);
         setState('done');
       } else {
         const body = (await res.json().catch(() => ({}))) as { error?: string };
@@ -48,10 +54,36 @@ export function ContactForm() {
   }
 
   if (state === 'done') {
+    if (serverEmailed) {
+      return (
+        <div className="callout" role="status">
+          <b>Got it.</b> We reply from contact@thetestingacademy.com, usually within a day.
+          Nothing goes live until you have approved the wording.
+        </div>
+      );
+    }
+    // Kept short on purpose: mail clients and browsers truncate long mailto
+    // bodies, and the full message is already stored server side either way.
+    const trimmed = message.length > 1200 ? `${message.slice(0, 1200)}...` : message;
+    const href =
+      `mailto:contact@thetestingacademy.com` +
+      `?subject=${encodeURIComponent(`botskills.sh enquiry (${placement}) from ${name}`)}` +
+      `&body=${encodeURIComponent(
+        [`Name: ${name}`, `Email: ${email}`, `Placement: ${placement}`, '', trimmed].join('\n'),
+      )}`;
     return (
       <div className="callout" role="status">
-        <b>Got it.</b> We reply from contact@thetestingacademy.com, usually within a day.
-        Nothing goes live until you have approved the wording.
+        <b>Saved.</b> One more tap and it reaches us straight away: this opens your mail
+        app with the whole message already written, addressed to us.
+        <p style={{ margin: '0.8rem 0 0' }}>
+          <a className="copy-btn" style={{ textDecoration: 'none' }} href={href}>
+            Open in my mail app
+          </a>
+        </p>
+        <p className="ds" style={{ marginTop: '0.6rem' }}>
+          Nothing is lost if you skip this. We read the saved messages either way, it is
+          just slower.
+        </p>
       </div>
     );
   }
