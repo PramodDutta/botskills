@@ -32,6 +32,15 @@ export default function SponsorPage() {
         and the slot goes live within a day.
       </div>
 
+      <h2>Send the message here</h2>
+      <p>
+        Tell us which placement and where it should link, and we reply from
+        contact@thetestingacademy.com, usually within a day. Everything below is the
+        detail: what each placement is, where it renders, and the impression maths so
+        you can price it yourself. You do not need to read it first.
+      </p>
+      <ContactForm />
+
       <h2>What you get, and where it renders</h2>
       <p>
         This matters more than the price, because the three placements behave differently
@@ -179,8 +188,9 @@ share is 100 percent, not a fraction split with the other sponsors.`}</pre>
       </p>
       <ol>
         <li>
-          Email <a href="mailto:contact@thetestingacademy.com">contact@thetestingacademy.com</a>{' '}
-          with the placement you want, your link, and one line of copy.
+          Send the form above, or email{' '}
+          <a href="mailto:contact@thetestingacademy.com">contact@thetestingacademy.com</a>{' '}
+          directly, with the placement you want, your link, and one line of copy.
         </li>
         <li>
           We reply with the edited copy for your approval, and an invoice. Nothing goes
@@ -191,13 +201,6 @@ share is 100 percent, not a fraction split with the other sponsors.`}</pre>
           months from that day.
         </li>
       </ol>
-      <h3>Send the message here</h3>
-      <p>
-        This reaches the same mailbox as emailing us, and saves you writing the subject
-        line. If you would rather use your own client, that works too:{' '}
-        <a href="mailto:contact@thetestingacademy.com">contact@thetestingacademy.com</a>.
-      </p>
-      <ContactForm />
 
       <h2>House rules</h2>
       <p className="sub">
