@@ -56,6 +56,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -467,6 +468,7 @@ import { post as shouldOverflowPushYouToAHigherPlan } from './should-overflow-pu
 import { post as singleAgentVsMultiAgent } from './single-agent-vs-multi-agent';
 import { post as sixBotsToAChannel } from './six-bots-to-a-channel';
 import { post as storyboardBeforeYouGenerate } from './storyboard-before-you-generate';
+import { post as takingOverSomeoneElsesBot } from './taking-over-someone-elses-bot';
 import { post as teachGrokBotByDemonstration } from './teach-grok-bot-by-demonstration';
 import { post as testingYourBot } from './testing-your-bot';
 import { post as theBotNobodyOwns } from './the-bot-nobody-owns';
@@ -921,6 +923,7 @@ export const posts: Record<string, BlogPost> = {
   'single-agent-vs-multi-agent': singleAgentVsMultiAgent,
   'six-bots-to-a-channel': sixBotsToAChannel,
   'storyboard-before-you-generate': storyboardBeforeYouGenerate,
+  'taking-over-someone-elses-bot': takingOverSomeoneElsesBot,
   'teach-grok-bot-by-demonstration': teachGrokBotByDemonstration,
   'testing-your-bot': testingYourBot,
   'the-bot-nobody-owns': theBotNobodyOwns,
@@ -1368,6 +1371,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'single-agent-vs-multi-agent', ...singleAgentVsMultiAgent },
   { slug: 'six-bots-to-a-channel', ...sixBotsToAChannel },
   { slug: 'storyboard-before-you-generate', ...storyboardBeforeYouGenerate },
+  { slug: 'taking-over-someone-elses-bot', ...takingOverSomeoneElsesBot },
   { slug: 'teach-grok-bot-by-demonstration', ...teachGrokBotByDemonstration },
   { slug: 'testing-your-bot', ...testingYourBot },
   { slug: 'the-bot-nobody-owns', ...theBotNobodyOwns },
