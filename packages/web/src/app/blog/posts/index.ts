@@ -55,6 +55,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -457,6 +458,7 @@ import { post as retireTheAutomationYouReplaced } from './retire-the-automation-
 import { post as rotateVendorAccessAfterABadGrokBotIncident } from './rotate-vendor-access-after-a-bad-grok-bot-incident';
 import { post as routeWorkThroughOneBot } from './route-work-through-one-bot';
 import { post as runOnePlayAcrossManyAccounts } from './run-one-play-across-many-accounts';
+import { post as runningBotsWhileYouAreAway } from './running-bots-while-you-are-away';
 import { post as scoreWhetherThisGrokBotPaidForItself } from './score-whether-this-grok-bot-paid-for-itself';
 import { post as screensAreNotBoundaries } from './screens-are-not-boundaries';
 import { post as selfHostingAiAgentsGuide } from './self-hosting-ai-agents-guide';
@@ -910,6 +912,7 @@ export const posts: Record<string, BlogPost> = {
   'rotate-vendor-access-after-a-bad-grok-bot-incident': rotateVendorAccessAfterABadGrokBotIncident,
   'route-work-through-one-bot': routeWorkThroughOneBot,
   'run-one-play-across-many-accounts': runOnePlayAcrossManyAccounts,
+  'running-bots-while-you-are-away': runningBotsWhileYouAreAway,
   'score-whether-this-grok-bot-paid-for-itself': scoreWhetherThisGrokBotPaidForItself,
   'screens-are-not-boundaries': screensAreNotBoundaries,
   'self-hosting-ai-agents-guide': selfHostingAiAgentsGuide,
@@ -1356,6 +1359,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'rotate-vendor-access-after-a-bad-grok-bot-incident', ...rotateVendorAccessAfterABadGrokBotIncident },
   { slug: 'route-work-through-one-bot', ...routeWorkThroughOneBot },
   { slug: 'run-one-play-across-many-accounts', ...runOnePlayAcrossManyAccounts },
+  { slug: 'running-bots-while-you-are-away', ...runningBotsWhileYouAreAway },
   { slug: 'score-whether-this-grok-bot-paid-for-itself', ...scoreWhetherThisGrokBotPaidForItself },
   { slug: 'screens-are-not-boundaries', ...screensAreNotBoundaries },
   { slug: 'self-hosting-ai-agents-guide', ...selfHostingAiAgentsGuide },
