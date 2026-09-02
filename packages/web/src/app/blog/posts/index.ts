@@ -51,6 +51,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -419,12 +420,17 @@ import { post as logPaperTradesWithAWrittenStop } from './log-paper-trades-with-
 import { post as mcpVsConnectors } from './mcp-vs-connectors';
 import { post as measuringBotRoi } from './measuring-bot-roi';
 import { post as migrateGrokBotToRakazo } from './migrate-grok-bot-to-rakazo';
+import { post as moveAGoogleAppsScriptToABot } from './move-a-google-apps-script-to-a-bot';
 import { post as moveAMakeScenarioToABot } from './move-a-make-scenario-to-a-bot';
 import { post as moveANightlyCsvPullOntoGrokBot } from './move-a-nightly-csv-pull-onto-grok-bot';
+import { post as moveAPowerAutomateFlowToABot } from './move-a-power-automate-flow-to-a-bot';
 import { post as moveAZapToABot } from './move-a-zap-to-a-bot';
+import { post as moveAnAirtableAutomationToABot } from './move-an-airtable-automation-to-a-bot';
+import { post as moveAnIftttAppletToABot } from './move-an-ifttt-applet-to-a-bot';
 import { post as moveAnIphoneShortcutToABot } from './move-an-iphone-shortcut-to-a-bot';
 import { post as moveAnN8nWorkflowToABot } from './move-an-n8n-workflow-to-a-bot';
 import { post as moveGrokBotWorkFromPersonalToWork } from './move-grok-bot-work-from-personal-to-work';
+import { post as moveOffAScheduledChatTask } from './move-off-a-scheduled-chat-task';
 import { post as multiBotTeams } from './multi-bot-teams';
 import { post as multiTenantBotRisk } from './multi-tenant-bot-risk';
 import { post as openSourceBotRuntimes } from './open-source-bot-runtimes';
@@ -463,6 +469,7 @@ import { post as theCriticBot } from './the-critic-bot';
 import { post as theFiveQuestionsBeforeYourFirstBot } from './the-five-questions-before-your-first-bot';
 import { post as thePmAttentionList } from './the-pm-attention-list';
 import { post as theSeamsBetweenGtmTeams } from './the-seams-between-gtm-teams';
+import { post as theWeeklyBotReview } from './the-weekly-bot-review';
 import { post as turnBookmarksIntoBotTriggers } from './turn-bookmarks-into-bot-triggers';
 import { post as voiceNoteToCrmFields } from './voice-note-to-crm-fields';
 import { post as watchListingsWithoutBidding } from './watch-listings-without-bidding';
@@ -863,12 +870,17 @@ export const posts: Record<string, BlogPost> = {
   'mcp-vs-connectors': mcpVsConnectors,
   'measuring-bot-roi': measuringBotRoi,
   'migrate-grok-bot-to-rakazo': migrateGrokBotToRakazo,
+  'move-a-google-apps-script-to-a-bot': moveAGoogleAppsScriptToABot,
   'move-a-make-scenario-to-a-bot': moveAMakeScenarioToABot,
   'move-a-nightly-csv-pull-onto-grok-bot': moveANightlyCsvPullOntoGrokBot,
+  'move-a-power-automate-flow-to-a-bot': moveAPowerAutomateFlowToABot,
   'move-a-zap-to-a-bot': moveAZapToABot,
+  'move-an-airtable-automation-to-a-bot': moveAnAirtableAutomationToABot,
+  'move-an-ifttt-applet-to-a-bot': moveAnIftttAppletToABot,
   'move-an-iphone-shortcut-to-a-bot': moveAnIphoneShortcutToABot,
   'move-an-n8n-workflow-to-a-bot': moveAnN8nWorkflowToABot,
   'move-grok-bot-work-from-personal-to-work': moveGrokBotWorkFromPersonalToWork,
+  'move-off-a-scheduled-chat-task': moveOffAScheduledChatTask,
   'multi-bot-teams': multiBotTeams,
   'multi-tenant-bot-risk': multiTenantBotRisk,
   'open-source-bot-runtimes': openSourceBotRuntimes,
@@ -907,6 +919,7 @@ export const posts: Record<string, BlogPost> = {
   'the-five-questions-before-your-first-bot': theFiveQuestionsBeforeYourFirstBot,
   'the-pm-attention-list': thePmAttentionList,
   'the-seams-between-gtm-teams': theSeamsBetweenGtmTeams,
+  'the-weekly-bot-review': theWeeklyBotReview,
   'turn-bookmarks-into-bot-triggers': turnBookmarksIntoBotTriggers,
   'voice-note-to-crm-fields': voiceNoteToCrmFields,
   'watch-listings-without-bidding': watchListingsWithoutBidding,
@@ -1300,12 +1313,17 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'mcp-vs-connectors', ...mcpVsConnectors },
   { slug: 'measuring-bot-roi', ...measuringBotRoi },
   { slug: 'migrate-grok-bot-to-rakazo', ...migrateGrokBotToRakazo },
+  { slug: 'move-a-google-apps-script-to-a-bot', ...moveAGoogleAppsScriptToABot },
   { slug: 'move-a-make-scenario-to-a-bot', ...moveAMakeScenarioToABot },
   { slug: 'move-a-nightly-csv-pull-onto-grok-bot', ...moveANightlyCsvPullOntoGrokBot },
+  { slug: 'move-a-power-automate-flow-to-a-bot', ...moveAPowerAutomateFlowToABot },
   { slug: 'move-a-zap-to-a-bot', ...moveAZapToABot },
+  { slug: 'move-an-airtable-automation-to-a-bot', ...moveAnAirtableAutomationToABot },
+  { slug: 'move-an-ifttt-applet-to-a-bot', ...moveAnIftttAppletToABot },
   { slug: 'move-an-iphone-shortcut-to-a-bot', ...moveAnIphoneShortcutToABot },
   { slug: 'move-an-n8n-workflow-to-a-bot', ...moveAnN8nWorkflowToABot },
   { slug: 'move-grok-bot-work-from-personal-to-work', ...moveGrokBotWorkFromPersonalToWork },
+  { slug: 'move-off-a-scheduled-chat-task', ...moveOffAScheduledChatTask },
   { slug: 'multi-bot-teams', ...multiBotTeams },
   { slug: 'multi-tenant-bot-risk', ...multiTenantBotRisk },
   { slug: 'open-source-bot-runtimes', ...openSourceBotRuntimes },
@@ -1344,6 +1362,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'the-five-questions-before-your-first-bot', ...theFiveQuestionsBeforeYourFirstBot },
   { slug: 'the-pm-attention-list', ...thePmAttentionList },
   { slug: 'the-seams-between-gtm-teams', ...theSeamsBetweenGtmTeams },
+  { slug: 'the-weekly-bot-review', ...theWeeklyBotReview },
   { slug: 'turn-bookmarks-into-bot-triggers', ...turnBookmarksIntoBotTriggers },
   { slug: 'voice-note-to-crm-fields', ...voiceNoteToCrmFields },
   { slug: 'watch-listings-without-bidding', ...watchListingsWithoutBidding },
