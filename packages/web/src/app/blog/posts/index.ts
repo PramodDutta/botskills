@@ -66,6 +66,11 @@
 
 
 
+
+
+
+
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBotThatTellsYouToStandUp } from './a-bot-that-tells-you-to-stand-up';
@@ -136,6 +141,7 @@ import { post as botsAndPagerduty } from './bots-and-pagerduty';
 import { post as botsAndPlaid } from './bots-and-plaid';
 import { post as botsAndPosthog } from './bots-and-posthog';
 import { post as botsAndReddit } from './bots-and-reddit';
+import { post as botsAndSalesNavigator } from './bots-and-sales-navigator';
 import { post as botsAndSentry } from './bots-and-sentry';
 import { post as botsAndSnowflake } from './bots-and-snowflake';
 import { post as botsAndSubstack } from './bots-and-substack';
@@ -596,6 +602,7 @@ export const posts: Record<string, BlogPost> = {
   'bots-and-plaid': botsAndPlaid,
   'bots-and-posthog': botsAndPosthog,
   'bots-and-reddit': botsAndReddit,
+  'bots-and-sales-navigator': botsAndSalesNavigator,
   'bots-and-sentry': botsAndSentry,
   'bots-and-snowflake': botsAndSnowflake,
   'bots-and-substack': botsAndSubstack,
@@ -1049,6 +1056,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'bots-and-plaid', ...botsAndPlaid },
   { slug: 'bots-and-posthog', ...botsAndPosthog },
   { slug: 'bots-and-reddit', ...botsAndReddit },
+  { slug: 'bots-and-sales-navigator', ...botsAndSalesNavigator },
   { slug: 'bots-and-sentry', ...botsAndSentry },
   { slug: 'bots-and-snowflake', ...botsAndSnowflake },
   { slug: 'bots-and-substack', ...botsAndSubstack },
