@@ -57,6 +57,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -438,6 +439,7 @@ import { post as moveGrokBotWorkFromPersonalToWork } from './move-grok-bot-work-
 import { post as moveOffAScheduledChatTask } from './move-off-a-scheduled-chat-task';
 import { post as multiBotTeams } from './multi-bot-teams';
 import { post as multiTenantBotRisk } from './multi-tenant-bot-risk';
+import { post as onboardANewHireOntoABotFleet } from './onboard-a-new-hire-onto-a-bot-fleet';
 import { post as openSourceBotRuntimes } from './open-source-bot-runtimes';
 import { post as persistentMemoryFileIsNotAVault } from './persistent-memory-file-is-not-a-vault';
 import { post as personalCfoBriefNeverMovesMoney } from './personal-cfo-brief-never-moves-money';
@@ -893,6 +895,7 @@ export const posts: Record<string, BlogPost> = {
   'move-off-a-scheduled-chat-task': moveOffAScheduledChatTask,
   'multi-bot-teams': multiBotTeams,
   'multi-tenant-bot-risk': multiTenantBotRisk,
+  'onboard-a-new-hire-onto-a-bot-fleet': onboardANewHireOntoABotFleet,
   'open-source-bot-runtimes': openSourceBotRuntimes,
   'persistent-memory-file-is-not-a-vault': persistentMemoryFileIsNotAVault,
   'personal-cfo-brief-never-moves-money': personalCfoBriefNeverMovesMoney,
@@ -1341,6 +1344,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'move-off-a-scheduled-chat-task', ...moveOffAScheduledChatTask },
   { slug: 'multi-bot-teams', ...multiBotTeams },
   { slug: 'multi-tenant-bot-risk', ...multiTenantBotRisk },
+  { slug: 'onboard-a-new-hire-onto-a-bot-fleet', ...onboardANewHireOntoABotFleet },
   { slug: 'open-source-bot-runtimes', ...openSourceBotRuntimes },
   { slug: 'persistent-memory-file-is-not-a-vault', ...persistentMemoryFileIsNotAVault },
   { slug: 'personal-cfo-brief-never-moves-money', ...personalCfoBriefNeverMovesMoney },
