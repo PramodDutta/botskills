@@ -52,6 +52,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -485,6 +486,7 @@ import { post as whatYouCannotCap } from './what-you-cannot-cap';
 import { post as whenBotsGoWrong } from './when-bots-go-wrong';
 import { post as whenNotToUseABot } from './when-not-to-use-a-bot';
 import { post as whereABotCookieActuallyLives } from './where-a-bot-cookie-actually-lives';
+import { post as whichBotSpentTheWeek } from './which-bot-spent-the-week';
 import { post as whichSurfaceReadsSkillMd } from './which-surface-reads-skill-md';
 import { post as whoCanActuallyRunGrokBot } from './who-can-actually-run-grok-bot';
 import { post as whyDeletingABotLeavesTheFiles } from './why-deleting-a-bot-leaves-the-files';
@@ -935,6 +937,7 @@ export const posts: Record<string, BlogPost> = {
   'when-bots-go-wrong': whenBotsGoWrong,
   'when-not-to-use-a-bot': whenNotToUseABot,
   'where-a-bot-cookie-actually-lives': whereABotCookieActuallyLives,
+  'which-bot-spent-the-week': whichBotSpentTheWeek,
   'which-surface-reads-skill-md': whichSurfaceReadsSkillMd,
   'who-can-actually-run-grok-bot': whoCanActuallyRunGrokBot,
   'why-deleting-a-bot-leaves-the-files': whyDeletingABotLeavesTheFiles,
@@ -1378,6 +1381,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'when-bots-go-wrong', ...whenBotsGoWrong },
   { slug: 'when-not-to-use-a-bot', ...whenNotToUseABot },
   { slug: 'where-a-bot-cookie-actually-lives', ...whereABotCookieActuallyLives },
+  { slug: 'which-bot-spent-the-week', ...whichBotSpentTheWeek },
   { slug: 'which-surface-reads-skill-md', ...whichSurfaceReadsSkillMd },
   { slug: 'who-can-actually-run-grok-bot', ...whoCanActuallyRunGrokBot },
   { slug: 'why-deleting-a-bot-leaves-the-files', ...whyDeletingABotLeavesTheFiles },
