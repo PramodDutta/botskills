@@ -32,6 +32,7 @@ export async function POST(request: Request) {
   }
 
   let stored = false;
+  let rowId: number | null = null;
   if (process.env.DATABASE_URL) {
     try {
       const { neon } = await import('@neondatabase/serverless');
@@ -44,13 +45,18 @@ export async function POST(request: Request) {
             email      text NOT NULL,
             placement  text NOT NULL DEFAULT 'other',
             message    text NOT NULL,
+            emailed    boolean NOT NULL DEFAULT false,
             created_at timestamptz NOT NULL DEFAULT now()
           )`;
+        // Older deployments created this table without the column.
+        await sql`ALTER TABLE contact_messages ADD COLUMN IF NOT EXISTS emailed boolean NOT NULL DEFAULT false`;
         tableReady = true;
       }
-      await sql`
+      const rows = await sql`
         INSERT INTO contact_messages (name, email, placement, message)
-        VALUES (${name}, ${email}, ${placement}, ${message})`;
+        VALUES (${name}, ${email}, ${placement}, ${message})
+        RETURNING id`;
+      rowId = (rows[0] as { id: number } | undefined)?.id ?? null;
       stored = true;
     } catch {
       stored = false;
@@ -62,10 +68,12 @@ export async function POST(request: Request) {
   if (process.env.RESEND_API_KEY) {
     try {
       const { Resend } = await import('resend');
-      const resend = new Resend(process.env.RESEND_API_KEY);
+      // Trimmed: a key pasted with a trailing newline reports as invalid,
+      // which looks identical to a wrong key and wastes an hour.
+      const resend = new Resend(process.env.RESEND_API_KEY.trim());
       // FROM must be on a domain verified in Resend. Until botskills.sh is
       // verified, onboarding@resend.dev is the address that works.
-      const from = process.env.CONTACT_FROM ?? 'botskills.sh <onboarding@resend.dev>';
+      const from = (process.env.CONTACT_FROM ?? 'botskills.sh <onboarding@resend.dev>').trim();
       const r = await resend.emails.send({
         from,
         to: [TO],
@@ -87,6 +95,16 @@ export async function POST(request: Request) {
     } catch (e) {
       emailed = false;
       mailError = e instanceof Error ? `threw: ${e.message}` : 'threw';
+    }
+  }
+
+  if (emailed && rowId !== null && process.env.DATABASE_URL) {
+    try {
+      const { neon } = await import('@neondatabase/serverless');
+      const sql = neon(process.env.DATABASE_URL);
+      await sql`UPDATE contact_messages SET emailed = true WHERE id = ${rowId}`;
+    } catch {
+      // The message is stored and sent; a stale flag is not worth failing over.
     }
   }
 
