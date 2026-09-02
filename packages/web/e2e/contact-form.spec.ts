@@ -138,3 +138,51 @@ test.describe('contact form', () => {
     expect([200, 503]).toContain(res.status());
   });
 });
+
+test.describe('mailto fallback when the relay refuses', () => {
+  test('offers a prefilled mailto addressed to the real inbox', async ({ page }) => {
+    // The one case that matters: stored, but the mail relay would not take it.
+    await page.route('**/api/contact', (route) =>
+      route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ ok: true, stored: true, emailed: false }),
+      }),
+    );
+    await page.goto('/contact');
+    const form = page.locator('form.contact-form');
+    await form.locator('input[type="text"]:not([name="website"])').fill('Fallback Proof');
+    await form.locator('input[type="email"]').fill('sender@example.com');
+    await form.locator('select').selectOption('edge');
+    await form.locator('textarea').fill('Proving the fallback hands over a usable draft.');
+    await page.getByRole('button', { name: /send message/i }).click();
+
+    const link = page.getByRole('link', { name: /mail app/i });
+    await expect(link).toBeVisible({ timeout: 15_000 });
+    const href = await link.getAttribute('href');
+    expect(href).toBeTruthy();
+    // It must reach the real inbox, and carry the message, or it is decoration.
+    expect(href).toContain('mailto:contact@thetestingacademy.com');
+    expect(decodeURIComponent(href!)).toContain('Fallback Proof');
+    expect(decodeURIComponent(href!)).toContain('Proving the fallback hands over a usable draft.');
+    expect(decodeURIComponent(href!)).toContain('edge');
+  });
+
+  test('shows the plain confirmation when the relay did accept it', async ({ page }) => {
+    await page.route('**/api/contact', (route) =>
+      route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ ok: true, stored: true, emailed: true }),
+      }),
+    );
+    await page.goto('/contact');
+    const form = page.locator('form.contact-form');
+    await form.locator('input[type="text"]:not([name="website"])').fill('Happy Path');
+    await form.locator('input[type="email"]').fill('sender@example.com');
+    await form.locator('textarea').fill('This one was accepted by the relay.');
+    await page.getByRole('button', { name: /send message/i }).click();
+    await expect(page.getByText(/Got it/i)).toBeVisible({ timeout: 15_000 });
+    await expect(page.getByRole('link', { name: /mail app/i })).toHaveCount(0);
+  });
+});
