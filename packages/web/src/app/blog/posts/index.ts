@@ -71,6 +71,10 @@
 
 
 
+
+
+
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBotThatTellsYouToStandUp } from './a-bot-that-tells-you-to-stand-up';
@@ -491,6 +495,7 @@ import { post as teachGrokBotByDemonstration } from './teach-grok-bot-by-demonst
 import { post as testingYourBot } from './testing-your-bot';
 import { post as theBotNobodyOwns } from './the-bot-nobody-owns';
 import { post as theBotThatArguesBack } from './the-bot-that-argues-back';
+import { post as theBotThatGotQuietlyWorse } from './the-bot-that-got-quietly-worse';
 import { post as theCriticBot } from './the-critic-bot';
 import { post as theDinnerDecisionBot } from './the-dinner-decision-bot';
 import { post as theFiveQuestionsBeforeYourFirstBot } from './the-five-questions-before-your-first-bot';
@@ -952,6 +957,7 @@ export const posts: Record<string, BlogPost> = {
   'testing-your-bot': testingYourBot,
   'the-bot-nobody-owns': theBotNobodyOwns,
   'the-bot-that-argues-back': theBotThatArguesBack,
+  'the-bot-that-got-quietly-worse': theBotThatGotQuietlyWorse,
   'the-critic-bot': theCriticBot,
   'the-dinner-decision-bot': theDinnerDecisionBot,
   'the-five-questions-before-your-first-bot': theFiveQuestionsBeforeYourFirstBot,
@@ -1406,6 +1412,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'testing-your-bot', ...testingYourBot },
   { slug: 'the-bot-nobody-owns', ...theBotNobodyOwns },
   { slug: 'the-bot-that-argues-back', ...theBotThatArguesBack },
+  { slug: 'the-bot-that-got-quietly-worse', ...theBotThatGotQuietlyWorse },
   { slug: 'the-critic-bot', ...theCriticBot },
   { slug: 'the-dinner-decision-bot', ...theDinnerDecisionBot },
   { slug: 'the-five-questions-before-your-first-bot', ...theFiveQuestionsBeforeYourFirstBot },
