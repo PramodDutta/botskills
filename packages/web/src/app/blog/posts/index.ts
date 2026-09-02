@@ -75,6 +75,9 @@
 
 
 
+
+
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBotThatTellsYouToStandUp } from './a-bot-that-tells-you-to-stand-up';
@@ -499,6 +502,7 @@ import { post as theBotThatGotQuietlyWorse } from './the-bot-that-got-quietly-wo
 import { post as theCriticBot } from './the-critic-bot';
 import { post as theDinnerDecisionBot } from './the-dinner-decision-bot';
 import { post as theFiveQuestionsBeforeYourFirstBot } from './the-five-questions-before-your-first-bot';
+import { post as theInternalToolTwoPeopleCanRun } from './the-internal-tool-two-people-can-run';
 import { post as theOneLineWorkJournal } from './the-one-line-work-journal';
 import { post as thePmAttentionList } from './the-pm-attention-list';
 import { post as theQuarterlyRosterCull } from './the-quarterly-roster-cull';
@@ -518,6 +522,7 @@ import { post as whatSurvivesIfYouDropGrokBot } from './what-survives-if-you-dro
 import { post as whatYouCannotCap } from './what-you-cannot-cap';
 import { post as whenBotsGoWrong } from './when-bots-go-wrong';
 import { post as whenNotToUseABot } from './when-not-to-use-a-bot';
+import { post as whenTheProductChangesUnderYou } from './when-the-product-changes-under-you';
 import { post as whereABotCookieActuallyLives } from './where-a-bot-cookie-actually-lives';
 import { post as whichBotSpentTheWeek } from './which-bot-spent-the-week';
 import { post as whichSurfaceReadsSkillMd } from './which-surface-reads-skill-md';
@@ -961,6 +966,7 @@ export const posts: Record<string, BlogPost> = {
   'the-critic-bot': theCriticBot,
   'the-dinner-decision-bot': theDinnerDecisionBot,
   'the-five-questions-before-your-first-bot': theFiveQuestionsBeforeYourFirstBot,
+  'the-internal-tool-two-people-can-run': theInternalToolTwoPeopleCanRun,
   'the-one-line-work-journal': theOneLineWorkJournal,
   'the-pm-attention-list': thePmAttentionList,
   'the-quarterly-roster-cull': theQuarterlyRosterCull,
@@ -980,6 +986,7 @@ export const posts: Record<string, BlogPost> = {
   'what-you-cannot-cap': whatYouCannotCap,
   'when-bots-go-wrong': whenBotsGoWrong,
   'when-not-to-use-a-bot': whenNotToUseABot,
+  'when-the-product-changes-under-you': whenTheProductChangesUnderYou,
   'where-a-bot-cookie-actually-lives': whereABotCookieActuallyLives,
   'which-bot-spent-the-week': whichBotSpentTheWeek,
   'which-surface-reads-skill-md': whichSurfaceReadsSkillMd,
@@ -1416,6 +1423,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'the-critic-bot', ...theCriticBot },
   { slug: 'the-dinner-decision-bot', ...theDinnerDecisionBot },
   { slug: 'the-five-questions-before-your-first-bot', ...theFiveQuestionsBeforeYourFirstBot },
+  { slug: 'the-internal-tool-two-people-can-run', ...theInternalToolTwoPeopleCanRun },
   { slug: 'the-one-line-work-journal', ...theOneLineWorkJournal },
   { slug: 'the-pm-attention-list', ...thePmAttentionList },
   { slug: 'the-quarterly-roster-cull', ...theQuarterlyRosterCull },
@@ -1435,6 +1443,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'what-you-cannot-cap', ...whatYouCannotCap },
   { slug: 'when-bots-go-wrong', ...whenBotsGoWrong },
   { slug: 'when-not-to-use-a-bot', ...whenNotToUseABot },
+  { slug: 'when-the-product-changes-under-you', ...whenTheProductChangesUnderYou },
   { slug: 'where-a-bot-cookie-actually-lives', ...whereABotCookieActuallyLives },
   { slug: 'which-bot-spent-the-week', ...whichBotSpentTheWeek },
   { slug: 'which-surface-reads-skill-md', ...whichSurfaceReadsSkillMd },
