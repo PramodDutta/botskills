@@ -87,6 +87,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBotThatTellsYouToStandUp } from './a-bot-that-tells-you-to-stand-up';
@@ -156,9 +173,11 @@ import { post as botsAndMonday } from './bots-and-monday';
 import { post as botsAndOkta } from './bots-and-okta';
 import { post as botsAndPagerduty } from './bots-and-pagerduty';
 import { post as botsAndPlaid } from './bots-and-plaid';
+import { post as botsAndPodcastRss } from './bots-and-podcast-rss';
 import { post as botsAndPosthog } from './bots-and-posthog';
 import { post as botsAndReddit } from './bots-and-reddit';
 import { post as botsAndSalesNavigator } from './bots-and-sales-navigator';
+import { post as botsAndScreenshotone } from './bots-and-screenshotone';
 import { post as botsAndSentry } from './bots-and-sentry';
 import { post as botsAndSnowflake } from './bots-and-snowflake';
 import { post as botsAndSubstack } from './bots-and-substack';
@@ -167,6 +186,7 @@ import { post as botsAndTwilio } from './bots-and-twilio';
 import { post as botsAndWebflow } from './bots-and-webflow';
 import { post as botsAndWhatsapp } from './bots-and-whatsapp';
 import { post as botsAndWordpress } from './bots-and-wordpress';
+import { post as botsAndYahooFinance } from './bots-and-yahoo-finance';
 import { post as botsAndZendesk } from './bots-and-zendesk';
 import { post as botsForAgencies } from './bots-for-agencies';
 import { post as botsForConsultants } from './bots-for-consultants';
@@ -622,9 +642,11 @@ export const posts: Record<string, BlogPost> = {
   'bots-and-okta': botsAndOkta,
   'bots-and-pagerduty': botsAndPagerduty,
   'bots-and-plaid': botsAndPlaid,
+  'bots-and-podcast-rss': botsAndPodcastRss,
   'bots-and-posthog': botsAndPosthog,
   'bots-and-reddit': botsAndReddit,
   'bots-and-sales-navigator': botsAndSalesNavigator,
+  'bots-and-screenshotone': botsAndScreenshotone,
   'bots-and-sentry': botsAndSentry,
   'bots-and-snowflake': botsAndSnowflake,
   'bots-and-substack': botsAndSubstack,
@@ -633,6 +655,7 @@ export const posts: Record<string, BlogPost> = {
   'bots-and-webflow': botsAndWebflow,
   'bots-and-whatsapp': botsAndWhatsapp,
   'bots-and-wordpress': botsAndWordpress,
+  'bots-and-yahoo-finance': botsAndYahooFinance,
   'bots-and-zendesk': botsAndZendesk,
   'bots-for-agencies': botsForAgencies,
   'bots-for-consultants': botsForConsultants,
@@ -1081,9 +1104,11 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'bots-and-okta', ...botsAndOkta },
   { slug: 'bots-and-pagerduty', ...botsAndPagerduty },
   { slug: 'bots-and-plaid', ...botsAndPlaid },
+  { slug: 'bots-and-podcast-rss', ...botsAndPodcastRss },
   { slug: 'bots-and-posthog', ...botsAndPosthog },
   { slug: 'bots-and-reddit', ...botsAndReddit },
   { slug: 'bots-and-sales-navigator', ...botsAndSalesNavigator },
+  { slug: 'bots-and-screenshotone', ...botsAndScreenshotone },
   { slug: 'bots-and-sentry', ...botsAndSentry },
   { slug: 'bots-and-snowflake', ...botsAndSnowflake },
   { slug: 'bots-and-substack', ...botsAndSubstack },
@@ -1092,6 +1117,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'bots-and-webflow', ...botsAndWebflow },
   { slug: 'bots-and-whatsapp', ...botsAndWhatsapp },
   { slug: 'bots-and-wordpress', ...botsAndWordpress },
+  { slug: 'bots-and-yahoo-finance', ...botsAndYahooFinance },
   { slug: 'bots-and-zendesk', ...botsAndZendesk },
   { slug: 'bots-for-agencies', ...botsForAgencies },
   { slug: 'bots-for-consultants', ...botsForConsultants },
