@@ -622,3 +622,20 @@ td.ints { white-space: nowrap; }
   font-size: 0.9rem; width: 100%; }
 .contact-form textarea { resize: vertical; min-height: 6rem; }
 .contact-form .copy-btn { align-self: flex-start; }
+
+/* ---- article capture block ----
+   Sits at the foot of every article. Search traffic lands here, not on /signup,
+   which is noindex, so this is the only place the fact check can be offered to
+   the people actually reading. Styled as a quiet aside, not an interruption. */
+.article-offer { margin: 2.6rem 0 0; padding: 1.4rem 1.5rem 1.2rem;
+  background: var(--raise); border: 1px solid var(--line);
+  border-left: 3px solid var(--accent); border-radius: 14px; }
+.article-offer .ao-kicker { font-family: var(--mono); font-size: 0.68rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
+  font-weight: 600; margin: 0; }
+.article-offer .ao-lead { margin: 0.6rem 0 0; color: var(--ink);
+  font-size: 0.95rem; line-height: 1.62; max-width: 62ch; }
+.article-offer .ao-fine { margin: 0.7rem 0 0; color: var(--muted);
+  font-size: 0.8rem; }
+.article-offer .ao-reveal { margin: 0.7rem 0 0; font-weight: 600; }
+.article-offer .callout { margin-top: 0.9rem; }

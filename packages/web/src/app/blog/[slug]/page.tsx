@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { PostBody } from '@/components/post-body';
+import { ArticleOffer } from '@/components/article-offer';
 import { posts } from '../posts';
 
 /**
@@ -93,6 +94,7 @@ export default async function PostPage({ params }: Props) {
         <p className="ds">{post.date} · {post.category}</p>
         <PostBody content={post.content} />
       </article>
+      <ArticleOffer />
     </main>
   );
 }
