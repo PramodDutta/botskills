@@ -58,6 +58,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -110,6 +111,7 @@ import { post as botsAndCalendly } from './bots-and-calendly';
 import { post as botsAndClickup } from './bots-and-clickup';
 import { post as botsAndDocusign } from './bots-and-docusign';
 import { post as botsAndFigma } from './bots-and-figma';
+import { post as botsAndGoogleSearch } from './bots-and-google-search';
 import { post as botsAndGoogleSlides } from './bots-and-google-slides';
 import { post as botsAndGoogleTrends } from './bots-and-google-trends';
 import { post as botsAndGranola } from './bots-and-granola';
@@ -566,6 +568,7 @@ export const posts: Record<string, BlogPost> = {
   'bots-and-clickup': botsAndClickup,
   'bots-and-docusign': botsAndDocusign,
   'bots-and-figma': botsAndFigma,
+  'bots-and-google-search': botsAndGoogleSearch,
   'bots-and-google-slides': botsAndGoogleSlides,
   'bots-and-google-trends': botsAndGoogleTrends,
   'bots-and-granola': botsAndGranola,
@@ -1015,6 +1018,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'bots-and-clickup', ...botsAndClickup },
   { slug: 'bots-and-docusign', ...botsAndDocusign },
   { slug: 'bots-and-figma', ...botsAndFigma },
+  { slug: 'bots-and-google-search', ...botsAndGoogleSearch },
   { slug: 'bots-and-google-slides', ...botsAndGoogleSlides },
   { slug: 'bots-and-google-trends', ...botsAndGoogleTrends },
   { slug: 'bots-and-granola', ...botsAndGranola },
