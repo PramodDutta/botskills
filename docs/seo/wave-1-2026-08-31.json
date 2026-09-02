@@ -1,0 +1,167 @@
+{
+ "wave": 1,
+ "count": 25,
+ "articles": [
+  {
+   "slug": "grok-bot-grok-ship",
+   "title": "A PR Factory Bot That Opens Drafts and Never Merges",
+   "category": "Guide",
+   "source": "plan-50"
+  },
+  {
+   "slug": "grok-bot-stayingapi-compare",
+   "title": "Compare Booking Prices With a Plugin, Then Hand Checkout Back to You",
+   "category": "Guide",
+   "source": "plan-50"
+  },
+  {
+   "slug": "watch-listings-without-bidding",
+   "title": "Watch Listings Against a Written Spec Without Ever Bidding",
+   "category": "Tutorial",
+   "source": "plan-50"
+  },
+  {
+   "slug": "turn-bookmarks-into-bot-triggers",
+   "title": "Grade a Month of Bookmarks, Then Turn the Keepers Into Triggers",
+   "category": "Tutorial",
+   "source": "plan-50"
+  },
+  {
+   "slug": "route-work-through-one-bot",
+   "title": "The One Bot You Talk To: Routing Work Instead of Doing It",
+   "category": "Playbook",
+   "source": "plan-50"
+  },
+  {
+   "slug": "voice-note-to-crm-fields",
+   "title": "Turn the Voice Note You Record Leaving a Meeting Into CRM Fields",
+   "category": "Tutorial",
+   "source": "plan-50"
+  },
+  {
+   "slug": "storyboard-before-you-generate",
+   "title": "Storyboard the Scenes Before You Generate a Single Shot",
+   "category": "Tutorial",
+   "source": "plan-50"
+  },
+  {
+   "slug": "the-seams-between-gtm-teams",
+   "title": "The Work That Falls Between Marketing, Sales and Success",
+   "category": "Playbook",
+   "source": "plan-50"
+  },
+  {
+   "slug": "icp-roster-reverified-weekly",
+   "title": "Keep One ICP Roster Current Instead of Rebuilding It Monthly",
+   "category": "Tutorial",
+   "source": "plan-50"
+  },
+  {
+   "slug": "price-a-listing-from-photos-not-titles",
+   "title": "Judge a Marketplace Listing by Its Photos, Not Its Title",
+   "category": "Tutorial",
+   "source": "plan-50"
+  },
+  {
+   "slug": "log-paper-trades-with-a-written-stop",
+   "title": "Log Paper Trades Against a Written Thesis and a Written Stop",
+   "category": "Safety",
+   "source": "plan-50"
+  },
+  {
+   "slug": "run-one-play-across-many-accounts",
+   "title": "Run One Sales Play Across Many Accounts Without Losing the Step",
+   "category": "Playbook",
+   "source": "plan-50"
+  },
+  {
+   "slug": "what-is-actually-broken-behind-a-ticket",
+   "title": "Work Out What Is Actually Broken Behind a Support Ticket",
+   "category": "Tutorial",
+   "source": "plan-50"
+  },
+  {
+   "slug": "single-agent-vs-multi-agent",
+   "title": "One Bot With Many Jobs, or Many Bots With One Job Each",
+   "category": "Comparison",
+   "source": "plan-50"
+  },
+  {
+   "slug": "bots-and-granola",
+   "title": "Reading Call Notes a Bot Did Not Take",
+   "category": "Guide",
+   "angle": "the transcript-vs-show-notes fallback and why a claim sourced to a summary is unverifiable",
+   "source": "gap-analysis"
+  },
+  {
+   "slug": "bots-and-google-slides",
+   "title": "A Bot That Rebuilds the Deck From the Source, Not the Last Deck",
+   "category": "Tutorial",
+   "angle": "decks copy numbers from older decks; provenance breaks; regenerate from source",
+   "source": "gap-analysis"
+  },
+  {
+   "slug": "bots-and-sentry",
+   "title": "Crash Clusters Are Evidence, Not Instructions",
+   "category": "Guide",
+   "angle": "triage-vs-remediation line applied to error tracking",
+   "source": "gap-analysis"
+  },
+  {
+   "slug": "bots-and-posthog",
+   "title": "Product Analytics a Bot May Read and May Not Interpret",
+   "category": "Guide",
+   "angle": "sample-size floors and why a bot must print the denominator",
+   "source": "gap-analysis"
+  },
+  {
+   "slug": "bots-and-snowflake",
+   "title": "Give a Bot a View, Never the Warehouse",
+   "category": "Safety",
+   "angle": "scoped views and read replicas instead of broad warehouse credentials",
+   "source": "gap-analysis"
+  },
+  {
+   "slug": "bots-and-plaid",
+   "title": "Financial Data Is the One Place to Stop Before Connecting",
+   "category": "Safety",
+   "angle": "why bank connections are the wrong first integration on a shared computer",
+   "source": "gap-analysis"
+  },
+  {
+   "slug": "bots-and-reddit",
+   "title": "Mining a Forum Without Becoming a Participant",
+   "category": "Guide",
+   "angle": "read-only research, never posting, and why account age matters",
+   "source": "gap-analysis"
+  },
+  {
+   "slug": "bots-and-hacker-news",
+   "title": "Watching a Feed That Punishes Automation",
+   "category": "Guide",
+   "angle": "rate limits, the API vs scraping, and never commenting",
+   "source": "gap-analysis"
+  },
+  {
+   "slug": "bots-and-help-scout",
+   "title": "A Second Support Queue Reader That Never Replies",
+   "category": "Tutorial",
+   "angle": "read the queue, draft nothing that sends, complement not replace",
+   "source": "gap-analysis"
+  },
+  {
+   "slug": "bots-and-google-trends",
+   "title": "Trend Data Is Directional and a Bot Will Report It as Fact",
+   "category": "Guide",
+   "angle": "relative-not-absolute indices, and the rounding that misleads",
+   "source": "gap-analysis"
+  },
+  {
+   "slug": "the-bot-that-argues-back",
+   "title": "A Bot Whose Job Is to Disagree With You",
+   "category": "Playbook",
+   "angle": "supports argue-the-other-side; steelmanning as a delegable process",
+   "source": "gap-analysis"
+  }
+ ]
+}
