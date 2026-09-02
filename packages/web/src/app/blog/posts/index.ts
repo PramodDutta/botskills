@@ -53,6 +53,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -465,6 +466,7 @@ import { post as sixBotsToAChannel } from './six-bots-to-a-channel';
 import { post as storyboardBeforeYouGenerate } from './storyboard-before-you-generate';
 import { post as teachGrokBotByDemonstration } from './teach-grok-bot-by-demonstration';
 import { post as testingYourBot } from './testing-your-bot';
+import { post as theBotNobodyOwns } from './the-bot-nobody-owns';
 import { post as theBotThatArguesBack } from './the-bot-that-argues-back';
 import { post as theCriticBot } from './the-critic-bot';
 import { post as theFiveQuestionsBeforeYourFirstBot } from './the-five-questions-before-your-first-bot';
@@ -916,6 +918,7 @@ export const posts: Record<string, BlogPost> = {
   'storyboard-before-you-generate': storyboardBeforeYouGenerate,
   'teach-grok-bot-by-demonstration': teachGrokBotByDemonstration,
   'testing-your-bot': testingYourBot,
+  'the-bot-nobody-owns': theBotNobodyOwns,
   'the-bot-that-argues-back': theBotThatArguesBack,
   'the-critic-bot': theCriticBot,
   'the-five-questions-before-your-first-bot': theFiveQuestionsBeforeYourFirstBot,
@@ -1360,6 +1363,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'storyboard-before-you-generate', ...storyboardBeforeYouGenerate },
   { slug: 'teach-grok-bot-by-demonstration', ...teachGrokBotByDemonstration },
   { slug: 'testing-your-bot', ...testingYourBot },
+  { slug: 'the-bot-nobody-owns', ...theBotNobodyOwns },
   { slug: 'the-bot-that-argues-back', ...theBotThatArguesBack },
   { slug: 'the-critic-bot', ...theCriticBot },
   { slug: 'the-five-questions-before-your-first-bot', ...theFiveQuestionsBeforeYourFirstBot },
