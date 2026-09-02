@@ -54,6 +54,7 @@
 
 
 
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
@@ -471,6 +472,7 @@ import { post as theBotThatArguesBack } from './the-bot-that-argues-back';
 import { post as theCriticBot } from './the-critic-bot';
 import { post as theFiveQuestionsBeforeYourFirstBot } from './the-five-questions-before-your-first-bot';
 import { post as thePmAttentionList } from './the-pm-attention-list';
+import { post as theQuarterlyRosterCull } from './the-quarterly-roster-cull';
 import { post as theSeamsBetweenGtmTeams } from './the-seams-between-gtm-teams';
 import { post as theWeeklyBotReview } from './the-weekly-bot-review';
 import { post as turnBookmarksIntoBotTriggers } from './turn-bookmarks-into-bot-triggers';
@@ -923,6 +925,7 @@ export const posts: Record<string, BlogPost> = {
   'the-critic-bot': theCriticBot,
   'the-five-questions-before-your-first-bot': theFiveQuestionsBeforeYourFirstBot,
   'the-pm-attention-list': thePmAttentionList,
+  'the-quarterly-roster-cull': theQuarterlyRosterCull,
   'the-seams-between-gtm-teams': theSeamsBetweenGtmTeams,
   'the-weekly-bot-review': theWeeklyBotReview,
   'turn-bookmarks-into-bot-triggers': turnBookmarksIntoBotTriggers,
@@ -1368,6 +1371,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'the-critic-bot', ...theCriticBot },
   { slug: 'the-five-questions-before-your-first-bot', ...theFiveQuestionsBeforeYourFirstBot },
   { slug: 'the-pm-attention-list', ...thePmAttentionList },
+  { slug: 'the-quarterly-roster-cull', ...theQuarterlyRosterCull },
   { slug: 'the-seams-between-gtm-teams', ...theSeamsBetweenGtmTeams },
   { slug: 'the-weekly-bot-review', ...theWeeklyBotReview },
   { slug: 'turn-bookmarks-into-bot-triggers', ...turnBookmarksIntoBotTriggers },
