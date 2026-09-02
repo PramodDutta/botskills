@@ -1,0 +1,156 @@
+{
+ "wave": 2,
+ "count": 25,
+ "articles": [
+  {
+   "slug": "move-a-google-apps-script-to-a-bot",
+   "title": "Retire the Apps Script Nobody Left Can Read",
+   "category": "Migration",
+   "angle": "the script written by someone who left, with no tests and one owner"
+  },
+  {
+   "slug": "move-an-ifttt-applet-to-a-bot",
+   "title": "An Applet Fires or It Does Not, and You Never Learn Which",
+   "category": "Migration",
+   "angle": "IFTTT gives no run history; the bot's 20 run records are the upgrade"
+  },
+  {
+   "slug": "move-a-power-automate-flow-to-a-bot",
+   "title": "Leaving a Flow That Only Runs Inside One Tenant",
+   "category": "Migration",
+   "angle": "tenant-bound connectors and what does not travel"
+  },
+  {
+   "slug": "move-an-airtable-automation-to-a-bot",
+   "title": "When the Automation Outgrew the Base It Lives In",
+   "category": "Migration",
+   "angle": "automation coupled to a schema; decouple before you move"
+  },
+  {
+   "slug": "move-off-a-scheduled-chat-task",
+   "title": "A Scheduled Chat Prompt Is Not a Routine",
+   "category": "Migration",
+   "angle": "the difference between a recurring prompt and an agent with a computer"
+  },
+  {
+   "slug": "the-weekly-bot-review",
+   "title": "Thirty Minutes a Week That Decides What Stays",
+   "category": "Playbook",
+   "angle": "the fixed agenda: last-shipped dates, returns, blocked items, one change"
+  },
+  {
+   "slug": "onboard-a-new-hire-onto-a-bot-fleet",
+   "title": "Handing Someone a Fleet They Did Not Build",
+   "category": "Playbook",
+   "angle": "they need their own seat and an empty computer; what to write down"
+  },
+  {
+   "slug": "the-quarterly-roster-cull",
+   "title": "Retire Before You Hire, Every Quarter",
+   "category": "Playbook",
+   "angle": "forced ranking against the six-per-channel ceiling"
+  },
+  {
+   "slug": "running-bots-while-you-are-away",
+   "title": "Two Weeks Off With Bots Still Running",
+   "category": "Playbook",
+   "angle": "who holds approvals, what gets paused, what must not fire unattended"
+  },
+  {
+   "slug": "a-bot-that-tells-you-to-stand-up",
+   "title": "The Smallest Useful Bot Is a Nudge That Reads Your Calendar",
+   "category": "Tutorial",
+   "angle": "supports desk-lap-nudge; why calendar-aware beats a timer"
+  },
+  {
+   "slug": "the-one-line-work-journal",
+   "title": "One Sentence a Day, Written From Evidence",
+   "category": "Tutorial",
+   "angle": "supports one-line-standup; why it must never have an audience"
+  },
+  {
+   "slug": "source-candidates-without-contacting-them",
+   "title": "Sourcing That Stops Before the First Message",
+   "category": "Safety",
+   "angle": "supports talent-scout; privacy, regional rules, sourced claims about people"
+  },
+  {
+   "slug": "the-dinner-decision-bot",
+   "title": "A Bot That Decides Dinner From What Is Actually There",
+   "category": "Tutorial",
+   "angle": "supports what-should-i-cook; expiry-first ranking, never orders"
+  },
+  {
+   "slug": "bots-and-google-search",
+   "title": "Search Results Are a Snapshot, Not a Source",
+   "category": "Guide",
+   "angle": "personalisation and volatility; cite the page, never the SERP"
+  },
+  {
+   "slug": "bots-and-sales-navigator",
+   "title": "A Roster Built From a Tool That Watches Who Looks",
+   "category": "Safety",
+   "angle": "viewing profiles is visible; research has a footprint"
+  },
+  {
+   "slug": "bots-and-glean",
+   "title": "Internal Search Answers Are Only as Scoped as Your Permissions",
+   "category": "Safety",
+   "angle": "a bot inherits your access, which is wider than you remember"
+  },
+  {
+   "slug": "bots-and-yahoo-finance",
+   "title": "Market Data a Bot May Read and Must Never Act On",
+   "category": "Safety",
+   "angle": "delayed quotes, and the never-trade boundary"
+  },
+  {
+   "slug": "bots-and-podcast-rss",
+   "title": "Watching a Feed That Publishes Whenever It Likes",
+   "category": "Tutorial",
+   "angle": "irregular cadence, dedupe by GUID not title"
+  },
+  {
+   "slug": "bots-and-screenshotone",
+   "title": "A Screenshot Is Evidence With a Timestamp",
+   "category": "Tutorial",
+   "angle": "capturing what a page said, for claims that need proof later"
+  },
+  {
+   "slug": "the-internal-tool-two-people-can-run",
+   "title": "The Internal Tool Only Two People Know How to Run",
+   "category": "Migration",
+   "angle": "bus-factor-one internal tooling. A charter documents what a workflow diagram never did, and moving it forces the documentation nobody wrote."
+  },
+  {
+   "slug": "the-bot-that-got-quietly-worse",
+   "title": "When a Bot Still Runs and Its Output Has Been Sliding",
+   "category": "Guide",
+   "angle": "degradation is not a stall: it keeps producing, and the decline has no error to alert on"
+  },
+  {
+   "slug": "which-bot-spent-the-week",
+   "title": "You Cannot See Which Bot Drank the Pool",
+   "category": "Reference",
+   "angle": "there is no per-bot spend attribution; what you can measure instead"
+  },
+  {
+   "slug": "when-the-product-changes-under-you",
+   "title": "A Vendor Shipped Something and Your Setup Broke",
+   "category": "Guide",
+   "angle": "beta products move; how to notice and what to re-check"
+  },
+  {
+   "slug": "the-bot-nobody-owns",
+   "title": "Every Roster Grows a Bot With No Named Human",
+   "category": "Playbook",
+   "angle": "unowned bots keep running and nobody reviews their output"
+  },
+  {
+   "slug": "taking-over-someone-elses-bot",
+   "title": "Taking Over a Bot Somebody Else Designed",
+   "category": "Playbook",
+   "angle": "inheriting: what to read first, what to distrust, what to rewrite before you let it run. Distinct from writing a charter, which assumes you start blank."
+  }
+ ]
+}
