@@ -58,6 +58,7 @@ export async function POST(request: Request) {
   }
 
   let emailed = false;
+  let mailError = '';
   if (process.env.RESEND_API_KEY) {
     try {
       const { Resend } = await import('resend');
@@ -82,8 +83,10 @@ export async function POST(request: Request) {
         ].join('\n'),
       });
       emailed = !r.error;
-    } catch {
+      if (r.error) mailError = `${r.error.name}: ${r.error.message}`;
+    } catch (e) {
       emailed = false;
+      mailError = e instanceof Error ? `threw: ${e.message}` : 'threw';
     }
   }
 
@@ -92,5 +95,5 @@ export async function POST(request: Request) {
   if (!stored && !emailed) {
     return NextResponse.json({ ok: false, error: 'could not accept the message' }, { status: 503 });
   }
-  return NextResponse.json({ ok: true, stored, emailed });
+  return NextResponse.json({ ok: true, stored, emailed, mailError });
 }
