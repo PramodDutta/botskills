@@ -60,8 +60,11 @@
 
 
 
+
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
+import { post as aBotThatTellsYouToStandUp } from './a-bot-that-tells-you-to-stand-up';
 import { post as aBoundaryIsNotAPermission } from './a-boundary-is-not-a-permission';
 import { post as accountExpertInternalBrief } from './account-expert-internal-brief';
 import { post as accountTieringPackNeverChangesOwner } from './account-tiering-pack-never-changes-owner';
@@ -520,6 +523,7 @@ export interface BlogPost {
 export const posts: Record<string, BlogPost> = {
   'introducing-botskills': introducingBotskills,
   'one-person-company-grok-bot': onePersonCompanyGrokBot,
+  'a-bot-that-tells-you-to-stand-up': aBotThatTellsYouToStandUp,
   'a-boundary-is-not-a-permission': aBoundaryIsNotAPermission,
   'account-expert-internal-brief': accountExpertInternalBrief,
   'account-tiering-pack-never-changes-owner': accountTieringPackNeverChangesOwner,
@@ -971,6 +975,7 @@ export const posts: Record<string, BlogPost> = {
 export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'introducing-botskills', ...introducingBotskills },
   { slug: 'one-person-company-grok-bot', ...onePersonCompanyGrokBot },
+  { slug: 'a-bot-that-tells-you-to-stand-up', ...aBotThatTellsYouToStandUp },
   { slug: 'a-boundary-is-not-a-permission', ...aBoundaryIsNotAPermission },
   { slug: 'account-expert-internal-brief', ...accountExpertInternalBrief },
   { slug: 'account-tiering-pack-never-changes-owner', ...accountTieringPackNeverChangesOwner },
