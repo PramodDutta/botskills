@@ -78,6 +78,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 import { post as introducingBotskills } from './introducing-botskills';
 import { post as onePersonCompanyGrokBot } from './one-person-company-grok-bot';
 import { post as aBotThatTellsYouToStandUp } from './a-bot-that-tells-you-to-stand-up';
@@ -131,6 +140,7 @@ import { post as botsAndCalendly } from './bots-and-calendly';
 import { post as botsAndClickup } from './bots-and-clickup';
 import { post as botsAndDocusign } from './bots-and-docusign';
 import { post as botsAndFigma } from './bots-and-figma';
+import { post as botsAndGlean } from './bots-and-glean';
 import { post as botsAndGoogleSearch } from './bots-and-google-search';
 import { post as botsAndGoogleSlides } from './bots-and-google-slides';
 import { post as botsAndGoogleTrends } from './bots-and-google-trends';
@@ -492,6 +502,7 @@ import { post as shareAGrokBot } from './share-a-grok-bot';
 import { post as shouldOverflowPushYouToAHigherPlan } from './should-overflow-push-you-to-a-higher-plan';
 import { post as singleAgentVsMultiAgent } from './single-agent-vs-multi-agent';
 import { post as sixBotsToAChannel } from './six-bots-to-a-channel';
+import { post as sourceCandidatesWithoutContactingThem } from './source-candidates-without-contacting-them';
 import { post as storyboardBeforeYouGenerate } from './storyboard-before-you-generate';
 import { post as takingOverSomeoneElsesBot } from './taking-over-someone-elses-bot';
 import { post as teachGrokBotByDemonstration } from './teach-grok-bot-by-demonstration';
@@ -595,6 +606,7 @@ export const posts: Record<string, BlogPost> = {
   'bots-and-clickup': botsAndClickup,
   'bots-and-docusign': botsAndDocusign,
   'bots-and-figma': botsAndFigma,
+  'bots-and-glean': botsAndGlean,
   'bots-and-google-search': botsAndGoogleSearch,
   'bots-and-google-slides': botsAndGoogleSlides,
   'bots-and-google-trends': botsAndGoogleTrends,
@@ -956,6 +968,7 @@ export const posts: Record<string, BlogPost> = {
   'should-overflow-push-you-to-a-higher-plan': shouldOverflowPushYouToAHigherPlan,
   'single-agent-vs-multi-agent': singleAgentVsMultiAgent,
   'six-bots-to-a-channel': sixBotsToAChannel,
+  'source-candidates-without-contacting-them': sourceCandidatesWithoutContactingThem,
   'storyboard-before-you-generate': storyboardBeforeYouGenerate,
   'taking-over-someone-elses-bot': takingOverSomeoneElsesBot,
   'teach-grok-bot-by-demonstration': teachGrokBotByDemonstration,
@@ -1052,6 +1065,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'bots-and-clickup', ...botsAndClickup },
   { slug: 'bots-and-docusign', ...botsAndDocusign },
   { slug: 'bots-and-figma', ...botsAndFigma },
+  { slug: 'bots-and-glean', ...botsAndGlean },
   { slug: 'bots-and-google-search', ...botsAndGoogleSearch },
   { slug: 'bots-and-google-slides', ...botsAndGoogleSlides },
   { slug: 'bots-and-google-trends', ...botsAndGoogleTrends },
@@ -1413,6 +1427,7 @@ export const postList: Array<{ slug: string } & BlogPost> = [
   { slug: 'should-overflow-push-you-to-a-higher-plan', ...shouldOverflowPushYouToAHigherPlan },
   { slug: 'single-agent-vs-multi-agent', ...singleAgentVsMultiAgent },
   { slug: 'six-bots-to-a-channel', ...sixBotsToAChannel },
+  { slug: 'source-candidates-without-contacting-them', ...sourceCandidatesWithoutContactingThem },
   { slug: 'storyboard-before-you-generate', ...storyboardBeforeYouGenerate },
   { slug: 'taking-over-someone-elses-bot', ...takingOverSomeoneElsesBot },
   { slug: 'teach-grok-bot-by-demonstration', ...teachGrokBotByDemonstration },
