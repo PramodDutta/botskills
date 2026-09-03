@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { edgeSponsors } from '@/lib/sponsors';
+import { edgeSponsors, sponsorRel } from '@/lib/sponsors';
+import { SponsorTag } from '@/components/sponsor-tag';
 
 // Edge placement: pastel sponsor cards down both sides of
 // wide viewports, flipping through the inventory so every sponsor gets equal
@@ -29,14 +30,13 @@ function EdgeCard({ offset }: { offset: number }) {
   return (
     <Link
       href={s.url}
-      rel={s.kind === 'demo' ? 'nofollow' : s.kind === 'sponsor' ? 'sponsored' : undefined}
+      rel={sponsorRel(s.kind)}
       className={`edge-card ${TINTS[i % TINTS.length]}${flip ? ' flipping' : ''}${s.slot ? ' is-slot' : ''}`}
     >
       <span className="edge-logo">{s.name.slice(0, 1)}</span>
       <span className="edge-name">
         {s.name}
-        {s.kind === 'demo' && <span className="demo-tag mono">demo</span>}
-              {s.kind === 'featured' && <span className="demo-tag mono">free pick</span>}
+        <SponsorTag kind={s.kind} />
       </span>
       <span className="edge-line">{s.line}</span>
     </Link>

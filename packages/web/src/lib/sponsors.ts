@@ -22,8 +22,17 @@ export interface Sponsor {
   url: string;
   kind: SponsorKind;
   slot?: boolean;
-  /** @deprecated read `kind` instead; kept so existing components compile */
-  demo: boolean;
+}
+
+/**
+ * Link relation per kind. Paid placement is marked sponsored and fictional demo
+ * brands are nofollow. Free picks are ordinary follow links on purpose: the
+ * traffic and the link equity are real.
+ */
+export function sponsorRel(kind: SponsorKind): 'sponsored' | 'nofollow' | undefined {
+  if (kind === 'sponsor') return 'sponsored';
+  if (kind === 'demo') return 'nofollow';
+  return undefined;
 }
 
 /**
@@ -41,13 +50,13 @@ function utm(url: string, id: string): string {
 }
 
 function featured(id: string, name: string, line: string, cta: string, url: string): Sponsor {
-  return { id, name, line, cta, url: utm(url, id), kind: 'featured', demo: false };
+  return { id, name, line, cta, url: utm(url, id), kind: 'featured' };
 }
 function demo(id: string, name: string, line: string, cta: string): Sponsor {
-  return { id, name, line, cta, url: '/sponsor', kind: 'demo', demo: true };
+  return { id, name, line, cta, url: '/sponsor', kind: 'demo' };
 }
 function openSlot(id: string, line: string): Sponsor {
-  return { id, name: 'Your tool here', line, cta: 'Book this slot', url: '/sponsor', kind: 'sponsor', slot: true, demo: false };
+  return { id, name: 'Your tool here', line, cta: 'Book this slot', url: '/sponsor', kind: 'sponsor', slot: true };
 }
 
 export const RAIL_CAP = 8;

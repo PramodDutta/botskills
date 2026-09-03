@@ -1,19 +1,20 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { CATEGORIES } from '@botskills/shared';
 import { getAllBots } from '@/lib/bots';
 import { getBoardRows } from '@/lib/board';
-
-export const revalidate = 300;
-import { CATEGORIES } from '@botskills/shared';
+import { marqueeSponsors } from '@/lib/sponsors';
 import { Leaderboard } from '@/components/leaderboard';
 import { LiveNow } from '@/components/live-now';
-import type { Metadata } from 'next';
+import { SponsorRail } from '@/components/sponsor-rail';
+import { SponsorTag } from '@/components/sponsor-tag';
+
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://botskills.sh' },
   openGraph: { url: 'https://botskills.sh' },
 };
-import { SponsorRail } from '@/components/sponsor-rail';
-import { marqueeSponsors } from '@/lib/sponsors';
 
 export default async function HomePage() {
   const rows = await getBoardRows();
@@ -69,8 +70,7 @@ export default async function HomePage() {
                 <span key={m.id} className="spon">
                   <span className="sq" />
                   {m.name}
-                  {m.kind === 'demo' && <span className="demo-tag mono">demo</span>}
-                  {m.kind === 'featured' && <span className="demo-tag mono">free pick</span>}
+                  <SponsorTag kind={m.kind} />
                 </span>
               ))}
               <span className="spon slot">

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { railSponsors, FOUNDING_SLOTS } from '@/lib/sponsors';
+import { railSponsors, sponsorRel, FOUNDING_SLOTS } from '@/lib/sponsors';
+import { SponsorTag } from '@/components/sponsor-tag';
 
 // Sponsor rail: sticky beside the leaderboard on desktop. Demo
 // entries are fictional brands showing how sold inventory looks; the corner
@@ -9,13 +10,12 @@ export function SponsorRail() {
     <aside className="rail" aria-label="Sponsors">
       <div className="rail-head mono">SPONSORS</div>
       {railSponsors.map((s) => (
-        <Link key={s.id} href={s.url} rel={s.kind === 'demo' ? 'nofollow' : s.kind === 'sponsor' ? 'sponsored' : undefined} className={`rail-card${s.slot ? ' is-slot' : ''}`}>
+        <Link key={s.id} href={s.url} rel={sponsorRel(s.kind)} className={`rail-card${s.slot ? ' is-slot' : ''}`}>
           <span className="sq" />
           <span className="rail-txt">
             <span className="rail-name">
               {s.name}
-              {s.kind === 'demo' && <span className="demo-tag mono">demo</span>}
-              {s.kind === 'featured' && <span className="demo-tag mono">free pick</span>}
+              <SponsorTag kind={s.kind} />
             </span>
             <span className="rail-line">{s.line}</span>
             <span className="rail-cta">{s.cta} →</span>
