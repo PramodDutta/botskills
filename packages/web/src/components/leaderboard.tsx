@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { IntegrationIcon } from '@/components/integration-icon';
+import { postJson } from '@/lib/post-json';
 import { CATEGORY_IDS } from '@botskills/shared';
 
 export interface BoardRow {
@@ -49,11 +50,7 @@ function VoteButton({ slug, votes }: { slug: string; votes: number }) {
     setVoted(true);
     setCount((c) => c + 1);
     try { localStorage.setItem(key, '1'); } catch {}
-    fetch('/api/telemetry/vote', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ slug }),
-    }).catch(() => {});
+    postJson('/api/telemetry/vote', { slug }).catch(() => {});
     setNudge(true);
     setTimeout(() => setNudge(false), 2600);
   }

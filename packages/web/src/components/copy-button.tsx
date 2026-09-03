@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { postJson } from '@/lib/post-json';
 
 /**
  * Copies are the ranking signal for the whole directory, so a copy that fails
@@ -47,11 +48,7 @@ export function CopyButton({ slug, prompt }: { slug: string; prompt: string }) {
     if (!ok) return;
 
     // Best-effort telemetry; the copy already happened, so never block on this.
-    fetch('/api/telemetry/copy', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ slug, source: 'web' }),
-    }).catch(() => {});
+    postJson('/api/telemetry/copy', { slug, source: 'web' }).catch(() => {});
   }
 
   return (

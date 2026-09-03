@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { postJson } from '@/lib/post-json';
 
 // Fires one visit beacon per session, then shows the measured live count.
 // Renders nothing until a real number (> 0) exists: proof, never decoration.
@@ -12,11 +13,7 @@ export function LiveNow() {
       try {
         if (!sessionStorage.getItem('visited')) {
           sessionStorage.setItem('visited', '1');
-          await fetch('/api/telemetry/visit', {
-            method: 'POST',
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({ path: location.pathname }),
-          });
+          await postJson('/api/telemetry/visit', { path: location.pathname });
         }
         const r = await fetch('/api/live');
         const d = (await r.json()) as { online: number };

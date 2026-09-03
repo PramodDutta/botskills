@@ -1,6 +1,9 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { postJson } from '@/lib/post-json';
+import { CONTACT_EMAIL } from '@/lib/site';
+import { Honeypot } from '@/components/honeypot';
 
 const PLACEMENTS = [
   { id: 'rail', label: 'Rail card, $99/mo' },
@@ -27,16 +30,12 @@ export function ContactForm() {
     setState('busy');
     setError('');
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({
-          name,
-          email,
-          placement,
-          message,
-          website: honeypot.current?.value ?? '',
-        }),
+      const res = await postJson('/api/contact', {
+        name,
+        email,
+        placement,
+        message,
+        website: honeypot.current?.value ?? '',
       });
       if (res.ok) {
         const body = (await res.json().catch(() => ({}))) as { emailed?: boolean };
@@ -57,7 +56,7 @@ export function ContactForm() {
     if (serverEmailed) {
       return (
         <div className="callout" role="status">
-          <b>Got it.</b> We reply from contact@thetestingacademy.com, usually within a day.
+          <b>Got it.</b> We reply from {CONTACT_EMAIL}, usually within a day.
           Nothing goes live until you have approved the wording.
         </div>
       );
@@ -66,7 +65,7 @@ export function ContactForm() {
     // bodies, and the full message is already stored server side either way.
     const trimmed = message.length > 1200 ? `${message.slice(0, 1200)}...` : message;
     const href =
-      `mailto:contact@thetestingacademy.com` +
+      `mailto:${CONTACT_EMAIL}` +
       `?subject=${encodeURIComponent(`botskills.sh enquiry (${placement}) from ${name}`)}` +
       `&body=${encodeURIComponent(
         [`Name: ${name}`, `Email: ${email}`, `Placement: ${placement}`, '', trimmed].join('\n'),
@@ -131,23 +130,14 @@ export function ContactForm() {
           placeholder="One line of copy, and where it should link."
         />
       </label>
-      {/* honeypot, hidden from humans */}
-      <input
-        ref={honeypot}
-        type="text"
-        name="website"
-        tabIndex={-1}
-        autoComplete="off"
-        aria-hidden="true"
-        style={{ position: 'absolute', left: '-9999px' }}
-      />
+      <Honeypot ref={honeypot} />
       <button type="submit" disabled={state === 'busy'} className="copy-btn">
         {state === 'busy' ? 'Sending...' : 'Send message'}
       </button>
       {state === 'error' && (
         <p className="ds" role="alert">
           {error} You can also email{' '}
-          <a href="mailto:contact@thetestingacademy.com">contact@thetestingacademy.com</a> directly.
+          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> directly.
         </p>
       )}
       <p className="ds">

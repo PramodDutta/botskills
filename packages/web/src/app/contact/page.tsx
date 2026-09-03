@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { CONTACT_EMAIL } from '@/lib/site';
 import { ContactForm } from '@/components/contact-form';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description:
-    'Reach the people who run botskills.sh. Sponsorship, a correction to an article, a bot submission, or anything else. We reply from contact@thetestingacademy.com.',
+  description: `Reach the people who run botskills.sh. Sponsorship, a correction to an article, a bot submission, or anything else. We reply from ${CONTACT_EMAIL}.`,
   alternates: { canonical: 'https://botskills.sh/contact' },
 };
 

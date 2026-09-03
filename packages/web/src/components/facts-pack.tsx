@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CONTACT_EMAIL } from '@/lib/site';
 
 interface Row {
   claim: string;
@@ -129,7 +130,7 @@ export function FactsPack() {
       <p>
         Every article on this site is checked against this list before it publishes. If
         you find something here that is out of date, that is a bug and we want to know:{' '}
-        <a href="mailto:contact@thetestingacademy.com">contact@thetestingacademy.com</a>.
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
       </p>
       <p>
         Next: <Link href="/blog/grok-bot-one-computer-many-screens">what one shared computer actually means</Link>,{' '}
