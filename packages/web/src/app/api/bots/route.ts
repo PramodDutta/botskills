@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
 import { getAllBots } from '@/lib/bots';
+import { getSql } from '@/lib/sql';
 
 async function copyCounts(): Promise<Map<string, number>> {
-  if (!process.env.DATABASE_URL) return new Map();
+  const sql = getSql();
+  if (!sql) return new Map();
   try {
-    const { neon } = await import('@neondatabase/serverless');
-    const sql = neon(process.env.DATABASE_URL);
     const rows = (await sql`
       SELECT bot_slug, count(*)::int AS total FROM copy_events GROUP BY bot_slug
     `) as Array<{ bot_slug: string; total: number }>;

@@ -1,4 +1,5 @@
 import { getAllBots } from '@/lib/bots';
+import { getSql } from '@/lib/sql';
 import { RUNTIMES } from '@botskills/shared';
 import type { BoardRow } from '@/components/leaderboard';
 
@@ -15,10 +16,9 @@ interface Counts {
 
 async function getCopyCounts(): Promise<Counts> {
   const empty: Counts = { total: new Map(), last7d: new Map(), votes: new Map() };
-  if (!process.env.DATABASE_URL) return empty;
+  const sql = getSql();
+  if (!sql) return empty;
   try {
-    const { neon } = await import('@neondatabase/serverless');
-    const sql = neon(process.env.DATABASE_URL);
     const rows = (await sql`
       SELECT bot_slug,
              count(*)::int AS total,

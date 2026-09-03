@@ -1,6 +1,7 @@
-import { createHash } from 'node:crypto';
 import { NextResponse } from 'next/server';
 import { getBot } from '@/lib/bots';
+import { getSql } from '@/lib/sql';
+import { requestFingerprint } from '@/lib/request';
 
 // One upvote per bot per voter. The voter hash is derived from IP + UA and
 // never stored raw, and the unique index makes repeats a no-op. Accounts will
@@ -15,13 +16,10 @@ export async function POST(request: Request) {
   }
   if (!slug || !getBot(slug)) return NextResponse.json({ ok: false }, { status: 404 });
 
-  if (!process.env.DATABASE_URL) return NextResponse.json({ ok: true, counted: false });
+  const sql = getSql();
+  if (!sql) return NextResponse.json({ ok: true, counted: false });
   try {
-    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
-    const ua = request.headers.get('user-agent') ?? '';
-    const voterHash = createHash('sha256').update(`${ip}|${ua}`).digest('hex').slice(0, 24);
-    const { neon } = await import('@neondatabase/serverless');
-    const sql = neon(process.env.DATABASE_URL);
+    const voterHash = requestFingerprint(request);
     const rows = await sql`
       INSERT INTO vote_events (bot_slug, voter_hash) VALUES (${slug}, ${voterHash})
       ON CONFLICT (bot_slug, voter_hash) DO NOTHING

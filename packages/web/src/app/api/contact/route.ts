@@ -1,14 +1,33 @@
 import { NextResponse } from 'next/server';
+import { getSql, type Sql } from '@/lib/sql';
+import { isEmail } from '@/lib/request';
+import { CONTACT_EMAIL } from '@/lib/site';
 
 // Sponsor and general enquiries. Two independent paths on purpose: the message
 // is stored first, then emailed. Storage is what makes this safe to ship before
 // a mail provider exists, and it means a provider outage loses nothing.
-const TO = 'contact@thetestingacademy.com';
 const PLACEMENTS = ['rail', 'marquee', 'edge', 'other'];
 const BACKLOG_LIMIT = 20;
 
 // Created once per cold start, not per request.
 let tableReady = false;
+
+async function ensureTable(sql: Sql) {
+  if (tableReady) return;
+  await sql`
+    CREATE TABLE IF NOT EXISTS contact_messages (
+      id         bigserial PRIMARY KEY,
+      name       text NOT NULL,
+      email      text NOT NULL,
+      placement  text NOT NULL DEFAULT 'other',
+      message    text NOT NULL,
+      emailed    boolean NOT NULL DEFAULT false,
+      created_at timestamptz NOT NULL DEFAULT now()
+    )`;
+  // Older deployments created this table without the column.
+  await sql`ALTER TABLE contact_messages ADD COLUMN IF NOT EXISTS emailed boolean NOT NULL DEFAULT false`;
+  tableReady = true;
+}
 
 type Enquiry = {
   name: string;
@@ -33,7 +52,7 @@ async function sendEnquiry(e: Enquiry): Promise<{ ok: boolean; error: string }> 
     const delayed = e.receivedAt ? ` [received ${e.receivedAt}]` : '';
     const r = await resend.emails.send({
       from,
-      to: [TO],
+      to: [CONTACT_EMAIL],
       replyTo: e.email, // so a reply goes straight to the sender
       subject: `botskills.sh enquiry (${e.placement}) from ${e.name}${delayed}`,
       text: [
@@ -66,12 +85,9 @@ type BacklogRow = {
 // Anything that arrived while the mail provider was misconfigured is still in
 // the table with emailed = false. One successful send proves the provider works
 // again, so drain what is behind it rather than leaving those stranded forever.
-async function flushBacklog(excludeId: number | null): Promise<number> {
-  if (!process.env.DATABASE_URL) return 0;
+async function flushBacklog(sql: Sql, excludeId: number | null): Promise<number> {
   let sent = 0;
   try {
-    const { neon } = await import('@neondatabase/serverless');
-    const sql = neon(process.env.DATABASE_URL);
     const rows = (await sql`
       SELECT id, name, email, placement, message, created_at
       FROM contact_messages
@@ -117,31 +133,16 @@ export async function POST(request: Request) {
   if (!name || !message || message.length < 10) {
     return NextResponse.json({ ok: false, error: 'name and a real message required' }, { status: 400 });
   }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+  if (!isEmail(email)) {
     return NextResponse.json({ ok: false, error: 'valid email required' }, { status: 400 });
   }
 
+  const sql = getSql();
   let stored = false;
   let rowId: number | null = null;
-  if (process.env.DATABASE_URL) {
+  if (sql) {
     try {
-      const { neon } = await import('@neondatabase/serverless');
-      const sql = neon(process.env.DATABASE_URL);
-      if (!tableReady) {
-        await sql`
-          CREATE TABLE IF NOT EXISTS contact_messages (
-            id         bigserial PRIMARY KEY,
-            name       text NOT NULL,
-            email      text NOT NULL,
-            placement  text NOT NULL DEFAULT 'other',
-            message    text NOT NULL,
-            emailed    boolean NOT NULL DEFAULT false,
-            created_at timestamptz NOT NULL DEFAULT now()
-          )`;
-        // Older deployments created this table without the column.
-        await sql`ALTER TABLE contact_messages ADD COLUMN IF NOT EXISTS emailed boolean NOT NULL DEFAULT false`;
-        tableReady = true;
-      }
+      await ensureTable(sql);
       const rows = await sql`
         INSERT INTO contact_messages (name, email, placement, message)
         VALUES (${name}, ${email}, ${placement}, ${message})
@@ -158,17 +159,15 @@ export async function POST(request: Request) {
   const mailError = sendResult.error;
 
   let flushed = 0;
-  if (emailed) {
-    if (rowId !== null && process.env.DATABASE_URL) {
+  if (emailed && sql) {
+    if (rowId !== null) {
       try {
-        const { neon } = await import('@neondatabase/serverless');
-        const sql = neon(process.env.DATABASE_URL);
         await sql`UPDATE contact_messages SET emailed = true WHERE id = ${rowId}`;
       } catch {
         // The message is stored and sent; a stale flag is not worth failing over.
       }
     }
-    flushed = await flushBacklog(rowId);
+    flushed = await flushBacklog(sql, rowId);
   }
 
   // Only a message that reached neither the database nor the mailbox is a
