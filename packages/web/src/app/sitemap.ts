@@ -1,19 +1,8 @@
-import fs from 'node:fs';
-import path from 'node:path';
 import type { MetadataRoute } from 'next';
-import { getAllBots } from '@/lib/bots';
+import { getAllBots, botMtime } from '@/lib/bots';
 import { postList } from '@/app/blog/posts';
 
 const base = 'https://botskills.sh';
-const SEED = path.join(process.cwd(), '..', '..', 'seed-bots');
-
-function botMtime(slug: string): Date {
-  try {
-    return fs.statSync(path.join(SEED, slug, 'BOT.md')).mtime;
-  } catch {
-    return new Date();
-  }
-}
 
 // Blog URLs derive from postList; never hand-add blog entries here.
 export default function sitemap(): MetadataRoute.Sitemap {

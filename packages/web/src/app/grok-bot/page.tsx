@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getBoardRows } from '@/lib/board';
+import { Leaderboard } from '@/components/leaderboard';
 
 export const revalidate = 300;
-import { Leaderboard } from '@/components/leaderboard';
 
 export const metadata: Metadata = {
   title: 'Grok Bot Skills: Install Guide and Full List',

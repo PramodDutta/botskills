@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { getBoardRows } from '@/lib/board';
+import { Leaderboard } from '@/components/leaderboard';
 
 export const revalidate = 300;
-import { Leaderboard } from '@/components/leaderboard';
 
 export const metadata = {
   title: 'All Grok Bot Skills',
