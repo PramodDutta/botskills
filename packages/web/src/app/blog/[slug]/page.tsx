@@ -5,13 +5,16 @@ import { ArticleOffer } from '@/components/article-offer';
 import { posts } from '../posts';
 
 /**
- * Every article ends with four questions under a Frequently Asked Questions
- * heading, so the FAQ schema can be derived from the markdown instead of being
- * maintained by hand. Answers are the surface AI search engines quote, and they
- * are only quotable if they are marked up.
+ * Every article ends with four questions under a FAQ heading, so the FAQ schema
+ * can be derived from the markdown instead of being maintained by hand. Answers
+ * are the surface AI search engines quote, and they are only quotable if they
+ * are marked up. Two heading spellings are in use across the corpus; the gate
+ * checks the four questions, not the heading text, so accept both here.
  */
+const FAQ_HEADING = /\n## (?:Frequently Asked Questions|Common questions)\n/;
+
 function extractFaq(markdown: string): Array<{ q: string; a: string }> {
-  const section = markdown.split(/\n## Frequently Asked Questions\n/)[1];
+  const section = markdown.split(FAQ_HEADING)[1];
   if (!section) return [];
   // Split rather than match. A lookahead ending in `$` under the `m` flag
   // matches at the blank line after every question, so the answer capture came
