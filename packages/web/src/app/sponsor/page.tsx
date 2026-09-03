@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { FOUNDING_SLOTS } from '@/lib/sponsors';
+import { getAllBots } from '@/lib/bots';
+import { CONTACT_EMAIL } from '@/lib/site';
+import { postList } from '@/app/blog/posts';
 import { ContactForm } from '@/components/contact-form';
 
 export const metadata: Metadata = {
@@ -15,6 +18,10 @@ export const metadata: Metadata = {
 // site voice before anything renders. No scarcity claims, no invented counters,
 // and no traffic figure we cannot evidence.
 export default function SponsorPage() {
+  // Read from the catalogue and the post registry, never typed in: these two
+  // numbers went stale within a week the last time they were literals.
+  const botCount = getAllBots().length;
+  const articleCount = postList.length;
   return (
     <main className="wrap detail">
       <h1>Sponsor botskills.sh</h1>
@@ -28,14 +35,14 @@ export default function SponsorPage() {
         <b>Founding rate.</b> Rail card $99/mo. Marquee logo $29/mo. Promoted row and
         takeover by conversation. {FOUNDING_SLOTS} founding slots, and the rate is locked
         for twelve months from the day you take one. It goes up as the audience does. Email{' '}
-        <a href="mailto:contact@thetestingacademy.com">contact@thetestingacademy.com</a>{' '}
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>{' '}
         and the slot goes live within a day.
       </div>
 
       <h2>Send the message here</h2>
       <p>
-        Tell us which placement and where it should link, and we reply from
-        contact@thetestingacademy.com, usually within a day. Everything below is the
+        Tell us which placement and where it should link, and we reply from{' '}
+        {CONTACT_EMAIL}, usually within a day. Everything below is the
         detail: what each placement is, where it renders, and the impression maths so
         you can price it yourself. You do not need to read it first.
       </p>
@@ -75,8 +82,8 @@ export default function SponsorPage() {
             <td><b>Edge card</b></td>
             <td>Flipping card pinned to the left and right margins.</td>
             <td>
-              <b>Every page</b>, including all 119 articles. Desktop only, at 1420px and
-              wider.
+              <b>Every page</b>, including all {articleCount} articles. Desktop only, at
+              1420px and wider.
             </td>
             <td className="mono">ask</td>
           </tr>
@@ -147,13 +154,13 @@ share is 100 percent, not a fraction split with the other sponsors.`}</pre>
       <h2>Where the traffic stands today</h2>
       <p>
         Plainly, because you can check most of it yourself. The site launched on 25 August
-        2026. There are 37 bot listings and 119 articles. The sitemap is submitted and
+        2026. There are {botCount} bot listings and {articleCount} articles. The sitemap is submitted and
         Google has read it, and <b>nothing is indexed yet</b>, which is normal at this age
         and also means the honest impression figure right now is close to zero.
       </p>
       <p>
         So the founding rate is not a discount on a big number. It is the price of being
-        early on a site that has published <Link href="/blog">119 articles</Link> aimed at
+        early on a site that has published <Link href="/blog">{articleCount} articles</Link> aimed at
         people searching for exactly one thing: how to set a bot up. If that audience
         arrives, you hold $99 while it does. If it does not, you spent $99 a month and found
         out cheaply.
@@ -189,7 +196,7 @@ share is 100 percent, not a fraction split with the other sponsors.`}</pre>
       <ol>
         <li>
           Send the form above, or email{' '}
-          <a href="mailto:contact@thetestingacademy.com">contact@thetestingacademy.com</a>{' '}
+          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>{' '}
           directly, with the placement you want, your link, and one line of copy.
         </li>
         <li>
