@@ -5,9 +5,99 @@ import { NextResponse } from 'next/server';
 // a mail provider exists, and it means a provider outage loses nothing.
 const TO = 'contact@thetestingacademy.com';
 const PLACEMENTS = ['rail', 'marquee', 'edge', 'other'];
+const BACKLOG_LIMIT = 20;
 
 // Created once per cold start, not per request.
 let tableReady = false;
+
+type Enquiry = {
+  name: string;
+  email: string;
+  placement: string;
+  message: string;
+  receivedAt?: string;
+};
+
+// The single place that knows how to turn an enquiry into an email, so the live
+// submission and the backlog flush cannot drift apart.
+async function sendEnquiry(e: Enquiry): Promise<{ ok: boolean; error: string }> {
+  if (!process.env.RESEND_API_KEY) return { ok: false, error: 'no provider configured' };
+  try {
+    const { Resend } = await import('resend');
+    // Trimmed: a key pasted with a trailing newline reports as invalid,
+    // which looks identical to a wrong key and wastes an hour.
+    const resend = new Resend(process.env.RESEND_API_KEY.trim());
+    // FROM must be on a domain verified in Resend. Until botskills.sh is
+    // verified, onboarding@resend.dev is the address that works.
+    const from = (process.env.CONTACT_FROM ?? 'botskills.sh <onboarding@resend.dev>').trim();
+    const delayed = e.receivedAt ? ` [received ${e.receivedAt}]` : '';
+    const r = await resend.emails.send({
+      from,
+      to: [TO],
+      replyTo: e.email, // so a reply goes straight to the sender
+      subject: `botskills.sh enquiry (${e.placement}) from ${e.name}${delayed}`,
+      text: [
+        `Name:      ${e.name}`,
+        `Email:     ${e.email}`,
+        `Placement: ${e.placement}`,
+        ...(e.receivedAt ? [`Received:  ${e.receivedAt} (delivery was delayed)`] : []),
+        '',
+        e.message,
+        '',
+        '--',
+        'Sent from the form on https://botskills.sh/sponsor',
+      ].join('\n'),
+    });
+    return { ok: !r.error, error: r.error ? `${r.error.name}: ${r.error.message}` : '' };
+  } catch (err) {
+    return { ok: false, error: err instanceof Error ? `threw: ${err.message}` : 'threw' };
+  }
+}
+
+type BacklogRow = {
+  id: number;
+  name: string;
+  email: string;
+  placement: string;
+  message: string;
+  created_at: string;
+};
+
+// Anything that arrived while the mail provider was misconfigured is still in
+// the table with emailed = false. One successful send proves the provider works
+// again, so drain what is behind it rather than leaving those stranded forever.
+async function flushBacklog(excludeId: number | null): Promise<number> {
+  if (!process.env.DATABASE_URL) return 0;
+  let sent = 0;
+  try {
+    const { neon } = await import('@neondatabase/serverless');
+    const sql = neon(process.env.DATABASE_URL);
+    const rows = (await sql`
+      SELECT id, name, email, placement, message, created_at
+      FROM contact_messages
+      WHERE emailed = false AND id IS DISTINCT FROM ${excludeId}
+      ORDER BY created_at ASC
+      LIMIT ${BACKLOG_LIMIT}`) as BacklogRow[];
+    for (const row of rows) {
+      const r = await sendEnquiry({
+        name: row.name,
+        email: row.email,
+        placement: row.placement,
+        message: row.message,
+        receivedAt: String(row.created_at),
+      });
+      // The provider went bad again mid-drain. Stop rather than burning the
+      // rest of the backlog against a broken key; the next send retries them.
+      if (!r.ok) break;
+      await sql`UPDATE contact_messages SET emailed = true WHERE id = ${row.id}`;
+      sent += 1;
+    }
+  } catch {
+    // Backlog delivery is best effort. The live message already succeeded and
+    // the rows stay flagged unsent, so nothing is lost by giving up here.
+  }
+  return sent;
+}
 
 export async function POST(request: Request) {
   let name = '', email = '', message = '', placement = 'other', website = '';
@@ -63,49 +153,22 @@ export async function POST(request: Request) {
     }
   }
 
-  let emailed = false;
-  let mailError = '';
-  if (process.env.RESEND_API_KEY) {
-    try {
-      const { Resend } = await import('resend');
-      // Trimmed: a key pasted with a trailing newline reports as invalid,
-      // which looks identical to a wrong key and wastes an hour.
-      const resend = new Resend(process.env.RESEND_API_KEY.trim());
-      // FROM must be on a domain verified in Resend. Until botskills.sh is
-      // verified, onboarding@resend.dev is the address that works.
-      const from = (process.env.CONTACT_FROM ?? 'botskills.sh <onboarding@resend.dev>').trim();
-      const r = await resend.emails.send({
-        from,
-        to: [TO],
-        replyTo: email, // so a reply goes straight to the sender
-        subject: `botskills.sh enquiry (${placement}) from ${name}`,
-        text: [
-          `Name:      ${name}`,
-          `Email:     ${email}`,
-          `Placement: ${placement}`,
-          '',
-          message,
-          '',
-          '--',
-          'Sent from the form on https://botskills.sh/sponsor',
-        ].join('\n'),
-      });
-      emailed = !r.error;
-      if (r.error) mailError = `${r.error.name}: ${r.error.message}`;
-    } catch (e) {
-      emailed = false;
-      mailError = e instanceof Error ? `threw: ${e.message}` : 'threw';
-    }
-  }
+  const sendResult = await sendEnquiry({ name, email, placement, message });
+  const emailed = sendResult.ok;
+  const mailError = sendResult.error;
 
-  if (emailed && rowId !== null && process.env.DATABASE_URL) {
-    try {
-      const { neon } = await import('@neondatabase/serverless');
-      const sql = neon(process.env.DATABASE_URL);
-      await sql`UPDATE contact_messages SET emailed = true WHERE id = ${rowId}`;
-    } catch {
-      // The message is stored and sent; a stale flag is not worth failing over.
+  let flushed = 0;
+  if (emailed) {
+    if (rowId !== null && process.env.DATABASE_URL) {
+      try {
+        const { neon } = await import('@neondatabase/serverless');
+        const sql = neon(process.env.DATABASE_URL);
+        await sql`UPDATE contact_messages SET emailed = true WHERE id = ${rowId}`;
+      } catch {
+        // The message is stored and sent; a stale flag is not worth failing over.
+      }
     }
+    flushed = await flushBacklog(rowId);
   }
 
   // Only a message that reached neither the database nor the mailbox is a
@@ -113,5 +176,5 @@ export async function POST(request: Request) {
   if (!stored && !emailed) {
     return NextResponse.json({ ok: false, error: 'could not accept the message' }, { status: 503 });
   }
-  return NextResponse.json({ ok: true, stored, emailed, mailError });
+  return NextResponse.json({ ok: true, stored, emailed, flushed, mailError });
 }
