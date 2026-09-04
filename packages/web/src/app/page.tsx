@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { CATEGORIES } from '@botskills/shared';
 import { getAllBots } from '@/lib/bots';
-import { getBoardRows } from '@/lib/board';
+import { getBoardRows, startHereRows } from '@/lib/board';
 import { marqueeSponsors } from '@/lib/sponsors';
 import { Leaderboard } from '@/components/leaderboard';
 import { LiveNow } from '@/components/live-now';
@@ -19,7 +19,10 @@ export const metadata: Metadata = {
 export default async function HomePage() {
   const rows = await getBoardRows();
   const bots = getAllBots();
-  const recent = rows.slice(-4).reverse(); // stand-in for created_at until DB
+  const startHere = startHereRows(rows);
+  // Real movement only. With nothing copied this week the section stays hidden
+  // rather than inventing activity.
+  const moving = [...rows].filter((r) => r.delta7d > 0).sort((a, b) => b.delta7d - a.delta7d).slice(0, 4);
   const catCount = (id: string) => bots.filter((b) => b.category === id).length;
 
   const itemList = {
@@ -56,7 +59,7 @@ export default async function HomePage() {
         <div className="explore-row tools">
           <span className="explore-label">Popular tools:</span>
           {['Gmail', 'Slack', 'GitHub', 'Notion', 'X', 'Salesforce'].map((t) => (
-            <Link key={t} href={`/bots?q=${t.toLowerCase()}`}>{t}</Link>
+            <Link key={t} href={`/integrations/${t.toLowerCase()}`}>{t}</Link>
           ))}
         </div>
       </div>
@@ -81,23 +84,23 @@ export default async function HomePage() {
         </div>
       </div>
 
-      {/* Recently added: horizontal card row */}
+      {/* Start here: six curated bots a first visit can succeed with */}
       <section>
         <div className="shead">
-          <h2>Recently added</h2>
+          <h2>Start here</h2>
           <Link href="/bots" className="hint">View all →</Link>
         </div>
         <div className="cardrow">
-          {recent.map((r) => (
+          {startHere.map((r) => (
             <Link key={r.slug} href={`/bots/${r.slug}`} className="rcard">
               <span className="rcard-top">
                 <span className="av">{r.name.slice(0, 2).toUpperCase()}</span>
                 <span className="nm">{r.name}</span>
               </span>
               <span className={`tag tag-${r.category}`}>{r.category}</span>
+              <span className="ds">{r.description}</span>
               <span className="rstats mono">
-                <span><b>{r.copies.toLocaleString('en-US')}</b> copies</span>
-                <span><b>{r.delta7d >= 0 ? '+' : ''}{r.delta7d}</b> 7d</span>
+                {r.copies > 0 ? <span><b>{r.copies.toLocaleString('en-US')}</b> copies</span> : <span>new</span>}
                 <span><b>{r.runtimes.length}</b> runtime{r.runtimes.length > 1 ? 's' : ''}</span>
               </span>
             </Link>
@@ -128,21 +131,23 @@ export default async function HomePage() {
         </p>
       </section>
 
-      {/* Activity feed */}
-      <section>
-        <div className="shead"><h2>What&apos;s happening</h2></div>
-        <div className="feed">
-          {recent.map((r) => (
-            <div key={r.slug} className="fi">
-              <span className="when mono">new</span>
-              <span>
-                <b className="mono">@{r.contributor}</b> published{' '}
-                <Link href={`/bots/${r.slug}`} className="nm">{r.name}</Link>
-              </span>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Activity feed: only rendered when something actually moved this week */}
+      {moving.length > 0 && (
+        <section>
+          <div className="shead"><h2>Copied this week</h2></div>
+          <div className="feed">
+            {moving.map((r) => (
+              <div key={r.slug} className="fi">
+                <span className="when mono">+{r.delta7d}</span>
+                <span>
+                  <Link href={`/bots/${r.slug}`} className="nm">{r.name}</Link> by{' '}
+                  <b className="mono">@{r.contributor}</b>
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Category pills */}
       <section>

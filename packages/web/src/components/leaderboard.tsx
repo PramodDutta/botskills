@@ -179,7 +179,11 @@ export function Leaderboard({ rows }: { rows: BoardRow[] }) {
                     <td className="ints">
                       {r.integrations.slice(0, 3).map((i) => <IntegrationIcon key={i} id={i} />)}
                     </td>
-                    <td className="num mono">{r.copies.toLocaleString('en-US')} <span className="unit">copies</span></td>
+                    <td className="num mono">
+                      {r.copies > 0
+                        ? <>{r.copies.toLocaleString('en-US')} <span className="unit">copies</span></>
+                        : <span className="unit">new</span>}
+                    </td>
                     <td className="who mono">@{r.contributor}</td>
                     <td className="num"><VoteButton slug={r.slug} votes={r.votes} /></td>
                   </tr>
@@ -209,7 +213,7 @@ export function Leaderboard({ rows }: { rows: BoardRow[] }) {
               <span className={`tag tag-${r.category}`}>{r.category}</span>
               <span className="ds">{r.description}</span>
               <span className="rstats mono">
-                <span><b>{r.copies.toLocaleString('en-US')}</b> copies</span>
+                {r.copies > 0 ? <span><b>{r.copies.toLocaleString('en-US')}</b> copies</span> : <span>new</span>}
                 <span><b>{r.votes}</b> votes</span>
               </span>
             </Link>

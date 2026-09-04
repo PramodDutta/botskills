@@ -62,3 +62,20 @@ export async function getBoardRows(): Promise<BoardRow[]> {
   rows.slice(-2).forEach((r) => (r.isNew = true));
   return rows;
 }
+
+// Six bots a first-time visitor can succeed with in ten minutes. Curated on
+// purpose: with a young directory the copy counts are too thin to rank by, and a
+// row of zeros reads as a dead site. Replace with a data-driven pick once counts
+// are real. Order is the order they render.
+export const START_HERE = [
+  'email-purger',
+  'bot-advisor',
+  'chief-of-staff',
+  'inbox-triage',
+  'meeting-prep-brief',
+  'competitor-pricing-watch',
+];
+
+export function startHereRows(rows: BoardRow[]): BoardRow[] {
+  return START_HERE.map((slug) => rows.find((r) => r.slug === slug)).filter((r): r is BoardRow => !!r);
+}
