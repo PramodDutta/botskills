@@ -98,6 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <b>Browse</b>
                 <Link href="/">Leaderboard</Link>
                 <Link href="/bots">All bots</Link>
+                <Link href="/integrations">Integrations</Link>
                 <Link href="/blog">Blog</Link>
                 <Link href="/grok-bot-facts">Fact check</Link>
               </div>
