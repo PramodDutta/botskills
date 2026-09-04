@@ -93,3 +93,18 @@ e.g. https://docs.x.ai/grok-bot/faq.md
 - "Grok Bot reads SKILL.md / CLAUDE.md / MCP config" -> WRONG AS WRITTEN. That is Grok Build.
 - "Claude Code can consume Grok-authored skills" (reverse direction) -> UNVERIFIABLE.
 - "Routines save at team level" -> CONTRADICTED. Per-Bot, and they die with the Bot.
+
+### CORRECTION 2026-09-04: platforms (supersedes the Platforms section above)
+Checked docs.x.ai/grok-bot/faq and docs.x.ai/grok-bot/mobile on 2026-09-04. The mobile page carries "Last updated: September 2, 2026".
+- Desktop app: macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64, "as a .deb package, an .rpm package, or an AppImage"). faq
+- Companion app: "iPhone on iOS 18 or later", "Android 9 or later". "Download Grok Bot from the App Store on iPhone or Google Play on Android." faq, mobile
+- Verbatim: "iPad is not supported at initial launch." faq. Verbatim: "Grok Bot is currently designed for phones, not iPad." mobile
+- Verbatim: "Use the Grok Bot desktop app on macOS, Windows, or Linux, or the companion app on iOS or Android. The same Bots and conversations sync across your signed-in devices." faq
+- Mobile CAN: send text, dictate, attach a photo or file, mention another Bot or @everyone in a group, reply in a thread, react; create Bots and groups (New Agent, New Group Chat); edit a Bot profile, manage group members, pin or hide a conversation, delete a Bot; open the computer to watch work, take over for a password, two-factor code or CAPTCHA, inspect the screen, return control; inspect a routine's schedule, next run and instruction and use Active to pause or resume it; search prior work; manage account, plugins, Bot settings, Auto Review when available, appearance, usage and an App Store or Google Play subscription. mobile
+- Mobile CANNOT: "Editing the schedule or instruction, viewing run history, testing, and deleting a routine currently require the desktop app." "Some advanced desktop controls and teach-by-demonstration workflows are not available on mobile." mobile
+- Eligibility verbatim on the mobile page: "SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, or Cursor Teams Standard or Premium (sign in with your Cursor account)".
+- "Push delivery is still rolling out; in-app attention states remain available when push is not enabled for the account." mobile
+- "Work continues in the cloud when the app is closed." mobile
+
+DO NOT ASSERT any more: "no Linux desktop app", "no Android app", "iPhone is pause and resume only", "Supported: macOS, Windows, iPhone". iPad remains unsupported and that line stays.
+Corpus status on 2026-09-04: about 90 articles still carry one of the old lines. Rewritten: grok-bot-android-status. Dated correction callouts added: grok-bot-ipad-status, grok-bot-iphone-app, why-grok-bot-has-no-linux-app, grok-bot-supported-platforms, download-grok-bot. A scripted sweep of the rest is pending.

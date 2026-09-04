@@ -1,13 +1,15 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot on iPhone: What You Can Do, and What Still Needs Desktop',
+  title: 'Grok Bot on iPhone: What the App Does and What Still Needs Desktop',
   description:
-    'Grok Bot iPhone is iOS 18+, pause and resume only. Editing, history, testing, and deleting still need a Mac or Windows desktop, not the phone.',
+    'The Grok Bot iPhone app (iOS 18 or later) messages bots, approves steps, takes over the computer and pauses routines. Editing routines and run history still need desktop.',
   date: '2026-08-27',
   category: 'Guide',
   content: `
-# Grok Bot on iPhone: What You Can Do, and What Still Needs Desktop
+# Grok Bot on iPhone: What the App Does and What Still Needs Desktop
+
+> **Correction, 4 September 2026.** When this page was written the Grok Bot docs listed no Linux desktop app and no Android app, and described the iPhone app as pause and resume only. The docs now list a Linux desktop app (x64 and Arm64, as a .deb, an .rpm or an AppImage) and an Android companion app for Android 9 or later, and the phone app can create bots, message them, approve steps, take over the computer and pause routines. iPad is still not supported. Sentences below that say otherwise are out of date and are being rewritten. The current platform list is on [Grok Bot supported platforms](/blog/grok-bot-supported-platforms) and the Android app has [its own page](/blog/grok-bot-android-status).
 
 A looping standup on the 07:40 is how you meet the real Grok Bot iPhone app.
 Pause works. Resume works. Editing, history, testing, deleting, and

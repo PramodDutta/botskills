@@ -30,10 +30,10 @@ const WRONG: Row[] = [
     source: 'grok-bot/approvals-security-and-privacy',
   },
   {
-    claim: 'There is a Linux desktop app, or an Android app, or an iPad app',
+    claim: 'Grok Bot runs only on Mac, Windows and iPhone, with no Linux or Android app',
     truth:
-      'None of the three exist. Supported clients are macOS, Windows, and iPhone on iOS 18 or later. On iPhone you can pause and resume only.',
-    source: 'grok-bot/faq and grok-bot/mobile',
+      'Out of date since early September 2026. The FAQ now lists a Linux desktop app (x64 and Arm64, as a .deb, an .rpm or an AppImage) and an Android companion app for Android 9 or later on Google Play. iPad is still not supported. The phone app can create bots, message them, approve steps and take over the computer; editing a routine, run history, testing and deleting a routine still need the desktop app.',
+    source: 'grok-bot/faq and grok-bot/mobile, checked 4 September 2026',
   },
   {
     claim: 'The cheapest way in is $120, or $200, or $300 a month',
@@ -109,7 +109,7 @@ export function FactsPack() {
       <h2>The fact check</h2>
       <p className="ds">
         Sources are pages on <code className="mono">docs.x.ai</code> unless noted. Last
-        checked 29 August 2026. Product facts move, so re-check anything you are about to
+        checked 4 September 2026. Product facts move, so re-check anything you are about to
         put in front of a buyer.
       </p>
       <ol className="facts-list">

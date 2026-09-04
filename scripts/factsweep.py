@@ -16,8 +16,14 @@ CHECKS=[
   r'(set|setting|configure|configuring|enable|enabling|your)\s+(a\s+)?(spend(ing)?|budget|usage)\s+(cap|limit|ceiling)'),
  ('SPEND: allowance given a number',
   r'(allowance|included usage)[^.\n]{0,30}?(\$|\d{2,})'),
- ('PLATFORM: linux/android/ipad said to work',
-  r'(linux|android|ipad)[^.\n]{0,30}?(app|client|version|supported|available|works)'),
+ # Inverted on 2026-09-04: the docs now list a Linux desktop app and an Android
+ # companion app. The stale claim is that they do NOT exist. iPad is still out.
+ ('PLATFORM: linux/android said NOT to exist (stale since Sep 2026)',
+  r'(no|not an?|without an?|lacks an?)\s+(documented\s+|official\s+|supported\s+)?(linux|android)[^.\n]{0,25}?(app|client|build)|(linux|android)[^.\n]{0,40}?(is absent|not (a )?(documented|supported)|does not exist|has no client)'),
+ ('PLATFORM: ipad said to work',
+  r'ipad[^.\n]{0,30}?(app|client|version|supported|available|works)'),
+ ('PLATFORM: iphone said to be pause and resume only (stale since Sep 2026)',
+  r'pause and resume only'),
  ('MODEL: grok bot said to run a named model',
   r'grok bot[^.\n]{0,40}?(runs on|uses|powered by)[^.\n]{0,20}?grok-\d'),
  ('MODEL: a picker exists',

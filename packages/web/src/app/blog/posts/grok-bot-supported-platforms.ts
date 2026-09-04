@@ -1,13 +1,15 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot on Windows, Linux and iPad: What Actually Works',
+  title: 'Grok Bot on Windows, Linux, Android and iPad: What Works (Sep 2026)',
   description:
-    'Grok Bot Windows and Linux support, checked against the docs: what runs where, what the iPhone app cannot do, and the real options if your desktop is Linux.',
+    'Grok Bot supported platforms as of 4 September 2026: macOS, Windows and Linux desktop apps, iPhone and Android companion apps, iPad still unsupported. What runs where.',
   date: '2026-08-25',
   category: 'Reference',
   content: `
-# Grok Bot on Windows, Linux and iPad: What Actually Works
+# Grok Bot on Windows, Linux, Android and iPad: What Works (Sep 2026)
+
+> **Correction, 4 September 2026.** When this page was written the Grok Bot docs listed no Linux desktop app and no Android app, and described the iPhone app as pause and resume only. The docs now list a Linux desktop app (x64 and Arm64, as a .deb, an .rpm or an AppImage) and an Android companion app for Android 9 or later, and the phone app can create bots, message them, approve steps, take over the computer and pause routines. iPad is still not supported. Sentences below that say otherwise are out of date and are being rewritten. The Android app has [its own page](/blog/grok-bot-android-status) and the corrected source list is in the FAQ at docs.x.ai/grok-bot/faq.
 
 The question is "will it run on my machine", and it deserves a table before it
 deserves an essay. So here is the table, then the parts that are actually

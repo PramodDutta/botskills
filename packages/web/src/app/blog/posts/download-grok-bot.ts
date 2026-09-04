@@ -1,13 +1,15 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'How to Download Grok Bot and Confirm You Are Actually Eligible',
+  title: 'How to Download Grok Bot on Mac, Windows, Linux, iPhone or Android',
   description:
-    'Download Grok Bot for Mac, Windows, or iPhone only after you confirm eligibility. Linux, Android, and iPad have no client. The installer is not the hard part.',
+    'Download Grok Bot from x.ai/bot for Mac, Windows or Linux, or from the App Store or Google Play on phones, after confirming an eligible plan. iPad has no client.',
   date: '2026-08-27',
   category: 'Tutorial',
   content: `
-# How to Download Grok Bot and Confirm You Are Actually Eligible
+# How to Download Grok Bot on Mac, Windows, Linux, iPhone or Android
+
+> **Correction, 4 September 2026.** When this page was written the Grok Bot docs listed no Linux desktop app and no Android app, and described the iPhone app as pause and resume only. The docs now list a Linux desktop app (x64 and Arm64, as a .deb, an .rpm or an AppImage) and an Android companion app for Android 9 or later, and the phone app can create bots, message them, approve steps, take over the computer and pause routines. iPad is still not supported. Sentences below that say otherwise are out of date and are being rewritten. The current platform list is on [Grok Bot supported platforms](/blog/grok-bot-supported-platforms) and the Android app has [its own page](/blog/grok-bot-android-status).
 
 The Windows installer ran cleanly on Arm64, you signed in with the Cursor
 account you already pay for, and Grok Bot still looks like it never shipped.

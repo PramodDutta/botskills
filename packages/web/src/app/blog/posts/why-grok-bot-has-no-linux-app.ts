@@ -1,13 +1,15 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Why Grok Bot Has No Linux Desktop App (Even Though the Computer Is Linux)',
+  title: 'Grok Bot on Linux: There Is a Desktop App Now (Corrected)',
   description:
-    'Grok Bot linux searches hit a trap: the cloud computer is Linux, the desktop app is not. What that means for install, SSH fantasies, and workarounds that fail.',
+    'Correction: Grok Bot now ships a Linux desktop app for x64 and Arm64 as a .deb, an .rpm or an AppImage. What this page said before, what changed, and what to re-check.',
   date: '2026-08-27',
   category: 'Reference',
   content: `
-# Why Grok Bot Has No Linux Desktop App (Even Though the Computer Is Linux)
+# Grok Bot on Linux: There Is a Desktop App Now (Corrected)
+
+> **Correction, 4 September 2026.** When this page was written the Grok Bot docs listed no Linux desktop app and no Android app, and described the iPhone app as pause and resume only. The docs now list a Linux desktop app (x64 and Arm64, as a .deb, an .rpm or an AppImage) and an Android companion app for Android 9 or later, and the phone app can create bots, message them, approve steps, take over the computer and pause routines. iPad is still not supported. Sentences below that say otherwise are out of date and are being rewritten. The current platform list is on [Grok Bot supported platforms](/blog/grok-bot-supported-platforms) and the Android app has [its own page](/blog/grok-bot-android-status).
 
 A Linux-only engineer does not fail Grok Bot at the kernel. They fail it at
 the download button, then invent an SSH story the product never offered.

@@ -1,221 +1,226 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot on Android: What Is Documented, What Is Coming, What to Do Meanwhile',
+  title: 'Grok Bot on Android: The App Exists, Here Is What It Can Do',
   description:
-    'Grok Bot Android is not a documented client. Supported: macOS, Windows, iPhone iOS 18+ (pause and resume only). Do not wait on an Android promise we did not source.',
-  date: '2026-08-27',
+    'Grok Bot has an Android app on Google Play for Android 9 or later. It starts work, approves steps and pauses routines. Editing and run history still need the desktop app.',
+  date: '2026-09-04',
   category: 'Reference',
   content: `
-# Grok Bot on Android: What Is Documented, What Is Coming, What to Do Meanwhile
+# Grok Bot on Android: The App Exists, Here Is What It Can Do
 
-Play Store has no grok bot android listing you can install. What fills the gap is a rumor with a quarter attached, or a different Grok product wearing a similar name.
+Correction first, because an earlier version of this page said the opposite. When it was written in late August 2026 the Grok Bot FAQ listed macOS, Windows and iPhone and nothing else, and this site told Android owners not to wait for a client the docs had not promised. That was accurate on the day and it is wrong now.
 
-This page records three sentences and refuses a fourth. Documented: there is no Grok Bot Android app. Coming: this site will not invent a ship date, a beta wave, or a soon that docs.x.ai did not print. Meanwhile: edit, test, read history, and delete on a Mac or Windows desktop. Pause and resume from an iPhone on iOS 18 or later only if you already own that phone. The account cloud computer still runs after you close the laptop you borrowed.
+As of 4 September 2026 the [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) lists Android 9 or later as a supported platform, and the [mobile page](https://docs.x.ai/grok-bot/mobile), last updated 2 September 2026, says to download Grok Bot from Google Play on Android. The same page describes what the phone app can do, and it is a good deal more than the two verbs the old iPhone companion had.
 
-The [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) is the source for the supported list: macOS on Apple silicon and Intel, Windows on x64 and Arm64, iPhone on iOS 18 or later. Android is absent. iPad is absent. Linux desktop is absent. A store search does not amend that list.
+This page is the corrected reference: what the Android app is, what it can and cannot do, how it fits beside the desktop app, and how an Android-only founder runs a week on it. Everything below comes from those two docs pages. Where they are silent, this page says so rather than guessing.
 
-This is not [why Grok Bot has no Linux desktop app](/blog/why-grok-bot-has-no-linux-app). That page exists because the worker is a managed Linux virtual machine and people hear an installer. Android has no such naming collision. This is not [Grok Bot on iPhone](/blog/grok-bot-iphone-app). That page exists because a companion client shipped, with two verbs. Android did not ship those two verbs. If you only own a Pixel, you own neither the desk console nor the pocket freeze.
+## Install it from Google Play, and treat anything else as unofficial
 
-## Treat grok bot android as a missing client, never a delayed store listing
+The documented path is one line: download Grok Bot from Google Play on Android. That is the whole install story and it is worth being strict about, because for a few weeks the store had no listing and the gap filled with wrappers and sideload links using the name.
 
-A delayed listing is a product that exists, waiting on a store review. A missing client is a product the vendor did not put on the supported list. Grok Bot Android is the second thing. People type grok bot android, see empty results or a chat app with a similar badge, and assume the bot build is one review cycle away. The FAQ describes three families of client and stops.
+Those files did not become official when the real app shipped. If you installed something called grok-bot from outside the store during the gap, treat it as unknown software that may hold your credentials: uninstall it, rotate anything you signed into through it, and install the store listing. The [download page](/blog/download-grok-bot) covers the same rule for desktop, where x.ai/bot is the only source.
 
-Confirm any Play Store row on the vendor's current page before you treat it as this product. Grok the chatbot and Grok Bot are not the same surface ([Grok Bot vs Grok the chatbot](/blog/grok-bot-vs-grok-the-chatbot)). If the page you opened does not match [how to download Grok Bot](/blog/download-grok-bot), you did not find Grok Bot.
-
-| What you opened | What it can be | What it does not prove |
+| What you found | What it is | What to do |
 |---|---|---|
-| Play Store search for grok bot android | Empty, or a different Grok-branded app | That a Grok Bot Android client exists |
-| A dated social post | Someone's guess | A change to docs.x.ai |
-| An APK titled grok-bot | Unofficial software | A supported installer |
-| A screenshot of a phone pause control | Often the iPhone companion, cropped | That Android gained those two verbs |
-| The FAQ supported list | macOS, Windows, iPhone iOS 18+ | Nothing about a hidden Android build |
+| Grok Bot on Google Play | The documented Android client | Install it |
+| An APK named grok-bot from a forum | Unofficial software | Do not install; rotate credentials if you did |
+| Grok, the chatbot app | A different product | Fine to keep, but it is not this |
+| A dated social post about Android | Old news, or a guess | Read the mobile page instead |
 
-The last row is the only one that can move this page. Until it names Android, treat every other row as noise. Do not sideload a file that claims to be the missing client, and do not paste Cursor credentials into unofficial wrappers this site will not name.
+The third row still catches people. Grok the chatbot and Grok Bot are separate products with separate apps, and the store search for one returns the other. The listing you want is the one whose description talks about Bots, routines and a shared computer.
 
-## Pin the documented no to the FAQ before you open a rumor tab
+## Check the two gates before you blame the app
 
-Write the supported list on a card you can see while the rumor tab loads.
+Two requirements sit in front of the install, and both are documented on the mobile page.
 
-macOS, Apple silicon: yes, full desktop. macOS, Intel: yes, full desktop. Windows x64: yes. Windows Arm64: yes. iPhone, iOS 18 or later: yes, pause and resume only. Linux desktop: no. Android: no. iPad: no.
+The phone needs Android 9 or later. The docs do not list device makes, screen sizes or anything about tablets beyond one sentence, which is that Grok Bot is designed for phones, not iPad. An Android tablet is not mentioned at all, so treat it as undocumented rather than supported.
 
-Those rows come from the FAQ. The Linux desktop no is repeated on [teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises) as a direct question with a flat no. Android is simply not in the list. Absence is the documented no. A blog that says mobile support might mean iPhone. A screenshot of a phone might be iOS. Read the FAQ row, then the rumor.
+The account needs an eligible plan. The mobile page names them: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, or Cursor Teams Standard or Premium. Cursor Hobby and Cursor Pro are not on the list. If you are choosing a plan for the first time, [the cheapest way into Grok Bot](/blog/cheapest-way-into-grok-bot) is the arithmetic, and Cursor Pro+ at $60 a month is the cheapest documented paid path. A one-time trial also exists.
 
-The [supported platforms](/blog/grok-bot-supported-platforms) page is the grid. This page is the Android-shaped hole, plus the week you still have to run.
+An installed app on an ineligible account is an installed app that will not let you in. Confirm the plan on the invoice, not the product name, before you spend an evening on the install.
 
-Eligibility is a separate gate. SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, Cursor Teams Standard, Cursor Teams Premium, and a one-time trial can include Grok Bot. Cursor Hobby and Cursor Pro at $20 do not. SuperGrok at $30 does not. Cheapest paid path, as of the pricing pages we checked: Cursor Pro+ at $60 a month. Confirm the current vendor pages before you spend. A Windows box with Hobby is still not access. See [the cheapest way into Grok Bot](/blog/cheapest-way-into-grok-bot) and the [free trial](/blog/grok-bot-free-trial).
+## Sign in, take the tour, and wait for the computer once
 
-## Refuse every ship date that has no docs.x.ai citation
+The documented first run is short. Open Grok Bot, choose Login with Cursor, finish the authentication in the browser, and return to the app. New users get a first-run tour, choose a first Bot, and wait while the shared computer is set up. Existing users land on their synced Bot list.
 
-The title of this article contains the phrase what is coming because that is the query. The answer is not a calendar.
+That last sentence is the important one. The phone does not get its own bots or its own computer. It connects to the same Bots, conversations, routines, connectors and shared cloud computer as the desktop app, and the same Bots and conversations sync across every signed-in device. Whatever you built at a desk is already on the phone when you sign in.
 
-This page will not tell you Android is coming. It will not guess a quarter. It will not treat eligibility widening as a platform widening. On 21 August 2026 the product opened to more SuperGrok and Cursor plans. That change added billing paths. It did not add an Android client.
+Enable notifications if you want to know when a Bot has a result, a question or an approval request. The docs are honest about the state of this: push delivery is still rolling out, and in-app attention states remain available when push is not enabled for the account. In plain terms, do not build a workflow that depends on the phone buzzing until you have seen it buzz.
 
-A ship date that matters would look like this: the FAQ supported list gains a row that says Android, with a qualifier you can design around, the way iPhone is qualified as pause and resume only. Until that sentence exists, every date you see is unsourced relative to this site. Unsourced is not impossible. It is unusable for planning.
+## Sort every job into phone, desktop, or cloud computer
 
-People ask for a hedge: not announced, but likely. A hedge is still a date you will staff a week against. If you want to wait, wait because you refuse a second operating system, not because an essay implied a Pixel build is in flight. Screenshots and leaks are not a path. If the FAQ later adds Android, that sentence becomes the source.
+The useful mental model has three machines, and the docs describe the split cleanly.
 
-## Keep the Pixel as a phone and the bot computer as a cloud Linux VM
-
-The bot does not run on the silicon in your pocket, and it would not run there if an Android client existed. Grok Bot work happens on a persistent cloud computer assigned to your user account, not to one bot ([computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)). That computer is a managed Linux virtual machine. The bot process runs as a non-root user. Cookies, sessions, files, and command-line credentials are shared across every bot on the account. Screens are not security boundaries ([approvals, security, and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)).
-
-The cloud box does not care whether you are holding Android, iPhone, or a closed ThinkPad. It cares whether a supported client told it to start, pause, or wait on an approval. Research, file writes, and scheduled routines do not need the Pixel awake. Creating, editing, testing, reading history, and deleting still need a desktop. The worker can exist. You cannot author it from the phone.
-
-Closing a laptop does not stop background cloud work. The [closed-laptop page](/blog/grok-bot-runs-with-laptop-closed) is that split. You needed the borrowed hour to define the bot, not to keep it breathing. Deleting a bot deletes its routines and does not wipe shared-computer files or sessions. Isolation is not a phone setting. See [what Grok Bot actually isolates](/blog/grok-bot-shared-computer-security).
-
-## Do every edit, test, history read, and delete on a borrowed Mac or Windows box
-
-Meanwhile starts with a desk you do not have to love. Creating, editing, testing, reading history, and deleting need a desktop client. That is the documented split on the [mobile page](https://docs.x.ai/grok-bot/mobile), written for iPhone, and it applies twice as hard when your pocket is not a client at all.
-
-| Action | Pixel | Borrowed Mac or Windows | iPhone iOS 18, if you already own one | Cloud computer |
-|---|---|---|---|---|
-| Create, edit, test, history, delete | No | Yes | No | Not a client |
-| Pause and resume | No | Yes | Yes, those two verbs only | Keeps running until told |
-| Browse, files, CLI | No | Lid can close | Not required | Yes |
-| Send with Require Approval | Cannot approve | Can approve or deny | Not a documented phone job | Waits if set to ask |
-
-Borrow a Mac or a Windows PC you are allowed to install on. Official desktop path: [x.ai/bot](https://x.ai/bot). An hour a week is enough: paste a charter, connect the least surface you can, set send to require approval, run a test that can fail, leave.
-
-Teach by demonstration records visible computer interaction for up to ten minutes, no microphone, a draft skill, browser workflows only, unavailable on iPhone ([skills, routines and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations)), and unavailable on Android because Android is not a client. Max fifty routines per bot, twenty run records, nothing team-level.
-
-[Inbox Triage](/bots/inbox-triage) drafts and never sends. [Lead Scout](/bots/lead-scout) ranks and never contacts anyone. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) packs a morning document and never sends a message. None of those required Android.
-
-## Add iPhone pause only when you already hold an iPhone on iOS 18
-
-Do not buy an iPhone as a Grok Bot strategy. The companion is two verbs, not a workstation, and it does not replace the desktop you still need.
-
-If you already own an iPhone running iOS 18 or later, you can pause and resume a routine from that phone. You cannot edit, read history, test, or delete. Teach by demonstration stays off that phone. Older iOS is not a limited mode. It is outside the list. Check Settings -> General -> About before you assume the install is access.
-
-That pocket freeze is useful when a loop starts away from the borrowed desk. It is useless as a plan to skip Windows. Pause does not reverse work already completed. An approval controls the proposed action. It does not undo a send that already left.
-
-If you do not own an iPhone, you have no pocket control at all. That is the Android-only case this page is for. You pause at the next Mac or Windows session, or you never start a job that requires an emergency brake from a train. Require Approval on send, publish, purchase, and delete is how you survive the nights you cannot pause. Do not treat a partner's lock screen as your ops console.
-
-## Shut the borrowed lid and still expect the cloud computer to keep working
-
-Cloud work continues after you close the app, the laptop, or an iPhone. That is the FAQ answer, and the [laptop-closed article](/blog/grok-bot-runs-with-laptop-closed) is the operating manual. Background turns keep going. Scheduled routines fire on the product clock, not on your lid. Local-computer actions still need that computer awake. Password, passkey, 2FA, CAPTCHA, and payment checks still need a human on the cloud desktop. Send still waits if you set it to ask.
-
-For an Android-only founder, that is the difference between sitting in coworking all night and needing forty minutes to author, then going home. The Pixel cannot watch the run and cannot stop it. Design the job so going home is safe: reversible work may finish, irreversible work waits.
-
-There is no Grok Bot-specific spend cap. Subscriptions include a weekly usage allowance, then on-demand billed from model and token cost. No published dollar figure belongs here. Price the plan on the [cost page](/blog/grok-bot-cost). Put repeating jobs on [Grok Bot scheduling](/blog/grok-bot-scheduling). There is no audit view of bot actions yet.
-
-## Walk an Android-only founder from an empty Play Store to a desk they do not own
-
-Kiran is a founder whose only personal computer is a Pixel. Coworking has Windows PCs. A used ThinkPad would cost less than a month of SuperGrok Plus, but Kiran has not bought it yet because the grok bot android search felt like it should resolve first.
-
-They lose Monday to Play Store and a social post that says Android soon. Wednesday they read the FAQ, stop waiting for a date this page will not print, and take a coworking Windows PC for fifty minutes. They confirm Pro+ or the one-time trial, install from x.ai/bot, and create Inbox Triage (never send) and Lead Scout (never contact). Both charters say there is no Android client and no iPhone, so nothing irreversible happens without Require Approval. Thursday the cloud computer keeps researching. Friday a looping selector gets paused at the desk.
-
-| Day | What Kiran tried | What actually happened | What to copy |
+| Job | Android app | Desktop app | Cloud computer |
 |---|---|---|---|
-| Monday | Play Store for grok bot android | No Grok Bot client | Stop searching stores |
-| Tuesday | A dated rumor tab | No FAQ change | Refuse the date |
-| Wednesday | Coworking Windows hour | Two bots, never-send, a failing test caught | Borrow a desk for authorship |
-| Thursday | Pixel in a bag, lid elsewhere | Cloud work continued, sends waited | Design for no pocket control |
-| Friday | Wanted to edit on the train | Could not | Park edits until the next desk hour |
+| Message a Bot, dictate, attach a photo or file | Yes | Yes | Not a client |
+| Create a Bot or a group | Yes | Yes | |
+| Edit a Bot profile, delete a Bot | Yes | Yes | |
+| Approve or deny a step | Yes | Yes | Waits if set to ask |
+| Watch the computer, take over for a password, 2FA or CAPTCHA | Yes | Yes | The screen being watched |
+| Pause or resume a routine | Yes | Yes | Keeps running until told |
+| Edit a routine schedule or instruction | No | Yes | |
+| View run history, test a routine, delete a routine | No | Yes | |
+| Teach by demonstration | No | Yes | |
+| Do the actual work | No | No | Yes |
 
-Kiran is not a Linux engineer with an SSH story and not an iPhone commuter with pause already in a pocket. Kiran is Android-only, tempted to wait, still able to run a founder week if a supported desk exists. If coworking Windows is forbidden, a used ThinkPad is the meanwhile hardware. Confirm eligibility before you buy.
+The bottom row is the one that makes the rest make sense. The bots do not run on the phone and never did. They run on a persistent cloud computer assigned to your account, and the phone is a control surface for it. Work continues in the cloud when the app is closed, which the mobile page states outright.
 
-## Paste a founder charter that never treats a Pixel as a Grok Bot console
+## Start work from the train and let the cloud carry it
 
-Write the missing client into the bot, or the bot will assume you can tap pause on the device you actually carry.
+From a conversation, the documented actions are: send text, dictate a message, take or attach a photo, choose an image or file, mention another Bot or @everyone in a group, reply in a thread, and react to a message. Drafts are saved per conversation when you navigate away.
 
-Kiran pastes this on Wednesday, on the Windows box, before the first live connector.
+That is enough to start real work from a phone. Photograph a whiteboard and hand it to a bot. Dictate the brief for a research task. Drop a PDF into a conversation and ask for the three numbers that matter. The bot picks the job up on the shared computer and the result arrives in the same thread whether you are still looking at it or not.
+
+What you cannot do from the conversation is change the rules the bot operates under, and that is deliberate. A charter is authored and edited where you can read the whole thing and test it, which in the current docs means the desktop app for anything routine-shaped.
+
+## Approve, deny, or take the wheel when the computer stops
+
+The approval flow is where the Android app earns its place for anyone running bots with real access.
+
+A bot set to require approval on a send, a purchase or a delete stops at that step and waits. On the phone you can see the request and answer it. The docs also describe opening the computer from a conversation to watch browser or desktop work, take over for a password, a two-factor code or a CAPTCHA, inspect the current screen, and return control to the Bot. Those are precisely the moments that used to strand a bot until you got back to a desk.
+
+Two cautions that the docs make and this page repeats. The screen you are looking at is the same shared computer used by every Bot on your account, so anything you type into it is available to all of them; the [shared computer piece](/blog/grok-bot-shared-computer-security) covers what that means. And an approval controls the proposed action; it does not reverse work already completed. Approving from a train is convenient. Approving without reading is how a bot sends the wrong thing with your blessing.
+
+## Pause a routine from the phone, and know what you cannot touch there
+
+Open a Bot's profile to review its routines. You can inspect the schedule, the next run and the instruction, then use Active to pause or resume. That is the pocket freeze the old iPhone-only companion offered, now on Android too.
+
+The line the docs draw immediately after is the one to remember: editing the schedule or instruction, viewing run history, testing, and deleting a routine currently require the desktop app.
+
+| You want to | On the phone | At a desk |
+|---|---|---|
+| Stop a routine that is misbehaving | Toggle Active off | Same, plus read the run history |
+| See why it misbehaved | Read the conversation only | Open the run records |
+| Change what it does | Not available | Edit the instruction |
+| Change when it runs | Not available | Edit the schedule |
+| Try the fix once | Not available | Test |
+| Retire it | Not available | Delete the routine |
+
+So the phone is a brake, not a workshop. If a routine loops at eleven at night, pause it from bed and diagnose in the morning at a desktop. [How to schedule a routine](/blog/how-to-schedule-a-grok-bot-routine) covers the limits that apply either way: a maximum of fifty routines per Bot and twenty run records kept per routine, none of it team-level.
+
+## Create a bot on the phone, then finish it at a desk
+
+The + control on the home screen offers New Agent or New Group Chat. You can also edit a Bot profile, manage group members, pin or hide a conversation, and delete a Bot, all from the phone.
+
+That means a bot can be born on Android. What it cannot get on Android is a tested routine, because testing and editing routines are desktop jobs. The workable pattern is to create the Bot and paste its charter from the phone, use it conversationally for a day to see whether the charter holds, and only then sit at a desktop to attach a schedule and run a test that can fail.
+
+Deleting from the phone deserves one warning that comes from the security docs rather than the mobile page. Deleting a Bot deletes its routines and does not remove shared-computer files or browser sessions. If a bot was signed into something, revoke that login yourself before you tap delete, on any device.
+
+## Keep teach by demonstration on the desktop
+
+Teach by demonstration records visible computer interaction to draft a skill. The mobile page says that some advanced desktop controls and teach-by-demonstration workflows are not available on mobile, and that you should use the desktop app when a flow requires them.
+
+This is not a phone limitation you can route around. A demonstration needs you driving the shared computer with a full desktop client for up to ten minutes, and the phone's take-over view is built for unblocking a step, not recording a workflow. Plan demonstrations for desk time and treat the phone as the place you check whether the resulting skill is behaving.
+
+## Walk an Android-only founder through the first week
+
+Kiran is a founder whose only personal device is a Pixel, with occasional access to a coworking Windows machine. On the old docs Kiran had no client at all. On the new ones the week looks different.
+
+Monday, Kiran installs Grok Bot from Google Play, signs in with a Cursor Pro+ account, takes the tour, and waits for the shared computer to set up. Tuesday, Kiran creates two bots from the phone and pastes charters written in a notes app: [Inbox Triage](/bots/inbox-triage), which drafts and never sends, and [Lead Scout](/bots/lead-scout), which ranks and never contacts anyone. Both are used conversationally for two days. Thursday, at the coworking desk, Kiran attaches a morning schedule to each, runs a test that is designed to fail, and reads the run records. Friday, a selector loop starts at 22:40 and Kiran pauses it from the sofa.
+
+| Day | Where | What happened | What to copy |
+|---|---|---|---|
+| Monday | Phone | Install, sign in, tour, computer set up | Confirm the plan first |
+| Tuesday | Phone | Two bots created, charters pasted | Never-send, never-contact boundaries |
+| Wednesday | Phone | Conversational use, one approval answered | Read before approving |
+| Thursday | Desk | Schedules attached, tests run, history read | Routines are desk work |
+| Friday | Phone | Looping routine paused from bed | The phone is the brake |
+
+The difference from the old week is not that the desk disappeared. It is that the desk shrank to the two things that need it: editing routines and reading history. Everything else moved into a pocket.
+
+## Paste a charter that treats the phone as a control, not a console
+
+Write the phone into the bot, or the bot will assume every approval it receives was read carefully.
 
 \`\`\`text
 Name: Kiran founder desk bots
-You run on the account cloud computer, a managed Linux VM, as a non-root user.
-You do not run on my Pixel. There is no Grok Bot Android client.
-I have no iPhone pause. If I am away, I cannot freeze you from a phone.
-Never send, reply, post, purchase, or delete without Require Approval.
+You run on the account's shared cloud computer, not on my phone.
+I usually read your requests on Android, on the move, between other things.
+Before any send, purchase, publish or delete: stop, state the exact action in
+one line, and wait for approval. Assume I am reading on a small screen.
+If an approval arrives in under five seconds of you asking, treat it as a
+misclick: restate the action and ask once more.
 Never contact a lead. Rank and brief only.
-Never treat a phone notification, a chat ping, or an Android intent as approval.
-If a step is irreversible and I am not at a Mac or Windows client, stop and wait.
 Inbox: classify and draft. Leave every draft unsent.
-Leads: public pages only. Write a brief I will read at the next desk hour.
+If a step needs a password, a two-factor code or a CAPTCHA, stop and wait.
+I can pause you from the phone but I cannot edit you there. If you are unsure
+what an instruction means, do nothing and say so; I will fix it at a desk.
 Do not use sibling bots as isolation. Screens are not a security boundary.
-Max fifty routines. I will read history only on desktop. Keep runs reconstructable
-from files I can open, because there is no audit view of your actions yet.
+Keep runs reconstructable from files I can open, because there is no audit
+view of your actions yet.
 \`\`\`
 
-The boundary is never-send plus no-phone-freeze. [Mail Cleanup Assistant](/bots/mail-cleanup-assistant) never sends and never permanently deletes. [Churn Watch](/bots/churn-watch) reports internally and never pings the customer. Put Require Approval on actions that leave the building. On desktop, Allow once continues and Deny blocks. If both Require Approval and Always Allow match, Require Approval wins. Draw the line on reversibility ([approval rules](/blog/grok-bot-approval-rules-reversibility)). A charter is not isolation. Shared cookies still exist.
+The five-second line is the one specific to phones. It costs one extra confirmation on the rare fast tap and it prevents the approval-by-thumb that a small screen invites. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) packs a morning document and never sends a message, which is the right shape for anything you will read on a phone first.
 
-## Answer the claim that waiting for Android costs less than a used Windows laptop
+## Answer the claim that the phone app makes the desktop optional
 
-The strongest objection to this page is not a store listing. It is cash and calendar.
+The strongest version of the objection: create, message, approve, take over, pause, delete. That is most of the product. Why keep a desktop at all?
 
-The objector says: Grok Bot is in beta, clients already expanded on 21 August 2026, a used Windows box is hardware for a product that might add Android, so waiting is free and buying is not. Parts of that are true. The supported list is a product decision, not physics. If your honest answer is I will wait, you are choosing not to use Grok Bot this month. Say that plainly.
+Because the docs still put four jobs on the desktop, and they are the four that decide whether a bot is trustworthy: editing a routine's instruction, editing its schedule, testing it, and reading its run history. Those are the jobs where you find out that a bot has been doing the wrong thing for a week. A roster you can operate from a phone but cannot audit from a phone is a roster you audit less often.
 
-| Option | What you spend | What you get this week | Pick it when |
-|---|---|---|---|
-| Wait for Android | Calendar time, no sourced date | No client | You refuse a second OS and accept no Grok Bot |
-| Borrow a desk | An hour and a favor | Full desktop while seated | You can reach Mac or Windows |
-| Buy used Windows | Hardware you can resell | A desk you control | Borrowing is unreliable and the plan already includes Grok Bot |
-| Use iPhone pause | Nothing extra, if you already own iOS 18 | Pocket freeze only | The phone is already yours. Do not buy one for this |
+There is also teach by demonstration, and the docs' own phrase, some advanced desktop controls, which this page will not expand into a list the docs did not print.
 
-Three things keep the wait option from being a plan that still ships founder work. First, this page did not source an Android client, so waiting has no expected value you can put on a calendar. The unsourced date is how waiting becomes the most expensive option while looking free. Second, the only shipped phone client is iPhone pause and resume. Editing still needs a desktop. Do not wait for a Pixel studio the FAQ never listed. Third, unofficial APKs are a credential incident, not a cheaper client.
+| Claim | What holds | What does not |
+|---|---|---|
+| I can run everything from Android | Daily operation, yes | Editing, testing, history, demonstrations |
+| I never need to sit at a desk | Weeks with no changes, plausibly | The week a routine needs fixing |
+| The phone is a full client now | For conversations and approvals | For authoring |
 
-Grant the cash point. Refuse to staff Kiran's week on a client the FAQ does not list. Borrow, buy a box you can resell, or wait and do not call waiting a Grok Bot setup.
+Grant the objection most of its ground. A founder who authors on Sundays at a desk and operates from a phone all week is using the product as documented. A founder who never opens the desktop app is running routines nobody has tested since they were written.
 
-## Map each meanwhile failure to the assumption that produced it
-
-Every bad week on this query starts with one assumption. Name it or you will repeat it.
+## Map each failure to the assumption behind it
 
 | Symptom | Assumption | Fix |
 |---|---|---|
-| Empty Play Store, then a rumor hole | A listing is late, not missing | Read the FAQ row. Android is not on it |
-| Installed an APK that used the name | Unofficial equals official | Uninstall. Rotate credentials. Use x.ai/bot on a real desktop |
-| Pixel cannot pause a looping routine | The phone I carry must be a console | Design jobs that wait on approval. Pause at the next desk |
-| Bought a laptop, still blocked at sign-in | The installer is the gate | Confirm Pro+, Ultra, Teams, SuperGrok Plus, Heavy, or the trial |
-| Closed coworking, thought the bot died | Work runs on the PC in front of me | Cloud work continues. Approvals still wait |
-| Waited for the August mobile drop | Eligibility widening equals a new OS | 21 August 2026 added plans, not Android |
+| Installed, cannot get past sign-in | The install is the gate | The plan is the gate; confirm Pro+, Ultra, Teams, SuperGrok Plus or Heavy |
+| Cannot find the edit button for a routine | Everything is on the phone now | Editing, history, testing and deleting are desktop jobs |
+| Approved a send you did not mean to | A tap on a small screen is a decision | Add the restate-and-ask-again line to the charter |
+| Phone never buzzed for an approval | Push is guaranteed | Push is still rolling out; check in-app attention states |
+| Typed a password on the take-over screen and now every bot has it | The screen belongs to one bot | The computer is shared across the account; revoke and rotate |
+| Deleted a bot from the phone, sessions survived | Delete cleans up | Revoke logins before deleting, on any device |
 
-The looping-routine row is the expensive one. iPhone users can freeze from a pocket. You cannot. If a job can spam a channel, it is not a job you leave running overnight without a human at a supported client. [Standup Scribe](/bots/standup-scribe) posting to your own DM, never to a shared channel, is the shape. Supported download paths are x.ai/bot for desktop and the iOS App Store for iPhone on iOS 18 or later. Everything else is other software.
+The password row is the expensive one and it is not new. The take-over view is the same shared computer the docs describe everywhere else. The convenience of unblocking a two-factor prompt from a bus does not change what that computer remembers afterwards.
 
-## Fail a Pixel-edit test on purpose before you trust the workaround
+## Watch the parts that are still moving
 
-A check that cannot fail is a pep talk. Run these until one hurts.
+Two things in the mobile docs are explicitly in flux, and both belong in your planning rather than your assumptions.
 
-Sit on the Pixel. Try to create a routine, edit a charter, open run history, test, or delete. You should not be able to. If you found a Grok Bot Android control surface that can do those jobs, this article is stale: re-read the current FAQ. If you cannot, the missing client is still missing. That failure is the test passing.
+Push notifications are rolling out. Until you have seen one arrive on your own phone, treat approvals as something you check for rather than something that finds you. In-app attention states are the fallback the docs name.
 
-Start a long read-only run from a borrowed Mac or Windows box. Close that session. Go home with the Pixel. Come back. The cloud work should have continued. If it died with the coworking logout, you were running something local. Reread [what a Grok Bot is](/blog/what-is-a-grok-bot). Leave a send behind Require Approval and confirm nothing left the building overnight.
+Auto Review is listed in Settings as configurable when available. This page does not describe it, because the docs page checked for this article does not describe it beyond that phrase. When it lands, it changes the approval story on the phone, and this page will be updated.
 
-If you own an iPhone on iOS 18, pause a dummy routine from that phone, then try to edit it there. Pause should work. Edit should not. If you do not own that phone, treat pocket control as absent. Open the FAQ supported list. If Android is still absent, do not write a ship date in your notes. Confirm the plan includes Grok Bot before the next hardware purchase. Privacy Mode (Legacy) blocks Grok Bot entirely. No client on any OS helps.
+Grok Bot is in beta. The platform list changed under this very page inside ten days. The habit that survives that is the one this site keeps repeating: date every claim, cite the docs page it came from, and re-read that page before you build a week on it.
 
-## Stop borrowing a desk when the missing client is not the real blocker
+## Send iPad and Linux questions to the pages that own them
 
-The Android hole is real. It is not always the reason the product is a bad fit.
+If you landed here with an Android tablet, the docs say Grok Bot is designed for phones and do not mention Android tablets at all; [the iPad page](/blog/grok-bot-ipad-status) covers the tablet situation, which is unsupported on Apple's side and undocumented on Android's.
 
-If you cannot touch a Mac or Windows machine, and you refuse to buy or borrow one, Grok Bot is not available to you. Waiting on Android does not change that this month. Self-hosting some other agent stack on your own metal is a different product.
+If you landed here because someone said the computer is Linux, that is true and separate: the shared cloud computer is a managed Linux machine, and there is now also a Linux desktop app, as a .deb, an .rpm or an AppImage. The full grid is on [supported platforms](/blog/grok-bot-supported-platforms). If something on the phone is not behaving, [Grok Bot troubleshooting](/blog/grok-bot-troubleshooting) is the fault-finding list, and [the iPhone page](/blog/grok-bot-iphone-app) describes the same companion app from the other side.
 
-If the job you wanted is teach-by-demonstration on the commute, the blocker is larger than Android. Demonstration is already unavailable on iPhone. If you need an audit view of bot actions, it does not exist yet. A phone would not create one. If you needed per-bot credential isolation, you will not get it by switching phones. All bots share one computer. See the [safety checklist](/blog/grok-bot-safety-checklist) and [least privilege](/blog/least-privilege-bots). If Cursor Hobby is the plan you will not leave, no store icon installs Grok Bot.
+## When this page stops applying
 
-Borrowing a desk is the right plan when the only missing piece was a Play Store icon and you can sit at Windows or macOS for an hour. Know which case you are in.
+This page was checked against docs.x.ai/grok-bot/faq and docs.x.ai/grok-bot/mobile on 4 September 2026. The mobile page carried a last-updated date of 2 September 2026. If the mobile page you are reading is newer than that, it wins.
 
-## Send Linux naming collisions and iPhone companion limits to the pages that own them
-
-If you landed here because someone said the computer is Linux, so my phone should work, you mixed three machines. The worker is a managed Linux VM. The desktop clients are macOS and Windows. The only phone client is iPhone. Android is none of those. The Linux naming collision has its own argument: [why there is no Linux desktop app](/blog/why-grok-bot-has-no-linux-app).
-
-If you already have an iPhone in a pocket and an Android tablet on the couch, the tablet is unsupported (iPad is unsupported too). The iPhone, on iOS 18 or later, is pause and resume. That split is [Grok Bot on iPhone](/blog/grok-bot-iphone-app). If you already have a supported desktop and you are asking whether the lid must stay open, [closing the laptop](/blog/grok-bot-runs-with-laptop-closed) is next.
-
-The compatibility grid stays on [supported platforms](/blog/grok-bot-supported-platforms). Cost and trial stay on [Grok Bot cost](/blog/grok-bot-cost), the [free trial](/blog/grok-bot-free-trial), and [is Grok Bot worth it](/blog/is-grok-bot-worth-it). This page's job is narrower: do not wait on an Android promise we did not source, and do not confuse a Pixel with a client.
-
-**Keep reading:** [Why Grok Bot Has No Linux Desktop App (Even Though the Computer Is Linux)](/blog/why-grok-bot-has-no-linux-app), [Grok Bot on iPhone: What You Can Do, and What Still Needs Desktop](/blog/grok-bot-iphone-app), [Grok Bot With the Laptop Closed: What Keeps Running and What Does Not](/blog/grok-bot-runs-with-laptop-closed).
+The specific lines most likely to change are the desktop-only list for routines, the push notification rollout, and the Auto Review setting. The line least likely to change is the architecture: the phone controls, the cloud computer works, and the two are not the same machine.
 
 ## Frequently Asked Questions
 
 ### Is there a Grok Bot app for Android?
 
-No. The supported clients on the Grok Bot FAQ are macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. Android is not on that list, nor are iPad and Linux desktop. A Play Store row, an APK, or a social post with a date does not replace the FAQ. Confirm any similarly named listing on the vendor's current page. Use a Mac or Windows desktop, or decide the product is not for you this month.
+Yes, as of early September 2026. The Grok Bot FAQ lists Android 9 or later as a supported platform and the mobile page says to download Grok Bot from Google Play. It is a companion app: it connects to the same Bots, conversations, routines and shared cloud computer as the desktop app, and work continues in the cloud when the app is closed. An earlier version of this page said no Android app existed, which was accurate when written and is now wrong.
 
-### When is Grok Bot coming to Android?
+### What can the Android app not do?
 
-This page will not give you a date. docs.x.ai did not publish an Android ship date in the materials checked for this article. Eligibility widened on 21 August 2026 to more SuperGrok and Cursor plans. That change added billing paths, not an Android client. A screenshot that names a quarter is not documentation. If the FAQ later adds an Android row, that sentence is the source. Until then, planning around a Pixel console is planning around a client that is not listed.
+Editing a routine's schedule or instruction, viewing run history, testing a routine and deleting a routine all require the desktop app, in the docs' own words. Teach by demonstration and some advanced desktop controls are also desktop only. Everything conversational, approvals, taking over the computer for a password or CAPTCHA, pausing and resuming routines, and creating or deleting Bots work on the phone.
 
 ### Can I use Grok Bot if I only own an Android phone?
 
-You cannot install a Grok Bot client on that phone. You can still use the product if you can reach a Mac or Windows machine to create, edit, test, read history, and delete. The bots run on the account's persistent cloud computer, not on the Pixel. If you also have an iPhone on iOS 18 or later, you can pause and resume from that phone. If you do not, you have no pocket control. Design routines that wait on approval instead of routines that need an emergency freeze from the train.
+You can install it, sign in with an eligible plan, create Bots, run them conversationally, approve their steps and pause their routines. What you cannot do from the phone is attach or edit a routine, test it, or read its run history, so an Android-only setup means either borrowing a desktop for those jobs or running bots without scheduled routines. Both are workable. Running scheduled routines nobody can audit is the option to avoid.
 
-### Does Grok Bot stop when I close the Windows laptop I borrowed?
+### Does Grok Bot work on an Android tablet or iPad?
 
-No. Cloud work continues after you close the app, the laptop, or an iPhone. Local-computer actions still need that machine awake. Send, publish, purchase, and delete still wait if you set them to require approval. Pause is a control you run from a supported client, not from the Pixel. Closing a borrowed lid is not a kill switch and not an Android substitute. Background turns and scheduled routines keep to the product clock. Approvals and human-only steps still wait for you at the next desk hour.
+The docs say Grok Bot is currently designed for phones, not iPad, and that iPad is not supported at initial launch. Android tablets are not mentioned at all, which this site reads as undocumented rather than supported. If you have a tablet and a phone, use the phone for Grok Bot and treat the tablet as unrelated hardware until the docs say otherwise.
 `,
 };

@@ -1,13 +1,15 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot on iPad: Why It Is Not a Client Today',
+  title: 'Grok Bot on iPad: Not Supported Yet (Checked September 2026)',
   description:
-    'grok bot ipad is not a documented client. Supported: Mac, Windows, iPhone iOS 18+ pause and resume only. Do not wait on an iPad promise we did not source.',
+    'Grok Bot on iPad is not supported as of 4 September 2026: the docs say the app is designed for phones, not iPad. Use the iPhone or Android app for pocket control.',
   date: '2026-08-27',
   category: 'Reference',
   content: `
-# Grok Bot on iPad: Why It Is Not a Client Today
+# Grok Bot on iPad: Not Supported Yet (Checked September 2026)
+
+> **Correction, 4 September 2026.** When this page was written the Grok Bot docs listed no Linux desktop app and no Android app, and described the iPhone app as pause and resume only. The docs now list a Linux desktop app (x64 and Arm64, as a .deb, an .rpm or an AppImage) and an Android companion app for Android 9 or later, and the phone app can create bots, message them, approve steps, take over the computer and pause routines. iPad is still not supported. Sentences below that say otherwise are out of date and are being rewritten. The current platform list is on [Grok Bot supported platforms](/blog/grok-bot-supported-platforms) and the Android app has [its own page](/blog/grok-bot-android-status).
 
 The classroom cart already looks like a laptop farm, which is why grok bot ipad reads as a store delay instead of a missing client. A Magic Keyboard, Stage Manager, and an Apple ID you already use on a phone do not put Grok Bot on the tablet. The [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) lists macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. iPad is not in that list. Linux desktop is not. Android is not.
 
