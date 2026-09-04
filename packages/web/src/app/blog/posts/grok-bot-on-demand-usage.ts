@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot On-Demand Usage: What Burns the Extra Tokens',
+  title: 'Grok Bot On-Demand Usage: What Burns It and How to Stop It',
   description:
-    'Grok Bot on demand usage is overflow after the weekly pool. Five-minute loops, retries, and browser thrash burn it. Pause is the control. There is no spend cap.',
+    'Grok Bot on-demand usage is billing after the weekly allowance runs out. Five-minute loops, retries and browser thrash burn it. No spend cap exists; pause is the control.',
   date: '2026-08-27',
   category: 'Guide',
   content: `
-# Grok Bot On-Demand Usage: What Burns the Extra Tokens
+# Grok Bot On-Demand Usage: What Burns It and How to Stop It
 
 Twelve full restarts of one frozen checkout is grok bot on demand usage as it actually arrives: the weekly pool is already gone, and each extra attempt is overflow billed from model and token cost.
 

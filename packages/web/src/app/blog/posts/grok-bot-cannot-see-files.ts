@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot Cannot See the File: Shared Computer Paths, Not Bot Isolation',
+  title: 'Grok Bot Cannot See Your Files? It Reads the Cloud Computer',
   description:
-    'Grok Bot cannot see files on your laptop. It sees the shared cloud computer. Put files in /workspace, not Desktop.app. Screens hide nothing from other bots.',
+    'Grok Bot cannot see files on your laptop. It sees its shared cloud computer, so put files in /workspace, not your Desktop. Screens hide nothing from other bots.',
   date: '2026-08-27',
   category: 'Reference',
   content: `
-# Grok Bot Cannot See the File: Shared Computer Paths, Not Bot Isolation
+# Grok Bot Cannot See Your Files? It Reads the Cloud Computer
 
 You dropped the PDF onto Finder Desktop, told Grok Bot to open it, and watched
 it search \`/workspace\` until it said the file was missing. That miss is grok

@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'The Chief of Staff Bot: The First Setup Everyone Says To Build',
+  title: 'Grok Bot Chief of Staff Setup: Charter, Brief Rule, Limits',
   description:
-    'A chief of staff bot is the setup most rosters name first. What the role owns, the charter to paste, the five-line brief rule, and where it has to stop.',
+    'A Grok Bot chief of staff setup, the bot most rosters build first: what the role owns, the charter to paste, the five-line brief rule, and where it has to stop.',
   date: '2026-08-25',
   category: 'Guide',
   content: `
-# The Chief of Staff Bot: The First Setup Everyone Says To Build
+# Grok Bot Chief of Staff Setup: Charter, Brief Rule, Limits
 
 Across eight widely shared posts about running a roster of bots, five
 independently named the same first hire: a chief of staff. Different authors,

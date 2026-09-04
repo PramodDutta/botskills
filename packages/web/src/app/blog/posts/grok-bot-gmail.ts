@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot and Gmail: Permissions and What to Automate',
+  title: 'Grok Bot Gmail Integration: Triage and Draft, Never Send',
   description:
     'A Grok Bot Gmail setup that triages, labels, and drafts but never sends: the scope families to grant, a label taxonomy you can grade, and the week-one order.',
   date: '2026-08-25',
   category: 'Tutorial',
   content: `
-# Grok Bot and Gmail: Permissions and What to Automate
+# Grok Bot Gmail Integration: Triage and Draft, Never Send
 
 Your inbox is not one queue. It is four queues braided together: messages that
 need a reply from you, messages where you are waiting on somebody else,

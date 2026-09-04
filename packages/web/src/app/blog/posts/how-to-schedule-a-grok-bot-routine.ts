@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'How to Schedule a Grok Bot Routine That Does Not Fail Silently',
+  title: 'How to Schedule a Grok Bot Routine (Max 50 per Bot)',
   description:
     'Schedule grok bot routine work on one bot, not the team. Max 50 routines per bot. The app keeps 20 run records. Delete the bot and the routine dies.',
   date: '2026-08-27',
   category: 'Tutorial',
   content: `
-# How to Schedule a Grok Bot Routine That Does Not Fail Silently
+# How to Schedule a Grok Bot Routine (Max 50 per Bot)
 
 The save confirmation on a Grok Bot routine is not proof the job will still
 exist next Monday. The product stores the workflow on one bot, keeps twenty

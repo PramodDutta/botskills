@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot Needs a Cursor Account: The Cheapest Is $60 a Month',
+  title: 'Do You Need a Cursor Account for Grok Bot? Yes, Pro+ at $60',
   description:
-    'Yes, Grok Bot requires an eligible plan. Cursor Pro+ at 60 dollars a month is the cheapest door. Cursor Pro at 20 does not qualify. Every plan priced and dated.',
+    'Grok Bot needs an eligible plan. Cursor Pro+ at $60 a month is the cheapest paid door, Cursor Pro at $20 does not qualify, and the trial is one-time. Every plan priced.',
   date: '2026-08-25',
   category: 'Guide',
   content: `
-# Grok Bot Needs a Cursor Account: The Cheapest Is $60 a Month
+# Do You Need a Cursor Account for Grok Bot? Yes, Pro+ at $60
 
 You went to try Grok Bot and it asked you to sign in with Cursor, a code
 editor you may have never opened. Then you checked a guide, saw a number like

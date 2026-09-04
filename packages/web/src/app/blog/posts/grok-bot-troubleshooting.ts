@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot Troubleshooting: 15 Failures and Their Fixes',
+  title: 'Grok Bot Not Working? 15 Failures and the Fix for Each',
   description:
-    'Grok bot not working? Fifteen concrete failures with symptom, cause and fix, from silent runs and duplicate work to expired connectors and approval loops.',
+    'Grok Bot not working? Fifteen concrete failures with symptom, cause and fix, from silent runs and duplicate work to expired connectors and approval loops.',
   date: '2026-08-25',
   category: 'Reference',
   content: `
-# Grok Bot Troubleshooting: 15 Failures and Their Fixes
+# Grok Bot Not Working? 15 Failures and the Fix for Each
 
 Almost nothing that goes wrong with a bot is a model problem. The failures you
 will actually hit are a trigger that never fired, a connector that quietly

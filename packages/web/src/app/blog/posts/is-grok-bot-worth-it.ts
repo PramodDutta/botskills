@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Is Grok Bot Worth It? Only If You Already Pay for One of These',
+  title: 'Is Grok Bot Worth It? Yes If You Already Pay for These Plans',
   description:
-    'Grok Bot is worth it if you hold an eligible plan already, because then it costs nothing extra. If you do not, the cheapest door is 60 dollars a month.',
+    'Is Grok Bot worth it? Yes if you already hold an eligible plan, because then it costs nothing extra. If not, the cheapest door is Cursor Pro+ at $60 a month.',
   date: '2026-08-26',
   category: 'Guide',
   content: `
-# Is Grok Bot Worth It? Only If You Already Pay for One of These
+# Is Grok Bot Worth It? Yes If You Already Pay for These Plans
 
 Is Grok Bot worth it is the wrong question if you treat it like a $20 chatbot upgrade. It is a bundled teammate on a shared cloud computer, sold inside Cursor and SuperGrok plans, with a weekly allowance and no published numeric cap. The useful question is whether one reversible job, run under the limited-usage trial or on a plan you already pay for, produces work you would otherwise do yourself. If that job fails, the product is not worth reorganizing a company around. If it succeeds, you still have not bought isolation, a spend cap, or a model picker, because those are not for sale.
 

@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Cursor Pro+ and Grok Bot: What the $60 Plan Actually Includes',
+  title: 'Cursor Pro+ and Grok Bot: What the $60 Plan Includes',
   description:
-    'Cursor Pro+ at 60 dollars a month includes Grok Bot. Cursor Pro at 20 does not, and Hobby does not. Check which line your invoice actually says before you install.',
+    'Cursor Pro+ at $60 a month includes Grok Bot. Cursor Pro at $20 does not, and neither does Hobby. Check which line your invoice actually says before you install.',
   date: '2026-08-27',
   category: 'Guide',
   content: `
-# Cursor Pro+ and Grok Bot: What the $60 Plan Actually Includes
+# Cursor Pro+ and Grok Bot: What the $60 Plan Includes
 
 The upgrade control from Cursor Pro to Cursor Pro+ sits in billing like a
 switch, and that is the mistake this page exists to catch.

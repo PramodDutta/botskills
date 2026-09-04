@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'No Spend Cap: How To Keep a Grok Bot Roster From Running Away',
+  title: 'Grok Bot Spend Cap: None Exists, So Budget in the Charter',
   description:
-    'There is no Grok Bot spend cap yet, so the ceiling has to live in your charters. Run budgets, retry limits and the weekly review that keeps a roster honest.',
+    'There is no Grok Bot spend cap. The ceiling has to live in your charters: run budgets, retry limits and a weekly review that keeps a roster from running away.',
   date: '2026-08-25',
   category: 'Guide',
   content: `
-# No Spend Cap: How To Keep a Grok Bot Roster From Running Away
+# Grok Bot Spend Cap: None Exists, So Budget in the Charter
 
 The product does not have a brake. That is not a complaint, it is the
 documented state of things as of writing, and it changes how you should set

@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'SuperGrok Plus and Grok Bot: When the xAI Path Is the Right One',
+  title: 'SuperGrok Plus and Grok Bot: The $100 xAI Plan Explained',
   description:
-    'SuperGrok Plus at 100 dollars a month is the xAI door into grok bot super grok plus. SuperGrok at 30 does not include Bot. Confirm the invoice line, not the word Grok.',
+    'SuperGrok Plus at $100 a month is the xAI door into Grok Bot. SuperGrok at $30 does not include it. Confirm the invoice line, and when xAI beats Cursor.',
   date: '2026-08-27',
   category: 'Guide',
   content: `
-# SuperGrok Plus and Grok Bot: When the xAI Path Is the Right One
+# SuperGrok Plus and Grok Bot: The $100 xAI Plan Explained
 
 The SuperGrok charge on last month's card already contains the word Grok,
 so the Bot install looks like a setting you forgot to enable.

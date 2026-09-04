@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot and Stripe: Permissions and What to Automate',
+  title: 'Grok Bot Stripe Integration: Read the Ledger, Never Move Money',
   description:
     'A Grok Bot Stripe setup that reads the ledger and never moves money: the key permission families, why draft-only is not enough here, and the reports worth automating.',
   date: '2026-08-25',
   category: 'Tutorial',
   content: `
-# Grok Bot and Stripe: Permissions and What to Automate
+# Grok Bot Stripe Integration: Read the Ledger, Never Move Money
 
 Every other integration you will connect has a waiting room. Email has a
 drafts folder. Docs have unpublished versions. GitHub has a pull request,

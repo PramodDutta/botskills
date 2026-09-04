@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot Free Trial: How the Metered Credit Actually Works',
+  title: 'Grok Bot Free Trial: What You Get and How the Credit Works',
   description:
-    'Grok Bot free trial is a metered credit, not an unlimited week. Use it on one reversible job, then revoke every login if you do not upgrade.',
+    'The Grok Bot free trial is a metered one-time credit, not an unlimited week. Spend it on one reversible job, then revoke every login if you decide not to upgrade.',
   date: '2026-08-26',
   category: 'Guide',
   content: `
-# Grok Bot Free Trial: How the Metered Credit Actually Works
+# Grok Bot Free Trial: What You Get and How the Credit Works
 
 The Grok Bot free trial, announced with the 21 August 2026 access expansion, is the first time people without an eligible paid plan can touch the product. It is also the easiest way to learn the wrong lesson. The trial is limited usage. It is not a week of unrestricted agents. One long assignment, especially a browser crawl, can consume most of the credit. Spend it like a lab: one named bot, one reversible job, a boundary that forbids send and pay, and a written note of what finished.
 

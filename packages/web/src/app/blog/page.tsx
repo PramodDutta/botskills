@@ -2,9 +2,8 @@ import Link from 'next/link';
 import { postList } from './posts';
 
 export const metadata = {
-  title: 'Blog',
-  description:
-    'Guides, references and safety playbooks for running Grok Bot and Rakazo setups: charters, boundaries, integrations, and what the docs actually say.',
+  title: { absolute: `Grok Bot Guides: ${postList.length} Setup, Pricing and Troubleshooting Articles` },
+  description: `${postList.length} articles on running Grok Bot and Rakazo setups: pricing and plans, troubleshooting, integrations, charters and boundaries, all checked against the docs.`,
   alternates: { canonical: 'https://botskills.sh/blog' },
 };
 

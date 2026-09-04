@@ -1,12 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot vs Claude Cowork: Cloud Teammate or Desktop Operator',
-  description: 'Grok Bot vs Claude Cowork is a cloud teammate against a desktop operator. Shared computers, access plans, and the jobs where each one actually wins.',
+  title: 'Grok Bot vs Claude Cowork: Which One Fits Your Work',
+  description:
+    'Grok Bot vs Claude Cowork: a cloud teammate on a shared computer against a desktop operator. Access plans, what each can reach, and the jobs where each wins.',
   date: '2026-08-26',
   category: 'Comparison',
   content: `
-# Grok Bot vs Claude Cowork: Cloud Teammate or Desktop Operator
+# Grok Bot vs Claude Cowork: Which One Fits Your Work
 
 You are not choosing between two similar assistants. You are choosing where
 the work has to live after you close the laptop.

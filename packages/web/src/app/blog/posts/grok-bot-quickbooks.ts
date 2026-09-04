@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot and QuickBooks: Permissions and What to Automate',
+  title: 'Grok Bot QuickBooks Integration: Read and Flag, Never Post',
   description:
     'A Grok Bot QuickBooks setup that reads, suggests, and flags but never posts: closed periods, reconciliation risk, the scope families, and a charter to paste.',
   date: '2026-08-25',
   category: 'Tutorial',
   content: `
-# Grok Bot and QuickBooks: Permissions and What to Automate
+# Grok Bot QuickBooks Integration: Read and Flag, Never Post
 
 Your accountant closed July on the last day of the month. On the twentieth of
 August, a bot recategorises eleven transactions dated in July, because they

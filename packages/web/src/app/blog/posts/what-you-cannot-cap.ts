@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'What You Cannot Cap, and How to Budget Anyway',
+  title: 'Grok Bot Has No Spend Cap: How to Budget Anyway',
   description:
-    'Learn what you cannot cap in Grok Bot today, then build a practical budget using workload units, stop rules, review cadence, and variance checks.',
+    'Grok Bot has no spend cap and no per-bot limit today. Build a practical budget instead: workload units, stop rules, review cadence and variance checks.',
   date: '2026-08-29',
   category: 'Guide',
   content: `
-# What You Cannot Cap, and How to Budget Anyway
+# Grok Bot Has No Spend Cap: How to Budget Anyway
 
 Priya writes "$40 maximum" at the top of a bot brief and assumes the sentence changes billing. It does not. The number is a management intention until a verified control can enforce it.
 
