@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { REMOTE, SKIP_WRITES } from './env';
 
 const PAGES = ['/contact', '/sponsor'];
 
@@ -17,6 +18,7 @@ test.describe('contact form', () => {
   }
 
   test('posts every field, and never claims success when nothing accepted it', async ({ page }) => {
+    test.skip(REMOTE, SKIP_WRITES);
     await page.goto('/contact');
     const posted: Array<Record<string, unknown>> = [];
     page.on('request', (r) => {
@@ -131,6 +133,7 @@ test.describe('contact form', () => {
   });
 
   test('an unknown placement falls back rather than being stored raw', async ({ request }) => {
+    test.skip(REMOTE, SKIP_WRITES);
     const res = await request.post('/api/contact', {
       data: { name: 'A', email: 'a@b.co', message: 'a long enough message here', placement: 'DROP TABLE' },
     });

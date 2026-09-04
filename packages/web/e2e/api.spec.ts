@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { REMOTE, SKIP_WRITES } from './env';
 
 // The machine surface: what agents and any CLI-shaped consumer read. These
 // routes share one database helper and one request helper, so the contract of
@@ -59,22 +60,24 @@ test.describe('telemetry api', () => {
     expect(typeof (await res.json()).online).toBe('number');
   });
 
-  test('vote: unknown slug is a 404, known slug is accepted', async ({ request }) => {
-    const bad = await request.post('/api/telemetry/vote', { data: { slug: 'nope-not-real' } });
-    expect(bad.status()).toBe(404);
-    const good = await request.post('/api/telemetry/vote', { data: { slug: 'agent-inbox' } });
-    expect(good.status()).toBe(200);
-    expect((await good.json()).ok).toBe(true);
+  test('vote and copy on an unknown slug are a 404', async ({ request }) => {
+    for (const path of ['/api/telemetry/vote', '/api/telemetry/copy']) {
+      const res = await request.post(path, { data: { slug: 'nope-not-real' } });
+      expect(res.status()).toBe(404);
+    }
   });
 
-  test('copy: unknown slug is a 404, known slug is accepted', async ({ request }) => {
-    const bad = await request.post('/api/telemetry/copy', { data: { slug: 'nope-not-real' } });
-    expect(bad.status()).toBe(404);
-    const good = await request.post('/api/telemetry/copy', { data: { slug: 'agent-inbox' } });
-    expect(good.status()).toBe(200);
+  test('vote and copy on a known slug are accepted', async ({ request }) => {
+    test.skip(REMOTE, SKIP_WRITES);
+    const vote = await request.post('/api/telemetry/vote', { data: { slug: 'agent-inbox' } });
+    expect(vote.status()).toBe(200);
+    expect((await vote.json()).ok).toBe(true);
+    const copy = await request.post('/api/telemetry/copy', { data: { slug: 'agent-inbox' } });
+    expect(copy.status()).toBe(200);
   });
 
   test('visit beacon always accepts', async ({ request }) => {
+    test.skip(REMOTE, SKIP_WRITES);
     const res = await request.post('/api/telemetry/visit', { data: { path: '/e2e' } });
     expect(res.status()).toBe(200);
   });

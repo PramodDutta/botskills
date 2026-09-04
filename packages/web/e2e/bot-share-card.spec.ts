@@ -46,6 +46,11 @@ test.describe('bot pages', () => {
 
   test('copy button is present and clicking it does not throw', async ({ page, context }) => {
     await context.grantPermissions(['clipboard-write']);
+    // The click fires copy telemetry. Answer it here so a run against the live
+    // site never adds a test click to a real bot's copy count.
+    await page.route('**/api/telemetry/copy', (route) =>
+      route.fulfill({ status: 200, contentType: 'application/json', body: '{"ok":true}' }),
+    );
     const errors: string[] = [];
     page.on('pageerror', (e) => errors.push(e.message));
     await page.goto(`/bots/${SLUGS[0]}`);

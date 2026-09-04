@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { REMOTE, SKIP_WRITES } from './env';
 
 test.describe('fact check lead magnet', () => {
   test('page loads and gates the pack behind the form', async ({ page }) => {
@@ -26,6 +27,7 @@ test.describe('fact check lead magnet', () => {
   });
 
   test('submitting an email reveals the pack and posts the right source', async ({ page }) => {
+    test.skip(REMOTE, SKIP_WRITES);
     await page.goto('/grok-bot-facts');
     const posted: Array<Record<string, unknown>> = [];
     page.on('request', (r) => {
@@ -45,6 +47,7 @@ test.describe('fact check lead magnet', () => {
   });
 
   test('the revealed pack carries sourced corrections', async ({ page }) => {
+    test.skip(REMOTE, SKIP_WRITES);
     await page.goto('/grok-bot-facts');
     await page.locator('form.signup-form input[type="email"]').fill('e2e2@example.com');
     await page.getByRole('button', { name: /fact check/i }).click();
