@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { PostBody } from '@/components/post-body';
 import { ArticleOffer } from '@/components/article-offer';
+import { RelatedLinks } from '@/components/related-links';
+import { relatedPosts } from '@/lib/related';
 import { posts } from '../posts';
 
 /**
@@ -40,7 +42,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = posts[slug];
   if (!post) return { title: 'Post not found' };
   return {
-    title: post.title,
+    // Absolute: article titles are already 55 to 65 characters and the site
+    // suffix pushed the useful half past what Google shows.
+    title: { absolute: post.title },
     description: post.description,
     alternates: { canonical: `https://botskills.sh/blog/${slug}` },
   };
@@ -97,6 +101,7 @@ export default async function PostPage({ params }: Props) {
         <p className="ds">{post.date} · {post.category}</p>
         <PostBody content={post.content} />
       </article>
+      <RelatedLinks posts={relatedPosts(slug)} />
       <ArticleOffer />
     </main>
   );

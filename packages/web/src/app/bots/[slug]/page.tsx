@@ -4,6 +4,8 @@ import type { Metadata } from 'next';
 import { getAllBots, getBot } from '@/lib/bots';
 import { CATEGORIES, RUNTIMES } from '@botskills/shared';
 import { CopyButton } from '@/components/copy-button';
+import { RelatedLinks } from '@/components/related-links';
+import { relatedBots, relatedPostsForBot } from '@/lib/related';
 
 interface Props { params: Promise<{ slug: string }> }
 
@@ -83,6 +85,11 @@ export default async function BotPage({ params }: Props) {
         Raw file: <code className="mono">/api/bots/{bot.slug}/content</code> · JSON:{' '}
         <code className="mono">/api/bots</code>
       </p>
+      <RelatedLinks
+        heading="Related bots and guides"
+        bots={relatedBots(bot.slug)}
+        posts={relatedPostsForBot(bot)}
+      />
       {bot.attribution && (
         // The MIT licence asks that the notice be included, not that it be loud.
         // So: one quiet line, the full text one click away, and nothing in the

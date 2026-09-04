@@ -639,3 +639,12 @@ td.ints { white-space: nowrap; }
   font-size: 0.8rem; }
 .article-offer .ao-reveal { margin: 0.7rem 0 0; font-weight: 600; }
 .article-offer .callout { margin-top: 0.9rem; }
+
+/* Related links: the internal-linking block under every article and bot page. */
+.related { margin-top: 2.6rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+.related h2 { font-size: 1.05rem; margin: 0 0 0.5rem; }
+.related > .ds { margin: 0.8rem 0 0.35rem; font-family: var(--mono); font-size: 0.68rem;
+  text-transform: uppercase; letter-spacing: 0.06em; }
+.related ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.45rem; }
+.related li a { font-weight: 600; }
+.related li .ds { font-size: 0.82rem; }
