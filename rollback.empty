@@ -31,3 +31,15 @@ Entry format:
             abe7930, including /integrations, and none of the 2026-09-05 WIP)
   verify    curl -s https://botskills.sh/blog/grok-bot-troubleshooting | grep -o 'No Linux desktop, Android, or iPad app'
             matches in this state (the old table row); no match after the sweep.
+
+2026-09-06 17:05 UTC   After the second refactor: the 5 September registry work
+                       landed, the 152-article platform sweep, ESLint/Prettier,
+                       next/font, strict mode, CI workflow, 3 new articles.
+  git ref   2a07e82   (revert target for this state is the entry above:
+                       branch backup/pre-refactor-2026-09-06 at abe7930)
+  vercel    https://botskills-58d7mmjzc-luckydutta96s-projects.vercel.app
+  verify    curl -s https://botskills.sh/blog/grok-bot-troubleshooting | grep -c 'The phone app cannot edit a routine'
+            prints 2 in this state and 0 before it.
+            curl -sI https://botskills.sh/ | grep -ci x-powered-by   -> 0 in this state, 1 before.
+  tests     71 e2e locally, 66 passed + 5 write-tests skipped against production,
+            25 unit, 118 bots, 462 articles gated, lint and format clean.
