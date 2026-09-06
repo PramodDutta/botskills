@@ -98,7 +98,9 @@ test.describe('fact check lead magnet', () => {
       await page.goto('/grok-bot-facts');
       await page.getByRole('textbox', { name: 'Email address' }).fill('retry@example.com');
       await page.getByRole('button', { name: /fact check/i }).click();
-      await expect(page.getByRole('alert')).toBeVisible();
+      // Scoped to the form: production builds also render Next's role=alert
+      // route announcer, which trips strict mode on a bare getByRole('alert').
+      await expect(page.locator('form.signup-form p[role="alert"]')).toBeVisible();
       await expect(page.locator('.facts-pack')).toHaveCount(0);
       await expect(page.getByRole('button', { name: /fact check/i })).toBeEnabled();
       await page.route('**/api/signups', (route) =>
