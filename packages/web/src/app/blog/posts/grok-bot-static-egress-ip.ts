@@ -147,7 +147,7 @@ teardowns. Do not batch them into one session that lasts until Friday.
 | 07:28 | Login form | Asks Inbox Triage to open the same URL | Trust a feeling |
 | 07:40 | Billing console, same pattern | Repeat takeover, copy, sign out | Park both sessions because two teardowns felt slow |
 
-On iPhone she can pause and resume only. A WebAuthn check or a careful
+From the phone app she can approve steps and pause or resume a routine, but not edit it. A WebAuthn check or a careful
 sign-out is a desktop morning.
 
 ## Ask the account team for ranges only when you own the destination
@@ -296,8 +296,7 @@ minimum here is often no live finance GUI at all.
 
 A site that loads on the laptop and challenges the computer is working as
 the vendor intended. Reinstalling Grok Bot does not mint a residential
-address. Linux desktop, Android, and iPad have no client
-([FAQ](https://docs.x.ai/grok-bot/faq)). The VM is Linux. That is not a
+address. There are Linux desktop and Android apps as of September 2026; iPad is still not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). The VM is Linux. That is not a
 Linux desktop you can move to your house.
 
 Sessions inside the computer can drop when the computer is recreated or

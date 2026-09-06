@@ -76,7 +76,7 @@ Ridgeway Youth Arts runs after-school studios on one rented floor. Three people 
 
 Thursday 27 August 2026. Fourteen preview gifts landed overnight. The board packet is due Monday. Luis wants the CRM connected so the bot can stamp Thanked. Maya's finger is on hello@. Priya offers to log the org Cursor into her home Mac.
 
-They do none of those three things. Maya buys Cursor Pro+ at 60 dollars per month on an org-owned account and signs it in on her work Mac only. Luis and Priya do not run that seat. There is no Linux desktop app, no Android app, and no iPad app. The Agent Computer is a managed Linux VM in the cloud, not a client for the studio iPad.
+They do none of those three things. Maya buys Cursor Pro+ at 60 dollars per month on an org-owned account and signs it in on her work Mac only. Luis and Priya do not run that seat. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The Agent Computer is a managed Linux VM in the cloud, not a client for the studio iPad.
 
 Maya exports fourteen rows, deletes email, address, phone, and tribute fields, and copies agenda.pdf plus 2026-07-minutes.pdf into /workspace/ridgeway/2026-08-27/. The bot writes thanks.md (drafts citing gift id, amount, fund, date, each ending UNSET: Maya sends this) and briefing.md. It does not open a browser. Confirm CRM and form vendors on those vendors' current pages. Luis edits two receipt-like paragraphs on a copy Maya took off the computer. Maya pastes the fourteen in her own client, looking at each CRM row. Priya gets briefing.md as an attachment Maya sent. Day thirty looks the same, plus a Friday routine that still cannot send.
 
@@ -199,7 +199,7 @@ A dedicated eligible account means the Cursor login is the org's, billing is the
 | Priya's home Mac on a shared password | A board volunteer's family computer | No | You cannot wipe her disk |
 | Shared studio desktop with no dedicated account | A computer many people unlock | No | Donor PII on a shared computer without a dedicated account |
 
-[Why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained) is the sign-in path. [Supported platforms](/blog/grok-bot-supported-platforms): macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop.
+[Why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained) is the sign-in path. [Supported platforms](/blog/grok-bot-supported-platforms): macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop.
 
 ## Price the nonprofit seat as Cursor Pro+ at sixty, never Hobby, Pro twenty, or SuperGrok thirty
 

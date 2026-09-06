@@ -190,8 +190,7 @@ the filming hour around those sentences. Do not invent a pocket editor
 on top of them.
 
 Supported clients are macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and iPhone on iOS 18+. There is no Linux desktop app, no Android
-app, and no iPad app. The Agent Computer is a managed Linux VM. That is
+Arm64), and iPhone on iOS 18+. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The Agent Computer is a managed Linux VM. That is
 not a Linux desktop client, and it is not your phone. If a listing draft
 starts looking like an upload while you film, pause, then get to a desk.
 Do not finish a Studio login from the phone.

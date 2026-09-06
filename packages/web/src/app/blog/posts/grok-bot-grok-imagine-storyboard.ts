@@ -136,7 +136,7 @@ Deleting the storyboard bot does not log you out. [Inbox Triage](/bots/inbox-tri
 
 If a 2FA prompt appears while someone is opening Imagine, that is a live login. Do not type the code in chat. Prefer not completing the login on the Agent Computer. Generate on your laptop. Use [the 2FA incident page](/blog/grok-bot-2fa-prompt) if the prompt already happened.
 
-iPhone can pause and resume only. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). Review stills on a Mac or Windows desk. There is no Linux desktop app, no Android app, and no iPad app ([FAQ](https://docs.x.ai/grok-bot/faq)). Privacy Mode (Legacy) blocks Grok Bot entirely. If that mode is on, this desk does not run.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). Review stills on a desktop. There are Linux desktop and Android apps as of September 2026; iPad is still not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). Privacy Mode (Legacy) blocks Grok Bot entirely. If that mode is on, this desk does not run.
 
 ## Paste a storyboard charter that names the three verbs this bot never takes
 

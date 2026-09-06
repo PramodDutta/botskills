@@ -19,11 +19,11 @@ A grok bot on call line is a name, a desk, and a phone rule. It is not a Slack c
 
 Write it where the bot can reread it. The charter is standing text. A pinned Slack message is a hope you will remember at 03:12. If the bot is allowed to draft mail to customers, the charter already contains a send rule. Put the human next to that rule, in the same file, before the first overnight run.
 
-Name a person who can reach a supported desk. Clients are macOS, Windows, and iPhone on iOS 18 or later. There is no Linux desktop app, no Android app, and no iPad app. The cloud computer is a managed Linux VM, which is not a laptop you can SSH into from bed. A Linux-only engineer can pause from an iPhone if they have one, and they cannot diagnose until they borrow a Mac or a Windows machine.
+Name a person who can reach a supported desk. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The cloud computer is a managed Linux VM, which is not a laptop you can SSH into from bed. A Linux-only engineer can pause from a phone and diagnose on the Linux desktop app.
 
-On iPhone you can pause and resume only. Resume at 03:12, without files in front of you, is how a parked send becomes a sent mail. The charter should say pause, then wait for the named desk, never "fix it from your phone". [Grok Bot iPhone limits](/blog/grok-bot-iphone-cannot-edit) are the device facts. This page is who you point at those facts.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Resume at 03:12, without files in front of you, is how a parked send becomes a sent mail. The charter should say pause, then wait for the named desk, never "fix it from your phone". [Grok Bot iPhone limits](/blog/grok-bot-iphone-cannot-edit) are the device facts. This page is who you point at those facts.
 
-## Page the person who can sit at a Mac or Windows desk
+## Page the person who can sit at a desktop
 
 Grok Bot does not page, escalate, or keep an on-call calendar. A routine can fire and a send can wait without ringing anyone unless you built the ring: a Slack DM, an SMS from a watchdog, a watch you already trust.
 
@@ -34,7 +34,7 @@ Name one owner per bot even if two people share the account. All bots share one 
 | Candidate | Pause from iPhone | Diagnose the send at 3am | Put them on the charter |
 |---|---|---|---|
 | Named owner with a Mac or Windows laptop in the house | Yes, if they have iOS 18+ | Yes | Yes, if they agreed in writing |
-| Linux-only engineer with an iPhone | Yes | No. There is no Linux desktop client | Pause-only. They borrow a supported desk before they deny or resume |
+| Linux-only engineer with an iPhone | Yes | Yes, since September 2026 (.deb, .rpm, AppImage) | Pause and approve from the phone, edit at the Linux desk. They get to a desktop before they deny or resume |
 | Android-only contractor | No Grok Bot Android app | No | No |
 | A Slack channel named #bots | No | No | Never. A channel is not a person |
 | "Whoever has the Cursor login" | Maybe | Maybe, and that is the failure | Name one human. Shared logins make the page bounce |
@@ -47,7 +47,7 @@ Pause so the job stops trying. A looping selector, a send sitting on ask, a rout
 
 Do not resume from the phone. At 03:12 you have not listed \`/workspace\`, opened Sent, or read the proposed body on the Agent Computer. Resuming from a pillow is the same class of error as typing "continue" into a stalled job. A blurry preview is not enough to approve. An approval controls the proposed action. It does not reverse work already done. [How to set Grok Bot approvals](/blog/how-to-set-grok-bot-approvals) is the daytime setup. Nighttime is pause, then wait for the desk.
 
-iPhone on iOS 18+ is the companion. Android is not. iPad is not. If you have no supported phone, you have no remote freeze. Pause the send-capable bots before you sleep in a place with no Mac, no Windows machine, and no iPhone.
+iPhone on iOS 18+ is the companion. Android is, since September 2026. iPad is not. If you have no supported phone, you have no remote freeze. Pause the send-capable bots before you sleep in a place with no Mac, no Windows machine, and no iPhone.
 
 ## Refuse delete as the opening 3am move
 
@@ -179,23 +179,23 @@ If the founder travels without a Mac or a Windows machine, they are not on-call 
 
 A draft-only fleet does not need a pager. Keep the block. Skip the SMS. A missed routine does not need a 3am desk: history waits until morning. A stall with no irreversible verb in flight needs a daylight restart without doubling, not an on-call approve.
 
-A Linux-only household cannot diagnose until someone borrows macOS or Windows. Staffing cannot invent a client. Docs answer Linux desktop with a flat no.
+A Linux-only household cannot diagnose until someone gets to a desktop. Staffing cannot invent a client. Docs list a Linux desktop app as of September 2026.
 
 A send that already left is a customer conversation. Pause so a second copy does not follow. The named human writes to Maya. The bot does not send the apology unless you want two voices in the thread.
 
 Companies that need a vendor audit log, a team on-call calendar, and a dedicated VM per bot are describing a product Grok Bot does not ship today. Separate bots are not a security boundary. An audit view of bot actions does not exist yet. Write the gap down. Do not staff as if it were filled.
 
-**Keep reading:** [Grok Bot iPhone limits: pause and resume only](/blog/grok-bot-iphone-cannot-edit), [Grok Bot has no audit view yet](/blog/grok-bot-no-audit-log-yet), [How to set Grok Bot approvals so sends never slip through](/blog/how-to-set-grok-bot-approvals).
+**Keep reading:** [Grok Bot iPhone limits: what still needs desktop](/blog/grok-bot-iphone-cannot-edit), [Grok Bot has no audit view yet](/blog/grok-bot-no-audit-log-yet), [How to set Grok Bot approvals so sends never slip through](/blog/how-to-set-grok-bot-approvals).
 
 ## Frequently Asked Questions
 
 ### Who is grok bot on call when you are a one-person company?
 
-You are, if you wrote your name down, and you are not, if you left the line blank. Grok Bot does not page a rotation and does not assign an owner. All bots share one persistent cloud computer assigned to your user account, so the person who can open the Agent Computer is the person who can diagnose. Put your name, a Mac or Windows desk, and a pause-only phone rule into every outbound charter before the first overnight send. If you travel without a supported laptop, pause the send-capable bots before you sleep.
+You are, if you wrote your name down, and you are not, if you left the line blank. Grok Bot does not page a rotation and does not assign an owner. All bots share one persistent cloud computer assigned to your user account, so the person who can open the Agent Computer is the person who can diagnose. Put your name, a desktop, and a pause-and-approve phone rule into every outbound charter before the first overnight send. If you travel without a supported laptop, pause the send-capable bots before you sleep.
 
 ### Can I fix a misfire from iPhone at 3am?
 
-You can pause. That is the documented pocket pair, with resume, and resume is the wrong 3am verb. Editing, history, testing, and deleting need a desktop. You will not rewrite a discount, open run records, or delete the bot from the lock screen. Pause so the job stops trying. Get to a Mac or a Windows desk. Read the proposed action. Check Sent. Deny the send if it is still sitting. There is no Linux desktop app and no Android app, so a phone-plus-Linux bag is still pause-only until you borrow a supported desk.
+You can pause. That is the documented pocket pair, with resume, and resume is the wrong 3am verb. Editing, history, testing, and deleting need a desktop. You will not rewrite a discount, open run records, or delete the bot from the lock screen. Pause so the job stops trying. Get to a Mac or a Windows desk. Read the proposed action. Check Sent. Deny the send if it is still sitting. There are Linux desktop and Android apps as of September 2026, so a phone-plus-Linux bag can now install both: a Linux desktop app and an Android or iPhone app.
 
 ### Should I delete the bot when it almost sends at 3am?
 

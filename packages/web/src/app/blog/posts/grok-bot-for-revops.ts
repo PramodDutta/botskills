@@ -81,7 +81,7 @@ Second choice is a hosted connector whose sign-in token stays with Cursor's back
 | Hosted connector or hosted MCP (confirm the vendor that day) | Cursor's backend, never on the computer | No cookie, but hosted tools stay account-wide | Yes, after you inspect for writes |
 | You signed into Salesforce or the ads GUI in the shared browser | Cookie jar on the shared computer | Any bot that opens a URL can act as that identity | No |
 
-The third row is how three-person teams get hurt. Export failed, so someone signed an AE in "just this once" and left the tab open. A research bot later opened a Salesforce URL and worked as that AE. No CRM plugin was granted to it. The cookie was enough. Role rule: none of the three desks log in as you in a browser. See also [Grok Bot and Salesforce](/blog/grok-bot-salesforce). Linux desktop, Android, and iPad are not Grok Bot clients. On iPhone you can pause and resume only.
+The third row is how three-person teams get hurt. Export failed, so someone signed an AE in "just this once" and left the tab open. A research bot later opened a Salesforce URL and worked as that AE. No CRM plugin was granted to it. The cookie was enough. Role rule: none of the three desks log in as you in a browser. See also [Grok Bot and Salesforce](/blog/grok-bot-salesforce). Linux desktop, Android, and iPad are not Grok Bot clients. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 
 ## Hand hygiene as a patch list a human applies after opening both ids
 

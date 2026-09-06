@@ -207,7 +207,7 @@ bot product. A claim with no source at all is unfiled, not true.
 | Every bot on the account shares one persistent cloud computer | Grok Bot | Documented on the \`/grok-bot/\` path |
 | An approval gates a proposed action and does not reverse completed work | Grok Bot | Same path, security page |
 | There is no model picker for members or admins | Grok Bot | Same path, teams page |
-| There is no Linux desktop app | Grok Bot | Same path, and stated as a flat no |
+| Linux desktop app | Grok Bot | Yes since September 2026 (.deb, .rpm, AppImage) |
 | Reads your repository's configuration files and picks up your skills | Grok Build only | The Grok Bot docs never mention Claude Code, SKILL.md or CLAUDE.md at all |
 
 The last row costs people a day. A team reads that "Grok reads your Claude Code

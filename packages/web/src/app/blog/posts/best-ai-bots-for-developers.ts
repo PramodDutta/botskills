@@ -186,10 +186,9 @@ A and B two models against your own codebase to find out which is better on your
 code. If reproducibility matters to you, that is an argument for a runtime where
 you supply the model.
 
-**There is no Linux desktop app.** Supported desktop platforms are macOS on
+**There is a Linux desktop app as of September 2026.** Supported desktop platforms are macOS on
 Apple silicon and Intel, and Windows on x64 and Arm64, plus iPhone on iOS 18 and
-later. Linux desktop, Android, and iPad are documented as not supported, and the
-Linux desktop question is answered with a flat no. The irony is not lost on
+later. Linux desktop and Android apps are documented as supported since September 2026; iPad is documented as not supported. The irony is not lost on
 anyone: the audience most likely to be on a Linux workstation is the audience
 this list is written for. The underlying computer the bot drives is itself a
 managed Linux VM where the bot runs as a non-root user, which makes the absence

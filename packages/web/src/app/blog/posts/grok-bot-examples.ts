@@ -347,7 +347,7 @@ that needed you.
 
 And one hard platform limit before you plan a roster. Grok Bot supports macOS
 on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 and
-later. There is no Linux desktop app, no Android app, and no iPad app. If your
+later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If your
 only machine is a Linux desktop, none of the 25 is available today, whatever
 your subscription says. The
 [supported platforms reference](/blog/grok-bot-supported-platforms) has the

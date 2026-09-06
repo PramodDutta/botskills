@@ -145,7 +145,7 @@ requirement, because a hard requirement beats every preference below it.
 | Will someone ask for an audit trail this quarter? | Lindy, Enterprise tier | Grok Bot's docs say an audit view does not exist yet |
 | Does the job stall for hours and then resume? | Grok Bot | A persistent machine can hold a half-finished form |
 | Do you need a bill you can predict? | Lindy | Credits pause when they run out rather than overflowing |
-| Does anyone work on Linux or Android? | Lindy | Grok Bot has no Linux desktop, Android, or iPad app |
+| Does anyone work on Linux or Android? | Either | Grok Bot added Linux desktop and Android apps in September 2026; iPad is still out |
 
 If two rows point in different directions, the tie-break is the surface split
 further down, not a compromise product.
@@ -241,8 +241,7 @@ You need automation that outlives one person. Workspace routines belong to the
 workspace. Grok Bot routines belong to a bot and die with it.
 
 You run Linux or Android. Grok Bot supports macOS, Windows, and iPhone on iOS
-18 or later, and its docs state plainly that there is no Linux desktop app, no
-Android app, and no iPad app. Lindy reaches you through Slack, which runs
+18 or later, and, since September 2026, Linux and Android as well; iPad is not supported. Lindy reaches you through Slack, which runs
 everywhere.
 
 ## Buy Grok Bot when the door is a login and the job pauses

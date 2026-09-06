@@ -252,7 +252,7 @@ Inventory every routine with its owning bot, purpose, cadence, inputs, output de
 
 The common misconception is that recurring means durable or shared. Recurrence describes when work starts, not who owns the saved assignment or what survives deletion. The recent run record window is also not a permanent archive. If history matters, preserve the needed evidence elsewhere under your own retention policy.
 
-On iPhone, the verified facts allow pause and resume only. Editing, history, testing, and deletion require desktop. Continue with [What a Routine Is, and Where It Dies With the Bot](/blog/what-a-routine-is-and-where-it-dies) for the lifecycle inventory and recovery rehearsal.
+On the phone app, the verified facts allow pausing, resuming and approving, not editing. Editing, history, testing, and deletion require desktop. Continue with [What a Routine Is, and Where It Dies With the Bot](/blog/what-a-routine-is-and-where-it-dies) for the lifecycle inventory and recovery rehearsal.
 
 ## The Five Questions to Answer Before Your First Bot
 

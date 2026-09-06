@@ -97,7 +97,7 @@ The computer is assigned to your user account, not to a bot, and not to a vendor
 
 Deleting \`home-bot\` does not remove the Gmail session or ~/.aws. Deletion removes that bot, its conversation, and its routines. Shared-computer files and logins may remain. Revoke at the source before you celebrate a delete. Hosted MCP tokens stay with Cursor's backend, not on disk. That is not a SuperGrok vault.
 
-The Agent Computer is a managed Linux VM. The bot runs as a non-root user. Non-root is not per-invoice isolation, and it is not a Linux desktop app. There is no Linux desktop, Android, or iPad client. Supported: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. On iPhone you can pause and resume only. Pause is not a wipe.
+The Agent Computer is a managed Linux VM. The bot runs as a non-root user. Non-root is not per-invoice isolation, and it is not a Linux desktop app. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Supported: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Pause is not a wipe.
 
 [Shared computer security](/blog/grok-bot-shared-computer-security) is the architecture page. The second invoice did not partition that architecture.
 
@@ -183,7 +183,7 @@ Pro+ will not print never send. Plus will not print never push. The dual-pool ru
 
 For Elena the verbs are send, pay, push, merge, deploy, and sign in. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) does not need them. Mail and GitHub wait until the computer only holds sessions she accepts as roster-wide. [The safety checklist](/blog/grok-bot-safety-checklist) is the first read before a mailbox hits the shared machine. Approvals control a proposed action. They do not reverse work already completed. There is no audit view of Bot actions yet. Two invoices do not add a log.
 
-On iPhone, pause if something is already going wrong. Editing needs desktop. Linux desktop, Android, and iPad are not supported. Do not buy a second subscription hoping a Linux app appears on the SuperGrok side. SpaceX acquired xAI (announced 2 February 2026) and closed the Cursor acquisition (14 August 2026). That is why sign-in looks like Cursor. It does not mint two computers. Do not say xAI acquired Cursor.
+On iPhone, pause if something is already going wrong. Editing needs desktop. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Do not buy a second subscription hoping a Linux app appears on the SuperGrok side. SpaceX acquired xAI (announced 2 February 2026) and closed the Cursor acquisition (14 August 2026). That is why sign-in looks like Cursor. It does not mint two computers. Do not say xAI acquired Cursor.
 
 When both keys are present, operate like a person with one bench. Confirm live billing. Quote the FAQ. Keep the houses you actually use. Drop the story that two invoices were isolation.
 

@@ -69,7 +69,7 @@ Grok Bot does not read \`SKILL.md\` or \`CLAUDE.md\` from a repo. That compatibi
 
 ## Refuse to teach the VA path from an iPhone, and do not wait for an iPad client
 
-Teach by demonstration is unavailable on iPhone. Record on macOS (Apple silicon or Intel) or Windows (x64 or Arm64), in a browser. The iPhone app, on iOS 18 or later, can pause and resume a routine. It cannot edit, view history, test, or delete. Teaching sits with that second list. There is no Linux desktop app, no Android app, and no iPad app. The computer is a managed Linux VM, bot as non-root, not a Linux client you install. [Supported platforms](/blog/grok-bot-supported-platforms) is the matrix. [How to pause a Grok Bot from your iPhone](/blog/how-to-pause-a-grok-bot-on-iphone) is the stop button after a routine exists.
+Teach by demonstration is unavailable on iPhone. Record on macOS (Apple silicon or Intel) or Windows (x64 or Arm64), in a browser. The iPhone app, on iOS 18 or later, can pause and resume a routine. It cannot edit, view history, test, or delete. Teaching sits with that second list. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The computer is a managed Linux VM, bot as non-root, not a Linux client you install. [Supported platforms](/blog/grok-bot-supported-platforms) is the matrix. [How to pause a Grok Bot from your iPhone](/blog/how-to-pause-a-grok-bot-on-iphone) is the stop button after a routine exists.
 
 If the only machine at 22:00 is a phone, you cannot replace the VA shift tonight. Pause an existing routine from the train. Do not teach a new one from the train. Privacy Mode (Legacy) blocks Grok Bot entirely. Confirm the current Cursor setting rather than guessing from a Slack screenshot.
 
@@ -167,7 +167,7 @@ Verification has to be able to fail. "The doc looked fine" is how Helene schedul
 | Quiet competitor changelog unchanged | Pack says QUIET for that URL | A fake change built from a cookie banner |
 | Slack, CMS, and mail | Untouched. No new post, no new draft in Sent | Any outbound, even a "test" |
 
-Run the trap three mornings before you fire the VA shift. If the BLOCKED plant produces a submitted form, you do not have a replacement. Score the week in packs Helene opened by 09:00, not in hours the browser was busy. On iPhone you can pause if Friday's pack is junk. You cannot edit the charter from the phone. Fix skip rules at a Mac or Windows desk, then run the trap again.
+Run the trap three mornings before you fire the VA shift. If the BLOCKED plant produces a submitted form, you do not have a replacement. Score the week in packs Helene opened by 09:00, not in hours the browser was busy. On iPhone you can pause if Friday's pack is junk. You cannot edit the charter from the phone. Fix skip rules at a desktop, then run the trap again.
 
 ## Answer the ops lead who calls human publish a wasted seat after the VA leaves
 
@@ -224,6 +224,6 @@ No. All bots on an account share one persistent cloud computer assigned to the u
 
 ### Who still publishes the competitor pack after you replace a VA shift with a grok bot?
 
-A named human. The bot writes a dated pack with quoted before-and-after text, URLs, and a quiet line when nothing moved. It never posts to Slack, never edits a public comparison page, and never mails a competitor. That human-still-publishes line is the replacement, not a wage-percent story this page will not invent. If nobody opens the pack by morning, pause the routine. iPhone can pause and resume. Editing the charter still needs a Mac or Windows desk.
+A named human. The bot writes a dated pack with quoted before-and-after text, URLs, and a quiet line when nothing moved. It never posts to Slack, never edits a public comparison page, and never mails a competitor. That human-still-publishes line is the replacement, not a wage-percent story this page will not invent. If nobody opens the pack by morning, pause the routine. iPhone can pause and resume. Editing the charter still needs a desktop.
 `,
 };

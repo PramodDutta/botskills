@@ -157,8 +157,7 @@ Hosted MCP tokens stay with Cursor's backend. Browser cookies do not.
 Paying Plus does not move those cookies into a private box.
 
 Clients exist for macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and iPhone on iOS 18 or later. There is no Linux desktop app,
-no Android app, and no iPad app. The agent runs on a managed Linux VM
+Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent runs on a managed Linux VM
 in the cloud. That VM is not an installer for your ThinkPad.
 [Supported platforms](/blog/grok-bot-supported-platforms) is the device
 grid.
@@ -272,7 +271,7 @@ Desktop: [x.ai/bot](https://x.ai/bot). Phone: the iOS App Store listing
 for Grok Bot, iPhone, iOS 18 or later. Skip GitHub builds and anything
 that claims a Linux desktop client.
 
-Priya's iPad is not a client. A Linux workstation is not a client. Do
+Priya's iPad is not a client. A Linux workstation is a client as of September 2026 (.deb, .rpm or AppImage). Do
 not try to prove a new Plus seat from a device the FAQ omits.
 
 If billing still says SuperGrok after the upgrade you thought you made,

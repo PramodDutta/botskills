@@ -393,9 +393,7 @@ self-hosting property and the Grok Bot documentation still says an audit view of
 Bot actions
 [does not exist yet](https://docs.x.ai/grok-bot/teams-and-enterprises). You have
 a residency or contractual constraint that makes "where does this run" someone
-else's question to ask you. Or your desktops are Linux, which the hosted product
-does not support: its FAQ lists macOS, Windows and iPhone on iOS 18 and later,
-and the docs answer the Linux desktop question with a flat no.
+else's question to ask you. Or your desktops are Linux, which the hosted product only started supporting in September 2026, with a .deb, .rpm or AppImage desktop app.
 
 Price the alternative honestly while you decide. As of 21 August 2026 the
 cheapest paid route to Grok Bot is Cursor Pro+ at 60 dollars a month, with Cursor

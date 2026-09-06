@@ -183,7 +183,7 @@ If Lead Scout can load the console, you do not have a hosted-MCP-only setup. You
 
 Deleting the reports reader deletes that bot and its routines (per bot, not team-level, max 50, with 20 recent run records kept). Deletion does not remove shared-computer files or browser sessions. The usage brief and the admin cookie stay. Lead Scout stays.
 
-Sign out of admin.reports.internal, revoke the hosted connection at the source, archive \`/state/usage-brief.md\` if it holds account ids, and only then delete the bot. Reverse that order and you get a clean roster card with a dirty machine. Hosted MCP tokens are not cleaned by a local sign-out. Revoke them in connection settings and at the reports service. On iPhone you can pause and resume only; teardown that needs editing or deleting waits for desktop.
+Sign out of admin.reports.internal, revoke the hosted connection at the source, archive \`/state/usage-brief.md\` if it holds account ids, and only then delete the bot. Reverse that order and you get a clean roster card with a dirty machine. Hosted MCP tokens are not cleaned by a local sign-out. Revoke them in connection settings and at the reports service. From the phone app you can pause a routine and approve steps; teardown that needs editing or deleting waits for desktop.
 
 ## Size the blast radius from credential location, then from the tool verbs
 

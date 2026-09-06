@@ -48,7 +48,7 @@ A failed run still spent the attempt that failed. A retry spends another. If you
 
 A stall is not a crash. Chat may still say the bot is working. The screen may look like a still photo. Files under \`/workspace\` may already hold the cart capture, the toast, and a half-written STEPS.md. The restart protocol is on [Grok Bot stalled mid-job](/blog/grok-bot-stalled): inspect artifacts, name the last checkpoint, resume from the next one, never re-run a send. Tapping retry from the phone skips all of that. It starts the job from the URL again.
 
-On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). Retry is not pause. Retry is another run. If you are on a train and the preview looks frozen, pause. Do not tap the job twelve times because sitting felt like failure.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). Retry is not pause. Retry is another run. If you are on a train and the preview looks frozen, pause. Do not tap the job twelve times because sitting felt like failure.
 
 An approval only covers the next proposed step. Work already done is not undone and is not refunded ([approvals, security and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)). Denying a later click does not refund the eleven walks that already recaptured the cart. The 20 most recent run records per routine are not a bill. Write the time and the wording you saw, then stop clicking.
 

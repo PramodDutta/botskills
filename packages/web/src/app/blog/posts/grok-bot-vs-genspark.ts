@@ -43,7 +43,7 @@ Hedge every Genspark claim. Plans, credits, and computer language belong on gens
 
 All bots on a Grok Bot account share one persistent cloud computer assigned to the user, not to a bot. Ten named bots are ten screens and one filesystem. Connect Gmail for the overnight pack and that session is on the computer. The research bot you add on Thursday can see it. Deleting the research bot does not log the pack desk out. Read [One Computer, Many Screens](/blog/grok-bot-shared-computer-security).
 
-The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. No Linux desktop, Android, or iPad app. See [supported platforms](/blog/grok-bot-supported-platforms). On iPhone you can pause and resume only. A routine assigns a workflow to one bot. Max 50 routines. Twenty recent run records. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view yet.
+The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. See [supported platforms](/blog/grok-bot-supported-platforms). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. A routine assigns a workflow to one bot. Max 50 routines. Twenty recent run records. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view yet.
 
 Cloud work continues after you close the app. Local file actions still need that machine awake. Sends that require approval still wait on you. Sleep is not approval. An approval does not reverse work already completed. See [Grok Bot With the Laptop Closed](/blog/grok-bot-runs-with-laptop-closed). Beta launched 11 August 2026. Eligibility widened 21 August 2026. Still one cookie jar.
 
@@ -192,9 +192,9 @@ When the week goes wrong, name the object before you rewrite the prompt.
 | Two Grok bots used the same Gmail cookies | Shared cookie jar, by design | Treat the account as one security domain |
 | You deleted Inbox Pack Desk and Gmail is still signed in | Deletion does not wipe files or sessions | Rotate the session yourself |
 | A Genspark mail surface drafted something you only wanted packed | A workspace path that currently includes draft or send verbs | Confirm GenMail copy live. Put send off the Grok charter |
-| Grok Bot never appeared on your Linux laptop | Unsupported platform | There is no Linux desktop app |
+| Grok Bot never appeared on your Linux laptop | An installer story from before September 2026 | There is a Linux desktop app as of September 2026 (.deb, .rpm, AppImage) |
 | Thursday's pack cannot see Wednesday's file | You used a workspace recap, not a desk | Named bot plus a folder on the shared computer |
-| iPhone could not edit the 05:30 routine | iPhone pause and resume only | Change the routine on desktop |
+| iPhone could not edit the 05:30 routine | phone app can pause and approve but not edit | Change the routine on desktop |
 | Privacy Mode (Legacy) blocked Grok Bot | Documented block | Turn it off if you intend to run bots |
 
 Recover files from the shared computer if they remain after a bot is deleted. Routines will not remain. Open [genspark.ai](https://www.genspark.ai) today. If it is still an all-in-one AI workspace, you are looking at a workspace product, not a Grok roster. Create Inbox Pack Desk, assign one weekday routine, close the laptop. In the morning the pack file is either at /inbox-packs/YYYY-MM-DD.md or it is not. Then add a second bot and notice it can see the same Gmail session. If that surprise makes the pack unsafe, you wanted two accounts, not two names.

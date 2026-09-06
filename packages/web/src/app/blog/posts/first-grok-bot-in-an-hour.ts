@@ -53,8 +53,7 @@ delete the lesson, unless the lesson never left the screen.
 
 Hour one starts when the client you actually use can create, run, and inspect
 a bot. Grok Bot supports macOS on Apple silicon and Intel, Windows on x64 and
-Arm64, and iPhone on iOS 18 or later. There is no Linux desktop app, no
-Android app, and no iPad app. The cloud computer is a managed Linux VM. That
+Arm64, and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The cloud computer is a managed Linux VM. That
 is not a Linux client on your laptop. If your only machine is a Linux
 workstation, this hour cannot start. [Supported
 platforms](/blog/grok-bot-supported-platforms) is the current client list.
@@ -410,13 +409,12 @@ an hour well spent. A sidebar of unnamed assistants is not.
 
 ### Can I finish a first Grok Bot in sixty minutes if I already pay for an eligible plan?
 
-Yes, if the hour stays one job. Confirm a macOS or Windows desktop client
+Yes, if the hour stays one job. Confirm a desktop client (Mac, Windows or Linux)
 opens and that the entitlement is Grok Bot, not a cheaper Cursor or SuperGrok
 tier that excludes it. Create one bot named Lead Scout, paste a charter with
 a never-contact line, and run it once on a public page or an attached public
 document. Inspect every sourced claim. Stop without Gmail, without a routine,
-and without a second hire. iPhone can pause and resume only, so the hour does
-not start until you can edit and inspect on a desktop.
+and without a second hire. the phone app can pause a routine and approve steps but not edit it, so the hour does not start until you can edit and inspect on a desktop.
 
 ### Should I connect Gmail in the first hour if the bot will only draft?
 

@@ -13,11 +13,11 @@ The Gmail Allow button in Grok Bot does not wait for you to have a label, a test
 
 This is the click path, not [the Gmail permissions catalogue](/blog/grok-bot-gmail) and not [the pre-flight checklist](/blog/grok-bot-preflight-checklist). Fill the paper first. Then connect, restrict to labels you created, paste a never-send charter, test on an alias, and stop. A human hits Send in Gmail.
 
-## Sit at a Mac or Windows desktop before any Gmail consent screen appears
+## Sit at a desktop before any Gmail consent screen appears
 
 Do this on a Mac (Apple silicon or Intel) or on Windows (x64 or Arm64). The iPhone app (iOS 18+) can pause and resume. Editing, history, testing, and deleting still need desktop. Connecting mail from the couch is how you press Allow while a customer is waiting.
 
-There is no Linux desktop client, no Android app, and no iPad app. The agent runs on a managed Linux VM in the cloud as a non-root user. That is not a Linux desktop you sit at.
+There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent runs on a managed Linux VM in the cloud as a non-root user. That is not a Linux desktop you sit at.
 
 Confirm eligibility on the vendor page that morning. Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. Included paths, as of 25 August 2026: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+ at $60 a month, Cursor Ultra, Cursor Teams Standard ($40 per user per month) and Premium ($120 per user per month), plus a one-time trial. Cursor Hobby, Cursor Pro at $20, and SuperGrok at $30 still do not include it. Prices move. Recheck.
 
@@ -256,7 +256,7 @@ When the job is over, retire the alias. An unused alias that still receives pass
 
 ### Can I connect Gmail to Grok Bot from the iPhone app?
 
-Use a Mac or Windows desktop for the connect. The iPhone app, on iOS 18 or later, can pause and resume a bot. Editing, history, testing, and deleting still need desktop. A Gmail consent screen is an edit. If you Allow from the phone, you will not have a clean way to inspect what you granted, test a send refusal, or delete the bot if the grant is wrong. There is no Android app, no iPad app, and no Linux desktop client. The managed Linux VM in the cloud is not a substitute for sitting at the desktop client.
+Use the desktop app for the connect. The iPhone app, on iOS 18 or later, can pause and resume a bot. Editing, history, testing, and deleting still need desktop. A Gmail consent screen is an edit. If you Allow from the phone, you will not have a clean way to inspect what you granted, test a send refusal, or delete the bot if the grant is wrong. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The managed Linux VM in the cloud is not a substitute for sitting at the desktop client.
 
 ### Does deleting the Gmail bot sign Gmail out of the shared computer?
 

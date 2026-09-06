@@ -11,9 +11,9 @@ export const post: BlogPost = {
 
 > **Correction, 4 September 2026.** When this page was written the Grok Bot docs listed no Linux desktop app and no Android app, and described the iPhone app as pause and resume only. The docs now list a Linux desktop app (x64 and Arm64, as a .deb, an .rpm or an AppImage) and an Android companion app for Android 9 or later, and the phone app can create bots, message them, approve steps, take over the computer and pause routines. iPad is still not supported. Sentences below that say otherwise are out of date and are being rewritten. The current platform list is on [Grok Bot supported platforms](/blog/grok-bot-supported-platforms) and the Android app has [its own page](/blog/grok-bot-android-status).
 
-The classroom cart already looks like a laptop farm, which is why grok bot ipad reads as a store delay instead of a missing client. A Magic Keyboard, Stage Manager, and an Apple ID you already use on a phone do not put Grok Bot on the tablet. The [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) lists macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. iPad is not in that list. Linux desktop is not. Android is not.
+The classroom cart already looks like a laptop farm, which is why grok bot ipad reads as a store delay instead of a missing client. A Magic Keyboard, Stage Manager, and an Apple ID you already use on a phone do not put Grok Bot on the tablet. The [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) lists macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. iPad is not in that list. Linux desktop is not. Android is, since September 2026.
 
-This page is the tablet-shaped hole. It is not [Grok Bot on Android](/blog/grok-bot-android-status) (Play Store and APK rumors). It is not [Grok Bot on iPhone](/blog/grok-bot-iphone-app) (a companion that shipped, two verbs). It is not [why Grok Bot has no Linux desktop app](/blog/why-grok-bot-has-no-linux-app) (a Linux VM that people hear as an installer). If the tablet is the only computer the school gave you, you own neither the desk console nor a documented tablet freeze.
+This page is the tablet-shaped hole. It is not [Grok Bot on Android](/blog/grok-bot-android-status) (Play Store and APK rumors). It is not [Grok Bot on iPhone](/blog/grok-bot-iphone-app) (a companion that shipped, two verbs). It is not [Grok Bot on Linux](/blog/why-grok-bot-has-no-linux-app) (a Linux VM that people hear as an installer). If the tablet is the only computer the school gave you, you own neither the desk console nor a documented tablet freeze.
 
 Meanwhile is two branches, not a roadmap. If you already carry a separate iPhone on iOS 18 or later, you can freeze and restart from that phone. If you do not, the only supported console is a Mac or a Windows desktop. Do not wait on an iPad promise we did not source.
 
@@ -28,15 +28,15 @@ A large iPhone is a product that already shipped, stretched onto more pixels. A 
 | Stage Manager plus a Magic Keyboard | A tablet that looks like a laptop | A documented desktop client |
 | A school MDM web clip to a chat site | A bookmark the district pushed | A supported Grok Bot console |
 | A dated social post about Apple tablets | Someone's guess | A change to docs.x.ai |
-| The FAQ supported list | macOS, Windows, iPhone iOS 18+ | Nothing about a hidden iPad build |
+| The FAQ supported list | macOS, Windows, Linux, iPhone, Android | Nothing about a hidden iPad build |
 
 The last row is the only one that can move this page. Until it names iPad, treat every other row as noise.
 
 ## Read iPad as absent on the FAQ before you trust an App Store badge
 
-Write the supported list on a card you can see while the App Store tab loads. Full desktop: macOS on Apple silicon, macOS on Intel, Windows x64, Windows Arm64. Phone companion: iPhone, and only on iOS 18 or later, and only pause and resume. Missing: Linux desktop, Android, iPad.
+Write the supported list on a card you can see while the App Store tab loads. Full desktop: macOS on Apple silicon, macOS on Intel, Windows x64, Windows Arm64. Phone companion: iPhone (iOS 18 or later) or Android (9 or later); it pauses routines and approves steps but does not edit them. Missing: Linux desktop, Android, iPad.
 
-Those rows come from the FAQ. The Linux desktop no is repeated on [teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises) as a direct question with a flat no. iPad is simply not in the list. A blog that says Apple support might mean iPhone. A "works on iPad" caption under an iPhone screenshot is still an iPhone screenshot. The [supported platforms](/blog/grok-bot-supported-platforms) page is the grid. This page is the iPad-shaped hole.
+Those rows come from the FAQ. The Linux desktop no is repeated on [teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises) as a direct question, and answered yes since September 2026. iPad is simply not in the list. A blog that says Apple support might mean iPhone. A "works on iPad" caption under an iPhone screenshot is still an iPhone screenshot. The [supported platforms](/blog/grok-bot-supported-platforms) page is the grid. This page is the iPad-shaped hole.
 
 A tablet does not skip the plan door. SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, both Cursor Teams plans, and a one-time trial can include Grok Bot. Cursor Hobby does not. Cursor Pro at $20 does not. SuperGrok at $30 does not. On the pricing pages we checked, Cursor Pro+ at $60 a month is the cheapest paid path. Confirm those pages before you spend. An iPad with a SuperGrok Plus receipt is still not a client. See [the Cursor account explainer](/blog/grok-bot-cursor-account-explained) and the [free trial](/blog/grok-bot-free-trial).
 
@@ -44,7 +44,7 @@ A tablet does not skip the plan door. SuperGrok Plus, SuperGrok Heavy, Cursor Pr
 
 People ask for a date because Apple often ports phone apps to tablets. This page will not give you one, guess a quarter, treat Stage Manager as a hint, or treat a billing expansion as a new device class. On 21 August 2026 more SuperGrok and Cursor plans became eligible. That change added invoices. It did not add an iPad client.
 
-A ship date that matters would look like this: the FAQ supported list gains a row that says iPad, with a qualifier you can design around, the way iPhone is qualified as pause and resume only. Until that sentence exists, every date you see is unsourced relative to this site. Unsourced is not impossible. It is unusable for planning. If you want to wait, wait because you refuse a second computer, not because an essay implied an iPadOS build is in flight.
+A ship date that matters would look like this: the FAQ supported list gains a row that says iPad, with a qualifier you can design around, the way the phone app is qualified as unable to edit routines. Until that sentence exists, every date you see is unsourced relative to this site. Unsourced is not impossible. It is unusable for planning. If you want to wait, wait because you refuse a second computer, not because an essay implied an iPadOS build is in flight.
 
 ## Separate the iPhone companion from the tablet that shares your Apple ID
 
@@ -64,19 +64,19 @@ The cloud box does not care whether you are holding an iPad, an iPhone, or a clo
 
 Student work does not belong on that shared computer. [Bots for educators](/blog/bots-for-teachers) already draws the line: planning and draft feedback you edit, never the gradebook, never a named child's file. An iPad in a classroom makes that line easier to cross because the tablet is where the register lives. Keep the register off the bot.
 
-## Author, test, inspect, and retire bots only on a Mac or Windows desk
+## Author, test, inspect, and retire bots only at a desktop
 
 Meanwhile starts with a desk you do not have to love. Creating, editing, testing, reading history, and deleting need a desktop client. That is the documented split on the [mobile page](https://docs.x.ai/grok-bot/mobile), written for iPhone, and it applies twice as hard when your tablet is not a client at all.
 
 | Job you want | Cart iPad | Staff-room Mac or Windows | Personal iPhone you already own, iOS 18+ | Account cloud computer |
 |---|---|---|---|---|
 | Write or change a bot | No | Yes | No | Not where you type |
-| Freeze or restart a routine | No | Yes | Those two verbs only | Continues until told |
+| Freeze or restart a routine | No | Yes | Pause, resume and approve only | Continues until told |
 | Read run history or delete | No | Yes | No | Files may remain; you cannot inspect them from the tablet |
 | Approve a send | No | Yes | Not a documented phone job | Holds if set to ask |
 | Record a browser skill | No | Ten minutes, no mic, desktop | No | Recording lives on the computer |
 
-Borrow a Mac or a Windows PC you are allowed to install on. Official desktop path: [x.ai/bot](https://x.ai/bot). Fifty minutes is enough: paste a charter, attach the smallest mailbox you can, set send to require approval, run a test that can fail, leave. Teach by demonstration is desktop only (ten minutes, no microphone, browser workflows, a draft skill), unavailable on iPhone, and unavailable on iPad because iPad is not a client. Max fifty routines per bot, twenty run records, nothing team-level.
+Use a Mac, Windows or Linux machine you are allowed to install on. Official desktop path: [x.ai/bot](https://x.ai/bot). Fifty minutes is enough: paste a charter, attach the smallest mailbox you can, set send to require approval, run a test that can fail, leave. Teach by demonstration is desktop only (ten minutes, no microphone, browser workflows, a draft skill), unavailable on iPhone, and unavailable on iPad because iPad is not a client. Max fifty routines per bot, twenty run records, nothing team-level.
 
 [Inbox Triage](/bots/inbox-triage) drafts and never sends. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) packs a morning document and never sends a message. [Mail Cleanup Assistant](/bots/mail-cleanup-assistant) never sends and never permanently deletes. None of those required a tablet client.
 
@@ -121,7 +121,7 @@ Name: Nia planning desk bots
 You run on the account cloud computer, a managed Linux VM, as a non-root user.
 You do not run on my school iPad. There is no Grok Bot iPad client.
 Treat the iPad as student hardware I carry, never as a console.
-If I have an iPhone on iOS 18, I can pause and resume only from that phone.
+If I have an iPhone or an Android phone, I can pause routines and approve steps from it, but not edit them.
 If that phone is not with me, I cannot freeze you at all.
 Never send, reply, post, purchase, or delete without Require Approval.
 Never email a parent, a student, or a colleague.
@@ -144,7 +144,7 @@ The strongest objection to this page is not a store listing. It is kinship. The 
 | Wait for iPad | Calendar time, no sourced date | No client | You refuse a second computer and accept no Grok Bot |
 | Borrow a staff-room desk | An hour and a favor | Full desktop while seated | You can reach Mac or Windows you are allowed to install on |
 | Use a home Mac or Windows box | Evenings you already have | Full desktop after school | The school will not bless a lab install |
-| Freeze from a phone you already carry | Nothing extra | Two verbs, not authorship | You already own iOS 18. Do not buy a phone for Grok Bot |
+| Freeze from a phone you already carry | Nothing extra | Pause and approve, not authorship | You already own iOS 18. Do not buy a phone for Grok Bot |
 
 Three things keep the wait option from being a plan that still ships teaching work. First, this page did not source an iPad client, so waiting has no expected value you can put on a calendar. Second, the only shipped phone client is iPhone pause and resume. Editing still needs a desktop. An iPad that "should just run" the phone app is still not a documented console. Third, unofficial installs on a managed tablet are a credential incident and an MDM incident, not a cheaper client. If the school will not allow a supported desktop, Grok Bot is not available through the cart this month. Borrow, use a home machine you control, or wait and do not call waiting a Grok Bot setup.
 
@@ -162,17 +162,17 @@ If the job you wanted is teach-by-demonstration on duty, the blocker is larger t
 
 ## Send Android store holes and Linux naming collisions to the pages that own them
 
-If you landed here because someone said Apple already shipped a phone app, so the tablet must work, you mixed two devices. The companion argument lives on [Grok Bot on iPhone](/blog/grok-bot-iphone-app). If you landed here from a Play Store screenshot, you are on the wrong missing client: [Grok Bot on Android](/blog/grok-bot-android-status). Do not copy an Android rumor onto an iPad calendar. If you landed here because someone said the computer is Linux, so any device should work, you mixed the worker with the client: [why there is no Linux desktop app](/blog/why-grok-bot-has-no-linux-app).
+If you landed here because someone said Apple already shipped a phone app, so the tablet must work, you mixed two devices. The companion argument lives on [Grok Bot on iPhone](/blog/grok-bot-iphone-app). If you landed here from a Play Store screenshot, you are on the wrong missing client: [Grok Bot on Android](/blog/grok-bot-android-status). Do not copy an Android rumor onto an iPad calendar. If you landed here because someone said the computer is Linux, so any device should work, you mixed the worker with the client: [Grok Bot on Linux](/blog/why-grok-bot-has-no-linux-app).
 
 If you already have a supported desktop and you are asking whether the lid must stay open, [closing the laptop](/blog/grok-bot-runs-with-laptop-closed) is next. The compatibility grid stays on [supported platforms](/blog/grok-bot-supported-platforms). Cost and trial stay on [Grok Bot cost](/blog/grok-bot-cost) and the [free trial](/blog/grok-bot-free-trial). This page's job is narrower: do not wait on an iPad promise we did not source, and do not confuse a classroom tablet with a client.
 
-**Keep reading:** [Grok Bot on Android: What Is Documented, What Is Coming, What to Do Meanwhile](/blog/grok-bot-android-status), [Grok Bot on iPhone: What You Can Do, and What Still Needs Desktop](/blog/grok-bot-iphone-app), [Why Grok Bot Has No Linux Desktop App (Even Though the Computer Is Linux)](/blog/why-grok-bot-has-no-linux-app).
+**Keep reading:** [Grok Bot on Android: The App Exists](/blog/grok-bot-android-status), [Grok Bot on iPhone: What the App Does](/blog/grok-bot-iphone-app), [Grok Bot on Linux: There Is a Desktop App Now](/blog/why-grok-bot-has-no-linux-app).
 
 ## Frequently Asked Questions
 
 ### Is there a Grok Bot app for iPad?
 
-No. The supported clients on the Grok Bot FAQ are macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. iPad is not on that list, nor are Android and Linux desktop. An App Store row, a Designed for iPhone badge, Stage Manager, or a social post with a date does not replace the FAQ. Confirm any similarly named listing on the vendor's current page. Use a Mac or Windows desktop, pause from an iPhone you already own, or decide the product is not for you this month.
+No. The supported clients on the Grok Bot FAQ are macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. iPad is not on that list, nor are Android and Linux desktop. An App Store row, a Designed for iPhone badge, Stage Manager, or a social post with a date does not replace the FAQ. Confirm any similarly named listing on the vendor's current page. Use a Mac, Windows or Linux desktop, use the phone app for approvals and pauses, or decide the product is not for you this month.
 
 ### When is Grok Bot coming to iPad?
 
@@ -184,6 +184,6 @@ You cannot install a Grok Bot client on that tablet. You can still use the produ
 
 ### Does a personal iPhone replace the missing iPad client?
 
-No. An iPhone on iOS 18 or later is pause and resume only. It does not let you edit, read history, test, delete, or teach by demonstration. It does not make the school iPad a console. You still need a Mac or Windows desktop to author the bot. If the phone is in your bag, you can freeze a looping routine. If it is at home, you wait until the next desk hour. Do not buy an iPhone to skip that desk. Do not wait for iPad to grow the verbs the phone already lacks.
+No. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. It does not let you edit, read history, test, delete, or teach by demonstration. It does not make the school iPad a console. You still need a desktop (Mac, Windows or Linux) to author the bot. If the phone is in your bag, you can freeze a looping routine. If it is at home, you wait until the next desk hour. Do not buy an iPhone to skip that desk. Do not wait for iPad to grow the verbs the phone already lacks.
 `,
 };

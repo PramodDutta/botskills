@@ -31,7 +31,7 @@ Grok Bot is the product in [What is a Grok Bot](/blog/what-is-a-grok-bot). You n
 
 That computer keeps running when the laptop lid closes. [Inbox Triage](/bots/inbox-triage) can sort mail overnight. [Mail Cleanup Assistant](/bots/mail-cleanup-assistant) can draft a purge list and still not send. [Standup Scribe](/bots/standup-scribe) can turn notes into a digest. None of those jobs is clone this repo, run the test suite, open a pull request. If you needed that, you wanted the Cursor repo job, not a second Grok Bot.
 
-Grok Bot has no model picker, for members or admins, and none is planned. There is no Grok Bot-specific spend cap. Subscriptions include a weekly usage allowance, then on-demand billing from model and token cost. No public dollar figure for that allowance exists. An audit view of Bot actions does not exist yet. Privacy Mode (Legacy) blocks Grok Bot. Platforms: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. Not Linux desktop, not Android, not iPad. The VM is Linux. That is not a Linux desktop client.
+Grok Bot has no model picker, for members or admins, and none is planned. There is no Grok Bot-specific spend cap. Subscriptions include a weekly usage allowance, then on-demand billing from model and token cost. No public dollar figure for that allowance exists. An audit view of Bot actions does not exist yet. Privacy Mode (Legacy) blocks Grok Bot. Platforms: macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. Not iPad. The VM is Linux. That is not a Linux desktop client.
 
 Routines attach to one bot, max fifty, with twenty recent run records, and they die when the bot is deleted. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. That is not Cloud Agents.
 
@@ -160,7 +160,7 @@ Most grok bot vs cursor agent failures are filing errors. The symptom is real. T
 | Privacy Mode (Legacy) blocks the teammate | Documented Grok Bot block | Cursor privacy settings. Cloud Agents may be blocked too. Confirm |
 | Deleted Grok Bot, Gmail still signed in | Deleting a bot does not clean the computer | Sessions and files on the shared VM. Not Cursor agent history |
 
-On iPhone, Grok Bot can pause and resume only. Editing, history, testing, and deleting need desktop. Confirm Cursor's current iOS story for Cloud Agents. Do not expect the Grok Bot iPhone client to be that dashboard.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Confirm Cursor's current iOS story for Cloud Agents. Do not expect the Grok Bot iPhone client to be that dashboard.
 
 When the ticket is wrong, the fix is a noun. Restarting Grok Bot will not unstick a Cloud Agent VM. Restarting a Cloud Agent will not unscrew a Grok Bot plugin.
 

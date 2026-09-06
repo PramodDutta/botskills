@@ -51,7 +51,7 @@ Grok Bot is that desk. Name the bot, write the charter, connect the minimum logi
 
 Launched beta 11 August 2026. Eligibility widened 21 August 2026. Cheapest paid path: Cursor Pro+ at $60 a month. Cursor Hobby, Cursor Pro at $20, and SuperGrok at $30 do not include it. SuperGrok Plus at $100 does. Also eligible: SuperGrok Heavy, Cursor Ultra, Cursor Teams Standard and Premium, plus a one-time trial. No Grok Bot-specific spend cap, no published allowance figure, no model picker. Weekly allowance, then on-demand. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. An audit view of bot actions does not exist yet.
 
-Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later for pause and resume only. Editing, history, testing, and deleting need desktop. No Linux desktop app, no Android, no iPad. The computer is a managed Linux VM, not a Linux desktop client.
+Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone (iOS 18 or later) and Android (9 or later) companion apps that can pause routines and approve steps but not edit them. Editing, history, testing, and deleting need desktop. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The computer is a managed Linux VM, not a Linux desktop client.
 
 ## Treat Cowork as a desktop-ish operator until Anthropic's page says otherwise
 
@@ -69,7 +69,7 @@ You are Jordan in ops at a twelve-person company. Three jobs landed in the same 
 
 Job one: a vendor invoice hits a Gmail label, you extract fields, then post a draft Slack note. Never send, never pay. Trigger-shaped. Try a workflow builder first. Confirm Gmail and send-off on lindy.ai.
 
-Job two: a draft-only morning pack by 07:15 after both laptops close, with last week's exceptions file still there. Standing named role. That is Grok Bot. Use [inbox triage](/bots/inbox-triage). The client is a remote control. An iPhone can pause and resume only.
+Job two: a draft-only morning pack by 07:15 after both laptops close, with last week's exceptions file still there. Standing named role. That is Grok Bot. Use [inbox triage](/bots/inbox-triage). The client is a remote control. An From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 
 Job three: CSV exports in Downloads that must not leave this Mac. Cowork-shaped if Anthropic's current desktop grant can see one subfolder. Grant one folder, not the whole home directory.
 

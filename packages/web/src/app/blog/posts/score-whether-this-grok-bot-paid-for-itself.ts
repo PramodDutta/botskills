@@ -72,7 +72,7 @@ If you cannot tell which bot wrote the overflow, log the account line and write 
 
 Overflow as a phase lives on [the weekly allowance page](/blog/grok-bot-weekly-allowance). What burns it lives on [on-demand usage](/blog/grok-bot-on-demand-usage). If the overflow line is large and the hours are small, pause first, then open those pages.
 
-Paste the amount with a date and a source: "copied from invoice, Friday 22 August 2026." iPhone can pause and resume only. History, editing, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). Do not declare payback from a train seat.
+Paste the amount with a date and a source: "copied from invoice, Friday 22 August 2026." From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. History, editing, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). Do not declare payback from a train seat.
 
 ## Treat the twenty run records as a cache that cannot hold a payback ledger
 
@@ -82,7 +82,7 @@ Those rows show that a run fired. They do not show minutes you spent, whether a 
 
 Cite the twenty to debug a silent morning. Never cite them as proof this grok bot paid for itself. If you wait three weeks to score ten mornings, the early rows are gone. Fill the sheet the morning of the run.
 
-On iPhone you cannot open that history. Pause is available. Scoring is not. Linux desktop, Android, and iPad are not supported clients ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
+On iPhone you cannot open that history. Pause is available. Scoring is not. There are Linux desktop and Android apps as of September 2026; iPad is still not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 
 An audit packet proves what the bot proposed and who signed. A payback sheet proves hours versus overflow. Do not merge them into one document that does neither.
 

@@ -61,8 +61,7 @@ Two objects get collapsed in casual talk. Pull them apart.
 The computer is a persistent cloud machine assigned to your user account. It
 is a managed Linux VM. The bot runs on it as a non-root user
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
-That Linux fact describes the hosted computer, not a Linux desktop app. There
-is no Linux desktop client. Your desk is macOS or Windows. The bots live on
+That Linux fact describes the hosted computer, not a Linux desktop app. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). Your desk is macOS or Windows. The bots live on
 the hosted machine either way.
 
 The screen is that bot's work surface. Each bot gets one. It is a place to
@@ -155,7 +154,7 @@ visible browser interaction for up to ten minutes, captures no microphone
 audio, produces a draft skill, covers browser workflows only, and is
 unavailable on iPhone. It teaches clicks on the computer you already have.
 
-## Edit on a Mac or Windows desk, and treat iPhone as pause-and-resume only
+## Edit on a desktop, and treat the phone app as pause-and-approve only
 
 The computer the bots use is hosted. The client you use to change their jobs
 is not. Supported desks are macOS (Apple silicon and Intel) and Windows (x64
@@ -181,8 +180,7 @@ Plan the desk for those verbs. Plan the phone for the stop.
 | Test, then delete a bot | Desktop | You cannot retire the owner, and you cannot inspect what you would retire |
 | Record a demonstration | Desktop only | The phone cannot teach this |
 
-A Monday miss diagnosed from a phone is a guess. History lives on a Mac or
-Windows desk. The full client list is
+A Monday miss diagnosed from a phone is a guess. History lives on a desktop. The full client list is
 [Grok Bot on Windows, Linux and iPad](/blog/grok-bot-supported-platforms).
 Pocket limits: [Grok Bot on iPhone](/blog/grok-bot-iphone-app). Change the
 object model at a desk.
@@ -290,7 +288,7 @@ Shared facts both charters must repeat:
 - Deleting a bot deletes its routines and does not sign out Gmail.
 - Hosted MCP tokens, if any, sit with Cursor's backend, still account-scoped.
 - No model picker. No Grok Bot spend cap. No audit view of actions yet.
-- iPhone can pause and resume only. Edits and deletes need desktop.
+- From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Edits and deletes need desktop.
 
 Retirement: copy routine text out, pause loops, sign out of mail in the browser,
 delete leftover files, then delete the bot, from a desk, never from a phone.
@@ -355,7 +353,7 @@ routine?
 | Symptom on Monday | First mechanism question | Wrong story | Right next step |
 |---|---|---|---|
 | No 07:00 queue, temp is gone from the sidebar | Did that deleted bot own the routine? | The mail VM died overnight | Recreate the routine on a durable bot, from a desk |
-| No 07:00 queue, owner is still there, you are on a phone | Can you even open history from here? | The schedule drifted | Sit at a Mac or Windows desk and read the twenty records |
+| No 07:00 queue, owner is still there, you are on a phone | Can you even open history from here? | The schedule drifted | Sit at a desktop and read the twenty records |
 | Queue file from Friday is still on disk | Is a leftover file a live job? | The job obviously ran | Treat the file as a fossil. Look for today's run, or the missing owner |
 | Lead Scout has Gmail open after you "removed mail" | Did delete sign the browser out? | Research stole a login | Sign out or revoke. Delete never cleared the jar |
 | You cannot find which model ran | Did an admin pin a cheaper model? | Picker was reset | There is no picker. Check cadence and connections instead |
@@ -425,9 +423,7 @@ spend cap to pair with it either.
 A routine is assigned to one bot. Nothing is team-level. When you deleted the
 test bot, you deleted every routine attached to it. The leftover file from
 last week is not the job. It is a fossil on the shared computer. Recreate the
-routine on a durable name, from a Mac or Windows desktop, after you copy the
-text out if it still exists somewhere you control. On iPhone you can pause
-and resume only, so a sofa cleanup cannot show you history and cannot safely
-complete this repair.
+routine on a durable name, from the desktop app, after you copy the
+text out if it still exists somewhere you control. From the phone app you can pause a routine and approve steps, but it cannot show you run history, so a sofa cleanup cannot safely complete this repair.
 `,
 };

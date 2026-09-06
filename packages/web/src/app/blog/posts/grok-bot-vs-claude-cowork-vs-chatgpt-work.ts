@@ -27,7 +27,7 @@ ChatGPT Work's home is inside ChatGPT. OpenAI currently frames it as gathering c
 
 ## Walk the founder, the intern, and the overnight inbox through one tree
 
-You are the founder on a Mac. You hired a Windows intern whose job this month is a messy Downloads folder: signed NDAs, local standup transcripts, exports that must not wander. The company inbox has to produce a draft-only morning pack by 07:15 after both lids close. Grok Bot clients exist for both machines (macOS Apple silicon and Intel, Windows x64 and Arm64) plus iPhone on iOS 18 or later for pause and resume only.
+You are the founder on a Mac. You hired a Windows intern whose job this month is a messy Downloads folder: signed NDAs, local standup transcripts, exports that must not wander. The company inbox has to produce a draft-only morning pack by 07:15 after both lids close. Grok Bot clients exist for both machines (macOS Apple silicon and Intel, Windows x64 and Arm64) plus iPhone (iOS 18 or later) and Android (9 or later) companion apps that can pause routines and approve steps but not edit them.
 
 Ask two questions. Does this job still have to exist next Tuesday with last week's files and the same stop line? Whose computer is allowed to hold it?
 
@@ -206,7 +206,7 @@ Cowork, on the intern's Windows box. Grant one folder. Ask it to list that folde
 
 Work. Start a one-off pack. When it finishes, try to treat it as a named coworker next week without pasting a new goal. If you have to be the memory, you confirmed a task surface. Check whether each person's plan actually includes Work.
 
-Platform. Founder Mac and intern Windows: supported Grok Bot clients. iPhone iOS 18+: pause and resume only. Linux, Android, iPad: no Grok Bot app. Cowork and Work: vendor pages.
+Platform. Founder Mac and intern Windows: supported Grok Bot clients. Phone app (iPhone or Android): approve steps and pause or resume a routine, but no editing. Linux, Android, iPad: no Grok Bot app. Cowork and Work: vendor pages.
 
 A check that cannot fail is not a check.
 

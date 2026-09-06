@@ -114,7 +114,7 @@ Dana will hear that as "then why buy it." That is the useful next sentence, not 
 | Do we get a machine per bot? | Yes, that is the isolation | No. One computer per account. Screens are not vaults |
 | What is the cap? | I will find the number | There is no Grok Bot-specific spend cap |
 | What percent of a contractor does this save? | Any invented percent | We will not invent a percent. We will run one reversible job |
-| Can Linux desktops run the app? | We will figure it out | No Linux desktop app. No Android. No iPad. Mac, Windows, iPhone on iOS 18+ |
+| Can Linux desktops run the app? | We will figure it out | Yes, since September 2026. Android too. iPad no. Mac, Windows, Linux, iPhone, Android |
 
 Walk the scene once so it is not abstract. Dana wants a 40-message sequence to a scraped list. You put [Inbox Triage](/bots/inbox-triage) on the table instead: overnight mail, labels, three drafts, zero sends. You put [Lead Scout](/bots/lead-scout) on the table as a later job: public sources, a ranked list, no contact. You refuse the sequence as the first job. [How to pick the first job](/blog/pick-the-first-grok-bot-job) is the scoring page you send after the meeting. In the room, the score is one word: reversible.
 
@@ -156,11 +156,11 @@ Three pages, three jobs. Mixing them is how the signer leaves confused.
 
 This page is what you are signing and what you are not getting: sixty or a hundred or forty, no cap, no dedicated VM, no audit log yet, no on day one to Dana's sequence, yes to a never-send job. After the meeting send [the cheapest way in](/blog/cheapest-way-into-grok-bot) and [how to pick the first job](/blog/pick-the-first-grok-bot-job). The first is the cart. The second is the work.
 
-## Name who can actually log in: Mac, Windows, iPhone, not Linux desktop
+## Name who can actually log in: Mac, Windows, Linux, iPhone and Android
 
-Platforms are a budget fact because a signer will assume "everyone here can use it." Supported: macOS on Apple silicon and Intel, Windows on x64 and Arm64, iPhone on iOS 18+. Not supported: Linux desktop, Android, iPad. The FAQ is blunt: there is no Linux desktop app. The cloud computer being Linux does not give your Ubuntu laptop a client.
+Platforms are a budget fact because a signer will assume "everyone here can use it." Supported: macOS on Apple silicon and Intel, Windows on x64 and Arm64, iPhone on iOS 18+. Not supported: Linux desktop, Android, iPad. The FAQ now lists a Linux desktop app (.deb, .rpm or AppImage) as of September 2026. The cloud computer being Linux does not give your Ubuntu laptop a client.
 
-On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop. If the reviewer lives on a phone, they can stop a run. They cannot fix a charter. Do not staff the human-in-the-last-mile role to someone who only has an iPhone.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. If the reviewer lives on a phone, they can stop a run. They cannot fix a charter. Do not staff the human-in-the-last-mile role to someone who only has an iPhone.
 
 Privacy Mode (Legacy) blocks Grok Bot entirely. If the company turned that on for Cursor, the seat you just priced will not open. Ask before the PO.
 

@@ -50,7 +50,7 @@ A routine assigns a workflow to one Bot. Max fifty routines per Bot. The
 app keeps the twenty most recent run records per routine. Deleting a Bot
 deletes its routines. Nothing is team-level
 ([skills, routines and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations)).
-iPhone can pause and resume only. Editing, history, testing, and deleting
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting
 need desktop
 ([mobile](https://docs.x.ai/grok-bot/mobile)).
 
@@ -64,10 +64,9 @@ not a pause. A second bot is not a second budget. Screens are not security
 boundaries. Cookies, sessions, files, and CLI credentials are shared.
 Deleting a bot does not remove shared-computer files or sessions. The
 computer is a managed Linux VM. The Bot runs as a non-root user. That is
-not a Linux desktop client. There is no Linux desktop, Android, or iPad app
-([FAQ](https://docs.x.ai/grok-bot/faq)).
+not a Linux desktop client. There are Linux desktop and Android apps as of September 2026; iPad is still not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 
-Put Friday 16:40 on a Mac or Windows desk, in the timezone the briefing
+Put Friday 16:40 on a desktop, in the timezone the briefing
 already uses.
 
 ## Park this ritual off the policy page and off the emergency stop
@@ -472,7 +471,7 @@ A five-minute inbox routine can fire through both weeks while you are away. The 
 
 ### Can I complete the Friday review from an iPhone?
 
-No. iPhone can pause and resume only. Editing, history, testing, and deleting need a Mac or Windows desk. The last twenty records are the evidence window, and you cannot open them on the phone. You can pause a clock you already know is unused, and you should if Friday finds you on a train. That pause is not the review. The review is the owner list plus the history pass plus the fail-and-pause decision, written on a sheet. Resume from the phone is how a paused unused bot returns before Monday.
+No. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need a desktop. The last twenty records are the evidence window, and you cannot open them on the phone. You can pause a clock you already know is unused, and you should if Friday finds you on a train. That pause is not the review. The review is the owner list plus the history pass plus the fail-and-pause decision, written on a sheet. Resume from the phone is how a paused unused bot returns before Monday.
 
 ### How is this Friday ritual different from the emergency stop and the policy page?
 

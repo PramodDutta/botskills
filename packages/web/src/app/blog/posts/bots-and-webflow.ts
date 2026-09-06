@@ -74,7 +74,7 @@ Do not record a teach-by-demonstration of yourself publishing. That path records
 
 Do not attach a weekday routine that opens the CMS. A routine assigns a workflow to one Bot. Max 50 routines per Bot. The app keeps 20 most recent run records per routine. Deleting a Bot deletes its routines. Nothing is team-level. If you want a clock, clock the folder report: three diffs waiting, zero live clicks.
 
-On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop. Pause from the phone, then fix the charter on macOS or Windows. There is no Linux desktop app and no Android or iPad client.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Pause from the phone, then fix the charter on macOS or Windows. There are Linux desktop and Android apps as of September 2026; iPad is still not supported.
 
 ## Keep CMS draft status and live URLs on opposite sides of a named person
 

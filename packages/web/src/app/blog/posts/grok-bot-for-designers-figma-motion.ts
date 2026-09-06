@@ -346,8 +346,7 @@ neighbours are 400kb is a wrong export you would never catch by opening files
 one at a time. The multiplicative failures are visible from a distance and
 invisible up close, which is the opposite of how people review.
 
-Worth knowing if your review happens on a tablet: Grok Bot's documentation
-lists macOS, Windows, and iPhone on iOS 18 and later as supported, and states
+Worth knowing if your review happens on a tablet: Grok Bot's documentation lists macOS, Windows and Linux desktops and iPhone and Android phones as supported, and states
 that [iPad is not supported](https://docs.x.ai/grok-bot/faq). The iPhone app is
 also limited compared to desktop, so plan your review step around a laptop.
 The platform detail is covered further in

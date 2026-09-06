@@ -157,9 +157,9 @@ open that file is the computer doing what it was documented to do.
 
 The Agent Computer is a managed Linux VM. The process runs as a non-root
 user. That does not give each bot its own user, and it is not a Linux
-desktop client. There is no Linux desktop, Android, or iPad app. Clients are
+desktop client. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Clients are
 macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS
-18+. iPhone can pause and resume only. Desktop is required to edit, inspect
+18+. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Desktop is required to edit, inspect
 history, test, or delete. None of that slices a Figma cookie by screen.
 
 Beta launched 11 August 2026. Eligibility widened 21 August 2026. Screens did

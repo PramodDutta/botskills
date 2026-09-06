@@ -448,7 +448,6 @@ page to you only for an untouched approval, failed credentials, or two nags
 across two stalls with no output between them. Everything else is silence, plus
 one optional line a day naming how many bots were checked and how many were late.
 If the channel fills up, the stall definition is usually fine and the repeat rule
-is missing. Also check what you can do from your phone: iPhone allows pause and
-resume only.
+is missing. Also check what you can do from your phone: From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 `,
 };

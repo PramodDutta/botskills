@@ -20,7 +20,7 @@ This page is that split, and only that split. It is not a remake of the
 [supported platforms list](/blog/grok-bot-supported-platforms). That article
 names every client, including the machines this product does not ship. Here
 the question is smaller: you already have an iPhone, you already have (or can
-reach) a Mac or Windows desk, and you need to know what the pocket client is
+reach) a desktop, and you need to know what the pocket client is
 for before the next commute.
 
 Documented scope, from the [mobile page](https://docs.x.ai/grok-bot/mobile):
@@ -76,7 +76,7 @@ and SuperGrok at $30 do not include Grok Bot. Unpack the false starts in
 Write the split down once. Do not keep it as a feeling. The feeling says "I
 have the app, I can handle it". The table says otherwise.
 
-| Action you want on the train | Grok Bot iPhone | Mac or Windows desk | What you actually do from the seat |
+| Action you want on the train | Grok Bot phone app | Desktop app | What you actually do from the seat |
 |---|---|---|---|
 | Stop a routine that is looping | Pause | Pause | Pause. That is the whole pocket move. |
 | Start a paused routine again | Resume | Resume | Resume only if you already trust the charter. |
@@ -410,7 +410,7 @@ workstation on the ride you are taking tomorrow.
 Yes, on iPhone running iOS 18 or later, as a companion rather than a
 workstation. You can pause and resume a routine. You cannot edit a
 routine, view run history, test a routine, or delete a routine from the
-phone. Those need a Mac or Windows desktop. Teach by demonstration is
+phone. those need the desktop app. Teach by demonstration is
 unavailable on iPhone. The bot's work still runs on the account's cloud
 computer while you are away. The phone only interrupts or restarts a
 routine that already exists. Confirm iOS 18 and an eligible plan before

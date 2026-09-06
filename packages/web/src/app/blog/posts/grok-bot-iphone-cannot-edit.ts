@@ -1,13 +1,15 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot iPhone Limits: Pause and Resume Only',
+  title: 'Grok Bot iPhone Limits: What Still Needs the Desktop App',
   description:
-    'Grok Bot iPhone edit is not a thing. iOS 18+ can pause and resume. Editing, history, testing, and deleting still need a Mac or Windows desk.',
+    'The Grok Bot phone app (iPhone or Android) can pause a routine and approve steps. Editing it, reading run history, testing and deleting still need the desktop app.',
   date: '2026-08-27',
   category: 'Reference',
   content: `
-# Grok Bot iPhone Limits: Pause and Resume Only
+# Grok Bot iPhone Limits: What Still Needs the Desktop App
+
+> **Correction, 6 September 2026.** When this page was written the iPhone app could only pause and resume a routine. The mobile docs (updated 2 September 2026) now describe an app for iPhone and Android that messages bots, creates them, approves steps, takes over the computer for a login or code, and pauses routines. What has not changed is the point of this page: editing a routine, reading its run history, testing it and deleting it still need the desktop app.
 
 The wrong-price follow-up already left from the lounge Wi-Fi, and you cannot rewrite the charter from the jetway. That is the grok bot iphone edit limit in one scene. Pause works. Resume works. Charter text, routine settings, run history, a one-shot test, and delete do not.
 
@@ -21,7 +23,7 @@ People treat missing buttons as a UI delay. They swipe, they hunt Settings, they
 
 A charter is standing text the bot reads when you are not in the room. Changing that text is an edit. Changing a trigger, a cadence, or a connected account is an edit. Opening the last twenty run records is history. Firing a one-shot to prove a patch is a test. Removing the routine or the bot is a delete. None of those verbs are on the phone.
 
-The work still runs on the persistent cloud computer assigned to your user account, not to a bot ([computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)). The phone is a remote for two verbs on a routine that already exists. If the charter is wrong, the phone cannot make it right. [What a Grok Bot is](/blog/what-is-a-grok-bot) is the object model. This page is the device that cannot change that object.
+The work still runs on the persistent cloud computer assigned to your user account, not to a bot ([computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)). The phone is a remote for a routine that already exists: it can pause it and approve its steps, but not change it. If the charter is wrong, the phone cannot make it right. [What a Grok Bot is](/blog/what-is-a-grok-bot) is the object model. This page is the device that cannot change that object.
 
 ## Separate pause from rewrite so freeze never masquerades as a patch
 
@@ -37,7 +39,7 @@ Remember one line at the gate: pause is an interrupt, rewrite is desk work, resu
 
 Do this once at a desk, on paper or in Notes, before you pack. The feeling at the gate says "I have the app, I can handle a misfire." The inventory says otherwise.
 
-| Verb you will want at the gate | Grok Bot iPhone | Mac or Windows desk | What the jetway actually offers |
+| Verb you will want at the gate | Grok Bot phone app | Desktop app | What the jetway actually offers |
 |---|---|---|---|
 | Rewrite the charter, trigger, or cadence | No | Edit | Notes. The Grok app will not take the new text. |
 | See the last runs, including how many already sent | No | History | Guess from the mailbox. The phone has no log. |
@@ -61,7 +63,7 @@ Here is the Thursday this page is for. You run a weekday follow-up bot against a
 | 11:18 | Customer mail with the wrong price. | Open Grok Bot iPhone. Pause. |
 | 11:19 to 13:35 | Frozen, if pause held. No new sends. | Tell the customer the number is wrong. Do not resume. |
 | 13:40, landed, no laptop | Still frozen. History still dark. | Taxi Notes: what sent, who you told, do not resume. |
-| Evening, Mac or Windows desk | Run records are now readable. | Read history. Edit. Test a draft-only one-shot. Then decide on resume. |
+| Evening, at a desktop | Run records are now readable. | Read history. Edit. Test a draft-only one-shot. Then decide on resume. |
 
 11:19 to 13:35 is the phone's whole job: the next send does not leave. The first send stays sent. Pause is not undo. There is no audit view of bot actions yet ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)). Your sent folder is the evidence until a desk can show the twenty run records.
 
@@ -93,7 +95,7 @@ A routine assigns a workflow to one bot. Max 50 routines per bot. Nothing is tea
 
 The patch you want at the gate is "change the price rule, then run once, then resume the clock." Testing is a desktop verb. The phone cannot fire the one-shot. A theory you type into Notes is untested. Resume would turn that theory into another send.
 
-So the airport sequence is shorter than the one in your head. Pause. Notify the customer if mail already left. Write the suspected cause. Stop. The one-shot happens at a Mac or Windows desk, against a draft-only charter, on a thread you already control. If the one-shot still tries to send, you have not patched enough. Do not resume the live clock.
+So the airport sequence is shorter than the one in your head. Pause. Notify the customer if mail already left. Write the suspected cause. Stop. The one-shot happens at a desktop, against a draft-only charter, on a thread you already control. If the one-shot still tries to send, you have not patched enough. Do not resume the live clock.
 
 [Grok Bot stalled mid-job](/blog/grok-bot-stalled) is the desk protocol when a preview looks frozen and you are tempted to type "start over." Start over is how a half-finished write becomes two writes. That needs files and a computer preview. iPhone will not give you those. Pause so the job does not keep moving while you travel to a machine that can list the folder.
 
@@ -145,7 +147,7 @@ Send on ask is a desk prompt. The phone is not an approval inbox. If you parked 
 
 If the bot could send without asking, the mail left. If it could not, a prompt may be sitting until tonight. Grok bot iphone edit will not retarget that prompt onto your phone.
 
-[How to set Grok Bot approvals](/blog/how-to-set-grok-bot-approvals) parks send, pay, delete, and publish, and lets drafts finish on a Mac or Windows desk. [Draw the approval line on reversibility](/blog/grok-bot-approval-rules-reversibility) is why send is not a bulk rename. Neither article installs an editor on iOS. If you do not know whether a prompt is waiting, pause. Diagnose at a desk. If the screen looks like a silent sit, use [the stall restart](/blog/grok-bot-stalled), not a second copy of the original job.
+[How to set Grok Bot approvals](/blog/how-to-set-grok-bot-approvals) parks send, pay, delete, and publish, and lets drafts finish on a desktop. [Draw the approval line on reversibility](/blog/grok-bot-approval-rules-reversibility) is why send is not a bulk rename. Neither article installs an editor on iOS. If you do not know whether a prompt is waiting, pause. Diagnose at a desk. If the screen looks like a silent sit, use [the stall restart](/blog/grok-bot-stalled), not a second copy of the original job.
 
 ## Classify each bot by whether a late pause still leaves a customer-facing send
 
@@ -196,7 +198,7 @@ If you cannot rewrite the charter from a jetway, do not let a send-capable clock
 
 That is the same boundary as [the safety checklist](/blog/grok-bot-safety-checklist), arrived at from a missing editor rather than from a consent screen. Grok Bot iPhone does not make a dangerous bot safer. It makes a safe bot interruptible.
 
-The phone app does not bypass eligibility, and it does not add an editor when the door is open. Confirm platforms on [the supported list](/blog/grok-bot-supported-platforms): macOS, Windows, iPhone on iOS 18 or later. Not Linux desktop, not Android, not iPad. Prove the missing verbs once at a desk: try to edit, open history, test, and delete. Confirm you cannot. Then prove pause on a throwaway routine. If you want grok bot iphone edit, that product is not this product, as of the docs checked 2026-08-25.
+The phone app does not bypass eligibility, and it does not add an editor when the door is open. Confirm platforms on [the supported list](/blog/grok-bot-supported-platforms): macOS, Windows and Linux desktops; iPhone (iOS 18 or later) and Android (9 or later) phones. Not iPad. Prove the missing verbs once at a desk: try to edit, open history, test, and delete. Confirm you cannot. Then prove pause on a throwaway routine. If you want grok bot iphone edit, that product is not this product, as of the docs checked 2026-08-25.
 
 **Keep reading:** [Grok Bot on iPhone](/blog/grok-bot-iphone-app), [How to set Grok Bot approvals](/blog/how-to-set-grok-bot-approvals), [Grok Bot stalled mid-job](/blog/grok-bot-stalled).
 
@@ -204,11 +206,11 @@ The phone app does not bypass eligibility, and it does not add an editor when th
 
 ### Can I edit a Grok Bot charter from iPhone?
 
-No. Grok bot iphone edit is not a documented surface. On iPhone running iOS 18 or later you can pause and resume a routine. You cannot edit a charter, a trigger, or a cadence, and you cannot view run history, test a routine, or delete a routine or a bot. Those need a Mac or Windows desktop. Teach by demonstration is also unavailable on iPhone. The bot still runs on the account cloud computer while you travel. The phone only interrupts or restarts a routine that already exists.
+No. Grok bot iphone edit is not a documented surface. On iPhone running iOS 18 or later you can pause and resume a routine. You cannot edit a charter, a trigger, or a cadence, and you cannot view run history, test a routine, or delete a routine or a bot. those need the desktop app. Teach by demonstration is also unavailable on iPhone. The bot still runs on the account cloud computer while you travel. The phone only interrupts or restarts a routine that already exists.
 
 ### A bot sent a bad email while I was at the airport. What can I do on the phone?
 
-Pause the routine, then stop. Do not resume, and do not hunt for an editor that is not there. Pause does not unsend mail that already left, so tell the customer the correction from your own hands. Write down what you saw in Sent, including the wrong number and the time. Fix the charter at a Mac or Windows desk, test a draft-only one-shot, and only then decide whether to resume. If send was supposed to wait on an approval, that prompt was on the desktop you did not have with you.
+Pause the routine, then stop. Do not resume, and do not hunt for an editor that is not there. Pause does not unsend mail that already left, so tell the customer the correction from your own hands. Write down what you saw in Sent, including the wrong number and the time. Fix the charter at a desktop, test a draft-only one-shot, and only then decide whether to resume. If send was supposed to wait on an approval, that prompt was on the desktop you did not have with you.
 
 ### Does pausing a routine unsend mail that already went out?
 
@@ -216,6 +218,6 @@ No. Pause stops future work on that routine. An approval controls a proposed act
 
 ### What machine do I need before I can rewrite a routine or read history?
 
-A Mac or a Windows PC running a supported desktop client. Platforms are macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later for pause and resume only. There is no Linux desktop app, no Android app, and no iPad app. The bot computer is a managed Linux virtual machine. That is not a laptop you can open at the gate. If the iPhone is the only supported device you have, you can freeze and restart existing routines, and you cannot author, inspect, test, or delete them.
+A Mac or a Windows PC running a supported desktop client. Platforms are macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone (iOS 18 or later) and Android (9 or later) companion apps that can pause routines and approve steps but not edit them. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The bot computer is a managed Linux virtual machine. That is not a laptop you can open at the gate. If the iPhone is the only supported device you have, you can freeze and restart existing routines, and you cannot author, inspect, test, or delete them.
 `,
 };

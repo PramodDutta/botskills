@@ -13,7 +13,7 @@ The 2019 Intel MacBook still opens About This Mac with an Intel Core i7, and the
 
 The grok bot intel mac search is a chip panic. Roundups shot on M-series laptops. A product that launched in beta on 11 August 2026, after Apple silicon took the catalog photos. None of that is the FAQ. The FAQ lists macOS on Apple silicon and on Intel as supported desktops ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). Your 2019 machine is a desk. The worker is a managed Linux virtual machine in the cloud.
 
-This page is not [Grok Bot on Windows](/blog/grok-bot-windows-setup), which is x64 versus Arm64 and WSL. It is not [why there is no Linux desktop app](/blog/why-grok-bot-has-no-linux-app). Stay here when the Mac already says Intel and someone told you that 2026 software requires an M-series chip.
+This page is not [Grok Bot on Windows](/blog/grok-bot-windows-setup), which is x64 versus Arm64 and WSL. It is not [Grok Bot on Linux](/blog/why-grok-bot-has-no-linux-app). Stay here when the Mac already says Intel and someone told you that 2026 software requires an M-series chip.
 
 ## Treat the 2019 Intel Mac as a supported desk, not a retired chip
 
@@ -103,11 +103,11 @@ Intel machines over-learn the lid because these chassis used to be the whole com
 
 The 2019 Mac is a full desktop. You do not need an M-series machine to finish week one. You do need this macOS client healthy before the phone is useful.
 
-On iPhone, iOS 18 or later, you can pause and resume only. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). Teach by demonstration is unavailable on iPhone: up to ten minutes, no microphone audio, draft skill, browser workflows only, desktop ([skills, routines and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations)). A 2019 Mac can record a demonstration. A phone cannot. Buying M4 does not move that into your pocket.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). Teach by demonstration is unavailable on iPhone: up to ten minutes, no microphone audio, draft skill, browser workflows only, desktop ([skills, routines and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations)). A 2019 Mac can record a demonstration. A phone cannot. Buying M4 does not move that into your pocket.
 
 Install the iPhone app after Porch exists, not as a workaround for a chip you were ashamed of. The split is [Grok Bot on iPhone](/blog/grok-bot-iphone-app). Android and iPad are not a pocket substitute.
 
-Linux desktop remains no. Dual-booting Ubuntu on the 2019 Intel Mac loses the macOS client and does not gain a Grok Bot Linux app. The computer your bots use is already Linux. That fact does not mint a .deb. If Ubuntu is the daily driver on this hardware, go to [why Grok Bot has no Linux desktop app](/blog/why-grok-bot-has-no-linux-app). The fix is a stretch of macOS or Windows, not a faster Intel chip under Linux.
+Linux desktop remains no. Dual-booting Ubuntu on the 2019 Intel Mac loses the macOS client and does not gain a Grok Bot Linux app. The computer your bots use is already Linux. That fact does not mint a .deb. If Ubuntu is the daily driver on this hardware, go to [Grok Bot on Linux](/blog/why-grok-bot-has-no-linux-app). The fix is a stretch of macOS or Windows, not a faster Intel chip under Linux.
 
 ## Paste a desk-only charter that never treats this Mac as the worker
 
@@ -168,7 +168,7 @@ A supported Intel desk does not fix the jobs this product refused.
 
 | Situation | Why the 2019 Mac is not the fix | Where to go instead |
 |---|---|---|
-| Daily driver is Ubuntu on this same Intel hardware | macOS Intel is supported. Linux desktop is not | [Why there is no Linux app](/blog/why-grok-bot-has-no-linux-app) |
+| Daily driver is Ubuntu on this same Intel hardware | macOS Intel is supported. Linux desktop is not | [Grok Bot on Linux](/blog/why-grok-bot-has-no-linux-app) |
 | The only device in the bag is an iPhone | Phone is pause and resume. Intel desk still has to exist somewhere | [Grok Bot on iPhone](/blog/grok-bot-iphone-app) |
 | Android phone or iPad as the planned workstation | No app on either | [Supported platforms](/blog/grok-bot-supported-platforms) |
 | Invoice is Hobby, Pro at $20, or SuperGrok at $30 | Chip is irrelevant. Plan excludes Grok Bot | [Download and eligibility](/blog/download-grok-bot) |
@@ -190,7 +190,7 @@ Three searches dump people here who should bounce.
 
 Stay here when About This Mac says Intel and the plan is already eligible: you were about to buy silicon to unlock a product that listed you, you were about to diagnose the empty roster as Rosetta, you dual-boot Linux and thought that would help, or the lid still feels like a stop command. Fix those in that order. Then give Porch one night. Then connect a mailbox you can afford to see on every screen of the shared computer. When you replace the 2019 Mac, replace it because you want a new desk, not because you thought Apple silicon was the worker.
 
-**Keep reading:** [Grok Bot on Windows, Linux and iPad: What Actually Works](/blog/grok-bot-supported-platforms), [Grok Bot With the Laptop Closed: What Keeps Running and What Does Not](/blog/grok-bot-runs-with-laptop-closed), [How to Download Grok Bot and Confirm You Are Actually Eligible](/blog/download-grok-bot)
+**Keep reading:** [Grok Bot on Windows, Linux, Android and iPad: What Works](/blog/grok-bot-supported-platforms), [Grok Bot With the Laptop Closed: What Keeps Running and What Does Not](/blog/grok-bot-runs-with-laptop-closed), [How to Download Grok Bot and Confirm You Are Actually Eligible](/blog/download-grok-bot)
 
 ## Frequently Asked Questions
 

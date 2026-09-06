@@ -44,7 +44,7 @@ five-minute clock gets another dozen fires while you read a thread. Pause is
 the control you have in the first two minutes.
 
 The phone can pause and resume. It cannot edit, open history, test, or
-delete. Those need a Mac or Windows desk
+delete. Those need a desktop
 ([mobile](https://docs.x.ai/grok-bot/mobile)).
 If you are away from that desk, pause is the whole hour.
 
@@ -68,7 +68,7 @@ until you know which name is the poller.
 | Closing the laptop | No. The cloud computer keeps the clock | No | No | The clock was never paused |
 | Linux desktop, Android, or iPad | Not a Grok Bot client | Not a client | Not a client | Do not plan the bleed-stop here |
 
-macOS, Windows, and iPhone on iOS 18+ are the clients. Linux desktop,
+There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); iPad is not supported. Linux desktop,
 Android, and iPad are not ([FAQ](https://docs.x.ai/grok-bot/faq)).
 Switching devices does not refill the week. See
 [supported platforms](/blog/grok-bot-supported-platforms).
@@ -110,7 +110,7 @@ Pause stops the next fire. Resume brings it back in one tap, including from
 iPhone. That is why the five-minute inbox bot has to leave the roster this
 hour, not on Friday when you swore you would coarsen it.
 
-Delete only that card, and only at a Mac or Windows desk. If you are still
+Delete only that card, and only at a desktop. If you are still
 on the phone, stay in pause. Do not resume. Do not create a replacement from
 the commute.
 
@@ -254,7 +254,7 @@ Pause every routine on every bot. iPhone pause is enough.
 Do not retry. Do not start a manual run to see if it works now.
 Write the 50-cap owner list: bot name, routine count (max 50),
 tightest clock, last output you actually opened.
-At a Mac or Windows desk, delete the bot whose tightest clock
+At a desktop, delete the bot whose tightest clock
 is five minutes. Copy the wording first if you still want it.
 Deleting removes its routines. It does not sign out Gmail.
 Leave every other bot paused. Do not resume from the phone.
@@ -417,7 +417,7 @@ card is gone.
 Pause every routine on every bot before you debug the one that looks broken.
 iPhone pause is enough. Do not retry, and do not start a manual run to see
 if the pool came back. Write the 50-cap owner list: each bot card, how many
-routines it holds, and the tightest clock on it. At a Mac or Windows desk,
+routines it holds, and the tightest clock on it. At a desktop,
 delete the bot whose tightest clock is five minutes. Leave the others paused.
 There is no Bot-specific spend cap to raise. Retry is how you step onto
 on-demand without meaning to.

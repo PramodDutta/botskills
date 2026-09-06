@@ -53,7 +53,7 @@ Two people are two computers only when they are two user accounts. Jonah looking
 
 Sign-in runs through a Cursor account ([why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained)). The computer follows that identity. Naming a screen Research Scout does not mint a second machine and does not mint a shareable object.
 
-The agent runs as a non-root user on a managed Linux VM. That is not a Linux desktop client. Supported clients are macOS, Windows, and iPhone on iOS 18 or later. Linux desktop, Android, and iPad have no Grok Bot app. On iPhone Jonah can pause and resume only ([mobile](https://docs.x.ai/grok-bot/mobile)).
+The agent runs as a non-root user on a managed Linux VM. That is not a Linux desktop client. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. Linux desktop, Android, and iPad have no Grok Bot app. From the phone app Jonah can approve steps and pause or resume a routine, but not edit it.
 
 ## Walk Priya's intern request from Slack into a shared login
 
@@ -142,7 +142,7 @@ A routine assigns a workflow to one Bot. Max 50 routines per Bot. The app keeps 
 
 Priya's Monday 06:00 Research Scout clock does not move when Jonah gets a seat. It does not fork. It does not offer Add intern. If Jonah should run weekdays at 07:00, he creates a new routine on his bot after a manual run has finished. How to put a clock on a bot you own is [how to schedule a Grok Bot routine](/blog/how-to-schedule-a-grok-bot-routine). [Grok Bot scheduling](/blog/grok-bot-scheduling) is the wider page.
 
-On iPhone he can pause and resume only. If the intern is iPhone-first, he cannot operate the job. Do not keep Priya's routine running and ask Jonah to read her /workspace. He cannot. Do not sign both bots into the same Drive account in the browser. That rebuilds a shared computer by hand.
+From the phone app he can approve steps and pause or resume a routine, but not edit it. If the intern is iPhone-first, he cannot operate the job. Do not keep Priya's routine running and ask Jonah to read her /workspace. He cannot. Do not sign both bots into the same Drive account in the browser. That rebuilds a shared computer by hand.
 
 When the internship ends, delete Jonah's user account (confirm current Cursor offboarding steps on Cursor's own pages the morning you do it). Do not delete only the bot and keep the account for files. Do not rename his Research Scout for the next intern. Isolation is the account ([one computer, many screens](/blog/grok-bot-shared-computer-security)).
 

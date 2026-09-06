@@ -247,10 +247,9 @@ also immediate and has no undo. Copy first there too.
 
 ## Finish the teardown on desktop, because iPhone cannot delete
 
-On iPhone you can pause and resume only. Editing, history, testing, and
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
 deleting need desktop. Supported clients are macOS on Apple silicon and
-Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. There is no
-Linux desktop app, no Android app, and no iPad app. The bots run on a managed
+Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The bots run on a managed
 Linux VM. The desk you drive it from cannot be a Linux desktop, and it cannot
 be your phone if the job is delete.
 
@@ -416,10 +415,8 @@ to open.
 
 ### Can I delete a Grok Bot from my iPhone?
 
-You cannot finish a real teardown from iPhone. On iPhone you can pause and
-resume only. Editing, history, testing, and deleting need desktop, meaning
-macOS or Windows. There is no Linux desktop app, no Android app, and no
-iPad app. Pause routines from the phone if you are away from a desk, then
+You cannot finish a real teardown from iPhone. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop, meaning
+macOS or Windows. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Pause routines from the phone if you are away from a desk, then
 run sign-out, file removal, and delete on a supported desktop. A mobile tap
 that only tidies a list is how leftover CRM sessions survive a "deleted"
 bot.

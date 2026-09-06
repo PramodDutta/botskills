@@ -62,7 +62,7 @@ Budget time after the capture for the paragraph that says what to do when the sc
 
 Teach by demonstration is unavailable on iPhone. That is a documented product fact, not a temporary gap in a tutorial. Do not plan to record a demo on the train. The phone cannot do this.
 
-The iPhone app, on iOS 18 or later, can pause and resume a routine. It cannot edit a routine, view run history, test a routine, or delete a routine. Those need a desktop. Teaching sits with that second list. [The platform page](/blog/grok-bot-supported-platforms) is the full matrix, including the flat no on a Linux desktop client, Android, and iPad. The computer your bots work on is a managed Linux VM, not a Linux app you install, and not a reason to treat iPhone as a recording studio.
+The iPhone app, on iOS 18 or later, can pause and resume a routine. It cannot edit a routine, view run history, test a routine, or delete a routine. Those need a desktop. Teaching sits with that second list. [The platform page](/blog/grok-bot-supported-platforms) is the full matrix, including the Linux and Android clients added in September 2026 and the iPad no. The computer your bots work on is a managed Linux VM, not a Linux app you install, and not a reason to treat iPhone as a recording studio.
 
 You record on macOS or Windows, in a browser, for at most ten minutes, then edit and test on the same class of machine. The phone is a stop button for a routine that already exists. If your only supported device is an iPhone, you cannot teach by demonstration.
 
@@ -219,7 +219,7 @@ After the run, a Gmail session still sits where every other bot can reach it. Th
 
 If the trap passes three days in a row, you may save the skill and consider a routine. You may not skip the trap because the recording looked tidy.
 
-**Keep reading:** [Grok Bot and Gmail: Permissions and What to Automate](/blog/grok-bot-gmail), [Grok Bot on Windows, Linux and iPad: What Actually Works](/blog/grok-bot-supported-platforms), [Grok Bot Scheduling: Daily, Weekly, and Triggered Runs](/blog/grok-bot-scheduling).
+**Keep reading:** [Grok Bot and Gmail: Permissions and What to Automate](/blog/grok-bot-gmail), [Grok Bot on Windows, Linux, Android and iPad: What Works](/blog/grok-bot-supported-platforms), [Grok Bot Scheduling: Daily, Weekly, and Triggered Runs](/blog/grok-bot-scheduling).
 
 ## Frequently Asked Questions
 

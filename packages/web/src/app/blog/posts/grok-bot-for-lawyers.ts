@@ -147,8 +147,7 @@ page. Do not treat a demo as a connector Grok Bot ships. A sent bill is
 a client communication and a ledger event. The research clerk does not
 touch it.
 
-Write all three as refusals, not as "ask me first." On iPhone you can
-pause and resume only. Editing, history, testing, and deleting need
+Write all three as refusals, not as "ask me first." From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need
 desktop. Do not build a workflow that depends on approving an e-file
 from the lock screen.
 
@@ -417,9 +416,8 @@ Grok Bot does not read SKILL.md or CLAUDE.md. That compatibility is Grok
 Build. Do not drop a Claude legal skill into this computer and expect
 the research clerk to inherit it.
 
-Documented clients are macOS, Windows, and iPhone on iOS 18 or later.
-Not Linux desktop, Android, or iPad. An associate who wants to steer
-this from a phone can pause and resume only.
+Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported.
+Not iPad. An associate who wants to steer this from a phone can pause it and approve steps, but not edit it.
 
 This page does not become a general agent guide if you add send "for
 emergencies." Emergencies are how e-file gets back into the charter.

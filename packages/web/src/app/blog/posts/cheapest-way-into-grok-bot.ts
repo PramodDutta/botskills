@@ -165,16 +165,15 @@ per account, screens that are not security boundaries, weekly allowance then
 on-demand. Nothing on the FAQ says Heavy gets a private VM or a spend cap.
 The trial, Pro+, Plus, and Teams Standard are published. Shop those.
 
-## Check macOS, Windows, and iPhone before you pay for a door you cannot walk through
+## Check your platform before you pay for a door you cannot walk through
 
 A cheap door you cannot open is not cheap. Supported clients are macOS (Apple
 silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later.
-There is no Linux desktop app. There is no Android app. There is no iPad app.
-The FAQ answers the Linux desktop question with no.
+There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). There is an Android app as of September 2026 (Android 9 or later); iPad is still not supported. There is no iPad app.
+The FAQ lists a Linux desktop app as of September 2026.
 
 The agent computer is a managed Linux VM in the cloud. That is not a Linux
-desktop client on your ThinkPad. If your only machine runs Linux, no SKU
-gives you an installer. [Supported platforms](/blog/grok-bot-supported-platforms)
+desktop client on your ThinkPad. If your only machine runs Linux, the desktop app installs as a .deb, .rpm or AppImage since September 2026. [Supported platforms](/blog/grok-bot-supported-platforms)
 is the device page. Confirm the client before the cart.
 
 iPhone can pause and resume. Editing, history, testing, and deleting need

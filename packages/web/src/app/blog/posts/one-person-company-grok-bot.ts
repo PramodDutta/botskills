@@ -481,9 +481,7 @@ definition exists. Positioning, pricing, and hiring judgment fail the checkable
 test on purpose, because you are still forming the opinion a charter would have
 to encode.
 
-And anything the platform does not reach stays with you for now. As of writing
-there is no Linux desktop app, no Android app, and no iPad app, and the iPhone
-app is a pause-and-resume remote rather than a place to build. If your working
+And anything the platform does not reach stays with you for now. As of September 2026 there are Linux desktop and Android apps, iPad is not supported, and the phone app is a remote for pausing and approving rather than a place to build. If your working
 machine is a Linux laptop, that is a real constraint on this whole approach,
 and [the supported platforms breakdown](/blog/grok-bot-supported-platforms)
 covers the options honestly.

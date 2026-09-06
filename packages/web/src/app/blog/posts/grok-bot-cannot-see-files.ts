@@ -43,8 +43,7 @@ Grok Bot works from a persistent cloud computer assigned to your user
 account, not to one bot. It can use a browser, a command line, files, and
 connected tools without your laptop remaining open. The bot runs as a
 non-root user on a managed Linux VM. That is the hosted worker, not a Linux
-desktop app. There is no Linux desktop client
-([FAQ](https://docs.x.ai/grok-bot/faq)).
+desktop app. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage) ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 
 A missing-file line is a location report. If the listing is \`/workspace\`
 and you never copied the PDF there, the report is correct. Rewriting the
@@ -72,9 +71,8 @@ them to the conversation.
 | \`/workspace\` | Shared project folder on the account computer | Yes | Name that path in the next message |
 | A connector or hosted tool | Account-wide service access, not a Finder folder | The tool's own objects, not Desktop.app | Confirm the file lives in that service, not on your laptop |
 
-iPhone does not add a fourth disk: pause and resume only. Editing, history,
-testing, and deleting need a macOS or Windows desk. There is no Android
-client and no iPad client. A PDF on the phone is still not on the Agent
+The phone app does not add a fourth disk: it pauses routines and approves steps, it does not browse files. Editing, history,
+testing, and deleting need a macOS or Windows desk. There is an Android app as of September 2026 (Android 9 or later); iPad is still not supported. A PDF on the phone is still not on the Agent
 Computer. If the path starts with \`/Users/\` or \`C:\\\`, you named the laptop.
 If it starts with \`/workspace\`, you named the worker.
 
@@ -225,7 +223,7 @@ stall, not a miss. Use
 Do not copy the CSV a second time. The local-ask row is a wait: laptop
 awake, approval if Ask every time, and Never allowed will never open
 Desktop.app. Put the artifact in \`/workspace\`. On iPhone, pause a looping
-routine and debug the folder from a Mac or Windows desk.
+routine and debug the folder from a desktop.
 
 ## Grant that local execution exists, then still refuse Desktop.app as the default
 

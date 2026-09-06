@@ -42,7 +42,7 @@ Job without Never is a demo. Never without Evidence is a loaded draft. Evidence 
 
 Score both stop and job. [Inbox Triage](/bots/inbox-triage) passes Job and Never on the card: labels and drafts, never send. You still add Evidence and Heartbeat before you schedule. The catalog cannot name your heartbeat path.
 
-Do this on macOS or Windows. On iPhone (iOS 18+) you can pause and resume only. Editing, history, testing, and deleting need desktop. Reading on the couch and pasting from memory is how the never-list loses a sentence.
+Do this on macOS or Windows. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Reading on the couch and pasting from memory is how the never-list loses a sentence.
 
 ## Fail any listing whose job line hides a send inside a helpful verb
 
@@ -137,7 +137,7 @@ Integrations on a card ([gmail, slack]) tell you what the author had in mind. Th
 
 Listings are silent on the product. You still have to read the product into the paste.
 
-The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. There is no Linux desktop app, no Android app, no iPad app. macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18+ are the clients. On iPhone you pause and resume. You do not edit a listing into a charter from a train.
+The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones are the clients. On iPhone you pause and resume. You do not edit a listing into a charter from a train.
 
 Deleting a bot deletes its routines. It does not remove shared-computer files or sessions. Do not use a second bot as a vault. Separate bots are two screens on one machine.
 

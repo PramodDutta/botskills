@@ -204,7 +204,7 @@ Name the routine \`research-one-plumber\`, not \`update-the-index\`. The second
 name is how a helpful bot picks Submit. When \`queue.txt\` is empty, write
 queue empty and stop. Do not search for more shops.
 
-On iPhone you can pause and resume only. Editing, history, testing, and
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
 deleting need desktop. Do not tell the bot to just update the live listing
 from the phone. Pause. Open desktop. Read the file.
 

@@ -100,7 +100,7 @@ Denying a send does not refund the empty pool. Stop before the next attempt.
 
 ## Pause every standing routine before you touch billing or overflow
 
-Pause is available on the phone. On iPhone you can pause and resume only.
+Pause is available on the phone. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 Editing, history, testing, and deleting need desktop
 ([mobile](https://docs.x.ai/grok-bot/mobile)). If you are away from the laptop,
 that is enough for this hour. You are stopping the next fire, not patching a
@@ -352,8 +352,7 @@ Attended research. A long public-page sweep you are watching, once, is not a
 routine. If it hits quota exceeded, stop. Do not convert it into a scheduled
 job so it can "finish overnight."
 
-Platforms do not change the pool. macOS, Windows, and iPhone on iOS 18+ are
-supported. Linux desktop, Android, and iPad are not
+Platforms do not change the pool. There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); iPad is not supported. Linux desktop, Android, and iPad are not
 ([FAQ](https://docs.x.ai/grok-bot/faq)). Switching devices does not refill the
 week. The computer is a managed Linux VM, not a Linux desktop client, and not
 a second pool. See [supported platforms](/blog/grok-bot-supported-platforms).

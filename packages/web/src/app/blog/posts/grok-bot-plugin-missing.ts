@@ -38,7 +38,7 @@ Pick one state before you touch the bot. The live list in the product names it. 
 
 ## Confirm the live Plugins catalog on this account before you debug
 
-The live catalog is the Plugins list on the Grok Bot account you are actually using, opened on a desktop client that can edit. It is not a blog screenshot, a roundup, grokbot.dev, a colleague's wall, or the Grok Build marketplace that auto-reads Claude Code plugins. It is not the iPhone app, where you can pause and resume only.
+The live catalog is the Plugins list on the Grok Bot account you are actually using, opened on a desktop client that can edit. It is not a blog screenshot, a roundup, grokbot.dev, a colleague's wall, or the Grok Build marketplace that auto-reads Claude Code plugins. It is not the phone app, which can pause routines and approve steps but not edit them.
 
 Open Plugins. Search the exact name you expected. Take a screenshot. That screenshot is the only catalog this article will trust. If Gmail is there, you have left state one. If Gmail is not there, you are still in state one, and every other repair is theatre.
 
@@ -69,7 +69,7 @@ Installed means the grant was completed on the Grok Bot cloud computer attached 
 
 Proof is visual, then behavioral. Visual: this account's Plugins list shows a connected state, not Connect. Behavioral: [Inbox Triage](/bots/inbox-triage) can complete a read that only that grant would allow. If the visual check fails, you are in state two even if you "already set this up last week" in some other window.
 
-A laptop Gmail helper, a Cursor IDE plugin, or a \`.mcp.json\` next to a repo does not write a Grok Bot plugin onto the cloud computer. The Bot runs as a non-root user on a managed Linux VM. That VM is not a Linux desktop app. [Supported platforms](/blog/grok-bot-supported-platforms) are macOS, Windows, and iPhone. The computer the bots share is still the cloud VM.
+A laptop Gmail helper, a Cursor IDE plugin, or a \`.mcp.json\` next to a repo does not write a Grok Bot plugin onto the cloud computer. The Bot runs as a non-root user on a managed Linux VM. That VM is not a Linux desktop app. [Supported platforms](/blog/grok-bot-supported-platforms) are macOS, Windows and Linux on desktop plus iPhone and Android on mobile. The computer the bots share is still the cloud VM.
 
 If you connected the tile on this account and then created [Mail Cleanup Assistant](/bots/mail-cleanup-assistant), you did not need to install it again. There is no per-bot plugin vault. Walk Connect on desktop, finish the provider screen, and come back. If the tile still offers Connect, call it uninstalled, not missing.
 
@@ -191,7 +191,7 @@ If a third-party name such as Composio appears in your Plugins list, confirm sco
 
 Independent feeds are not documentation. Confirm in the product. Then connect the minimum. [Least privilege](/blog/least-privilege-bots) is the policy. Once the state is named, leftover design questions go to [the plugins catalog article](/blog/grok-bot-plugins-catalog), leftover server questions go to [the MCP page](/blog/grok-bot-mcp-servers), and leftover scope questions go to [the Gmail guide](/blog/grok-bot-gmail).
 
-Where this breaks down: desktop is unavailable, and iPhone will not let you edit. That is not a catalog problem. Platforms are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There is no Linux desktop app, no Android app, and no iPad app. The cloud computer being Linux does not give you a Linux client.
+Where this breaks down: desktop is unavailable, and iPhone will not let you edit. That is not a catalog problem. Platforms are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The cloud computer being Linux does not give you a Linux client.
 
 ## Keep send disconnected while the connector path is still unproven
 

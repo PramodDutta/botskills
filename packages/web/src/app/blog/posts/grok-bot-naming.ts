@@ -19,7 +19,7 @@ A name is a search query for a tired human. It is not a vault, not a computer, a
 
 You name a bot on the afternoon you create it, when the job is still in working memory. You search for that bot on a morning when Monday is empty, the iPhone can only pause, and three cards share a generic word. Design the string for the second person.
 
-Next August is you with a worse memory. It might also be a deputy told to pause the standup who cannot tell which assistant is the standup. On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop. A deputy on a train who cannot identify the owner card will pause nothing, or everything.
+Next August is you with a worse memory. It might also be a deputy told to pause the standup who cannot tell which assistant is the standup. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. A deputy on a train who cannot identify the owner card will pause nothing, or everything.
 
 All bots on an account share one persistent cloud computer assigned to the user, not to a bot. Each bot gets a screen. Screens are not security boundaries. Cookies, sessions, files, and CLI credentials are shared. A precise name does not isolate those. It only lets you find the profile you meant to hide, pause, or retire. Isolation is [least privilege](/blog/least-privilege-bots) and what you refuse to sign in. Naming is retrieval.
 
@@ -224,7 +224,7 @@ No. The roster string is a search index for humans. The charter is the instructi
 
 ### If I change the displayed name, do the routines stay on that bot?
 
-This page does not invent a rename menu. If your build offers a rename action, confirm it on macOS or Windows. iPhone can pause and resume only. A new string on the same bot is a label change on the same profile. Routines attach to one Bot, not to a nickname. They should stay with that Bot object. Files, cookies, and sessions stay on the shared computer. A renamed card is not a wipe. If you cannot find rename, recreate under the scheme, copy routine text first, then retire the old card.
+This page does not invent a rename menu. If your build offers a rename action, confirm it on macOS or Windows. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. A new string on the same bot is a label change on the same profile. Routines attach to one Bot, not to a nickname. They should stay with that Bot object. Files, cookies, and sessions stay on the shared computer. A renamed card is not a wipe. If you cannot find rename, recreate under the scheme, copy routine text first, then retire the old card.
 
 ### Why not name every bot assistant and keep the job in the charter?
 

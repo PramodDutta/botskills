@@ -111,7 +111,7 @@ article can. What follows is the Grok Bot side, where every row is documented.
 | A spend cap or budget limit | No | "There is no Grok Bot-specific spend cap yet" |
 | How much work is included | Yes, but no figure is published | Subscriptions include a weekly usage allowance; overflow is on-demand, billed from model and token cost |
 | Isolation between your bots | No | One persistent cloud computer per account, one screen per bot, cookies and credentials shared |
-| Which devices you can use | No | macOS on Apple silicon and Intel, Windows on x64 and Arm64, iPhone on iOS 18+. No Linux desktop, Android, or iPad |
+| Which devices you can use | No | macOS, Windows and Linux desktops; iPhone or Android phones. No iPad |
 | An audit trail of what a bot did | No | An audit view of Bot actions does not exist yet, on any plan |
 | Team control over local execution | Not yet | Documented as coming: Never, Ask every time, or Always, where members may choose stricter but not looser |
 | An admin kill switch | Not yet | Documented as coming: Kill deletes the VM, durable storage is kept |
@@ -189,7 +189,7 @@ spending money. Find your symptom before you upgrade anything.
 | Sign-in works, the bot never activates, you pay $20 | Cursor Pro does not include Grok Bot | Upgrade to Pro+ at $60 |
 | Same, and you pay $30 on the xAI side | SuperGrok does not include it; Plus at $100 does | Upgrade to Plus, or take the Cursor door at $60 |
 | Nothing appears at all across a whole organisation | Privacy Mode (Legacy) blocks Grok Bot entirely | An admin changes the setting. No plan upgrade fixes this |
-| There is no desktop app for your machine | There is no Linux desktop app, and the docs say so directly | Use macOS or Windows. A subscription buys nothing usable on Linux desktop |
+| There is no desktop app for your machine | Only iPad lacks a client; Linux got a desktop app in September 2026 | Use macOS, Windows or Linux. A subscription buys nothing usable on iPad |
 | Nothing on your tablet | There is no iPad app; iPhone needs iOS 18 or later | iPhone or desktop only |
 | A site challenges the bot that never challenges you | Static egress IPs, and some services flag datacenter addresses | Hand the bot the screen at the challenge. Do not build a workaround |
 | You used the trial and want another | The trial is documented as one-time for an individual | A paid tier is the only remaining path |
@@ -375,7 +375,7 @@ the last column before you pay anything.
 | Already wanting Ultra for its own reasons | Any | Cursor Ultra | $200/month | Buy it for what else it gives you. It is not documented to give a better bot |
 | A team of three or more | Mixed | Cursor Teams Standard | $40/user/month | Covers everyone and ends the per-person upgrade conversation |
 | A team wanting more admin surface | Mixed | Cursor Teams Premium | $120/user/month | Confirm what you need exists first: no audit view or spend cap yet, on any tier |
-| On a Linux desktop only | Any | No path today | Not applicable | There is no Linux desktop app. The subscription would buy nothing you can run |
+| On a Linux desktop only | Any | No path today | Not applicable | There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The subscription would buy nothing you can run |
 | In an org using Privacy Mode (Legacy) | Any | No path until the setting changes | Not applicable | It blocks Grok Bot entirely, regardless of plan |
 
 Two rows in that table are refusals, and they are the ones worth reading first,

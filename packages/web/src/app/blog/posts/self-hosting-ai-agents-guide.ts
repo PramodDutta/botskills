@@ -75,8 +75,7 @@ lives, this is the whole argument and the other three are decoration.
 Self-hosting hands that decision back. It is a real gain and it is also a real
 job, covered below.
 
-**Platform reach.** Grok Bot supports macOS, Windows, and iPhone on iOS 18 and
-later. The documentation answers the Linux desktop question with a flat no, and
+**Platform reach.** Grok Bot supports macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. The documentation lists a Linux desktop app as of September 2026, and
 Android and iPad are unsupported too. If your team runs Linux, self-hosting is
 not a preference, it is the only door.
 [What actually works on which platform](/blog/grok-bot-supported-platforms) has

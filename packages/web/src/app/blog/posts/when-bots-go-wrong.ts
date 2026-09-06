@@ -530,8 +530,7 @@ fact instead of before.
 ## Check the observation against the documented limits before reporting a bug
 
 Several things that feel like faults are published behaviour, and reporting one
-costs a week of waiting for an answer that already exists. The short list: no
-Linux desktop, Android, or iPad app; iPhone pauses and resumes and nothing else;
+costs a week of waiting for an answer that already exists. The short list: no iPad app (Linux desktop and Android apps exist as of September 2026); the phone app pauses, resumes and approves but cannot edit;
 no model picker anywhere and none planned; only the 20 newest run records
 survive; no spend cap and no audit view; static egress IPs that some services
 flag as datacenter addresses; Privacy Mode (Legacy) blocking Grok Bot entirely;

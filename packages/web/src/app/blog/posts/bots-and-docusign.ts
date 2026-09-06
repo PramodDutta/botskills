@@ -251,7 +251,7 @@ This role page assumes a pile of vendor PDFs, one ops owner, one account, and a 
 
 A dedicated signing laptop that never runs Grok Bot is the twin of this page, not a contradiction. Put DocuSign there. Put the routing packet here. If the only machine you have is the one already tied to this account, you do not get a signing session on it. You get a folder.
 
-Grok Bot does not read SKILL.md or CLAUDE.md. That compatibility is Grok Build. Documented clients are macOS, Windows, and iPhone on iOS 18 or later. Not Linux desktop, Android, or iPad. An operator who wants to steer this from a phone can pause and resume only. You cannot fix a charter from iPhone after a bad envelope. Coming soon, and not shipped: a team-level ceiling on local execution, and an admin Kill that deletes the VM but keeps durable storage. Neither is a reason to leave a DocuSign cookie on the disk. Kill would not void an envelope already sent.
+Grok Bot does not read SKILL.md or CLAUDE.md. That compatibility is Grok Build. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. Not iPad. An operator who wants to steer this from a phone can pause it and approve steps, but not edit it. You cannot fix a charter from iPhone after a bad envelope. Coming soon, and not shipped: a team-level ceiling on local execution, and an admin Kill that deletes the VM but keeps durable storage. Neither is a reason to leave a DocuSign cookie on the disk. Kill would not void an envelope already sent.
 
 Do not widen the charter because Friday has six similar envelopes. Identical clicks are how Kasim's test recipient became Redkiln's morning.
 

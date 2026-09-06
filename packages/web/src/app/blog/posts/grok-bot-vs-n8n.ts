@@ -38,8 +38,7 @@ placement is not configurable. The Grok Bot documentation is explicit that the
 computer "is assigned to your user account, not an individual Bot", that all
 your Bots share it, and that browser cookies, signed-in sessions, files and
 command-line credentials are shared across them. It also notes static egress IPs
-and that some services flag datacenter IP addresses. There is no Linux desktop
-client at all: the docs answer "Is there a Linux desktop app? No."
+and that some services flag datacenter IP addresses. There is a Linux desktop client as of September 2026: the FAQ now lists it. Before that the docs answered "Is there a Linux desktop app? No."
 
 So if your requirement is a sentence like "this data does not leave our VPC" or
 "the automation host must sit in the EU under our own contract", n8n is the
@@ -176,9 +175,7 @@ looser one", along with an admin Kill that deletes the VM while keeping durable
 storage. Neither has shipped, so plan as though they do not exist.
 
 What you get in exchange is reach that no self-hosted workflow engine has: a
-real desktop with a browser and a shell, on macOS, Windows and iPhone running
-iOS 18 or later, able to operate any tool a person can operate. There is no
-Android or iPad client. Our writeup on
+real desktop with a browser and a shell, on macOS, Windows and Linux desktops, or from an iPhone or Android phone, able to operate any tool a person can operate. There is an Android app as of September 2026 (Android 9 or later); iPad is still not supported. Our writeup on
 [what sharing one computer actually means](/blog/grok-bot-shared-computer-security)
 covers how to design around the shared-credential model rather than against it.
 
@@ -416,8 +413,7 @@ only free of charge for non-commercial purposes.
 No. Grok Bot runs on a managed Linux VM operated for you, and the location is not
 configurable. The documentation states the computer is assigned to your user
 account rather than to an individual Bot, that all your Bots share it along with
-browser cookies and signed-in sessions, and that there is no Linux desktop
-client. If a policy requires that data stays inside infrastructure you control,
+browser cookies and signed-in sessions, and that a Linux desktop app exists as of September 2026. If a policy requires that data stays inside infrastructure you control,
 self-hosted n8n meets that requirement and Grok Bot cannot, regardless of how the
 rest of the comparison looks on capability.
 

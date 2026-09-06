@@ -27,8 +27,7 @@ Windows ships for x64 and Arm64. The bot works on a persistent cloud computer
 assigned to your user, a managed Linux VM, as a non-root user
 ([FAQ](https://docs.x.ai/grok-bot/faq),
 [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)). Closing the
-app, laptop, or iPhone does not stop a background turn. There is no Linux
-desktop client. WSL is not one either.
+app, laptop, or iPhone does not stop a background turn. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). WSL is not one either.
 
 ## Match the Windows installer to System type, not to the first Get button
 
@@ -88,7 +87,7 @@ Ubuntu and call that the workspace. The managed VM is in the cloud. WSL is on
 the disk you close. They share a word, Linux, and nothing else that matters
 for this product.
 
-There is also no Linux desktop app. The FAQ answers that question with no
+There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The FAQ lists it as of September 2026
 ([FAQ](https://docs.x.ai/grok-bot/faq),
 [teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 WSL does not punch a hole in that no. A Windows machine with a tidy Ubuntu
@@ -333,7 +332,7 @@ of them is the installer.
 | App opens, roster never appears | The Windows build is empty | Hobby, Pro at $20, SuperGrok at $30, or Privacy Mode (Legacy) | Invoice, then the FAQ list, then that mode |
 | Ubuntu in WSL has no grok package | Linux support is missing on Windows | WSL is not the computer | Use the Windows client. Leave WSL alone |
 | Job continued after the lid closed | Windows failed to pause the process | Cloud VM kept the turn | Pause or deny next time. Do not use sleep |
-| iPhone cannot edit a routine | The Windows install did not sync | Phone is pause and resume only | Edit on the Windows desk |
+| iPhone cannot edit a routine | The Windows install did not sync | The phone app cannot edit routines | Edit on the Windows desk |
 | Second bot can see a login the first bot made | Isolation is broken on Windows | Screens are not a security boundary | Stop treating bots as vaults. Revoke the session |
 
 Rows one, three, and four are Nia's week. None of them were "download an
@@ -375,7 +374,7 @@ the lid feels like a stop command. Fix those in that order. Then give Clerk
 one night. Then connect a mailbox you can afford to see on every screen of
 the shared computer.
 
-**Keep reading:** [How to Download Grok Bot and Confirm You Are Actually Eligible](/blog/download-grok-bot), [Grok Bot With the Laptop Closed: What Keeps Running and What Does Not](/blog/grok-bot-runs-with-laptop-closed), [Grok Bot on iPhone: What You Can Do, and What Still Needs Desktop](/blog/grok-bot-iphone-app).
+**Keep reading:** [How to Download Grok Bot and Confirm You Are Actually Eligible](/blog/download-grok-bot), [Grok Bot With the Laptop Closed: What Keeps Running and What Does Not](/blog/grok-bot-runs-with-laptop-closed), [Grok Bot on iPhone: What the App Does](/blog/grok-bot-iphone-app).
 
 ## Frequently Asked Questions
 

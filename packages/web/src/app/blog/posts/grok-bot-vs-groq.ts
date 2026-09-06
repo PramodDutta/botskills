@@ -145,9 +145,7 @@ Grok Bot (one computer, many names).
 
 The computer is a managed Linux VM. The bot runs as a non-root user. That
 is not a Linux desktop client. Supported clients are macOS (Apple silicon
-and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There
-is no Linux desktop app, no Android app, and no iPad app. On iPhone you
-can pause and resume only. Details sit on
+and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Details sit on
 [what actually works on Windows, Linux and iPad](/blog/grok-bot-supported-platforms).
 Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21
 August 2026. There is no model picker. There is no bot-specific spend

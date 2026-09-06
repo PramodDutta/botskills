@@ -36,13 +36,13 @@ If the work still has an inbox after the laptop lid closes, you wanted Grok Bot.
 
 ## Keep Grok Bot as a named cloud teammate that cannot own a production merge
 
-Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. Not Linux desktop, not Android, not iPad. The computer is a managed Linux VM. The Bot is a non-root user on that VM, not a Linux desktop app. See [supported platforms](/blog/grok-bot-supported-platforms).
+Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. Platforms: macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. Not iPad. The computer is a managed Linux VM. The Bot is a non-root user on that VM, not a Linux desktop app. See [supported platforms](/blog/grok-bot-supported-platforms).
 
 All bots on the account share one persistent cloud computer. Cookies, sessions, files, and CLI credentials are shared. Deleting a bot does not remove those files or sessions. Do not use separate bots as a security boundary. [One computer, many screens](/blog/grok-bot-shared-computer-security) and [least privilege](/blog/least-privilege-bots) are the isolation and grant articles.
 
 No model picker, for members or admins, and none is planned. No Grok Bot-specific spend cap. Weekly allowance, then on-demand from model and token cost. No public dollar figure exists. Do not invent one. See [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn) and [Grok Bot cost](/blog/grok-bot-cost). No audit view of Bot actions yet. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer.
 
-Routines attach to one Bot, max fifty, with twenty recent run records, and they die when the bot is deleted. Nothing is team-level. On iPhone you can pause and resume only.
+Routines attach to one Bot, max fifty, with twenty recent run records, and they die when the bot is deleted. Nothing is team-level. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 
 Grok Bot can drive a browser. If you signed GitHub into the shared computer, a bot could open a pull request or click merge unless the charter and approvals stop it. State the rule in the brief: Bot does not merge PRs. Approvals do not reverse a merge already clicked. Keep git write off this computer. If you needed an isolated repo job, you wanted a coding agent, not a second Grok Bot named fixer.
 
@@ -164,7 +164,7 @@ Most grok bot vs Devin failures are filing errors. The symptom is real. The noun
 | Pro at $20 user cannot start Grok Bot | Pro does not include Grok Bot | Invoice spelling. Pro+ or another eligible plan. Trial |
 | Deleted Grok Bot, Gmail still signed in | Deleting a bot does not clean the computer | Sessions and files on the shared VM. Not a Devin workspace |
 
-On iPhone, Grok Bot can pause and resume only. Do not expect that client to be a Devin dashboard. Restarting Grok Bot will not unstick a Cognition session.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Do not expect that client to be a Devin dashboard. Restarting Grok Bot will not unstick a Cognition session.
 
 ## Answer the claim that an AI software engineer should also run the inbox
 

@@ -34,7 +34,7 @@ The [plain Grok Bot primer](/blog/what-is-a-grok-bot) is the named-teammate mode
 
 ## Run WELCOME15 on the shared computer browser, then refuse every git verb
 
-Grok Bot runs on a managed Linux VM assigned to your user account, not to a bot. The Bot is a non-root user on that VM. That is not a Linux desktop app. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. No Linux desktop client, no Android, no iPad.
+Grok Bot runs on a managed Linux VM assigned to your user account, not to a bot. The Bot is a non-root user on that VM. That is not a Linux desktop app. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. There are Linux desktop and Android apps as of September 2026; iPad is still not supported.
 
 All bots on the account share that computer. Cookies, sessions, files, and CLI credentials are shared. [Inbox Triage](/bots/inbox-triage) can open the same staging.shop tab Repro just logged into. Deleting Repro does not sign that session out and does not delete \`/workspace/repro\`.
 
@@ -120,7 +120,7 @@ Friday check: Did Repro open a pull request. No. Did anything merge without a hu
 
 Standing instructions are what a routine loads. A chat reminder dies on the second morning. A routine assigns a workflow to one bot, max fifty per bot, twenty most recent run records. Deleting the bot deletes the routines. It does not wipe the screenshots. Keep a copy of this charter off the computer.
 
-Do not put this in SKILL.md. Paste it on macOS or Windows. iPhone can pause and resume only.
+Do not put this in SKILL.md. Paste it on macOS or Windows. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 
 \`\`\`text
 You are Repro, a grok bot bug reproduction desk. You click the

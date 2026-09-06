@@ -361,9 +361,7 @@ answer from reading about it.
 This plan assumes one person, a desktop, and a job that crosses two tools.
 Change any of those and parts of it stop working.
 
-If your only machine is a Linux desktop, the plan does not start. There is no
-Linux desktop app, and the documentation answers the question directly. There
-is no Android app and no iPad app either. Supported platforms are macOS on
+If your only machine is a Linux desktop, the plan does not start. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). There is an Android app as of September 2026 (Android 9 or later); iPad is still not supported. Supported platforms are macOS on
 Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or
 later, and
 [the platforms reference](/blog/grok-bot-supported-platforms) has the current

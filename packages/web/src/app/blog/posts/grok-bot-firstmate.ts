@@ -204,8 +204,7 @@ briefs, asks which one runs first, and refuses to treat publish as a default
 because Clip Desk's boundary is unpublished. If you answer "both, and live,"
 it still waits on the live click. That wait is the product.
 
-Supported clients are macOS, Windows, and iPhone on iOS 18 or later. There is
-no Linux desktop app, no Android app, and no iPad app. The iPhone client
+Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The iPhone client
 pauses and resumes. It does not replace desktop for editing a roster or
 testing a door. Do not approve a specialist send from a phone glance. Open
 the packet on desktop, read the three-line translation, then click.

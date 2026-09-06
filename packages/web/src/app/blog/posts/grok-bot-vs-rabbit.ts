@@ -36,7 +36,7 @@ A Grok bot is a named role with a charter, a screen, and optional routines. The 
 
 That shared cookie jar is the load-bearing Grok fact here. Connect Gmail for the standing inbox and that session sits on the computer. The scout you add on Thursday can see it. Deleting the scout does not log Inbox Triage out. Read [One Computer, Many Screens](/blog/grok-bot-shared-computer-security) rather than inferring a private jar from two names.
 
-The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. No Linux desktop, Android, or iPad app. See [supported platforms](/blog/grok-bot-supported-platforms). On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop.
+The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. See [supported platforms](/blog/grok-bot-supported-platforms). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop.
 
 A routine assigns a workflow to one bot. Max 50 routines per bot. The app keeps 20 most recent run records per routine. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view of Bot actions yet. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. Claude Code, SKILL.md, and CLAUDE.md compatibility is Grok Build, never Grok Bot.
 
@@ -193,7 +193,7 @@ Connect Gmail on Grok Bot only after the charter forbids send. Then add a second
 
 ## Use iPhone only to pause the standing inbox, then change the routine on desktop
 
-The standing inbox will fail on a commute if you expected the phone to be a studio. Documented mobile scope: iPhone on iOS 18 or later. Pause works. Resume works. Editing, history, testing, and deleting need a Mac or Windows desktop. Teach-by-demonstration (up to ten minutes, no microphone audio, draft skill, browser workflows only) is unavailable on iPhone. The [iPhone app article](/blog/grok-bot-iphone-app) is the split. This section is only what that split does to 07:30.
+The standing inbox will fail on a commute if you expected the phone to be a studio. Documented mobile scope: iPhone on iOS 18 or later. Pause works. Resume works. Editing, history, testing, and deleting need the desktop app. Teach-by-demonstration (up to ten minutes, no microphone audio, draft skill, browser workflows only) is unavailable on iPhone. The [iPhone app article](/blog/grok-bot-iphone-app) is the split. This section is only what that split does to 07:30.
 
 | Action on the standing inbox | iPhone (iOS 18+) | Desktop (macOS or Windows) |
 |---|---|---|
@@ -212,7 +212,7 @@ Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a rout
 
 A consumer interface agent returns an answer you asked for tonight. A named bot is still there on Monday, on a shared computer whose blast radius you accepted on purpose.
 
-**Keep reading:** [Grok Bot vs ChatGPT Agent: Computer Use Against Named Bots](/blog/grok-bot-vs-chatgpt-agent), [What Is a Grok Bot? The Plain Explanation for Non-Engineers](/blog/what-is-a-grok-bot), [Grok Bot on iPhone: What You Can Do, and What Still Needs Desktop](/blog/grok-bot-iphone-app).
+**Keep reading:** [Grok Bot vs ChatGPT Agent: Computer Use Against Named Bots](/blog/grok-bot-vs-chatgpt-agent), [What Is a Grok Bot? The Plain Explanation for Non-Engineers](/blog/what-is-a-grok-bot), [Grok Bot on iPhone: What the App Does](/blog/grok-bot-iphone-app).
 
 ## Frequently Asked Questions
 

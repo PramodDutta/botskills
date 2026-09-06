@@ -189,8 +189,7 @@ The shape of the bill, once you are on a qualifying plan, is
 number you read in a roundup. No published figure belongs in this article.
 
 Supported clients are macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and iPhone on iOS 18 or later. Linux desktop, Android, and iPad are
-not supported. If your daily machine is a Linux workstation, you do not install
+Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If your daily machine is a Linux workstation, you do not install
 a Grok Bot desktop there.
 
 ## Recheck Anthropic yourself before you budget Claude Cowork
@@ -305,7 +304,7 @@ recognise it in week two.
 | The research bot opens the CRM your sales bot signed into | Shared browser cookies on one computer | Sign the CRM out of the shared browser, or do not sign it in there |
 | Files from a deleted bot are still on disk | Deleting a bot does not remove shared-computer files | Delete the files yourself, then list the directory |
 | A leftover login still works after you removed the bot | Sessions live on the computer, not in the bot record | Sign out in the shared browser, then check |
-| Linux, Android, or iPad has no client | Those clients are not supported | Use macOS, Windows, or iPhone on iOS 18+ |
+| iPad has no client | Not supported | Use a Mac, Windows or Linux desktop, or an iPhone or Android phone |
 | Cowork cannot see last night's cloud export | The file lives on the other machine | Run the job where the file already is |
 | A roundup promised a private VM per bot | The roundup described a product that is not this one | Re-read computer-and-apps; count one computer per account |
 | Nobody can show who did what last Thursday | An audit view of bot actions does not exist yet | Keep your own log outside the product, or do not run the job |
@@ -414,9 +413,7 @@ treat either as the bargain.
 ### Can I run Grok Bot on Linux, Android, or an iPad?
 
 No. Supported clients are macOS on Apple silicon and Intel, Windows on x64 and
-Arm64, and iPhone on iOS 18 or later. Linux desktop, Android, and iPad are not
-supported. If your daily machine is a Linux workstation, Grok Bot is not a
-client you install there. Cowork's client list is something you should take
+Arm64, and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If your daily machine is a Linux workstation, Grok Bot has had a desktop app for it since September 2026. Cowork's client list is something you should take
 from Anthropic's current docs rather than from this page, because that surface
 has been moving.
 `,

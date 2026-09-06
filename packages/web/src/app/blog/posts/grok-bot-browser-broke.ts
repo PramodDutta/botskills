@@ -240,8 +240,7 @@ read the file. If the file still has numbers, the charter lost.
 Routines assign a workflow to one bot. Max 50 routines per bot. The app keeps
 20 most recent run records per routine. Deleting the bot deletes its routines.
 It does not delete /state/competitor-brief.md or any cookie you left. Teardown
-is sign out, archive the file, then delete. On iPhone you can pause and resume
-only. Editing this charter waits for desktop.
+is sign out, archive the file, then delete. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing this charter waits for desktop.
 
 ## Refuse to freeze a ten-minute demo click path as if the site will hold still
 
@@ -344,8 +343,7 @@ structured door exists. Blindness on redesign is expected. Output
 could-not-compute. Do not invent." Daily on brittle HTML multiplies misses.
 Weekly, with a manual sweep, is the shape that holds.
 Platform limits still apply. macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and iPhone on iOS 18+ have clients. There is no Linux desktop app, no
-Android app, and no iPad app. The computer is a managed Linux VM, not a Linux
+Arm64), and iPhone on iOS 18+ have clients. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The computer is a managed Linux VM, not a Linux
 desktop client. On iPhone you can pause a looping routine. You cannot usefully
 edit the charter from the phone. If the site is yours, build the door.
 

@@ -123,7 +123,7 @@ which one you pick.
 | Per-step record | Full input and output per node in Zap history | An audit view of Bot actions "does not exist yet" |
 | Approval model | Human in the Loop action, Professional and up | Approvals on proposed actions, per charter |
 | Where it runs | Zapier's cloud | One managed Linux VM shared by all your Bots |
-| Reach onto a desktop | Browser and API only | macOS, Windows, iPhone on iOS 18+ |
+| Reach onto a desktop | Browser and API only | macOS, Windows, Linux, iPhone, Android |
 
 Two rows deserve expanding. Zapier's autoreplay retries a failed step up to five
 times on a 5 minute, 30 minute, 1 hour, 3 hour and 6 hour backoff, and Zapier

@@ -165,8 +165,7 @@ documents. Candidate files are CVs and public pages you saved. Those two
 sets should not share a cookie jar. Naming one bot Payroll and one bot
 Recruiting does not split the jar. Both open the same Linux home directory.
 The bot process runs as a non-root user on a managed Linux VM. Non-root is
-not per-bot isolation, and it is not a Linux desktop app. There is no Linux
-desktop client.
+not per-bot isolation, and it is not a Linux desktop app. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage).
 
 There is no audit view of bot actions yet. Hosted MCP sign-in tokens stay
 with Cursor's backend, not on the computer. That does not rescue a payroll
@@ -281,8 +280,7 @@ decision. Screening is not a decision.
 \`\`\`
 
 Routines assign a workflow to one bot, max 50, and die with the bot.
-Nothing is team-level. Do not put InMail on a routine. On iPhone you can
-pause and resume only. Do not teach a send path.
+Nothing is team-level. Do not put InMail on a routine. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Do not teach a send path.
 
 ## Catch score hiding, ATS writeback, and live harvest as decision shapes
 
@@ -370,8 +368,7 @@ candidate folder. Clear the folder when the requisition closes. Work
 through
 [the safety checklist](/blog/grok-bot-safety-checklist) before you connect
 any inbox. Supported clients are macOS (Apple silicon and Intel), Windows
-(x64 and Arm64), and iPhone on iOS 18+. Not Linux desktop, not Android, not
-iPad.
+(x64 and Arm64), and iPhone on iOS 18+. Not iPad.
 
 ## Shrink the requisition when the pile is larger than a human will open
 

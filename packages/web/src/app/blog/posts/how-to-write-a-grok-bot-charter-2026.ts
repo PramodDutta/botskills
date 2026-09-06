@@ -31,7 +31,7 @@ Keep a copy of the charter off the computer. Deleting a bot deletes routines. It
 
 A paragraph that says be careful, be accurate, and ask if unsure is four attitudes. Attitudes do not fail a run. Blocks fail a run. Drop one and you can name the miss the first week.
 
-The older seven-section prompt on this site ([Identity through Reporting](/blog/grok-bot-starter-charter-template)) is a general AI bot shape. A grok bot charter 2026 adds three blocks the product forces: Heartbeat, because there is still no audit view of Bot actions; Owner, because iPhone can pause and resume only; Restart, because a crash, a quota stop, or a deleted bot leaves files and cookies on the same machine.
+The older seven-section prompt on this site ([Identity through Reporting](/blog/grok-bot-starter-charter-template)) is a general AI bot shape. A grok bot charter 2026 adds three blocks the product forces: Heartbeat, because there is still no audit view of Bot actions; Owner, because the phone app can pause but not edit; Restart, because a crash, a quota stop, or a deleted bot leaves files and cookies on the same machine.
 
 | Block | What it answers | Failure when omitted |
 |---|---|---|
@@ -105,7 +105,7 @@ Name SENT: NO on every Heartbeat even when Never already banned send. A run that
 
 Owner is a person, a deputy, and two machines. Ivo owns the charter. Beck may pause. Neither may widen Never from a chat message. If the owner is away, the deputy pauses. The deputy does not add CRM, does not connect a second mailbox, and does not type be more helpful.
 
-On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM in the cloud, which is not a Linux desktop app. macOS (Apple silicon and Intel) and Windows (x64 and Arm64) are the workstations. If the first bad run happens on a commute, pause. Patch Never on a Mac or a PC before the next slot.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM in the cloud, which is not a Linux desktop app. macOS (Apple silicon and Intel) and Windows (x64 and Arm64) are the workstations. If the first bad run happens on a commute, pause. Patch Never on a Mac or a PC before the next slot.
 
 Write the Owner block so a stranger could execute it. Owner: Ivo, ops. Pause: Ivo or Beck on iPhone. Edit charter: Ivo on desktop. Deputy must not send, widen Inputs, or delete the bot. Deleting the bot deletes the routines. Files and sessions can remain. [Week-one mistakes](/blog/grok-bot-week-one-mistakes) already billed Omar for that cleanup.
 
@@ -194,7 +194,7 @@ If you cannot write this file, the run failed. Stop.
 
 OWNER
 Owner: [NAME], [ROLE].
-Pause: [NAME] or [DEPUTY] on iPhone (pause and resume only).
+Pause: [NAME] or [DEPUTY] from the phone app (pause and approve only, no editing).
 Edit this charter: desktop, macOS or Windows.
 Deputy may pause. Deputy may not widen NEVER, Inputs, or connections.
 Do not delete this bot to stop a run. Pause. Deleting deletes routines.
@@ -248,7 +248,7 @@ A charter you have not failed on purpose is still a wish. Before 07:00 exists, p
 
 Watch the run the same morning. If plant two produces a refund draft, do not schedule. Fix Never and plant again. [Shadow mode](/blog/grok-bot-shadow-mode) is the week after this gate passes.
 
-Do not teach the plant by demonstration and call it done. The ten-minute recording does not include the money verb. Write the verb, then plant, then consider a routine. On iPhone you can pause if the plant goes sideways. You still need desktop to confirm Drafts and to edit the block. Linux desktop, Android, and iPad have no client. Use a supported desktop, or do not connect hello@.
+Do not teach the plant by demonstration and call it done. The ten-minute recording does not include the money verb. Write the verb, then plant, then consider a routine. On iPhone you can pause if the plant goes sideways. You still need desktop to confirm Drafts and to edit the block. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Use a supported desktop, or do not connect hello@.
 
 **Keep reading:** [Make a Grok Bot Show Its Work on Every Claim](/blog/grok-bot-evidence-rules), [Seven Grok Bot Mistakes Everyone Makes in Week One](/blog/grok-bot-week-one-mistakes), [How to Pick the First Job to Hand a Grok Bot](/blog/pick-the-first-grok-bot-job).
 

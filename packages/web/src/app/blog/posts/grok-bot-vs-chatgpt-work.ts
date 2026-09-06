@@ -41,7 +41,7 @@ Browser cookies, signed-in sessions, files, and command-line credentials are com
 
 xAI describes bots messaging each other in group chats. Treat that as a product claim from xAI marketing, not as a documented security model, and not as proof that two bots can keep secrets from each other. If they can message, they still sit on the same computer. A group chat is not a wall.
 
-Platforms are narrower than opening ChatGPT wherever you already work. Grok Bot supports macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There is no Linux desktop app, no Android app, and no iPad app. If your working machine is a Linux laptop, this comparison is already over for Grok Bot on that machine.
+Platforms are narrower than opening ChatGPT wherever you already work. Grok Bot supports macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If your working machine is a Linux laptop, this comparison is already over for Grok Bot on that machine.
 
 ## Pick the product by persistence, not by a feature checklist
 
@@ -201,7 +201,7 @@ You can keep both. Stop using one object for the other object's job.
 
 Keep ChatGPT Work (once you have confirmed it on your plan) for unfinished work that wants a long run and a file, then wants to end. Packs, teardowns, rebuilds, "make this folder into a sheet". Confirm each job's permissions at the start. Do not leave a standing mailbox connected to a surface you treat as disposable.
 
-Keep Grok Bot for unfinished work that wants a name, a charter, a stop line, and a desk that still has last week's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Remember that every bot shares the computer, that deletion is not cleanup, that overflow is uncapped, and that Linux, Android, and iPad are not supported.
+Keep Grok Bot for unfinished work that wants a name, a charter, a stop line, and a desk that still has last week's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Remember that every bot shares the computer, that deletion is not cleanup, that overflow is uncapped, and that iPad is not supported (Linux desktop and Android apps shipped in September 2026).
 
 Use Tasks, not Work, when the need is a clock and a message. Mixing the three into one "ChatGPT versus Grok" feeling will produce the wrong purchase three times. Pick by persistence. A task surface returns a document. A named bot is still there on Monday, on a shared computer whose blast radius you accepted on purpose.
 

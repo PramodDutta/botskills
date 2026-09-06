@@ -107,8 +107,7 @@ A second structural difference: our listings declare which runtimes they target,
 and there is more than one.
 
 Grok Bot is the hosted product, running on a managed Linux VM as a non-root
-user, with clients on macOS, Windows and iPhone on iOS 18 or later, and no
-Linux desktop, Android or iPad client. Rakazo is the open-source alternative,
+user, with clients on macOS, Windows and Linux desktops and iPhone and Android phones; iPad is not supported. Rakazo is the open-source alternative,
 Apache 2.0, where you bring your own model key or subscription and you choose
 the sandbox yourself. Different hosting, different trust model, different
 answer to "who can see this".
@@ -122,7 +121,7 @@ same file can be marked for both, and the setup prompt reads the same on either.
 | Hosting | Managed cloud computer, one per account | Yours, self-hosted |
 | Model choice | No picker, for members or admins | You choose |
 | Where sessions live | The shared account computer | Your sandbox |
-| Clients | macOS, Windows, iPhone on iOS 18+ | Wherever you run it |
+| Clients | macOS, Windows, Linux, iPhone, Android | Wherever you run it |
 | Access | A paid eligible plan | The repo |
 | Charter format | The same BOT.md | The same BOT.md |
 

@@ -45,7 +45,7 @@ preference.
 | Nobody wants to be paged about a Postgres box | Grok Bot | The operating work below is real and recurring |
 | A contract says customer data stays on your infrastructure | Rakazo | A cloud computer you cannot inspect fails that review |
 | Cost control means routing cheap jobs to a cheap model | Rakazo | Grok Bot rules out a picker for members and admins |
-| Your team works on Linux desktops or Android phones | Rakazo | Grok Bot answers both with a flat no |
+| Your team works on Linux desktops or Android phones | Either | Grok Bot added both in September 2026 |
 | Something has to run before Friday | Grok Bot | Sign in on a supported device and you are live |
 | A reviewer will ask who approved what | Rakazo, with caveats | Grok Bot has no audit view yet; Rakazo gives tables, not a finished UI |
 
@@ -80,9 +80,7 @@ The surfaces differ too. Rakazo ships a web app, an Electron desktop app, and
 an Expo mobile app that are all clients of the same API
 ([README](https://github.com/elie222/rakazo/blob/main/README.md)), and the iOS
 and Android apps can point at a self-hosted origin from the sign-in screen.
-Grok Bot supports macOS, Windows, and iPhone on iOS 18+, and its docs answer
-"is there a Linux desktop app?" with a flat no
-([FAQ](https://docs.x.ai/grok-bot/faq)).
+Grok Bot supports macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 
 ## Score them on ten criteria that survive a version bump
 
@@ -95,7 +93,7 @@ Grok Bot supports macOS, Windows, and iPhone on iOS 18+, and its docs answer
 | Setup burden | Sign in on a supported device | Node 22+, pnpm 9, Docker, Postgres 16, TLS, backups |
 | Approval default | Approvals ship with the product | Bots act without asking until you add rules |
 | Audit trail | No audit view of bot actions yet | Event and usage tables in your own database |
-| Platforms | macOS, Windows, iPhone on iOS 18+ | Web, desktop, iOS and Android, server on Linux |
+| Platforms | macOS, Windows and Linux desktops; iPhone and Android phones; no iPad | Web, desktop, iOS and Android, server on Linux |
 | Isolation option | One computer per account, period | Team Computer default, Private Computer optional |
 | Source | Closed | Apache-2.0, beta |
 
@@ -301,8 +299,7 @@ default, which is what you buy when you buy control.
 
 If your team has no appetite for operations, Grok Bot wins and it is not
 close. There is no Postgres to back up, no TLS certificate to renew, no
-computer image to rebuild. Supported surfaces are macOS, Windows, and iPhone
-on iOS 18+ ([FAQ](https://docs.x.ai/grok-bot/faq)), which covers most laptops.
+computer image to rebuild. Supported surfaces are macOS, Windows and Linux desktops plus iPhone and Android phones ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)), which covers most laptops.
 
 It also wins on whether a roster survives a busy quarter. A managed runtime
 keeps working when the person who set it up goes on holiday. A self-hosted one

@@ -64,7 +64,7 @@ Roundups get this sentence wrong, and it decides whether Grok Bot vs Manus is ev
 
 All bots on a Grok Bot account share one persistent cloud computer assigned to the user, not to a bot. Ten named bots are ten screens and one filesystem. Connect Gmail for the pack and that session is on the computer. The research bot you add on Thursday can see it. Deleting the research bot does not log the pack desk out. Read [One Computer, Many Screens](/blog/grok-bot-shared-computer-security).
 
-The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. No Linux desktop, Android, or iPad app. See [supported platforms](/blog/grok-bot-supported-platforms). On iPhone you can pause and resume only. A routine assigns a workflow to one bot. Max 50 routines. Twenty recent run records. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view yet.
+The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. See [supported platforms](/blog/grok-bot-supported-platforms). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. A routine assigns a workflow to one bot. Max 50 routines. Twenty recent run records. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view yet.
 
 Cloud work continues after you close the app or pocket the iPhone. Local file actions still need that machine awake. Sends set to require approval still wait on you. Sleep is not approval. Approvals do not reverse work already completed. See [Grok Bot With the Laptop Closed](/blog/grok-bot-runs-with-laptop-closed) and [approvals, rules, reversibility](/blog/grok-bot-approval-rules-reversibility). Beta launched 11 August 2026. Eligibility widened 21 August 2026. Still one computer per account.
 
@@ -165,9 +165,9 @@ When the week goes wrong, name the object before you rewrite the prompt.
 | Two Grok bots used the same Gmail cookies | Shared computer, by design | Treat the account as one security domain |
 | You deleted Overnight Pack Desk and Gmail is still signed in | Deletion does not wipe files or sessions | Rotate the session yourself |
 | A Manus mail workflow sent or logged something you only wanted drafted | A general agent path that currently includes action verbs | Confirm Mail Manus prompts live. Put send off the Grok charter |
-| Grok Bot never appeared on your Linux laptop | Unsupported platform | There is no Linux desktop app |
+| Grok Bot never appeared on your Linux laptop | An installer story from before September 2026 | There is a Linux desktop app as of September 2026 (.deb, .rpm, AppImage) |
 | Thursday's pack cannot see Wednesday's file | You used a one-off task, not a desk | Named bot plus a folder on the shared computer |
-| iPhone could not edit the 06:00 routine | iPhone pause and resume only | Change the routine on desktop |
+| iPhone could not edit the 06:00 routine | phone app can pause and approve but not edit | Change the routine on desktop |
 
 If the job is a supplier portal every Monday, that is a different comparison. Recover files from the shared computer if they remain after a bot is deleted. Routines will not remain.
 
@@ -183,7 +183,7 @@ It loses when the name has to survive. Customers, vendors, noise, seven must-rea
 
 Open [manus.im](https://manus.im) today. If the first tiles are still slides, websites, design, and games, you are looking at a general agent product, not a Grok roster. Open [manus.im/pricing](https://manus.im/pricing). If you cannot see live credit copy, you are not ready to budget Manus. If you see Free Cloud Computer on a card, write it down as a phrase, not as a VM you measured.
 
-Name the Grok object: one persistent cloud computer per account, screens not walls, routines per bot, no spend cap, no model picker, no Linux desktop app. Create Overnight Pack Desk, assign one weekday routine, close the laptop. In the morning the pack file is either there or it is not. On Manus, run one pack as a task and ask the next morning whether a named worker still owns 06:00 without you.
+Name the Grok object: one persistent cloud computer per account, screens not walls, routines per bot, no spend cap, no model picker, a Linux desktop app since September 2026. Create Overnight Pack Desk, assign one weekday routine, close the laptop. In the morning the pack file is either there or it is not. On Manus, run one pack as a task and ask the next morning whether a named worker still owns 06:00 without you.
 
 Connect Gmail on Grok Bot only after the charter forbids send. Then add a second bot and notice that it can see the same session. If that surprise makes the pack unsafe, you wanted two accounts, not two names.
 
@@ -193,7 +193,7 @@ Keep both only if you can name which object owns which job.
 
 Keep Manus, if manus.im still describes it this way, for delivered artefacts: a deck, a site, a one-off research pack, a forwarded thread you will never run again. Confirm Mail Manus, scheduled tasks, projects, and Browser Operator on their current pages. Hedge every price and every computer word. Do not staff Manus as a Grok-style roster unless Manus currently sells that object in words you can quote.
 
-Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a routine, and last night's inbox pack. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped. No Linux desktop app. iPhone can pause and resume but cannot edit the routine.
+Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a routine, and last night's inbox pack. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The phone app (iPhone or Android) can pause the routine and approve steps but cannot edit it.
 
 A general agent returns work you asked for tonight. A named bot is still there on Monday, on a shared computer whose blast radius you accepted on purpose.
 

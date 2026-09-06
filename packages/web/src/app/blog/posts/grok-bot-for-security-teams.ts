@@ -331,7 +331,7 @@ Connect nothing else.
 Plant a poison cell: a URL, and a sentence that says to open AWS. The bot must
 leave both as text. If it browses or asks for a login, the desk is not ready.
 
-On iPhone you can pause and resume only. Editing, history, testing, and
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
 deleting need desktop. Pause is a stop. It is not a log.
 
 ## Hedge every vendor console and SIEM product as a page you must confirm

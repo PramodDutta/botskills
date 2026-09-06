@@ -221,8 +221,7 @@ means for Grok Bot security](/blog/grok-bot-shared-computer-security). And there
 is no audit view of bot actions yet.
 
 Platform reach is narrower than people expect too: macOS, Windows, and iPhone on
-iOS 18 or later, with no Linux desktop, Android, or iPad client, which we cover
-in [Grok Bot supported platforms](/blog/grok-bot-supported-platforms). For a
+iOS 18 or later, and, since September 2026, Linux desktop and Android apps as well, with iPad still unsupported, which we cover in [Grok Bot supported platforms](/blog/grok-bot-supported-platforms). For a
 solo operator that is often irrelevant. For a Linux-first team it ends the
 conversation before pricing does.
 
@@ -365,7 +364,7 @@ usually the faster decision.
 | If this describes you | Pick | The fact that decides it | What you take on |
 |---|---|---|---|
 | You already pay for a qualifying Cursor or SuperGrok plan and work on macOS or Windows | Grok Bot | Access is included in the plan, so the marginal cost is zero | No model choice, no audit view, and one shared computer behind every bot |
-| Your desktops run Linux | Anything but Grok Bot | There is no Linux desktop client, and the docs answer that question with one word | Whichever operating burden the self-hosted choice brings |
+| Your desktops run Linux | Either | Grok Bot has a Linux desktop app as of September 2026 | Whichever operating burden the self-hosted choice brings |
 | One person, one machine, reachable from the chat apps you already use | OpenClaw | Its README states it is designed for a single operator | A gateway you run, with sandboxing you opt into rather than inherit |
 | Five colleagues will share the assistant | Not OpenClaw | Its security guide says it is not a hostile multi-tenant boundary for several adversarial users on one gateway | Separate installs, or Hermes with per-session containers |
 | Bots run unattended, on a schedule, while you sleep | Hermes | Its documented default denies dangerous commands in cron mode and fails closed on timeout | Running the backend, and keeping the approval config honest |

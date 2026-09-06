@@ -79,7 +79,7 @@ This distinction affects offboarding and deletion. If everyone assumes the team 
 
 ## Use desktop for edits and iPhone only for pause or resume
 
-According to the Routines section of VERIFIED-FACTS, on iPhone a user can pause and resume only. Editing, history, testing, and deleting require desktop.
+According to the corrected platform facts, the phone app can pause or resume a routine and approve steps but cannot edit it. Editing, history, testing, and deleting require desktop.
 
 That means Ishan can respond to a concern from iPhone by pausing a routine. He cannot complete the full diagnosis there under the supplied facts. The repair workflow moves to desktop for history, test, edit, or deletion.
 
@@ -194,7 +194,7 @@ Look for duplicate routines before reaching the 50-per-Bot limit. Two similar na
 
 Review record retention against evidence obligations. The product keeps the 20 most recent run records per routine, but your organization may need particular evidence longer or may be required not to retain it. Decide what is authorized to preserve and where through your own policy. Do not copy sensitive run content merely because the recent window is finite.
 
-Simulate an unavailable desktop during an incident. The iPhone facts allow pause and resume only, so the immediate safe response can be pause. The runbook should identify who later accesses desktop for history and testing. This exercise verifies that the team does not confuse mobile pause with completed repair.
+Simulate an unavailable desktop during an incident. The phone app can pause a routine, so the immediate safe response can be pause. The runbook should identify who later accesses desktop for history and testing. This exercise verifies that the team does not confuse mobile pause with completed repair.
 
 Record timezone explicitly in the human-readable cadence description. This article does not claim how the product displays or stores timezones. The inventory needs enough detail for another operator to reconstruct the intended schedule without guessing whether "Monday at nine" belongs to the operator, Bot owner, or source region.
 
@@ -232,6 +232,6 @@ They are deleted with the Bot, according to the supplied Routines section. Befor
 
 ### Can I manage a routine completely from iPhone?
 
-No. The Routines section says iPhone supports pause and resume only. Editing, history, testing, and deleting require desktop. Use pause as a holding action when investigation is needed, then move to desktop for the named management operations. Confirm current primary documentation before relying on behavior that may change.
+No. The corrected platform facts say the phone app can pause or resume a routine but not edit it. Editing, history, testing, and deleting require desktop. Use pause as a holding action when investigation is needed, then move to desktop for the named management operations. Confirm current primary documentation before relying on behavior that may change.
 `,
 };

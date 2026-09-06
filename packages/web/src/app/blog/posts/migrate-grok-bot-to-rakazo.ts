@@ -58,7 +58,7 @@ staying put, moving everything, and splitting the roster by job.
 
 | Option | What it costs you | What it buys | Recommend it when |
 |---|---|---|---|
-| Stay on Grok Bot | A model chosen for you, no spend cap yet, and no audit view yet, all per [teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises) | Nothing to operate. Clients on macOS, Windows, and iPhone | Your bots are personal, your worst case is a wasted morning, and you have no appetite for running Postgres |
+| Stay on Grok Bot | A model chosen for you, no spend cap yet, and no audit view yet, all per [teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises) | Nothing to operate. Clients on macOS, Windows and Linux desktops and iPhone and Android phones; iPad is not supported | Your bots are personal, your worst case is a wasted morning, and you have no appetite for running Postgres |
 | Move the roster to Rakazo | A database, a worker, a sandbox provider, a model bill, and backups that are now your job | Apache-2.0 source, your own run history, your own model choice, per-run token records | You need the records to be yours, or you work on Linux, where the Grok Bot docs say plainly there is no desktop app |
 | Split the roster by job | Two setups, two places to look, two failure modes | The hosted product for personal work, the self-hosted one for anything you need a record of | Most rosters, for at least the first quarter |
 

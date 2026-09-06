@@ -112,7 +112,7 @@ A routine assigns a workflow to one Bot. The app keeps the 20 most recent run re
 
 Those rows show that a run fired. They do not show minutes you spent, minutes you would have spent, or whether a flag was a real crisis. A clock that fires every hour will push the first row off the list before tomorrow afternoon. Cite the twenty to debug a silent morning. Never cite them as proof a bot is saving you time.
 
-On iPhone you cannot open that history. Pause is available. Measuring bot ROI is not. Linux desktop, Android, and iPad are not supported clients ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). Reconstructing Monday from a Friday memory is invented ROI.
+On iPhone you cannot open that history. Pause is available. Measuring bot ROI is not. There are Linux desktop and Android apps as of September 2026; iPad is still not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). Reconstructing Monday from a Friday memory is invented ROI.
 
 There is no audit view of Bot actions yet ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)). If you need that packet, keep receipts on [the no-audit page](/blog/grok-bot-no-audit-log-yet). Twenty records are not that packet, and they are not this timesheet.
 
@@ -134,7 +134,7 @@ Skip three afternoons and those rows are unscored. Three unscored rows in a five
 
 Put the sheet where the company owns it. Paz used one document: window start, window end, baseline rule, crisis rule, verdict date. The bot may append that a run finished. It may not fill minutes or grade its own flags.
 
-If you travel, pause rather than reconstructing after you return. On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). If you cannot look at the proposals the same day, unscored is the correct row.
+If you travel, pause rather than reconstructing after you return. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). If you cannot look at the proposals the same day, unscored is the correct row.
 
 Privacy Mode (Legacy) blocks Grok Bot entirely. If it is on, there is no bot to time.
 

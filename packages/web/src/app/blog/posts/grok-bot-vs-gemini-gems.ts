@@ -68,7 +68,7 @@ Staff [Inbox Triage](/bots/inbox-triage) on Grok Bot only after you write the ve
 
 ## Assign weekday inbox work to one bot's routines, then accept the fifty-routine cap
 
-A routine on Grok Bot assigns a workflow to one bot. Maximum 50 routines per bot. The app keeps the 20 most recent run records per routine. Deleting the bot deletes its routines. Nothing is team-level. On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop. If you edit Gems on your phone the way you edit a note, do not expect the same surface on Grok Bot's iPhone client.
+A routine on Grok Bot assigns a workflow to one bot. Maximum 50 routines per bot. The app keeps the 20 most recent run records per routine. Deleting the bot deletes its routines. Nothing is team-level. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. If you edit Gems on your phone the way you edit a note, do not expect the same surface on Grok Bot's iPhone client.
 
 Do not assert that Gems have a scheduler, a routine object, or a weekday clock. Confirm any automation Google currently attaches to a Gem on Google's pages. Public writeups about Gemini sometimes mix Gems with other Gemini features. Mixing them in your head will make you believe Inbox already runs at 07:00 because the Gem is named Inbox.
 
@@ -144,7 +144,7 @@ You can keep both. Stop using one name as proof you bought the other machine.
 
 Keep Gemini Gems (once you have confirmed them on your plan) for saved instructions and a conversation you start. House style. A coding helper. A coach. Drafting you watch. Confirm each Gem's permissions on Google. Do not assume a Gem can hold a mailbox session, and do not assume it cannot.
 
-Keep Grok Bot for a name, a charter, a stop line, and a desk that still has last week's file. Run a short roster. Connect the fewest logins that still do the job. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped. Linux, Android, and iPad are not supported.
+Keep Grok Bot for a name, a charter, a stop line, and a desk that still has last week's file. Run a short roster. Connect the fewest logins that still do the job. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped. There are Linux desktop and Android apps as of September 2026; iPad is still not supported.
 
 Paste this only after you have admitted the Gem never owned the folder. Change the paths. Do not connect a mailbox until the stop list is true.
 
@@ -186,7 +186,7 @@ Create a second Grok bot on the same account. If it can see the mailbox cookies 
 
 Delete a throwaway bot after a test login. If the vendor portal is still signed in, deletion did not clean the desk. Rotate the session. A Gem you delete may or may not drop uploads: confirm on Google, then do not use that answer as a Grok Bot cleanup plan.
 
-On iPhone, Grok Bot can pause and resume only. Edit Gems on your phone if Google still allows that. If Grok Bot is missing on Android, iPad, or a Linux desktop, keep the Gem there. Move standing mail to a supported Mac or Windows machine, or do not staff the bot.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Edit Gems on your phone if Google still allows that. If Grok Bot is missing on Android, iPad, or a Linux desktop, keep the Gem there. Move standing mail to a supported Mac or Windows machine, or do not staff the bot.
 
 **Keep reading:** [What Is a Grok Bot? The Plain Explanation for Non-Engineers](/blog/what-is-a-grok-bot), [Grok Bot vs ChatGPT Work: Persistent Bots or a Task Surface](/blog/grok-bot-vs-chatgpt-work), [How Grok Bots Actually Work, Without the Dedicated-Computer Myth](/blog/how-bots-on-grok-actually-work).
 

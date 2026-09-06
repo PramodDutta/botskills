@@ -54,8 +54,8 @@ gaps are not the ones people guess.
 | macOS, Intel | Yes | Same as Apple silicon |
 | Windows x64 | Yes | A first-class desktop, not a fallback |
 | Windows Arm64 | Yes | Also first class, which surprises people |
-| iPhone, iOS 18 or later | Yes, partially | Pause and resume only; editing, history, testing, and deleting need a desktop |
-| Linux desktop | No | xAI's FAQ answers this one with a flat no |
+| iPhone, iOS 18 or later | Yes, partially | Pause, resume and approve; editing, history, testing, and deleting need a desktop |
+| Linux desktop | Yes | .deb, .rpm or AppImage, listed in the FAQ since September 2026 |
 | Android | No | No app at all, so no remote control either |
 | iPad | No | The iPhone app is not an iPad app |
 
@@ -370,7 +370,7 @@ reversing work already done.
 
 Four situations where the ninety-minute path above is the wrong plan.
 
-**Linux-only shops.** There is no Linux desktop app. The realistic route is a
+**Linux-only shops.** There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The realistic route is a
 self-hosted runtime, and the setup arc changes shape entirely because you own
 the install, the model keys, and the updates.
 

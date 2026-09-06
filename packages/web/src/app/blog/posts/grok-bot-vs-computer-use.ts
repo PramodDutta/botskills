@@ -89,7 +89,7 @@ A named bot without a routine is a persistent desk with no alarm. The 05:00 job 
 
 A routine assigns a workflow to one bot. Max 50 routines per bot. The app keeps 20 most recent run records per routine. Deleting that bot deletes its routines. Nothing is team-level. You can hand someone the charter text. They recreate the bot on their own eligible account. Kill the bot, kill the clock. The files may remain. The alarm will not. Scheduling traps: [how to schedule a Grok Bot routine](/blog/how-to-schedule-a-grok-bot-routine).
 
-On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop. Plan the first bad morning around a Mac or a Windows box. Teach-by-demonstration captures a browser walkthrough for up to ten minutes, no microphone, draft skill, browser only, unavailable on iPhone. Generic computer use usually has no routine object. Confirm any vendor scheduler. Do not treat a session you start as a weekday hire because you intend to start it again.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Plan the first bad morning around a Mac or a Windows box. Teach-by-demonstration captures a browser walkthrough for up to ten minutes, no microphone, draft skill, browser only, unavailable on iPhone. Generic computer use usually has no routine object. Confirm any vendor scheduler. Do not treat a session you start as a weekday hire because you intend to start it again.
 
 ## Expect the cloud computer to own 05:00 after the laptop sleeps
 
@@ -101,15 +101,15 @@ Generic computer use splits here. An API harness on a VM you keep can fire at 05
 
 ## Stop treating Grok Bot as a Linux desktop you install
 
-Roundups hear "managed Linux VM" and tell people to install Grok Bot on Ubuntu. There is no Linux desktop app. The worker is Linux. The client is not.
+Roundups hear "managed Linux VM" and tell people to install Grok Bot on Ubuntu. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The worker is Linux. The client is not.
 
-Grok Bot supports macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. Not Linux desktop, Android, or iPad. The bots use a managed Linux VM as a non-root user. That is the worker, not a package you apt-install. Platforms: [supported platforms](/blog/grok-bot-supported-platforms).
+Grok Bot supports macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. Not iPad. The bots use a managed Linux VM as a non-root user. That is the worker, not a package you apt-install. Platforms: [supported platforms](/blog/grok-bot-supported-platforms).
 
 | Client or worker | Documented for Grok Bot? | What people mix up |
 |---|---|---|
 | macOS app (Apple silicon and Intel) | Yes | The control surface, not the overnight machine |
 | Windows app (x64 and Arm64) | Yes | Same: control surface |
-| iPhone, iOS 18 or later | Yes, pause and resume only for routines | Not an editor, not a history desk |
+| iPhone (iOS 18+) or Android (9+) | Yes: pause, resume and approve | Not an editor, not a history desk |
 | Linux desktop, Android, iPad | No | The worker VM is Linux. That is not a desktop client |
 | The account computer | Managed Linux VM, bot is non-root | Shared by every bot. Not a per-bot VM |
 
@@ -175,7 +175,7 @@ When the week goes wrong, name the shape before you rewrite the prompt.
 | Two Grok bots used the same vendor cookies | Shared computer, by design | Treat the account as one security domain |
 | You deleted Morning Watch and the rival portal is still signed in | Deletion does not wipe files or sessions | Rotate the session yourself |
 | Cloud browser stopped on a login wall | Public-page limits as that vendor documented them | Confirm live. A standing signed-in desk is Grok Bot's shape |
-| Grok Bot never appeared on the Linux laptop | Unsupported platform | There is no Linux desktop app |
+| Grok Bot never appeared on the Linux laptop | An installer story from before September 2026 | There is a Linux desktop app as of September 2026 (.deb, .rpm, AppImage) |
 | On-demand charges after a heavy watch week | No Grok Bot spend cap | Review usage. Do not wait for a ceiling that does not exist |
 
 If the job is logging into a supplier portal every Monday, verify that any generic computer-use surface is allowed to do that today. Grok Bot can hold a session on the shared computer. Files may remain after a bot is deleted. Routines will not.
@@ -196,7 +196,7 @@ You can keep both shapes. Stop using one object for the other object's job.
 
 Keep generic computer use for work that wants a pair of hands on a GUI or a page, then wants to end. Reproduce the checkout bug. Drive the Windows app in the foreground while you watch. Confirm each session's permissions at the start. Confirm Anthropic, OpenAI, and everyone else on their current pages. Do not staff a weekday 05:00 watch on a turn you might remember to start.
 
-Keep Grok Bot computer use for unfinished work that wants a name, a charter, a screen, a routine, and a desk that still has last night's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped. There is no Linux desktop app. Persistence is the product. Clicks are the demo.
+Keep Grok Bot computer use for unfinished work that wants a name, a charter, a screen, a routine, and a desk that still has last night's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). Persistence is the product. Clicks are the demo.
 
 **Keep reading:** [Grok Bot vs ChatGPT Agent: Computer Use Against Named Bots](/blog/grok-bot-vs-chatgpt-agent), [Grok Bot With the Laptop Closed: What Keeps Running and What Does Not](/blog/grok-bot-runs-with-laptop-closed), [How Grok Bots Actually Work, Without the Dedicated-Computer Myth](/blog/how-bots-on-grok-actually-work).
 
@@ -212,11 +212,11 @@ No. xAI assigns one persistent cloud computer to the user account, not to each b
 
 ### Can a Grok Bot run the 05:00 competitor check with the laptop closed?
 
-Cloud work can. A routine assigned to one bot fires on the shared cloud computer while the laptop is shut, the app is closed, or the iPhone is in a bag. Local-computer actions still need that machine awake. Sends set to require approval still wait on you. Sleep is not an approval. On iPhone you can pause and resume only. Generic computer-use sessions need a scheduler you confirmed, or they need you.
+Cloud work can. A routine assigned to one bot fires on the shared cloud computer while the laptop is shut, the app is closed, or the iPhone is in a bag. Local-computer actions still need that machine awake. Sends set to require approval still wait on you. Sleep is not an approval. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Generic computer-use sessions need a scheduler you confirmed, or they need you.
 
 ### Is there a Linux desktop app for Grok Bot computer use?
 
-No. Grok Bot has no Linux desktop app, no Android app, and no iPad app. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. The worker is a managed Linux VM where the bot runs as a non-root user. That VM is not a desktop client you install. A Linux box you ssh into is a harness you run, confirmed live, not a missing Grok Bot package.
+No. Grok Bot has a Linux desktop app and an Android app as of September 2026; iPad is still not supported. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. The worker is a managed Linux VM where the bot runs as a non-root user. That VM is not a desktop client you install. A Linux box you ssh into is a harness you run, confirmed live, not a missing Grok Bot package.
 
 `,
 };

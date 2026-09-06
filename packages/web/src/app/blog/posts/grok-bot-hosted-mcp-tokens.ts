@@ -184,7 +184,7 @@ People retire Pipeline Copy and believe the tokens left with the card. Deletion 
 
 Teardown order: sign out of HubSpot in the shared browser. Revoke the browser grant at HubSpot. Revoke the hosted connection in settings and at the CRM. Strip \`/state/pipeline-copy.md\` if it holds deal ids. Then delete the card if you still want it gone. Reverse that order and Marcus finds a clean roster with a dirty machine. Hosted MCP tokens stay with Cursor's backend until you revoke them there.
 
-On iPhone you can pause and resume only. Editing, history, testing, and deleting need a Mac or Windows desk. There is no Linux desktop app, no Android app, and no iPad app. [Grok Bot Cursor account](/blog/grok-bot-cursor-account-explained) is the identity that holds the computer. Revoke against that account, not against a nickname.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need a desktop. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. [Grok Bot Cursor account](/blog/grok-bot-cursor-account-explained) is the identity that holds the computer. Revoke against that account, not against a nickname.
 
 ## Stop filling encryption blanks the teams page left empty
 
@@ -220,6 +220,6 @@ Not from the Grok Bot docs as of 25 August 2026. Those pages say where the token
 
 ### Does deleting the pipeline bot remove hosted MCP tokens or HubSpot cookies?
 
-Neither, in the way people hope. Deleting a bot removes that bot, its chat, and its routines. It does not remove shared-computer files or browser sessions. HubSpot cookies stay until you sign out and revoke. Hosted MCP sign-in tokens were never on the computer, so a local delete does not collect them. Revoke the hosted connection in settings and at the CRM. On iPhone you can pause and resume only. Teardown that needs editing or deleting waits for a Mac or Windows desk.
+Neither, in the way people hope. Deleting a bot removes that bot, its chat, and its routines. It does not remove shared-computer files or browser sessions. HubSpot cookies stay until you sign out and revoke. Hosted MCP sign-in tokens were never on the computer, so a local delete does not collect them. Revoke the hosted connection in settings and at the CRM. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Teardown that needs editing or deleting waits for a desktop.
 `,
 };

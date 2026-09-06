@@ -14,9 +14,7 @@ metaphor. Until then, everything your fleet does starts from a desktop session
 you are sitting in front of. Connect Telegram and the trigger surface becomes a
 chat thread, which is convenient in exactly the way that should make you careful.
 
-There is a real reason people want this. Grok Bot supports macOS, Windows, and
-iPhone on iOS 18 or later. There is no Linux desktop app, no Android app, and no
-iPad app. And on iPhone the app lets you pause and resume runs, while editing,
+There is a real reason people want this. Grok Bot supports macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. And on iPhone the app lets you pause and resume runs, while editing,
 history, testing, and deleting all require a desktop. So if you are away from
 your machine, a messaging bridge is the only real remote you have.
 
@@ -418,8 +416,7 @@ start.
 ### Why control Grok Bot through Telegram at all?
 
 Because the official surfaces are limited when you are away from a desk. Grok Bot
-supports macOS, Windows, and iPhone on iOS 18 or later, with no Linux desktop
-app, no Android app, and no iPad app. On iPhone you can pause and resume runs,
+supports macOS, Windows, and iPhone on iOS 18 or later, plus, since September 2026, Linux desktop and Android apps; iPad is not supported. On iPhone you can pause and resume runs,
 but editing, history, testing, and deleting all require a desktop. A private
 messaging bridge is therefore the practical remote for anyone on Android or away
 from their machine. The tradeoff is that your trigger surface becomes a chat

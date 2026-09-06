@@ -39,7 +39,7 @@ Routines attach a workflow to one bot. Maximum 50 per bot. The app keeps the 20 
 
 The computer is one persistent cloud machine per user account. Every bot shares cookies, sessions, files, and CLI credentials. Each bot gets a screen. Docs are blunt: do not use separate bots as a security boundary. Deleting a bot does not remove shared files or browser sessions. Isolation lives in [One Computer, Many Screens](/blog/grok-bot-shared-computer-security), not in a second name.
 
-Supported clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. No Linux desktop app, no Android, no iPad. The computer is a managed Linux VM, which is not a Linux desktop client. On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop. No model picker for members or admins. Do not assert that Grok Bot runs grok-4.6. The Bot serving set is unpublished. No Grok Bot-specific spend cap: weekly allowance, then on-demand. No published dollar figure for the allowance. Never invent one. See [Grok Bot cost](/blog/grok-bot-cost).
+Supported clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The computer is a managed Linux VM, which is not a Linux desktop client. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. No model picker for members or admins. Do not assert that Grok Bot runs grok-4.6. The Bot serving set is unpublished. No Grok Bot-specific spend cap: weekly allowance, then on-demand. No published dollar figure for the allowance. Never invent one. See [Grok Bot cost](/blog/grok-bot-cost).
 
 ## Leave Grok Build in the third column so the names stop collapsing
 
@@ -77,7 +77,7 @@ The traps are Cursor Hobby, Cursor Pro at 20 dollars a month, and SuperGrok at 3
 
 Third-party roundups love a grid with a winner in bold. The Bot column can be sourced. The chat column goes stale, and half the grids mix API token prices, SuperGrok, and X Premium into one "Grok" cell. Do not budget Grok chat from this page. Open x.ai, write down the chat SKU, then separately check whether it is also Bot-eligible. SuperGrok at 30 dollars is the documented Grok-branded plan that does not include Bot. Other chat SKUs: confirm.
 
-The same hedge applies to clients. grok.com is a site. There is a Grok app. What phones, what desktops, what happens on X: confirm live. Do not copy Bot's "no Android" onto chat, and do not copy chat's web URL onto Bot and expect a Linux desktop app. Bot facts above were checked 25 August 2026. A pricing tweet from May is not a source.
+The same hedge applies to clients. grok.com is a site. There is a Grok app. What phones, what desktops, what happens on X: confirm live. Do not copy Bot's platform list onto chat, and do not copy chat's web URL onto Bot and expect a Linux desktop app. Bot facts above were checked 25 August 2026. A pricing tweet from May is not a source.
 
 ## Ask chat to watch the inbox, then watch the request fail as a standing job
 
@@ -182,7 +182,7 @@ Do not trust the feeling that you are in "Grok." Point at the UI.
 | SKILL.md changes behaviour | Not a Bot feature | Not a chat feature either | You wanted Grok Build |
 | Model picker | No, for members or admins | Confirm on x.ai | You planned to pin grok-4.6 on Bot |
 | Linux desktop client | No | Confirm chat on the web | You bought Bot for a machine it does not support |
-| iPhone can edit and delete | No. Pause and resume only | Confirm the Grok app on x.ai | You thought phone Bot was the full product |
+| iPhone can edit a routine | No. Pause, resume and approve only | Confirm the Grok app on x.ai | You thought phone Bot was the full product |
 | Delete worker, sessions vanish | No | A deleted thread is not a VM logout | You used delete as cleanup |
 
 If you cannot fail a row, you cannot risk-assess the product. A mailbox connected on a pass that should have failed is the incident. Run the table before the consent screen, not after the first draft goes out. Teammate pre-flight: [Grok Bot safety checklist](/blog/grok-bot-safety-checklist). Chat-side privacy toggles belong on x.ai. Do not mix the checklists.
@@ -191,7 +191,7 @@ If you cannot fail a row, you cannot risk-assess the product. A mailbox connecte
 
 You can keep grok.com and Grok Bot. Stop using one object for the other object's job.
 
-Keep chat for talk: drafts you will paste yourself, questions that end when the answer lands, one-off rewrites. Confirm what that product stores. Do not ask it to watch a mailbox as a standing employee. Keep Grok Bot for standing work: named jobs, routines, plugins, last week's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Overflow is uncapped. Linux, Android, and iPad are not Bot clients. Keep Grok Build in the repo if you want a CLI. Do not put mail on that story. See [Grok Bot vs Grok Build](/blog/grok-bot-vs-grok-build).
+Keep chat for talk: drafts you will paste yourself, questions that end when the answer lands, one-off rewrites. Confirm what that product stores. Do not ask it to watch a mailbox as a standing employee. Keep Grok Bot for standing work: named jobs, routines, plugins, last week's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Overflow is uncapped. Linux and Android are Bot clients as of September 2026; iPad is not. Keep Grok Build in the repo if you want a CLI. Do not put mail on that story. See [Grok Bot vs Grok Build](/blog/grok-bot-vs-grok-build).
 
 A coherent week: chat for a pricing-page argument, Inbox Triage for drafts you send, [Standup Scribe](/bots/standup-scribe) for a record nobody ships from, Chief of Staff Briefing for a Monday diff. Nobody asks grok.com to be the mailbox. Nobody asks Bot to pin grok-4.6. An incoherent week is one word, Grok, covering all of that. That week is how a SuperGrok receipt gets treated as a Bot license.
 

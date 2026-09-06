@@ -44,8 +44,7 @@ The sentence you should keep in the charter is the one the docs already
 wrote: do not use separate bots as a security boundary.
 
 The computer is a managed Linux VM. The bot runs as a non-root user. That
-does not wall Mail Cleanup off from \`~/.aws\`. There is no Linux desktop,
-Android, or iPad app. iPhone can pause and resume only. None of that is a
+does not wall Mail Cleanup off from \`~/.aws\`. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. None of that is a
 second disk. The architecture tour is
 [One Computer, Many Screens](/blog/grok-bot-shared-computer-security). This
 page assumes you already believe the computer is shared.

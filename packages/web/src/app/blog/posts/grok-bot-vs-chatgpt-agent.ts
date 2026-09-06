@@ -33,9 +33,9 @@ Even if the Agent name is gone, OpenAI still documents other computer-use shapes
 
 A Grok bot is a named role with a charter, a screen, and optional routines. The computer is assigned to your user account, not to an individual bot. All bots share one persistent cloud computer. Screens are work surfaces, not security boundaries. The docs say not to use separate bots as a security boundary. Cookies, sessions, files, and command-line credentials are common to every bot. Deleting a bot does not remove those files or browser sessions. Routines die with the bot. The desk does not. Read [What Is a Grok Bot?](/blog/what-is-a-grok-bot) and [One Computer, Many Screens](/blog/grok-bot-shared-computer-security) rather than inferring a private VM from two names.
 
-The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Grok Bot supports macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There is no Linux desktop app, no Android app, and no iPad app. See [supported platforms](/blog/grok-bot-supported-platforms).
+The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Grok Bot supports macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. See [supported platforms](/blog/grok-bot-supported-platforms).
 
-A routine assigns a workflow to one bot. Max 50 routines per bot. The app keeps 20 most recent run records per routine. Deleting a bot deletes its routines. Nothing is team-level. On iPhone you can pause and resume only. Schedule it as in [How to Schedule a Grok Bot Routine](/blog/how-to-schedule-a-grok-bot-routine). Group chat is not a wall.
+A routine assigns a workflow to one bot. Max 50 routines per bot. The app keeps 20 most recent run records per routine. Deleting a bot deletes its routines. Nothing is team-level. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Schedule it as in [How to Schedule a Grok Bot Routine](/blog/how-to-schedule-a-grok-bot-routine). Group chat is not a wall.
 
 ## Pick the product by persistence, not by who can click a browser
 
@@ -183,7 +183,7 @@ When the week goes wrong, name the surface before you rewrite the prompt.
 | Two Grok bots used the same vendor cookies | Shared computer, by design | Treat the account as one security domain |
 | You deleted Competitor Desk and the rival portal is still signed in | Deletion does not wipe files or sessions | Rotate the session yourself |
 | Cloud browser stopped on a login wall | Public-page limits as OpenAI has documented them | Confirm live. A standing signed-in desk is Grok Bot's shape |
-| Grok Bot never appeared on your Linux laptop | Unsupported platform | There is no Linux desktop app |
+| Grok Bot never appeared on your Linux laptop | An installer story from before September 2026 | There is a Linux desktop app as of September 2026 (.deb, .rpm, AppImage) |
 | Windows Computer Use stole the pointer | Foreground use as currently documented | Confirm OpenAI. Use a second device if you need to keep working |
 | On-demand charges after a heavy watch week | No Grok Bot spend cap | Review usage. Do not wait for a ceiling that does not exist |
 | Thursday's brief cannot see Wednesday's file | You used a session, not a desk | Named bot plus a folder on the shared computer |
@@ -208,7 +208,7 @@ You can keep both. Stop using one object for the other object's job.
 
 Keep ChatGPT computer use (Agent if it still exists on your plan, otherwise the live substitute OpenAI names) for work that wants a pair of hands on a GUI or a page, then wants to end. Confirm each session's permissions at the start. Do not invent a dedicated ChatGPT VM so the metaphor matches Grok Bot.
 
-Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a routine, and a desk that still has last night's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped. There is no Linux desktop app. iPhone can pause and resume but cannot edit the routine.
+Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a routine, and a desk that still has last night's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The phone app (iPhone or Android) can pause the routine and approve steps but cannot edit it.
 
 Use Work, not Agent, when the need is a long job that returns a file. Use Tasks, not Agent, when the need is a clock and a message. Use Bot when 05:00 still needs a named teammate. A computer-use session returns a screen you watched. A named bot is still there on Monday, on a shared computer whose blast radius you accepted on purpose.
 

@@ -106,7 +106,7 @@ A routine can pause after item seven of twelve. Without a checkpoint, the next r
 
 Read the checkpoint before opening the first input. Resume after LAST-ID. If the checkpoint is absent or older than the operator's chosen window, stop with RESTART-STALE. Do not infer progress from the presence of a draft because a person may have created it.
 
-On iPhone, Grok Bot supports pause and resume only. Editing, history, testing, and deleting require desktop. That makes the checkpoint especially important during a commute: the owner can pause a suspicious routine from an iPhone running iOS 18 or later, then inspect and edit from supported macOS or Windows desktop software.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting require desktop. That makes the checkpoint especially important during a commute: the owner can pause a suspicious routine from an iPhone running iOS 18 or later, then inspect and edit from the desktop app.
 
 ## Name one owner and one deputy with different powers
 

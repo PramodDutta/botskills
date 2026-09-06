@@ -98,8 +98,7 @@ know the invoice line.
 The installer answers a platform question. It does not answer an
 eligibility question. Supported clients are macOS (Apple silicon and
 Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later
-([FAQ](https://docs.x.ai/grok-bot/faq)). Linux desktop, Android, and
-iPad have no client. The agent computer is a managed Linux VM in the
+([FAQ](https://docs.x.ai/grok-bot/faq)). There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent computer is a managed Linux VM in the
 cloud, running the Bot as a non-root user. That is not a Linux desktop
 app. Paying twenty does not mint one.
 
@@ -433,7 +432,7 @@ Hobby is not a hidden door. The free Cursor editor can install and sign in. The 
 
 ### If my Stripe receipt says Pro, why is a finished Grok Bot installer not a bug?
 
-Because the installer answers a platform question and the receipt answers an editor SKU. macOS, Windows, and iPhone on iOS 18 or later should install cleanly. That success does not place Pro on the Bot list. Sign-in can complete on the same Cursor identity that opens the editor. The roster still stays empty when the plan name is Pro at twenty or Hobby. Reinstalling will not rewrite the invoice. Change the SKU, or spend the trial, if you want a roster.
+Because the installer answers a platform question and the receipt answers an editor SKU. macOS, Windows and Linux desktops, and iPhone or Android phones, should install cleanly. That success does not place Pro on the Bot list. Sign-in can complete on the same Cursor identity that opens the editor. The roster still stays empty when the plan name is Pro at twenty or Hobby. Reinstalling will not rewrite the invoice. Change the SKU, or spend the trial, if you want a roster.
 
 ### Will Cursor Pro at twenty include Grok Bot after another widening?
 

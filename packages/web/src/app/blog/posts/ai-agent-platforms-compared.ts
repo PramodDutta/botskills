@@ -95,7 +95,7 @@ you supply the environment.
 
 Two documented facts do the work. Grok Bot's placement is not configurable: the
 computer is a managed Linux VM with static egress IPs, and the docs answer the
-Linux desktop question with a flat no. Anthropic's docs for the computer use tool
+Linux desktop app since September 2026. Anthropic's docs for the computer use tool
 state that your application runs every call in an environment you control and
 Claude never connects to it directly. Both are in
 [Grok Bot vs n8n](/blog/grok-bot-vs-n8n) and
@@ -229,8 +229,7 @@ as a security boundary. Deleting a bot does not remove those files or sessions.
 Because sessions persist, it is logged in on Monday because you logged it in last
 Tuesday. Detail in
 [what the shared computer actually isolates](/blog/grok-bot-shared-computer-security),
-and reach, macOS, Windows and iPhone on iOS 18 or later with no Linux, Android or
-iPad client, in
+and reach, macOS, Windows and Linux desktops plus iPhone and Android phones, with iPad unsupported, in
 [Grok Bot on Windows, Linux and iPad](/blog/grok-bot-supported-platforms).
 
 Access rides on an eligible subscription. As of 21 August 2026 the cheapest paid
@@ -523,7 +522,7 @@ first.
 | The constraint you cannot move | What it removes | What survives |
 |---|---|---|
 | Data must not leave your infrastructure | Grok Bot, Lindy, Zapier, Make, cloud browser | The self-hosted six, plus Claude and the API tool |
-| Your desktops run Linux | Grok Bot, answered with one word | Everything else here |
+| Your desktops run Linux | Either, since September 2026 | Everything else here |
 | The job begins behind a sign-in | ChatGPT cloud browser | Grok Bot, Rakazo, or your own harness |
 | A reviewer will ask about a date | Grok Bot, no audit view yet | Zapier, Make, n8n, Buzz, Rakazo |
 | Nobody will run a server and a database | Rakazo, Buzz, self-hosted n8n | Grok Bot, Lindy, Zapier, Make |

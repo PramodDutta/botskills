@@ -72,7 +72,7 @@ A routine assigns a workflow to one Bot. Max 50 routines per Bot. The app keeps 
 
 There is no team calendar of routines. There is no org object named Monday Standup that outlives the bot card it was glued to. If Leena scheduled the standup on a bot on her seat, and you delete that bot, or you delete Leena, the clock dies with it. Recreate the routine on the new owner's bot. Copying a name in the sidebar is not a move.
 
-On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). There is no team-admin surface that fixes a routine you created on the wrong person's bot.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). There is no team-admin surface that fixes a routine you created on the wrong person's bot.
 
 How to create and verify a clock that will still exist next Monday is [how to schedule a Grok Bot routine](/blog/how-to-schedule-a-grok-bot-routine). [Standup Scribe](/bots/standup-scribe) is the right kind of owner for a Monday pack: one job, DM only. Put it on the person who will still be here in November, not on a "company bot" glued to whoever bought the first seat.
 
@@ -153,7 +153,7 @@ These checks can come back false. If they do, that person is not on Teams Standa
 | A second teammate cannot see that person's named bots in their own sidebar | You are looking at per-account computers | If they can, stop and re-read the FAQ |
 | No org screen lists Bot actions across the team | The missing audit view is still missing | Do not write "we have a Teams audit log" into a form |
 
-If the FAQ and this page disagree, the FAQ wins. Dates on this page are 25 to 27 August 2026. Treat the forty in the title as something you re-read on the vendor page the morning you pay. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. Linux desktop, Android, and iPad have no client. The agent computer is a managed Linux VM, not a Linux desktop app. [Supported platforms](/blog/grok-bot-supported-platforms) is the device grid. Official desktop path: [x.ai/bot](https://x.ai/bot).
+If the FAQ and this page disagree, the FAQ wins. Dates on this page are 25 to 27 August 2026. Treat the forty in the title as something you re-read on the vendor page the morning you pay. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent computer is a managed Linux VM, not a Linux desktop app. [Supported platforms](/blog/grok-bot-supported-platforms) is the device grid. Official desktop path: [x.ai/bot](https://x.ai/bot).
 
 ## Answer the fleet-console objection without inventing an org audit view
 

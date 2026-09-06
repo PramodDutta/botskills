@@ -53,7 +53,7 @@ research does not create a second computer.
 
 The Agent Computer is a managed Linux VM. The bot process runs as a non-root
 user. Non-root is not per-bot isolation, and it is not a Linux desktop app.
-There is no Linux desktop client. There is one VM per eligible user, and every
+There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). There is one VM per eligible user, and every
 bot you create on that user opens a screen onto the same disk.
 
 Bot A and Bot B are not two Unix users, two containers, or two IAM roles.
@@ -349,8 +349,7 @@ work. Not grok bot isolation.
 
 Where this breaks down: a human who copies ~/.aws between accounts anyway, a
 hosted MCP tool treated as per-bot, a 2FA prompt completed just to unblock
-the console, an iPhone pause mistaken for a wipe. On iPhone you can pause and
-resume only. Editing, history, testing, and deleting need desktop. None of
+the console, an iPhone pause mistaken for a wipe. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. None of
 those limits create a sandbox. If the worst secret cannot sit next to a
 curious prompt, change the bench.
 

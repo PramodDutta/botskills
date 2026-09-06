@@ -50,7 +50,7 @@ SOC 2 is a report a vendor publishes, or it is not. This site does not have a Gr
 
 ## Count one computer per person even when the buyer is a company
 
-Enterprise buyers hear Linux VM and picture a fleet they can subnet. The Agent Computer is a managed Linux VM. The Bot process runs as a non-root user. That is not a Linux desktop client, and it is not one VM per named bot. There is no Linux desktop app. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. Android and iPad are not on the list ([FAQ](https://docs.x.ai/grok-bot/faq)).
+Enterprise buyers hear Linux VM and picture a fleet they can subnet. The Agent Computer is a managed Linux VM. The Bot process runs as a non-root user. That is not a Linux desktop client, and it is not one VM per named bot. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. Android joined the list in September 2026; iPad is still not on it ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 
 The isolation unit is the user account. All bots on that account share one persistent cloud computer. Ten named bots are ten screens and one disk. Two people on Teams Standard are two computers. Parking twelve bot names on Dana's account still leaves you with Dana's computer.
 
@@ -94,7 +94,7 @@ Buying the seats does not make the architecture nicer. A security team that alre
 | Product spend cap | None. Overflow billed from model and token cost | Finance cannot point at a Bot-specific ceiling |
 | Admin model lock | No picker, for members or admins | Security cannot restrict the serving model |
 | Approval as undo | An approval controls the proposed action. It does not reverse work already completed | The first ten steps can already be done |
-| Mobile admin | iPhone can pause and resume only | History, edit, test, and delete need desktop |
+| Mobile admin | phone app can pause, resume and approve | History, edit, test, and delete need desktop |
 | Kill as evidence | Coming soon, no date. Deletes VM, keeps durable storage | Not shipped, and a halt is not a log |
 
 Static egress IPs cut both ways. Some reviewers like an allowlist. Some hate datacenter ranges that destination sites already block. Privacy Mode (Legacy) is a hard stop, not a degraded mode. Teach-by-demonstration is not an audit trail. [The Grok Bot safety checklist](/blog/grok-bot-safety-checklist) is the pre-flight. [Shared computer security](/blog/grok-bot-shared-computer-security) is the architecture. They will still hate the gaps. The question is whether the jobs you want can live inside them.
@@ -121,7 +121,7 @@ False fills fail the first screenshot request. Honest fills fail some deals. Fai
 
 A routine assigns a workflow to one Bot. Maximum fifty routines per Bot. The app keeps the twenty most recent run records per routine. Deleting a Bot deletes its routines. Nothing is team-level ([skills, routines and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations)).
 
-Enterprise buyers hear Teams and picture a shared calendar of jobs. The product does not have that object. If you schedule a Monday pack on Priya's bot and Priya leaves, the clock leaves with her unless you copied the charter onto someone else's seat and created a new routine. Renaming her bot does not move the computer. On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)).
+Enterprise buyers hear Teams and picture a shared calendar of jobs. The product does not have that object. If you schedule a Monday pack on Priya's bot and Priya leaves, the clock leaves with her unless you copied the charter onto someone else's seat and created a new routine. Renaming her bot does not move the computer. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)).
 
 [How to schedule a Grok Bot routine](/blog/how-to-schedule-a-grok-bot-routine) is the clock page. [Standup Scribe](/bots/standup-scribe) is the right shape for a Monday DM: one owner, internal only. Put it on the person who will still be here. Twenty run records are a debug cache, not the year of history Dana asked for. If you need retention, the bot writes a packet into a folder the company owns on every run.
 

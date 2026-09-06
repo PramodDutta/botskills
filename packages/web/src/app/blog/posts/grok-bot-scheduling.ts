@@ -232,7 +232,7 @@ account for nearly all of it.
 | Runs complete cleanly and act on zero items | The label, channel, or saved view the filter keys on was renamed upstream | Report candidates considered as well as items acted on. Zero considered is a broken filter |
 | Nothing arrives, and you assume a quiet week | The routine is paused, or the bot that owned it was deleted, taking its routines with it | Require a message on every run, so silence becomes evidence rather than ambiguity |
 | Something is wrong and the run history tells you nothing | Run history holds twenty records per routine as of writing, so a daily job's evidence lasts under three weeks | Make the output itself the archive. No audit view of bot actions exists yet |
-| It looks fine on your phone and produces nothing | On iPhone you can pause and resume only, while editing, history, and testing need desktop | Check from desktop before concluding anything about a routine you touched on mobile |
+| It looks fine on your phone and produces nothing | From the phone app you can pause and approve, while editing, history, and testing need desktop | Check from desktop before concluding anything about a routine you touched on mobile |
 
 The fourth row has a structural cause rather than a bug. Routines belong to a
 single bot and nothing about them is team-level, so deleting a bot you thought

@@ -76,8 +76,7 @@ five-minute clock is still scheduled.
 
 Quota language is [quota exceeded](/blog/grok-bot-quota-exceeded). The
 two-phase meter is [weekly allowance](/blog/grok-bot-weekly-allowance).
-Stay here for the cart. macOS, Windows, and iPhone on iOS 18+ are the
-clients. Linux desktop, Android, and iPad are not
+Stay here for the cart. There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); iPad is not supported. Linux desktop, Android, and iPad are not
 ([FAQ](https://docs.x.ai/grok-bot/faq)). Switching devices does not refill
 the week.
 
@@ -301,8 +300,7 @@ armed. The Sunday leftover is still armed.
 | Tue 25 Aug 07:12 | Ultra and Plus in billing | Overflow means buy a higher SKU | She already holds a door. The cart is the wrong click |
 | Tue 25 Aug 07:20 | Pause all, inbox still in the sidebar | Stay on Pro+, stop the clock | Stay is correct only after pause. Delete the five-minute owner at a desk |
 
-07:20 is the fork. Pause every routine from the phone. At a Mac or Windows
-desk, copy the inbox wording, then delete that card so resume cannot put
+07:20 is the fork. Pause every routine from the phone. At a desktop, copy the inbox wording, then delete that card so resume cannot put
 five minutes back. Leave briefing and standup paused. Close the Ultra tab.
 Do not retry the briefing to see if $200 would have helped. Success on
 retry, if overflow is on, is a purchase, not a refill. Yara stays on Pro+

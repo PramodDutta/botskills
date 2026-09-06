@@ -355,8 +355,7 @@ if you still want the bot gone.
 
 Watch the first run. Teach-by-demonstration records a browser workflow for up
 to ten minutes, no microphone audio, and produces a draft skill, not a
-sender. It is unavailable on iPhone. Do not teach it to click Send. On iPhone
-you can pause and resume only. Editing, history, testing, and deleting need
+sender. It is unavailable on iPhone. Do not teach it to click Send. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need
 desktop.
 
 If you cannot complete those checks, you have a hope, not a never-send setup.

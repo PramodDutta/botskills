@@ -352,7 +352,7 @@ every other bot now shares that cookie. Read
 
 Hardware keys forward to the desktop app so you can touch them. The session
 that follows is still shared. Backup codes do not belong on the shared disk, in
-the transcript folder, or in a screenshot. iPhone can pause and resume only.
+the transcript folder, or in a screenshot. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 Do not finish a Studio login from the phone. The cloud computer's browser is
 not your phone.
 

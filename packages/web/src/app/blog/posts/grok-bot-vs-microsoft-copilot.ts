@@ -78,8 +78,7 @@ computer.
 
 The product launched in beta on 11 August 2026. Eligibility widened on 21 August
 2026. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and iPhone on iOS 18 or later. There is no Linux desktop app, no Android
-app, and no iPad app. On iPhone you can pause and resume only. Editing, history,
+Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history,
 testing, and deleting need desktop.
 
 A routine assigns a workflow to one bot (max 50 per bot). The app keeps the 20
@@ -261,8 +260,7 @@ whose files must not leave this Windows PC.
 
 Confirm the matching Copilot object on Microsoft's current pages, then use it
 for that artefact. Do not staff a Grok Bot as a political workaround. You will
-still have the tenant plus a shared cookie jar. Grok Bot clients are macOS,
-Windows, and iPhone on iOS 18+. A Linux workstation is not a Grok Bot desktop.
+still have the tenant plus a shared cookie jar. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. A Linux workstation is not a Grok Bot desktop.
 Details: [Grok Bot supported platforms](/blog/grok-bot-supported-platforms).
 
 ## Keep Grok Bot when the door is a login and the laptop has to close

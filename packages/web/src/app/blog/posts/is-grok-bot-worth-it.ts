@@ -25,7 +25,7 @@ Grok Bot has no standalone SKU. You either already hold an eligible subscription
 
 The cheapest documented individual paid door is Cursor Pro+ at $60 a month. SuperGrok Plus at $100 includes Grok Bot. SuperGrok at $30 does not. Cursor Pro at $20 does not. Cursor Ultra at $200 includes it. Cursor Teams Standard at $40 per user per month and Premium at $120 per user per month both include it. Do not print SuperGrok Heavy as $300. That number is not on the vendor pages we treat as SAFE.
 
-If a ranking article still says the door is $200 and Mac-only, it is stale. macOS, Windows, and iPhone on iOS 18+ are supported. Linux desktop, Android, and iPad are not.
+If a ranking article still says the door is $200 and Mac-only, it is stale. There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); iPad is not supported. Linux desktop, Android, and iPad are not.
 
 ## Spend the trial on a job you can undo
 

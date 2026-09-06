@@ -121,8 +121,7 @@ That is true on Pro+ because it is true of the product, not because this
 SKU bought a special vault.
 
 You get a client if your device is supported: macOS (Apple silicon and
-Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. Linux desktop,
-Android, and iPad have no client. The agent computer is a managed Linux
+Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent computer is a managed Linux
 VM in the cloud, not a Linux desktop app. Paying sixty does not mint one.
 
 [Lead Scout](/bots/lead-scout) will run on Pro+ the same way it runs on
@@ -267,7 +266,7 @@ Official desktop path: [x.ai/bot](https://x.ai/bot). Official phone path:
 the iOS App Store search for Grok Bot, on an iPhone running iOS 18 or
 later. Do not follow a GitHub release or a Grok Bot for Linux wrapper.
 
-Supported clients are macOS, Windows, and iPhone on iOS 18+.
+Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported.
 [Supported platforms](/blog/grok-bot-supported-platforms) is the device
 grid. Arun's Linux workstation cannot install this product on any SKU.
 iPhone can pause and resume. Editing, history, testing, and deleting need

@@ -3,7 +3,7 @@ import type { BlogPost } from './index';
 export const post: BlogPost = {
   title: 'PTO Coverage for a Live Grok Bot',
   description:
-    'pto coverage for a live grok bot is pause, a named desk cover, and no shared login. Routines are not team-level. iPhone is pause and resume only.',
+    'pto coverage for a live grok bot is pause, a named desk cover, and no shared login. Routines are not team-level. The phone app can pause a routine but not edit it.',
   date: '2026-08-28',
   category: 'Guide',
   content: `
@@ -11,7 +11,7 @@ export const post: BlogPost = {
 
 Friday still has ninety minutes on the clock, the intern wants the Cursor password, and the live grok bot that drafts customer follow-ups is set to fire at 07:00 every weekday you will be gone. That password is not coverage. It is the whole computer walking out of the building for eight days.
 
-PTO coverage for a live grok bot is three moves: pause every send-capable routine on the last desk day, name a cover person with their own eligible account, and recreate only the jobs that must still fire on that person's computer. Routines are not team-level. The cover cannot inherit yours. iPhone is pause and resume only. Editing, history, testing, and deleting wait for a Mac or a Windows desk.
+PTO coverage for a live grok bot is three moves: pause every send-capable routine on the last desk day, name a cover person with their own eligible account, and recreate only the jobs that must still fire on that person's computer. Routines are not team-level. The cover cannot inherit yours. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting wait for a Mac or a Windows desk.
 
 This page is a planned absence. It is not a 3am page ([who is on call](/blog/grok-bot-on-call)), not the tap path for a freeze in a security line ([how to pause from iPhone](/blog/how-to-pause-a-grok-bot-on-iphone)), and not the intern who asked for the research bot by name ([share a grok bot](/blog/share-a-grok-bot)). Stay here when the calendar already shows empty workdays and a live bot is still on a weekday clock.
 
@@ -21,7 +21,7 @@ Write the plan as names and verbs. Coverage is a person at a supported desk, on 
 
 All bots on an account share one persistent cloud computer assigned to the user, not to a bot ([computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)). Screens are not security boundaries. Do not use separate Bots as a security boundary ([approvals, security and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)). Cookies, sessions, files, and command-line credentials are shared. Handing the intern your login hands them Gmail, staging, CLI tokens, and the home directory. Deleting a bot later does not take those with it.
 
-Name the cover before the last Friday. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later ([FAQ](https://docs.x.ai/grok-bot/faq)). There is no Linux desktop app, no Android app, and no iPad app. The agent computer is a managed Linux VM, not a laptop the intern can SSH into. A Linux-only cover can pause from an iPhone if they have one. They cannot recreate a routine until they borrow a Mac or a Windows machine. Write three verbs into every send-capable charter: pause before leave, recreate on the cover's seat if the job must run, never share the password. [Inbox Triage](/bots/inbox-triage) is the shape a follow-up desk should already have: drafts wait.
+Name the cover before the last Friday. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later ([FAQ](https://docs.x.ai/grok-bot/faq)). There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent computer is a managed Linux VM, not a laptop the intern can SSH into. A Linux-only cover can pause from a phone and recreate a routine on the Linux desktop app. Write three verbs into every send-capable charter: pause before leave, recreate on the cover's seat if the job must run, never share the password. [Inbox Triage](/bots/inbox-triage) is the shape a follow-up desk should already have: drafts wait.
 
 ## Pause every send-capable clock on the last Friday you still have a Mac
 
@@ -33,7 +33,7 @@ Pause does not pause the machine. If [Mail Cleanup Assistant](/bots/mail-cleanup
 
 | Last-Friday move | What it does | Do it? |
 |---|---|---|
-| Pause every send-capable routine at a Mac or Windows desk | Future fires stop, if the control took. Cookies stay | Yes. First coverage move |
+| Pause every send-capable routine at a desktop | Future fires stop, if the control took. Cookies stay | Yes. First coverage move |
 | Pause from iPhone if you forgot the desk | Same freeze. No edit, history, or create | Yes as salvage. Then stop |
 | Leave the bot running with a Slack OOO | Nothing. The VM keeps the 07:00 clock | Never |
 | Hand the intern the Cursor password | They receive the whole computer | Never |
@@ -95,7 +95,7 @@ Logout is desk work in the browser on the Agent Computer, only for sessions you 
 
 Documented mobile scope, from the [mobile page](https://docs.x.ai/grok-bot/mobile): iPhone on iOS 18 or later can pause and resume a routine. Editing, history, testing, and deleting need a desktop. Teach by demonstration is unavailable on iPhone. You will not rewrite Follow-up Clerk, open the last twenty run records, fire a test, create Ned's replacement routine, or delete a bot from the jetway.
 
-If Friday's desk pause did not happen, the airport tap is salvage. Open Grok Bot, not grok.com chat, not Cursor, not Mail. Pause each send-capable routine you can reach. Stay until frozen. Write the names and clock time in Notes. Do not resume when boarding group C is called. Ned cannot create the replacement brief from a pocket either. If the only machine in his bag is Linux, Android, or iPad, he is pause-only until he borrows macOS or Windows ([supported platforms](/blog/grok-bot-supported-platforms)). Staff the last Friday as a desk hour for both people.
+If Friday's desk pause did not happen, the airport tap is salvage. Open Grok Bot, not grok.com chat, not Cursor, not Mail. Pause each send-capable routine you can reach. Stay until frozen. Write the names and clock time in Notes. Do not resume when boarding group C is called. Ned cannot create the replacement brief from a pocket either. If the only machine in his bag is an iPad, he has no client at all; a Linux laptop or an Android phone both run Grok Bot as of September 2026 ([supported platforms](/blog/grok-bot-supported-platforms)). Staff the last Friday as a desk hour for both people.
 
 [Grok Bot iPhone limits](/blog/grok-bot-iphone-cannot-edit) is the verb catalog. This page is why those limits make the last desk day load-bearing for a planned leave. A 3am misfire while you are already gone is [who is on call](/blog/grok-bot-on-call). For PTO, the on-call human for send is nobody, because send is paused.
 
@@ -139,10 +139,10 @@ While out:
 - Cover does not resume this bot from iPhone.
 - Jobs that must fire live on Ned's account, on Ned's bot, with Ned as owner.
 - Ned never sends as Maren. Ned never opens Maren's Gmail cookie.
-- iPhone: pause and resume only. Edit, history, test, and delete wait for a desk.
+- Phone app: approve steps and pause or resume a routine, but no editing. Edit, history, test, and delete wait for a desk.
 
 On return:
-- Resume only from a Mac or Windows desk after reading /workspace and Sent.
+- Resume only from a desktop after reading /workspace and Sent.
 - Do not treat a missing history row as proof nothing happened. There is no
   audit view of Bot actions yet. Check the destination.
 - Offboard the cover's temporary bot on their account, not by deleting yours.
@@ -194,7 +194,7 @@ No. The login is the computer, not a coverage shift. All bots share one persiste
 
 ### If I pause everything, how does the cover person still run Monday standups?
 
-They run Monday on their computer, not on yours. A routine belongs to one bot. Nothing is team-level. Buy them an eligible seat (Teams Standard at forty dollars per user per month is one path, checked 25 August 2026) or a qualifying trial, then recreate the standup on a bot they own, from a Mac or Windows desk. iPhone cannot create that routine. If you will not buy a seat, pause and skip the bot standup. Email a human checklist. Do not paste the founder password so their Monday pack can fire.
+They run Monday on their computer, not on yours. A routine belongs to one bot. Nothing is team-level. Buy them an eligible seat (Teams Standard at forty dollars per user per month is one path, checked 25 August 2026) or a qualifying trial, then recreate the standup on a bot they own, from a desktop. The phone app cannot create that routine; it needs the desktop app. If you will not buy a seat, pause and skip the bot standup. Email a human checklist. Do not paste the founder password so their Monday pack can fire.
 
 ### Can I handle PTO coverage from iPhone at the airport?
 

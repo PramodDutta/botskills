@@ -307,7 +307,7 @@ an on-demand bump means you just bought the test.
 
 iPhone can pause and resume. It cannot give you history. Resume nothing from
 the phone until you have desktop. Switching devices does not refill the week.
-macOS, Windows, and iPhone on iOS 18+ are supported. Linux desktop, Android,
+There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); iPad is not supported. Linux desktop, Android,
 and iPad are not ([FAQ](https://docs.x.ai/grok-bot/faq)). See
 [supported platforms](/blog/grok-bot-supported-platforms). The computer is a
 managed Linux VM, not a second pool.

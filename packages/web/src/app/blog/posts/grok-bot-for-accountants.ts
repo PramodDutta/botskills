@@ -68,7 +68,7 @@ The first of the month is that clock. Both CSVs exist. The six lines that will t
 
 Daily is how an accountant bot dies: it cries wolf on Tuesday about a deposit that will post Thursday. A routine belongs to one bot. Nothing is team-level. There is no audit view of Bot actions yet. Append every pack to a document you own.
 
-iPhone (iOS 18+) can pause and resume only. Editing, history, testing, and deleting need desktop. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop app.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop app.
 
 ## Feed both files as closed exports the bot cannot refresh from a portal
 

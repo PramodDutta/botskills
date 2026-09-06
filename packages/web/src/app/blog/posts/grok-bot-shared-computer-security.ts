@@ -395,10 +395,7 @@ while keeping durable storage. Read that before filing it as a panic button.
 Killing the VM is not a wipe, so the offboarding list above is still your job
 afterwards.
 
-One more limit before you plan around a device: supported clients are macOS on
-Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or
-later, with the FAQ answering the Linux desktop question with a flat no, and no
-Android or iPad client ([FAQ](https://docs.x.ai/grok-bot/faq)). The computer
+One more limit before you plan around a device: supported clients are macOS, Windows and Linux desktops (x64 and Arm64) plus iPhone (iOS 18 or later) and Android (9 or later) phones; iPad is not supported.x.ai/grok-bot/faq)). The computer
 your bots run on is Linux. The desk you drive it from cannot be.
 
 **Keep reading:** [Grok Bot vs Claude Cowork](/blog/grok-bot-vs-claude-cowork), [Every Grok Bot Integration and What Each One Unlocks](/blog/grok-bot-integrations-list), [Give Every Bot One Source of Truth](/blog/grok-bot-obsidian-knowledge-base).

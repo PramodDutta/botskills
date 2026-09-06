@@ -21,7 +21,7 @@ Crontab on a Mac is a local clock. Sleep, a closed lid, a dead battery, and a ba
 
 Do not patch this with caffeinate or a cracked lid. Stop using this laptop as the computer that fetches the export.
 
-Grok Bot background work runs on a managed Linux VM. The Bot runs as a non-root user. That is not a Linux desktop app. Attach the routine from macOS (Apple silicon or Intel) or Windows (x64 or Arm64). iPhone on iOS 18 or later can pause later. There is no Linux desktop client, no Android app, and no iPad app.
+Grok Bot background work runs on a managed Linux VM. The Bot runs as a non-root user. That is not a Linux desktop app. Attach the routine from macOS (Apple silicon or Intel) or Windows (x64 or Arm64). iPhone on iOS 18 or later can pause later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported.
 
 Once the routine exists, shutting the lid does not cancel 02:00. Pause if you want that night to skip. Sleep is not pause. Put the output on the cloud disk. The missing-file page is [Grok Bot cannot see the file](/blog/grok-bot-cannot-see-files).
 
@@ -61,7 +61,7 @@ Do not hitch this fetch onto a bot that already owns a different standing job. [
 
 Splitting onto a second bot is not a security move. Every bot on the seat uses the same persistent cloud computer, which belongs to the user, not to a bot. Screens are work surfaces, not vaults. Cookies, sessions, files, and CLI credentials are shared. Do not use separate Bots as a security boundary. Parking the pull on Night CRM CSV is about which card you can delete without killing 02:00.
 
-Create the bot, paste the pull-only charter, then attach the routine. Count routines on a Mac or Windows desk first. If you are at 50, stop. A fifty-first does not spill onto the team. The phone can pause or resume a job that already exists. It cannot create, edit, open history, test, or delete. Teach-by-demonstration (ten minutes, no mic, draft skill, browser only, not on iPhone) is not this nightly job. Deleting the owner leaves last week's CSV on disk as a fossil. The postmortem is [Grok Bot routine did not run](/blog/grok-bot-routine-did-not-run).
+Create the bot, paste the pull-only charter, then attach the routine. Count routines on a desktop first. If you are at 50, stop. A fifty-first does not spill onto the team. The phone can pause or resume a job that already exists. It cannot create, edit, open history, test, or delete. Teach-by-demonstration (ten minutes, no mic, draft skill, browser only, not on iPhone) is not this nightly job. Deleting the owner leaves last week's CSV on disk as a fossil. The postmortem is [Grok Bot routine did not run](/blog/grok-bot-routine-did-not-run).
 
 ## Refuse a five-minute poll of a file that changes once a day
 

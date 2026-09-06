@@ -32,7 +32,7 @@ A live WhatsApp Web tab looks faster because the chats are already there. Comple
 
 If a hosted tool offers Send on WhatsApp, do not connect it. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. Confirm the vendor page the day you look. Do not print a plugin count. Teach-by-demonstration records up to ten minutes of a browser workflow, no microphone, desktop only, and produces a draft skill. A click path that ends on the send arrow is a skill that sends. Do not record it.
 
-Export on a Mac or Windows desk. On iPhone (iOS 18+) you can pause and resume only. There is no Linux desktop client, no Android app, and no iPad app. The agent runs on a managed Linux VM as a non-root user. That is not a Linux desktop you sit at.
+Export on a desktop. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent runs on a managed Linux VM as a non-root user. That is not a Linux desktop you sit at.
 
 ## Open WhatsApp Business terms on Meta's live legal pages before you staff any sender
 

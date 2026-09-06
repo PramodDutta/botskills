@@ -63,7 +63,7 @@ Hosted MCP sign-in tokens stay with Cursor's backend. A browser Gmail session li
 
 The third cause is a login that used to work. Last week the bot labeled mail and left drafts. This week it asks you to sign in, or reports that it cannot send when it cannot open the mailbox. Password change, revoked third-party access, expired cookie, 2FA wall: none of those is a reason to add send.
 
-Open the bot's screen on a Mac (Apple silicon or Intel) or on Windows (x64 or Arm64). The iPhone app (iOS 18+) can pause and resume. Editing, history, testing, and deleting still need desktop. Diagnosing from the couch is how you type a password into chat. There is no Linux desktop client, no Android app, and no iPad app. The agent runs on a managed Linux VM as a non-root user. That is not a Linux desktop you sit at.
+Open the bot's screen on a Mac (Apple silicon or Intel) or on Windows (x64 or Arm64). The iPhone app (iOS 18+) can pause and resume. Editing, history, testing, and deleting still need desktop. Diagnosing from the couch is how you type a password into chat. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent runs on a managed Linux VM as a non-root user. That is not a Linux desktop you sit at.
 
 A Google login wall or a 2FA field is gate three. Type the code on the cloud desktop, never into the transcript. A Gmail inbox that loads, with drafts present, is not gate three. Reconnect only after you have named a dead session, and only to the same read-and-draft grant. A reconnect that "just Accepts" the current bundle is how send arrives as a side effect.
 
@@ -253,7 +253,7 @@ Connecting Gmail is not granting send. A day-one connect is supposed to hand ove
 
 ### How do I tell a never-send charter from a dead Gmail session?
 
-Open the bot screen on a Mac or Windows machine. If Gmail loads and Drafts contains work, the session is alive. Read the standing instructions. If they forbid send, reply, reply-all, and forward, you are looking at the charter. If the preview is a Google login, a 2FA field, or an empty mailbox the bot used to reach, the session is dead. Type any code on the cloud desktop, never into chat. Reconnect only to read and draft. A second bot will not isolate the cookie, because every bot on the account shares one computer.
+Open the bot screen in the desktop app. If Gmail loads and Drafts contains work, the session is alive. Read the standing instructions. If they forbid send, reply, reply-all, and forward, you are looking at the charter. If the preview is a Google login, a 2FA field, or an empty mailbox the bot used to reach, the session is dead. Type any code on the cloud desktop, never into chat. Reconnect only to read and draft. A second bot will not isolate the cookie, because every bot on the account shares one computer.
 
 ### Should I grant send so the bot finally does something?
 

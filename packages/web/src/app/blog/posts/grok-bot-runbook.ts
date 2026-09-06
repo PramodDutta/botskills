@@ -109,11 +109,11 @@ Put the path under \`/workspace/monday-pack/\`, not in a chat message and not on
 
 Pause is a control. If the routine is still enabled while you inspect, a late Sunday fire and a breakfast prompt can overlap. Overlap is how two packs land, or how a send leaves twice.
 
-On desktop you can pause, inspect, edit, and read history. On iPhone (iOS 18+) you can pause and resume only. Editing, history, testing, and deleting need desktop. Pause from the train. Inspect from a desk.
+On desktop you can pause, inspect, edit, and read history. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Pause from the train. Inspect from a desk.
 
 Do not use quit as a pause. Closing the Grok Bot app does not stop a background turn. Closing the laptop does not stop a background turn. If an approval is sitting, deny or capture it. An approval controls the proposed next action. It does not reverse work already completed, and it does not write HEARTBEAT.md for you.
 
-If you cannot pause because you are on Android, iPad, or a Linux desktop, you do not have a Grok Bot client there. There is no Linux desktop app, no Android app, no iPad app. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop client. Get to macOS, Windows, or iPhone for pause. Get to macOS or Windows for inspect. Write who paused, and when, into NOTES.md.
+If you cannot pause because you are on Android, iPad, or a Linux desktop, you do not have a Grok Bot client there. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop client. Get to macOS, Windows, or iPhone for pause. Get to macOS or Windows for inspect. Write who paused, and when, into NOTES.md.
 
 ## Inspect /workspace on the shared computer and write what you saw
 
@@ -216,7 +216,7 @@ No. Pause the routine first, then look at HEARTBEAT.md. If the heartbeat is miss
 
 ### Can I keep the grok bot runbook in a Slack pin instead of the bot charter?
 
-A Slack pin is a reminder for humans. The routine does not read Slack pins. A routine assigns a workflow to one bot, keeps twenty run records, and dies when you delete that bot. If the grok bot runbook is not in the standing instructions the job loads, the overnight fire will not write HEARTBEAT.md, will not stop at a checkpoint, and will not obey never-send. Paste the runbook into the charter on desktop. iPhone can pause and resume only. Editing the charter needs macOS or Windows. Do not turn the routine on until the paste exists.
+A Slack pin is a reminder for humans. The routine does not read Slack pins. A routine assigns a workflow to one bot, keeps twenty run records, and dies when you delete that bot. If the grok bot runbook is not in the standing instructions the job loads, the overnight fire will not write HEARTBEAT.md, will not stop at a checkpoint, and will not obey never-send. Paste the runbook into the charter on desktop. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing the charter needs macOS or Windows. Do not turn the routine on until the paste exists.
 
 ### Who pauses the overnight bot if two people share the account?
 

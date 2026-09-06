@@ -151,9 +151,7 @@ often a total loss rather than an amendment. Have the bot do the research, which
 is genuinely tedious: the options, the layover times, the change-fee rules, the
 seat map, the total including bags. You press buy.
 
-One practical note on the mobile side. As of writing, the iPhone app can pause
-and resume a bot but editing, history, testing, and deleting need a desktop, and
-there is no Android or iPad app. If your travel plan depends on fixing a bot
+One practical note on the mobile side. As of writing, the phone app (iPhone or Android) can pause a routine and approve steps but editing, history, testing, and deleting need a desktop, and there is no iPad app. If your travel plan depends on fixing a bot
 from a departure lounge, it does not survive contact with an actual trip.
 
 ## The risk here is what you connect, not what you automate
@@ -381,8 +379,7 @@ of those three appear in the time calculation.
 Where the objection wins outright is worth naming plainly. Households with no
 regular week, where the bot's assumptions never settle. Chores that run less
 often than monthly, which rot between runs. Anyone without a desktop, since
-editing, history, testing and deleting all need one, the iPhone app can only
-pause and resume, and there is no Android or iPad app. And anyone who will not
+editing, history, testing and deleting all need one, the phone app (iPhone or Android) can only pause a routine and approve steps, and there is no iPad app. And anyone who will not
 read the output: an unread page is worse than no bot, because it costs usage and
 buys a false sense that the chore is handled.
 

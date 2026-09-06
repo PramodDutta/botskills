@@ -37,8 +37,7 @@ plan name on that user, or a team membership that user belongs to.
 
 A healthy installer proves your OS is on the client list: macOS (Apple silicon
 and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later
-([FAQ](https://docs.x.ai/grok-bot/faq)). It does not prove access. Linux
-desktop, Android, and iPad have no client. That is a platform miss, not grok
+([FAQ](https://docs.x.ai/grok-bot/faq)). It does not prove access. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. That is a platform miss, not grok
 bot login failed. Read
 [supported platforms](/blog/grok-bot-supported-platforms) if you have no
 supported desktop. This article assumes the app launched and then refused
@@ -267,8 +266,7 @@ What a bot even is, once the roster appears, is
 worth it is [the worth-it page](/blog/is-grok-bot-worth-it). Those will not
 unblock Sign In with Cursor.
 
-Do not follow a community "Grok Bot for Linux" wrapper. There is no Linux
-desktop app. The cloud computer is a managed Linux VM where the bot runs as
+Do not follow a community "Grok Bot for Linux" wrapper. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The cloud computer is a managed Linux VM where the bot runs as
 a non-root user. A wrapper that asks for your Cursor identity is a
 credential hazard, not a fix.
 
@@ -312,7 +310,7 @@ That is close to [Lead Scout](/bots/lead-scout) and a read-only
 [Standup Scribe](/bots/standup-scribe) wait until the Cursor user on this
 computer is the one Maya will still want next quarter.
 
-On iPhone you can pause and resume only. Editing, history, testing, and
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
 deleting need desktop. Teach-by-demonstration is unavailable on iPhone.
 
 ## Fail the login on purpose if the Cursor email is not the one on the invoice
@@ -413,7 +411,7 @@ an account team conversation. Do not take a forum's unpublished Heavy price
 as a workaround.
 
 iPhone-only users can sign in and still cannot author the way the desktop
-can. Pause and resume only. Missing edit controls after a successful phone
+can. The phone app can pause or resume it and approve steps, but not edit it. Missing edit controls after a successful phone
 sign-in is the mobile surface, not a failed login.
 
 Cursor auth is a product choice, not a crash.

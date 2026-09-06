@@ -414,7 +414,7 @@ you will not file any. It also breaks down when the fix is a deploy you
 want in the next hour. A person with the login owns that hour.
 
 Grok Bot runs on macOS (Apple silicon and Intel), Windows (x64 and Arm64),
-and iPhone on iOS 18 or later. No Linux desktop, Android, or iPad app.
+and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported.
 Eligibility: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra,
 Cursor Teams Standard and Premium, plus a one-time trial. Cheapest paid
 path as of 25 August 2026: Cursor Pro+ at $60 a month. Hobby and Pro at $20

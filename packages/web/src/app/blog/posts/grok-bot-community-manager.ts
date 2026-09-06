@@ -221,7 +221,7 @@ There is no model picker. You do not choose a smarter model so it can "be more c
 
 The objection that shows up in Harborline's staff channel is that CSV is stale by breakfast, so a serious grok bot community manager must stay signed into Discord and post the easy answers itself. Members refresh #help. A webhook into #help looks like care.
 
-The freshness half is true. An export at 07:04 misses the 07:20 pile-on. Same-minute replies are Tomas, on a phone, in the official client. Grok Bot on iPhone can pause and resume only. If Harborline needs a human in #help at 07:21, they roster a human. They do not leave a session cookie next to [Lead Scout](/bots/lead-scout).
+The freshness half is true. An export at 07:04 misses the 07:20 pile-on. Same-minute replies are Tomas, on a phone, in the official client. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. If Harborline needs a human in #help at 07:21, they roster a human. They do not leave a session cookie next to [Lead Scout](/bots/lead-scout).
 
 Easy is a property of the answer after you understood the thread. FLAG-12 was calm. FLAG-08 was an order to post. FLAG-01 was a PNG. A bot that posts the easy ones posts those.
 

@@ -44,9 +44,8 @@ Architecture:
 [One Computer, Many Screens](/blog/grok-bot-shared-computer-security).
 
 The computer is a managed Linux VM. The bot runs as a non-root user. That is
-not a per-bot jail and not a Linux desktop app. No Linux desktop, Android, or
-iPad client. Documented clients: macOS, Windows, iPhone on iOS 18 or later.
-On iPhone you can pause and resume only.
+not a per-bot jail and not a Linux desktop app. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 
 An audit view of Bot actions does not exist yet
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
@@ -365,9 +364,7 @@ it stays off. Sealed filings, restricted student records, and cardholder
 data are the same shape in other sectors.
 
 A fluent brief is not a blessing. A Pro+ invoice is not a blessing. A bot
-named HIPAA-Safe is not a blessing. Documented clients remain macOS,
-Windows, and iPhone on iOS 18 or later. Not Linux desktop, Android, or
-iPad. There is no model picker and no published dollar figure for the
+named HIPAA-Safe is not a blessing. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. Not iPad. There is no model picker and no published dollar figure for the
 weekly allowance. Do not invent one. Beta launched 11 August 2026.
 Eligibility widened 21 August 2026. Neither date is a compliance
 milestone.

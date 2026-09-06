@@ -20,8 +20,7 @@ now open.
 [Draw the approval line on reversibility](/blog/grok-bot-approval-rules-reversibility)
 is why send is not a bulk rename. [Restart a stalled job without doubling the
 work](/blog/grok-bot-stalled) is what you do when you missed the prompt. Here
-you park send, pay, delete, and publish; let drafts finish; review on a Mac
-or Windows desk; treat a mailbox login as a house key.
+you park send, pay, delete, and publish; let drafts finish; review on a desktop; treat a mailbox login as a house key.
 
 Do not memorize button names from this page. Match the current desktop
 wording to the rule.
@@ -60,8 +59,7 @@ Grok Bot runs on a persistent cloud computer assigned to your user account,
 not to a bot. Phone and laptop are remotes.
 
 Supported clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64),
-and iPhone on iOS 18 or later. There is no Linux desktop app, no Android app,
-and no iPad app. On iPhone you can pause and resume only. Editing, history,
+and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history,
 testing, and deleting need desktop. Teach by demonstration is unavailable on
 iPhone.
 
@@ -404,8 +402,7 @@ mail.
 ## Pause the run from iPhone, then change the approval rule only at a desk
 
 iPhone: pause or resume. That is the documented pair. If a send is sitting
-and you cannot see the bot screen properly, pause. Get to a Mac or Windows
-desk. Open the screen. Read the proposed action. Approve or deny that one
+and you cannot see the bot screen properly, pause. Get to a desktop. Open the screen. Read the proposed action. Approve or deny that one
 step. Change which verbs wait on desktop too.
 
 Teach by demonstration is unavailable on iPhone. Approvals are the four
@@ -413,7 +410,7 @@ parks, the session hygiene, and the charter block, not a recorded click
 path.
 
 If Linux is your only machine, you do not have a Grok Bot desktop client.
-The FAQ answers that with a flat no. Borrow a supported desk, or wait.
+The FAQ lists a Linux desktop app as of September 2026, so install it.
 Reviewing sends is not an iPad job either.
 
 Once the parks are in, a real ask should be obvious when you sit down.
@@ -436,8 +433,8 @@ keep research off the mailbox. Two names are labels, not walls.
 
 ### Can I finish Grok Bot approvals setup from iPhone during a commute?
 
-On iPhone you can pause and resume only. Editing, history, testing, and
-deleting need a Mac or Windows desktop. An approval for a send is a decision
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
+deleting need the desktop app. An approval for a send is a decision
 about a proposed action, and the copy you must match lives on that desktop.
 If a send is sitting and you cannot reach a desk, pause so the run does not
 keep trying a click you have not read. Do not treat pause as a rewrite of

@@ -69,7 +69,7 @@ visible in sent mail. Watch the motion, not the feeling.
 | What you notice this week | What it usually means | Change this week |
 |---|---|---|
 | You approve within two seconds of opening the card | You are matching shape, not reading the verb | Cut every reversible ask to zero |
-| You clear a stack on the train or the sofa | iPhone or haste is acting as the review desk | Pause. Read at a Mac or Windows desk |
+| You clear a stack on the train or the sofa | iPhone or haste is acting as the review desk | Pause. Read at a desktop |
 | You cannot name the last send you allowed | A stamp already fired | Search sent mail before you touch the queue |
 | Labels, file moves, and drafts wait next to send | Volume will bury the irreversible verb | Let those jobs finish unattended |
 | The card says proceed, with no recipient or body | The packet is empty, so the only cheap answer is yes | Deny. Demand the artifact |
@@ -185,12 +185,11 @@ after you cut labels: three "proceed" asks a week still get stamped.
 ## Refuse to use iPhone as the review desk when a send is sitting
 
 Supported clients: macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and iPhone on iOS 18 or later. There is no Linux desktop app, no
-Android app, and no iPad app. The Bot still runs on a managed Linux VM in
+Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The Bot still runs on a managed Linux VM in
 the cloud, as a non-root user. That is not a Linux desktop client you
 review from.
 
-On iPhone you can pause and resume only. Editing, history, testing, and
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
 deleting need desktop. Teach by demonstration is unavailable on iPhone. An
 approval for a send is a decision about a proposed action. The copy you
 must match, and the screen you must read, live on the Mac or Windows
@@ -202,7 +201,7 @@ the lock screen is how Rina's refund left.
 
 | Surface | Legitimate use during an irreversible ask | Abuse that trains the stamp |
 |---|---|---|
-| Mac or Windows desktop | Open the bot screen, read the packet, approve or deny that one step | Approving a mixed stack of labels plus one send without reading verbs |
+| Desktop app | Open the bot screen, read the packet, approve or deny that one step | Approving a mixed stack of labels plus one send without reading verbs |
 | iPhone, iOS 18+ | Pause so the run does not keep trying a click you have not read | Treating pause as a rewrite, or clearing asks you cannot inspect |
 | Chat transcript | Commentary the bot chose to write | Treating chat as the prompt or as an audit log |
 | Linux desktop, Android, or iPad | Not a Grok Bot client | Planning to review sends here |
@@ -282,7 +281,7 @@ not security boundaries. After a mail login, sign out when
 the next job is research.
 
 // PHONE
-If I am not at a Mac or Windows desk, I will pause. Do not
+If I am not at a desktop, I will pause. Do not
 treat a later resume as permission to send.
 \`\`\`
 
@@ -390,7 +389,7 @@ Do not type start over from iPhone.
 
 Fatigue is a noisy queue you want to empty with your thumb. Emptying it
 from a commute is how irreversible work sneaks through. If you cannot see
-the bot screen, pause. Get to a Mac or Windows desk. Read the verb. Approve
+the bot screen, pause. Get to a desktop. Read the verb. Approve
 or deny that one step.
 
 If the sitting card is a label, stop asking about labels. If it is a send,
@@ -404,7 +403,7 @@ draft stage, and a human who must still click send forty times a day. Take
 the job off the bot. Keep the bot on drafts. Forty human sends you chose
 are safer than forty mixed asks you flicked.
 
-**Keep reading:** [The Grok Bot Safety Checklist Before You Connect Your Inbox](/blog/grok-bot-safety-checklist), [Least Privilege for Bots: Connect the Minimum, Not the Maximum](/blog/least-privilege-bots), [Grok Bot on Windows, Linux and iPad: What Actually Works](/blog/grok-bot-supported-platforms).
+**Keep reading:** [The Grok Bot Safety Checklist Before You Connect Your Inbox](/blog/grok-bot-safety-checklist), [Least Privilege for Bots: Connect the Minimum, Not the Maximum](/blog/least-privilege-bots), [Grok Bot on Windows, Linux, Android and iPad: What Works](/blog/grok-bot-supported-platforms).
 
 ## Frequently Asked Questions
 
@@ -431,12 +430,10 @@ and body, not a busy queue that makes you feel in control.
 ### Can I review Grok Bot send approvals from iPhone?
 
 No. iPhone is not the review desk. On iPhone you can pause and resume a
-routine only. Editing, history, testing, and deleting need a Mac or Windows
-desktop. A send approval is a decision about a proposed action, and the
+routine only. Editing, history, testing, and deleting need the desktop app. A send approval is a decision about a proposed action, and the
 packet lives on that desktop. If a send is sitting and you cannot reach a
 desk, pause so the run does not keep trying a click you have not read. Do
-not clear a stack from the lock screen. There is no Linux desktop, Android,
-or iPad client to use as a substitute review surface either.
+not clear a stack from the lock screen. The Linux desktop app and the Android app (both since September 2026) are also not substitute review surfaces for run history, which stays on desktop.
 
 ### If I already rubber-stamped a send, does denying the next prompt take it back?
 

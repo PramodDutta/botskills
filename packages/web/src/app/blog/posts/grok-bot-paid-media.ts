@@ -287,7 +287,7 @@ view of Bot actions yet.
 Do not connect Slack send. Paste the note yourself. Confirm each vendor's
 current consent screen. This article will not print a plugin count.
 
-On iPhone you can pause and resume only. Editing, history, testing, and
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
 deleting need desktop. Teach-by-demonstration records up to ten minutes of
 browser workflow, no microphone audio, and produces a draft skill. It is
 unavailable on iPhone. Do not teach it to click Save. If a selector breaks,
@@ -403,8 +403,7 @@ is half spent.
 If the only export you can get is a PDF with no yesterday, refuse the percent.
 
 Grok Bot runs on macOS (Apple silicon and Intel), Windows (x64 and Arm64),
-and iPhone on iOS 18 or later. There is no Linux desktop app, no Android
-app, and no iPad app. The computer is a managed Linux VM, which is not a
+and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The computer is a managed Linux VM, which is not a
 Linux desktop client. Eligibility is SuperGrok Plus, SuperGrok Heavy, Cursor
 Pro+, Cursor Ultra, Cursor Teams Standard and Premium, plus a one-time
 trial. Confirm current packaging on the vendor's page. A

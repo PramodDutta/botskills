@@ -159,7 +159,7 @@ A second eligible account is the isolation move when Shopify admin must never sh
 
 Delete last. Maybe. If you still need the chat that named the dirty folder, keep the profile and hide it after you rotate. Hide does not pause routines. Pause each routine when the job should stop.
 
-On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop. If you are away from a desk with a live vendor cookie, pause from the phone now. Do the vendor rotate and the named-bot delete from a supported desk. Supported: macOS on Apple silicon and Intel, Windows on x64 and Arm64, iPhone on iOS 18+ for pause. Not supported: Linux desktop, Android, iPad. The computer is a managed Linux VM, not a Linux desktop client.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. If you are away from a desk with a live vendor cookie, pause from the phone now. Do the vendor rotate and the named-bot delete from a supported desk. Supported: macOS on Apple silicon and Intel, Windows on x64 and Arm64, iPhone on iOS 18+ for pause. Not supported: Linux desktop, Android, iPad. The computer is a managed Linux VM, not a Linux desktop client.
 
 A routine assigns a workflow to one Bot. Max 50 routines per Bot. The app keeps 20 most recent run records per routine. Deleting a Bot also deletes its routines. Nothing is team-level. If a standing job must outlive the incident name, recreate it on a keeper bot while the incident bot still exists, enable the keeper copy, then pause the copy on the incident bot.
 

@@ -63,7 +63,7 @@ The weekday mark is that clock. Universe, thesis, and stop files already exist. 
 
 Daily quote watching through a signed-in broker is how a paper desk dies: it invents a print, then "helps" by flattening. A routine belongs to one bot. Nothing is team-level. Append every pack to a document you own.
 
-iPhone (iOS 18+) can pause and resume only. Editing, history, testing, and deleting need desktop. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop app. Eligibility widened on 21 August 2026. Cheapest paid path as of 25 August 2026: Cursor Pro+ at $60/mo. Cursor Hobby, Cursor Pro, and SuperGrok at the lower tier do not include it. Confirm prices on the vendor's current page. There is no Grok Bot-specific spend cap. Weekly allowance then on-demand from model and token cost. Never invent a dollar figure for the allowance. See [Grok Bot cost](/blog/grok-bot-cost).
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop app. Eligibility widened on 21 August 2026. Cheapest paid path as of 25 August 2026: Cursor Pro+ at $60/mo. Cursor Hobby, Cursor Pro, and SuperGrok at the lower tier do not include it. Confirm prices on the vendor's current page. There is no Grok Bot-specific spend cap. Weekly allowance then on-demand from model and token cost. Never invent a dollar figure for the allowance. See [Grok Bot cost](/blog/grok-bot-cost).
 
 ## Feed marks from files you already saved, never from a signed-in broker session
 

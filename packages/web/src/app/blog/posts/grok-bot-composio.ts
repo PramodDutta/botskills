@@ -168,7 +168,7 @@ If Lead Scout can call \`list_open_deals\`, that is not a cookie failure. That i
 
 Deleting the pipeline reader deletes that bot and its routines (max 50 per bot, 20 recent run records, nothing team-level). Deletion does not remove shared-computer files or browser sessions. The pipeline file and the CRM cookie stay.
 
-Order: sign out of the CRM on the computer, revoke the hosted connection at the source, revoke at the CRM identity provider, archive \`/state/pipeline-copy.md\` if it holds deal ids, and only then delete the bot. Reverse that order and you get a clean roster card with a dirty machine. Hosted MCP tokens are not cleaned by a local sign-out. Confirm the revoke click on composio.dev if that is the vendor you used. On iPhone you can pause and resume only. Ask Lead Scout to open the CRM host after you think you are done. The [Gmail](/blog/grok-bot-gmail) teardown is the mailbox version of the same order.
+Order: sign out of the CRM on the computer, revoke the hosted connection at the source, revoke at the CRM identity provider, archive \`/state/pipeline-copy.md\` if it holds deal ids, and only then delete the bot. Reverse that order and you get a clean roster card with a dirty machine. Hosted MCP tokens are not cleaned by a local sign-out. Confirm the revoke click on composio.dev if that is the vendor you used. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Ask Lead Scout to open the CRM host after you think you are done. The [Gmail](/blog/grok-bot-gmail) teardown is the mailbox version of the same order.
 
 ## Rank cookie inheritance against tool verbs when you size overnight risk
 

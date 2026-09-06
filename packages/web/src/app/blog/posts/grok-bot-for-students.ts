@@ -50,7 +50,7 @@ The temptation is a fleet on day one: recap bot, quiz bot, TA-mailer, auto-submi
 | Recap plus campus Gmail | Weekly plus a leftover cookie | Pack, then every sibling bot can open school mail | Never. See [the preflight checklist](/blog/grok-bot-preflight-checklist) |
 | Recap plus auto-submit | Continuous Turn in | Cleanup of work you did not mean to hand in | Never on this page |
 
-Nightly is how a student bot dies: it nags on Tuesday about a problem due Thursday, then "finishes" it. A routine belongs to one bot. Nothing is team-level. There is no audit view of Bot actions yet. Append every pack to a folder you own. iPhone (iOS 18+) can pause and resume only. Editing, history, testing, and deleting need desktop. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop app.
+Nightly is how a student bot dies: it nags on Tuesday about a problem due Thursday, then "finishes" it. A routine belongs to one bot. Nothing is team-level. There is no audit view of Bot actions yet. Append every pack to a folder you own. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop app.
 
 ## Feed the bot only lecture files you copied onto /workspace yourself
 

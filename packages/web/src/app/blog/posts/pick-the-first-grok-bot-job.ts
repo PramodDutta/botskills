@@ -121,8 +121,7 @@ checklist](/blog/grok-bot-safety-checklist) before the consent screen. Create
 one bot, connect Gmail, and refuse a second bot until you have seen a week of
 labels. Hosted MCP sign-in tokens stay with Cursor's backend. Browser cookies
 stay on the computer. Pick a job that needs one door. iPhone can pause and
-resume. Editing, history, testing, and deleting need desktop. There is no
-Linux desktop app, no Android app, and no iPad app. Grade the first job on a
+resume. Editing, history, testing, and deleting need desktop. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Grade the first job on a
 desk.
 
 ## Keep the irreversible step on a human even when the bot is fast

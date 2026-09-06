@@ -395,8 +395,8 @@ costs a week of waiting for an answer that already exists.
 
 | What you observe | What it is | What to do instead |
 |---|---|---|
-| No Linux desktop, Android, or iPad app | A documented limit | Use macOS, Windows, or iOS 18 and later |
-| On iPhone you can only pause and resume | A documented limit | Edit, test, and delete on desktop |
+| No iPad app | A documented limit | Use a Mac, Windows or Linux desktop, or an iPhone or Android phone |
+| The phone app cannot edit a routine | A documented limit | Edit, test, and delete on desktop |
 | No model picker anywhere | Documented, and not planned to change | Stop looking for the setting |
 | Only the 20 newest run records survive | A documented limit | Have the bot write its own log |
 | Nothing stops a runaway before usage is gone | There is no Grok Bot spend cap | Write ceilings into every charter |

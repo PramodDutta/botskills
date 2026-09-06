@@ -69,7 +69,7 @@ of writing and is the side more likely to have moved by the time you read this.
 | Failure visibility | You notice a notification that never arrived | The 20 most recent run records per routine, plus the machine itself to inspect |
 | Audit trail across automations | Your own message history is the trail | No audit view of bot actions exists yet |
 | Teaching it a workflow | You describe it in words | Words, or record up to ten minutes of on-screen browser work into a draft skill |
-| Where it runs | Wherever you have the app | macOS, Windows, and iPhone on iOS 18 or later. No Linux desktop, Android, or iPad |
+| Where it runs | Wherever you have the app | macOS, Windows and Linux desktops; iPhone and Android phones. No iPad |
 | Deleting one | The task stops and that is the end of it | Routines die with the bot, but shared files and browser sessions survive |
 | Cost shape | Flat subscription | Weekly allowance, then on-demand billing from model and token cost |
 | Best fit | Single-source digests, reminders with judgement | Cross-tool work that produces drafts and needs a stop line |
@@ -371,7 +371,7 @@ included.
 
 Your platform may remove one side entirely. Grok Bot supports macOS on Apple
 silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later.
-There is no Linux desktop app, no Android app, and no iPad app. If you work on
+There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If you work on
 a Linux desktop, this is not a comparison, it is a single option. The
 [supported platforms reference](/blog/grok-bot-supported-platforms) has the
 current list.

@@ -11,7 +11,7 @@ export const post: BlogPost = {
 
 The Grok Bot free trial, announced with the 21 August 2026 access expansion, is the first time people without an eligible paid plan can touch the product. It is also the easiest way to learn the wrong lesson. The trial is limited usage. It is not a week of unrestricted agents. One long assignment, especially a browser crawl, can consume most of the credit. Spend it like a lab: one named bot, one reversible job, a boundary that forbids send and pay, and a written note of what finished.
 
-Do not copy launch-week posts that still describe a Mac-only Ultra product with no trial. Supported clients are macOS, Windows, and iPhone on iOS 18+. Linux desktop, Android, and iPad are not. Paid doors after the trial start at Cursor Pro+ at $60 a month for individuals and Cursor Teams Standard at $40 a seat. The trial itself has no published numeric credit on the SAFE list, so this page will not invent one.
+Do not copy launch-week posts that still describe a Mac-only Ultra product with no trial. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. Linux desktop, Android, and iPad are not. Paid doors after the trial start at Cursor Pro+ at $60 a month for individuals and Cursor Teams Standard at $40 a seat. The trial itself has no published numeric credit on the SAFE list, so this page will not invent one.
 
 ## Treat the trial as a compute sampler, not a holiday
 
@@ -68,7 +68,7 @@ Teach-by-demonstration records up to ten minutes of visible computer interaction
 
 ## Expect Windows and iPhone, and stop expecting Linux
 
-Stale trial writeups still say Mac only. The FAQ lists macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18+. It also answers the Linux desktop question with no. Android and iPad are not supported. If your only machine is a Linux workstation, the trial will not give you a client. The agent computer is a managed Linux VM in the cloud, which does not install a desktop app on your ThinkPad.
+Stale trial writeups still say Mac only. The FAQ lists macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18+. It also lists a Linux desktop app as of September 2026. Android is supported as of September 2026 (Android 9 or later); iPad is not. If your only machine is a Linux workstation, the trial will not give you a client. The agent computer is a managed Linux VM in the cloud, which does not install a desktop app on your ThinkPad.
 
 iPhone can pause and resume. Editing, history, testing, and deleting need desktop. Starting a trial exclusively from a phone is how you cannot inspect what you just burned.
 
@@ -121,7 +121,7 @@ The trial is short. Memory is not a source. Write: time started, brief used, plu
 
 | Field | Why it exists |
 |---|---|
-| Start time and client (Mac, Windows, iPhone) | Mobile-only trials hide history |
+| Start time and client (Mac, Windows, Linux, iPhone, Android) | Mobile-only trials hide history |
 | Exact brief | You will misremember the boundary |
 | Plugins and OAuth grants | Deletion does not revoke them |
 | Artifact produced | Worth is an artifact, not a feeling |
@@ -188,7 +188,7 @@ Follow the current checkout in the official app. Some writeups say a card is col
 
 ### Can I try Grok Bot on Linux or Android during the trial?
 
-Not with a native client. The FAQ lists macOS, Windows, and iPhone. It states there is no Linux desktop app. Android and iPad are unsupported. The cloud computer is a managed Linux VM, which is not a Linux desktop client. If you only have Linux or Android, the trial will not give you a supported way to operate the product.
+Not with a native client. The FAQ lists macOS, Windows and Linux desktop apps plus iPhone and Android companion apps. It lists a Linux desktop app as of September 2026. Android and iPad are unsupported. The cloud computer is a managed Linux VM, which is not a Linux desktop client. If you only have Linux or Android, the trial will not give you a supported way to operate the product.
 
 ### What should I do after the Grok Bot free trial ends?
 

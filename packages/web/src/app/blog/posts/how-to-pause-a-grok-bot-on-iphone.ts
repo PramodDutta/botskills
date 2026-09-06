@@ -3,7 +3,7 @@ import type { BlogPost } from './index';
 export const post: BlogPost = {
   title: 'How to Pause a Grok Bot From Your iPhone',
   description:
-    'Pause grok bot iphone when a job is going wrong. Freeze the next run. Resume later. Charter, history, tests, and delete still need a Mac or Windows desk.',
+    'Pause grok bot iphone when a job is going wrong. Freeze the next run. Resume later. Charter, history, tests, and delete still need a desktop.',
   date: '2026-08-27',
   category: 'Tutorial',
   content: `
@@ -19,7 +19,7 @@ Documented scope, from the [mobile page](https://docs.x.ai/grok-bot/mobile): iPh
 
 Pause lives in the Grok Bot iPhone app. The app lives on iPhone running iOS 18 or later ([FAQ](https://docs.x.ai/grok-bot/faq)). Older iOS is not a limited pause mode. It is outside the client list. Check Settings -> General -> About before you spend the minute in a security line assuming the home-screen icon is enough.
 
-iOS 18 is the floor, not a feature pack. Crossing it does not unlock charter edit. It unlocks pause and resume. If the device in your pocket is not an iPhone on that floor, this click path is not that device. There is no Android app, no iPad app, and no Linux desktop app. The bot computer is a managed Linux virtual machine. That is not a laptop you can SSH into from the jetway. The [platforms list](/blog/grok-bot-supported-platforms) is the matrix.
+iOS 18 is the floor, not a feature pack. Crossing it does not unlock charter edit. It unlocks pause and resume. If the device in your pocket is not an iPhone on that floor, this click path is not that device. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The bot computer is a managed Linux virtual machine. That is not a laptop you can SSH into from the jetway. The [platforms list](/blog/grok-bot-supported-platforms) is the matrix.
 
 You still need an eligible plan: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, Cursor Teams Standard or Premium, or the one-time trial. The phone app does not bypass that door. Cursor Hobby, Cursor Pro at $20, and SuperGrok at $30 do not include Grok Bot. If pause is missing because the account never had Bot, that is [the Cursor account explainer](/blog/grok-bot-cursor-account-explained), not a hidden setting. Screenshot About once at a desk so you are not debugging an OS floor in a boarding group.
 
@@ -99,7 +99,7 @@ Here is the Friday this page is for. Maya runs a weekday follow-up bot for Wrenf
 | 14:10 | Compose still unsent. Watchdog pings | Open Grok Bot. Pause. Confirm frozen |
 | 14:11 to 14:34 | Frozen, if pause held | Do not resume. Airplane mode is not a substitute |
 | 14:35, wheels up | Still frozen. History still dark | Notes only. No charter patch from the app |
-| Evening, Mac or Windows desk | Run records are readable | Read history. Edit to drafts only. Test. Then resume |
+| Evening, at a desktop | Run records are readable | Read history. Edit to drafts only. Test. Then resume |
 
 The phone's whole job is that the send does not leave. That is the difference from the limit-catalog story where the wrong-price mail already sat in a customer inbox. Here you still have a freeze that matters.
 
@@ -136,11 +136,11 @@ The airport hour is won or lost at a desk, days earlier. Write the phone rule in
 
 \`\`\`text
 Bot: Wrenfield follow-up (weekday 14:00 Pacific)
-Device split: iPhone iOS 18+ can pause and resume only.
+Device split: phone app (iPhone or Android) can pause and approve only, no editing.
 On iPhone: pause the weekday routine if a send looks wrong.
 Do not resume from iPhone. Do not hunt an editor. Do not delete.
 Pause does not sign out Gmail. Pause does not remove this routine.
-Resume only from a Mac or Windows desk after history is read
+Resume only from a desktop after history is read
 and this charter says drafts only.
 On-call: Maya until 18:00 Pacific, then Jordan with the office Mac.
 Boundary: never click Send. Drafts wait in Gmail Drafts.
@@ -153,7 +153,7 @@ Paste that at a desk. Prove pause once on a throwaway routine before the first t
 
 Grok Bot does not page, escalate, or keep an on-call calendar. Maya's 14:10 Slack ping existed because she built a watchdog. Pause still works when you happen to open the app. It does not work when you never hear that the compose opened.
 
-Name the human in the charter. [Who is on call when a Grok Bot misfires](/blog/grok-bot-on-call) is staffing. This page is the verb that person uses from a phone: pause, then stop. Page the person who can sit at a Mac or a Windows desk after landing. A Linux-only engineer with an iPhone can freeze. They cannot diagnose until they borrow a supported desk. An Android-only contractor cannot even open this client.
+Name the human in the charter. [Who is on call when a Grok Bot misfires](/blog/grok-bot-on-call) is staffing. This page is the verb that person uses from a phone: pause, then stop. Page the person who can sit at a Mac or a Windows desk after landing. A Linux-only engineer with an iPhone can freeze from the phone and diagnose on the Linux desktop app. An Android-only contractor has the same companion app on Google Play.
 
 If you are the named human and you are in Terminal C, you are pause-only until Denver. If send was parked on ask, the prompt is on a desktop you are not holding. Deny is not in your pocket. Pause so the routine stops offering the same send. Write the page path before the trip. Three names can be one person. They cannot be a Slack channel.
 
@@ -195,7 +195,7 @@ If dinner eats the desk window, the routine stays paused. Do not resume from the
 
 ### How do I pause a grok bot from iPhone?
 
-Open the Grok Bot app on an iPhone running iOS 18 or later, open the bot that owns the routine, and use the pause control on that named routine. Stay on the screen until the job shows as frozen. Closing the app, locking the phone, or turning on airplane mode does not pause the cloud computer. Editing, history, testing, and deleting still need a Mac or Windows desk. If you cannot find pause, you still cannot rewrite the charter from this client. Rehearse the tap once on a throwaway routine at a desk before you need it in a boarding group.
+Open the Grok Bot app on an iPhone running iOS 18 or later, open the bot that owns the routine, and use the pause control on that named routine. Stay on the screen until the job shows as frozen. Closing the app, locking the phone, or turning on airplane mode does not pause the cloud computer. Editing, history, testing, and deleting still need a desktop. If you cannot find pause, you still cannot rewrite the charter from this client. Rehearse the tap once on a throwaway routine at a desk before you need it in a boarding group.
 
 ### Does pause sign out cookies or delete the routine?
 
@@ -203,7 +203,7 @@ No. Pause stops future work on that one routine. It does not sign out Gmail, Sla
 
 ### Should I resume from iPhone after I pause at the airport?
 
-Almost never. Resume restarts the same standing instruction you froze. If you paused because a send looked wrong, a pocket resume replays the wrong send. Hold resume until a Mac or Windows desk has opened history, patched the charter, and tested a draft-only one-shot. The only honest pocket resume is an accidental freeze of a job you already trust, confirmed from a channel outside Grok Bot. A customer-facing almost-send is not that case. Silence after pause is not a fix.
+Almost never. Resume restarts the same standing instruction you froze. If you paused because a send looked wrong, a pocket resume replays the wrong send. Hold resume until a desktop has opened history, patched the charter, and tested a draft-only one-shot. The only honest pocket resume is an accidental freeze of a job you already trust, confirmed from a channel outside Grok Bot. A customer-facing almost-send is not that case. Silence after pause is not a fix.
 
 ### What if I paused the wrong routine, or paused too late?
 

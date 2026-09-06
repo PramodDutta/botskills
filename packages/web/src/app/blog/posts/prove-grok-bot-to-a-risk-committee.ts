@@ -42,7 +42,7 @@ The CISO's first condition, a dedicated VM per bot, is not a setting you missed.
 
 Say that in the first two minutes. If you wait until after the demo, the committee will have already scored isolation as a pass.
 
-Supported clients are a risk fact. Documented: macOS on Apple silicon and Intel, Windows on x64 and Arm64, iPhone on iOS 18 or later. Not supported: Linux desktop, Android, iPad. On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop. The cloud computer being Linux does not give an Ubuntu laptop a client.
+Supported clients are a risk fact. Documented: macOS on Apple silicon and Intel, Windows on x64 and Arm64, iPhone on iOS 18 or later. Not supported: Linux desktop, Android, iPad. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. The cloud computer being Linux does not give an Ubuntu laptop a client.
 
 Coming soon, labeled as not shipped, with no date: a team-level ceiling on local execution, and an admin Kill that deletes the VM while durable storage is kept. Do not list either as a control you have today. Kill is a future stop, not a paper trail.
 
@@ -112,7 +112,7 @@ Write the operational consequence: irreversible actions stay off this computer, 
 
 A charter boundary is the control you actually have. [Inbox Triage](/bots/inbox-triage) labels and drafts, never send. [Mail Cleanup Assistant](/bots/mail-cleanup-assistant) never sends, never replies, and never permanently deletes. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) stays a pack. Those boundaries are instructions plus your review habit. They are not an undo log.
 
-On iPhone, pause and resume only. If the named reviewer is in an airport, they can stop a run. They cannot edit the approval rule. Staff the last-mile role to someone who can sit at a Mac or Windows desk when the ask fires.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. If the named reviewer is in an airport, they can stop a run. They cannot edit the approval rule. Staff the last-mile role to someone who can sit at a desktop when the ask fires.
 
 ## Walk Soren's 19 August pack from a dedicated-VM ask to a written no
 
@@ -246,6 +246,6 @@ Leave the cell blank unless the vendor's current page states the claim that morn
 
 ### If a reviewer clicks Deny, does that undo work the bot already finished?
 
-No. An approval controls the proposed action. It does not reverse work already completed. A send that already left stays sent. A purchase that already posted stays posted. Put irreversible actions off this computer, or park them on ask with a human at a desktop who is actually watching, and keep your own packet because there is no vendor audit view. iPhone can pause and resume only. Do not staff the last-mile role to a reviewer who cannot open history at a Mac or Windows desk.
+No. An approval controls the proposed action. It does not reverse work already completed. A send that already left stays sent. A purchase that already posted stays posted. Put irreversible actions off this computer, or park them on ask with a human at a desktop who is actually watching, and keep your own packet because there is no vendor audit view. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Do not staff the last-mile role to a reviewer who cannot open history at a desktop.
 `,
 };

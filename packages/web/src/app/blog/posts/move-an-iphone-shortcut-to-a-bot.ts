@@ -153,7 +153,7 @@ The comparison period ends on declared criteria, not enthusiasm. Rina required a
 
 ## Choose cutover from supervision needs, not from phone convenience
 
-There are three practical outcomes. Keep the Shortcut unchanged. Compose phone capture with bot drafting and human save. Or move the full job to a desktop-operated bot routine while the phone becomes pause and resume only. Choose from error cost and maintenance needs.
+There are three practical outcomes. Keep the Shortcut unchanged. Compose phone capture with bot drafting and human save. Or move the full job to a desktop-operated bot routine while the phone becomes the place you pause it and approve steps. Choose from error cost and maintenance needs.
 
 | Condition | Keep Shortcut | Compose | Move job to bot routine |
 |---|---|---|---|

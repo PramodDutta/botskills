@@ -195,7 +195,7 @@ The decision table should therefore include portfolio load. A new Friday routine
 
 ## Define pause, resume, and retirement as ordinary states
 
-Scheduled work needs a pause path before an emergency. Dev writes who can pause the routine, what happens to an in-progress run, how the next window is chosen after resume, and when accumulated drafts expire. On iPhone, verified product behavior permits pause and resume only; editing, history, testing, and deleting require desktop. That platform detail affects incident procedure, so the owner knows what can and cannot be changed away from a desktop.
+Scheduled work needs a pause path before an emergency. Dev writes who can pause the routine, what happens to an in-progress run, how the next window is chosen after resume, and when accumulated drafts expire. On the phone app, verified product behavior permits pausing, resuming and approving; editing, history, testing, and deleting require desktop. That platform detail affects incident procedure, so the owner knows what can and cannot be changed away from a desktop.
 
 Retire a routine when the source disappears, the output has gone unread for the declared period, the owner leaves, or the workflow boundary changes. Deleting the bot also deletes its routines according to the verified facts, so do not use bot deletion as a casual scheduling cleanup when other work belongs to that bot.
 

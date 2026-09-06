@@ -148,7 +148,7 @@ appointment into a morning brief. Confirm scopes on the vendor's current
 page.
 
 If the paste is older than you allowed, the routine should refuse, not "just
-look." On iPhone you can pause and resume only. Editing the charter, history,
+look." From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing the charter, history,
 testing, and deleting need desktop. If a partner texts you in a taxi, pause.
 Book it yourself.
 

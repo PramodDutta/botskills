@@ -244,8 +244,7 @@ A shop that has never typed a client password into the Agent Computer, and that 
 
 A shop whose MSA, DPA, or insurer requires isolated processing for each tenant should buy row one for those tenants. This article is not legal advice. It is a translation of the public docs: the computer is assigned to the user account, not to the bot.
 
-iPhone can pause and resume only. Editing, history, testing, and deleting need desktop, so do not run offboarding from a phone. Supported desks are macOS and Windows. There is no Linux desktop app, no Android client, and no iPad client
-([FAQ](https://docs.x.ai/grok-bot/faq)).
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop, so do not run offboarding from a phone. Supported desks are macOS and Windows. There are Linux desktop and Android apps as of September 2026; iPad is still not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 The bot computer is a managed Linux VM running a non-root user. That is not a Linux desktop you install, and it does not give Client A a private cookie jar. Privacy Mode (Legacy) on a Cursor workspace blocks Grok Bot entirely. Check it before you promise a bot on a client's workspace.
 
 ## Carry a client departure list that survives deleting the bot

@@ -99,9 +99,7 @@ computer is a managed Linux VM. The bot runs there as a non-root user. Your
 key is not plugged into that VM.
 
 Windows support for that forwarding is rolling out. Confirm on your own
-machine. There is no Linux desktop app, even though the computer is Linux, and
-no Android or iPad app. macOS and Windows desktop apps receive the forwarded
-prompt ([FAQ](https://docs.x.ai/grok-bot/faq)). iPhone on iOS 18+ is a
+machine. There is a Linux desktop app and an Android app as of September 2026; iPad is not supported. The desktop apps receive the forwarded prompt ([FAQ](https://docs.x.ai/grok-bot/faq)). iPhone on iOS 18+ is a
 companion. It does not replace that desk.
 
 Touching the key does not change who owns the session that follows.
@@ -218,7 +216,7 @@ If you needed the session for a second export the same afternoon, finish both,
 then sign out once. Do not leave it overnight. Overnight is when the research
 bot runs.
 
-On iPhone you can pause and resume only. A forwarded hardware-key prompt needs
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. A forwarded hardware-key prompt needs
 the member desktop app. If grok bot 2fa hits while you have only the phone,
 pause. Finish at the desk, then sign out at the desk.
 
@@ -414,6 +412,6 @@ Yes, with a documented split. WebAuthn prompts in the computer browser are forwa
 
 ### After a 2FA login on the shared computer, what should I do before other bots run?
 
-Copy the file you needed onto a path you own, then sign the service out in the shared browser. Remove any backup-code screenshot or notes file you created during the stall. Tell the bot the job is over and that it must not reopen that host. Then, as a check that can fail, ask a different bot that should not have finance access to open the same URL. If it loads as you, the session is still there. Stay on desktop for that teardown. On iPhone you can pause and resume only.
+Copy the file you needed onto a path you own, then sign the service out in the shared browser. Remove any backup-code screenshot or notes file you created during the stall. Tell the bot the job is over and that it must not reopen that host. Then, as a check that can fail, ask a different bot that should not have finance access to open the same URL. If it loads as you, the session is still there. Stay on desktop for that teardown. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 `,
 };

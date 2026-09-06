@@ -92,7 +92,7 @@ Do it after inventory and after keeper routines exist on another bot. Do it befo
 
 Delete last means last. After: keeper routine exists and is enabled, temp's copy is paused, vendor shows a login prompt, vendor-side revoke is done, MCP grant is pulled if you used one, \`/workspace\` dump is gone, skill is disabled if it should not travel, CLI profile is removed, token is rotated.
 
-Then delete the named bot from a Mac or Windows desk. That click is documented on the delete-safely page. This page's job is to make that click boring. If you may need the conversation next month, hide instead of delete, and still do the session and file work. Hide does not pause routines and does not sign anyone out. Retirement that stops at hide is clutter. Retirement that stops at delete without the list above is how Inbox Triage inherits a vendor admin.
+Then delete the named bot from a desktop. That click is documented on the delete-safely page. This page's job is to make that click boring. If you may need the conversation next month, hide instead of delete, and still do the session and file work. Hide does not pause routines and does not sign anyone out. Retirement that stops at hide is clutter. Retirement that stops at delete without the list above is how Inbox Triage inherits a vendor admin.
 
 ## Walk Jordan's NimbusOps trial temp from a live cookie to a dead session
 
@@ -157,7 +157,7 @@ Deleting the Cursor account is a different flow, via account settings. This page
 
 ## Finish the named-bot delete from Mac or Windows, because iPhone cannot
 
-On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop. Supported clients are macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. There is no Linux desktop app, no Android app, and no iPad app. The bots run on a managed Linux VM. The desk you drive it from cannot be a Linux desktop, and it cannot be your phone if the job is delete.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Supported clients are macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The bots run on a managed Linux VM. The desk you drive it from cannot be a Linux desktop, and it cannot be your phone if the job is delete.
 
 Pause from the phone if you are away. That stops the Monday digest from firing. It does not sign NimbusOps out, delete \`/workspace/temp-nimbusops/\`, or recreate the digest on Lead Scout. Those steps need a Mac or Windows machine. If the only machine in the room is Linux, wait for a supported desk. Do not invent an SSH story as a retirement method. Your local Linux laptop is not the control plane. Do not start retirement on a phone and call it done.
 

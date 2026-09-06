@@ -23,7 +23,7 @@ You do not owe a stranger your reading pane. The expensive habit is opening ever
 
 Only a candidate that survives the header pass gets a body read, and that read is the bot's, not yours. You still do not open FAIL rows. PASS rows become a draft you review. UNSURE rows become a three-line note, still unsent.
 
-Sit at a Mac (Apple silicon or Intel) or Windows (x64 or Arm64). iPhone on iOS 18+ can pause and resume. Editing, history, testing, and deleting need desktop. There is no Linux desktop client, no Android app, and no iPad app. The agent runs on a managed Linux VM as a non-root user. Confirm entitlement that morning. Cheapest paid path as of 25 August 2026 is Cursor Pro+ at $60 a month. Hobby, Pro at $20, and SuperGrok at $30 still do not include Grok Bot. Privacy Mode (Legacy) blocks it entirely.
+Sit at a Mac (Apple silicon or Intel) or Windows (x64 or Arm64). iPhone on iOS 18+ can pause and resume. Editing, history, testing, and deleting need desktop. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent runs on a managed Linux VM as a non-root user. Confirm entitlement that morning. Cheapest paid path as of 25 August 2026 is Cursor Pro+ at $60 a month. Hobby, Pro at $20, and SuperGrok at $30 still do not include Grok Bot. Privacy Mode (Legacy) blocks it entirely.
 
 [Inbox Triage](/bots/inbox-triage) sorts a whole mailbox. This bot only scores sponsor-shaped mail against a written floor. Do not merge the two charters.
 
@@ -224,7 +224,7 @@ Pick one weekday clock. Paperkiln used 07:00. A routine belongs to one Bot. Do n
 
 The app keeps the 20 most recent run records per routine. That cache is not a ledger. If you need twelve-in, three-out, zero-sent for a month, the sponsor sheet is the ledger. Deleting the scoring bot deletes the routines and the records. The Gmail session may still be there.
 
-iPhone pause is for a bad morning, not for editing floors. Change the card at a Mac or Windows desk. Grok Build reading SKILL.md is not this product. Paste the charter into the bot. Keep the never-send boundary.
+iPhone pause is for a bad morning, not for editing floors. Change the card at a desktop. Grok Build reading SKILL.md is not this product. Paste the charter into the bot. Keep the never-send boundary.
 
 **Keep reading:** [How to Connect Gmail to Grok Bot Without Handing Over Send](/blog/how-to-connect-gmail-to-grok-bot), [Building a Bot That Drafts But Never Sends](/blog/bot-that-never-sends), [One Computer, Many Screens: What Isolation You Actually Have](/blog/grok-bot-one-computer-many-screens).
 
@@ -244,6 +244,6 @@ This page scores unopened sponsor mail against your written rate card and drafts
 
 ### Does deleting the scoring bot sign Gmail out of the shared computer?
 
-No. Deleting a Bot removes its profile, conversation, and routines. Shared-computer files and browser sessions may remain. The computer is a managed Linux VM assigned to your user account. Sign out of Gmail on the Agent Computer yourself until the login prompt appears. Revoke the Google grant on Google's current account page if you are done with mail on this computer. iPhone can pause and resume only. Sit at a Mac or Windows desk to edit, test, or delete. A new research name does not wipe the old session.
+No. Deleting a Bot removes its profile, conversation, and routines. Shared-computer files and browser sessions may remain. The computer is a managed Linux VM assigned to your user account. Sign out of Gmail on the Agent Computer yourself until the login prompt appears. Revoke the Google grant on Google's current account page if you are done with mail on this computer. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Sit at a desktop to edit, test, or delete. A new research name does not wipe the old session.
 `,
 };

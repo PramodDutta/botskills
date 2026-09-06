@@ -23,7 +23,7 @@ $30.
 This page is the download path with the eligibility gate in front of it.
 It is not the [supported platforms](/blog/grok-bot-supported-platforms)
 reference list. It is not the argument for
-[why there is no Linux desktop app](/blog/why-grok-bot-has-no-linux-app)
+[Grok Bot on Linux](/blog/why-grok-bot-has-no-linux-app)
 even though the cloud computer is Linux. Read those when you need the grid
 or the VM mix-up. Read this when you are about to click Get, and you need
 to know whether Get will open a product or an empty room.
@@ -73,8 +73,7 @@ build. macOS covers Apple silicon and Intel. Windows covers x64 and
 Arm64. Arm64 is first-class, not a stub
 ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 
-iPhone: App Store search for Grok Bot, iOS 18 or later. Pause and resume
-only. Editing, history, testing, and deleting need a desktop
+iPhone: App Store search for Grok Bot, iOS 18 or later. The phone app can pause or resume it and approve steps, but not edit it. Editing, history, testing, and deleting need a desktop
 ([mobile](https://docs.x.ai/grok-bot/mobile)). A browser tab is not a
 third client. If a phone is your only device, you can download grok bot
 in the store sense and still be unable to author anything.
@@ -198,9 +197,9 @@ FAQ list, then Privacy Mode (Legacy), then the wrong Cursor user. A
 failed download is a file problem. An empty product is an entitlement
 problem. Mixing them is how unofficial builds get a customer.
 
-## Skip Linux, Android, and iPad after one documented no
+## Skip iPad after one documented no; Linux and Android have clients now
 
-There is no Linux desktop app. There is no Android app. There is no
+There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). There is an Android app as of September 2026 (Android 9 or later); iPad is still not supported. There is no
 iPad app. The FAQ says so. The teams page answers "Is there a Linux
 desktop app?" with no
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
@@ -208,14 +207,13 @@ desktop app?" with no
 Do not spend the download session proving those sentences false. The
 cloud computer is a managed Linux VM. The bot runs as a non-root user.
 That is the worker, not a .deb. The argument lives on
-[why Grok Bot has no Linux app](/blog/why-grok-bot-has-no-linux-app).
+[Grok Bot on Linux](/blog/why-grok-bot-has-no-linux-app).
 The grid lives on
 [supported platforms](/blog/grok-bot-supported-platforms). If your
 only machine is Ubuntu, Pixel, or iPad, you cannot finish a download that
 lets you author work. A borrowed Mac can be a control surface. Wine
 and a Windows VM, if they ever open, are still Windows clients with
-extra steps, not a Linux download. Android is not a promised phone
-client. iPad is not a large iPhone app. Until the docs replace the no,
+extra steps, not a Linux download. Android has a companion app as of September 2026. iPad is not a large iPhone app. Until the docs replace the no,
 unofficial software is not a plan.
 
 ## Install the iPhone client as a remote pause, never as a workshop
@@ -223,7 +221,7 @@ unofficial software is not a plan.
 An App Store install is a real download grok bot action. It is also
 the easiest way to think you have a pocket desktop.
 
-On iPhone you can pause and resume only. Editing, history, testing, and
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
 deleting need desktop
 ([mobile](https://docs.x.ai/grok-bot/mobile)). Teach by demonstration
 is unavailable on iPhone
@@ -314,7 +312,7 @@ hurts.
 | Official file only | The desktop binary came from x.ai/bot, or the phone app from an App Store search for Grok Bot | You are about to sign into other software. Stop |
 | Invoice name is on the FAQ list | Hobby, Pro $20, SuperGrok $30 are treated as no | Fix billing or start the trial before another install |
 | Privacy Mode (Legacy) is off | Workspace setting, not the download UI | No client on any OS will help until that mode changes |
-| The client OS is actually supported | macOS, Windows x64 or Arm64, iPhone iOS 18+ | Linux, Android, and iPad are not a persistence issue. They are a no |
+| The client OS is actually supported | macOS, Windows, Linux (x64 or Arm64), iPhone or Android | iPad is not a persistence issue. It is a no |
 | After sign-in, you can create a bot on desktop | One named Clerk, no connections | If you cannot, this is entitlement or identity, not Arm64 |
 | A sibling bot can see a file the Clerk wrote | Create a note from bot A, list it from bot B | You were about to treat screens as isolation. Do not |
 
@@ -358,8 +356,7 @@ identity that holds the plan, a bounded Clerk, Gmail on another day.
 
 ## Name the cases where a clean install still cannot help you
 
-A perfect download cannot buy missing product. Linux, Android, or iPad
-only: no client. Borrow a supported screen, wait, or change runtimes.
+A perfect download cannot buy missing product. iPad only: no client. Linux and Android have had clients since September 2026. Borrow a supported screen, wait, or change runtimes.
 Privacy Mode (Legacy): the binary is decoration. Per-bot credential
 isolation: one computer per account, screens are not a boundary. Audit
 view of bot actions: not shipped. Model picker: none, for members or
@@ -381,7 +378,7 @@ iPad will run the iPhone build: the grid is
 
 If you came here because the docs say Linux and your laptop is
 Linux: the split between client and cloud computer is
-[why Grok Bot has no Linux desktop app](/blog/why-grok-bot-has-no-linux-app).
+[Grok Bot on Linux](/blog/why-grok-bot-has-no-linux-app).
 
 If you came here because Cursor asked you to sign in and you do not
 write code: the ownership chain is
@@ -394,7 +391,7 @@ boundary on the first bot before create feels like setup. See
 [what a Grok Bot is](/blog/what-is-a-grok-bot) and
 [is Grok Bot worth it](/blog/is-grok-bot-worth-it).
 
-**Keep reading:** [Grok Bot on Windows, Linux and iPad: What Actually Works](/blog/grok-bot-supported-platforms), [Why Grok Bot Has No Linux Desktop App (Even Though the Computer Is Linux)](/blog/why-grok-bot-has-no-linux-app), [Why Grok Bot Needs a Cursor Account, and How To Get Access](/blog/grok-bot-cursor-account-explained).
+**Keep reading:** [Grok Bot on Windows, Linux, Android and iPad: What Works](/blog/grok-bot-supported-platforms), [Grok Bot on Linux: There Is a Desktop App Now](/blog/why-grok-bot-has-no-linux-app), [Why Grok Bot Needs a Cursor Account, and How To Get Access](/blog/grok-bot-cursor-account-explained).
 
 ## Frequently Asked Questions
 

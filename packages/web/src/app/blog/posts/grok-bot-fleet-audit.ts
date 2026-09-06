@@ -330,8 +330,7 @@ is no audit view of bot actions, so a provider's own sent items are the only
 independent record of what left the building.
 
 Do this on the desktop app. Editing, history, testing, and deleting all require
-desktop; the iPhone app allows pause and resume only, so an audit conducted from
-your phone is a reading exercise.
+desktop; the phone app can pause a routine and approve steps but cannot open run history, so an audit conducted from your phone is a reading exercise.
 
 ## Leave Overwatch to clean files, and the foreman to catch stalls
 

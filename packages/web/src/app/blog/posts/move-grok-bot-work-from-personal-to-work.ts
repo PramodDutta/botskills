@@ -51,7 +51,7 @@ Do not cancel personal Pro+ on the afternoon the company card posts. Do not dele
 
 The work login needs its own eligible stamp. A Teams seat assigned to someone else does not activate Grok Bot for Willa. Sign-in knows the plan. The installer does not. Eligibility widened on 21 August 2026 ([xAI announcement](https://x.ai/news/grok-bot-more-plans)).
 
-Do the move from a Mac or a Windows desk. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later ([FAQ](https://docs.x.ai/grok-bot/faq)). There is no Linux desktop app, no Android app, and no iPad app. The agent computer is a managed Linux VM, not a Linux desktop client. On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)).
+Do the move from a Mac or a Windows desk. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later ([FAQ](https://docs.x.ai/grok-bot/faq)). There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent computer is a managed Linux VM, not a Linux desktop client. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)).
 
 Keep personal Pro+ until the work account screen prints an eligible Teams SKU, the named job exists, and one routine has a run record you opened. Cancelling the individual line while company Gmail still lives on that computer is [what survives if you drop Grok Bot](/blog/what-survives-if-you-drop-grok-bot), not a seat move.
 
@@ -141,7 +141,7 @@ Keep personal vendors on the personal computer if you still want a personal job 
 
 Pause is not delete. Pause freezes future work. It does not recall a draft that already landed, and it does not sign anyone out.
 
-After the work clock has a run record, pause every personal routine that still talks to company Gmail, company calendar, company CRM, or company Slack. Stay until the control shows frozen. Do this at a Mac or Windows desk if you also need to edit. iPhone can pause if that is all you have in the moment ([how to pause a Grok Bot on iPhone](/blog/how-to-pause-a-grok-bot-on-iphone)).
+After the work clock has a run record, pause every personal routine that still talks to company Gmail, company calendar, company CRM, or company Slack. Stay until the control shows frozen. Do this at a desktop if you also need to edit. iPhone can pause if that is all you have in the moment ([how to pause a Grok Bot on iPhone](/blog/how-to-pause-a-grok-bot-on-iphone)).
 
 Leave personal routines that talk only to personal mail or personal calendar. The whole point of two accounts is that personal work can stay personal. You are not required to burn the Pro+ computer. You are required to stop using it as a shadow company seat.
 
@@ -230,7 +230,7 @@ The architecture under all four pages is the same: one computer per user account
 
 Share is a teammate who wants your card. Teams Standard is finance buying eligibility. Both-subscriptions is two houses on one identity. This page is a founder who already ran company work on personal Pro+ and now has a work seat. Copy the charter. Recreate on the work seat. Sign leftover personal sessions out. There is no transfer button.
 
-A coming-soon team-level ceiling on local execution, and an admin Kill that deletes the VM but keeps durable storage, are not a migrate-to-work tool. Label them not shipped. Do not wait for them. Do the recreate this week from a Mac or Windows desk.
+A coming-soon team-level ceiling on local execution, and an admin Kill that deletes the VM but keeps durable storage, are not a migrate-to-work tool. Label them not shipped. Do not wait for them. Do the recreate this week from a desktop.
 
 Confirm live prices and the live FAQ the morning you brief finance. Eligibility moved on 21 August 2026. The in-product entitlement wins over a screenshot in Slack.
 

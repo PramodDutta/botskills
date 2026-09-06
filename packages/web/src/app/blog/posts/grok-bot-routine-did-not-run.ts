@@ -77,9 +77,9 @@ That is why the Monday miss feels haunted. Last Friday's standup brief is still 
 
 Copy the routine text out before you delete, into a file you own. Hide the bot if you still need the work later. Pause looping routines first. Delete last, and only after the copy exists. iPhone cannot run this sequence. Deleting needs a desktop.
 
-## Sit at a Mac or Windows desk before you call the run missing
+## Sit at a desktop before you call the run missing
 
-On iPhone you can pause and resume only. Editing, history, testing, and deleting need a desktop. Supported clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. Not Linux desktop, Android, or iPad. The bots run on a managed Linux VM, which is not a Linux desktop client. Diagnose from a Mac or Windows machine.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need a desktop. Platforms: macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. Not iPad. The bots run on a managed Linux VM, which is not a Linux desktop client. Diagnose from a Mac or Windows machine.
 
 A grok bot routine not running is often a false report from a commute. You cannot open history on the phone, so you cannot tell a pause from a delete from a fire that produced nothing. Pause only works if the routine still exists. If you already deleted temp, the phone will not show a tombstone. It will show a list that no longer contains the job.
 
@@ -153,7 +153,7 @@ Work the causes in published order. Owner bot still exists. Routine still attach
 | Symptom | Documented cause to test first | Fix that matches |
 |---|---|---|
 | Monday DM missing, bot named temp is gone | Deleting a Bot deletes its routines | Rebuild on a named bot from a copy. Do not recreate temp |
-| Monday DM missing, you are on iPhone | History, edit, test, and delete need desktop | Wait for a Mac or Windows desk. Pause only if the job is looping |
+| Monday DM missing, you are on iPhone | History, edit, test, and delete need desktop | Wait for a desktop. Pause only if the job is looping |
 | Create failed, owner already shows a long routine list | Max 50 routines per Bot | Put the new job on another named bot, or copy and remove a spare |
 | History looks fine for two weeks, then blank further back | App keeps 20 most recent run records per routine | Stop treating the window as a ledger. Write briefs to a file you own |
 | Last week's brief file still on disk, no Monday DM | Deleting a bot does not remove shared-computer files | The file is leftover. The routine is gone |
@@ -182,7 +182,7 @@ Do not wait for a team calendar. Coming-soon items elsewhere are labelled as not
 
 ## Prove the next Monday with a Sunday night check that can fail
 
-A check that cannot fail is a ritual. You need one that can come back dirty. Sunday 21:00, at a Mac or Windows desk, not on iPhone.
+A check that cannot fail is a ritual. You need one that can come back dirty. Sunday 21:00, at a desktop, not on the phone.
 
 Open the bot list. Standup Scribe is present. If it is missing, rebuild tonight. Open the routine. If it is gone, the check has failed. Open history. The newest record is Friday (or Thursday, if Friday was a holiday you already knew about). If it is older, the weekday job has already been dead for more than a weekend. Rebuild or unpause tonight.
 
@@ -206,13 +206,13 @@ Put the same line on every standing job. [Chief of Staff Briefing](/bots/chief-o
 
 Approval rules do not reverse a delete. An approval controls a proposed action. It does not reverse work already completed. There is no prompt that reconstructs a routine after the bot is gone. Copy first, or accept that Monday is a rebuild. No standing routine on a bot whose name you would delete on a Friday tidy-up.
 
-**Keep reading:** [Grok Bot Scheduling: Daily, Weekly, and Triggered Runs](/blog/grok-bot-scheduling), [One Computer, Many Screens: What Grok Bot Actually Isolates](/blog/grok-bot-shared-computer-security), [Grok Bot on Windows, Linux and iPad: What Actually Works](/blog/grok-bot-supported-platforms).
+**Keep reading:** [Grok Bot Scheduling: Daily, Weekly, and Triggered Runs](/blog/grok-bot-scheduling), [One Computer, Many Screens: What Grok Bot Actually Isolates](/blog/grok-bot-shared-computer-security), [Grok Bot on Windows, Linux, Android and iPad: What Works](/blog/grok-bot-supported-platforms).
 
 ## Frequently Asked Questions
 
 ### Why did my Grok Bot routine not run this morning?
 
-Start with the owner, not the clock. A routine assigns a workflow to one Bot, so a grok bot routine not running is often the bot missing, not the timezone. If you deleted a scratch card that held the job, the routine went with it and nothing is stored at team level. If you are on iPhone, you cannot open history, so you cannot yet tell a miss from a pause. Sit at a Mac or Windows desk, confirm the owner still exists, then read the twenty run records. Only after that should you inspect schedule settings.
+Start with the owner, not the clock. A routine assigns a workflow to one Bot, so a grok bot routine not running is often the bot missing, not the timezone. If you deleted a scratch card that held the job, the routine went with it and nothing is stored at team level. If you are on iPhone, you cannot open history, so you cannot yet tell a miss from a pause. Sit at a desktop, confirm the owner still exists, then read the twenty run records. Only after that should you inspect schedule settings.
 
 ### Can I recover a routine after I delete the bot that owned it?
 
@@ -220,7 +220,7 @@ No. Deleting a Bot deletes its routines. There is no orphaned copy and no team s
 
 ### Why will iPhone not show me whether the routine ran?
 
-On iPhone you can pause and resume only. Editing, history, testing, and deleting need a desktop. Run records live in that history view, so a phone cannot show the twenty-record window at all. Pause is still useful if a looping job exists and you need it to stop. It cannot confirm a Monday miss, and it cannot resurrect a routine whose owner you already deleted. Supported pocket client is iPhone on iOS 18 or later. Diagnosis waits for macOS or Windows.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need a desktop. Run records live in that history view, so a phone cannot show the twenty-record window at all. Pause is still useful if a looping job exists and you need it to stop. It cannot confirm a Monday miss, and it cannot resurrect a routine whose owner you already deleted. Supported pocket client is iPhone on iOS 18 or later. Diagnosis waits for macOS or Windows.
 
 ### What happens when one bot already has fifty routines?
 

@@ -126,7 +126,7 @@ A quote from a thread the bot opened is a new claim about what Nils said, not a 
 
 Do not schedule "every Friday at 16:00, read mail and dissent." That is a search. The safer routine is "read /memos/friday.md if it exists, write /dissent/YYYY-MM-DD.md, stop." If the memo is missing, the run is could-not-compute: no plan file, path tried, timestamp. It is not a tour of Slack until something looks shippable.
 
-On iPhone (iOS 18+) you can pause and resume. Editing the charter still needs macOS or Windows. There is no Linux desktop, Android, or iPad client. If you cannot paste the input path today, do not schedule the Friday run from a train.
+On iPhone (iOS 18+) you can pause and resume. Editing the charter still needs macOS or Windows. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If you cannot paste the input path today, do not schedule the Friday run from a train.
 
 ## Refuse to log into customer tools just so the critic can check a number
 

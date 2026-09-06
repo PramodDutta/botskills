@@ -37,7 +37,7 @@ A routine assigns a workflow to one Bot. The app keeps the 20 most recent run re
 
 Inside the window, a run record answers one question: did this routine fire. It does not tell a controller which statement line moved, which receipt was attached, or which draft sat on ask. It is a heartbeat. It is not a grok bot audit log.
 
-Cite the twenty for debugging this afternoon. Never cite it as evidence you can produce in ninety days. Put the cadence in the packet header: product run history retains twenty records, this packet is the retention. On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop. If the exporter is on a phone, the proposal is gone unless the bot already wrote it elsewhere.
+Cite the twenty for debugging this afternoon. Never cite it as evidence you can produce in ninety days. Put the cadence in the packet header: product run history retains twenty records, this packet is the retention. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. If the exporter is on a phone, the proposal is gone unless the bot already wrote it elsewhere.
 
 ## Treat coming-soon admin Kill as a stop button, not a paper trail
 

@@ -59,7 +59,7 @@ If you completed a two-factor prompt on Inbox's HubSpot login, you wrote a live 
 [Grok Bot hit a 2FA prompt](/blog/grok-bot-2fa-prompt)
 when the field is on screen. This page is the afternoon after you already typed the code.
 
-Pause on iPhone is not a vault either. On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop
+Pause on iPhone is not a vault either. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop
 ([mobile](https://docs.x.ai/grok-bot/mobile)).
 Pause freezes a job. It does not sign HubSpot out.
 
@@ -204,7 +204,7 @@ before you budget that seat. Cursor Pro+ at $60 a month is the cheapest paid pat
 
 ## Sign HubSpot out in the shared browser, then kill the session on HubSpot's own page
 
-Containment is two vendor clicks, not a roster edit. Take the Agent Computer on a Mac or Windows desktop. iPhone pause will not do this. Sign out of HubSpot in the shared browser until you see a login page. Then open HubSpot's own session or device UI (confirm the current labels on HubSpot's page) and revoke the session that belongs to this computer.
+Containment is two vendor clicks, not a roster edit. Take the Agent Computer from the desktop app. A phone pause will not do this. Sign out of HubSpot in the shared browser until you see a login page. Then open HubSpot's own session or device UI (confirm the current labels on HubSpot's page) and revoke the session that belongs to this computer.
 
 Do the Probe check after, not before you feel done. Feelings named it a breach. The login page is the pass.
 
@@ -235,7 +235,7 @@ If the object in your head is the window itself, a Figma cookie assigned to a na
 
 Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later
 ([FAQ](https://docs.x.ai/grok-bot/faq)).
-Linux desktop, Android, and iPad have no client. If you have no supported desktop, you cannot take over the computer to sign HubSpot out. That is a platform miss, not a leftover dashboard. Stay here when the photo is a named research worker sitting in a CRM.
+There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If you have no supported desktop, you cannot take over the computer to sign HubSpot out. That is a platform miss, not a leftover dashboard. Stay here when the photo is a named research worker sitting in a CRM.
 
 **Keep reading:** [One Computer, Many Screens: What Isolation You Actually Have](/blog/grok-bot-one-computer-many-screens), [One Computer, Many Screens: What Grok Bot Actually Isolates](/blog/grok-bot-shared-computer-security), [Grok Bot Login Failed: Cursor Auth, Eligibility, and Privacy Mode](/blog/grok-bot-login-failed).
 

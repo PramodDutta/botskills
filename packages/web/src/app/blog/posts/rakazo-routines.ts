@@ -209,8 +209,7 @@ rather than a routine problem.
 Grok Bot's model is documented and tight. A routine assigns a workflow to one
 bot, there is a ceiling of 50 routines per bot, only the 20 most recent run
 records are kept per routine, deleting a bot deletes its routines, and nothing
-is stored at team level. On iPhone you can
-[pause and resume only](https://docs.x.ai/grok-bot/mobile).
+is stored at team level. From the phone app you can [approve steps and pause or resume a routine](https://docs.x.ai/grok-bot/mobile), but not edit it.
 
 Rakazo's routines also hang off a single bot, and the Prisma relation cascades
 on bot delete, so that part is the same. What differs is everything downstream.

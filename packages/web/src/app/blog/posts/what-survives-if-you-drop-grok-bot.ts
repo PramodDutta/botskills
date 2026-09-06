@@ -32,7 +32,7 @@ If the bot still needs to exist next month, you are not dropping the product. If
 
 ## Sign every vendor console out while the eligibility stamp still exists
 
-The control plane for the leftover cookie jar is Grok Bot itself. Open Agent Computer on a Mac or Windows desk while Pro+ (or whichever stamp you still hold) is live. Open each vendor URL the roster used. Sign out until you see a login prompt, not the ops portal.
+The control plane for the leftover cookie jar is Grok Bot itself. Open Agent Computer on a desktop while Pro+ (or whichever stamp you still hold) is live. Open each vendor URL the roster used. Sign out until you see a login prompt, not the ops portal.
 
 Then revoke at the vendor. Session cookies can outlive a polite sign-out. Confirm the labels on that vendor's current security, devices, or connected-apps page. This article will not invent those menu names. If someone reused a personal password on a shared console, rotate it.
 
@@ -137,9 +137,9 @@ If Pellmere instead keeps SuperGrok Plus at one hundred, they have not dropped G
 
 SpaceX acquired xAI (announced 2 February 2026). SpaceX acquired Anysphere, the company behind Cursor (closed 14 August 2026). They are siblings under one parent. That is why the handshake is a Cursor flow. It is not why cancelling one Cursor SKU wipes vendor sessions on the Bot computer.
 
-## Close vendor sessions from a Mac or Windows desk because iPhone can only pause
+## Close vendor sessions from a desktop, not from a pocket pause
 
-On iPhone you can pause and resume only. Editing, history, testing, and deleting need desktop. Supported clients are macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. There is no Linux desktop app, no Android app, and no iPad app. The bots run on a managed Linux VM as a non-root user. That is not a Linux desktop client. Sign-out, file removal, MCP revoke confirmation, and delete need a Mac or Windows desk.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Supported clients are macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The bots run on a managed Linux VM as a non-root user. That is not a Linux desktop client. Sign-out, file removal, MCP revoke confirmation, and delete need a desktop.
 
 Pause from the phone if finance pings you on a train. That stops routines. It does not sign Linear out, delete \`/workspace/pellmere-ops/\`, or revoke hosted MCP. Those steps need a Mac or Windows machine. If the only machine in the room is Linux, wait for a supported desk. Do not invent an SSH story as a product-exit method. Grok Bot launched in beta on 11 August 2026. Teach-by-demonstration is unavailable on iPhone and is not an offboarding tool.
 

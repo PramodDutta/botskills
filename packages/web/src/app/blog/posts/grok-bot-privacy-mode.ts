@@ -141,7 +141,7 @@ Use the exact text. Guessing "maybe Windows" is how Kestrel Path lost a day.
 | No client because the machine is Linux desktop, Android, or iPad | No | [Supported platforms](/blog/grok-bot-supported-platforms) |
 | App launched, Starting your computer still changing | No | Setup, not privacy. Keep the app open |
 
-Do not reset the agent computer to fix Legacy. Official desktop path: [x.ai/bot](https://x.ai/bot). iPhone can pause and resume only. A phone sign-in that still cannot author is the mobile surface, unless the error names Legacy.
+Do not reset the agent computer to fix Legacy. Official desktop path: [x.ai/bot](https://x.ai/bot). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. A phone sign-in that still cannot author is the mobile surface, unless the error names Legacy.
 
 ## Write the governance brief as a storage-policy vote, not as a ticket
 
@@ -269,7 +269,7 @@ wait until Naveen has recorded the data-mode vote.
 
 This page stops when the error is not a privacy-mode error. If org SSO succeeds, Legacy is off, the seat is eligible, and it still refuses, collect Grok Bot version, operating system, the exact error, whether Legacy is on, the invoice plan name, whether org SSO was used, and whether retry changed the result. Do not include passwords or one-time codes.
 
-There is no Linux desktop app. The cloud computer is a managed Linux VM where the bot runs as a non-root user. A community wrapper that asks for your Cursor identity is a credential hazard, not a privacy fix. Grok Build reading SKILL.md is a different product
+There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The cloud computer is a managed Linux VM where the bot runs as a non-root user. A community wrapper that asks for your Cursor identity is a credential hazard, not a privacy fix. Grok Build reading SKILL.md is a different product
 ([Grok Bot versus Grok Build](/blog/grok-bot-vs-grok-build)).
 [What a Grok bot is](/blog/what-is-a-grok-bot)
 and

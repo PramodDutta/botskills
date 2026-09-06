@@ -26,7 +26,7 @@ From [skills, routines and automations](https://docs.x.ai/grok-bot/skills-routin
 a routine assigns a workflow to one Bot, max 50 per Bot, the app keeps the
 20 most recent run records per routine, deleting a Bot deletes its routines,
 nothing is team-level. From [mobile](https://docs.x.ai/grok-bot/mobile):
-iPhone can pause and resume only. Editing, history, testing, and deleting
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting
 need desktop.
 
 ## Pick the named bot that will own this job before you open the schedule
@@ -65,12 +65,11 @@ attach the routine.
 
 ## Open a Mac or Windows client because the phone cannot create the routine
 
-On iPhone you can pause and resume only. You cannot create a routine, edit
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. You cannot create a routine, edit
 one, open history, test, or delete. A phone in your hand is the stop-button
 flow, not the create flow.
 
-Supported clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64),
-iPhone on iOS 18 or later. Not Linux desktop, Android, or iPad. The bot runs
+Platforms: macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. Not iPad. The bot runs
 on a managed Linux VM, which is not a Linux desktop app. See
 [what actually works on Windows, Linux and iPad](/blog/grok-bot-supported-platforms).
 
@@ -82,7 +81,7 @@ Teach-by-demonstration is a different tool (up to ten minutes, no microphone
 audio, draft skill, browser workflows only, unavailable on iPhone). Do not
 record a labelling pass and promote it into this Monday routine.
 
-| Action | iPhone | Mac or Windows desk |
+| Action | Phone app | Desktop app |
 |---|---|---|
 | Pause or resume a looping job that already exists | Yes | Yes |
 | Create the Monday 07:00 routine | No | Yes |
@@ -299,7 +298,7 @@ delete bots to save quota. There is no Grok Bot-specific spend cap.
 
 ## Walk one Monday 07:00 standup pack from create to the first history check
 
-Friday 16:00, Mac or Windows desk, Europe/London. You need a standup pack
+Friday 16:00, desktop, Europe/London. You need a standup pack
 every Monday at 07:00: shipped, stuck, needs a person, plus the coming week
 on the calendar. You do not need a daily DM yet. You do not need mail
 labelled every five minutes.
@@ -424,8 +423,8 @@ when the owner, the file, and the first of twenty records are real.
 
 ### Can I schedule a grok bot routine from iPhone?
 
-No. On iPhone you can pause and resume only. Creating, editing, history,
-testing, and deleting need a Mac or Windows desk. The iPhone app exists on
+No. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Creating, editing, history,
+testing, and deleting need a desktop. The iPhone app exists on
 iOS 18 or later as a companion stop button, not as a workshop. If you tried
 to create a Monday 07:00 job on a train, assume it did not attach until you
 open the named bot on a desktop and see the routine plus a test row in the
@@ -454,7 +453,7 @@ and the owner name. You use all three.
 
 ### How do I prove the Monday 07:00 routine actually ran?
 
-Sit at a Mac or Windows desk. Confirm the owner bot still exists. Open that
+Sit at a desktop. Confirm the owner bot still exists. Open that
 routine's history and look for a row from this Monday. Open
 \`/workspace/standup-heartbeat.txt\` and confirm today's date. Open the pack
 file for today's date and read it, including any COULD NOT COMPUTE lines.
