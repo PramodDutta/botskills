@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Build, lint, unit, article gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Build shared
+        run: pnpm --filter @botskills/shared build
+      - name: Type-check
+        run: pnpm --filter @botskills/web typecheck
+      - name: Lint
+        run: pnpm --filter @botskills/web lint
+      - name: Format check
+        run: pnpm --filter @botskills/web format:check
+      - name: Unit tests
+        run: pnpm test
+      - name: Validate bot catalogue
+        run: node scripts/validate-bots.mjs
+      - name: Article gate and registry check
+        run: |
+          python3 scripts/gate.py | tail -3
+          python3 scripts/register.py --check
+      - name: Build web
+        run: pnpm --filter @botskills/web build
+
+  e2e:
+    name: Playwright
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    needs: checks
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @botskills/shared build
+      - name: Install Chromium
+        run: pnpm --filter @botskills/web exec playwright install --with-deps chromium
+      - name: End-to-end tests
+        run: pnpm --filter @botskills/web test:e2e
+        env:
+          CI: 'true'
