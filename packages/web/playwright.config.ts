@@ -20,7 +20,10 @@ export default defineConfig({
     : {
         command: `pnpm exec next dev --port ${PORT}`,
         url: `http://127.0.0.1:${PORT}`,
-        reuseExistingServer: !process.env.CI,
+        // Tests submit forms and telemetry. Never inherit production credentials
+        // or reuse a server whose database and mail configuration are unknown.
+        env: { DATABASE_URL: '', RESEND_API_KEY: '' },
+        reuseExistingServer: false,
         timeout: 180_000,
       },
 });

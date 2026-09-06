@@ -79,13 +79,15 @@ function parseInlineArray(raw: string): string[] {
 }
 
 export function parseBotMd(slug: string, raw: string): ParsedBot {
-  const fm = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  const fm = raw.replace(/\r\n/g, '\n').match(/^---\n([\s\S]*?)\n---(?:\n|$)([\s\S]*)$/);
   if (!fm) throw new Error(`${slug}: missing frontmatter block`);
   const [, head, body] = fm;
 
   const get = (key: string): string | undefined => {
-    const m = head.match(new RegExp(`^${key}:\\s*(.+)$`, 'm'));
-    return m ? m[1].trim() : undefined;
+    // Whitespace here must stay on the same line. \s also matches a newline,
+    // which let an empty boundary consume the next field and pass validation.
+    const m = head.match(new RegExp(`^${key}:[ \\t]*(.*)$`, 'm'));
+    return m?.[1].trim() || undefined;
   };
 
   const candidate = {
@@ -110,6 +112,29 @@ export function parseBotMd(slug: string, raw: string): ParsedBot {
   const split = body.search(/^#{2,3}\s*(License and attribution|Licence and attribution|License|Attribution)\s*$/m);
   const prompt = (split === -1 ? body : body.slice(0, split)).trim();
   const attribution = split === -1 ? undefined : body.slice(split).trim();
+  if (!prompt) throw new Error(`${slug}: setup prompt is empty`);
 
   return { ...parsed, slug, prompt, attribution };
+}
+
+/** Distribute the complete BOT.md, including optional metadata and attribution. */
+export function serializeBotMd(bot: ParsedBot): string {
+  const frontmatter = [
+    '---',
+    `name: ${bot.name}`,
+    `description: ${bot.description}`,
+    `version: ${bot.version}`,
+    `author: ${bot.author}`,
+    `license: ${bot.license}`,
+    `category: ${bot.category}`,
+    `integrations: [${bot.integrations.join(', ')}]`,
+    `runtimes: [${bot.runtimes.join(', ')}]`,
+    `boundary: ${bot.boundary}`,
+    `tags: [${bot.tags.join(', ')}]`,
+    ...(bot.shareUrl ? [`shareUrl: ${bot.shareUrl}`] : []),
+    '---',
+    '',
+  ].join('\n');
+  const body = bot.attribution ? `${bot.prompt}\n\n${bot.attribution}` : bot.prompt;
+  return `${frontmatter}${body}\n`;
 }

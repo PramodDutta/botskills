@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/structured-data';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { CATEGORIES } from '@botskills/shared';
@@ -22,7 +23,10 @@ export default async function HomePage() {
   const startHere = startHereRows(rows);
   // Real movement only. With nothing copied this week the section stays hidden
   // rather than inventing activity.
-  const moving = [...rows].filter((r) => r.delta7d > 0).sort((a, b) => b.delta7d - a.delta7d).slice(0, 4);
+  const moving = [...rows]
+    .filter((r) => r.delta7d > 0)
+    .sort((a, b) => b.delta7d - a.delta7d)
+    .slice(0, 4);
   const catCount = (id: string) => bots.filter((b) => b.category === id).length;
 
   const itemList = {
@@ -40,26 +44,35 @@ export default async function HomePage() {
 
   return (
     <main className="wrap">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(itemList) }}
+      />
       {/* Compact hero, TrustMRR-style: the board is the hero */}
       <div className="hero">
-        <span className="kicker">Works with <Link href="/grok-bot">Grok Bot</Link> and <Link href="/rakazo">Rakazo</Link></span>
+        <span className="kicker">
+          Works with <Link href="/grok-bot">Grok Bot</Link> and <Link href="/rakazo">Rakazo</Link>
+        </span>
         <h1>The Grok Bot skills directory</h1>
         <LiveNow />
         <p className="sub">
-          Bots that get real work done, ranked by copies. Set one up with a single prompt,
-          and every bot declares the one thing it never does without you.
+          Bots that get real work done, ranked by copies. Set one up with a single prompt, and every
+          bot declares the one thing it never does without you.
         </p>
         <div className="explore-row">
           <span className="explore-label">Explore:</span>
           {CATEGORIES.map((c) => (
-            <Link key={c.id} href={`/bots?category=${c.id}`}>{c.name}</Link>
+            <Link key={c.id} href={`/bots?category=${c.id}`}>
+              {c.name}
+            </Link>
           ))}
         </div>
         <div className="explore-row tools">
           <span className="explore-label">Popular tools:</span>
           {['Gmail', 'Slack', 'GitHub', 'Notion', 'X', 'Salesforce'].map((t) => (
-            <Link key={t} href={`/integrations/${t.toLowerCase()}`}>{t}</Link>
+            <Link key={t} href={`/integrations/${t.toLowerCase()}`}>
+              {t}
+            </Link>
           ))}
         </div>
       </div>
@@ -88,7 +101,9 @@ export default async function HomePage() {
       <section>
         <div className="shead">
           <h2>Start here</h2>
-          <Link href="/bots" className="hint">View all →</Link>
+          <Link href="/bots" className="hint">
+            View all →
+          </Link>
         </div>
         <div className="cardrow">
           {startHere.map((r) => (
@@ -100,8 +115,16 @@ export default async function HomePage() {
               <span className={`tag tag-${r.category}`}>{r.category}</span>
               <span className="ds">{r.description}</span>
               <span className="rstats mono">
-                {r.copies > 0 ? <span><b>{r.copies.toLocaleString('en-US')}</b> copies</span> : <span>new</span>}
-                <span><b>{r.runtimes.length}</b> runtime{r.runtimes.length > 1 ? 's' : ''}</span>
+                {r.copies > 0 ? (
+                  <span>
+                    <b>{r.copies.toLocaleString('en-US')}</b> copies
+                  </span>
+                ) : (
+                  <span>new</span>
+                )}
+                <span>
+                  <b>{r.runtimes.length}</b> runtime{r.runtimes.length > 1 ? 's' : ''}
+                </span>
               </span>
             </Link>
           ))}
@@ -116,7 +139,13 @@ export default async function HomePage() {
         </div>
         <div className="avstrip">
           {rows.slice(0, 10).map((r) => (
-            <Link key={r.slug} href={`/bots/${r.slug}`} className="av" aria-label={`${r.name}: Grok bot skill`} title={r.name}>
+            <Link
+              key={r.slug}
+              href={`/bots/${r.slug}`}
+              className="av"
+              aria-label={`${r.name}: Grok bot skill`}
+              title={r.name}
+            >
               {r.name.slice(0, 2).toUpperCase()}
             </Link>
           ))}
@@ -134,14 +163,18 @@ export default async function HomePage() {
       {/* Activity feed: only rendered when something actually moved this week */}
       {moving.length > 0 && (
         <section>
-          <div className="shead"><h2>Copied this week</h2></div>
+          <div className="shead">
+            <h2>Copied this week</h2>
+          </div>
           <div className="feed">
             {moving.map((r) => (
               <div key={r.slug} className="fi">
                 <span className="when mono">+{r.delta7d}</span>
                 <span>
-                  <Link href={`/bots/${r.slug}`} className="nm">{r.name}</Link> by{' '}
-                  <b className="mono">@{r.contributor}</b>
+                  <Link href={`/bots/${r.slug}`} className="nm">
+                    {r.name}
+                  </Link>{' '}
+                  by <b className="mono">@{r.contributor}</b>
                 </span>
               </div>
             ))}
@@ -151,7 +184,9 @@ export default async function HomePage() {
 
       {/* Category pills */}
       <section>
-        <div className="shead"><h2>Categories</h2></div>
+        <div className="shead">
+          <h2>Categories</h2>
+        </div>
         <div className="pills">
           {CATEGORIES.map((c) => (
             <Link key={c.id} href={`/bots?category=${c.id}`} className="pill">

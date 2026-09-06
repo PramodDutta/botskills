@@ -22,3 +22,4 @@ import-staging/
 packages/web/test-results/
 packages/web/playwright-report/
 packages/web/blob-report/
+__pycache__/

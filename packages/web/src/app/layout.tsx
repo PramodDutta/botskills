@@ -1,5 +1,7 @@
+import { serializeJsonLd } from '@/lib/structured-data';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Archivo, JetBrains_Mono } from 'next/font/google';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { EdgeRails } from '@/components/edge-rails';
 import './globals.css';
@@ -8,6 +10,22 @@ import './globals.css';
 // external client in this app is wired. Set them in Vercel and redeploy.
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const GSC_TOKEN = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
+
+// Self-hosted at build time by next/font: no request to Google on page load,
+// no layout shift while the stylesheet arrives. globals.css reads the two
+// variables into --sans and --mono.
+const archivo = Archivo({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-archivo',
+  display: 'swap',
+});
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://botskills.sh'),
@@ -19,14 +37,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${archivo.variable} ${jetbrainsMono.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
-        />
         {GA_ID && (
           <>
             <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
@@ -42,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+            __html: serializeJsonLd({
               '@context': 'https://schema.org',
               '@graph': [
                 {
@@ -77,9 +89,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/sponsor">Sponsor</Link>
               <Link href="/agents">API</Link>
             </nav>
-            <span style={{ marginLeft: 'auto', display: 'flex', gap: '0.6rem', alignItems: 'center' }}>
+            <span
+              style={{ marginLeft: 'auto', display: 'flex', gap: '0.6rem', alignItems: 'center' }}
+            >
               <ThemeToggle />
-              <Link className="cta" href="/agents">+ Add a bot</Link>
+              <Link className="cta" href="/agents">
+                + Add a bot
+              </Link>
             </span>
           </div>
         </header>

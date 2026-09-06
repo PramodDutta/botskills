@@ -36,7 +36,8 @@ export function SignupForm({
         source,
         website: honeypot.current?.value ?? '',
       });
-      setState(res.ok ? 'done' : 'error');
+      const body = (await res.json()) as { ok?: boolean; stored?: boolean };
+      setState(res.ok && body.ok === true && body.stored === true ? 'done' : 'error');
     } catch {
       setState('error');
     }

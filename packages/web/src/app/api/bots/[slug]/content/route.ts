@@ -1,3 +1,4 @@
+import { serializeBotMd } from '@botskills/shared';
 import { getBot } from '@/lib/bots';
 
 // Raw BOT.md reconstruction as text/markdown: the artifact an agent fetches to
@@ -12,25 +13,7 @@ export async function GET(_req: Request, ctx: { params: Promise<{ slug: string }
   const bot = getBot(slug);
   if (!bot) return new Response('not found', { status: 404 });
 
-  const fm = [
-    '---',
-    `name: ${bot.name}`,
-    `description: ${bot.description}`,
-    `version: ${bot.version}`,
-    `author: ${bot.author}`,
-    `license: ${bot.license}`,
-    `category: ${bot.category}`,
-    `integrations: [${bot.integrations.join(', ')}]`,
-    `runtimes: [${bot.runtimes.join(', ')}]`,
-    `boundary: ${bot.boundary}`,
-    `tags: [${bot.tags.join(', ')}]`,
-    '---',
-    '',
-  ].join('\n');
-
-  const body = bot.attribution ? `${bot.prompt}\n\n${bot.attribution}` : bot.prompt;
-
-  return new Response(fm + body + '\n', {
+  return new Response(serializeBotMd(bot), {
     headers: { 'content-type': 'text/markdown; charset=utf-8' },
   });
 }

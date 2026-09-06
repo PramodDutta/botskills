@@ -3,8 +3,7 @@ import path from 'node:path';
 import { parseBotMd, type ParsedBot } from '@botskills/shared';
 
 // File catalog: seed-bots/<slug>/BOT.md at the repo root. Build needs no DB.
-// Copies come from telemetry later (P1); until then a deterministic placeholder
-// derived from the slug keeps the leaderboard shape honest without fake claims.
+// Copy and vote counts are fetched separately by the telemetry-backed board.
 
 export const SEED_DIR = path.join(process.cwd(), '..', '..', 'seed-bots');
 

@@ -27,7 +27,9 @@ test.describe('fact check lead magnet', () => {
   });
 
   test('submitting an email reveals the pack and posts the right source', async ({ page }) => {
-    test.skip(REMOTE, SKIP_WRITES);
+    await page.route('**/api/signups', (route) =>
+      route.fulfill({ json: { ok: true, stored: true } }),
+    );
     await page.goto('/grok-bot-facts');
     const posted: Array<Record<string, unknown>> = [];
     page.on('request', (r) => {
@@ -47,7 +49,9 @@ test.describe('fact check lead magnet', () => {
   });
 
   test('the revealed pack carries sourced corrections', async ({ page }) => {
-    test.skip(REMOTE, SKIP_WRITES);
+    await page.route('**/api/signups', (route) =>
+      route.fulfill({ json: { ok: true, stored: true } }),
+    );
     await page.goto('/grok-bot-facts');
     await page.locator('form.signup-form input[type="email"]').fill('e2e2@example.com');
     await page.getByRole('button', { name: /fact check/i }).click();
@@ -67,7 +71,41 @@ test.describe('fact check lead magnet', () => {
   });
 
   test('api rejects an invalid email', async ({ request }) => {
-    const res = await request.post('/api/signups', { data: { email: 'nope', source: 'facts-pack' } });
+    const res = await request.post('/api/signups', {
+      data: { email: 'nope', source: 'facts-pack' },
+    });
     expect(res.status()).toBe(400);
   });
+
+  test('storage being unavailable is a failure, not a completed signup', async ({ request }) => {
+    test.skip(REMOTE, SKIP_WRITES);
+    const res = await request.post('/api/signups', {
+      data: { email: 'storage-check@example.com', source: 'facts-pack' },
+    });
+    expect(res.status()).toBe(503);
+    expect(await res.json()).toEqual({ ok: false, stored: false });
+  });
+
+  for (const response of [
+    { status: 503, json: { ok: false, stored: false } },
+    { status: 200, json: { ok: true, stored: false } },
+    { status: 200, json: { ok: true } },
+  ]) {
+    test(`a ${response.status} response with stored=${response.json.stored} keeps signup retryable`, async ({
+      page,
+    }) => {
+      await page.route('**/api/signups', (route) => route.fulfill(response));
+      await page.goto('/grok-bot-facts');
+      await page.getByRole('textbox', { name: 'Email address' }).fill('retry@example.com');
+      await page.getByRole('button', { name: /fact check/i }).click();
+      await expect(page.getByRole('alert')).toBeVisible();
+      await expect(page.locator('.facts-pack')).toHaveCount(0);
+      await expect(page.getByRole('button', { name: /fact check/i })).toBeEnabled();
+      await page.route('**/api/signups', (route) =>
+        route.fulfill({ json: { ok: true, stored: true } }),
+      );
+      await page.getByRole('button', { name: /fact check/i }).click();
+      await expect(page.locator('.facts-pack')).toBeVisible();
+    });
+  }
 });

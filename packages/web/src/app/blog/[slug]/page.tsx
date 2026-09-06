@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/structured-data';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { PostBody } from '@/components/post-body';
@@ -35,7 +36,9 @@ function extractFaq(markdown: string): Array<{ q: string; a: string }> {
     .filter((f) => f.q && f.a);
 }
 
-interface Props { params: Promise<{ slug: string }> }
+interface Props {
+  params: Promise<{ slug: string }>;
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -73,7 +76,12 @@ export default async function PostPage({ params }: Props) {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://botskills.sh' },
       { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://botskills.sh/blog' },
-      { '@type': 'ListItem', position: 3, name: post.title, item: `https://botskills.sh/blog/${slug}` },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `https://botskills.sh/blog/${slug}`,
+      },
     ],
   };
 
@@ -92,13 +100,24 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <main className="wrap detail">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
+      />
       {faqLd && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqLd) }}
+        />
       )}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumb) }}
+      />
       <article className="post prose">
-        <p className="ds">{post.date} · {post.category}</p>
+        <p className="ds">
+          {post.date} · {post.category}
+        </p>
         <PostBody content={post.content} />
       </article>
       <RelatedLinks posts={relatedPosts(slug)} />
