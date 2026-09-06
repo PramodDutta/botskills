@@ -1,0 +1,33 @@
+# botskills rollback ledger
+
+One entry per production state we may need to return to. Newest at the bottom.
+To roll back, pick the entry and follow docs/ROLLBACK.md with its values:
+Vercel alias rollback first (seconds, no rebuild), then git revert on main.
+
+Entry format:
+  date (UTC)   what this state is
+  git ref      commit and, where one exists, the backup branch pointing at it
+  vercel       the production deployment URL that served this exact state
+  verify       what to curl to prove the rollback took
+
+--------------------------------------------------------------------------------
+2026-09-03 20:35 UTC   Before the first code refactor (helpers, tests, hubs).
+  git ref   8bf3f14   branch backup/pre-refactor-2026-09-03 (on origin)
+  vercel    https://botskills-c961mtbz4-luckydutta96s-projects.vercel.app
+  verify    curl -s https://botskills.sh/sponsor | sed 's/<!-- -->//g' | grep -o 'There are [0-9]* bot listings'
+            prints "37" (the old literal) in this state; the live count after.
+
+2026-09-04 18:10 UTC   After the refactor, growth items 1/2/4/5/8, and the
+                       first platform-fact corrections (Android page rewrite).
+  git ref   abe7930
+  vercel    https://botskills-iu8fbda0d-luckydutta96s-projects.vercel.app
+  verify    curl -s -o /dev/null -w '%{http_code}\n' https://botskills.sh/integrations/gmail   -> 200
+
+2026-09-06 15:20 UTC   Before the second refactor and the 150-article platform
+                       sweep. Production at this moment was botskills-4qnvdgq9k.
+  git ref   abe7930   branch backup/pre-refactor-2026-09-06 (on origin)
+  vercel    https://botskills-4qnvdgq9k-luckydutta96s-projects.vercel.app
+            (created 2026-09-04 14:01 UTC; verified to serve the growth work at
+            abe7930, including /integrations, and none of the 2026-09-05 WIP)
+  verify    curl -s https://botskills.sh/blog/grok-bot-troubleshooting | grep -o 'No Linux desktop, Android, or iPad app'
+            matches in this state (the old table row); no match after the sweep.

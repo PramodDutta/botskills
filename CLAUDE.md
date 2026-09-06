@@ -55,18 +55,33 @@ other backends.
 
 - **BOT.md frontmatter is regex-parsed**: single-line values, inline arrays
   [a, b, c] only. Block lists parse as EMPTY. `boundary` is required schema.
-- **Blog dual registry** (packages/web/src/app/blog/posts/index.ts): every
-  post needs import + `posts` map entry + `postList` entry. Miss one = 404 or
-  invisible. Batch arrays spread LAST; colliding slugs resolve silently to the
-  last write. Verify: grep -c "'<slug>'" index.ts == 2.
+- **Blog registry is generated** (packages/web/src/app/blog/posts/index.ts):
+  never edit it by hand. Add or change a post file, then run
+  `python3 scripts/register.py`; it runs the article gate on every post and
+  refuses to write the registry if any post fails. `posts` and `postList`
+  both derive from one list via `createBlogRegistry`, which throws on a
+  duplicate or malformed slug, so a collision can no longer resolve silently.
+  Verify a post is live: `grep -c "slug: '<slug>'" index.ts` prints 1, and
+  `python3 scripts/register.py --check` prints "registry current".
 - **Lazy clients**: db is a Proxy connecting on first access; build needs zero
   secrets. Preserve for every new external client.
 - **Machine endpoints stay open**: /api/bots and /api/bots/[slug]/content are
   the product for agents; robots.ts allows AI crawlers into them by design.
   Never blanket-disallow /api/.
-- **No fake numbers**: leaderboard copies come from telemetry. The demo module
-  in src/lib/board.ts must be replaced by the copy_events rollup BEFORE any
-  public deploy. Never hardcode scarcity counters on /sponsor.
+- **No fake numbers**: leaderboard copies and votes come from telemetry
+  (src/lib/telemetry-counts.ts); zero renders as "new", never as a count.
+  Counts on /sponsor derive from the catalogue and the post registry. Never
+  hardcode a scarcity counter or a page count anywhere.
+- **Platform facts moved on 2026-09-04**: Grok Bot has Linux desktop and
+  Android apps; iPad is still unsupported; the phone app can approve, pause
+  and take over the computer but cannot edit routines or read run history.
+  Read the dated CORRECTION section at the bottom of
+  docs/seo/VERIFIED-FACTS-2026-08-25.md, not the Platforms section above it.
+  `python3 scripts/factsweep.py` flags the old claim, not the new one.
+- **Rollback**: every production state worth returning to is an entry in
+  `rollback.empty` at the repo root (date, commit, backup branch, Vercel
+  deployment URL, and a curl that proves the state). docs/ROLLBACK.md is the
+  procedure. Add an entry before and after any deploy that changes behaviour.
 
 ## Commands
 
@@ -75,6 +90,16 @@ pnpm install
 pnpm build                          # shared then web (Turbo order)
 pnpm --filter @botskills/web dev
 node packages/web/scripts/seed.mjs  # needs exported DATABASE_URL, upsert only
+```
+
+```bash
+pnpm typecheck        # shared build + web tsc
+pnpm lint             # eslint (next/core-web-vitals + typescript)
+pnpm format:check     # prettier, posts excluded
+pnpm test             # node --test in shared and web, python unittest for scripts
+pnpm test:e2e         # playwright against a local dev server with no secrets
+E2E_BASE_URL=https://botskills.sh pnpm --filter @botskills/web exec playwright test   # against production, write tests skipped
+python3 scripts/gate.py && python3 scripts/register.py --check
 ```
 
 ## Ask first, always

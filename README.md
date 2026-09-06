@@ -8,11 +8,18 @@ open JSON API, raw markdown per bot).
 
 ## Layout
 
-- `packages/shared`: constants (categories, runtimes, integrations), types, BOT.md parser
-- `packages/web`: Next.js 15 app with leaderboard, bot pages, blog, API, llms.txt
+- `packages/shared`: constants (categories, runtimes, integrations), types, BOT.md parser and serializer
+- `packages/web`: Next.js 15 app with leaderboard, bot pages, integration hubs, blog, API, llms.txt
+  - `src/lib/blog-registry.ts`: one list of posts, from which the page lookup, index and sitemap derive
+  - `src/lib/related.ts`, `src/lib/integrations.ts`: related links and per-tool hub pages, computed from the corpus
+  - `src/lib/sql.ts`, `src/lib/telemetry-counts.ts`: the one database client and the copy/vote rollup
+  - `e2e/`: Playwright suite (runs locally with no secrets, or against production with `E2E_BASE_URL`)
+  - `tests/`: node --test unit tests for the pure libraries
 - `seed-bots/<slug>/BOT.md`: the catalog source of truth
-- `docs/PLAN.md`: full plan and competitor research
-- `docs/mockup/`: the approved UI mockup
+- `scripts/`: article gate, registry generator, duplicate and slop checks, fact sweep, IndexNow
+- `docs/seo/VERIFIED-FACTS-2026-08-25.md`: what the site may assert about Grok Bot, with a dated correction section at the bottom
+- `docs/ROLLBACK.md` and `rollback.empty`: how to roll production back, and the ledger of states to roll back to
+- `.github/workflows/ci.yml`: type-check, lint, format, unit, catalogue and article gates, build, Playwright
 
 ## Commands
 
@@ -20,6 +27,14 @@ open JSON API, raw markdown per bot).
 pnpm install
 pnpm build            # shared then web (Turbo order)
 pnpm --filter @botskills/web dev
+pnpm typecheck        # shared build + web tsc
+pnpm lint             # eslint, next/core-web-vitals + typescript
+pnpm format:check     # prettier (article bodies excluded)
+pnpm test             # unit tests: shared, web, scripts
+pnpm test:e2e         # playwright against a local dev server with no database or mail key
+python3 scripts/gate.py               # every article against the publication gate
+python3 scripts/register.py           # regenerate the blog registry (refuses if the gate fails)
+node scripts/validate-bots.mjs        # every BOT.md against the shipping parser
 ```
 
 Build requires zero secrets: the DB client is a lazy proxy, pages read the
