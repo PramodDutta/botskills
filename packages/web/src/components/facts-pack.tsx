@@ -108,9 +108,9 @@ export function FactsPack() {
     <section className="facts-pack">
       <h2>The fact check</h2>
       <p className="ds">
-        Sources are pages on <code className="mono">docs.x.ai</code> unless noted. Last
-        checked 4 September 2026. Product facts move, so re-check anything you are about to
-        put in front of a buyer.
+        Sources are pages on <code className="mono">docs.x.ai</code> unless noted. Last checked 4
+        September 2026. Product facts move, so re-check anything you are about to put in front of a
+        buyer.
       </p>
       <ol className="facts-list">
         {WRONG.map((r) => (
@@ -122,19 +122,21 @@ export function FactsPack() {
         ))}
       </ol>
       <div className="callout">
-        <b>Three that are unverifiable rather than wrong.</b> The Heavy price, the
-        allowance value, and the model set behind Grok Bot. Nobody outside xAI can source
-        any of the three, so treat any post that states them confidently as unreliable on
-        everything else too.
+        <b>Three that are unverifiable rather than wrong.</b> The Heavy price, the allowance value,
+        and the model set behind Grok Bot. Nobody outside xAI can source any of the three, so treat
+        any post that states them confidently as unreliable on everything else too.
       </div>
       <p>
-        Every article on this site is checked against this list before it publishes. If
-        you find something here that is out of date, that is a bug and we want to know:{' '}
+        Every article on this site is checked against this list before it publishes. If you find
+        something here that is out of date, that is a bug and we want to know:{' '}
         <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
       </p>
       <p>
-        Next: <Link href="/blog/grok-bot-one-computer-many-screens">what one shared computer actually means</Link>,{' '}
-        <Link href="/blog/cheapest-way-into-grok-bot">the cheapest way in</Link>, or{' '}
+        Next:{' '}
+        <Link href="/blog/grok-bot-one-computer-many-screens">
+          what one shared computer actually means
+        </Link>
+        , <Link href="/blog/cheapest-way-into-grok-bot">the cheapest way in</Link>, or{' '}
         <Link href="/">the bot catalogue</Link>.
       </p>
     </section>

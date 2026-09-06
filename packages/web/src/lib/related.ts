@@ -15,16 +15,125 @@ export interface RelatedPost {
 }
 
 const STOP = new Set([
-  'grok', 'bot', 'bots', 'the', 'a', 'an', 'and', 'or', 'to', 'of', 'for', 'in', 'on', 'with',
-  'vs', 'how', 'what', 'why', 'when', 'where', 'which', 'your', 'you', 'never', 'not', 'is', 'it',
-  'its', 'that', 'this', 'from', 'into', 'at', 'by', 'one', 'two', 'can', 'do', 'does', 'be',
-  'are', 'as', 'if', 'than', 'then', 'up', 'out', 'off', 'without', 'before', 'after', 'every',
-  'each', 'all', 'any', 'more', 'most', 'only', 'just', 'still', 'also', 'over', 'under', 'via',
-  'per', 'about', 'use', 'using', 'setup', 'set', 'guide', 'skill', 'skills', 'has', 'have',
-  'was', 'will', 'should', 'could', 'would', 'here', 'there', 'them', 'they', 'their', 'our',
-  'we', 'my', 'me', 'so', 'no', 'yes', 'but', 'own', 'get', 'gets', 'got', 'make', 'makes',
-  'run', 'runs', 'running', 'work', 'works', 'working', 'stop', 'stops', 'thing', 'things',
-  'actually', 'really', 'first', 'next', 'last', 'new', 'old', 'day', 'week', 'today',
+  'grok',
+  'bot',
+  'bots',
+  'the',
+  'a',
+  'an',
+  'and',
+  'or',
+  'to',
+  'of',
+  'for',
+  'in',
+  'on',
+  'with',
+  'vs',
+  'how',
+  'what',
+  'why',
+  'when',
+  'where',
+  'which',
+  'your',
+  'you',
+  'never',
+  'not',
+  'is',
+  'it',
+  'its',
+  'that',
+  'this',
+  'from',
+  'into',
+  'at',
+  'by',
+  'one',
+  'two',
+  'can',
+  'do',
+  'does',
+  'be',
+  'are',
+  'as',
+  'if',
+  'than',
+  'then',
+  'up',
+  'out',
+  'off',
+  'without',
+  'before',
+  'after',
+  'every',
+  'each',
+  'all',
+  'any',
+  'more',
+  'most',
+  'only',
+  'just',
+  'still',
+  'also',
+  'over',
+  'under',
+  'via',
+  'per',
+  'about',
+  'use',
+  'using',
+  'setup',
+  'set',
+  'guide',
+  'skill',
+  'skills',
+  'has',
+  'have',
+  'was',
+  'will',
+  'should',
+  'could',
+  'would',
+  'here',
+  'there',
+  'them',
+  'they',
+  'their',
+  'our',
+  'we',
+  'my',
+  'me',
+  'so',
+  'no',
+  'yes',
+  'but',
+  'own',
+  'get',
+  'gets',
+  'got',
+  'make',
+  'makes',
+  'run',
+  'runs',
+  'running',
+  'work',
+  'works',
+  'working',
+  'stop',
+  'stops',
+  'thing',
+  'things',
+  'actually',
+  'really',
+  'first',
+  'next',
+  'last',
+  'new',
+  'old',
+  'day',
+  'week',
+  'today',
 ]);
 
 export function words(text: string): Set<string> {
@@ -63,9 +172,15 @@ export function relatedPosts(slug: string, limit = 4): RelatedPost[] {
   const mine = wordsFor(me);
   return postList
     .filter((p) => p.slug !== slug)
-    .map((p) => ({ p, score: overlap(mine, wordsFor(p)) * 2 + (p.category === me.category ? 1 : 0) }))
+    .map((p) => ({
+      p,
+      score: overlap(mine, wordsFor(p)) * 2 + (p.category === me.category ? 1 : 0),
+    }))
     .filter((x) => x.score > 1)
-    .sort((a, b) => b.score - a.score || b.p.date.localeCompare(a.p.date) || a.p.slug.localeCompare(b.p.slug))
+    .sort(
+      (a, b) =>
+        b.score - a.score || b.p.date.localeCompare(a.p.date) || a.p.slug.localeCompare(b.p.slug),
+    )
     .slice(0, limit)
     .map((x) => toRelated(x.p));
 }
@@ -87,7 +202,10 @@ export function relatedPostsForBot(bot: ParsedBot, limit = 4): RelatedPost[] {
       return { p, score };
     })
     .filter((x) => x.score > 0)
-    .sort((a, b) => b.score - a.score || b.p.date.localeCompare(a.p.date) || a.p.slug.localeCompare(b.p.slug))
+    .sort(
+      (a, b) =>
+        b.score - a.score || b.p.date.localeCompare(a.p.date) || a.p.slug.localeCompare(b.p.slug),
+    )
     .slice(0, limit)
     .map((x) => toRelated(x.p));
 }
@@ -101,7 +219,8 @@ export function relatedBots(slug: string, limit = 4): ParsedBot[] {
     .filter((b) => b.slug !== slug)
     .map((b) => ({
       b,
-      score: b.integrations.filter((i) => mine.has(i)).length * 2 + (b.category === me.category ? 1 : 0),
+      score:
+        b.integrations.filter((i) => mine.has(i)).length * 2 + (b.category === me.category ? 1 : 0),
     }))
     .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score || a.b.name.localeCompare(b.b.name))

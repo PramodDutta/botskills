@@ -2,11 +2,21 @@
   "name": "botskills",
   "private": true,
   "packageManager": "pnpm@9.15.0",
-  "engines": { "node": "24.x" },
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "db:seed": "node packages/web/scripts/seed.mjs"
+    "test": "pnpm --filter @botskills/shared test && pnpm --filter @botskills/web test:unit && python3 -m unittest discover -s scripts/tests",
+    "test:e2e": "pnpm --filter @botskills/shared build && pnpm --filter @botskills/web test:e2e",
+    "check:articles": "python3 scripts/register.py --check",
+    "db:seed": "node packages/web/scripts/seed.mjs",
+    "lint": "pnpm --filter @botskills/web lint",
+    "typecheck": "pnpm --filter @botskills/shared build && pnpm --filter @botskills/web typecheck",
+    "format:check": "pnpm --filter @botskills/web format:check"
   },
-  "devDependencies": { "turbo": "^2.3.0" }
+  "devDependencies": {
+    "turbo": "^2.3.0"
+  }
 }

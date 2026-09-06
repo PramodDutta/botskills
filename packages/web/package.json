@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:unit": "node --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"e2e/**/*.ts\" \"tests/**/*.mjs\" \"*.{ts,mjs,json}\" \"!src/app/blog/posts/**\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \"e2e/**/*.ts\" \"tests/**/*.mjs\" \"*.{ts,mjs,json}\" \"!src/app/blog/posts/**\""
   },
   "dependencies": {
     "@botskills/shared": "workspace:*",
@@ -24,9 +29,13 @@
     "simple-icons": "^13.0.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@playwright/test": "^1.62.1",
     "@types/node": "^24.13.3",
     "@types/react": "^19.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "^15.1.0",
+    "prettier": "^3",
     "typescript": "^5.6.0"
   },
   "engines": {

@@ -2,7 +2,9 @@ import Link from 'next/link';
 import { postList } from './posts';
 
 export const metadata = {
-  title: { absolute: `Grok Bot Guides: ${postList.length} Setup, Pricing and Troubleshooting Articles` },
+  title: {
+    absolute: `Grok Bot Guides: ${postList.length} Setup, Pricing and Troubleshooting Articles`,
+  },
   description: `${postList.length} articles on running Grok Bot and Rakazo setups: pricing and plans, troubleshooting, integrations, charters and boundaries, all checked against the docs.`,
   alternates: { canonical: 'https://botskills.sh/blog' },
 };
@@ -42,8 +44,7 @@ export default function BlogPage() {
     <main className="wrap detail">
       <h1>Blog</h1>
       <p className="ds">
-        {postList.length} articles on running bots that other people can trust.
-        Jump to{' '}
+        {postList.length} articles on running bots that other people can trust. Jump to{' '}
         {categories.map((c, i) => (
           <span key={c}>
             {i > 0 ? ', ' : ''}

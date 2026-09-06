@@ -56,8 +56,8 @@ export function ContactForm() {
     if (serverEmailed) {
       return (
         <div className="callout" role="status">
-          <b>Got it.</b> We reply from {CONTACT_EMAIL}, usually within a day.
-          Nothing goes live until you have approved the wording.
+          <b>Got it.</b> We reply from {CONTACT_EMAIL}, usually within a day. Nothing goes live
+          until you have approved the wording.
         </div>
       );
     }
@@ -72,16 +72,16 @@ export function ContactForm() {
       )}`;
     return (
       <div className="callout" role="status">
-        <b>Saved.</b> One more tap and it reaches us straight away: this opens your mail
-        app with the whole message already written, addressed to us.
+        <b>Saved.</b> One more tap and it reaches us straight away: this opens your mail app with
+        the whole message already written, addressed to us.
         <p style={{ margin: '0.8rem 0 0' }}>
           <a className="copy-btn" style={{ textDecoration: 'none' }} href={href}>
             Open in my mail app
           </a>
         </p>
         <p className="ds" style={{ marginTop: '0.6rem' }}>
-          Nothing is lost if you skip this. We read the saved messages either way, it is
-          just slower.
+          Nothing is lost if you skip this. We read the saved messages either way, it is just
+          slower.
         </p>
       </div>
     );
@@ -136,13 +136,13 @@ export function ContactForm() {
       </button>
       {state === 'error' && (
         <p className="ds" role="alert">
-          {error} You can also email{' '}
-          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> directly.
+          {error} You can also email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>{' '}
+          directly.
         </p>
       )}
       <p className="ds">
-        We never ask for card details here or by email. An invoice arrives from a payment
-        provider you can verify before you pay it.
+        We never ask for card details here or by email. An invoice arrives from a payment provider
+        you can verify before you pay it.
       </p>
     </form>
   );

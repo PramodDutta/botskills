@@ -17,12 +17,11 @@ export function ArticleOffer() {
     <aside className="article-offer">
       <p className="ao-kicker">Before you build from this</p>
       <p className="ao-lead">
-        Most Grok Bot writing was published in the fortnight after launch and never
-        touched again. Prices moved on 21 August. Two of the most repeated security
-        claims were never true. We keep a fact check of{' '}
-        <b>fifteen claims that circulate widely and are wrong</b>, each with the
-        documentation line that corrects it. Every article here is checked against it
-        before it publishes.
+        Most Grok Bot writing was published in the fortnight after launch and never touched again.
+        Prices moved on 21 August. Two of the most repeated security claims were never true. We keep
+        a fact check of <b>fifteen claims that circulate widely and are wrong</b>, each with the
+        documentation line that corrects it. Every article here is checked against it before it
+        publishes.
       </p>
       <SignupForm
         source="facts-pack"
@@ -35,8 +34,8 @@ export function ArticleOffer() {
         </p>
       </SignupForm>
       <p className="ao-fine">
-        One email, no sequence. We use it to tell you when a fact changes, which so far
-        has been twice.
+        One email, no sequence. We use it to tell you when a fact changes, which so far has been
+        twice.
       </p>
     </aside>
   );

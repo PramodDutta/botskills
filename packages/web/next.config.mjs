@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  // No reason to advertise the framework on every response.
+  poweredByHeader: false,
   // seed-bots/ lives at the repo root; include it in the server bundle so the
   // file-catalog loader works on Vercel.
   outputFileTracingIncludes: { '/': ['../../seed-bots/**'] },

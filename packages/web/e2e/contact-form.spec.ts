@@ -34,9 +34,7 @@ test.describe('contact form', () => {
     await page.getByRole('button', { name: /send message/i }).click();
 
     // The payload is the part under test here.
-    await expect
-      .poll(() => posted.length, { timeout: 15_000 })
-      .toBe(1);
+    await expect.poll(() => posted.length, { timeout: 15_000 }).toBe(1);
     expect(posted[0].name).toBe('E2E Tester');
     expect(posted[0].email).toBe('e2e@example.com');
     expect(posted[0].placement).toBe('marquee');
@@ -63,7 +61,9 @@ test.describe('contact form', () => {
     }
   });
 
-  test('when the server cannot mail it, the sender is handed a prefilled mailto', async ({ page }) => {
+  test('when the server cannot mail it, the sender is handed a prefilled mailto', async ({
+    page,
+  }) => {
     // Simulate the production shape before a mail key exists: stored, not emailed.
     await page.route('**/api/contact', (route) =>
       route.fulfill({
@@ -135,7 +135,12 @@ test.describe('contact form', () => {
   test('an unknown placement falls back rather than being stored raw', async ({ request }) => {
     test.skip(REMOTE, SKIP_WRITES);
     const res = await request.post('/api/contact', {
-      data: { name: 'A', email: 'a@b.co', message: 'a long enough message here', placement: 'DROP TABLE' },
+      data: {
+        name: 'A',
+        email: 'a@b.co',
+        message: 'a long enough message here',
+        placement: 'DROP TABLE',
+      },
     });
     // Accepted, but the value is allowlisted server side, never echoed back raw.
     expect([200, 503]).toContain(res.status());

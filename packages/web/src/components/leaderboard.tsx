@@ -46,10 +46,16 @@ function VoteButton({ slug, votes }: { slug: string; votes: number }) {
   async function vote(e: React.MouseEvent) {
     e.preventDefault();
     e.stopPropagation();
-    if (voted) { setNudge(true); setTimeout(() => setNudge(false), 2600); return; }
+    if (voted) {
+      setNudge(true);
+      setTimeout(() => setNudge(false), 2600);
+      return;
+    }
     setVoted(true);
     setCount((c) => c + 1);
-    try { localStorage.setItem(key, '1'); } catch {}
+    try {
+      localStorage.setItem(key, '1');
+    } catch {}
     postJson('/api/telemetry/vote', { slug }).catch(() => {});
     setNudge(true);
     setTimeout(() => setNudge(false), 2600);
@@ -57,7 +63,11 @@ function VoteButton({ slug, votes }: { slug: string; votes: number }) {
 
   return (
     <span className="votewrap">
-      <button className={`votebtn${voted ? ' voted' : ''}`} onClick={vote} aria-label={`Upvote ${slug}`}>
+      <button
+        className={`votebtn${voted ? ' voted' : ''}`}
+        onClick={vote}
+        aria-label={`Upvote ${slug}`}
+      >
         ▲ <span className="mono">{count}</span>
       </button>
       {nudge && (
@@ -82,7 +92,9 @@ export function Leaderboard({ rows }: { rows: BoardRow[] }) {
   if (needle)
     filtered = filtered.filter((r) =>
       [r.name, r.description, r.category, r.contributor, ...r.integrations, ...r.runtimes]
-        .join(' ').toLowerCase().includes(needle),
+        .join(' ')
+        .toLowerCase()
+        .includes(needle),
     );
 
   // A search for "inbox" must not rank "Flight Check-In" above "Inbox Triage".
@@ -101,9 +113,11 @@ export function Leaderboard({ rows }: { rows: BoardRow[] }) {
       const d = relevance(a) - relevance(b);
       if (d !== 0) return d;
     }
-    return sort === 'copies' ? b.copies - a.copies :
-      sort === 'votes' ? b.votes - a.votes :
-      a.name.localeCompare(b.name);
+    return sort === 'copies'
+      ? b.copies - a.copies
+      : sort === 'votes'
+        ? b.votes - a.votes
+        : a.name.localeCompare(b.name);
   });
 
   // Medals mean "most copied of everything". Once the view is searched,
@@ -122,21 +136,43 @@ export function Leaderboard({ rows }: { rows: BoardRow[] }) {
           type="search"
           placeholder="Search"
           value={q}
-          onChange={(e) => { setQ(e.target.value); setShown(PAGE); }}
+          onChange={(e) => {
+            setQ(e.target.value);
+            setShown(PAGE);
+          }}
           aria-label="Search bots"
         />
-        <select value={cat} onChange={(e) => { setCat(e.target.value); setShown(PAGE); }} aria-label="Category">
+        <select
+          value={cat}
+          onChange={(e) => {
+            setCat(e.target.value);
+            setShown(PAGE);
+          }}
+          aria-label="Category"
+        >
           <option value="">Any category</option>
-          {CATEGORIES.map((c) => <option key={c} value={c}>{c[0].toUpperCase() + c.slice(1)}</option>)}
+          {CATEGORIES.map((c) => (
+            <option key={c} value={c}>
+              {c[0].toUpperCase() + c.slice(1)}
+            </option>
+          ))}
         </select>
-        <select value={sort} onChange={(e) => setSort(e.target.value as typeof sort)} aria-label="Sort">
+        <select
+          value={sort}
+          onChange={(e) => setSort(e.target.value as typeof sort)}
+          aria-label="Sort"
+        >
           <option value="copies">Most copied</option>
           <option value="votes">Most voted</option>
           <option value="az">A to Z</option>
         </select>
         <span className="view-toggle">
-          <button className={view === 'table' ? 'on' : ''} onClick={() => setView('table')}>Table</button>
-          <button className={view === 'cards' ? 'on' : ''} onClick={() => setView('cards')}>Cards</button>
+          <button className={view === 'table' ? 'on' : ''} onClick={() => setView('table')}>
+            Table
+          </button>
+          <button className={view === 'cards' ? 'on' : ''} onClick={() => setView('cards')}>
+            Cards
+          </button>
         </span>
       </div>
 
@@ -146,7 +182,10 @@ export function Leaderboard({ rows }: { rows: BoardRow[] }) {
             <table>
               <thead>
                 <tr>
-                  <th>#</th><th>Bot</th><th>Category</th><th>Integrations</th>
+                  <th>#</th>
+                  <th>Bot</th>
+                  <th>Category</th>
+                  <th>Integrations</th>
                   <th style={{ textAlign: 'right' }}>Copies</th>
                   <th>Source</th>
                   <th style={{ textAlign: 'right' }}>Votes</th>
@@ -156,9 +195,7 @@ export function Leaderboard({ rows }: { rows: BoardRow[] }) {
                 {visible.map((r, pos) => (
                   <tr key={r.slug}>
                     <td className="rank">
-                      {isCanonicalRanking
-                        ? r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank
-                        : pos + 1}
+                      {isCanonicalRanking ? (r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank) : pos + 1}
                     </td>
                     <td>
                       <Link href={`/bots/${r.slug}`} className="bot-cell">
@@ -169,29 +206,47 @@ export function Leaderboard({ rows }: { rows: BoardRow[] }) {
                           </span>
                           <span className="rts">
                             {r.runtimes.map((rt, i) => (
-                              <span key={rt} className={`rt rt-${rt}`}>{r.runtimeBadges[i]}</span>
+                              <span key={rt} className={`rt rt-${rt}`}>
+                                {r.runtimeBadges[i]}
+                              </span>
                             ))}
                           </span>
                         </span>
                       </Link>
                     </td>
-                    <td><span className={`tag tag-${r.category}`}>{r.category}</span></td>
+                    <td>
+                      <span className={`tag tag-${r.category}`}>{r.category}</span>
+                    </td>
                     <td className="ints">
-                      {r.integrations.slice(0, 3).map((i) => <IntegrationIcon key={i} id={i} />)}
+                      {r.integrations.slice(0, 3).map((i) => (
+                        <IntegrationIcon key={i} id={i} />
+                      ))}
                     </td>
                     <td className="num mono">
-                      {r.copies > 0
-                        ? <>{r.copies.toLocaleString('en-US')} <span className="unit">copies</span></>
-                        : <span className="unit">new</span>}
+                      {r.copies > 0 ? (
+                        <>
+                          {r.copies.toLocaleString('en-US')} <span className="unit">copies</span>
+                        </>
+                      ) : (
+                        <span className="unit">new</span>
+                      )}
                     </td>
                     <td className="who mono">@{r.contributor}</td>
-                    <td className="num"><VoteButton slug={r.slug} votes={r.votes} /></td>
+                    <td className="num">
+                      <VoteButton slug={r.slug} votes={r.votes} />
+                    </td>
                   </tr>
                 ))}
                 {visible.length === 0 && (
-                  <tr><td colSpan={7} className="ds" style={{ textAlign: 'center', padding: '1.4rem' }}>
-                    No bots match.
-                  </td></tr>
+                  <tr>
+                    <td
+                      colSpan={7}
+                      className="ds"
+                      style={{ textAlign: 'center', padding: '1.4rem' }}
+                    >
+                      No bots match.
+                    </td>
+                  </tr>
                 )}
               </tbody>
             </table>
@@ -213,8 +268,16 @@ export function Leaderboard({ rows }: { rows: BoardRow[] }) {
               <span className={`tag tag-${r.category}`}>{r.category}</span>
               <span className="ds">{r.description}</span>
               <span className="rstats mono">
-                {r.copies > 0 ? <span><b>{r.copies.toLocaleString('en-US')}</b> copies</span> : <span>new</span>}
-                <span><b>{r.votes}</b> votes</span>
+                {r.copies > 0 ? (
+                  <span>
+                    <b>{r.copies.toLocaleString('en-US')}</b> copies
+                  </span>
+                ) : (
+                  <span>new</span>
+                )}
+                <span>
+                  <b>{r.votes}</b> votes
+                </span>
               </span>
             </Link>
           ))}

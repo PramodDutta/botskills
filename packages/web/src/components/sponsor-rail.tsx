@@ -10,7 +10,12 @@ export function SponsorRail() {
     <aside className="rail" aria-label="Sponsors">
       <div className="rail-head mono">SPONSORS</div>
       {railSponsors.map((s) => (
-        <Link key={s.id} href={s.url} rel={sponsorRel(s.kind)} className={`rail-card${s.slot ? ' is-slot' : ''}`}>
+        <Link
+          key={s.id}
+          href={s.url}
+          rel={sponsorRel(s.kind)}
+          className={`rail-card${s.slot ? ' is-slot' : ''}`}
+        >
           <span className="sq" />
           <span className="rail-txt">
             <span className="rail-name">

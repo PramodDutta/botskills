@@ -116,12 +116,23 @@ async function flushBacklog(sql: Sql, excludeId: number | null): Promise<number>
 }
 
 export async function POST(request: Request) {
-  let name = '', email = '', message = '', placement = 'other', website = '';
+  let name = '',
+    email = '',
+    message = '',
+    placement = 'other',
+    website = '';
   try {
     const b = (await request.json()) as Record<string, unknown>;
-    name = String(b.name ?? '').trim().slice(0, 120);
-    email = String(b.email ?? '').trim().toLowerCase().slice(0, 200);
-    message = String(b.message ?? '').trim().slice(0, 4000);
+    name = String(b.name ?? '')
+      .trim()
+      .slice(0, 120);
+    email = String(b.email ?? '')
+      .trim()
+      .toLowerCase()
+      .slice(0, 200);
+    message = String(b.message ?? '')
+      .trim()
+      .slice(0, 4000);
     website = String(b.website ?? ''); // honeypot
     const p = String(b.placement ?? '');
     if (PLACEMENTS.includes(p)) placement = p;
@@ -131,7 +142,10 @@ export async function POST(request: Request) {
 
   if (website) return NextResponse.json({ ok: true }); // trapped, looks accepted
   if (!name || !message || message.length < 10) {
-    return NextResponse.json({ ok: false, error: 'name and a real message required' }, { status: 400 });
+    return NextResponse.json(
+      { ok: false, error: 'name and a real message required' },
+      { status: 400 },
+    );
   }
   if (!isEmail(email)) {
     return NextResponse.json({ ok: false, error: 'valid email required' }, { status: 400 });

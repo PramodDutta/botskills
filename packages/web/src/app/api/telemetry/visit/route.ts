@@ -11,7 +11,9 @@ export async function POST(request: Request) {
   try {
     const visitorHash = requestFingerprint(request);
     let path = '/';
-    try { path = String(((await request.json()) as { path?: string }).path ?? '/').slice(0, 120); } catch {}
+    try {
+      path = String(((await request.json()) as { path?: string }).path ?? '/').slice(0, 120);
+    } catch {}
     await sql`INSERT INTO visit_events (visitor_hash, path) VALUES (${visitorHash}, ${path})`;
   } catch {}
   return NextResponse.json({ ok: true });

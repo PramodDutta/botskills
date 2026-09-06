@@ -26,32 +26,30 @@ export default function SponsorPage() {
     <main className="wrap detail">
       <h1>Sponsor botskills.sh</h1>
       <p className="sub">
-        Flat monthly slots in front of people actively setting up bots. No CPM, no auction,
-        no minimum spend. One sponsor per category. Every booked slot renders on every
-        matching page load, so you are not sharing a rotation with anyone.
+        Flat monthly slots in front of people actively setting up bots. No CPM, no auction, no
+        minimum spend. One sponsor per category. Every booked slot renders on every matching page
+        load, so you are not sharing a rotation with anyone.
       </p>
 
       <div className="callout">
-        <b>Founding rate.</b> Rail card $99/mo. Marquee logo $29/mo. Promoted row and
-        takeover by conversation. {FOUNDING_SLOTS} founding slots, and the rate is locked
-        for twelve months from the day you take one. It goes up as the audience does. Email{' '}
-        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>{' '}
-        and the slot goes live within a day.
+        <b>Founding rate.</b> Rail card $99/mo. Marquee logo $29/mo. Promoted row and takeover by
+        conversation. {FOUNDING_SLOTS} founding slots, and the rate is locked for twelve months from
+        the day you take one. It goes up as the audience does. Email{' '}
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> and the slot goes live within a day.
       </div>
 
       <h2>Send the message here</h2>
       <p>
-        Tell us which placement and where it should link, and we reply from{' '}
-        {CONTACT_EMAIL}, usually within a day. Everything below is the
-        detail: what each placement is, where it renders, and the impression maths so
-        you can price it yourself. You do not need to read it first.
+        Tell us which placement and where it should link, and we reply from {CONTACT_EMAIL}, usually
+        within a day. Everything below is the detail: what each placement is, where it renders, and
+        the impression maths so you can price it yourself. You do not need to read it first.
       </p>
       <ContactForm />
 
       <h2>What you get, and where it renders</h2>
       <p>
-        This matters more than the price, because the three placements behave differently
-        and one of them only appears on wide screens.
+        This matters more than the price, because the three placements behave differently and one of
+        them only appears on wide screens.
       </p>
       <table>
         <thead>
@@ -64,26 +62,32 @@ export default function SponsorPage() {
         </thead>
         <tbody>
           <tr>
-            <td><b>Rail card</b></td>
             <td>
-              Logo square, name, one line of your copy, your own call to action. The largest
-              unit on the site.
+              <b>Rail card</b>
+            </td>
+            <td>
+              Logo square, name, one line of your copy, your own call to action. The largest unit on
+              the site.
             </td>
             <td>Homepage sponsor column, visible without scrolling on desktop.</td>
             <td className="mono">$99/mo</td>
           </tr>
           <tr>
-            <td><b>Marquee logo</b></td>
+            <td>
+              <b>Marquee logo</b>
+            </td>
             <td>Name in the scrolling strip under the hero. No copy, no CTA.</td>
             <td>Homepage, below the fold on most screens.</td>
             <td className="mono">$29/mo</td>
           </tr>
           <tr>
-            <td><b>Edge card</b></td>
+            <td>
+              <b>Edge card</b>
+            </td>
             <td>Flipping card pinned to the left and right margins.</td>
             <td>
-              <b>Every page</b>, including all {articleCount} articles. Desktop only, at
-              1420px and wider.
+              <b>Every page</b>, including all {articleCount} articles. Desktop only, at 1420px and
+              wider.
             </td>
             <td className="mono">ask</td>
           </tr>
@@ -92,8 +96,8 @@ export default function SponsorPage() {
 
       <h2>Work out the impressions yourself</h2>
       <p>
-        We are not going to hand you a number and ask you to trust it. Here is how each
-        placement counts, taken from how the site is actually built.
+        We are not going to hand you a number and ask you to trust it. Here is how each placement
+        counts, taken from how the site is actually built.
       </p>
       <pre>{`rail card      impressions = homepage pageviews
 marquee logo   impressions = homepage pageviews
@@ -102,17 +106,16 @@ edge card      impressions = sitewide pageviews x share of visitors at 1420px+
 No rotation. Every booked slot renders on every matching page load, so your
 share is 100 percent, not a fraction split with the other sponsors.`}</pre>
       <p>
-        The edge card is the interesting one. It is the only placement that appears on
-        article pages, and the articles are where search traffic lands. It is also the only
-        one gated by screen width, so a mobile-heavy month shows it less. Ask for the
-        current desktop share before buying that one.
+        The edge card is the interesting one. It is the only placement that appears on article
+        pages, and the articles are where search traffic lands. It is also the only one gated by
+        screen width, so a mobile-heavy month shows it less. Ask for the current desktop share
+        before buying that one.
       </p>
 
       <h2>What $99 costs per thousand, at each stage</h2>
       <p>
-        A rail card at $99/mo against homepage traffic. Published developer display rates
-        sit around $3 to $7.50 per thousand impressions, so that is the band worth
-        comparing against.
+        A rail card at $99/mo against homepage traffic. Published developer display rates sit around
+        $3 to $7.50 per thousand impressions, so that is the band worth comparing against.
       </p>
       <table>
         <thead>
@@ -153,68 +156,64 @@ share is 100 percent, not a fraction split with the other sponsors.`}</pre>
 
       <h2>Where the traffic stands today</h2>
       <p>
-        Plainly, because you can check most of it yourself. The site launched on 25 August
-        2026. There are {botCount} bot listings and {articleCount} articles. The sitemap is submitted and
-        Google has read it, and <b>nothing is indexed yet</b>, which is normal at this age
-        and also means the honest impression figure right now is close to zero.
+        Plainly, because you can check most of it yourself. The site launched on 25 August 2026.
+        There are {botCount} bot listings and {articleCount} articles. The sitemap is submitted and
+        Google has read it, and <b>nothing is indexed yet</b>, which is normal at this age and also
+        means the honest impression figure right now is close to zero.
       </p>
       <p>
-        So the founding rate is not a discount on a big number. It is the price of being
-        early on a site that has published <Link href="/blog">{articleCount} articles</Link> aimed at
-        people searching for exactly one thing: how to set a bot up. If that audience
-        arrives, you hold $99 while it does. If it does not, you spent $99 a month and found
-        out cheaply.
+        So the founding rate is not a discount on a big number. It is the price of being early on a
+        site that has published <Link href="/blog">{articleCount} articles</Link> aimed at people
+        searching for exactly one thing: how to set a bot up. If that audience arrives, you hold $99
+        while it does. If it does not, you spent $99 a month and found out cheaply.
       </p>
 
       <h2>What is worth buying at zero traffic</h2>
       <ul>
         <li>
-          <b>Category exclusivity.</b> One sponsor per category, so no competitor sits
-          beside you.
+          <b>Category exclusivity.</b> One sponsor per category, so no competitor sits beside you.
         </li>
         <li>
           <b>The rate lock.</b> Twelve months at $99 regardless of what the audience does.
         </li>
         <li>
           <b>Referral traffic, not SEO.</b> Paid placements carry{' '}
-          <code className="mono">rel=&quot;sponsored&quot;</code> because that is the honest
-          markup, so value the click and not the link.
+          <code className="mono">rel=&quot;sponsored&quot;</code> because that is the honest markup,
+          so value the click and not the link.
         </li>
         <li>
-          <b>Your copy, edited to the site voice</b> and returned for approval before
-          anything goes live.
+          <b>Your copy, edited to the site voice</b> and returned for approval before anything goes
+          live.
         </li>
       </ul>
 
       <h2>How booking works</h2>
       <p>
-        By email, deliberately. There is no checkout to click and no card form on this
-        site. At four founding slots, a payment flow costs more to build and maintain
-        than it saves, and a reply lets us edit your copy to the site voice before
-        anything renders.
+        By email, deliberately. There is no checkout to click and no card form on this site. At four
+        founding slots, a payment flow costs more to build and maintain than it saves, and a reply
+        lets us edit your copy to the site voice before anything renders.
       </p>
       <ol>
         <li>
-          Send the form above, or email{' '}
-          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>{' '}
+          Send the form above, or email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>{' '}
           directly, with the placement you want, your link, and one line of copy.
         </li>
         <li>
-          We reply with the edited copy for your approval, and an invoice. Nothing goes
-          live before you approve the wording.
+          We reply with the edited copy for your approval, and an invoice. Nothing goes live before
+          you approve the wording.
         </li>
         <li>
-          Slot renders within a day of payment clearing. The rate is locked for twelve
-          months from that day.
+          Slot renders within a day of payment clearing. The rate is locked for twelve months from
+          that day.
         </li>
       </ol>
 
       <h2>House rules</h2>
       <p className="sub">
-        No competing directories. No crypto. Nothing we would not put beside our own name.
-        We do not place our own products in paid slots. Slots currently showing projects we
-        like are marked <b>free pick</b> so nobody mistakes them for customers, and if we
-        ever publish a slots-taken counter it will count paid bookings and nothing else.
+        No competing directories. No crypto. Nothing we would not put beside our own name. We do not
+        place our own products in paid slots. Slots currently showing projects we like are marked{' '}
+        <b>free pick</b> so nobody mistakes them for customers, and if we ever publish a slots-taken
+        counter it will count paid bookings and nothing else.
       </p>
     </main>
   );

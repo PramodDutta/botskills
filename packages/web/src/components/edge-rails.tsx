@@ -16,13 +16,16 @@ function EdgeCard({ offset }: { offset: number }) {
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const t = setInterval(() => {
-      setFlip(true);
-      setTimeout(() => {
-        setI((x) => (x + 1) % edgeSponsors.length);
-        setFlip(false);
-      }, 240);
-    }, 6000 + offset * 800);
+    const t = setInterval(
+      () => {
+        setFlip(true);
+        setTimeout(() => {
+          setI((x) => (x + 1) % edgeSponsors.length);
+          setFlip(false);
+        }, 240);
+      },
+      6000 + offset * 800,
+    );
     return () => clearInterval(t);
   }, [offset]);
 
@@ -47,10 +50,14 @@ export function EdgeRails() {
   return (
     <>
       <div className="edge edge-left" aria-hidden="true">
-        <EdgeCard offset={0} /><EdgeCard offset={2} /><EdgeCard offset={4} />
+        <EdgeCard offset={0} />
+        <EdgeCard offset={2} />
+        <EdgeCard offset={4} />
       </div>
       <div className="edge edge-right" aria-hidden="true">
-        <EdgeCard offset={1} /><EdgeCard offset={3} /><EdgeCard offset={5} />
+        <EdgeCard offset={1} />
+        <EdgeCard offset={3} />
+        <EdgeCard offset={5} />
       </div>
     </>
   );

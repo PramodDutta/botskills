@@ -29,79 +29,111 @@ export default async function BotOgImage({ params }: { params: Promise<{ slug: s
   const boundary = clamp(bot?.boundary ?? '', 155);
 
   return new ImageResponse(
-    (
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          padding: 80,
-          background: '#0b0e12',
-          color: '#e8edf2',
-          fontFamily: 'sans-serif',
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        padding: 80,
+        background: '#0b0e12',
+        color: '#e8edf2',
+        fontFamily: 'sans-serif',
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+        <div
+          style={{
+            display: 'flex',
+            width: 48,
+            height: 48,
+            borderRadius: 12,
+            background: '#171c24',
+            position: 'relative',
+          }}
+        >
+          <div
+            style={{
+              position: 'absolute',
+              left: 9,
+              top: 12,
+              width: 9,
+              height: 9,
+              borderRadius: 3,
+              background: '#f0a63b',
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              right: 9,
+              top: 12,
+              width: 9,
+              height: 9,
+              borderRadius: 3,
+              background: '#f0a63b',
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              left: 9,
+              bottom: 9,
+              width: 18,
+              height: 6,
+              borderRadius: 3,
+              background: '#f0a63b',
+            }}
+          />
+        </div>
+        <div style={{ display: 'flex', fontSize: 28, fontWeight: 700 }}>
+          botskills<span style={{ color: '#8b97a3' }}>.sh</span>
+        </div>
+        {category ? (
           <div
             style={{
               display: 'flex',
-              width: 48,
-              height: 48,
-              borderRadius: 12,
-              background: '#171c24',
-              position: 'relative',
+              marginLeft: 'auto',
+              fontSize: 22,
+              color: '#8b97a3',
+              textTransform: 'uppercase',
+              letterSpacing: 2,
             }}
           >
-            <div style={{ position: 'absolute', left: 9, top: 12, width: 9, height: 9, borderRadius: 3, background: '#f0a63b' }} />
-            <div style={{ position: 'absolute', right: 9, top: 12, width: 9, height: 9, borderRadius: 3, background: '#f0a63b' }} />
-            <div style={{ position: 'absolute', left: 9, bottom: 9, width: 18, height: 6, borderRadius: 3, background: '#f0a63b' }} />
-          </div>
-          <div style={{ display: 'flex', fontSize: 28, fontWeight: 700 }}>
-            botskills<span style={{ color: '#8b97a3' }}>.sh</span>
-          </div>
-          {category ? (
-            <div
-              style={{
-                display: 'flex',
-                marginLeft: 'auto',
-                fontSize: 22,
-                color: '#8b97a3',
-                textTransform: 'uppercase',
-                letterSpacing: 2,
-              }}
-            >
-              {category}
-            </div>
-          ) : null}
-        </div>
-
-        <div style={{ display: 'flex', fontSize: 68, fontWeight: 700, marginTop: 44, lineHeight: 1.1 }}>
-          {clamp(name, 60)}
-        </div>
-
-        <div style={{ display: 'flex', fontSize: 28, marginTop: 24, color: '#8b97a3', lineHeight: 1.4 }}>
-          {description}
-        </div>
-
-        {boundary ? (
-          <div
-            style={{
-              display: 'flex',
-              marginTop: 36,
-              paddingTop: 28,
-              borderTop: '2px solid #171c24',
-              fontSize: 24,
-              color: '#f0a63b',
-              lineHeight: 1.4,
-            }}
-          >
-            Boundary: {boundary}
+            {category}
           </div>
         ) : null}
       </div>
-    ),
+
+      <div
+        style={{ display: 'flex', fontSize: 68, fontWeight: 700, marginTop: 44, lineHeight: 1.1 }}
+      >
+        {clamp(name, 60)}
+      </div>
+
+      <div
+        style={{ display: 'flex', fontSize: 28, marginTop: 24, color: '#8b97a3', lineHeight: 1.4 }}
+      >
+        {description}
+      </div>
+
+      {boundary ? (
+        <div
+          style={{
+            display: 'flex',
+            marginTop: 36,
+            paddingTop: 28,
+            borderTop: '2px solid #171c24',
+            fontSize: 24,
+            color: '#f0a63b',
+            lineHeight: 1.4,
+          }}
+        >
+          Boundary: {boundary}
+        </div>
+      ) : null}
+    </div>,
     size,
   );
 }

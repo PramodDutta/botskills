@@ -19,7 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/integrations`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/sponsor`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    ...getIntegrations().map((h) => ({ url: `${base}/integrations/${h.id}`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 })),
+    ...getIntegrations().map((h) => ({
+      url: `${base}/integrations/${h.id}`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
     ...getAllBots().map((b) => ({ url: `${base}/bots/${b.slug}`, lastModified: botMtime(b.slug) })),
     ...postList.map((p) => ({ url: `${base}/blog/${p.slug}`, lastModified: new Date(p.date) })),
   ];

@@ -56,15 +56,35 @@ function demo(id: string, name: string, line: string, cta: string): Sponsor {
   return { id, name, line, cta, url: '/sponsor', kind: 'demo' };
 }
 function openSlot(id: string, line: string): Sponsor {
-  return { id, name: 'Your tool here', line, cta: 'Book this slot', url: '/sponsor', kind: 'sponsor', slot: true };
+  return {
+    id,
+    name: 'Your tool here',
+    line,
+    cta: 'Book this slot',
+    url: '/sponsor',
+    kind: 'sponsor',
+    slot: true,
+  };
 }
 
 export const RAIL_CAP = 8;
 export const MARQUEE_CAP = 8;
 
 export const railSponsors: Sponsor[] = [
-  featured('f1', 'QASkills.sh', 'QA skills your coding agent can install in one command.', 'Browse skills', 'https://qaskills.sh'),
-  featured('f2', 'Rakazo', 'Open-source, self-hosted runtime for the bots in this directory.', 'View the repo', 'https://github.com/elie222/rakazo'),
+  featured(
+    'f1',
+    'QASkills.sh',
+    'QA skills your coding agent can install in one command.',
+    'Browse skills',
+    'https://qaskills.sh',
+  ),
+  featured(
+    'f2',
+    'Rakazo',
+    'Open-source, self-hosted runtime for the bots in this directory.',
+    'View the repo',
+    'https://github.com/elie222/rakazo',
+  ),
   openSlot('s1', 'A card in this rail, visible the whole scroll.'),
 ];
 
@@ -77,10 +97,34 @@ export const marqueeSponsors: Sponsor[] = [
 ];
 
 export const edgeSponsors: Sponsor[] = [
-  featured('e1', 'QASkills.sh', 'Installable QA skills for coding agents.', 'Browse', 'https://qaskills.sh'),
-  featured('e2', 'Rakazo', 'Self-host the runtime, own the credentials.', 'Repo', 'https://github.com/elie222/rakazo'),
-  featured('e3', 'OpenMausBot', 'Apache-2.0 desktop alternative with portable teams.', 'Repo', 'https://github.com/milind-soni/OpenMausBot'),
-  featured('e4', 'EvalDog', 'Evals for the prompts your bots run on.', 'Try it', 'https://evaldog.com'),
+  featured(
+    'e1',
+    'QASkills.sh',
+    'Installable QA skills for coding agents.',
+    'Browse',
+    'https://qaskills.sh',
+  ),
+  featured(
+    'e2',
+    'Rakazo',
+    'Self-host the runtime, own the credentials.',
+    'Repo',
+    'https://github.com/elie222/rakazo',
+  ),
+  featured(
+    'e3',
+    'OpenMausBot',
+    'Apache-2.0 desktop alternative with portable teams.',
+    'Repo',
+    'https://github.com/milind-soni/OpenMausBot',
+  ),
+  featured(
+    'e4',
+    'EvalDog',
+    'Evals for the prompts your bots run on.',
+    'Try it',
+    'https://evaldog.com',
+  ),
   openSlot('e6', 'Edge card on every page.'),
 ];
 

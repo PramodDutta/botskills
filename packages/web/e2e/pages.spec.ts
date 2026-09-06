@@ -1,9 +1,23 @@
 import { test, expect } from '@playwright/test';
 
 const PAGES = [
-  '/', '/bots', '/blog', '/grok-bot', '/rakazo', '/agents', '/sponsor', '/contact',
-  '/signup', '/grok-bot-facts', '/llms.txt', '/robots.txt', '/sitemap.xml', '/opengraph-image',
-  '/integrations', '/integrations/gmail', '/integrations/stripe',
+  '/',
+  '/bots',
+  '/blog',
+  '/grok-bot',
+  '/rakazo',
+  '/agents',
+  '/sponsor',
+  '/contact',
+  '/signup',
+  '/grok-bot-facts',
+  '/llms.txt',
+  '/robots.txt',
+  '/sitemap.xml',
+  '/opengraph-image',
+  '/integrations',
+  '/integrations/gmail',
+  '/integrations/stripe',
 ];
 
 test.describe('every top level page renders', () => {
@@ -14,7 +28,10 @@ test.describe('every top level page renders', () => {
     });
   }
 
-  test('the sponsor page quotes the live catalogue count, not a typed number', async ({ page, request }) => {
+  test('the sponsor page quotes the live catalogue count, not a typed number', async ({
+    page,
+    request,
+  }) => {
     const total = (await (await request.get('/api/bots')).json()).total as number;
     await page.goto('/sponsor');
     await expect(page.getByText(`There are ${total} bot listings`)).toBeVisible();

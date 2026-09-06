@@ -23,27 +23,73 @@ export interface IntegrationHub {
 }
 
 const NAMES: Record<string, string> = {
-  gmail: 'Gmail', slack: 'Slack', github: 'GitHub', x: 'X', notion: 'Notion',
-  'google-calendar': 'Google Calendar', 'google-drive': 'Google Drive', sheets: 'Google Sheets',
-  'google-sheets': 'Google Sheets', 'google-docs': 'Google Docs', 'google-slides': 'Google Slides',
-  'google-search': 'Google Search', 'google-trends': 'Google Trends', stripe: 'Stripe',
-  intercom: 'Intercom', airtable: 'Airtable', sentry: 'Sentry', linear: 'Linear',
-  salesforce: 'Salesforce', youtube: 'YouTube', quickbooks: 'QuickBooks', hubspot: 'HubSpot',
-  linkedin: 'LinkedIn', 'sales-navigator': 'LinkedIn Sales Navigator', gong: 'Gong',
-  granola: 'Granola', zendesk: 'Zendesk', zoom: 'Zoom', figma: 'Figma', jira: 'Jira',
-  discord: 'Discord', posthog: 'PostHog', screenshotone: 'ScreenshotOne', webflow: 'Webflow',
-  outlook: 'Outlook', plaid: 'Plaid', 'yahoo-finance': 'Yahoo Finance',
-  'podcast-rss-feeds': 'Podcast RSS feeds', glean: 'Glean', snowflake: 'Snowflake',
-  'help-scout': 'Help Scout', telegram: 'Telegram', 'hacker-news': 'Hacker News',
-  reddit: 'Reddit', amazon: 'Amazon', agentmail: 'AgentMail', feedhive: 'FeedHive',
-  costco: 'Costco', whatsapp: 'WhatsApp', shopify: 'Shopify',
+  gmail: 'Gmail',
+  slack: 'Slack',
+  github: 'GitHub',
+  x: 'X',
+  notion: 'Notion',
+  'google-calendar': 'Google Calendar',
+  'google-drive': 'Google Drive',
+  sheets: 'Google Sheets',
+  'google-sheets': 'Google Sheets',
+  'google-docs': 'Google Docs',
+  'google-slides': 'Google Slides',
+  'google-search': 'Google Search',
+  'google-trends': 'Google Trends',
+  stripe: 'Stripe',
+  intercom: 'Intercom',
+  airtable: 'Airtable',
+  sentry: 'Sentry',
+  linear: 'Linear',
+  salesforce: 'Salesforce',
+  youtube: 'YouTube',
+  quickbooks: 'QuickBooks',
+  hubspot: 'HubSpot',
+  linkedin: 'LinkedIn',
+  'sales-navigator': 'LinkedIn Sales Navigator',
+  gong: 'Gong',
+  granola: 'Granola',
+  zendesk: 'Zendesk',
+  zoom: 'Zoom',
+  figma: 'Figma',
+  jira: 'Jira',
+  discord: 'Discord',
+  posthog: 'PostHog',
+  screenshotone: 'ScreenshotOne',
+  webflow: 'Webflow',
+  outlook: 'Outlook',
+  plaid: 'Plaid',
+  'yahoo-finance': 'Yahoo Finance',
+  'podcast-rss-feeds': 'Podcast RSS feeds',
+  glean: 'Glean',
+  snowflake: 'Snowflake',
+  'help-scout': 'Help Scout',
+  telegram: 'Telegram',
+  'hacker-news': 'Hacker News',
+  reddit: 'Reddit',
+  amazon: 'Amazon',
+  agentmail: 'AgentMail',
+  feedhive: 'FeedHive',
+  costco: 'Costco',
+  whatsapp: 'WhatsApp',
+  shopify: 'Shopify',
 };
 
 export function integrationName(id: string): string {
-  return NAMES[id] ?? id.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
+  return (
+    NAMES[id] ??
+    id
+      .split('-')
+      .map((w) => w[0].toUpperCase() + w.slice(1))
+      .join(' ')
+  );
 }
 
-const tokens = (s: string) => s.toLowerCase().split(/[^a-z0-9+]+/).filter(Boolean);
+const tokens = (s: string) =>
+  s
+    .toLowerCase()
+    .split(/[^a-z0-9+]+/)
+    .filter(Boolean);
 
 // Token sequences that count as naming the tool. Whole tokens only, so "x"
 // never matches "linux" and "search" alone never matches everything.
@@ -80,7 +126,12 @@ export function getIntegrations(): IntegrationHub[] {
         const hay = [...tokens(p.slug), ...tokens(p.title)];
         return seqs.some((s) => hasSeq(hay, s));
       })
-      .map((p) => ({ slug: p.slug, title: p.title, description: p.description, category: p.category }));
+      .map((p) => ({
+        slug: p.slug,
+        title: p.title,
+        description: p.description,
+        category: p.category,
+      }));
     // A hub with one bot and no article is a thin page; leave it out until it
     // has something to say.
     if (bots.length < 2 && posts.length < 1) continue;

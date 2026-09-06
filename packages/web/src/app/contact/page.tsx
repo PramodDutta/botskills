@@ -14,26 +14,26 @@ export default function ContactPage() {
     <main className="wrap detail">
       <h1>Contact</h1>
       <p className="sub">
-        One mailbox, read by a person. Sponsorship, a correction to something we
-        published, a bot you want listed, or a question about how any of this works.
+        One mailbox, read by a person. Sponsorship, a correction to something we published, a bot
+        you want listed, or a question about how any of this works.
       </p>
 
       <div className="callout">
-        <b>Found something wrong in an article?</b> Say so here and it gets fixed. Product
-        facts move, and a page that was right in August can be wrong by October. We would
-        rather hear it from you than leave it up.
+        <b>Found something wrong in an article?</b> Say so here and it gets fixed. Product facts
+        move, and a page that was right in August can be wrong by October. We would rather hear it
+        from you than leave it up.
       </div>
 
       <h2>Things that are faster elsewhere</h2>
       <ul>
         <li>
           Submitting a bot: open a pull request against{' '}
-          <a href="https://github.com/PramodDutta/botskills">the repository</a>, since a
-          bot is one file and a PR is quicker than a thread.
+          <a href="https://github.com/PramodDutta/botskills">the repository</a>, since a bot is one
+          file and a PR is quicker than a thread.
         </li>
         <li>
-          Sponsorship details and prices: <Link href="/sponsor">the sponsor page</Link>{' '}
-          has the placements, the maths, and what each one costs.
+          Sponsorship details and prices: <Link href="/sponsor">the sponsor page</Link> has the
+          placements, the maths, and what each one costs.
         </li>
         <li>
           What the site actually holds: <Link href="/bots">the catalogue</Link> and{' '}

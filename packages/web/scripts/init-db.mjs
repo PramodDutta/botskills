@@ -4,8 +4,8 @@ import { neon } from '@neondatabase/serverless';
 if (!process.env.DATABASE_URL) { console.error('DATABASE_URL not set'); process.exit(1); }
 const sql = neon(process.env.DATABASE_URL);
 
-// driver 0.10: neon() is a tagged-template function only; no .query method.
-const run = (frag) => sql(frag);
+// driver 0.10: neon() is a tagged-template function that also accepts a plain
+// SQL string, which is how the statements below are executed.
 const stmts = [
   `CREATE TABLE IF NOT EXISTS bots (
     id uuid PRIMARY KEY DEFAULT gen_random_uuid(),

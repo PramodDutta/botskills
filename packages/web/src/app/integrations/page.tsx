@@ -16,8 +16,8 @@ export default function IntegrationsPage() {
     <main className="wrap detail">
       <h1>Grok Bot integrations</h1>
       <p className="sub">
-        {hubs.length} tools, each with the bots that connect to it and the guides that cover
-        setting it up safely. Every bot declares the one action it never takes without you.
+        {hubs.length} tools, each with the bots that connect to it and the guides that cover setting
+        it up safely. Every bot declares the one action it never takes without you.
       </p>
       <div className="pills">
         {hubs.map((h) => (
@@ -35,7 +35,9 @@ export default function IntegrationsPage() {
           <br />
           <span className="ds">
             {h.bots.length} {h.bots.length === 1 ? 'bot' : 'bots'}
-            {h.posts.length > 0 ? `, ${h.posts.length} ${h.posts.length === 1 ? 'guide' : 'guides'}` : ''}
+            {h.posts.length > 0
+              ? `, ${h.posts.length} ${h.posts.length === 1 ? 'guide' : 'guides'}`
+              : ''}
           </span>
         </p>
       ))}
