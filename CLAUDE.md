@@ -72,12 +72,18 @@ other backends.
   (src/lib/telemetry-counts.ts); zero renders as "new", never as a count.
   Counts on /sponsor derive from the catalogue and the post registry. Never
   hardcode a scarcity counter or a page count anywhere.
-- **Platform facts moved on 2026-09-04**: Grok Bot has Linux desktop and
-  Android apps; iPad is still unsupported; the phone app can approve, pause
-  and take over the computer but cannot edit routines or read run history.
-  Read the dated CORRECTION section at the bottom of
-  docs/seo/VERIFIED-FACTS-2026-08-25.md, not the Platforms section above it.
-  `python3 scripts/factsweep.py` flags the old claim, not the new one.
+- **Facts move; the newest facts file governs**: read
+  `docs/seo/VERIFIED-FACTS-2026-09-23.md` before writing or editing any
+  article. It supersedes the older files where they differ. As of 23 Sept:
+  every paid Cursor plan includes Grok Bot (Pro $20 is the cheapest paid
+  path); individual SuperGrok, SuperGrok Plus, SuperGrok Heavy and X
+  Premium+ can be linked (permanent, never stacks); there is no per-Bot
+  spend cap but an account On-demand monthly limit exists; desktop apps on
+  macOS, Windows and Linux, phone apps on iPhone and Android, and the iOS
+  app runs on iPad; the phone shows run history and can delete a routine,
+  only editing and testing need desktop; Enterprise has audit logs and
+  Action Recording, individuals and self-serve Teams have no audit view.
+  `python3 scripts/factsweep.py` flags the old claims.
 - **Rollback**: every production state worth returning to is an entry in
   `rollback.empty` at the repo root (date, commit, backup branch, Vercel
   deployment URL, and a curl that proves the state). docs/ROLLBACK.md is the

@@ -1,0 +1,512 @@
+{
+ "wave": "wave-3",
+ "date": "2026-09-23",
+ "source": "GSC 28d to 2026-09-23 + docs changes read 2026-09-23",
+ "articles": [
+  {
+   "slug": "grok-bot-not-responding",
+   "title": "Grok Bot Not Responding? Waiting on You, Busy, or Out of Usage",
+   "category": "Guide",
+   "queries": [
+    "grok bot not responding",
+    "grok bot stopped responding",
+    "grok bot failed to respond",
+    "grok bot not replying",
+    "grok bot unresponsive",
+    "grok bot stopped working"
+   ],
+   "angle": "Diagnose silence from the Bot you are chatting with, symptom first: the attention states (Needs attention vs Unread activity vs working), the four things a Bot waits on (question, approval, login/CAPTCHA, secret request), one computer-use task per screen, usage exhausted or on-demand limit reached, routines paused after a long absence. Distinct from grok-bot-stalled (which is about restarting a half-finished job without doubling writes): this page is about why nothing comes back to you at all.",
+   "bots": [
+    "stuck-bot-foreman",
+    "vm-overwatch"
+   ],
+   "blogs": [
+    "grok-bot-stalled",
+    "grok-bot-troubleshooting"
+   ]
+  },
+  {
+   "slug": "grok-bot-cant-reach-computer",
+   "title": "Grok Bot Cannot Reach Your Computer: Recover It Without Losing Files",
+   "category": "Tutorial",
+   "queries": [
+    "grok bot cant reach your computer",
+    "grok bot not connecting",
+    "grok bot computer unreachable",
+    "recover grok bot computer"
+   ],
+   "angle": "The unreachable-computer error walked step by step in the documented least-destructive order (Retry, restart app, Recover computer from the error state, Update, wait, Reset last), with what each step preserves. Include the phone path (Settings -> Bot -> Bot Computer). A worked incident with timestamps.",
+   "bots": [
+    "vm-overwatch",
+    "stuck-bot-foreman"
+   ],
+   "blogs": [
+    "grok-bot-troubleshooting",
+    "grok-bot-shared-computer-security"
+   ]
+  },
+  {
+   "slug": "grok-bot-reset-vs-update-computer",
+   "title": "Reset, Update or Recover: What Each Does to the Grok Bot Computer",
+   "category": "Reference",
+   "queries": [
+    "grok bot reset",
+    "grok bot reset computer",
+    "update grok bot computer",
+    "grok bot update computer"
+   ],
+   "angle": "A decision reference for the three computer controls plus the separate app update: what each keeps (durable files, logins), what Reset can lose (recent unsynced work since the last snapshot), where each control lives (error state vs Settings -> Updates vs phone), and a pre-reset checklist to move anything unsynced into durable storage first.",
+   "bots": [
+    "vm-overwatch",
+    "persistent-bot-memory"
+   ],
+   "blogs": [
+    "grok-bot-troubleshooting",
+    "grok-bot-one-computer-many-screens"
+   ]
+  },
+  {
+   "slug": "is-grok-bot-down",
+   "title": "Is Grok Bot Down or Just Slow? Checks Before You Wait It Out",
+   "category": "Guide",
+   "queries": [
+    "grok bot status",
+    "grok bot is slow",
+    "grok bot overloaded",
+    "is grok bot down",
+    "grok bot error"
+   ],
+   "angle": "Separate a service problem from the local causes that look like one: one computer-use task per screen, computer setting up or updating, usage exhausted, a site blocking automation, a routine paused for inactivity. Point to the \"Check system status\" link on Cursor help pages without inventing a URL. What to record while you wait so a support ticket is useful.",
+   "bots": [
+    "vm-overwatch",
+    "latency-investigator"
+   ],
+   "blogs": [
+    "grok-bot-troubleshooting",
+    "grok-bot-weekly-allowance"
+   ]
+  },
+  {
+   "slug": "grok-bot-attachment-limits",
+   "title": "Grok Bot Attachment Limits: 25 MB, Six Files, and Formats That Fail",
+   "category": "Reference",
+   "queries": [
+    "grok bot attachment",
+    "grok bot file upload",
+    "grok bot cannot read file",
+    "grok bot file size limit"
+   ],
+   "angle": "Every documented attachment limit (25 MB, 200 MB video, six at once on desktop, no encrypted or password-protected files, upload must finish) and the export-to-PDF/CSV/text/image workaround, plus the phone share sheet difference (iPhone accepts photo/file/link/text, Android text only). When a file belongs on the shared computer instead of in chat.",
+   "bots": [
+    "bug-repro-pack-builder",
+    "expense-reconciler"
+   ],
+   "blogs": [
+    "grok-bot-cannot-see-files",
+    "grok-bot-troubleshooting"
+   ]
+  },
+  {
+   "slug": "grok-bot-support-request-id",
+   "title": "Before You Contact Grok Bot Support: The Request ID and Six More Details",
+   "category": "Tutorial",
+   "queries": [
+    "grok bot support",
+    "grok bot request id",
+    "grok bot bug report",
+    "contact grok bot support"
+   ],
+   "angle": "The seven documented details support needs, where each one lives in the app (Copy request ID on error notices, version in the account menu), what never to include, and a copy-paste report template. Show why \"it is not working\" gets closed and a timestamped report with a request ID gets fixed.",
+   "bots": [
+    "bug-repro-pack-builder",
+    "tickets-to-changelog"
+   ],
+   "blogs": [
+    "grok-bot-troubleshooting",
+    "grok-bot-bug-reproduction"
+   ]
+  },
+  {
+   "slug": "grok-bot-on-demand-monthly-limit",
+   "title": "Grok Bot On-Demand Monthly Limit: The Spend Ceiling You Can Set",
+   "category": "Tutorial",
+   "queries": [
+    "grok bot spend cap",
+    "grok bot on-demand usage limit",
+    "grok bot monthly limit",
+    "grok bot billing",
+    "grok bot quota"
+   ],
+   "angle": "The account-level On-demand monthly limit, set in Grok Bot Settings or at cursor.com/dashboard -> Spending -> Monthly Limit; how Weekly usage drains first; why it is not a per-Bot cap (no separate Grok Bot spend cap exists) so charters and routine cadence still matter; Teams have on-demand enabled by default. Correct the widespread \"there is no spend cap\" claim explicitly.",
+   "bots": [
+    "subscription-pruner",
+    "personal-cfo"
+   ],
+   "blogs": [
+    "grok-bot-on-demand-usage",
+    "grok-bot-weekly-allowance"
+   ]
+  },
+  {
+   "slug": "link-supergrok-to-grok-bot",
+   "title": "Link SuperGrok or X Premium+ to Grok Bot: A Permanent Link That Does Not Stack",
+   "category": "Tutorial",
+   "queries": [
+    "link supergrok grok bot",
+    "supergrok grok bot",
+    "x premium grok bot",
+    "does supergrok include grok bot"
+   ],
+   "angle": "The linking flow (Link Grok Account, finish in browser, Finished Linking? Refresh My Status), which subscriptions qualify (individual SuperGrok, Plus, Heavy, X Premium+; not Lite, not Team/Enterprise), that the link is permanent and cannot move accounts, that it never stacks with a Cursor plan, and the 24-hour tier refresh. The one-minute check to run before clicking link.",
+   "bots": [
+    "subscription-cancellation-advisor",
+    "personal-cfo"
+   ],
+   "blogs": [
+    "grok-bot-both-subscriptions",
+    "grok-bot-free-trial"
+   ]
+  },
+  {
+   "slug": "cancel-grok-bot-trial",
+   "title": "Cancel the Grok Bot Trial, and the iPhone Trial That Is Not the Same Thing",
+   "category": "Tutorial",
+   "queries": [
+    "cancel grok bot trial",
+    "grok bot free trial",
+    "grok bot trial ended",
+    "grok bot trial ran out"
+   ],
+   "angle": "Two different trials: the Grok Bot usage-credit trial (7-day window, never becomes paid, Cancel Trial removes remaining credit, cannot be reclaimed, used credit not restored) versus an Apple App Store intro offer that becomes a paid Apple subscription unless cancelled in Apple ID. Android has no in-app trial. Why a single long job can consume the whole credit.",
+   "bots": [
+    "subscription-cancellation-advisor",
+    "subscription-pruner"
+   ],
+   "blogs": [
+    "grok-bot-free-trial",
+    "grok-bot-on-demand-usage"
+   ]
+  },
+  {
+   "slug": "grok-bot-privacy",
+   "title": "Grok Bot Privacy: What Is Stored, What Trains, and What Every Bot Can See",
+   "category": "Safety",
+   "queries": [
+    "grok bot privacy",
+    "grok bot data privacy",
+    "grokbot privacy",
+    "grok bot privacy policy",
+    "does grok bot train on my data"
+   ],
+   "angle": "Three layers a privacy question actually has: what Cursor stores (cloud storage required, Legacy Privacy Mode unsupported), what trains (follows Cursor account settings; team Privacy Mode means no training; ZDR per provider agreements with abuse-classifier caveat), and what your own Bots can see (everything on the one shared computer). Plus deletion: Hide vs Delete, files that survive, DPA 30 days.",
+   "bots": [
+    "email-injection-sentinel",
+    "mail-cleanup-assistant"
+   ],
+   "blogs": [
+    "grok-bot-privacy-mode",
+    "grok-bot-shared-computer-security"
+   ]
+  },
+  {
+   "slug": "is-grok-bot-hipaa-compliant",
+   "title": "Is Grok Bot HIPAA Compliant? What the Docs Certify and What They Do Not",
+   "category": "Safety",
+   "queries": [
+    "is grok bot hipaa compliant",
+    "grok bot hipaa",
+    "grok bot healthcare",
+    "grok bot phi"
+   ],
+   "angle": "Answer precisely: the docs list ISO/IEC 27001 and ISO/IEC 42001 and no HIPAA attestation or BAA; computers run in the US but Cursor residency program does not apply by default; so do not put PHI in until your compliance owner gets a written answer from the account team. What a regulated team can still do with non-PHI work. Never claim it is or is not compliant; say what is documented.",
+   "bots": [
+    "source-verifier",
+    "citation-checker"
+   ],
+   "blogs": [
+    "grok-bot-regulated-industries",
+    "compliance-and-ai-agents"
+   ]
+  },
+  {
+   "slug": "grok-bot-security-review",
+   "title": "Grok Bot Security Review: ISO 27001, ISO 42001 and the Questions Procurement Asks",
+   "category": "Reference",
+   "queries": [
+    "grok trust center",
+    "grok bot security",
+    "grok bot iso 27001",
+    "grok bot security questionnaire"
+   ],
+   "angle": "A procurement-ready answer sheet: certifications and trust.cursor.com, per-user Firecracker isolation, hosting (Cursor-hosted only, US, no on-prem), data retention and backups, model handling (no picker, serving mix changes), audit logs and Action Recording (Enterprise), network controls and egress, and the questions the docs tell you to take to the account team. Table-heavy.",
+   "bots": [
+    "trust-center-deal-desk",
+    "source-verifier"
+   ],
+   "blogs": [
+    "how-to-answer-security-questionnaires",
+    "grok-bot-shared-computer-security"
+   ]
+  },
+  {
+   "slug": "grok-bot-user-isolation",
+   "title": "How Grok Bot Isolates Users: One MicroVM Each, Shared by Every Bot You Run",
+   "category": "Safety",
+   "queries": [
+    "grok bot isolation",
+    "grok bot sandbox",
+    "grok bot firecracker",
+    "grok bot separate computer per bot"
+   ],
+   "angle": "The two boundaries stated side by side: between users, a dedicated Firecracker microVM with its own kernel and memory; within one user, no boundary between Bots. The documented fix when a workload needs its own credentials: give it its own Cursor user. What that means for agencies and client work.",
+   "bots": [
+    "vm-overwatch",
+    "fleet-chief-of-staff"
+   ],
+   "blogs": [
+    "grok-bot-one-computer-many-screens",
+    "grok-bot-for-agencies-isolation"
+   ]
+  },
+  {
+   "slug": "grok-bot-audit-logs",
+   "title": "Grok Bot Audit Logs and Action Recording: What Enterprise Records",
+   "category": "Reference",
+   "queries": [
+    "grok bot audit log",
+    "grok bot action recording",
+    "grok bot logging",
+    "grok bot opentelemetry"
+   ],
+   "angle": "The two pipelines (Audit logs vs Action Recording), exactly what each records and scrubs, the 90-day retention, OpenTelemetry Export tagged cursor.surface=grok_bot, that both are Enterprise only and Action Recording is off by default, and that individuals and self-serve Teams still have no audit view so they must keep their own receipts.",
+   "bots": [
+    "claim-provenance-tracker",
+    "what-did-we-promise"
+   ],
+   "blogs": [
+    "grok-bot-no-audit-log-yet",
+    "bot-observability"
+   ]
+  },
+  {
+   "slug": "grok-bot-local-computer-execution",
+   "title": "Let Grok Bot Run Commands on Your Laptop? Ask Every Time, Always, or Never",
+   "category": "Safety",
+   "queries": [
+    "grok bot local computer",
+    "grok bot run commands on my computer",
+    "execution on local computer",
+    "grok bot local files"
+   ],
+   "angle": "The Execution on Local Computer setting itself: the three choices, the default (Ask every time), the first-run prompt and that Always allow or Never apply to every Bot, per-computer settings once registered, the team cap, and why the docs recommend Never allow unless there is a specific reason. Distinct from local-computer-approvals-are-not-undo, which is about recovery after an approved action.",
+   "bots": [
+    "codebase-hardening-auditor",
+    "pr-review-sentinel"
+   ],
+   "blogs": [
+    "local-computer-approvals-are-not-undo",
+    "least-privilege-bots"
+   ]
+  },
+  {
+   "slug": "grok-bot-auto-review-rules",
+   "title": "Grok Bot Auto Review Rules: Ask First, Allow Automatically, and Which Wins",
+   "category": "Tutorial",
+   "queries": [
+    "grok bot auto review",
+    "grok bot ask first",
+    "grok bot approval rules",
+    "grok bot allow automatically"
+   ],
+   "angle": "The rule system mechanics: where the table lives, Ask first vs Allow automatically semantics, precedence, locked team rules and why personal rules can only tighten, that rules follow your account across desktops and onto the computer, that Auto Review is model-based so it complements least privilege. Five narrow rules worth copying and three broad ones to avoid. Distinct from how-to-set-grok-bot-approvals (which actions to park).",
+   "bots": [
+    "email-injection-sentinel",
+    "pr-review-sentinel"
+   ],
+   "blogs": [
+    "how-to-set-grok-bot-approvals",
+    "grok-bot-approval-rules-reversibility"
+   ]
+  },
+  {
+   "slug": "grok-bot-secret-requests",
+   "title": "Give Grok Bot a Password Without Pasting It: Takeover, Secret Requests, Forms",
+   "category": "Safety",
+   "queries": [
+    "grok bot password",
+    "grok bot 2fa",
+    "grok bot login",
+    "grok bot credentials safely"
+   ],
+   "angle": "The three documented ways to hand over a sensitive value and when each applies: take over the computer (passwords, passkeys, 2FA, CAPTCHA, payment), a secure secret request for a supported connection (masked, excluded from transcript, not shown to the model, not a password manager), and forms in chat for typed page fields. The one thing never to do: paste it into chat.",
+   "bots": [
+    "email-injection-sentinel",
+    "mail-cleanup-assistant"
+   ],
+   "blogs": [
+    "bots-and-1password",
+    "credential-hygiene-for-bots"
+   ]
+  },
+  {
+   "slug": "grok-bot-hardware-security-key",
+   "title": "Grok Bot and Hardware Security Keys: Using a YubiKey on the Cloud Browser",
+   "category": "Tutorial",
+   "queries": [
+    "grok bot yubikey",
+    "grok bot security key",
+    "grok bot passkey",
+    "grok bot hardware key"
+   ],
+   "angle": "How a key plugged into your desktop reaches the Bot browser (Settings -> General -> Security Key), defaults (on for macOS and Windows, not yet on Linux), that every use asks for approval, and how this changes which accounts are safe to leave signed in on the shared computer.",
+   "bots": [
+    "email-injection-sentinel",
+    "vm-overwatch"
+   ],
+   "blogs": [
+    "grok-bot-2fa-prompt",
+    "credential-hygiene-for-bots"
+   ]
+  },
+  {
+   "slug": "grok-bot-private-network-access",
+   "title": "Reach Private Networks From Grok Bot: Desktop Egress, Tailscale, Cloudflare Tunnel",
+   "category": "Tutorial",
+   "queries": [
+    "grok bot vpn",
+    "grok bot private network",
+    "grok bot internal tools",
+    "grok bot tailscale"
+   ],
+   "angle": "Why a Bot cannot see your intranet by default (shared static egress), the two documented ways in (Route egress through this desktop per member; Enterprise Team Setup installing Tailscale or Cloudflare Tunnel), what each changes about the IP a service sees, the admin kill switch (Allow Local Egress, routes stop within five minutes), and the credential rule for setup scripts.",
+   "bots": [
+    "latency-investigator",
+    "engineering-agent-manager"
+   ],
+   "blogs": [
+    "grok-bot-static-egress-ip",
+    "least-privilege-bots"
+   ]
+  },
+  {
+   "slug": "grok-bot-admin-controls",
+   "title": "Grok Bot Admin Controls: The Switches to Set Before You Roll Out",
+   "category": "Reference",
+   "queries": [
+    "grok bot admin",
+    "grok bot enterprise controls",
+    "grok bot team settings",
+    "cursor dashboard grok bot"
+   ],
+   "angle": "Every control on the admin Grok Bot page in rollout order, with default and plan (Teams vs Enterprise) in a table: enable and group access, Cloud Agents, public template sharing, connector policy, local execution cap, team rules, Enforce Auto-review, team rules, network controls, audit and recording. The recommended secure baseline from the docs as a checklist.",
+   "bots": [
+    "engineering-agent-manager",
+    "fleet-chief-of-staff"
+   ],
+   "blogs": [
+    "grok-bot-enterprise-waitlist",
+    "how-to-answer-security-questionnaires"
+   ]
+  },
+  {
+   "slug": "grok-bot-voice-chat",
+   "title": "Talk to Grok Bot: Dictation, Voice Chat and Voice Memos",
+   "category": "Tutorial",
+   "queries": [
+    "grok bot voice",
+    "grok bot voice chat",
+    "grok bot dictation",
+    "talk to grok bot"
+   ],
+   "angle": "The three voice paths (dictation into the composer, live voice chat, voice memos from a Bot), where each lives on desktop and phone (Cmd/Ctrl+D, Start voice input, Start dictation, Start voice chat has no keybinding), and when speaking is the wrong input: approvals, anything with a number, anything irreversible.",
+   "bots": [
+    "crm-from-your-phone",
+    "meeting-prep-brief"
+   ],
+   "blogs": [
+    "grok-bot-iphone-app",
+    "grok-bot-android-status"
+   ]
+  },
+  {
+   "slug": "grok-bot-two-accounts",
+   "title": "Two Cursor Accounts in Grok Bot: The Only Real Credential Boundary",
+   "category": "Safety",
+   "queries": [
+    "grok bot switch account",
+    "grok bot multiple accounts",
+    "grok bot work and personal",
+    "grok bot separate accounts"
+   ],
+   "angle": "The docs say separate Bots are not a boundary and give the real one: its own Cursor user. How Switch account and Add account work on desktop, what a second account costs (its own plan and usage), and which workloads justify it (client work, a regulated project, a shared team login).",
+   "bots": [
+    "fleet-chief-of-staff",
+    "chief-of-staff"
+   ],
+   "blogs": [
+    "move-grok-bot-work-from-personal-to-work",
+    "how-to-isolate-grok-bot-credentials"
+   ]
+  },
+  {
+   "slug": "grok-bot-cloud-agents-delegation",
+   "title": "When Grok Bot Hands Coding to Cursor Cloud Agents",
+   "category": "Guide",
+   "queries": [
+    "grok bot cloud agents",
+    "grok bot coding",
+    "grok bot delegate code",
+    "grok bot cursor agent"
+   ],
+   "angle": "What the documented delegation is (Bots delegating coding tasks to Cursor Cloud Agents on separate computers under existing Cloud Agent controls), the team-wide admin switch (on by default), why a separate computer matters for the shared-credential problem, and when to turn it off.",
+   "bots": [
+    "engineering-agent-manager",
+    "pr-review-sentinel"
+   ],
+   "blogs": [
+    "grok-bot-vs-cursor-background-agent",
+    "bot-delegation-playbook"
+   ]
+  },
+  {
+   "slug": "hide-or-duplicate-a-grok-bot",
+   "title": "Hide, Duplicate or Delete a Grok Bot: Pick the One You Can Undo",
+   "category": "Guide",
+   "queries": [
+    "grok bot hide",
+    "grok bot duplicate",
+    "grok bot delete",
+    "archive grok bot"
+   ],
+   "angle": "Three ways to get a Bot out of the way, ranked by reversibility: Hide (keeps work, the docs recommend it when you may need the work later), Duplicate (copy a working setup before experimenting), Delete (removes profile, conversation and routines immediately; files and logins on the computer remain). A pre-delete checklist.",
+   "bots": [
+    "fleet-chief-of-staff",
+    "chief-of-staff-router"
+   ],
+   "blogs": [
+    "delete-a-grok-bot-safely",
+    "grok-bot-retirement"
+   ]
+  },
+  {
+   "slug": "grok-bot-draft-cards",
+   "title": "Grok Bot Draft Cards: Review the Email Before It Leaves",
+   "category": "Tutorial",
+   "queries": [
+    "grok bot failed to send",
+    "grok bot send email",
+    "grok bot new email card",
+    "grok bot slack message"
+   ],
+   "angle": "The New Email and New Slack Message cards (Send Email / Send Message / Discard) and the chat page guidance on reviewing a draft before it is sent; how a card differs from an approval; what to check on the card; and how to pair it with an Ask first rule for external email so a send can never skip the review.",
+   "bots": [
+    "inbox-triage",
+    "call-follow-up-drafter"
+   ],
+   "blogs": [
+    "grok-bot-cannot-send-email",
+    "how-to-set-grok-bot-approvals"
+   ]
+  }
+ ]
+}

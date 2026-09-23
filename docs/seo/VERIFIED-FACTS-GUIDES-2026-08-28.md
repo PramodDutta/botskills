@@ -1,3 +1,5 @@
+> **Superseded in part on 2026-09-23.** Read `docs/seo/VERIFIED-FACTS-2026-09-23.md` first: pricing, SuperGrok and X Premium+ linking, the on-demand monthly limit, iPad, phone run history and Enterprise audit logs all changed. Where the two files differ, the 2026-09-23 file wins.
+
 # Verified facts from x.ai/bot/guides, read 2026-08-28
 
 Source: the five official guides at x.ai/bot/guides. These are practitioner

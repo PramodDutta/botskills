@@ -1,3 +1,5 @@
+> **Superseded in part on 2026-09-23.** Read `docs/seo/VERIFIED-FACTS-2026-09-23.md` first: pricing, SuperGrok and X Premium+ linking, the on-demand monthly limit, iPad, phone run history and Enterprise audit logs all changed. Where the two files differ, the 2026-09-23 file wins.
+
 # Verified Grok Bot facts, checked 2026-08-25
 
 Every row below was checked against a PRIMARY source (docs.x.ai, x.ai, cursor.com).
