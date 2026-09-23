@@ -32,32 +32,32 @@ const WRONG: Row[] = [
   {
     claim: 'Grok Bot runs only on Mac, Windows and iPhone, with no Linux or Android app',
     truth:
-      'Out of date since early September 2026. The FAQ now lists a Linux desktop app (x64 and Arm64, as a .deb, an .rpm or an AppImage) and an Android companion app for Android 9 or later on Google Play. iPad is still not supported. The phone app can create bots, message them, approve steps and take over the computer; editing a routine, run history, testing and deleting a routine still need the desktop app.',
-    source: 'grok-bot/faq and grok-bot/mobile, checked 4 September 2026',
+      'Out of date since September 2026. The FAQ lists a Linux desktop app (x64 and Arm64, as a .deb, an .rpm or an AppImage) and an Android companion app for Android 9 or later, and the iOS app also runs on iPad with iPadOS 18 or later. The phone app can create bots, message them, approve steps, take over the computer, show run history and delete a routine; only editing and testing a routine need the desktop app.',
+    source: 'grok-bot/faq and grok-bot/mobile, checked 23 September 2026',
   },
   {
     claim: 'The cheapest way in is $120, or $200, or $300 a month',
     truth:
-      'Stale since 21 August 2026, when eligibility widened. Cursor Pro+ at $60 a month includes Grok Bot and is the cheapest documented paid individual path. A one-time trial exists as well.',
-    source: 'x.ai/news and cursor.com/pricing',
+      'Stale twice over. Every paid Cursor plan now includes Grok Bot, so Cursor Pro at $20 a month is the cheapest paid path; Pro+ and Ultra only raise the weekly usage. An individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. A one-time trial exists as well.',
+    source: 'cursor.com/help/grok-bot/plans and cursor.com/pricing, checked 23 September 2026',
   },
   {
     claim: 'SuperGrok Heavy costs $300 a month',
     truth:
-      'That figure is not published anywhere. It circulates in roundups and should not be quoted, including by us. SuperGrok Plus at $100 is published and does include Grok Bot.',
-    source: 'x.ai/pricing',
+      'That figure is not published anywhere. It circulates in roundups and should not be quoted, including by us. What is documented is that an individual SuperGrok Heavy subscription, like SuperGrok and SuperGrok Plus, can be linked to grant Grok Bot usage.',
+    source: 'cursor.com/help/grok-bot/plans',
   },
   {
     claim: 'You can pick the model, or an admin can restrict it',
     truth:
-      'Verbatim from the docs: Grok Bot has no model picker, for members or admins, and admin or user choice is not planned.',
-    source: 'grok-bot/teams-and-enterprises',
+      'Cursor manages model selection, so there is no model picker for members. Enterprise admins can set a team model allowlist, but the docs say enforcement is not guaranteed, and the serving mix can change over time.',
+    source: 'grok-bot/settings-and-notifications and grok-bot/security',
   },
   {
-    claim: 'You can set a spending cap per bot',
+    claim: 'You can set a spending cap per bot, or there is no cap at all',
     truth:
-      'There is no bot-specific spend cap. Subscriptions carry a weekly usage allowance, then on-demand billing from model and token cost.',
-    source: 'grok-bot/faq',
+      'Both are wrong. There is no Grok Bot-specific or per-bot cap, but the account-level On-demand monthly limit exists: set it in Grok Bot Settings or at cursor.com/dashboard under Spending. Weekly usage drains first, then on-demand up to that limit.',
+    source: 'cursor.com/help/grok-bot/plans and grok-bot/teams-and-enterprises',
   },
   {
     claim: 'The included allowance is worth roughly X dollars',
@@ -66,10 +66,10 @@ const WRONG: Row[] = [
     source: 'grok-bot/faq',
   },
   {
-    claim: 'There is an audit log of what each bot did',
+    claim: 'Every account has an audit log of what each bot did',
     truth:
-      'An audit view of Bot actions does not exist yet. If you need to prove what a bot did or did not do, keep your own receipts as you go.',
-    source: 'grok-bot/teams-and-enterprises',
+      'Only Enterprise does: audit logs plus Action Recording, which is off by default and keeps 90 days. Individual accounts and self-serve Teams have no audit view of Bot actions, so if you need to prove what a bot did, keep your own receipts as you go.',
+    source: 'grok-bot/security and grok-bot/teams-and-enterprises',
   },
   {
     claim: 'Grok Bot reads your SKILL.md, CLAUDE.md and MCP config',
@@ -92,8 +92,8 @@ const WRONG: Row[] = [
   {
     claim: 'You cannot share a bot with anyone',
     truth:
-      'This one changed. A public share link now exists: anyone with it can preview the Bot and add a copy. What it copies is the configuration. They do not get your computer, your logins, or your conversation history.',
-    source: 'grok-bot/faq, checked 29 August 2026',
+      'This one changed. The Share menu creates a template link, either public or team-only (Enterprise defaults to team-only). Anyone who can open it can preview the Bot and add a copy of its configuration. They do not get your computer, your logins, or your conversation history.',
+    source: 'grok-bot/faq, checked 23 September 2026',
   },
   {
     claim: 'Sharing a bot is harmless',
@@ -108,7 +108,7 @@ export function FactsPack() {
     <section className="facts-pack">
       <h2>The fact check</h2>
       <p className="ds">
-        Sources are pages on <code className="mono">docs.x.ai</code> unless noted. Last checked 4
+        Sources are pages on <code className="mono">docs.x.ai</code> unless noted. Last checked 23
         September 2026. Product facts move, so re-check anything you are about to put in front of a
         buyer.
       </p>
