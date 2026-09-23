@@ -153,11 +153,11 @@ as a security boundary.
 
 Two follow-ons are easy to miss. Deleting a bot does not remove shared-computer
 files or browser sessions, so the cleanup you believe you performed covered the
-bot and its routines, not what it left behind. And an audit view of bot actions
-does not exist yet, so afterwards you cannot enumerate which bot touched what.
-Admin controls including a Kill that deletes the VM while keeping durable
-storage have been described as coming, and none of that is shipped as of
-writing.
+bot and its routines, not what it left behind. And outside Enterprise an audit
+view of bot actions does not exist, so afterwards you cannot enumerate which
+bot touched what; Enterprise has audit logs and Action Recording. Admin
+controls have shipped since, most of them Enterprise only, including a
+terminate that ends a member's computer while keeping the durable disk.
 
 Trace one plausible sequence and the shape becomes obvious. You sign into a
 bank portal once, yourself, inside a bot's browser, to unblock a statement
@@ -324,12 +324,12 @@ a bot that seemed fine yesterday.
 | The bot says it cannot send, and you granted send | Write tiers are often gated behind an administrator on business accounts | Check the admin policy before re-authorising |
 | A bot uses data from a tool you never connected to it | Connections are account-level, or a session is shared on the computer | Audit the connection list, then sign out of stale sessions |
 | A summary carries a line from a document that told it to act | Untrusted content was read as instruction | Add the information-never-instruction clause, re-run probe three |
-| Records changed and nobody can say which bot did it | No audit view of bot actions exists yet | Require a written change log in every charter that can write |
+| Records changed and nobody can say which bot did it | No audit view of bot actions outside Enterprise | Require a written change log in every charter that can write |
 | Deleting a bot cleaned up nothing | Deletion removes the bot and its routines, not shared files or sessions | Sign out and remove files by hand on the computer |
 | A service treats the bot as suspicious | Egress uses static datacenter addresses, which some services flag | Expect it. Sign in yourself instead of engineering around it |
 | A brand new bot can already reach everything | It inherited the account surface without your first charter | Name allowed tools in every charter, every time |
 
-The fourth row changes behaviour. With no audit trail, your only record is what
+The fourth row changes behaviour. With no audit trail outside Enterprise, your only record is what
 the bot wrote down, so "log every change you make, with the record id and the
 old value" belongs in every charter that can write.
 

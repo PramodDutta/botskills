@@ -211,7 +211,7 @@ A schedule without a named owner is an unattended backlog. Assign one current ow
 
 Set a review deadline tied to the output’s value. If the result must inform a Wednesday meeting, “review someday” defeats the routine. Also define what happens when the owner is away. The safe default is usually to pause or hold the output, not silently transfer authority to whoever notices it.
 
-On iPhone, verified product behavior allows pausing and resuming routines, while editing, history, testing, and deleting require desktop. Include that constraint in the incident path. An owner away from desktop can stop future work, but should not assume the full repair surface is available on the phone.
+On iPhone, verified product behavior allows pausing and resuming routines, while Editing and testing a routine still need the desktop app. Include that constraint in the incident path. An owner away from desktop can stop future work, but should not assume the full repair surface is available on the phone.
 
 ## Answer the strongest case for scheduling the prompt unchanged
 

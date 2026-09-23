@@ -67,9 +67,9 @@ of writing and is the side more likely to have moved by the time you read this.
 | Approval model | You read the result afterwards | Explicit approval prompts, with auto-review rules you configure |
 | Model choice | Depends on your plan and the app's current options | None. No model picker for members or admins, and none planned |
 | Failure visibility | You notice a notification that never arrived | The 20 most recent run records per routine, plus the machine itself to inspect |
-| Audit trail across automations | Your own message history is the trail | No audit view of bot actions exists yet |
+| Audit trail across automations | Your own message history is the trail | No audit view of bot actions outside Enterprise |
 | Teaching it a workflow | You describe it in words | Words, or record up to ten minutes of on-screen browser work into a draft skill |
-| Where it runs | Wherever you have the app | macOS, Windows and Linux desktops; iPhone and Android phones. No iPad |
+| Where it runs | Wherever you have the app | macOS, Windows and Linux desktops; iPhone and Android phones, and iPad through the iOS app |
 | Deleting one | The task stops and that is the end of it | Routines die with the bot, but shared files and browser sessions survive |
 | Cost shape | Flat subscription | Weekly allowance, then on-demand billing from model and token cost |
 | Best fit | Single-source digests, reminders with judgement | Cross-tool work that produces drafts and needs a stop line |
@@ -251,7 +251,7 @@ The last row has a number attached. A routine keeps its 20 most recent run
 records, so on a weekly schedule you are holding roughly five months of
 history, and on a twice-daily schedule about two working weeks. That window is
 what you can investigate after the fact, and it is the only automatic record
-you get, because there is no audit view of bot actions yet.
+you get, because individual accounts have no audit view of bot actions.
 
 ## Cost shape, not price
 
@@ -271,9 +271,10 @@ driving a browser through a supplier portal consumes real compute, and your
 bill moves with how much work you delegated.
 
 Here is the part people get wrong, and it is the most important sentence in
-this section: there is no Grok Bot specific spend cap yet. The allowance is not
-a ceiling, it is the point at which the meter starts. Nothing in the product
-stops a badly scoped bot from running past it, and model choice is not a lever
+this section: there is no Grok Bot specific spend cap. The allowance is not
+a ceiling, it is the point at which the meter starts. The only brake is the
+account-level On-demand monthly limit, which a run already in progress can
+finish past, and model choice is not a lever
 either, since there is no model picker for members or admins.
 
 So the cost control has to live in the charter, on day one, before you set
@@ -338,7 +339,7 @@ date and a check that can fail.
 | The job silently stopped days ago | No heartbeat, in either product | Ask for a message even on an empty run, so silence becomes a signal |
 | You keep wishing it could open a second tool | A genuine capability gap, not preference | Move it. This is the case the runtime exists for |
 | Your bot's job never crosses a second tool | You bought overhead | Move it back to a scheduler and keep the charter as notes |
-| The bill moved and you cannot attribute it | No spend cap, and no audit view to attribute it with | Add a scope ceiling to the charter. There is no setting that does this |
+| The bill moved and you cannot attribute it | No per-Bot spend cap, and no audit view outside Enterprise to attribute it with | Add a scope ceiling to the charter and set the account On-demand monthly limit. No setting does this per bot |
 | It stalled on a verification prompt and stayed stalled | Nobody read the run history | Put a weekly two-minute check in your calendar, alongside the sweep |
 
 The fourth row is the one people refuse to act on, because moving back feels
@@ -371,8 +372,8 @@ included.
 
 Your platform may remove one side entirely. Grok Bot supports macOS on Apple
 silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later.
-There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If you work on
-a Linux desktop, this is not a comparison, it is a single option. The
+There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). If you work on
+a Linux desktop, both options now run there. The
 [supported platforms reference](/blog/grok-bot-supported-platforms) has the
 current list.
 

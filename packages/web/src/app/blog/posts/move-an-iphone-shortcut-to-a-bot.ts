@@ -13,7 +13,7 @@ Rina had an iPhone Shortcut that collected a dictated meeting note, added a date
 
 The right migration target was not the phone tap. It was the interpretation between capture and storage. Rina kept the reliable capture step, passed a structured note to a bot for classification and source requests, and kept the final customer-facing action human. This article helps you make that split from observed behavior rather than claims about what every iPhone Shortcut supports.
 
-Grok Bot's verified platform facts matter to the design. It supports iPhone on iOS 18 or later. On iPhone, you can pause and resume, while editing, history, testing, and deleting require desktop. Teach-by-demonstration is unavailable on iPhone. The boundary follows from that operating model: the bot may interpret and draft, but it may not send, publish, pay, delete, change a routine, or commit an external record without a desktop-reviewed procedure and a human decision.
+Grok Bot's verified platform facts matter to the design. It supports iPhone on iOS 18 or later. On iPhone, you can pause and resume, while Editing and testing a routine still need the desktop app. Teach-by-demonstration is unavailable on iPhone. The boundary follows from that operating model: the bot may interpret and draft, but it may not send, publish, pay, delete, change a routine, or commit an external record without a desktop-reviewed procedure and a human decision.
 
 ## Capture the Shortcut's actual job before judging its complexity
 
@@ -43,7 +43,7 @@ Move the smallest judgment block first. Keep capture and final storage stable un
 
 ## Keep the phone as the capture surface and desktop as the control surface
 
-Grok Bot's iPhone support is a companion experience. Verified documentation says you can pause and resume on iPhone, but editing, history, testing, and deleting need desktop. Design the operating procedure around that split rather than expecting the commute to become a full maintenance window.
+Grok Bot's iPhone support is a companion experience. Verified documentation says you can pause and resume on iPhone, but Editing and testing a routine still need the desktop app. Design the operating procedure around that split rather than expecting the commute to become a full maintenance window.
 
 Rina could capture a note and observe whether a routine needed pausing from her phone. She scheduled charter edits, run-history review, fixture tests, and deletion decisions for desktop. A failed run during travel was paused, labeled, and left unchanged until she could inspect it properly.
 
@@ -183,7 +183,7 @@ Do not fix lost context by granting the bot broad browsing. Add the missing fiel
 
 ## Answer the traveler who wants the entire workflow controllable from iPhone
 
-The desire is understandable. Capture happens while moving, and waiting for a desk feels like friction. Grok Bot's verified mobile controls set a real limit: pause and resume are available on iPhone, while editing, history, testing, and deleting need desktop. Teach-by-demonstration is also unavailable on iPhone.
+The desire is understandable. Capture happens while moving, and waiting for a desk feels like friction. Grok Bot's verified mobile controls set a real limit: pause and resume are available on iPhone, while Editing and testing a routine still need the desktop app. Teach-by-demonstration is also unavailable on iPhone.
 
 Design for that limit. Let the phone capture approved input and pause a suspicious run. Queue diagnosis, charter changes, history review, and tests for desktop. Keep consequential work pending until those controls are available. If the job requires frequent mobile editing and immediate repair, migrating it to this bot operating model may be the wrong choice.
 
@@ -227,7 +227,7 @@ Move the smallest step that requires evidence-based judgment, such as resolving 
 
 ### Can I manage the migrated Grok Bot entirely from iPhone?
 
-No. Verified Grok Bot documentation says iPhone requires iOS 18 or later and supports pause and resume, while editing, history, testing, and deleting require desktop. Teach-by-demonstration is unavailable on iPhone. Use the phone as a capture or interruption surface and assign a named desktop operator for maintenance and verification. A phone pause can stop later work, but it does not reverse a file, message, or write that already completed. Keep consequential actions pending until the desktop review can occur.
+No. Verified Grok Bot documentation says iPhone requires iOS 18 or later and supports pause and resume, while Editing and testing a routine still need the desktop app. Teach-by-demonstration is unavailable on iPhone. Use the phone as a capture or interruption surface and assign a named desktop operator for maintenance and verification. A phone pause can stop later work, but it does not reverse a file, message, or write that already completed. Keep consequential actions pending until the desktop review can occur.
 
 ### Should the bot replace the Shortcut's final save or send step?
 

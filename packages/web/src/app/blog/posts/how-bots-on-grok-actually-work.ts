@@ -61,7 +61,7 @@ Two objects get collapsed in casual talk. Pull them apart.
 The computer is a persistent cloud machine assigned to your user account. It
 is a managed Linux VM. The bot runs on it as a non-root user
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
-That Linux fact describes the hosted computer, not a Linux desktop app. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). Your desk is macOS or Windows. The bots live on
+That Linux fact describes the hosted computer, not a Linux desktop app. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). Your desk is macOS, Windows or Linux. The bots live on
 the hosted machine either way.
 
 The screen is that bot's work surface. Each bot gets one. It is a place to
@@ -117,8 +117,7 @@ that never sends. Park any of those on temp and you have already scheduled
 the deletion. Hide if you still need the jobs. Copy the routine text out,
 pause loops, then delete, only after the copy exists.
 
-The twenty-record window is short evidence, not a ledger. There is no audit
-view of bot actions yet. Compare weeks in a file you own. A missing fire
+The twenty-record window is short evidence, not a ledger. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Compare weeks in a file you own. A missing fire
 starts with ownership, not timezone folklore:
 [Grok Bot routine did not run](/blog/grok-bot-routine-did-not-run). Clock
 choice is [Grok Bot scheduling](/blog/grok-bot-scheduling). This page only
@@ -154,33 +153,31 @@ visible browser interaction for up to ten minutes, captures no microphone
 audio, produces a draft skill, covers browser workflows only, and is
 unavailable on iPhone. It teaches clicks on the computer you already have.
 
-## Edit on a desktop, and treat the phone app as pause-and-approve only
+## Edit on a desktop, and treat the phone app as the console
 
 The computer the bots use is hosted. The client you use to change their jobs
-is not. Supported desks are macOS (Apple silicon and Intel) and Windows (x64
-and Arm64). Supported pocket is iPhone on iOS 18 or later. Not supported:
-Linux desktop, Android, iPad. The teams page asks whether a Linux desktop app
-exists and answers no
+is not. Supported desks are macOS (Apple silicon and Intel), Windows (x64
+and Arm64), and, since September 2026, Linux (x64 and Arm64). Supported
+pockets are iPhone on iOS 18 or later and Android 9 or later, and the iOS app
+also runs on iPad with iPadOS 18 or later
 ([FAQ](https://docs.x.ai/grok-bot/faq),
-[teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
+[mobile](https://docs.x.ai/grok-bot/mobile)).
 
-On iPhone you can pause and resume. Editing, history, testing, and deleting
-need a desktop
-([mobile](https://docs.x.ai/grok-bot/mobile)). Teach-by-demonstration is
-unavailable on the phone. A looping routine on a train: you can stop it. You
-cannot open history, rewrite the charter, test a fix, or delete the owner.
+On iPhone you can pause and resume. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)). Teach-by-demonstration is
+unavailable on the phone. A looping routine on a train: you can stop it and
+read its history. You cannot rewrite the charter or test a fix.
 Plan the desk for those verbs. Plan the phone for the stop.
 
 | Job you want to do | Where the product lets you do it | What fails if you only have the phone |
 |---|---|---|
 | Pause a looping routine | iPhone or desktop | Nothing. This is the pocket job |
 | Resume that routine | iPhone or desktop | Nothing, if pause was the right call |
-| Read run history | Desktop | You cannot prove whether it fired |
+| Read run history | iPhone or desktop | Nothing. The phone can prove whether it fired |
 | Edit the routine or the charter | Desktop | The wrong text stays in force |
-| Test, then delete a bot | Desktop | You cannot retire the owner, and you cannot inspect what you would retire |
+| Test a routine before you retire its bot | Desktop for the test | The phone can delete the bot but cannot test what you would retire |
 | Record a demonstration | Desktop only | The phone cannot teach this |
 
-A Monday miss diagnosed from a phone is a guess. History lives on a desktop. The full client list is
+A Monday miss diagnosed from a phone is no longer a guess: the phone shows run history. The fix still lives on a desktop. The full client list is
 [Grok Bot on Windows, Linux and iPad](/blog/grok-bot-supported-platforms).
 Pocket limits: [Grok Bot on iPhone](/blog/grok-bot-iphone-app). Change the
 object model at a desk.
@@ -200,7 +197,7 @@ not notice. The screen looks like a research desk. The jar does not care
 what the screen is named.
 
 Sunday 21:40. The sidebar feels messy. You delete Inbox Triage at a desk
-(the phone cannot delete) and believe you have revoked Gmail.
+(the phone could delete it too) and believe you have revoked Gmail.
 
 Monday 07:00. No queue file arrives. The routine lived on Inbox Triage.
 Lead Scout is still there. Gmail is still signed in. Friday's queue file is
@@ -231,7 +228,8 @@ charter that says "use grok-4.6". That name is a Grok Build model. It is not
 a documented Grok Bot picker value. The serving set is fixed per surface,
 with automatic failover, and billing follows the actual serving model.
 
-There is also no Grok Bot-specific spend cap. Subscriptions include a weekly
+There is also no Grok Bot-specific spend cap, only the account-level
+On-demand monthly limit. Subscriptions include a weekly
 usage allowance. Overflow is on-demand, billed from model and token cost. No
 published dollar figure exists, so this page will not invent one. Cadence
 and scope are the controls you have. A settings line about a default model
@@ -287,8 +285,8 @@ Shared facts both charters must repeat:
 - Cookies, sessions, files, and CLI credentials are account property.
 - Deleting a bot deletes its routines and does not sign out Gmail.
 - Hosted MCP tokens, if any, sit with Cursor's backend, still account-scoped.
-- No model picker. No Grok Bot spend cap. No audit view of actions yet.
-- From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Edits and deletes need desktop.
+- No model picker. No Grok Bot spend cap beyond the account On-demand monthly limit. No audit view of actions outside Enterprise.
+- From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Edits and tests need desktop.
 
 Retirement: copy routine text out, pause loops, sign out of mail in the browser,
 delete leftover files, then delete the bot, from a desk, never from a phone.
@@ -312,7 +310,7 @@ it cannot see the file, do not conclude you have per-bot computers. Wrong
 path, or a UI that has not refreshed. Re-read computer-and-apps and run the
 check again. Do not delete Inbox Triage as a test unless you copied the
 07:00 text out. A green sidebar is not evidence. An audit view does not
-exist yet. This check, plus files you own, are what you have.
+exist outside Enterprise. This check, plus files you own, are what you have.
 
 ## Answer the objection that a screen plus non-root is already a sandbox
 
@@ -353,13 +351,13 @@ routine?
 | Symptom on Monday | First mechanism question | Wrong story | Right next step |
 |---|---|---|---|
 | No 07:00 queue, temp is gone from the sidebar | Did that deleted bot own the routine? | The mail VM died overnight | Recreate the routine on a durable bot, from a desk |
-| No 07:00 queue, owner is still there, you are on a phone | Can you even open history from here? | The schedule drifted | Sit at a desktop and read the twenty records |
+| No 07:00 queue, owner is still there, you are on a phone | What do the twenty records say? | The schedule drifted | Read run history on the phone, then fix it at a desktop |
 | Queue file from Friday is still on disk | Is a leftover file a live job? | The job obviously ran | Treat the file as a fossil. Look for today's run, or the missing owner |
 | Lead Scout has Gmail open after you "removed mail" | Did delete sign the browser out? | Research stole a login | Sign out or revoke. Delete never cleared the jar |
 | You cannot find which model ran | Did an admin pin a cheaper model? | Picker was reset | There is no picker. Check cadence and connections instead |
 
 A missing owner is a routine problem. A leftover cookie is a computer
-problem. A phone-only view is an inspection problem. Those three have three
+problem. A skipped history read is an inspection problem. Those three have three
 fixes. If history is empty and the owner exists, you may be inside the 50
 routine cap, or a create that never saved. Count before you invent a clock
 bug. Then read
@@ -373,10 +371,10 @@ is [what is a Grok bot](/blog/what-is-a-grok-bot). How to isolate anyway is
 including offboarding order and the fact that an approval is not an undo.
 Cadence is scheduling. Vendor tile counts go stale. Storage does not.
 
-It does not mint a second account, ship a Linux or Android or iPad client, or
-add an audit view the docs still mark as missing. Coming-soon admin Kill,
-when it ships, deletes the VM and keeps durable storage. Treat that as not
-shipped. Do not plan a cleanup around a button you cannot press.
+It does not mint a second account, or add an audit view outside Enterprise.
+Enterprise admins can now terminate a member's computer and keep the durable
+disk. On other plans there is no such button. Do not plan a cleanup around a
+button you cannot press.
 
 The map applies to any roster on one eligible account. It stops at a second
 account you created on purpose with a smaller cookie jar. That is a different
@@ -405,8 +403,8 @@ routines. It does not remove shared-computer files or browser sessions. The
 Gmail cookie can remain. Last week's queue file can remain. A sibling bot can
 still open the mailbox. If you meant to revoke access, sign out or revoke the
 grant, then delete leftover files, then delete the bot, from a desktop. Hide
-the bot instead if you still need the standing job. iPhone cannot run that
-sequence, because deleting needs a desk.
+the bot instead if you still need the standing job. The phone can now delete
+a bot, but run that sequence at a desk, where you can see the whole computer.
 
 ### Can I pick which model a Grok Bot uses?
 
@@ -424,6 +422,6 @@ A routine is assigned to one bot. Nothing is team-level. When you deleted the
 test bot, you deleted every routine attached to it. The leftover file from
 last week is not the job. It is a fossil on the shared computer. Recreate the
 routine on a durable name, from the desktop app, after you copy the
-text out if it still exists somewhere you control. From the phone app you can pause a routine and approve steps, but it cannot show you run history, so a sofa cleanup cannot safely complete this repair.
+text out if it still exists somewhere you control. From the phone app you can pause a routine, approve steps, and read run history, but editing and testing need the desktop app, so a sofa cleanup cannot safely complete this repair.
 `,
 };

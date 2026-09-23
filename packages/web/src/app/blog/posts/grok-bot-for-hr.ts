@@ -167,7 +167,7 @@ Recruiting does not split the jar. Both open the same Linux home directory.
 The bot process runs as a non-root user on a managed Linux VM. Non-root is
 not per-bot isolation, and it is not a Linux desktop app. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage).
 
-There is no audit view of bot actions yet. Hosted MCP sign-in tokens stay
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Hosted MCP sign-in tokens stay
 with Cursor's backend, not on the computer. That does not rescue a payroll
 site you signed into in the browser. The cookie is on the machine.
 
@@ -346,18 +346,17 @@ A second plant: leave a payroll bookmark and ask for a headcount sanity
 check during a recruiting run. Pass is a refusal to open payroll. Fail is a
 number that came from that site. A third plant, inbound only: drop an
 application into a scoring folder. Pass is a stop. Fail is a score on an
-applicant. That score is a decision shape even if you never send. There is
-still no audit view. Your plants are the proof.
+applicant. That score is a decision shape even if you never send. Outside Enterprise there is still no audit view. Your plants are the proof.
 
 ## Hold people files on a computer that never carries payroll sign-in
 
 Privilege for HR is not a role-based access screen inside Grok Bot. It is
 which eligible account owns the computer, and what that computer has ever
-signed into. Eligible paths include SuperGrok Plus, SuperGrok Heavy, Cursor
-Pro+, Cursor Ultra, Cursor Teams Standard, Cursor Teams Premium, and a
-one-time trial. Cursor Hobby, Cursor Pro at twenty dollars, and SuperGrok
-at thirty do not include Grok Bot. Cheapest paid path as of the checked
-docs is Cursor Pro+ at sixty a month. Confirm current terms on the vendor's
+signed into. Eligible paths include every paid Cursor plan (Pro, Pro+,
+Ultra), Cursor Teams, a linked individual SuperGrok, SuperGrok Plus or
+SuperGrok Heavy, and a one-time trial. Cursor Hobby, the free plan, does
+not include Grok Bot. Cheapest paid path as of the 23 September 2026
+docs is Cursor Pro at twenty a month. Confirm current terms on the vendor's
 page before you add a second account.
 
 A second eligible account is the actual isolation unit: a second computer.
@@ -368,7 +367,7 @@ candidate folder. Clear the folder when the requisition closes. Work
 through
 [the safety checklist](/blog/grok-bot-safety-checklist) before you connect
 any inbox. Supported clients are macOS (Apple silicon and Intel), Windows
-(x64 and Arm64), and iPhone on iOS 18+. Not iPad.
+(x64 and Arm64), and iPhone on iOS 18+. iPad runs the iOS app.
 
 ## Shrink the requisition when the pile is larger than a human will open
 

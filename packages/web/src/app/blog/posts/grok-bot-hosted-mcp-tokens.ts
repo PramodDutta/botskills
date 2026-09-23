@@ -52,7 +52,7 @@ The exception is narrow. Everything it does not name still sits on the machine.
 
 All bots on an account share one persistent cloud computer. That computer is assigned to your user account, not to an individual bot ([computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)). Each bot gets a screen. Screens are work surfaces, not security boundaries. The security page puts it as an instruction: "Do not use separate Bots as a security boundary" ([approvals, security and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)).
 
-Browser cookies, signed-in sessions, files, and command-line credentials live there. [Inbox Triage](/bots/inbox-triage) and [Chief of Staff Briefing](/bots/chief-of-staff-briefing) sit on the same disk as Pipeline Copy. A HubSpot tab Elena opened "for a minute" is the account's cookie jar. Deleting a bot does not remove those files or those sessions. There is no audit view of Bot actions yet, so Marcus will not get a product log of which named worker loaded HubSpot at 02:14.
+Browser cookies, signed-in sessions, files, and command-line credentials live there. [Inbox Triage](/bots/inbox-triage) and [Chief of Staff Briefing](/bots/chief-of-staff-briefing) sit on the same disk as Pipeline Copy. A HubSpot tab Elena opened "for a minute" is the account's cookie jar. Deleting a bot does not remove those files or those sessions. There is no audit view of Bot actions outside Enterprise, so Marcus will not get a product log of which named worker loaded HubSpot at 02:14.
 
 The architecture tour is [One Computer, Many Screens](/blog/grok-bot-shared-computer-security). If the secret is a cookie, a session, a file, or a CLI profile, it is on the computer. If the secret is a hosted MCP sign-in token, it is not. Mixing those two in one HubSpot sentence is how a team files a no and still has an AE session in the jar. Static egress addresses are a network fact. Some services flag datacenter IPs. That pain explains a GUI login. It does not move the cookie off the VM.
 
@@ -89,7 +89,7 @@ Monday. Elena has two bots. Pipeline Copy writes open deal ids and stages into \
 
 Elena wants to tick no. She connected HubSpot as hosted MCP so the sign-in token would stay with Cursor's backend. That is a real no for that grant. She also remembers a 403 on deal NW-2201. She opened HubSpot in the shared browser as the AE, copied the stage, and left the tab.
 
-She fills two rows. Row A, hosted MCP: No. Quote the teams-page sentence, dated, with a screenshot of the hosted connection. Row B, browser session: Yes, until proven otherwise. Evidence is whether Lead Scout can open HubSpot as the AE. She leaves the encryption question blank and notes there is no audit view of Bot actions yet.
+She fills two rows. Row A, hosted MCP: No. Quote the teams-page sentence, dated, with a screenshot of the hosted connection. Row B, browser session: Yes, until proven otherwise. Evidence is whether Lead Scout can open HubSpot as the AE. She leaves the encryption question blank and notes individual accounts have no audit view of Bot actions.
 
 Lead Scout follows a convenience URL in the pipeline file and HubSpot loads as the AE. Row B is yes. Hosted MCP did not put an AE token on disk. Elena put an AE cookie on the machine. She signs out, revokes at HubSpot, strips CRM URLs, and runs Lead Scout again. Login page. Row B can move to "session closed, hosted grant remains." The hosted tools are still callable by the roster. She writes that down so Marcus does not hear "isolated to Pipeline Copy."
 
@@ -184,7 +184,7 @@ People retire Pipeline Copy and believe the tokens left with the card. Deletion 
 
 Teardown order: sign out of HubSpot in the shared browser. Revoke the browser grant at HubSpot. Revoke the hosted connection in settings and at the CRM. Strip \`/state/pipeline-copy.md\` if it holds deal ids. Then delete the card if you still want it gone. Reverse that order and Marcus finds a clean roster with a dirty machine. Hosted MCP tokens stay with Cursor's backend until you revoke them there.
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need a desktop. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. [Grok Bot Cursor account](/blog/grok-bot-cursor-account-explained) is the identity that holds the computer. Revoke against that account, not against a nickname.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). [Grok Bot Cursor account](/blog/grok-bot-cursor-account-explained) is the identity that holds the computer. Revoke against that account, not against a nickname.
 
 ## Stop filling encryption blanks the teams page left empty
 
@@ -192,7 +192,7 @@ The strongest pushback to this page is not "the tokens must be on the VM." Marcu
 
 Do not. The Grok Bot docs, checked 25 August 2026, say where hosted MCP sign-in tokens sit: with Cursor's backend, never stored on the computer, with tool calls run on the computer's behalf. They say MCP authentication is shared across Cursor and Grok Bot. They do not publish an encryption scheme, a key-custodian name, a rotation interval, or a wrapping story you can paste as fact. Point Marcus at Cursor's current security documentation. Leave the encryption row blank, or mark it vendor-controlled and unpublished.
 
-The same honesty applies to adjacent blanks. There is no audit view of Bot actions yet. There is no Grok Bot-specific spend cap. There is no model picker. None of those gaps is a reason to embroider the location fact. The objection wins when you connected hosted MCP, you never opened HubSpot on this computer, you would not mind any bot calling the inspected reads, and you write "location documented, encryption not published here." This page exists for the leftover tab, the Composio nickname, the delete-bot teardown, and the encryption paragraph someone drafted because the checkbox felt lonely.
+The same honesty applies to adjacent blanks. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. There is no model picker. None of those gaps is a reason to embroider the location fact. The objection wins when you connected hosted MCP, you never opened HubSpot on this computer, you would not mind any bot calling the inspected reads, and you write "location documented, encryption not published here." This page exists for the leftover tab, the Composio nickname, the delete-bot teardown, and the encryption paragraph someone drafted because the checkbox felt lonely.
 
 ## Repeat the same location split for mail, calendar, and the next connector
 

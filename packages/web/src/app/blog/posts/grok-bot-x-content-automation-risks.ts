@@ -286,7 +286,7 @@ Grok Bot's [security documentation](https://docs.x.ai/grok-bot/approvals-securit
 puts the limit plainly: "An approval controls the proposed action. It does not
 reverse work already completed." A gate placed after a post has gone out is not
 a gate. And as of writing, the documentation states that an
-[audit view of Bot actions does not exist yet](https://docs.x.ai/grok-bot/teams-and-enterprises),
+[audit view of Bot actions does not exist outside Enterprise](https://docs.x.ai/grok-bot/teams-and-enterprises),
 so the record of what your bots did is whatever you chose to keep.
 
 ## Releasing without becoming a rubber stamp

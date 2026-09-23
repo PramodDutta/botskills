@@ -152,7 +152,7 @@ login handoff is the worse one, because a signed-in dashboard session can do
 everything your account can do, refunds included, and no key is involved to
 stop it.
 
-There is also no audit view of bot actions as of writing, so your audit trail
+There is also no audit view of bot actions outside Enterprise, so your audit trail
 for anything financial is Stripe's own event log rather than the bot app.
 Another reason to prefer read-only: a read leaves nothing in that log you need
 to explain.

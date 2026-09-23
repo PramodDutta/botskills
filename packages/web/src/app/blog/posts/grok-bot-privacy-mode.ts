@@ -17,11 +17,11 @@ It requires cloud data storage. Legacy Privacy Mode is not supported. Privacy Mo
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 A paid SKU cannot buy through that line. A second installer cannot either.
 
-This page is only that setting: what it is, why the bot cannot run with it, and what a security team is actually choosing. Mixed login failures that also cover a $20 Pro invoice or the wrong SSO identity live on
+This page is only that setting: what it is, why the bot cannot run with it, and what a security team is actually choosing. Mixed login failures that also cover a free Hobby account or the wrong SSO identity live on
 [Grok Bot login failed](/blog/grok-bot-login-failed).
 Why sign-in is a Cursor identity lives on
 [the Cursor account explainer](/blog/grok-bot-cursor-account-explained).
-The $40 seat path lives on
+The Teams seat path lives on
 [Teams Standard](/blog/grok-bot-teams-standard).
 
 This page will not invent how Privacy Mode stores data, what it encrypts, or which subprocessors see which bytes. Read
@@ -57,13 +57,13 @@ The reason Legacy is a hard stop is published as a storage requirement, not as a
 ([computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)).
 Files, browser sessions, and logins live on that computer. A data mode that does not permit the required storage cannot host the product. The docs say that. They do not publish a disk diagram, and this page will not invent one.
 
-Eligible plans, from the FAQ and teams docs: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, Cursor Teams Standard, Cursor Teams Premium, plus a one-time trial for individuals. Eligibility widened on 21 August 2026
-([xAI announcement](https://x.ai/news/grok-bot-more-plans)).
+Eligible plans, from the FAQ and [Cursor's plans page](https://cursor.com/help/grok-bot/plans): every paid Cursor plan (Pro, Pro+, Ultra), Cursor Teams, and a linked individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+, plus a one-time trial for individuals. Eligibility widened on 21 August 2026
+([xAI announcement](https://x.ai/news/grok-bot-more-plans)) and has widened since.
 Confirm live SKUs on
 [Cursor pricing](https://cursor.com/pricing)
-before you pay. Prices dated 25 August 2026: Cursor Pro+ at $60 is the cheapest documented paid individual door. Teams Standard at $40 per user per month also includes Grok Bot. None of those stamps waive Legacy.
+before you pay. Prices rechecked 23 September 2026: Cursor Pro at $20 is the cheapest documented paid individual door. A self-serve Cursor Teams seat also includes Grok Bot. None of those stamps waive Legacy.
 
-Hobby, Cursor Pro at $20, and SuperGrok at $30 are closed doors for a different reason. They belong on the login-failed page. If the invoice already says Pro+, Ultra, Teams, Plus, Heavy, or trial, and the screen still names Privacy Mode (Legacy), you are in a data-mode miss.
+Cursor Hobby, the free plan, and SuperGrok Lite are closed doors for a different reason, and an individual SuperGrok that was never linked is a missing step. They belong on the login-failed page. If the invoice already says Pro, Pro+, Ultra, Teams, a linked SuperGrok tier, or trial, and the screen still names Privacy Mode (Legacy), you are in a data-mode miss.
 
 ## Hedge every encryption story until Cursor's privacy page is the source
 
@@ -85,21 +85,21 @@ If you are an individual, not on a team, the same storage rule still applies. Op
 
 ## Stop treating a Pro+ cart as a workaround for a Legacy mandate
 
-Cursor Pro+ at $60 includes Grok Bot when privacy allows it
+Cursor Pro at $20 and Cursor Pro+ at $60 include Grok Bot when privacy allows it
 ([Cursor Pro+ and Grok Bot](/blog/grok-bot-cursor-pro-plus)).
-Cursor Teams Standard at $40 per user per month includes it too, on each seat, when privacy allows it
+A self-serve Cursor Teams seat includes it too, on each seat, when privacy allows it
 ([Teams Standard](/blog/grok-bot-teams-standard)).
-Ultra, Teams Premium, SuperGrok Plus, SuperGrok Heavy, and the one-time trial are the rest of the FAQ list. SuperGrok Heavy's price is not printed here.
+Ultra, a linked individual SuperGrok tier, and the one-time trial are the rest of the list. SuperGrok Heavy's price is not printed here.
 
 A mandate that still requires Legacy Privacy Mode makes every row on that list decorative for the identities it covers. The cart is not wrong as a SKU. It is early as a rollout.
 
 | What finance bought | What grok bot privacy mode still does | What to do instead of another cart |
 |---|---|---|
 | Eight Cursor Pro+ seats on people who are team members | Team Legacy still governs those identities | Admin leaves Legacy, or you keep Legacy and skip the product |
-| Teams Standard seats you already had | Same block. Standard already included Grok Bot | Do not "upgrade to Pro+" to dodge a team setting |
+| Teams seats you already had | Same block. Every Teams member already had Grok Bot | Do not "upgrade to Pro+" to dodge a team setting |
 | Ultra on a CISO personal card, work SSO still used in the app | Work identity is still on the team | Sign-in identity, not the credit card, is the check |
 
-If the company already pays Teams Standard or Premium, incremental Grok Bot cost on those seats is zero once Legacy is off. Buying Pro+ on top of a Teams seat to get a different privacy mode is not a documented move. Privacy mode is the Team Settings line. The SKU is the eligibility stamp. There is no Grok Bot-specific spend cap, and no published dollar figure for the weekly allowance. None of that overrides Legacy.
+If the company already pays Cursor Teams, incremental Grok Bot cost on those seats is zero once Legacy is off. Buying Pro+ on top of a Teams seat to get a different privacy mode is not a documented move. Privacy mode is the Team Settings line. The SKU is the eligibility stamp. There is no Grok Bot-specific spend cap, and no published dollar figure for the weekly allowance. None of that overrides Legacy.
 
 ## Follow Kestrel Path from the 2025 Legacy rule to an August Pro+ invoice
 
@@ -109,7 +109,7 @@ Sana (VP Product) wants
 [Lead Scout](/bots/lead-scout)
 shaped work: public competitor labeling pages, a dated file, a stop before login walls. No Gmail. No lab portal.
 
-Finance reads the FAQ, sees Pro+ at $60, and posts eight seats because the designers already sit on Cursor Pro at $20. The invoice is eligible. Sign In with Cursor uses organization SSO. Every designer sees "Privacy Mode (Legacy) blocks Grok Bot" and a prompt to ask an admin. Two people reinstall Windows. Naveen buys Ultra on a personal card and still signs in with work SSO. The error does not change.
+Finance reads the FAQ, sees Pro+ at $60, and posts eight seats because the designers sit on Cursor Pro at $20, which did not include Grok Bot then. The invoice is eligible. Sign In with Cursor uses organization SSO. Every designer sees "Privacy Mode (Legacy) blocks Grok Bot" and a prompt to ask an admin. Two people reinstall Windows. Naveen buys Ultra on a personal card and still signs in with work SSO. The error does not change.
 
 | Clock | What Kestrel Path did | What that actually proved |
 |---|---|---|
@@ -128,7 +128,7 @@ wait until the vote is recorded.
 ## Keep mixed login failures on the three-cause page, not on this toggle
 
 [Grok Bot login failed](/blog/grok-bot-login-failed)
-owns three causes: a closed plan (Hobby, Pro at $20, SuperGrok at $30), Legacy Privacy Mode, and the wrong Cursor user relative to the seat. This page is cause two only. If the invoice says Pro $20 and the screen is empty, you are in a SKU miss. If the browser signed into personal Google while the studio pays Teams, you are in a membership miss.
+owns three causes: a closed plan (Hobby, SuperGrok Lite, or a SuperGrok that was never linked), Legacy Privacy Mode, and the wrong Cursor user relative to the seat. This page is cause two only. If the invoice says Hobby and the screen is empty, you are in a SKU miss. If the browser signed into personal Google while the studio pays Teams, you are in a membership miss.
 
 Use the exact text. Guessing "maybe Windows" is how Kestrel Path lost a day.
 
@@ -136,17 +136,17 @@ Use the exact text. Guessing "maybe Windows" is how Kestrel Path lost a day.
 |---|---|---|
 | Exact text: Privacy Mode (Legacy) blocks Grok Bot | Yes | Stay. Admin conversation, not a cart |
 | Prompt to ask an admin, Team Settings still show Legacy | Yes | Member cannot weaken the team mode |
-| Sign-in returns an empty product, invoice says Hobby or Pro $20 | No | [Login failed](/blog/grok-bot-login-failed) |
+| Sign-in returns an empty product, invoice says Hobby or a SuperGrok was never linked | No | [Login failed](/blog/grok-bot-login-failed) |
 | Browser signed into personal Google, studio pays Teams | No | Same login page, cause three |
-| No client because the machine is Linux desktop, Android, or iPad | No | [Supported platforms](/blog/grok-bot-supported-platforms) |
+| No client for the device you picked up | No | [Supported platforms](/blog/grok-bot-supported-platforms) |
 | App launched, Starting your computer still changing | No | Setup, not privacy. Keep the app open |
 
 Do not reset the agent computer to fix Legacy. Official desktop path: [x.ai/bot](https://x.ai/bot). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. A phone sign-in that still cannot author is the mobile surface, unless the error names Legacy.
 
 ## Write the governance brief as a storage-policy vote, not as a ticket
 
-Turning Legacy off so Grok Bot can start is a policy choice. It is not a download ticket. Write the vote down before anyone clicks the dashboard, because the product will not produce an audit view of Bot actions to reconstruct the decision later. An audit view of Bot actions does not exist yet
-([no audit view yet](/blog/grok-bot-no-audit-log-yet)).
+Turning Legacy off so Grok Bot can start is a policy choice. It is not a download ticket. Write the vote down before anyone clicks the dashboard, because below Enterprise the product will not produce an audit view to reconstruct the decision later. An audit view of Bot actions does not exist outside Enterprise
+([no audit view outside Enterprise](/blog/grok-bot-no-audit-log-yet)).
 
 Naveen's brief has to name three things the Grok Bot docs actually say, and it has to refuse to name encryption details they do not say.
 
@@ -169,7 +169,7 @@ What the Grok Bot docs already say, checked 25 August 2026:
 - While a member is on the team, the team's privacy mode governs.
 - Members cannot weaken it. They see a prompt to ask an admin.
 - One persistent cloud computer per user. Screens are not security boundaries.
-- No audit view of Bot actions yet. No Grok Bot-specific spend cap.
+- No audit view of Bot actions outside Enterprise. No Grok Bot-specific spend cap.
 - No model picker for members or admins.
 
 If we keep Legacy: no Grok Bot on team identities. Stop the Pro+ rollout
@@ -195,7 +195,7 @@ Leaving Legacy lets the product start. It is not, by itself, a published stateme
 After you leave Legacy you still have the Grok Bot isolation model, which is not a privacy-mode gift. All bots on an account share one persistent cloud computer. Each bot gets a screen. Screens are work surfaces, not vaults. Deleting a bot does not remove shared-computer files or sessions. "Do not use separate Bots as a security boundary"
 ([shared computer security](/blog/grok-bot-shared-computer-security),
 [least privilege](/blog/least-privilege-bots)).
-Do not write "we will have an org audit log after we change privacy mode" into a questionnaire. That view is not shipped.
+Do not write "we will have an org audit log after we change privacy mode" into a questionnaire. Below Enterprise that view does not exist.
 
 ## Fail Grok Bot enablement on purpose while Legacy is still showing
 
@@ -206,7 +206,7 @@ Verification has to be able to fail. A green invoice is not enough. Kestrel Path
 | Team Settings do not show Privacy Mode (Legacy) | grok bot privacy mode is not the block | Admin conversation is still the work |
 | Exact error text is gone after a fresh Sign In with Cursor | Identity and setting agree | Someone is still on the old user or the old mode |
 | A named bot can finish one public-source brief without a login | The computer works | Do not connect Gmail to debug a bad brief |
-| No org screen lists Bot actions across the team | The missing audit view is still missing | Do not write "we have a privacy-mode audit log" into a form |
+| No org screen lists Bot actions across the team | Expected below Enterprise, where no audit view exists | Do not write "we have a privacy-mode audit log" into a form |
 | First charter still forbids send, publish, and authenticated apps | You left Legacy without filling the cookie jar | Sessions are already shared across every future bot |
 
 If all five pass, grok bot privacy mode is done as a gate. Next is a bounded first charter and
@@ -286,13 +286,13 @@ If they vote to keep Legacy: stop the Pro+ story. The seats are Cursor seats, no
 
 Turning it off is a policy choice. Leaving it on is a policy choice. Downloading another build is neither.
 
-**Keep reading:** [Grok Bot Login Failed: Cursor Auth, Eligibility, and Privacy Mode](/blog/grok-bot-login-failed), [Why Grok Bot Needs a Cursor Account, and How To Get Access](/blog/grok-bot-cursor-account-explained), [Grok Bot on Cursor Teams Standard: The $40 Seat Path](/blog/grok-bot-teams-standard).
+**Keep reading:** [Grok Bot Login Failed: Cursor Auth, Eligibility, and Privacy Mode](/blog/grok-bot-login-failed), [Why Grok Bot Needs a Cursor Account, and How To Get Access](/blog/grok-bot-cursor-account-explained), [Grok Bot on Cursor Teams Standard: The Per-Seat Path](/blog/grok-bot-teams-standard).
 
 ## Frequently Asked Questions
 
 ### Why does grok bot privacy mode block a plan that already includes Grok Bot?
 
-Because grok bot privacy mode is a Cursor account data setting, not a switch inside the bot. Grok Bot requires cloud data storage, so Legacy Privacy Mode is not supported. Privacy Mode (Legacy) blocks Grok Bot entirely, even when the invoice already lists Cursor Pro+, Ultra, Teams Standard, Teams Premium, SuperGrok Plus, SuperGrok Heavy, or a trial. The installer cannot buy through that line. Update the Cursor account data setting or contact the organization administrator, then sign in again. Confirm the live wording on Cursor's privacy page before you treat any article as a contract.
+Because grok bot privacy mode is a Cursor account data setting, not a switch inside the bot. Grok Bot requires cloud data storage, so Legacy Privacy Mode is not supported. Privacy Mode (Legacy) blocks Grok Bot entirely, even when the invoice already lists Cursor Pro, Pro+, Ultra, a Teams seat, a linked SuperGrok tier, or a trial. The installer cannot buy through that line. Update the Cursor account data setting or contact the organization administrator, then sign in again. Confirm the live wording on Cursor's privacy page before you treat any article as a contract.
 
 ### Can a member turn off Legacy Privacy Mode from their own Grok Bot window?
 

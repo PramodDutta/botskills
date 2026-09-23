@@ -3,7 +3,7 @@ import type { BlogPost } from './index';
 export const post: BlogPost = {
   title: 'Grok Bot in Regulated Industries: Where the Line Sits',
   description:
-    'Grok Bot regulated work is a shared cloud computer with no action audit log yet. Do not put PHI, client secrets, or prod admin cookies on it unless counsel says yes.',
+    'Grok Bot regulated work is a shared cloud computer; audit logs are Enterprise only. Do not put PHI, client secrets, or prod admin cookies on it unless counsel says yes.',
   date: '2026-08-27',
   category: 'Safety',
   content: `
@@ -15,7 +15,7 @@ finished a shopping run before lunch.
 
 That is the whole regulated-work problem in one screen. A grok bot regulated
 setup is not a certified vault. It is one persistent cloud computer assigned
-to a user, with a screen per named bot, no action audit view yet, and hosted
+to a user, with a screen per named bot, no action audit view outside Enterprise, and hosted
 MCP sign-in tokens that stay with Cursor's backend rather than on the disk.
 This page is the industry-agnostic line: what the product actually is, then
 what you may put on it. Role pages live elsewhere:
@@ -28,7 +28,7 @@ This is not legal advice. Confirm with counsel before any record, secret, or
 admin session touches that computer. Do not invent a HIPAA or SOC 2
 certification for Grok Bot. Screens are not vaults.
 
-## State the product as one shared computer with no action audit view yet
+## State the product as one shared computer with no action audit view outside Enterprise
 
 All bots on an account share one persistent cloud computer assigned to the
 user, not to a bot
@@ -44,14 +44,14 @@ Architecture:
 [One Computer, Many Screens](/blog/grok-bot-shared-computer-security).
 
 The computer is a managed Linux VM. The bot runs as a non-root user. That is
-not a per-bot jail and not a Linux desktop app. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported.
+not a per-bot jail and not a Linux desktop app. There are Linux desktop and Android apps as of September 2026. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; the iOS app also runs on iPad (iPadOS 18 or later).
 From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 
-An audit view of Bot actions does not exist yet
+An audit view of Bot actions does not exist outside Enterprise
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 A routine keeps the 20 most recent run records, then the window slides.
 Deleting a bot deletes its routines. None of that is an auditor file. Receipts:
-[Grok Bot Has No Audit View Yet](/blog/grok-bot-no-audit-log-yet).
+[Grok Bot Audit View: Keep Your Own Receipts Outside Enterprise](/blog/grok-bot-no-audit-log-yet).
 
 Hosted MCP sign-in tokens stay with Cursor's backend and are never stored on
 the computer. That is a disk fact, not a compliance program. Confirm Cursor's
@@ -240,7 +240,7 @@ A BAA with a mail vendor, if you have one, is a contract with that vendor.
 Confirm it on their current page. It is not a BAA with Grok Bot, Cursor, or
 xAI. This article will not invent those contracts. Connecting the mailbox
 still puts the session on a shared cloud computer other bots inherit, with
-no product audit view. The mail vendor's paperwork does not rewrite the
+no product audit view outside Enterprise. The mail vendor's paperwork does not rewrite the
 isolation model.
 
 Naming the bot HIPAA-Safe is a screen. Screens are not vaults. A shopping
@@ -265,7 +265,7 @@ say it, do not type it into a customer workbook.
 | Grok Bot is SOC 2 certified | Nothing. Do not invent it | Same. Do not copy a rumour into a questionnaire |
 | There is a BAA for Grok Bot | Nothing. Do not invent it | Ask counsel and the vendor. This blog is not the form |
 | Each bot is a vault for PHI | False as architecture | Screens are work surfaces, not security boundaries |
-| There is an audit log of bot actions | False as of the docs we cite | No audit view of Bot actions yet |
+| There is an audit log of bot actions | True only on Enterprise | Enterprise has audit logs and Action Recording. Other plans have none |
 | Deleting the bot wipes records | False | Files and browser sessions remain |
 | Hosted MCP is a compliance control | Disk fact only | Tokens stay with Cursor's backend. Not a certification |
 
@@ -301,11 +301,11 @@ A second named bot is not a second computer. A second eligible user
 account is. The computer is assigned to the user. Two users, two
 computers. That is the strongest isolation move the product documents.
 
-Eligible paths include SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor
-Ultra, Cursor Teams Standard, Cursor Teams Premium, and a one-time trial.
-Cursor Hobby and Cursor Pro at $20 do not include Grok Bot. SuperGrok at
-$30 does not. Cheapest paid path we cite: Cursor Pro+ at $60 a month.
-Teams Standard is $40 per user per month and includes Grok Bot. Confirm
+Eligible paths include every paid Cursor plan (Pro, Pro+, Ultra), Cursor
+Teams, a linked individual SuperGrok, SuperGrok Plus or SuperGrok Heavy, and a
+one-time trial. Cursor Hobby, the free plan, does not include Grok Bot.
+Cheapest paid path we cite: Cursor Pro at $20 a month. Every member of a
+self-serve Cursor Teams plan has Grok Bot. Confirm
 live numbers on
 [cursor.com/pricing](https://cursor.com/pricing)
 and
@@ -313,7 +313,7 @@ and
 Seat mapping:
 [Grok Bot Cursor account explained](/blog/grok-bot-cursor-account-explained).
 
-A dedicated account still has no action audit view. Screens on it are still
+A dedicated account outside Enterprise still has no action audit view. Screens on it are still
 not vaults. If Mara later installs a shopping bot on the "clinic-only"
 seat, she rebuilt the mess. Keep it dedicated: one job, no sibling bots.
 Counsel still has to accept that path. Do not buy the seat as a moral
@@ -321,10 +321,10 @@ offset before the lawyer's sentence exists.
 
 ## Keep your own run packets because twenty routine records are not an auditor file
 
-There is no audit view of Bot actions yet. Pause is not a log. An
-approval is not a log unless you exported the proposal. Admin Kill is
-coming soon, deletes the VM, keeps durable storage, and is not a log of
-what already happened. There is no Grok Bot-specific spend cap.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Pause is not a log. An
+approval is not a log unless you exported the proposal. An Enterprise admin
+terminate, which ends a member's computer and keeps the durable disk, is not a
+log of what already happened either. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies.
 
 If counsel ever accepts a dedicated computer, force the bot to append a
 packet you own on every run: bot name, time, files read, mailbox not
@@ -364,7 +364,7 @@ it stays off. Sealed filings, restricted student records, and cardholder
 data are the same shape in other sectors.
 
 A fluent brief is not a blessing. A Pro+ invoice is not a blessing. A bot
-named HIPAA-Safe is not a blessing. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. Not iPad. There is no model picker and no published dollar figure for the
+named HIPAA-Safe is not a blessing. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; the iOS app also runs on iPad (iPadOS 18 or later). iPad runs the iOS app. There is no model picker and no published dollar figure for the
 weekly allowance. Do not invent one. Beta launched 11 August 2026.
 Eligibility widened 21 August 2026. Neither date is a compliance
 milestone.
@@ -373,7 +373,7 @@ If the work only works by connecting the records mailbox, the honest
 sentence is: not on this computer without a dedicated eligible account and
 a lawyer. If you cannot get both, keep the labels in a human inbox.
 
-**Keep reading:** [Grok Bot Has No Audit View Yet: How to Keep Your Own Receipts](/blog/grok-bot-no-audit-log-yet), [Do Not Use Separate Grok Bots as a Security Boundary](/blog/grok-bot-not-a-sandbox), [How to Isolate Grok Bot Credentials When Bots Share a Computer](/blog/how-to-isolate-grok-bot-credentials).
+**Keep reading:** [Grok Bot Audit View: Keep Your Own Receipts Outside Enterprise](/blog/grok-bot-no-audit-log-yet), [Do Not Use Separate Grok Bots as a Security Boundary](/blog/grok-bot-not-a-sandbox), [How to Isolate Grok Bot Credentials When Bots Share a Computer](/blog/how-to-isolate-grok-bot-credentials).
 
 ## Frequently Asked Questions
 
@@ -382,7 +382,7 @@ a lawyer. If you cannot get both, keep the labels in a human inbox.
 Not on the shared computer you already use for other jobs. Inbox Triage
 never sends, but it still needs a mailbox session, and that session sits
 on one cloud computer every other bot can inherit. There is no action
-audit view yet. Screens are not vaults. The only product move this page
+audit view outside Enterprise. Screens are not vaults. The only product move this page
 will even discuss is a dedicated eligible account that holds nothing else,
 and only after counsel accepts that exact risk. This is not legal advice.
 Do not invent a HIPAA certification for Grok Bot to make the listing feel
@@ -403,7 +403,7 @@ vault.
 
 A second eligible account is a second computer, and that is the strongest
 isolation the product documents. It is not an automatic yes for patient
-mail. That computer still has no audit view of bot actions. Hosted MCP
+mail. That computer still has no audit view of bot actions outside Enterprise. Hosted MCP
 tokens still sit with Cursor's backend. Confirm live pricing on the
 vendor page. Confirm with counsel whether that dedicated machine, kept
 empty of sibling bots, is an acceptable risk. If counsel says no, the
@@ -413,7 +413,7 @@ not grant permission.
 ### Is this article legal advice, and is Grok Bot HIPAA or SOC 2 certified?
 
 This page is not legal advice. It is a product-safety writeup about a
-shared cloud computer with no action audit view yet. It does not claim
+shared cloud computer with no action audit view outside Enterprise. It does not claim
 Grok Bot is HIPAA certified. It does not claim Grok Bot is SOC 2
 certified. It does not invent a BAA. Confirm those questions on the
 vendor's current page and with counsel in your jurisdiction. If counsel

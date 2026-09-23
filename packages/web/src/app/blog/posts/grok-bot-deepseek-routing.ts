@@ -52,7 +52,7 @@ Route the pile. Keep the clock.
 | One podcast transcript with timestamps | Maybe, as one episode | Yes if you have a batch of dozens | One episode can be a Bot job. A batch is a pile |
 | Recapturing a live checkout in the browser | Yes, with a capture cap | No | Needs the computer. Still not a model-picker problem |
 
-Cheapest paid path is Cursor Pro+ at $60 a month, checked 25 August 2026 against [cursor.com/pricing](https://cursor.com/pricing). Cursor Hobby, Cursor Pro at $20, and SuperGrok at $30 do not include Grok Bot. Seat price is the door, not a picker, and not a published allowance. Confirm SuperGrok Plus, Heavy, Ultra, and Teams on [x.ai/pricing](https://x.ai/pricing) and Cursor's live pages.
+Cheapest paid path is Cursor Pro at $20 a month, checked 23 September 2026 against [cursor.com/pricing](https://cursor.com/pricing). Every paid Cursor plan includes Grok Bot, from Cursor Pro at $20; Cursor Hobby, the free plan, does not, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Seat price is the door, not a picker, and not a published allowance. Confirm SuperGrok Plus, Heavy, Ultra, and Teams on [x.ai/pricing](https://x.ai/pricing) and Cursor's live pages.
 
 ## Hedge DeepSeek on its own site before you treat it as the cheap lane
 
@@ -68,9 +68,9 @@ Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer ([team
 
 Two hundred is an arbitrary count so the failure is obvious. Forty decks or nine hundred scans follow the same rule. If the work is "read this stack and write shorts," and the stack already sits on disk, it leaves the Bot. If the work is "open this site every weekday and file what changed," it stays.
 
-There is no Grok Bot-specific spend cap yet. Overflow is on-demand from model and token cost if the plan allows it. A PDF dump does not meet a dollar slider. It meets an empty week, then a bill, or a stop you did not plan. [Grok Bot cost](/blog/grok-bot-cost) is how frequency multiplies. This page is the pile you should not put on that roster.
+There is no Grok Bot-specific spend cap, only the account-level On-demand monthly limit. Overflow is on-demand from model and token cost if the plan allows it. A PDF dump does not meet a dollar slider. It meets an empty week, then a bill, or a stop you did not plan. [Grok Bot cost](/blog/grok-bot-cost) is how frequency multiplies. This page is the pile you should not put on that roster.
 
-A routine assigns a workflow to one bot. Max 50 routines per bot. The app keeps the 20 most recent run records per routine. Deleting a bot deletes its routines. Nothing is team-level ([skills, routines, and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations)). Twenty records will not reconstruct two hundred PDF passes. There is no audit view of Bot actions yet.
+A routine assigns a workflow to one bot. Max 50 routines per bot. The app keeps the 20 most recent run records per routine. Deleting a bot deletes its routines. Nothing is team-level ([skills, routines, and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations)). Twenty records will not reconstruct two hundred PDF passes. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording.
 
 Do not schedule the dump. Teach-by-demonstration records visible computer interaction for up to ten minutes, browser workflows only, no microphone, draft skill, unavailable on iPhone. A PDF pile is not that recording. Opening Acrobat on camera does not create a cheap model.
 
@@ -91,7 +91,7 @@ Tuesday morning the brief was thin, the weekly pool was empty, and the dump was 
 
 Ivo's inbox bot was still on a weekday clock. All bots share the computer and the pool, so the dump burned the account, not only the briefing bot. Pause would have stopped both. A picker would have stopped neither.
 
-On iPhone he could have paused. He could not have invented a model menu. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). He did not pause. The night still billed.
+On iPhone he could have paused. He could not have invented a model menu. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)). He did not pause. The night still billed.
 
 ## Drop finished summaries into /workspace instead of asking the bot to re-read the stack
 
@@ -151,7 +151,7 @@ An approval controls the proposed action. It does not reverse work already compl
 
 Do not use a second named bot as the PDF reader "so the briefing bot stays clean." Screens are not walls. The second bot still drinks the account pool and still sees the same files. Isolation is a second eligible account, not a second name. [One computer, many screens](/blog/grok-bot-one-computer-many-screens) is that architecture.
 
-Coming soon, and not shipped: a team-level ceiling on local execution, and an admin Kill that deletes the VM while durable storage is kept. Neither is a model picker. Do not wait on them to process two hundred files.
+Shipped since: a team-level ceiling on local execution, and, on Enterprise, an admin terminate that ends a member's computer while the durable disk is kept. Neither is a model picker. Do not wait on them to process two hundred files.
 
 ## Answer the operator who wants DeepSeek to run inside Grok Bot
 
@@ -196,7 +196,7 @@ What leaves and stays gone is the bulk read. Do not sneak it back as "just this 
 
 Six bots per channel is a hard ceiling from the practitioner guides: a Projects Manager plus five others. Do not spend a sixth seat on a PDF reader. Reuse the briefing bot after the folder exists. Create new specialists only after a human approves.
 
-The computer is a managed Linux VM. The Bot runs as a non-root user. That is not a Linux desktop client. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. None of those facts grow a model picker.
+The computer is a managed Linux VM. The Bot runs as a non-root user. That is not a Linux desktop client. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). None of those facts grow a model picker.
 
 ## Stop this routing page when the job is a standing computer workflow
 

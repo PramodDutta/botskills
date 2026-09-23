@@ -27,7 +27,7 @@ Windows ships for x64 and Arm64. The bot works on a persistent cloud computer
 assigned to your user, a managed Linux VM, as a non-root user
 ([FAQ](https://docs.x.ai/grok-bot/faq),
 [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)). Closing the
-app, laptop, or iPhone does not stop a background turn. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). WSL is not one either.
+app, laptop, or iPhone does not stop a background turn. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). WSL is not that app, and it is not the worker.
 
 ## Match the Windows installer to System type, not to the first Get button
 
@@ -87,13 +87,13 @@ Ubuntu and call that the workspace. The managed VM is in the cloud. WSL is on
 the disk you close. They share a word, Linux, and nothing else that matters
 for this product.
 
-There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The FAQ lists it as of September 2026
+There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage)
 ([FAQ](https://docs.x.ai/grok-bot/faq),
 [teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
-WSL does not punch a hole in that no. A Windows machine with a tidy Ubuntu
-install is still a Windows client machine. The supported desktop is the Grok
-Bot Windows app, x64 or Arm64. The unsupported desktop is a Linux workstation,
-including a dual-boot that never opens the Windows client.
+It is for a Linux workstation, not for WSL. A Windows machine with a tidy
+Ubuntu install is still a Windows client machine. The desktop to use here is
+the Grok Bot Windows app, x64 or Arm64. A dual-boot that starts Linux needs
+the Linux app, not this one.
 
 What WSL is good for this week: your own scripts and git remotes. What it is
 not: a place to debug why a bot cannot see a file you dropped in
@@ -106,17 +106,18 @@ back.
 The Windows client authenticates with Cursor
 ([approvals, security, and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)).
 A clean install does not check the plan. Sign-in does. Eligible identities,
-from the FAQ: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra,
-Cursor Teams Standard, Cursor Teams Premium, plus a one-time trial. Eligibility
+from the FAQ and Cursor's plans page: every paid Cursor plan (Pro, Pro+,
+Ultra), every member of a self-serve Cursor Teams plan, and a linked
+individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+
+subscription, plus a one-time trial. Eligibility first
 widened on 21 August 2026
 ([xAI announcement](https://x.ai/news/grok-bot-more-plans)). Launch-week posts
 that still describe a Mac-only Ultra product are stale.
 
-Closed doors with similar names: Cursor Hobby, Cursor Pro at $20 a month,
-SuperGrok at $30. Cursor Pro+ at $60 a month is the cheapest documented paid
-path for one person. SuperGrok Plus at $100 includes Grok Bot. Teams Standard
-at $40 per user per month and Premium at $120 per user per month both include
-it. Confirm live SKUs on [Cursor pricing](https://cursor.com/pricing) and
+Closed doors with similar names: Cursor Hobby and SuperGrok Lite, plus an
+individual SuperGrok nobody linked. Cursor Pro at $20 a month is the cheapest
+documented paid path for one person. Every seat on a self-serve Teams plan
+includes it. Confirm live SKUs on [Cursor pricing](https://cursor.com/pricing) and
 [x.ai/pricing](https://x.ai/pricing). Do not print a SuperGrok Heavy dollar
 figure.
 
@@ -189,14 +190,13 @@ jobs that must touch this disk are not overnight jobs. Put output on the
 cloud workspace. The long version is
 [Grok Bot with the laptop closed](/blog/grok-bot-runs-with-laptop-closed).
 If you wanted the run to die on the train, you needed pause or deny. Sleep is
-neither. There is still no audit view of bot actions, so require a written
+neither. There is still no audit view of bot actions outside Enterprise, so require a written
 digest and read it before you grant anything new.
 
 ## Add the iPhone app only after a Windows desk can author jobs
 
 The iPhone client is real, on iOS 18 or later. On that phone you can pause
-and resume a routine. Editing, history, testing, and deleting need a desktop
-([mobile](https://docs.x.ai/grok-bot/mobile)). Teach by demonstration is
+and resume a routine. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)). Teach by demonstration is
 unavailable on iPhone
 ([skills, routines and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations)).
 
@@ -208,9 +208,10 @@ stop button for a job the Windows desk already defined.
 
 Install it after the matching Windows client can create a bot, not as a
 workaround for the wrong architecture. Pause from a seat-back tray is the
-feature. History on the train is not. The split is
-[Grok Bot on iPhone](/blog/grok-bot-iphone-app). Android and iPad are not a
-pocket substitute.
+feature, and run history on the train works now. Editing on the train does
+not. The split is
+[Grok Bot on iPhone](/blog/grok-bot-iphone-app). An Android phone or an iPad
+is the same pocket client.
 
 ## Paste a week-one charter that never sends from the shared computer
 
@@ -266,8 +267,7 @@ same afternoon you just learned the lid is not pause.
 
 Payments and admin consoles belong later. A 2FA prompt on the cloud desktop
 is you logging the shared browser into that site. Closing the Surface does
-not freeze the weekly allowance or on-demand usage. There is no Grok Bot-specific
-spend cap. Grant order:
+not freeze the weekly allowance or on-demand usage. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Grant order:
 [the safety checklist](/blog/grok-bot-safety-checklist) and
 [least privilege](/blog/least-privilege-bots).
 
@@ -319,7 +319,7 @@ the worker OS, or overnight work you cannot kill with the lid. Then use the
 Windows client as a daytime viewer, keep send on ask, and treat every run as
 attended. That is a smaller product. It is honest. The objection does not
 win WSL as a worker, x64-on-Arm64 as a way to turn the client into the VM, or
-unofficial builds that promise a Linux desktop app.
+unofficial builds when an official Linux desktop app exists.
 
 ## Sort the first-week symptoms that look like a bad install
 
@@ -329,7 +329,7 @@ of them is the installer.
 | What you see | Story you tell | Likely cause | Next move that can actually change it |
 |---|---|---|---|
 | App feels slow on Snapdragon, menus stutter | Arm Windows cannot run Grok Bot | x64 client under emulation | Install Arm64, uninstall x64 |
-| App opens, roster never appears | The Windows build is empty | Hobby, Pro at $20, SuperGrok at $30, or Privacy Mode (Legacy) | Invoice, then the FAQ list, then that mode |
+| App opens, roster never appears | The Windows build is empty | Hobby, an unlinked SuperGrok, or Privacy Mode (Legacy) | Invoice, then the FAQ list, then that mode |
 | Ubuntu in WSL has no grok package | Linux support is missing on Windows | WSL is not the computer | Use the Windows client. Leave WSL alone |
 | Job continued after the lid closed | Windows failed to pause the process | Cloud VM kept the turn | Pause or deny next time. Do not use sleep |
 | iPhone cannot edit a routine | The Windows install did not sync | The phone app cannot edit routines | Edit on the Windows desk |
@@ -339,18 +339,18 @@ Rows one, three, and four are Nia's week. None of them were "download an
 unofficial build." Official Arm64 exists. Official x64 exists. WSL is not a
 Grok Bot surface. If the installer will not run, check you are actually on
 Windows, or that enterprise policy is not blocking the package. Linux
-desktop, Android, and iPad should not run it. That no is documented.
+desktop, Android, and iPad have their own apps, not this installer.
 
 ## Point Linux desktop, Android, and iPad searches away from this Windows week
 
-This page is for people who already sit at Windows. It will not grow a Linux
-desktop client by repeating the VM fact. The computer is Linux. The client
+This page is for people who already sit at Windows. The VM fact says nothing
+about the Linux desktop client, and this page will not cover it. The computer is Linux. The client
 on your desk is Windows. Those sentences can both be true. They are.
 
-Linux desktop: no app. Android: no app. iPad: no app. iPhone: yes, limited.
-macOS is a full desktop and not this article. Dual-booting Ubuntu on the
-Surface loses the Windows client and does not gain a Linux one. x.ai/bot
-does not offer a .deb. The grid is
+Linux desktop: an app since September 2026. Android: a companion app, 9 or
+later. iPad: the iOS app, iPadOS 18 or later. iPhone: yes, limited. macOS
+is a full desktop and not this article. Dual-booting Ubuntu on the Surface
+swaps the Windows client for the Linux one. The grid is
 [Grok Bot on Windows, Linux and iPad](/blog/grok-bot-supported-platforms).
 This tutorial stays on x64, Arm64, WSL, identity, and the lid.
 
@@ -380,7 +380,7 @@ the shared computer.
 
 ### Does Grok Bot run inside WSL if my Windows laptop already has Ubuntu?
 
-No. WSL is a Linux userland on your laptop. Grok Bot runs on a managed Linux virtual machine in the cloud, assigned to your user account, as a non-root user. The Windows app, x64 or Arm64, is the client that talks to that VM. Installing Ubuntu, Debian, or any other distro under Windows Subsystem for Linux does not place the bot there, and there is no package to look for. Use WSL for your own work. Use the official Windows client from x.ai/bot for Grok Bot. Closing the laptop still leaves the cloud VM running.
+No. WSL is a Linux userland on your laptop. Grok Bot runs on a managed Linux virtual machine in the cloud, assigned to your user account, as a non-root user. The Windows app, x64 or Arm64, is the client that talks to that VM. Installing Ubuntu, Debian, or any other distro under Windows Subsystem for Linux does not place the bot there, and the Linux package is for a Linux workstation, not for WSL. Use WSL for your own work. Use the official Windows client from x.ai/bot for Grok Bot. Closing the laptop still leaves the cloud VM running.
 
 ### Which Windows build should I install on a Snapdragon Surface Pro?
 
@@ -392,6 +392,6 @@ No. Closing the app, the laptop, or the iPhone does not stop a background turn o
 
 ### Can I finish a full Grok Bot week on Windows without a Mac, and where does iPhone fit?
 
-Yes. Windows x64 and Windows Arm64 are full desktop clients, same jobs as macOS for create, edit, test, history, and delete. You do not need a Mac for week one. You do need this Windows desk before the phone matters. The iPhone app, iOS 18 or later, pauses and resumes only. Editing, history, testing, deleting, and teach-by-demonstration need desktop. Install the phone client as a stop button after the Windows client already authors jobs. Android and iPad are not that button.
+Yes. Windows x64 and Windows Arm64 are full desktop clients, same jobs as macOS for create, edit, test, history, and delete. You do not need a Mac for week one. You do need this Windows desk before the phone matters. The iPhone app, iOS 18 or later, pauses and resumes, reads run history, and deletes a routine. Editing and testing a routine need desktop. Install the phone client as a stop button after the Windows client already authors jobs. An Android phone or an iPad can be that button too.
 `,
 };

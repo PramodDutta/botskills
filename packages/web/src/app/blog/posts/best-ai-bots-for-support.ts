@@ -169,7 +169,7 @@ slightly harder to do, because editing toward the right register is more work
 than writing it.
 
 **There is no audit view yet.** The runtime documentation stated, when we
-checked it on 25 August 2026, that an audit view of Bot actions does not exist.
+checked it on 25 August 2026, that an audit view of Bot actions does not exist outside Enterprise.
 Verify that before you rely on it. For a support organisation, which is the
 function most likely to be asked who accessed a given customer's data and when,
 that is a real gap rather than a missing convenience. Until it ships, your
@@ -385,7 +385,7 @@ Keep them out of it wherever you can. On a shared runtime every bot on the
 account uses one persistent computer, files and browser sessions are shared
 rather than isolated, and deleting a bot does not remove what it left behind, so
 a scratch file with a customer's history outlives the bot that wrote it. The
-documentation also notes that an audit view of bot actions does not exist yet,
+documentation also notes that an audit view of bot actions does not exist outside Enterprise,
 which means you cannot reconstruct who accessed what. Use ticket references
 rather than names and addresses, and set that boundary in writing.
 `,

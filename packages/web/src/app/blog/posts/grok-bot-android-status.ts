@@ -3,7 +3,7 @@ import type { BlogPost } from './index';
 export const post: BlogPost = {
   title: 'Grok Bot on Android: The App Exists, Here Is What It Can Do',
   description:
-    'Grok Bot has an Android app on Google Play for Android 9 or later. It starts work, approves steps and pauses routines. Editing and run history still need the desktop app.',
+    'Grok Bot has an Android app on Google Play for Android 9 or later. It starts work, approves steps, pauses routines, reads run history. Editing and testing need desktop.',
   date: '2026-09-04',
   category: 'Reference',
   content: `
@@ -34,15 +34,15 @@ The third row still catches people. Grok the chatbot and Grok Bot are separate p
 
 Two requirements sit in front of the install, and both are documented on the mobile page.
 
-The phone needs Android 9 or later. The docs do not list device makes, screen sizes or anything about tablets beyond one sentence, which is that Grok Bot is designed for phones, not iPad. An Android tablet is not mentioned at all, so treat it as undocumented rather than supported.
+The phone needs Android 9 or later. The docs do not list device makes, screen sizes or anything about tablets beyond one sentence, which is that the iOS app also runs on iPad (iPadOS 18 or later). An Android tablet is not mentioned at all, so treat it as undocumented rather than supported.
 
-The account needs an eligible plan. The mobile page names them: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, or Cursor Teams Standard or Premium. Cursor Hobby and Cursor Pro are not on the list. If you are choosing a plan for the first time, [the cheapest way into Grok Bot](/blog/cheapest-way-into-grok-bot) is the arithmetic, and Cursor Pro+ at $60 a month is the cheapest documented paid path. A one-time trial also exists.
+The account needs an eligible plan. The mobile page names them: every paid individual Cursor plan or the Cursor Teams plan, or an individual SuperGrok, SuperGrok Plus, or SuperGrok Heavy subscription linked to your Cursor account. Cursor Hobby, the free plan, is not on the list. If you are choosing a plan for the first time, [the cheapest way into Grok Bot](/blog/cheapest-way-into-grok-bot) is the arithmetic, and Cursor Pro at $20 a month is the cheapest documented paid path. A one-time trial also exists.
 
 An installed app on an ineligible account is an installed app that will not let you in. Confirm the plan on the invoice, not the product name, before you spend an evening on the install.
 
 ## Sign in, take the tour, and wait for the computer once
 
-The documented first run is short. Open Grok Bot, choose Login with Cursor, finish the authentication in the browser, and return to the app. New users get a first-run tour, choose a first Bot, and wait while the shared computer is set up. Existing users land on their synced Bot list.
+The documented first run is short. Open Grok Bot, choose Log In or Sign Up, finish the Cursor authentication in the browser, and return to the app. If your access comes from a SuperGrok subscription, choose Link Grok Account when the access screen asks, then "Finished Linking? Refresh My Status". New users get a first-run tour, choose a first Bot, and wait while the shared computer is set up. Existing users land on their synced Bot list.
 
 That last sentence is the important one. The phone does not get its own bots or its own computer. It connects to the same Bots, conversations, routines, connectors and shared cloud computer as the desktop app, and the same Bots and conversations sync across every signed-in device. Whatever you built at a desk is already on the phone when you sign in.
 
@@ -60,8 +60,8 @@ The useful mental model has three machines, and the docs describe the split clea
 | Approve or deny a step | Yes | Yes | Waits if set to ask |
 | Watch the computer, take over for a password, 2FA or CAPTCHA | Yes | Yes | The screen being watched |
 | Pause or resume a routine | Yes | Yes | Keeps running until told |
-| Edit a routine schedule or instruction | No | Yes | |
-| View run history, test a routine, delete a routine | No | Yes | |
+| Edit a routine schedule or instruction, test a routine | No | Yes | |
+| View run history, delete a routine | Yes | Yes | |
 | Teach by demonstration | No | Yes | |
 | Do the actual work | No | No | Yes |
 
@@ -85,18 +85,18 @@ Two cautions that the docs make and this page repeats. The screen you are lookin
 
 ## Pause a routine from the phone, and know what you cannot touch there
 
-Open a Bot's profile to review its routines. You can inspect the schedule, the next run and the instruction, then use Active to pause or resume. That is the pocket freeze the old iPhone-only companion offered, now on Android too.
+Open a Bot's profile to review its routines. You can inspect the schedule, the next run, the instruction and Run history, use Active to pause or resume, and delete a routine from the profile. That is the pocket freeze the old iPhone-only companion offered, now on Android too.
 
-The line the docs draw immediately after is the one to remember: editing the schedule or instruction, viewing run history, testing, and deleting a routine currently require the desktop app.
+The line the docs draw immediately after is the one to remember: editing the schedule or instruction and testing a routine currently require the desktop app (run history and deleting a routine now work on the phone).
 
 | You want to | On the phone | At a desk |
 |---|---|---|
-| Stop a routine that is misbehaving | Toggle Active off | Same, plus read the run history |
-| See why it misbehaved | Read the conversation only | Open the run records |
+| Stop a routine that is misbehaving | Toggle Active off | Same |
+| See why it misbehaved | Read the conversation and Run history | Open the run records |
 | Change what it does | Not available | Edit the instruction |
 | Change when it runs | Not available | Edit the schedule |
 | Try the fix once | Not available | Test |
-| Retire it | Not available | Delete the routine |
+| Retire it | Delete the routine from the profile | Delete the routine |
 
 So the phone is a brake, not a workshop. If a routine loops at eleven at night, pause it from bed and diagnose in the morning at a desktop. [How to schedule a routine](/blog/how-to-schedule-a-grok-bot-routine) covers the limits that apply either way: a maximum of fifty routines per Bot and twenty run records kept per routine, none of it team-level.
 
@@ -128,7 +128,7 @@ Monday, Kiran installs Grok Bot from Google Play, signs in with a Cursor Pro+ ac
 | Thursday | Desk | Schedules attached, tests run, history read | Routines are desk work |
 | Friday | Phone | Looping routine paused from bed | The phone is the brake |
 
-The difference from the old week is not that the desk disappeared. It is that the desk shrank to the two things that need it: editing routines and reading history. Everything else moved into a pocket.
+The difference from the old week is not that the desk disappeared. It is that the desk shrank to the two things that need it: editing routines and testing them. Everything else moved into a pocket.
 
 ## Paste a charter that treats the phone as a control, not a console
 
@@ -148,8 +148,7 @@ If a step needs a password, a two-factor code or a CAPTCHA, stop and wait.
 I can pause you from the phone but I cannot edit you there. If you are unsure
 what an instruction means, do nothing and say so; I will fix it at a desk.
 Do not use sibling bots as isolation. Screens are not a security boundary.
-Keep runs reconstructable from files I can open, because there is no audit
-view of your actions yet.
+Keep runs reconstructable from files I can open, because this account has no audit view of your actions.
 \`\`\`
 
 The five-second line is the one specific to phones. It costs one extra confirmation on the rare fast tap and it prevents the approval-by-thumb that a small screen invites. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) packs a morning document and never sends a message, which is the right shape for anything you will read on a phone first.
@@ -158,13 +157,13 @@ The five-second line is the one specific to phones. It costs one extra confirmat
 
 The strongest version of the objection: create, message, approve, take over, pause, delete. That is most of the product. Why keep a desktop at all?
 
-Because the docs still put four jobs on the desktop, and they are the four that decide whether a bot is trustworthy: editing a routine's instruction, editing its schedule, testing it, and reading its run history. Those are the jobs where you find out that a bot has been doing the wrong thing for a week. A roster you can operate from a phone but cannot audit from a phone is a roster you audit less often.
+Because the docs still put three jobs on the desktop, and they decide whether a bot is trustworthy: editing a routine's instruction, editing its schedule, and testing it. Run history now reads on the phone, but those three are the jobs where you fix a bot that has been doing the wrong thing for a week. A roster you can operate from a phone but cannot fix from a phone is a roster you fix less often.
 
 There is also teach by demonstration, and the docs' own phrase, some advanced desktop controls, which this page will not expand into a list the docs did not print.
 
 | Claim | What holds | What does not |
 |---|---|---|
-| I can run everything from Android | Daily operation, yes | Editing, testing, history, demonstrations |
+| I can run everything from Android | Daily operation and run history, yes | Editing, testing, demonstrations |
 | I never need to sit at a desk | Weeks with no changes, plausibly | The week a routine needs fixing |
 | The phone is a full client now | For conversations and approvals | For authoring |
 
@@ -174,8 +173,8 @@ Grant the objection most of its ground. A founder who authors on Sundays at a de
 
 | Symptom | Assumption | Fix |
 |---|---|---|
-| Installed, cannot get past sign-in | The install is the gate | The plan is the gate; confirm Pro+, Ultra, Teams, SuperGrok Plus or Heavy |
-| Cannot find the edit button for a routine | Everything is on the phone now | Editing, history, testing and deleting are desktop jobs |
+| Installed, cannot get past sign-in | The install is the gate | The plan is the gate; confirm a paid Cursor plan or Teams, or link an individual SuperGrok tier |
+| Cannot find the edit button for a routine | Everything is on the phone now | Editing and testing are desktop jobs; history and deleting work on the phone |
 | Approved a send you did not mean to | A tap on a small screen is a decision | Add the restate-and-ask-again line to the charter |
 | Phone never buzzed for an approval | Push is guaranteed | Push is still rolling out; check in-app attention states |
 | Typed a password on the take-over screen and now every bot has it | The screen belongs to one bot | The computer is shared across the account; revoke and rotate |
@@ -195,13 +194,13 @@ Grok Bot is in beta. The platform list changed under this very page inside ten d
 
 ## Send iPad and Linux questions to the pages that own them
 
-If you landed here with an Android tablet, the docs say Grok Bot is designed for phones and do not mention Android tablets at all; [the iPad page](/blog/grok-bot-ipad-status) covers the tablet situation, which is unsupported on Apple's side and undocumented on Android's.
+If you landed here with an Android tablet, the docs do not mention Android tablets at all; [the iPad page](/blog/grok-bot-ipad-status) covers the tablet situation, which is supported on Apple's side (the iOS app runs on iPadOS 18 or later) and undocumented on Android's.
 
 If you landed here because someone said the computer is Linux, that is true and separate: the shared cloud computer is a managed Linux machine, and there is now also a Linux desktop app, as a .deb, an .rpm or an AppImage. The full grid is on [supported platforms](/blog/grok-bot-supported-platforms). If something on the phone is not behaving, [Grok Bot troubleshooting](/blog/grok-bot-troubleshooting) is the fault-finding list, and [the iPhone page](/blog/grok-bot-iphone-app) describes the same companion app from the other side.
 
 ## When this page stops applying
 
-This page was checked against docs.x.ai/grok-bot/faq and docs.x.ai/grok-bot/mobile on 4 September 2026. The mobile page carried a last-updated date of 2 September 2026. If the mobile page you are reading is newer than that, it wins.
+This page was checked against docs.x.ai/grok-bot/faq and docs.x.ai/grok-bot/mobile on 4 September 2026. The mobile page carried a last-updated date of 2 September 2026. Run history, deleting a routine, iPad and plan eligibility were rechecked on 23 September 2026. If the mobile page you are reading is newer than that, it wins.
 
 The specific lines most likely to change are the desktop-only list for routines, the push notification rollout, and the Auto Review setting. The line least likely to change is the architecture: the phone controls, the cloud computer works, and the two are not the same machine.
 
@@ -213,14 +212,14 @@ Yes, as of early September 2026. The Grok Bot FAQ lists Android 9 or later as a 
 
 ### What can the Android app not do?
 
-Editing a routine's schedule or instruction, viewing run history, testing a routine and deleting a routine all require the desktop app, in the docs' own words. Teach by demonstration and some advanced desktop controls are also desktop only. Everything conversational, approvals, taking over the computer for a password or CAPTCHA, pausing and resuming routines, and creating or deleting Bots work on the phone.
+Editing a routine's schedule or instruction and testing a routine currently require the desktop app, in the docs' own words; viewing run history and deleting a routine now work on the phone. Teach by demonstration and some advanced desktop controls are also desktop only. Everything conversational, approvals, taking over the computer for a password or CAPTCHA, pausing and resuming routines, and creating or deleting Bots work on the phone.
 
 ### Can I use Grok Bot if I only own an Android phone?
 
-You can install it, sign in with an eligible plan, create Bots, run them conversationally, approve their steps and pause their routines. What you cannot do from the phone is attach or edit a routine, test it, or read its run history, so an Android-only setup means either borrowing a desktop for those jobs or running bots without scheduled routines. Both are workable. Running scheduled routines nobody can audit is the option to avoid.
+You can install it, sign in with an eligible plan, create Bots, run them conversationally, approve their steps and pause their routines. What you cannot do from the phone is attach or edit a routine or test it, so an Android-only setup means either borrowing a desktop for those jobs or running bots without scheduled routines. Both are workable. Running scheduled routines nobody has tested is the option to avoid.
 
 ### Does Grok Bot work on an Android tablet or iPad?
 
-The docs say Grok Bot is currently designed for phones, not iPad, and that iPad is not supported at initial launch. Android tablets are not mentioned at all, which this site reads as undocumented rather than supported. If you have a tablet and a phone, use the phone for Grok Bot and treat the tablet as unrelated hardware until the docs say otherwise.
+On iPad, yes: the docs now say the iOS app also runs on iPad with iPadOS 18 or later. Android tablets are not mentioned at all, which this site reads as undocumented rather than supported. If you have an Android tablet and a phone, use the phone for Grok Bot and treat the tablet as unrelated hardware until the docs say otherwise.
 `,
 };

@@ -378,7 +378,7 @@ One wrong match in ten is enough to stop trusting the MATCHED band.
 Demote everything to PROBABLE for a month, fix the rule that failed, and
 earn the band back.
 
-Keep the reconciliation file itself as the record. There is no audit view
+Keep the reconciliation file itself as the record. There is no audit view outside Enterprise
 of bot actions yet, and the app keeps only the twenty most recent run
 records per routine as of writing, so a monthly job stays inside that
 window for under two years and a weekly one does not. For financial work,

@@ -330,7 +330,7 @@ Have the bot print AWARE and GONE subject lines rather than counts alone,
 since scanning twenty subject lines takes eleven seconds and is the only
 pass that sees the down-sorts. And keep a running note of every message
 you had to find yourself, because that list is the actual error log.
-There is no audit view of bot actions yet, so anything you do not write
+There is no audit view of bot actions outside Enterprise, so anything you do not write
 down is not recoverable later.
 
 ## The Friday sweep that catches a down-sort in four minutes
@@ -505,7 +505,7 @@ non-destructive, so a misfile is a label you can search rather than a
 message that is gone. Make the bot print subject lines for the low
 queues instead of counts, because scanning twenty subjects is the only
 pass that catches a down-sort. Keep your own note of anything you had to
-find yourself, since no audit view of bot actions exists yet and
+find yourself, since no audit view of bot actions outside Enterprise exists yet and
 unwritten misses are unrecoverable.
 
 ### Should the triage bot be allowed to delete or archive email?

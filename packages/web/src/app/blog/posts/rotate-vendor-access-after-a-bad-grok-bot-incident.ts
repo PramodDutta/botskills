@@ -39,7 +39,7 @@ If the vendor session is live, stay here. If you only need the click, leave. An 
 
 Open the incident bot while the profile is still on the roster. Ask it to list every site, console, CLI profile, connector, skill, routine, and folder it used in the last week. Write that list in a file you own. After delete you will not get the chat back.
 
-There is no audit view of Bot actions yet. The product will not print "Reza signed into Shopify admin on Monday at 16:40." The bot's recap is the inventory, and it expires when you delete the name.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. The product will not print "Reza signed into Shopify admin on Monday at 16:40." The bot's recap is the inventory, and it expires when you delete the name.
 
 People skip this because they remember "I only logged into Shopify." A 2FA run often also opened a docs subdomain, a payments page, and a CSV under \`/workspace\`. [Inbox Triage](/bots/inbox-triage) gets the same cookie jar even if it never asked for a store.
 
@@ -107,7 +107,7 @@ Privacy Mode (Legacy) blocks Grok Bot entirely. It is not an incident rotate. Do
 
 ## Walk Reza's Shopify admin cookie from a 24 August 2FA job onto the research bot
 
-Reza runs Feltline, an invented three-person apparel shop used only as an example. Cursor Pro+ at $60 a month is the cheapest paid path that includes Grok Bot after eligibility widened on 21 August 2026. The clocks below are an arbitrary example, not a product limit.
+Reza runs Feltline, an invented three-person apparel shop used only as an example. Cursor Pro at $20 a month is the cheapest paid path that includes Grok Bot after eligibility widened on 21 August 2026. The clocks below are an arbitrary example, not a product limit.
 
 Monday 24 August 2026, 16:40. A named bot called payouts hits Shopify 2FA while pulling a payout CSV. Reza follows the documented path: open Agent Computer, take control, type the authenticator code into the site's field, return control. Eighteen minutes later the CSV is on disk. Reza deletes payouts at 17:05 because the name was always disposable.
 
@@ -159,13 +159,13 @@ A second eligible account is the isolation move when Shopify admin must never sh
 
 Delete last. Maybe. If you still need the chat that named the dirty folder, keep the profile and hide it after you rotate. Hide does not pause routines. Pause each routine when the job should stop.
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. If you are away from a desk with a live vendor cookie, pause from the phone now. Do the vendor rotate and the named-bot delete from a supported desk. Supported: macOS on Apple silicon and Intel, Windows on x64 and Arm64, iPhone on iOS 18+ for pause. Not supported: Linux desktop, Android, iPad. The computer is a managed Linux VM, not a Linux desktop client.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. If you are away from a desk with a live vendor cookie, pause from the phone now. Do the vendor rotate and the named-bot delete from a supported desk. Supported desks: macOS on Apple silicon and Intel, Windows and Linux on x64 and Arm64. Phones: iPhone on iOS 18+, Android 9+, and iPad through the iOS app. The computer is a managed Linux VM, not a Linux desktop client.
 
 A routine assigns a workflow to one Bot. Max 50 routines per Bot. The app keeps 20 most recent run records per routine. Deleting a Bot also deletes its routines. Nothing is team-level. If a standing job must outlive the incident name, recreate it on a keeper bot while the incident bot still exists, enable the keeper copy, then pause the copy on the incident bot.
 
 Do not delete as a calming action while the admin cookie is live. You lose the recap and you keep the blast radius. Pause, sign out, revoke, rotate, sweep. The roster action is last.
 
-Admin Kill is documented as coming soon. It deletes the VM while durable storage is kept. There is no ship date in that description. Do not wait for it.
+Enterprise organization admins can Terminate a member's computer, and it still keeps the durable disk, synced logins included. Terminate is not a rotate. Do not wait for it.
 
 ## Fail Lead Scout if it can still load the vendor as the incident user
 
@@ -243,7 +243,7 @@ Hosted MCP sign-in tokens stay with Cursor's backend and are never stored on the
 
 ### Should I delete the named bot before I rotate vendor access?
 
-No. Delete last, and only if you no longer need the chat, the profile, or the routines. Deleting a Bot also deletes its routines. Max 50 routines per Bot, and the app keeps 20 most recent run records per routine. Those vanish with the name. The cookie, the OAuth grant, the API key, and the files do not. Pause on iPhone if you cannot reach a desk. Sign out, revoke, rotate, sweep, then sit at Mac or Windows to delete. iPhone cannot delete.
+No. Delete last, and only if you no longer need the chat, the profile, or the routines. Deleting a Bot also deletes its routines. Max 50 routines per Bot, and the app keeps 20 most recent run records per routine. Those vanish with the name. The cookie, the OAuth grant, the API key, and the files do not. Pause on iPhone if you cannot reach a desk. Sign out, revoke, rotate, sweep, then delete. The phone app can delete a Bot too, but do the sweep at a desk first.
 
 ### How do I prove the research bot can no longer open the vendor as staff?
 

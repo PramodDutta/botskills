@@ -59,7 +59,7 @@ The picking consequence is simple: if the nominee cannot be unwound, it is not
 the first grok bot job.
 
 An approval is a gate on the next proposed action. It does not reverse work
-already completed. There is, as of writing, no audit view of Bot actions. If
+already completed. There is, as of writing, no audit view of Bot actions outside Enterprise. If
 the bot already sent, you will reconstruct it from the Sent folder, from a
 stranger's reply, or from nothing.
 
@@ -121,7 +121,7 @@ checklist](/blog/grok-bot-safety-checklist) before the consent screen. Create
 one bot, connect Gmail, and refuse a second bot until you have seen a week of
 labels. Hosted MCP sign-in tokens stay with Cursor's backend. Browser cookies
 stay on the computer. Pick a job that needs one door. iPhone can pause and
-resume. Editing, history, testing, and deleting need desktop. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Grade the first job on a
+resume. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). Grade the first job on a
 desk.
 
 ## Keep the irreversible step on a human even when the bot is fast
@@ -412,7 +412,7 @@ Plant a canary thread with a unique subject token, run the bot, then open
 Sent and Drafts yourself. The canary may be labelled, and it may have a draft.
 It must not appear as sent. Nothing else should have left either. If Sent is
 dirty, disconnect send-capable access and stop. There is no audit view of Bot
-actions yet, so the folder in front of you is the record. Write that result
+actions outside Enterprise, so the folder in front of you is the record. Write that result
 in a note you own. Deleting the bot will not keep the lesson, and it will not
 wipe the Gmail session on the shared computer.
 `,

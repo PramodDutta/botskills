@@ -78,14 +78,13 @@ computer.
 
 The product launched in beta on 11 August 2026. Eligibility widened on 21 August
 2026. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history,
-testing, and deleting need desktop.
+Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine.
 
 A routine assigns a workflow to one bot (max 50 per bot). The app keeps the 20
 most recent run records per routine. Deleting a bot deletes its routines.
 Nothing is team-level. Teach-by-demonstration lasts up to ten minutes, captures
 no microphone audio, produces a draft skill, works for browser workflows only,
-and is unavailable on iPhone. There is no audit view of bot actions yet. A
+and is unavailable on iPhone. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. A
 [chief of staff briefing](/bots/chief-of-staff-briefing) bot and an
 [inbox triage](/bots/inbox-triage) bot look like two hires. They share one cookie
 jar. Isolation:
@@ -192,11 +191,12 @@ Microsoft moves Copilot names, SKUs, and surfaces. Treat every Microsoft
 sentence on this page as a pointer. Before you budget, copy plan names, app
 lists, and any computer-use or Studio runtime claims from Microsoft's current
 pages for the object you named. If a competitor prints a Copilot price next to
-Cursor Pro+ at $60 a month, discard the Copilot number and keep the Grok Bot
+Cursor Pro at $20 a month, discard the Copilot number and keep the Grok Bot
 number only if you re-check
 [the Grok Bot FAQ](https://docs.x.ai/grok-bot/faq).
 
-Grok Bot facts here were checked on 2026-08-25 against
+Grok Bot facts here were checked on 2026-08-25, and the plan facts again on
+2026-09-23, against
 [the Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and
 [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps). SpaceX
 acquired xAI (announced 2 February 2026). SpaceX acquired Anysphere, the company
@@ -214,7 +214,7 @@ bot that can open the same browser. Deleting Churn Watch does not sign Mail
 Cleanup out.
 
 Approvals stop a proposed action. They do not reverse work already completed or
-unsay a cookie. There is no audit view of bot actions yet. If you needed an
+unsay a cookie. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. If you needed an
 immutable mailbox log, that is a tenant story. Prefer
 [least privilege bots](/blog/least-privilege-bots) and
 [approval rules and reversibility](/blog/grok-bot-approval-rules-reversibility)
@@ -226,9 +226,9 @@ When a bot is done, rotate the sessions yourself.
 ## Budget Grok Bot from published Cursor and SuperGrok paths only
 
 Grok Bot access is a subscription check, not a Grok Bot SKU you add at checkout.
-The table is the eligibility list, checked 2026-08-25 against the FAQ. Cursor
-Pro+ at $60 a month is the cheapest paid path. There is no Grok Bot-specific
-spend cap: weekly allowance, then on-demand from model and token cost, with no
+The table is the eligibility list, checked 2026-09-23 against the FAQ. Cursor Pro at $20 a month is the cheapest paid path. There is no Grok Bot-specific
+spend cap, only the account-level On-demand monthly limit: weekly allowance,
+then on-demand from model and token cost, with no
 published dollar figure for the allowance. There is no model picker. See
 [Grok Bot cost](/blog/grok-bot-cost),
 [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn), and
@@ -237,10 +237,10 @@ prices.
 
 | Path | Grok Bot included? | Copilot family |
 |---|---|---|
-| Cursor Hobby (free); Cursor Pro ($20/mo); SuperGrok ($30/mo) | No | Not Copilot SKUs |
-| Cursor Pro+ ($60/mo) | Yes. Cheapest paid Grok Bot path. | Still not a Copilot license |
-| Cursor Ultra; SuperGrok Plus ($100/mo); SuperGrok Heavy; one-time trial | Yes. Confirm live Cursor and SuperGrok rates. Do not copy an unpublished Heavy price. | Confirm Microsoft separately |
-| Cursor Teams Standard ($40/user/mo); Teams Premium ($120/user/mo) | Yes | Confirm Microsoft 365 Copilot on Microsoft's pages |
+| Cursor Hobby (free); SuperGrok Lite | No | Not Copilot SKUs |
+| Cursor Pro ($20/mo); Cursor Pro+ ($60/mo) | Yes. Pro is the cheapest paid Grok Bot path. | Still not a Copilot license |
+| Cursor Ultra; a linked individual SuperGrok, SuperGrok Plus or SuperGrok Heavy; one-time trial | Yes. Confirm live Cursor and SuperGrok rates. Do not copy an unpublished Heavy price. | Confirm Microsoft separately |
+| A self-serve Cursor Teams seat | Yes, every member | Confirm Microsoft 365 Copilot on Microsoft's pages |
 | Copilot in Microsoft 365, Copilot Studio, GitHub Copilot, Windows Copilot | Not Grok Bot | Confirm every price and SKU on Microsoft's or GitHub's current pages |
 
 A company can pay for GitHub Copilot and Microsoft 365 Copilot and still lack
@@ -255,12 +255,12 @@ Stay in Microsoft when the work is already in the workplace graph and the
 compliance story has to stay in the tenant: the sales lead whose mail and Teams
 threads are the product, the team that cannot put customer mail on a vendor VM,
 the shop whose admins will not approve a second cloud computer with no audit
-view, the engineer who actually needed GitHub Copilot in the editor, the person
+view outside an Enterprise contract, the engineer who actually needed GitHub Copilot in the editor, the person
 whose files must not leave this Windows PC.
 
 Confirm the matching Copilot object on Microsoft's current pages, then use it
 for that artefact. Do not staff a Grok Bot as a political workaround. You will
-still have the tenant plus a shared cookie jar. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. A Linux workstation is not a Grok Bot desktop.
+still have the tenant plus a shared cookie jar. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; the iOS app also runs on iPad (iPadOS 18 or later). A Linux workstation has been a Grok Bot desktop since September 2026.
 Details: [Grok Bot supported platforms](/blog/grok-bot-supported-platforms).
 
 ## Keep Grok Bot when the door is a login and the laptop has to close

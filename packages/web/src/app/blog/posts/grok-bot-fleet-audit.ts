@@ -30,7 +30,7 @@ wearing a clipboard.
 ## List every named bot, its job, and the verb it must never do
 
 Start with the thing that does not exist yet: a written roster. No audit view of
-bot actions exists, so no page lists your bots, their runs, or their permissions.
+bot actions exists outside Enterprise, so no page lists your bots, their runs, or their permissions.
 Your roster is whatever you reconstruct from the app plus memory, and the
 reconstruction is the first finding.
 
@@ -146,8 +146,8 @@ the backend rather than sitting on the machine, which helps, but a signed-in
 browser session there is reachable from any screen. Every send-capable connection
 you keep is one every bot has.
 
-There is no product-level spend cap yet either, so a money-capable connection is
-bounded by nothing you configured. That makes "we might use it later" an
+There is no Grok Bot-specific spend cap either, and the account On-demand monthly
+limit only bounds usage, so a money-capable connection is bounded by nothing you configured. That makes "we might use it later" an
 expensive reason to keep an ads or payments integration attached. Note what you
 disconnect, with the date, because you will consult that list in six weeks.
 
@@ -326,11 +326,11 @@ where you find out.
 | Boundary rewrites held | Re-read the two charters you fixed | The old paste is back |
 
 The sent-folder check is the one to run regardless of what the report said. There
-is no audit view of bot actions, so a provider's own sent items are the only
+is no audit view of bot actions outside Enterprise, so a provider's own sent items are the only
 independent record of what left the building.
 
-Do this on the desktop app. Editing, history, testing, and deleting all require
-desktop; the phone app can pause a routine and approve steps but cannot open run history, so an audit conducted from your phone is a reading exercise.
+Do this on the desktop app. Editing and testing a routine both require
+desktop; the phone app can pause a routine, approve steps, and open run history, but an audit conducted from your phone is still a reading exercise.
 
 ## Leave Overwatch to clean files, and the foreman to catch stalls
 
@@ -386,15 +386,16 @@ one message. The next one asks again.
 
 The mechanic behind the rule: an approval controls the proposed action and does
 not reverse work already completed. So an approval that arrives after the send is
-a notification. Sequence is the entire control, and no audit trail exists to
-reconstruct what happened later.
+a notification. Sequence is the entire control, and outside Enterprise no audit
+trail exists to reconstruct what happened later.
 
-One coming-soon note, labelled as not shipped: a team-level ceiling on local
-execution with Never, Ask every time, and Always options has been described,
-where members can choose a stricter option but not a looser one. An admin Kill
-action that deletes the VM while keeping durable storage has also been described.
-Neither is available to lean on today, which is why the gate lives in each bot's
-own instructions and gets re-checked every audit.
+One update on admin controls that were only previewed in August: both have
+shipped. Team admins on Teams and Enterprise can cap local execution with Never,
+Ask every time, and Always options, where members can choose a stricter option
+but not a looser one. Enterprise organization admins can Terminate a member's
+computer, which still keeps the durable disk. Neither checks the text of a send,
+which is why the gate lives in each bot's own instructions and gets re-checked
+every audit.
 
 Finish the pass with one line at the top of the report: how many bots can act
 outside this chat, and how many of those you reviewed text-by-text this month. If
@@ -420,7 +421,7 @@ you keep. Sign leftover sessions out by hand as part of the audit.
 The useful limit is how many you are willing to review monthly, not a number the
 platform imposes. Each bot carries instructions to re-read, integrations to
 justify, routines to check, and sessions it may have opened, and all of that lands
-on one shared computer with no audit view to help you. Most people find three to
+on one shared computer with no audit view outside Enterprise to help you. Most people find three to
 six reviewable and nine not. If you cannot name every bot's job and the verb it
 must never perform, you are already past your limit and hiring will not fix the
 part that hurts.
@@ -437,11 +438,11 @@ made you build the second one.
 
 ### Can I run the audit from my phone?
 
-Only as a reading exercise. On iPhone you can pause and resume a bot, while
-editing, history, testing, and deleting all require the desktop app. So you can
-review charters, read outputs, and pause something alarming from a phone, but the
+Only as a reading exercise. On iPhone you can pause and resume a bot, read run
+history, and delete, while editing and testing a routine require the desktop app. So you can
+review charters, read outputs and run history, and pause something alarming from a phone, but most of the
 actions the audit recommends need a desktop session. There is also no fleet
-dashboard anywhere, since an audit view of bot actions does not exist yet, which
+dashboard anywhere, since an audit view of bot actions does not exist outside Enterprise, which
 means the roster you keep in a file is the only complete list of what you are
 running.
 `,

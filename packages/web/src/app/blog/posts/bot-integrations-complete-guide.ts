@@ -573,7 +573,7 @@ that takes ten minutes and happens whether or not anything feels wrong.
 | 5 | The charter | Whether its connection list still matches reality | Rewrite it to match |
 | 6 | The run history | Runs that failed silently because a scope changed | Fix or retire the routine |
 
-Step two matters more than it looks, because there is currently no audit view
+Step two matters more than it looks, because there is currently no audit view outside Enterprise
 of bot actions inside Grok Bot ([teams and
 enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)). The vendor
 side is where the evidence is. Google, Slack, and GitHub all publish a

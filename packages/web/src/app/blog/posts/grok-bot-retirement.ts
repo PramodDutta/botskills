@@ -21,7 +21,7 @@ People search "retire grok bot" and "delete a grok bot" as if they were the same
 
 | Job you actually have | Page that owns it | What this page will not redo |
 |---|---|---|
-| Sidebar delete, hide, duplicate, iPhone cannot finish teardown | [Delete a Grok Bot safely](/blog/delete-a-grok-bot-safely) | The click itself and the HubSpot contractor story |
+| Sidebar delete, hide, duplicate, why teardown finishes on a desktop | [Delete a Grok Bot safely](/blog/delete-a-grok-bot-safely) | The click itself and the HubSpot contractor story |
 | Monday vanished after a disposable owner disappeared | [Routine did not run](/blog/grok-bot-routine-did-not-run) | Clock choice and the 20-record postmortem |
 | Second eligible account, hosted MCP, never pasting keys onto this disk | [Isolate credentials](/blog/how-to-isolate-grok-bot-credentials) | Building a vault you do not have yet |
 | Sessions, \`/workspace\` dumps, cookies, recreate-then-cut | This page | Isolation architecture and the delete UI |
@@ -30,7 +30,7 @@ Use the table as a routing rule. Hide if you might still need the chat. Pause if
 
 ## Inventory every vendor console temp actually signed into
 
-Open the bot while it still exists. Ask it to list every site, console, CLI profile, connector, skill, routine, and folder it used. Write that list somewhere you own. After delete you will not get the chat back, and there is no audit view of Bot actions yet.
+Open the bot while it still exists. Ask it to list every site, console, CLI profile, connector, skill, routine, and folder it used. Write that list somewhere you own. After delete you will not get the chat back, and individual accounts have no audit view of Bot actions.
 
 People skip this because they remember "I only logged into the vendor." Temp rarely did only that. A pricing scrape often also opened a status page, a docs subdomain, a support portal, and a PDF under \`/workspace\`. The sibling that opens next, often [Inbox Triage](/bots/inbox-triage), gets the same cookie jar.
 
@@ -145,21 +145,21 @@ A retirement you do not test is a story you told yourself. Run checks that are a
 
 The fail column is the point. If NimbusOps still loads, you are not finished. If Monday 08:30 only lived on a deleted card, you are late. Recreate the keeper before the click. Teardown of a vendor session does not teardown Gmail. See [the safety checklist](/blog/grok-bot-safety-checklist) before you connect a mailbox. Sign out of the vendor. Leave the mailbox grant if it is still in scope.
 
-## Treat admin Kill as a coming-soon VM halt that still keeps durable storage
+## Treat admin Terminate as a VM halt that still keeps the durable disk
 
-Teams documentation describes an administrator Kill action that deletes the VM while durable storage is kept. Label that as coming soon, not shipped. This article will not invent a ship date. Do not wait for Kill. Do not file it as this week's wipe.
+Teams documentation describes an administrator Terminate action, part of Grok Bot Computers on the Cursor dashboard. It is Enterprise only and for organization admins only. Terminate deletes a member's computer while the durable disk is kept. Do not wait for an admin to Terminate. Do not file it as this week's wipe.
 
-Even when it ships, durable storage is kept. Killing the VM is a halt of the running machine. It is not a promise that \`/workspace\` dumps vanish, that a vendor must re-auth, or that you get an audit log. An audit view of Bot actions does not exist yet. Kill would still not record what temp already did.
+Terminating the computer is a halt of the running machine, and the member's next session starts a fresh computer on the same disk. It is not a promise that \`/workspace\` dumps vanish, that a vendor must re-auth, or that you get an audit log. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Terminate would still not record what temp already did.
 
-A related coming-soon control is a team-level ceiling on local execution (Never / Ask every time / Always), where members can choose a stricter option but not a looser one. That is about the Mac or Windows machine in front of you, not leftover vendor cookies on the cloud computer. Pause exists today and is also not a wipe. Pause routines if you are away from a desk, then do sign-out and file removal on a supported desktop.
+A related control is the team-level ceiling on local execution (Never allow / Ask every time / Always allow), which team admins on Teams and Enterprise can now set; members can choose a stricter option but not a looser one. That is about the Mac or Windows machine in front of you, not leftover vendor cookies on the cloud computer. Pause exists today and is also not a wipe. Pause routines if you are away from a desk, then do sign-out and file removal on a supported desktop.
 
 Deleting the Cursor account is a different flow, via account settings. This page is how to retire grok bot profiles. It is not an account-deletion guide.
 
-## Finish the named-bot delete from Mac or Windows, because iPhone cannot
+## Finish the named-bot retirement from a desktop, not from the phone
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Supported clients are macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The bots run on a managed Linux VM. The desk you drive it from cannot be a Linux desktop, and it cannot be your phone if the job is delete.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Supported clients are macOS on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The bots run on a managed Linux VM. The phone can delete a Bot and take over the computer, but editing and testing the keeper routine need the desktop app.
 
-Pause from the phone if you are away. That stops the Monday digest from firing. It does not sign NimbusOps out, delete \`/workspace/temp-nimbusops/\`, or recreate the digest on Lead Scout. Those steps need a Mac or Windows machine. If the only machine in the room is Linux, wait for a supported desk. Do not invent an SSH story as a retirement method. Your local Linux laptop is not the control plane. Do not start retirement on a phone and call it done.
+Pause from the phone if you are away. That stops the Monday digest from firing. It does not sign NimbusOps out, delete \`/workspace/temp-nimbusops/\`, or recreate the digest on Lead Scout. Do those steps from a desktop app on macOS, Windows, or Linux. Do not invent an SSH story as a retirement method. Do not start retirement on a phone and call it done.
 
 ## Paste the retire grok bot order into temp before the first vendor login
 
@@ -218,8 +218,8 @@ They die with the bot. A routine assigns a workflow to one Bot. Nothing is team-
 
 Yes, if that job must outlive the scratch name. Recreate, enable, confirm ownership on the keeper, then pause temp, then sign out, then sweep files, then delete. Duplicate is not the same move. Duplicate copies profile, settings, skills, routines, and avatar. It does not copy conversation history or isolate the vendor cookie. Both cards still share the computer. Use recreate-on-a-keeper when the calendar object must survive and the name temp must not. Skip recreate only for one-shot work you do not want again.
 
-### Does Admin Kill wipe leftover files after I retire a bot?
+### Does an admin Terminate wipe leftover files after I retire a bot?
 
-No. Admin Kill is documented as coming soon. It deletes the VM while durable storage is kept. There is no ship date in that description, and this page will not invent one. Even when it ships, kept durable storage means files you hoped would vanish may still be there. Kill is a halt, not an audit log, and not this week's substitute for sign-out and a directory listing. Pause exists today and also does not wipe the disk. Do the file pass yourself.
+No. Terminate, part of Grok Bot Computers, is Enterprise only and for organization admins only. It deletes the member's computer while the durable disk is kept, so files you hoped would vanish may still be there on the next fresh computer. Terminate is a halt, not an audit log, and not this week's substitute for sign-out and a directory listing. Pause exists today and also does not wipe the disk. Do the file pass yourself.
 `,
 };

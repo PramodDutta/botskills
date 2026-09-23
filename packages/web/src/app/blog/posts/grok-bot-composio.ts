@@ -43,7 +43,7 @@ Casual writing calls all three grok bot composio, or "we connected HubSpot." Onl
 
 The browser path feels like looking. You open HubSpot, type the AE password, pass the challenge the datacenter IP often triggers, search Harbor Payroll, copy four stages into a file, and leave the tab. You did not add a plugin. You signed into a website.
 
-On this computer that login is not a private tab. Screens are desks, not locks. [Lead Scout](/bots/lead-scout) can load the CRM the way it loads any URL. [Churn Watch](/bots/churn-watch) and [Mail Cleanup Assistant](/bots/mail-cleanup-assistant) can too, if they open a browser. There is no audit view of Bot actions yet.
+On this computer that login is not a private tab. Screens are desks, not locks. [Lead Scout](/bots/lead-scout) can load the CRM the way it loads any URL. [Churn Watch](/bots/churn-watch) and [Mail Cleanup Assistant](/bots/mail-cleanup-assistant) can too, if they open a browser. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording.
 
 The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop app, and it does not shrink the cookie jar. Traffic leaves from static egress addresses, and CRM tooling sometimes challenges a datacenter IP. That pain is a reason to get the hosted path working, not a reason to park an AE session.
 
@@ -150,7 +150,7 @@ If you need Lead Scout unable to call CRM tools at all, this runtime cannot give
 
 ## Prove the connector won with a check that Lead Scout can fail
 
-Run these on the day you connect, and again the day you debug a 403 in the GUI. Record the results next to the pipeline file. There is no audit view. You are the log.
+Run these on the day you connect, and again the day you debug a 403 in the GUI. Record the results next to the pipeline file. Outside Enterprise there is no audit view. You are the log.
 
 | Probe | Pass | Fail |
 |---|---|---|
@@ -183,7 +183,7 @@ Second, what the tools or the identity can do. Two GET-style CRM tools are a sma
 | Hosted connector plus a leftover HubSpot tab | Yes | Maybe | No. Sign out |
 | AE session parked after a 403 | Yes | The whole GUI | No, unless that identity was built to be shared |
 
-Pay, send, enroll, and publish sit on the verb axis, not the storage axis. A hosted token that can enroll a sequence is still a send with a timer on it. There is no Grok Bot-specific spend cap. Do not use "we use Composio" as a reason to connect a verb you cannot undo. A hosted grok bot composio connection does not make a stage overwrite safe. Keep writes, sequences, and sends off both paths until a person clicks. [Standup Scribe](/bots/standup-scribe) does not need HubSpot. Do not give it HubSpot because the pipeline bot already has a connector.
+Pay, send, enroll, and publish sit on the verb axis, not the storage axis. A hosted token that can enroll a sequence is still a send with a timer on it. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Do not use "we use Composio" as a reason to connect a verb you cannot undo. A hosted grok bot composio connection does not make a stage overwrite safe. Keep writes, sequences, and sends off both paths until a person clicks. [Standup Scribe](/bots/standup-scribe) does not need HubSpot. Do not give it HubSpot because the pipeline bot already has a connector.
 
 ## Name the cases where a browser CRM login is still the honest path
 

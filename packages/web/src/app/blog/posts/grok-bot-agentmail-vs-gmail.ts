@@ -172,12 +172,13 @@ Cost comparisons in this space go stale in weeks, so here is what can be said
 honestly, and what cannot.
 
 What is verifiable about the platform side: the cheapest paid path to Grok Bot
-as of writing is Cursor Pro+ at sixty dollars a month. SuperGrok Plus at one
-hundred includes access, and SuperGrok at thirty does not. Cursor Hobby and
-Cursor Pro at twenty do not include it; Cursor Teams Standard at forty per user
-does. Subscriptions carry a weekly usage allowance and overflow is billed on
-demand from model and token cost, and there is no Grok Bot specific spend cap
-yet. No published figure exists for what the included allowance is worth in
+as of 23 September 2026 is Cursor Pro at twenty dollars a month. Every paid
+Cursor plan includes access, and so does a self-serve Cursor Teams seat; Cursor
+Hobby, the free plan, does not. An individual SuperGrok, SuperGrok Plus,
+SuperGrok Heavy or X Premium+ subscription can be linked instead. Subscriptions
+carry a weekly usage allowance and overflow is billed on demand from model and
+token cost, up to the account On-demand monthly limit, and there is no Grok Bot
+specific spend cap. No published figure exists for what the included allowance is worth in
 dollars or credits, so anyone quoting one is guessing.
 
 What is not verifiable: what a dedicated mailbox provider charges you. Pricing
@@ -285,7 +286,7 @@ sending. The mail it read was one thread. There was no bank alert within reach,
 because nothing had ever sent one to that address.
 
 Day one, both look like a bot that behaved. Day thirty, the difference is the
-audit you cannot run: there is no audit view of bot actions yet, so the question
+audit you cannot run: individual accounts have no audit view of bot actions, so the question
 "what did it read last Tuesday" is answered by scope, not by logs. In one setup
 the answer is nine years. In the other it is one thread.
 
@@ -303,7 +304,7 @@ separation.
 | Routines vanished after you recreated a bot | Routines are per bot and deleting a bot deletes them | Rebuild the schedule. Nothing here is team level |
 | A summary of old mail turned up somewhere less protected | Read scope on a full personal mailbox has no time boundary | Scope by mailbox, not by promise. This is the dedicated inbox argument |
 | Agent address mail lands in spam | New sending identity, static datacenter egress IPs | Warm slowly, replies only, never volume |
-| You cannot say what the bot read last week | No audit view of bot actions exists yet | The chat summary is the record. Make it specific |
+| You cannot say what the bot read last week | No audit view of bot actions exists outside Enterprise | The chat summary is the record. Make it specific |
 
 The first row is the one that produces the most confident wrong statements
 online. Deletion removes the bot. It does not remove the session the bot used,
@@ -455,7 +456,7 @@ confidence. Retire in order instead: sign out of the mail session on the machine
 by hand, revoke access at the provider, audit filters and forwarding rules
 because connector-created rules belong to the mail provider afterwards, delete
 any workspace files holding the address, and only then delete the bot. There is
-also no audit view of bot actions yet, so you cannot verify cleanup from logs.
+also no audit view of bot actions outside Enterprise, so you cannot verify cleanup from logs.
 
 ### Which mail identity should a bot that receives vendor CCs use?
 

@@ -94,7 +94,7 @@ so the bot refuses on its own rather than relying on a wall.
 Belt and braces is justified because the damage is silent. Nothing emails you
 when a July number changes in August. Reports regenerate on demand, so the
 version you sent and the version in the system diverge without an event. There is
-also no audit view of bot actions in the product yet, which is a genuine irony
+also no audit view of bot actions outside Enterprise in the product yet, which is a genuine irony
 here: the tool designed to keep a ledger of everything is being operated by
 something that keeps no ledger of itself. Whatever record exists is the one you
 require the bot to write, so require it in detail and read it.

@@ -253,7 +253,7 @@ search. These six account for most of it.
 
 There is a seventh that has no fix, only a workaround: you cannot reconstruct
 what the bot did last Tuesday, because an audit view of bot actions does not
-exist yet. The twice-daily summary is therefore the record rather than a
+exist outside Enterprise. The twice-daily summary is therefore the record rather than a
 convenience, which is a reason to send it somewhere other than the mailbox the
 bot is managing.
 

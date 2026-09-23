@@ -19,7 +19,7 @@ Fluency is how a fake price survives breakfast. You open the pack. It reads like
 
 Grok bot evidence is a property of the sentence. A sentence a teammate might repeat is a claim. Prices, plan names, seat counts, ship dates, headcount, feature lists, cheaper-than-us, they-just-launched, usage-is-down, the-inbox-is-quiet: those are claims. Nothing-changed is a claim. I-could-not-find-Team is a claim, and it is the honest one.
 
-A failed evidence run can still look green. There is no audit view of Bot actions yet, so the product will not flag a missing URL. The only failing check is one you write: every claim has SOURCE plus QUOTE, or COULD-NOT-COMPUTE. A paragraph that skips both is discarded. Never-send does not catch an unsourced sentence Elena repeats at lunch. Grok bot evidence sits in front of that mouth.
+A failed evidence run can still look green. There is no audit view of Bot actions outside Enterprise, so the product will not flag a missing URL. The only failing check is one you write: every claim has SOURCE plus QUOTE, or COULD-NOT-COMPUTE. A paragraph that skips both is discarded. Never-send does not catch an unsourced sentence Elena repeats at lunch. Grok bot evidence sits in front of that mouth.
 
 ## Write grok bot evidence into the charter before the first weekday routine
 
@@ -27,7 +27,7 @@ A chat reminder dies on the second morning. You typed cite-your-sources in the t
 
 Put grok bot evidence in the charter the routine actually loads. If the block is not in the standing instructions, it is not a rule. Teach-by-demonstration will not save you. That feature records up to ten minutes of a browser workflow, no microphone, desktop only, and produces a draft skill. A click path is not a citation rule. A draft skill that copies prices without a SOURCE line is how $39 enters the pack with a straight face.
 
-Write the block before you schedule. After Elena quotes the number is incident response. On iPhone (iOS 18+) you can pause and resume. Editing the charter still needs macOS or Windows. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM, which is not a Linux desktop app. If you cannot paste the Evidence block today, do not turn the routine on today.
+Write the block before you schedule. After Elena quotes the number is incident response. On iPhone (iOS 18+) you can pause and resume. Editing the charter still needs the desktop app. The desktop app runs on macOS, Windows and Linux; the phone app runs on iPhone, Android and, through the iOS app, iPad. The agent runs on a managed Linux VM, which is not a Linux desktop app. If you cannot paste the Evidence block today, do not turn the routine on today.
 
 ## Accept a live source, a verbatim quote, or a could-not-compute line, and nothing else
 

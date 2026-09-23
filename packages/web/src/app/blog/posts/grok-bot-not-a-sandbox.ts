@@ -52,7 +52,7 @@ research does not create a second computer.
 ## Treat Bot A and Bot B as two windows on one Linux home directory
 
 The Agent Computer is a managed Linux VM. The bot process runs as a non-root
-user. Non-root is not per-bot isolation, and it is not a Linux desktop app.
+user. Non-root is not per-bot isolation, and it is not the Linux desktop app.
 There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). There is one VM per eligible user, and every
 bot you create on that user opens a screen onto the same disk.
 
@@ -97,8 +97,7 @@ research is a window onto the same home directory.
 | Wednesday 09:40 | Research bot, Bot B | Public web, maybe a docs scrape | \`aws s3 ls\` using production identity |
 
 A bot you create next week with a blank connection list still sits on this
-computer. There is no audit view of bot actions yet
-([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
+computer. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 Prove the identity with a throwaway screen, or assume Bot B can use it.
 
 ## Score named-bot isolation against the three things it never walls
@@ -148,16 +147,15 @@ sign-in are in
 [why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained).
 
 A second computer is a second bill. The cheapest paid path that includes Grok
-Bot is Cursor Pro+ at $60 a month. Cursor Hobby and Cursor Pro at $20 do not
-include it. SuperGrok at $30 does not. SuperGrok Plus at $100 does. SuperGrok
-Heavy includes it. Teams Standard at $40 per user per month and Teams Premium
-at $120 per user per month both include it. Confirm live numbers on
+Bot is Cursor Pro at $20 a month. Cursor Hobby, the free plan, does not include it; every paid Cursor plan does, from Cursor Pro at $20. An individual SuperGrok, SuperGrok Plus or SuperGrok
+Heavy subscription can be linked instead. A self-serve Cursor Teams seat
+includes it for every member, with no Premium seat required. Confirm live numbers on
 [cursor.com/pricing](https://cursor.com/pricing) and
 [x.ai/pricing](https://x.ai/pricing)
 before you budget. The product launched in beta on 11 August 2026.
 Eligibility widened on 21 August 2026.
 
-There is no Grok Bot-specific spend cap. After the weekly allowance, usage is
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. After the weekly allowance, usage is
 on-demand from model and token cost, with no published dollar figure. Bill
 shape is in [Grok Bot cost](/blog/grok-bot-cost).
 
@@ -349,7 +347,7 @@ work. Not grok bot isolation.
 
 Where this breaks down: a human who copies ~/.aws between accounts anyway, a
 hosted MCP tool treated as per-bot, a 2FA prompt completed just to unblock
-the console, an iPhone pause mistaken for a wipe. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. None of
+the console, an iPhone pause mistaken for a wipe. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. None of
 those limits create a sandbox. If the worst secret cannot sit next to a
 curious prompt, change the bench.
 
@@ -371,6 +369,6 @@ No. Deleting a bot removes that bot, its conversation, and its routines. Shared-
 
 ### What is real grok bot isolation if separate bots are only screens?
 
-A second eligible account, which is a second computer, or never putting the secret on the computer you already have. Cursor Pro+ at $60 a month is the cheapest paid path that includes Grok Bot, with Teams Standard at $40 per user per month as another included seat, both of which you should confirm live before you budget. Hosted MCP tokens stay off disk with Cursor's backend, which closes a cookie path without creating a per-bot vault. Hygiene on one computer is valid when every remaining credential is one you accept as roster-wide.
+A second eligible account, which is a second computer, or never putting the secret on the computer you already have. Cursor Pro at $20 a month is the cheapest paid path that includes Grok Bot, with a self-serve Cursor Teams seat as another included seat, both of which you should confirm live before you budget. Hosted MCP tokens stay off disk with Cursor's backend, which closes a cookie path without creating a per-bot vault. Hygiene on one computer is valid when every remaining credential is one you accept as roster-wide.
 `,
 };

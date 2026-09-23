@@ -156,7 +156,7 @@ Number the records newest to oldest and reconcile each one with an evidence card
 | No record for expected time | Routine may not have fired or may not exist | A specific connector failed | Confirm owner bot and routine |
 | 20 records, older incident absent | Sliding window advanced | Incident never occurred | Use your retained ledger |
 
-The 20 records are a troubleshooting surface. For broader observability design, continue with [bot observability](/blog/bot-observability). Do not describe the routine history as an audit log because the verified product facts say an audit view of Bot actions does not exist yet.
+The 20 records are a troubleshooting surface. For broader observability design, continue with [bot observability](/blog/bot-observability). Do not describe the routine history as an audit log because the verified product facts say an audit view of Bot actions does not exist outside Enterprise.
 
 ## Walk Nila through the missing Tuesday invoice end to end
 
@@ -178,7 +178,7 @@ Require a result for every scheduled check. If no approved packet exists, the bo
 
 This does not make the bot infallible. It makes absence interpretable. When the routine record exists, investigate the named stage. When the record does not exist, inspect the routine owner, state, and schedule from desktop. The [routine did not run guide](/blog/grok-bot-routine-did-not-run) explains the owner-bot and 20-record checks in detail.
 
-Do not diagnose from iPhone alone. Verified Grok Bot facts say iPhone can pause and resume routines, while editing, history, testing, and deleting require desktop. A commuter can stop a loop. A commuter cannot inspect the history needed to close Nila's case.
+Do not diagnose from iPhone alone. Verified Grok Bot facts say iPhone can pause and resume routines, while Editing and testing a routine still need the desktop app. A commuter can stop a loop. A commuter cannot inspect the history needed to close Nila's case.
 
 ## Preserve deterministic mappings outside the bot's prose
 

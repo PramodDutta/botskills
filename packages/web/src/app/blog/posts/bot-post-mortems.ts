@@ -154,7 +154,7 @@ The final post-mortem should list unresolved gaps: loaded instruction source, ex
 
 Set a follow-up date for repair verification and unresolved evidence. Close actions only with proof links. If a gap cannot be resolved, preserve it rather than quietly deleting it from later summaries.
 
-Verified documentation says there is no audit view of Bot actions yet. That absence is context, not permission to invent a complete story. External artifacts and controlled tests remain the basis.
+Verified documentation says individual accounts have no audit view of Bot actions. That absence is context, not permission to invent a complete story. External artifacts and controlled tests remain the basis.
 
 ## Stop this format before it becomes a compliance claim
 

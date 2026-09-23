@@ -10,8 +10,8 @@ export const post: BlogPost = {
 # Rakazo Permissions and Audit Logging, Explained
 
 Grok Bot's own documentation says an audit view of Bot actions
-[does not exist yet](https://docs.x.ai/grok-bot/teams-and-enterprises). That one
-line is the strongest argument for self-hosting that exists, because a service
+[exists only on Enterprise](https://docs.x.ai/grok-bot/teams-and-enterprises). For
+everyone else, that one line is the strongest argument for self-hosting that exists, because a service
 running on your own Postgres writes rows you can query today, with no roadmap
 involved.
 
@@ -170,11 +170,10 @@ panel's copy says these preferences "apply across all your bots", which is
 exactly true and very easy to read as all bots.
 
 There is no admin tier above this, because there is no workspace-wide rule at
-all. The hosted alternative does not have one yet either: a team ceiling where
-"members can choose a stricter option, but not a looser one" is described in the
-Grok Bot documentation as
-[coming soon rather than shipped](https://docs.x.ai/grok-bot/teams-and-enterprises).
-Neither product enforces your policy for you today.
+all. The hosted alternative now has one for local execution only: a team ceiling,
+where a member's own setting still applies when it is stricter, is
+[available to team admins](https://docs.x.ai/grok-bot/teams-and-enterprises).
+Neither product enforces your whole policy for you today.
 
 So this is an onboarding step, not a setting. When somebody joins the workspace,
 they click the presets themselves, on their own account, before they connect

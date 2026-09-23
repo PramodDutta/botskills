@@ -39,7 +39,8 @@ That has a direct design consequence. If a bot has already made ten changes and
 the eleventh triggers a prompt, denying it leaves you with ten changes and no
 mechanism to reverse them. Whatever safety you get has to come from the actions
 before the gate being individually harmless. There is also, as of writing, no
-audit view of bot actions, so you cannot reconstruct the ten afterwards from a
+audit view of bot actions outside Enterprise, so on an individual or
+self-serve Teams account you cannot reconstruct the ten afterwards from a
 log. Your record of what happened is whatever the bot chose to tell you.
 
 So the rule is not "gate the risky step." It is: every step the bot takes
@@ -330,10 +331,10 @@ section exists because the failure is common rather than theoretical.
 | The bot asks mid-action and abandons half the run | Parking was defined as pausing rather than skipping | Park before starting, then continue with the rest of the run |
 | A parked item arrives with no target named | The park format was never specified | Require action, exact target, reason, and what it does if you say no |
 | Something irreversible happened before the prompt appeared | The gate sat on the last step instead of on every unattended one | Grade every step. An approval does not reverse completed work |
-| You cannot reconstruct what the run did | No audit view of bot actions exists yet | Require a written run log listing every action taken, in order |
+| You cannot reconstruct what the run did | No audit view of bot actions outside Enterprise | Require a written run log listing every action taken, in order |
 | One bot parks an action and another does not | Rules live per charter, and bots share the account and its sessions | Copy the flat five into every charter. Bots are not a boundary |
 
-The fifth row is easy to postpone and worth doing today. With no audit view,
+The fifth row is easy to postpone and worth doing today. With no audit view outside Enterprise,
 the run log is your only record, and it is useful only if it lists what was
 done rather than what was intended. Demand verbs and targets: "moved 14 files
 from /inbox to /2026-08", not "tidied storage".
@@ -353,10 +354,10 @@ you read a proposed action and thought "I did not know it could do that," the
 charter was less specific than you believed, and the fix goes in the charter
 rather than in your memory.
 
-Worth watching: a team-level ceiling on local execution with Never, Ask every
-time, and Always options has been described as coming, with members able to
-choose a stricter option but not a looser one. That is not shipped as of
-writing, so today the ceiling is whatever your charter says.
+Worth knowing: a team-level ceiling on local execution, with Always allow, Ask
+every time, and Never allow, has shipped for team admins, and a member's
+stricter setting still applies. It covers local execution only, so for
+everything else the ceiling is whatever your charter says.
 
 ## The case that reversibility is unknowable in advance
 
@@ -422,7 +423,7 @@ No, and the documentation is explicit that an approval controls the proposed
 action and does not reverse work already completed. An approval prompt is a
 gate in front of the next step, with everything before it already finished.
 Denying a prompt stops what comes next and leaves earlier changes in place,
-and with no audit view of bot actions available as of writing, your only record
+and with no audit view of bot actions outside Enterprise, your only record
 is what the bot reports. Design so that every unattended step before a gate is
 one you would accept permanently.
 

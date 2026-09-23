@@ -21,7 +21,7 @@ Crontab on a Mac is a local clock. Sleep, a closed lid, a dead battery, and a ba
 
 Do not patch this with caffeinate or a cracked lid. Stop using this laptop as the computer that fetches the export.
 
-Grok Bot background work runs on a managed Linux VM. The Bot runs as a non-root user. That is not a Linux desktop app. Attach the routine from macOS (Apple silicon or Intel) or Windows (x64 or Arm64). iPhone on iOS 18 or later can pause later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported.
+Grok Bot background work runs on a managed Linux VM. The Bot runs as a non-root user. That is not a Linux desktop app. Attach the routine from macOS (Apple silicon or Intel), Windows (x64 or Arm64), or Linux. iPhone on iOS 18 or later can pause later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later).
 
 Once the routine exists, shutting the lid does not cancel 02:00. Pause if you want that night to skip. Sleep is not pause. Put the output on the cloud disk. The missing-file page is [Grok Bot cannot see the file](/blog/grok-bot-cannot-see-files).
 
@@ -61,7 +61,7 @@ Do not hitch this fetch onto a bot that already owns a different standing job. [
 
 Splitting onto a second bot is not a security move. Every bot on the seat uses the same persistent cloud computer, which belongs to the user, not to a bot. Screens are work surfaces, not vaults. Cookies, sessions, files, and CLI credentials are shared. Do not use separate Bots as a security boundary. Parking the pull on Night CRM CSV is about which card you can delete without killing 02:00.
 
-Create the bot, paste the pull-only charter, then attach the routine. Count routines on a desktop first. If you are at 50, stop. A fifty-first does not spill onto the team. The phone can pause or resume a job that already exists. It cannot create, edit, open history, test, or delete. Teach-by-demonstration (ten minutes, no mic, draft skill, browser only, not on iPhone) is not this nightly job. Deleting the owner leaves last week's CSV on disk as a fossil. The postmortem is [Grok Bot routine did not run](/blog/grok-bot-routine-did-not-run).
+Create the bot, paste the pull-only charter, then attach the routine. Count routines on a desktop first. If you are at 50, stop. A fifty-first does not spill onto the team. The phone can pause or resume a job that already exists, open its run history, and delete it. It cannot create, edit, or test one. Teach-by-demonstration (ten minutes, no mic, draft skill, browser only, not on iPhone) is not this nightly job. Deleting the owner leaves last week's CSV on disk as a fossil. The postmortem is [Grok Bot routine did not run](/blog/grok-bot-routine-did-not-run).
 
 ## Refuse a five-minute poll of a file that changes once a day
 
@@ -71,7 +71,7 @@ Every five minutes is 12 fires an hour, 288 in a day. Twenty run records of that
 
 Do not attach a five-minute loop just until you trust it. You will not inspect 288 files. If the work only exists when a CRM row changes, you wanted an event trigger. Confirm the current trigger list in the app. The catalogue is [Grok Bot scheduling](/blog/grok-bot-scheduling). Start with one nightly fire.
 
-There is no Grok Bot-specific spend cap. A five-minute loop can take the week from the briefing you actually open. Do not create the loop.
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. A five-minute loop can take the week from the briefing you actually open. Do not create the loop.
 
 | Cadence | 20 records cover | Rule on this page |
 |---|---|---|
@@ -88,7 +88,7 @@ Could not compute is allowed. Use it when the CRM session is gone, the saved rep
 
 Some services flag datacenter IP addresses. Grok Bot uses static egress IPs. A CRM login page that blocks the worker is a written miss. Confirm on the vendor page. See [why some sites flag the login](/blog/grok-bot-static-egress-ip).
 
-Privacy Mode (Legacy) blocks Grok Bot entirely. If that mode is on, this pull cannot run. An audit view of Bot actions does not exist yet. Twenty run records, the heartbeat, and the CSV are what you can inspect. A run that says \`COULD NOT COMPUTE: crm session\` is a pass for the scheduler and a fail for the forecast. Leave it that way.
+Privacy Mode (Legacy) blocks Grok Bot entirely. If that mode is on, this pull cannot run. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Twenty run records, the heartbeat, and the CSV are what you can inspect. A run that says \`COULD NOT COMPUTE: crm session\` is a pass for the scheduler and a fail for the forecast. Leave it that way.
 
 ## Write the night CSV on the shared cloud disk, not into Downloads on this Mac
 
@@ -162,7 +162,7 @@ Saving the schedule is not the test. The test is a file you open, with a number 
 
 Arbitrary checks for this example, so you can replace them. After a desk test: heartbeat exists; date is today in Europe/London; status is OK or COULD NOT COMPUTE; if OK, the CSV exists, the header has 12 columns, and row count is 50 or more. After the first closed-lid night: filename date is the breakfast date; history shows a fire near 02:00; crontab is gone.
 
-If status is OK and row count is 12 on a roster that was 847 last week, that is a fail. Open the last row. If it is half-written, add that as another COULD NOT COMPUTE case. If status is COULD NOT COMPUTE and a CSV still appeared, the heartbeat is the verdict. If history is empty and files exist, you are looking at a fossil. On iPhone you cannot open history.
+If status is OK and row count is 12 on a roster that was 847 last week, that is a fail. Open the last row. If it is half-written, add that as another COULD NOT COMPUTE case. If status is COULD NOT COMPUTE and a CSV still appeared, the heartbeat is the verdict. If history is empty and files exist, you are looking at a fossil. The phone can open that history too, but fix nothing from it: edits wait for a desk.
 
 | Symptom at breakfast | Likely cause | Fix |
 |---|---|---|
@@ -180,7 +180,7 @@ Leave the Mini argument at its strongest. An always-on box does fetch a CSV whil
 
 The shared-computer half is true and does not restore crontab. After the move, [Lead Scout](/bots/lead-scout) on the same seat can open the CSV. Screens will not hide it. If you would not hand this dump to every bot on the account, do not put those bots on this account.
 
-Cost is not a reason to stay on crontab. Cursor Hobby and Cursor Pro at $20 do not include Grok Bot. Cursor Pro+ at $60 a month is the cheapest paid path as of the 21 August 2026 widening. SuperGrok at $30 does not include it. SuperGrok Plus at $100 does. A one-time trial is an eligibility path for individuals. Confirm the live cart. No weekly allowance in dollars is published.
+Cost is not a reason to stay on crontab. Cursor Hobby, the free plan, does not include Grok Bot; every paid Cursor plan does, from Cursor Pro at $20. Cursor Pro at $20 a month is the cheapest paid path, checked 23 September 2026. An individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked for usage instead. A one-time trial is an eligibility path for individuals. Confirm the live cart. No weekly allowance in dollars is published.
 
 If you do not want a night worker at all, that wins. Export by hand at 08:40. What does not win is attaching the routine and believing the lid will stop it. After the move, pause will.
 
@@ -192,7 +192,7 @@ Clock catalogue: [Grok Bot scheduling](/blog/grok-bot-scheduling). Desk clicks: 
 
 Do not use this page to migrate five reports, grant CRM write, or build a watcher that restarts 02:00. You are the watcher. For seven breakfasts, open history, open the file, compare the filename date to today.
 
-Coming soon, and not shipped: a team-level ceiling on local execution, and an admin Kill that deletes the VM while durable storage is kept. Nothing is team-level today. Do not put this fetch on local execution.
+Now shipped: a team-level ceiling on local execution that team admins can set, and an Enterprise admin Terminate that deletes a member's computer while the durable disk is kept. Neither makes a routine team-level. Do not put this fetch on local execution.
 
 If you are still choosing between 02:00 and 07:00, or arguing whether the lid kills the worker, you are on the wrong twin. If you are holding a contacts export that only exists when this Mac is awake, you are in the right place.
 

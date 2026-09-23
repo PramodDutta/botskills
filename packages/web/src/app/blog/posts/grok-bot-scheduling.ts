@@ -91,8 +91,8 @@ rely on, pick the second.
 Those three questions narrow the field. This table picks the winner, because
 the honest unit is not runs per month, it is what you spend to learn one thing
 you did not already know. Your subscription includes an allowance that resets
-weekly, anything past it is charged on demand against model and token cost, and
-no Grok Bot specific spend cap exists as of writing. A cadence mistake draws
+weekly, anything past it is charged on demand against model and token cost up
+to the account On-demand monthly limit, and no Grok Bot specific spend cap exists as of writing. A cadence mistake draws
 that allowance down daily until you notice.
 
 | Cadence | Runs per month | Findings per hundred runs | Deadline it can hit | Recommendation |
@@ -231,8 +231,8 @@ account for nearly all of it.
 | One section has quietly been empty for a month | One connector lost authorisation while the others held, and empty reads like calm | Require it to name every source it read and every source it could not read |
 | Runs complete cleanly and act on zero items | The label, channel, or saved view the filter keys on was renamed upstream | Report candidates considered as well as items acted on. Zero considered is a broken filter |
 | Nothing arrives, and you assume a quiet week | The routine is paused, or the bot that owned it was deleted, taking its routines with it | Require a message on every run, so silence becomes evidence rather than ambiguity |
-| Something is wrong and the run history tells you nothing | Run history holds twenty records per routine as of writing, so a daily job's evidence lasts under three weeks | Make the output itself the archive. No audit view of bot actions exists yet |
-| It looks fine on your phone and produces nothing | From the phone app you can pause and approve, while editing, history, and testing need desktop | Check from desktop before concluding anything about a routine you touched on mobile |
+| Something is wrong and the run history tells you nothing | Run history holds twenty records per routine as of writing, so a daily job's evidence lasts under three weeks | Make the output itself the archive. No audit view of bot actions exists outside Enterprise |
+| It looks fine on your phone and produces nothing | From the phone app you can pause, approve, and read run history, while editing and testing need desktop | Read the run history, then check from desktop before changing a routine you touched on mobile |
 
 The fourth row has a structural cause rather than a bug. Routines belong to a
 single bot and nothing about them is team-level, so deleting a bot you thought

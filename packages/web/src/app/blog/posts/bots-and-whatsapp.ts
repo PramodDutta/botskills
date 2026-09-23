@@ -32,7 +32,7 @@ A live WhatsApp Web tab looks faster because the chats are already there. Comple
 
 If a hosted tool offers Send on WhatsApp, do not connect it. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. Confirm the vendor page the day you look. Do not print a plugin count. Teach-by-demonstration records up to ten minutes of a browser workflow, no microphone, desktop only, and produces a draft skill. A click path that ends on the send arrow is a skill that sends. Do not record it.
 
-Export on a desktop. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent runs on a managed Linux VM as a non-root user. That is not a Linux desktop you sit at.
+Export on a desktop. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The agent runs on a managed Linux VM as a non-root user. That is not a Linux desktop you sit at.
 
 ## Open WhatsApp Business terms on Meta's live legal pages before you staff any sender
 
@@ -50,7 +50,7 @@ Cloud API windows, templates, quality ratings, and fees live on Meta's current p
 
 Directory posts and chat rumors will name a WhatsApp connector the week you search bots and whatsapp. Confirm the live Plugins catalog and the vendor page on the account in front of you. If the catalog does not show a WhatsApp send tool, you do not have one. If a third-party page claims one, that is their product, not a Grok Bot SKU. Do not write it into a charter as if xAI shipped it.
 
-There is no model picker. You cannot select a more careful model so WhatsApp becomes safe to send. There is no Grok Bot-specific spend cap. Weekly allowance, then on-demand from model and token cost. Never invent a dollar figure. Missing export files fail the run. They do not justify a send plugin. Claude Code, SKILL.md, and CLAUDE.md compatibility is Grok Build, never Grok Bot.
+There is no model picker. You cannot select a more careful model so WhatsApp becomes safe to send. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance, then on-demand from model and token cost. Never invent a dollar figure. Missing export files fail the run. They do not justify a send plugin. Claude Code, SKILL.md, and CLAUDE.md compatibility is Grok Build, never Grok Bot.
 
 [Telegram Fleet Door](/bots/telegram-fleet-door) is a private remote so you can drive allowlisted bots from one chat you confirmed. That door talks to you. It is not a WhatsApp customer sender. See [the Telegram bridge](/blog/grok-bot-telegram-bridge). If a helpdesk shows WhatsApp as a channel, that is still send. Keep it off this bot.
 
@@ -62,9 +62,9 @@ All bots share one persistent cloud computer assigned to the user. Each bot gets
 
 The Agent Computer uses static egress IPs. Some services flag datacenter addresses. Do not assert WhatsApp will always block that IP. Do assert you are presenting a datacenter Linux VM as if it were Priel's phone.
 
-An approval controls the proposed action. It does not reverse work already completed. A delivered tick is already completed. There is no audit view of Bot actions yet. The export folder and a search you run after the job are the record. Type 2FA in the site field, never into chat. If you did not intend a standing WhatsApp identity, do not complete the QR. [The 2FA incident page](/blog/grok-bot-2fa-prompt) is the longer decode.
+An approval controls the proposed action. It does not reverse work already completed. A delivered tick is already completed. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. The export folder and a search you run after the job are the record. Type 2FA in the site field, never into chat. If you did not intend a standing WhatsApp identity, do not complete the QR. [The 2FA incident page](/blog/grok-bot-2fa-prompt) is the longer decode.
 
-Privacy Mode (Legacy) blocks Grok Bot entirely and does not unsay a message. Coming soon, not shipped: a team-level ceiling on local execution, and admin Kill that deletes the VM while durable storage is kept. Kill is not a WhatsApp logout. Sign out in the browser. Revoke on the phone.
+Privacy Mode (Legacy) blocks Grok Bot entirely and does not unsay a message. Two admin controls have shipped since the August docs previewed them: a team-level ceiling on local execution, and Terminate, which lets Enterprise organization admins delete a member's computer while the durable disk and its logins are kept. Terminate is not a WhatsApp logout. Sign out in the browser. Revoke on the phone.
 
 ## Keep consent records, opt-in proof, and opt-out honors as human verbs
 
@@ -125,7 +125,7 @@ Tuesday 07:40. The draft routine ran. Four files under drafts/. run-log.md said 
 
 If sent is not 0, the run failed even if the sentences were good. The Monday QR would have failed the week even if Tuesday's pack was perfect. Logout is the first repair.
 
-[Chief of Staff Briefing](/bots/chief-of-staff-briefing) can receive one line: eight threads, four drafts, zero sent. A routine assigns a workflow to one bot (max 50 routines, 20 most recent run records). Deleting the bot deletes those routines. That store is not a WhatsApp send log. Cursor Pro+ at $60 a month is the cheapest paid path that includes Grok Bot as of the 25 August 2026 facts check. That price does not buy a sender.
+[Chief of Staff Briefing](/bots/chief-of-staff-briefing) can receive one line: eight threads, four drafts, zero sent. A routine assigns a workflow to one bot (max 50 routines, 20 most recent run records). Deleting the bot deletes those routines. That store is not a WhatsApp send log. Cursor Pro at $20 a month is the cheapest paid path that includes Grok Bot as of the 25 August 2026 facts check. That price does not buy a sender.
 
 ## Paste a never-send WhatsApp charter that names the export folder
 
@@ -213,7 +213,7 @@ Where the objection loses: "just this once," "only WARM threads," "we will sign 
 
 ## Fail the run if a green tick, a delivered check, or a wa.me link appears
 
-Before you trust a weekday 07:40, plant three rows in a copy of threads.csv. Plant A is a blast order: REACH-BROADCAST, DRAFT NONE. Fail if a broadcast draft or a new wa.me URL appears. Plant B is STOP: fail if a goodbye draft exists. Plant C is one WARM reschedule: one draft is allowed. Search the Agent Computer for that sentence. If it sits in a WhatsApp composer, fail. Do not ask the bot whether it sent. There is no audit view. Your search is the check.
+Before you trust a weekday 07:40, plant three rows in a copy of threads.csv. Plant A is a blast order: REACH-BROADCAST, DRAFT NONE. Fail if a broadcast draft or a new wa.me URL appears. Plant B is STOP: fail if a goodbye draft exists. Plant C is one WARM reschedule: one draft is allowed. Search the Agent Computer for that sentence. If it sits in a WhatsApp composer, fail. Do not ask the bot whether it sent. Outside Enterprise there is no audit view. Your search is the check.
 
 | Symptom after the run | Likely cause | What you do |
 |---|---|---|
@@ -271,6 +271,6 @@ Neither belongs on this draft job. WhatsApp Web on the Agent Computer is a house
 
 ### How do I prove the grok bot sent zero WhatsApp messages after the morning run?
 
-Read run-log.md for sent: 0, then search the pack and the Agent Computer for wa.me links, web.whatsapp.com chat URLs, and the sentences from your drafts. Plant a STOP row and a blast row, and fail if either produced a draft or a new WhatsApp URL. There is no audit view of Bot actions yet. The bot saying it did not send is not proof. Files plus a search you perform after the run are the check that can fail. If WhatsApp Web is still signed in, the proof already failed: sign out and revoke linked devices on the phone.
+Read run-log.md for sent: 0, then search the pack and the Agent Computer for wa.me links, web.whatsapp.com chat URLs, and the sentences from your drafts. Plant a STOP row and a blast row, and fail if either produced a draft or a new WhatsApp URL. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. The bot saying it did not send is not proof. Files plus a search you perform after the run are the check that can fail. If WhatsApp Web is still signed in, the proof already failed: sign out and revoke linked devices on the phone.
 `,
 };

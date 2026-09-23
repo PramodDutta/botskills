@@ -77,20 +77,20 @@ Ishan's team may document, review, or reproduce a workflow together. That social
 
 This distinction affects offboarding and deletion. If everyone assumes the team owns the schedule, nobody may inventory it when the Bot owner is removed.
 
-## Use desktop for edits and iPhone only for pause or resume
+## Use desktop for edits and the phone for pause, history and delete
 
-According to the corrected platform facts, the phone app can pause or resume a routine and approve steps but cannot edit it. Editing, history, testing, and deleting require desktop.
+According to the corrected platform facts, the phone app can pause or resume a routine and approve steps but cannot edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine.
 
-That means Ishan can respond to a concern from iPhone by pausing a routine. He cannot complete the full diagnosis there under the supplied facts. The repair workflow moves to desktop for history, test, edit, or deletion.
+That means Ishan can respond to a concern from iPhone by pausing a routine and reading its run history. He cannot complete the repair there. The repair workflow moves to desktop for testing and editing.
 
 | Intended action | iPhone support in supplied facts | Required response |
 |---|---|---|
 | Pause | Supported | Pause and record reason |
 | Resume | Supported | Confirm review decision first |
 | Edit | Not on iPhone | Move to desktop |
-| View history | Not on iPhone | Move to desktop |
+| View history | Supported since 23 September 2026 | Read it, then note what you saw |
 | Test | Not on iPhone | Move to desktop |
-| Delete | Not on iPhone | Move to desktop |
+| Delete | Supported since 23 September 2026 | Export what you need first; deletion is permanent |
 
 Do not turn pause into a substitute for diagnosis. It is the safe holding action until the required surface is available.
 
@@ -158,7 +158,7 @@ The routine-specific rule is narrower: one workflow assignment belongs to one Bo
 
 ## State where this lifecycle lesson stops
 
-This page does not claim routines are team-level, permanently archived, exportable, or recoverable after deletion. It does not claim iPhone can edit, test, inspect history, or delete a routine. It does not describe a Linux, Android, or iPad application.
+This page does not claim routines are team-level, permanently archived, exportable, or recoverable after deletion. It does not claim the phone app can edit or test a routine. It does not walk through the Linux, Android, or iPad apps.
 
 The supplied Routines facts establish ownership, maximum count, recent-record count, deletion behavior, and the named iPhone limitations. Details beyond those claims require current primary documentation and a safe observed test.
 
@@ -178,7 +178,7 @@ Create a routine census by Bot. Count routine names under each exact Bot owner a
 
 Review the recent-record window by run frequency. Estimate when a needed record may leave the 20 most recent set based on the routine's own cadence, then schedule an authorized evidence review before that point. This is an internal planning estimate, not a claim that records disappear after a number of days. The product fact is based on record count, so your plan should be too.
 
-Rehearse pause and resume separately from deletion. From iPhone, the supplied facts allow those two actions, so test a harmless routine's paused state and require a named reviewer before resumption. Move to desktop for history, testing, editing, or deletion. Record which observation justified the pause so resume is a decision, not a reflex.
+Rehearse pause and resume separately from deletion. From iPhone, the supplied facts allow those two actions, so test a harmless routine's paused state and require a named reviewer before resumption. Move to desktop for testing and editing. Record which observation justified the pause so resume is a decision, not a reflex.
 
 Build a retirement packet for a routine that should not return. Include its owner, purpose, reason for retirement, last expected output, dependencies, and review decision. Mark "do not recreate" clearly. Continuity documentation should preserve good workflows, but it should not cause obsolete or unsafe assignments to spring back during recovery.
 
@@ -194,7 +194,7 @@ Look for duplicate routines before reaching the 50-per-Bot limit. Two similar na
 
 Review record retention against evidence obligations. The product keeps the 20 most recent run records per routine, but your organization may need particular evidence longer or may be required not to retain it. Decide what is authorized to preserve and where through your own policy. Do not copy sensitive run content merely because the recent window is finite.
 
-Simulate an unavailable desktop during an incident. The phone app can pause a routine, so the immediate safe response can be pause. The runbook should identify who later accesses desktop for history and testing. This exercise verifies that the team does not confuse mobile pause with completed repair.
+Simulate an unavailable desktop during an incident. The phone app can pause a routine, so the immediate safe response can be pause. The runbook should identify who later reaches a desktop for testing and editing. This exercise verifies that the team does not confuse mobile pause with completed repair.
 
 Record timezone explicitly in the human-readable cadence description. This article does not claim how the product displays or stores timezones. The inventory needs enough detail for another operator to reconstruct the intended schedule without guessing whether "Monday at nine" belongs to the operator, Bot owner, or source region.
 
@@ -232,6 +232,6 @@ They are deleted with the Bot, according to the supplied Routines section. Befor
 
 ### Can I manage a routine completely from iPhone?
 
-No. The corrected platform facts say the phone app can pause or resume a routine but not edit it. Editing, history, testing, and deleting require desktop. Use pause as a holding action when investigation is needed, then move to desktop for the named management operations. Confirm current primary documentation before relying on behavior that may change.
+No. The corrected platform facts say the phone app can pause or resume a routine but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Use pause as a holding action when investigation is needed, then move to desktop for the named management operations. Confirm current primary documentation before relying on behavior that may change.
 `,
 };

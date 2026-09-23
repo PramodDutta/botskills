@@ -415,7 +415,7 @@ rather than to infer.
 | Can Claude Code run a Grok-authored skill? | Nothing, in either direction | Undocumented. Keep frontmatter minimal if you need both |
 | Which model does Grok Bot use? | There is no model picker for members or admins, and none is planned. The per-surface model set is not published | We will not name a model for the Bot |
 | Do hooks behave identically across both? | Grok Build auto-reads Claude Code hooks. Equivalence of behaviour is not stated | Test them. Reading a file is not the same as matching its semantics |
-| Is there a trail of what a skill did on the Bot side? | An audit view of Bot actions does not exist yet | Assume your record is whatever the run chose to report |
+| Is there a trail of what a skill did on the Bot side? | An audit view of Bot actions does not exist outside Enterprise | Assume your record is whatever the run chose to report |
 
 Nothing published describes the reverse direction, and we are not going to
 assert that Claude Code will consume a Grok-authored skill or plugin correctly.

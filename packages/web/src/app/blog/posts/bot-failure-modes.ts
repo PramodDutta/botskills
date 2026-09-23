@@ -345,7 +345,7 @@ people skip. Run it again after any change that widens what a bot can reach.
 | 9 | You decide something using that figure | both | Nothing, until it costs something |
 
 One mode hiding another is the shape behind most expensive incidents, and with
-no audit view of bot actions as of writing, the only record is the reports. The
+no audit view of bot actions outside Enterprise, the only record is the reports. The
 break is one line: report how many records you read, not only how many you
 flagged.
 

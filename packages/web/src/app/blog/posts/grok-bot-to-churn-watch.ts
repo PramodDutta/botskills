@@ -250,7 +250,7 @@ what is generating the alerts.
 
 Keep the reasoning inside the report rather than in a chat thread. Run
 history holds twenty records per routine as of writing, which a weekly
-job burns through in five months, and no audit view of bot actions
+job burns through in five months, and no audit view of bot actions outside Enterprise
 exists. A flag you cannot reconstruct in three months is a flag you
 cannot learn from.
 

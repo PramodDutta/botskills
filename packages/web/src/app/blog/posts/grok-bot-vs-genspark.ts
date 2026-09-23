@@ -43,7 +43,7 @@ Hedge every Genspark claim. Plans, credits, and computer language belong on gens
 
 All bots on a Grok Bot account share one persistent cloud computer assigned to the user, not to a bot. Ten named bots are ten screens and one filesystem. Connect Gmail for the overnight pack and that session is on the computer. The research bot you add on Thursday can see it. Deleting the research bot does not log the pack desk out. Read [One Computer, Many Screens](/blog/grok-bot-shared-computer-security).
 
-The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. See [supported platforms](/blog/grok-bot-supported-platforms). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. A routine assigns a workflow to one bot. Max 50 routines. Twenty recent run records. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view yet.
+The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). See [supported platforms](/blog/grok-bot-supported-platforms). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. A routine assigns a workflow to one bot. Max 50 routines. Twenty recent run records. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view outside Enterprise.
 
 Cloud work continues after you close the app. Local file actions still need that machine awake. Sends that require approval still wait on you. Sleep is not approval. An approval does not reverse work already completed. See [Grok Bot With the Laptop Closed](/blog/grok-bot-runs-with-laptop-closed). Beta launched 11 August 2026. Eligibility widened 21 August 2026. Still one cookie jar.
 
@@ -80,7 +80,7 @@ This article will not print a Genspark dollar price or credit pack as fact. It w
 
 Grok Bot is the column where the computer is a managed Linux VM assigned to the user, with screens that are not isolation, and deletion that does not wipe the desk. If a roundup says grok bot vs genspark is two clouds, ask which computer is assigned to the user and who else can open the Gmail cookies. On Grok Bot those answers are in the FAQ. On Genspark they belong on genspark.ai today.
 
-Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. Browser logins still sit on the VM. Privacy Mode (Legacy) blocks Grok Bot entirely. Grok Bot has no audit view yet. Confirm whether Genspark currently sells one.
+Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. Browser logins still sit on the VM. Privacy Mode (Legacy) blocks Grok Bot entirely. Grok Bot has no audit view outside Enterprise. Confirm whether Genspark currently sells one.
 
 ## Walk Kade from a workspace inbox recap into a Gmail session the scout could reuse
 
@@ -151,14 +151,14 @@ If you try the same pack on Genspark, confirm the live path and whether send is 
 | Path | Grok Bot included? | What to remember |
 |---|---|---|
 | Cursor Hobby | No | Free Cursor does not include the bot runtime |
-| Cursor Pro at 20 dollars a month | No | A common mistaken buy |
-| Cursor Pro+ at 60 dollars a month | Yes | Cheapest paid path as of 25 August 2026 |
-| SuperGrok at 30 dollars a month | No | The cheaper SuperGrok tier does not include Grok Bot |
-| SuperGrok Plus at 100 dollars a month | Yes | Listed as including Grok Bot access |
-| SuperGrok Heavy, Cursor Ultra at 200 dollars a month, Cursor Teams Standard (40 dollars/user/month), Teams Premium (120 dollars/user/month), one-time trial | Eligible | Confirm live SuperGrok Heavy pricing. Do not trust a viral 300 dollar Heavy figure |
+| Cursor Pro at 20 dollars a month | Yes | Cheapest paid path as of 23 September 2026 |
+| Cursor Pro+ at 60 dollars a month | Yes | More weekly usage than Pro |
+| SuperGrok (individual) | Yes, by linking | Link it from the Grok Bot plan screen; it grants usage and is not a Cursor plan |
+| SuperGrok Plus | Yes, by linking | Same link, more usage than SuperGrok |
+| SuperGrok Heavy (linked), Cursor Ultra at 200 dollars a month, a self-serve Cursor Teams seat, one-time trial | Eligible | Confirm live SuperGrok Heavy pricing. Do not trust a viral 300 dollar Heavy figure |
 | Genspark plans | Confirm on genspark.ai | Do not invent a dollar figure, a credit pack, or a VM surcharge |
 
-There is no Grok Bot-specific spend cap. Weekly allowance, then on-demand from model and token cost. No published dollar figure for the allowance. Never invent one. No model picker. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. See [Grok Bot Cost](/blog/grok-bot-cost).
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance, then on-demand from model and token cost. No published dollar figure for the allowance. Never invent one. No model picker. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. See [Grok Bot Cost](/blog/grok-bot-cost).
 
 Model Grok Bot as 60 dollars (or 100, or a Team seat) plus overflow you cannot cap. A lower Genspark entry price, if one still exists on the live page, is a good reason to run a one-off pack in a workspace. It is a bad reason to staff a standing 05:30 owner on a tab that might not be there on Thursday.
 
@@ -235,7 +235,7 @@ Cloud work can. Grok Bot runs on a persistent cloud computer assigned to your us
 
 ### Is Genspark cheaper than Grok Bot?
 
-Grok Bot's cheapest paid path is Cursor Pro+ at 60 dollars a month. Cursor Hobby and Cursor Pro at 20 dollars do not include it, and SuperGrok at 30 dollars does not. SuperGrok Plus at 100 dollars does. Teams Standard and Premium include it. There is no Grok Bot spend cap: weekly allowance, then on-demand, with no published dollar figure for the allowance. Genspark prices and credits belong on genspark.ai. This article will not invent them. Confirm both the day you buy, including whether the live Genspark plan still matches last month's recap.
+Grok Bot's cheapest paid path is Cursor Pro at 20 dollars a month. Every paid Cursor plan includes Grok Bot, from Cursor Pro at $20; Cursor Hobby, the free plan, does not, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Cursor Teams include it. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies: weekly allowance first, then on-demand up to that limit, with no published dollar figure for the allowance. Genspark prices and credits belong on genspark.ai. This article will not invent them. Confirm both the day you buy, including whether the live Genspark plan still matches last month's recap.
 
 `,
 };

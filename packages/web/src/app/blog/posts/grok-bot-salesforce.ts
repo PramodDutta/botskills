@@ -75,7 +75,7 @@ sessions and signed-in credentials are shared across every bot on it. The
 documentation says outright that separate bots are not a security boundary. A
 write made through your session is recorded as your write, so history will
 faithfully report that you changed four hundred close dates at 3am, and as of
-writing there is no audit view of bot actions to check it against.
+writing there is no audit view of bot actions outside Enterprise to check it against.
 
 The conclusion is not "turn on more tracking". It is that recovery is not the
 plan. Prevention is.

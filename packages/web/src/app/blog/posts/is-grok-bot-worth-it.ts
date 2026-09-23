@@ -3,15 +3,15 @@ import type { BlogPost } from './index';
 export const post: BlogPost = {
   title: 'Is Grok Bot Worth It? Yes If You Already Pay for These Plans',
   description:
-    'Is Grok Bot worth it? Yes if you already hold an eligible plan, because then it costs nothing extra. If not, the cheapest door is Cursor Pro+ at $60 a month.',
+    'Is Grok Bot worth it? Yes if you already hold an eligible plan, because then it costs nothing extra. If not, the cheapest door is Cursor Pro at $20 a month.',
   date: '2026-08-26',
   category: 'Guide',
   content: `
 # Is Grok Bot Worth It? Yes If You Already Pay for These Plans
 
-Is Grok Bot worth it is the wrong question if you treat it like a $20 chatbot upgrade. It is a bundled teammate on a shared cloud computer, sold inside Cursor and SuperGrok plans, with a weekly allowance and no published numeric cap. The useful question is whether one reversible job, run under the limited-usage trial or on a plan you already pay for, produces work you would otherwise do yourself. If that job fails, the product is not worth reorganizing a company around. If it succeeds, you still have not bought isolation, a spend cap, or a model picker, because those are not for sale.
+Is Grok Bot worth it is the wrong question if you treat it like a chatbot upgrade. It is a bundled teammate on a shared cloud computer, sold inside Cursor and SuperGrok plans, with a weekly allowance and no published numeric cap. The useful question is whether one reversible job, run under the limited-usage trial or on a plan you already pay for, produces work you would otherwise do yourself. If that job fails, the product is not worth reorganizing a company around. If it succeeds, you still have not bought isolation, a per-Bot spend cap, or a model picker, because those are not for sale.
 
-Facts below follow [the Grok Bot FAQ](https://docs.x.ai/grok-bot/faq), [teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises), [Cursor pricing](https://cursor.com/pricing), and [xAI pricing](https://x.ai/pricing), checked 2026-08-25. The product ships weekly. Re-read those pages before you sign anything.
+Facts below follow [the Grok Bot FAQ](https://docs.x.ai/grok-bot/faq), [teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises), [Cursor pricing](https://cursor.com/pricing), and [xAI pricing](https://x.ai/pricing), checked 2026-08-25, with access rules rechecked on [Cursor's plans page](https://cursor.com/help/grok-bot/plans) on 2026-09-23. The product ships weekly. Re-read those pages before you sign anything.
 
 ## Decide from the plan you already pay for, not from a roundup
 
@@ -19,13 +19,13 @@ Grok Bot has no standalone SKU. You either already hold an eligible subscription
 
 | Buyer | Incremental subscription cost | Verdict shape |
 |---|---|---|
-| Already on Cursor Pro+, Ultra, Teams Standard, Teams Premium, SuperGrok Plus, or Heavy | Zero extra SKU | Worth trying this week on one job |
-| Cursor Hobby, Cursor Pro $20, SuperGrok $30 | You must upgrade | Worth it only if the job beats the upgrade |
+| Already on Cursor Pro, Pro+, Ultra, or Teams, or an individual SuperGrok, Plus, Heavy, or X Premium+ you can link | Zero extra SKU | Worth trying this week on one job |
+| Cursor Hobby (free) or SuperGrok Lite | You must upgrade | Worth it only if the job beats the upgrade |
 | Nobody, trial only | Trial credit, then a paid door | Worth the trial, not worth a plan until the job repeats |
 
-The cheapest documented individual paid door is Cursor Pro+ at $60 a month. SuperGrok Plus at $100 includes Grok Bot. SuperGrok at $30 does not. Cursor Pro at $20 does not. Cursor Ultra at $200 includes it. Cursor Teams Standard at $40 per user per month and Premium at $120 per user per month both include it. Do not print SuperGrok Heavy as $300. That number is not on the vendor pages we treat as SAFE.
+The cheapest documented individual paid door is Cursor Pro at $20 a month. Cursor Pro+ at $60 and Cursor Ultra at $200 include it too, with more weekly usage. An individual SuperGrok, SuperGrok Plus, SuperGrok Heavy, or X Premium+ subscription can be linked instead. A self-serve Cursor Teams seat includes it for every member, with no Premium seat. Do not print SuperGrok Heavy as $300. That number is not on the vendor pages we treat as SAFE.
 
-If a ranking article still says the door is $200 and Mac-only, it is stale. There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); iPad is not supported. Linux desktop, Android, and iPad are not.
+If a ranking article still says the door is $200 and Mac-only, it is stale. There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); the iOS app also runs on iPad.
 
 ## Spend the trial on a job you can undo
 
@@ -58,7 +58,7 @@ Hosted MCP sign-in tokens stay with Cursor's backend, which is the documented ex
 
 ## Count the missing controls as part of the price
 
-There is no Grok Bot-specific spend cap. Subscriptions include a weekly usage allowance. Overflow is on-demand, billed from model and token cost. No plan publishes the allowance as a dollar figure, so any article that prints one is guessing. There is no audit view of bot actions yet. There is no model picker, and none is planned. An approval does not reverse work already completed.
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Subscriptions include a weekly usage allowance. Overflow is on-demand, billed from model and token cost. No plan publishes the allowance as a dollar figure, so any article that prints one is guessing. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. There is no model picker, and none is planned. An approval does not reverse work already completed.
 
 Those absences are not footnotes. They are why "worth it" for a regulated team is often no, even if the demo is impressive. They are why "worth it" for a solo operator already on Pro+ is often yes for one standing job, with a human still in the send path.
 
@@ -66,7 +66,7 @@ Those absences are not footnotes. They are why "worth it" for a regulated team i
 |---|---|
 | Per-bot spend cap | Not available yet |
 | Numeric published allowance | Not published |
-| Audit view of actions | Not available yet |
+| Audit view of actions | Enterprise only |
 | Model picker | No, and not planned |
 | Per-bot VM isolation | Contradicted |
 | Approval undoes completed work | Explicitly no |
@@ -83,7 +83,7 @@ Routines belong to one bot. Max 50 per bot. The app keeps 20 recent run records.
 
 ## Price the upgrade only against hours you actually recover
 
-If you must leave Cursor Pro $20 or SuperGrok $30 to get Grok Bot, the upgrade is real money. Cursor Pro+ is $60. SuperGrok Plus is $100. Teams Standard is $40 a seat. Recovered hours have to beat that, after you subtract review time. A bot that drafts twenty emails you still rewrite from scratch is not recovered time. A bot that produces a source-backed brief you used on a call is recovered time.
+If you must leave Cursor Hobby, the free plan, to get Grok Bot, the upgrade is real money. Cursor Pro is $20. Cursor Pro+ is $60. An individual SuperGrok subscription can be linked instead, and a self-serve Cursor Teams seat includes Grok Bot for every member. Recovered hours have to beat that, after you subtract review time. A bot that drafts twenty emails you still rewrite from scratch is not recovered time. A bot that produces a source-backed brief you used on a call is recovered time.
 
 Do not invent a payback period. Measure one job:
 
@@ -96,7 +96,7 @@ If (2)+(3) is not smaller than (1), it is not worth it yet, even if the prose lo
 
 ## Ignore Mac-only and Ultra-only articles when you score access
 
-Launch coverage froze on Cursor Ultra, SuperGrok Heavy, and a Mac app. The 21 August 2026 expansion added SuperGrok Plus, Cursor Pro+, all Cursor Teams plans, and a limited-usage trial. Windows is supported. iPhone is supported for pause and resume; editing, history, testing, and deleting routines still need desktop. Scoring "worth it" on launch constraints is how you talk yourself out of a product you already pay for, or into a product whose client you cannot run.
+Launch coverage froze on Cursor Ultra, SuperGrok Heavy, and a Mac app. The 21 August 2026 expansion added SuperGrok Plus, Cursor Pro+, all Cursor Teams plans, and a limited-usage trial, and Cursor Pro and a linked base SuperGrok count now too. Windows and Linux are supported. The phone apps (iPhone, Android, and the iOS app on iPad) can pause and resume routines, show run history, and delete a routine; editing and testing routines still need desktop. Scoring "worth it" on launch constraints is how you talk yourself out of a product you already pay for, or into a product whose client you cannot run.
 
 [Supported platforms](/blog/grok-bot-supported-platforms) is the reference. [Cursor account access](/blog/grok-bot-cursor-account-explained) is the door. This page is the verdict after those two.
 
@@ -112,11 +112,11 @@ Cowork and other desktop agents are the closer substitutes. They win on local fi
 
 ## Watch quota the way you would watch a contractor's hours
 
-Weekly allowance plus on-demand overflow means a "worth it" bot can become an expensive bot without a cap to stop it. There is no Grok Bot-specific spend cap. [The spend cap article](/blog/grok-bot-spend-cap-and-token-burn) is the operational page. The worth-it implication is simple: a standing five-minute crawl, 288 times a day, will not look like a $60 subscription. It will look like token burn. Schedule like a skeptic.
+Weekly allowance plus on-demand overflow means a "worth it" bot can become an expensive bot without a Bot-only cap to stop it. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. [The spend cap article](/blog/grok-bot-spend-cap-and-token-burn) is the operational page. The worth-it implication is simple: a standing five-minute crawl, 288 times a day, will not look like a $60 subscription. It will look like token burn. Schedule like a skeptic.
 
 ## Name the cases where the answer is no
 
-Not worth it, today, if you need Linux desktop or Android. Not worth it if you need per-bot credential isolation. Not worth it if you need an audit log of actions. Not worth it if you need a numeric budget the product will enforce. Not worth it if you need to pin a model. Not worth it if Privacy Mode (Legacy) is on, because that blocks Grok Bot entirely. Not worth it as the sole reason to buy Ultra if Pro+ already exists as the cheaper individual door.
+Not worth it, today, if you need per-bot credential isolation. Not worth it below Enterprise if you need an audit log of actions. Not worth it if you need a numeric Grok Bot-only budget the product will enforce. Not worth it if you need to pin a model. Not worth it if Privacy Mode (Legacy) is on, because that blocks Grok Bot entirely. Not worth it as the sole reason to buy Ultra if Pro+ already exists as the cheaper individual door.
 
 Worth trying if you already pay for an eligible plan. Worth the trial if you can finish one reversible job inside the metered credit. Worth keeping if that job still looks good on day seven, with a human on send, pay, and publish.
 
@@ -141,7 +141,7 @@ A week that produces a used brief is worth it for someone already paying. A week
 | Weekly pool gone by Tuesday | Five-minute crawl, 288 runs | Not worth it until you unsched |
 | Finance bot saw sales Gmail | Shared computer | Not worth it for isolation |
 | Model quality "changed" | Failover, no picker | Not worth it if you must pin |
-| No one can say what it did | No audit view | Not worth it for regulated work |
+| No one can say what it did | No audit view below Enterprise | Not worth it for regulated work outside Enterprise |
 | You rewrote every draft | Vague charter | Not worth it until the contract is strict |
 
 None of those rows is a reason to hate the product. Each is a reason the viral "hire a company" pitch is not the same as a purchase decision.
@@ -175,11 +175,11 @@ A sixth check for people who upgraded solely for the bot: would I still pay this
 
 ### Is Grok Bot worth it if I already pay for Cursor Pro+?
 
-Usually yes to try, on one reversible job, because the extra subscription cost is zero. It is still not worth connecting every account on day one, and it is not worth a roster until the first bot has a week of clean output. Shared-computer sessions, no spend cap, and no audit view are still true on Pro+. Eligibility is not the same as a blank cheque. Use a boundary, read the output, and only then add a second job.
+Usually yes to try, on one reversible job, because the extra subscription cost is zero. It is still not worth connecting every account on day one, and it is not worth a roster until the first bot has a week of clean output. Shared-computer sessions, no per-Bot spend cap, and no audit view outside Enterprise are still true on Pro+. Eligibility is not the same as a blank cheque. Use a boundary, read the output, and only then add a second job.
 
 ### Is Grok Bot worth buying a plan for, by itself?
 
-Only if you can name a standing job that needs a cloud computer and named bots, and you have checked that Cowork or chat cannot do that job on a cheaper plan you already understand. The cheapest documented individual paid door is Cursor Pro+ at $60 a month. Teams Standard is $40 a seat. Do not use $200 or $300 as the floor. Those figures are either stale or unpublished. Run the trial first if you can.
+Only if you can name a standing job that needs a cloud computer and named bots, and you have checked that Cowork or chat cannot do that job on a cheaper plan you already understand. The cheapest documented individual paid door is Cursor Pro at $20 a month. A self-serve Cursor Teams seat includes Grok Bot for every member. Do not use $200 or $300 as the floor. Those figures are either stale or unpublished. Run the trial first if you can.
 
 ### Does the free trial prove whether Grok Bot is worth it?
 

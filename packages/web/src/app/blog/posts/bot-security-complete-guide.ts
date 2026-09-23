@@ -136,14 +136,15 @@ Two operational details that are neither protection nor flaw but change what you
 should expect. Egress uses static IPs, and some services flag datacenter
 addresses, so a bot that logs into a consumer service may hit friction that has
 nothing to do with its behaviour. And
-[an audit view of Bot actions does not exist yet](https://docs.x.ai/grok-bot/teams-and-enterprises), which is the single
+[an audit view of Bot actions does not exist outside Enterprise](https://docs.x.ai/grok-bot/teams-and-enterprises), which is the single
 fact that shapes the record keeping section below.
 
-Two controls are [documented as coming rather than shipped](https://docs.x.ai/grok-bot/teams-and-enterprises), and you
-should plan as if they are absent: a team level ceiling on local execution
-offering Never, Ask every time, and Always, where "members can choose a stricter
-option, but not a looser one", and an admin Kill action that deletes the VM while
-keeping durable storage. [One computer, many screens](/blog/grok-bot-shared-computer-security)
+Two admin controls once documented as coming have [shipped](https://docs.x.ai/grok-bot/teams-and-enterprises), and neither
+replaces the controls above: a team level ceiling on local execution
+offering Never allow, Ask every time, and Always allow, which team admins on
+Teams and Enterprise can set and where a member's own stricter setting still
+applies, and an Enterprise only Terminate action for organization admins that
+deletes a member's computer while keeping the durable disk. [One computer, many screens](/blog/grok-bot-shared-computer-security)
 walks the same model with a per item footprint list.
 
 ## A screen is a work surface, and the documentation says so plainly
@@ -484,7 +485,7 @@ the same footprint list with the ordering argued in more detail.
 
 ## Write your own record of what each bot did
 
-[An audit view of Bot actions does not exist yet](https://docs.x.ai/grok-bot/teams-and-enterprises), and
+[An audit view of Bot actions does not exist outside Enterprise](https://docs.x.ai/grok-bot/teams-and-enterprises), and
 [routines keep the 20 most recent run records](https://docs.x.ai/grok-bot/skills-routines-and-automations). Those two facts together
 define your real evidence window, and for anything running more than a few times
 a day it is measured in days.

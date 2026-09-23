@@ -340,7 +340,7 @@ inherit every grant without inheriting any of the care.
 
 A revocation review asks which connections are still needed, and the connection
 screen cannot answer that: it shows what is granted, never what was used. As of
-writing there is no audit view of bot actions, so you build the usage side
+writing there is no audit view of bot actions outside Enterprise, so you build the usage side
 yourself, and it takes one clause.
 
 Require every run to end with a tool line: what it read from, what it wrote to,
@@ -381,12 +381,13 @@ computer is a managed Linux VM and the bot runs as a non-root user, which
 constrains what any bot does to the machine. It does nothing to separate one
 bot from another, which was never its purpose.
 
-Some controls are documented as coming rather than shipped, and planning around
-them is a mistake. A team-level ceiling on local execution with Never, Ask
-every time, and Always, where members may choose a stricter option but not a
-looser one, is future work. So is an admin Kill that deletes the VM while
-durable storage is kept. Until those land, the account-level connection list is
-the whole control surface. Where the environment must be shut out rather than
+Two admin controls once documented as coming have shipped, and neither changes
+the connection math. A team-level ceiling on local execution with Never allow,
+Ask every time, and Always allow, where members may choose a stricter option but
+not a looser one, is available to team admins on Teams and Enterprise. Enterprise
+organization admins can also Terminate a member's computer; it still keeps the
+durable disk. Neither narrows what a connected account can reach, so the
+account-level connection list stays the control that matters here. Where the environment must be shut out rather than
 narrowed, Privacy Mode (Legacy) blocks Grok Bot outright, which is a policy
 decision rather than a permission one.
 

@@ -241,7 +241,7 @@ anything commercial. If a number is wrong, its job is to tell you so.
 
 Two operational realities make that line more important than it would
 otherwise be. There is no Grok Bot specific spend cap in the product yet, and
-there is no audit view of bot actions yet either. Whatever ledger exists is
+individual accounts have no audit view of bot actions either. Whatever ledger exists is
 the one you make the bot write, so require every run to report what it read
 and what it wrote, and read that report for the first fortnight.
 
@@ -374,7 +374,7 @@ convincing as the bot gets better at writing.
 ## Verify the read-only claim yourself, because the product will not
 
 An article can tell you to grant read and refuse write. It cannot tell you
-whether that is what happened, and there is no audit view of bot actions in the
+whether that is what happened, and there is no audit view of bot actions outside Enterprise in the
 product yet, so the check is one you build. Three of them, all able to fail.
 
 The cheap one is a saved view sorted on whichever last-modified property your

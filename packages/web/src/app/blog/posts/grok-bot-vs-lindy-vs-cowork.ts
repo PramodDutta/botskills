@@ -13,7 +13,7 @@ The labelled invoice in Gmail, the 07:15 inbox pack, and the CSV pile in Downloa
 
 This is a three-way picker with Lindy as the third pole, not a remake of [Grok Bot vs Claude Cowork vs ChatGPT Work](/blog/grok-bot-vs-claude-cowork-vs-chatgpt-work). That page asks where the work lives, with ChatGPT Work in the third column. This page asks how you hand the work off: a workflow and agent product, a named cloud teammate, or a desktop-ish operator. Pairwise: [Grok Bot vs Claude Cowork](/blog/grok-bot-vs-claude-cowork) and [Grok Bot vs Lindy](/blog/grok-bot-vs-lindy). Start with [What Is a Grok Bot?](/blog/what-is-a-grok-bot) if you need the object.
 
-Lindy and Cowork move. This page will not print their prices or freeze their feature lists as fact. Confirm Lindy on [lindy.ai](https://www.lindy.ai/) and [Lindy pricing](https://www.lindy.ai/pricing) the morning you buy. Confirm Cowork on [Anthropic's Cowork page](https://claude.com/product/cowork/). Grok Bot facts were checked on 2026-08-25 against [the Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps). Grok Bot: named bots on one persistent cloud computer. Screens are not vaults. Lindy, as currently presented: a workflow and agent product. Cowork, as Anthropic currently describes it: closer to a local and desktop operator. Confirm both. Then pick by the handoff.
+Lindy and Cowork move. This page will not print their prices or freeze their feature lists as fact. Confirm Lindy on [lindy.ai](https://www.lindy.ai/) and [Lindy pricing](https://www.lindy.ai/pricing) the morning you buy. Confirm Cowork on [Anthropic's Cowork page](https://claude.com/product/cowork/). Grok Bot facts were checked on 2026-08-25, with plans rechecked on 2026-09-23, against [the Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps). Grok Bot: named bots on one persistent cloud computer. Screens are not vaults. Lindy, as currently presented: a workflow and agent product. Cowork, as Anthropic currently describes it: closer to a local and desktop operator. Confirm both. Then pick by the handoff.
 
 ## Name the three handoff objects before you pick a vendor
 
@@ -49,9 +49,9 @@ Standing cloud work still has a name in October, still has last week's file, and
 
 Grok Bot is that desk. Name the bot, write the charter, connect the minimum login. One persistent cloud machine for the whole account. Each bot gets a screen. Docs: do not use separate bots as a security boundary. An [inbox triage](/bots/inbox-triage) bot and a research bot on the same account share the cookie jar. Routines attach to one bot (max 50, 20 recent run records) and die with it. Nothing is team-level. See [how to schedule a Grok Bot routine](/blog/grok-bot-scheduling).
 
-Launched beta 11 August 2026. Eligibility widened 21 August 2026. Cheapest paid path: Cursor Pro+ at $60 a month. Cursor Hobby, Cursor Pro at $20, and SuperGrok at $30 do not include it. SuperGrok Plus at $100 does. Also eligible: SuperGrok Heavy, Cursor Ultra, Cursor Teams Standard and Premium, plus a one-time trial. No Grok Bot-specific spend cap, no published allowance figure, no model picker. Weekly allowance, then on-demand. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. An audit view of bot actions does not exist yet.
+Launched beta 11 August 2026. Eligibility widened 21 August 2026. Cheapest paid path: Cursor Pro at $20 a month. Every paid Cursor plan includes Grok Bot, from Cursor Pro at $20; Cursor Hobby, the free plan, does not, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Also eligible: Cursor Pro+, Cursor Ultra, Cursor Teams, plus a one-time trial. No Grok Bot-specific spend cap, no published allowance figure, no model picker. Weekly allowance, then on-demand. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. An audit view of bot actions does not exist outside Enterprise.
 
-Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone (iOS 18 or later) and Android (9 or later) companion apps that can pause routines and approve steps but not edit them. Editing, history, testing, and deleting need desktop. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The computer is a managed Linux VM, not a Linux desktop client.
+Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64) and Linux (x64 and Arm64) desktop apps, plus iPhone (iOS 18 or later), Android (9 or later) and iPad companion apps that can pause routines, approve steps, read run history and delete a routine, but not edit or test one. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The computer is a managed Linux VM, not a Linux desktop client.
 
 ## Treat Cowork as a desktop-ish operator until Anthropic's page says otherwise
 
@@ -133,7 +133,7 @@ If Jordan's teammate logs into Jordan's Grok Bot account to just check the invoi
 
 Screens will not save you. Invoice Desk and Inbox Desk are two windows, not two offices. Two humans are not isolated because they typed two names.
 
-If the teammate needs a standing cloud role, use a separate eligible account. Eligible does not mean Cursor Hobby or Cursor Pro at $20. If they only need local files, keep them on their own disk (Cowork, confirm Anthropic). If they only need a Gmail invoice extractor, use their own Lindy login and confirm whether Lindy's current connection model actually isolates it.
+If the teammate needs a standing cloud role, use a separate eligible account. Eligible does not mean Cursor Hobby. If they only need local files, keep them on their own disk (Cowork, confirm Anthropic). If they only need a Gmail invoice extractor, use their own Lindy login and confirm whether Lindy's current connection model actually isolates it.
 
 ## Paste an ops routing charter that classifies the three poles
 
@@ -184,7 +184,7 @@ The overnight inbox is safe to leave running only if it drafts and never sends. 
 
 Week one, matching poles. Invoice Gmail workflow on Lindy, confirmed, draft Slack only. Overnight inbox bot on Grok Bot, drafts only. Cowork (confirmed) granted one Downloads subfolder. Pack appears while both lids are closed. CSVs never left the Mac.
 
-Week four, forced Grok Bot because you already pay for Cursor Pro+ at $60 a month. Jordan creates an invoice-bot next to the inbox bot. The Gmail session is now on the shared computer. Friday CSVs got uploaded so the bot can help from the train. You deleted a throwaway close bot. The vendor portal is still signed in. No audit view exists yet.
+Week four, forced Grok Bot because you already pay for Cursor Pro+ at $60 a month. Jordan creates an invoice-bot next to the inbox bot. The Gmail session is now on the shared computer. Friday CSVs got uploaded so the bot can help from the train. You deleted a throwaway close bot. The vendor portal is still signed in. No audit view outside Enterprise.
 
 Week four, forced Lindy. Overnight mail now depends on whatever schedule and storage Lindy currently offers, not on last week's exceptions file on an account computer. If the Mac slept, Cowork never ran Friday's close. If someone toggled send on, a vendor got a reply nobody reviewed.
 
@@ -238,7 +238,7 @@ No. Lindy currently presents a workflow and agent product. Confirm the live obje
 
 ### Can I treat Lindy or Cowork prices in this article as current?
 
-No. This page does not print Lindy prices or Cowork prices, and it does not freeze either product's feature list as fact. Confirm Lindy on lindy.ai and the current pricing page the morning you buy. Confirm Cowork on Anthropic's current Cowork page, including whether the desktop grant still reaches this disk. Grok Bot's cheapest published paid path is Cursor Pro+ at $60 a month, with other eligible subscriptions listed in xAI's FAQ as of 25 August 2026. Do not copy a three-column bargain grid from a roundup.
+No. This page does not print Lindy prices or Cowork prices, and it does not freeze either product's feature list as fact. Confirm Lindy on lindy.ai and the current pricing page the morning you buy. Confirm Cowork on Anthropic's current Cowork page, including whether the desktop grant still reaches this disk. Grok Bot's cheapest published paid path is Cursor Pro at $20 a month, with other eligible subscriptions listed in xAI's FAQ as of 23 September 2026. Do not copy a three-column bargain grid from a roundup.
 
 ### What if I run the overnight inbox as a local Cowork session instead of a named Grok Bot?
 

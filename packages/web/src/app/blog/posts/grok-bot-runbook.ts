@@ -17,7 +17,7 @@ If you still need to name which of fifteen failures you have, use [Grok Bot trou
 
 ## Treat overnight silence as a missing grok bot runbook, not a crash
 
-An empty channel at breakfast is a symptom, not a diagnosis. The product will not explain the night. There is no audit view of Bot actions yet. Run history keeps the twenty most recent records per routine, then older rows fall off. If you did not force a file onto disk, breakfast has nothing to read.
+An empty channel at breakfast is a symptom, not a diagnosis. The product will not explain the night. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Run history keeps the twenty most recent records per routine, then older rows fall off. If you did not force a file onto disk, breakfast has nothing to read.
 
 People fill the gap with a story. The bot died. The laptop lid killed it. Closing the app, the laptop, or the iPhone does not stop a background job. Sleep is not a pause. A missing pack is a fire that never wrote a heartbeat, a fire that wrote EMPTY on purpose, a late fire still in flight, or a write that never posted because posting was never allowed. Those four cases need four different next moves. A grok bot runbook exists so you pick the file, not the story.
 
@@ -109,11 +109,11 @@ Put the path under \`/workspace/monday-pack/\`, not in a chat message and not on
 
 Pause is a control. If the routine is still enabled while you inspect, a late Sunday fire and a breakfast prompt can overlap. Overlap is how two packs land, or how a send leaves twice.
 
-On desktop you can pause, inspect, edit, and read history. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Pause from the train. Inspect from a desk.
+On desktop you can pause, inspect, edit, and read history. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Pause from the train. Inspect from a desk.
 
 Do not use quit as a pause. Closing the Grok Bot app does not stop a background turn. Closing the laptop does not stop a background turn. If an approval is sitting, deny or capture it. An approval controls the proposed next action. It does not reverse work already completed, and it does not write HEARTBEAT.md for you.
 
-If you cannot pause because you are on Android, iPad, or a Linux desktop, you do not have a Grok Bot client there. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop client. Get to macOS, Windows, or iPhone for pause. Get to macOS or Windows for inspect. Write who paused, and when, into NOTES.md.
+You can pause from any Grok Bot client: the desktop app on macOS, Windows or Linux, or the phone app on iPhone, Android or iPad (the iOS app runs there). The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop client. Get to any client for pause. Get to the desktop app for inspect. Write who paused, and when, into NOTES.md.
 
 ## Inspect /workspace on the shared computer and write what you saw
 
@@ -174,7 +174,7 @@ The grok bot runbook splits across two devices on purpose. The dangerous verb at
 
 On iPhone you confirm the routine is paused, then you stop typing. You do not assume the folder is empty because you cannot list it. You get to a Mac or a Windows machine (Apple silicon, Intel, x64, or Arm64), list \`/workspace\`, write NOTES.md, then resume. If the owner is traveling with only a phone, the backup at a desk owns inspect and resume. A traveling owner who types run it now is how a late fire and a phone prompt overlap.
 
-Do not wait for an audit view. There is not one yet. There is no Grok Bot-specific spend cap. Subscriptions include a weekly usage allowance, then on-demand from model and token cost. No published dollar figure for that allowance. A second fire still draws it. Pause is cheaper than a second scrape.
+Do not wait for an audit view. There is not one yet. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Subscriptions include a weekly usage allowance, then on-demand from model and token cost. No published dollar figure for that allowance. A second fire still draws it. Pause is cheaper than a second scrape.
 
 ## Answer the objection that re-prompting at breakfast is faster than a grok bot runbook
 
@@ -216,7 +216,7 @@ No. Pause the routine first, then look at HEARTBEAT.md. If the heartbeat is miss
 
 ### Can I keep the grok bot runbook in a Slack pin instead of the bot charter?
 
-A Slack pin is a reminder for humans. The routine does not read Slack pins. A routine assigns a workflow to one bot, keeps twenty run records, and dies when you delete that bot. If the grok bot runbook is not in the standing instructions the job loads, the overnight fire will not write HEARTBEAT.md, will not stop at a checkpoint, and will not obey never-send. Paste the runbook into the charter on desktop. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing the charter needs macOS or Windows. Do not turn the routine on until the paste exists.
+A Slack pin is a reminder for humans. The routine does not read Slack pins. A routine assigns a workflow to one bot, keeps twenty run records, and dies when you delete that bot. If the grok bot runbook is not in the standing instructions the job loads, the overnight fire will not write HEARTBEAT.md, will not stop at a checkpoint, and will not obey never-send. Paste the runbook into the charter on desktop. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing the charter needs the desktop app. Do not turn the routine on until the paste exists.
 
 ### Who pauses the overnight bot if two people share the account?
 

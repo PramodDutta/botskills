@@ -20,8 +20,8 @@ Refuse retries. Charters and a twice-daily replacement clock are later hours.
 This page is not
 [the quota exceeded banner page](/blog/grok-bot-quota-exceeded),
 which decodes the message. It is not
-[the no-cap policy page](/blog/grok-bot-spend-cap-and-token-burn),
-which writes ceilings into charters because the product has none. It is not
+[the spend-cap policy page](/blog/grok-bot-spend-cap-and-token-burn),
+which writes ceilings into charters because the product has no per-bot cap. It is not
 [how to schedule a Grok Bot routine](/blog/how-to-schedule-a-grok-bot-routine),
 which attaches a new clock after the fire is out. Stay here until the poller
 is gone and the other two cards are still paused.
@@ -29,7 +29,7 @@ is gone and the other two cards are still paused.
 All bots share one persistent cloud computer assigned to the user, not to a
 bot ([computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)).
 The weekly usage pool follows the same grain. There is no Grok Bot-specific
-spend cap yet
+spend cap, only the account-level On-demand monthly limit
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 Plans that include Grok Bot come with a weekly usage allowance. Past that
 pool, work is billed on demand from model and token cost
@@ -39,12 +39,14 @@ page will not invent one.
 
 ## Pause every routine from the phone before you hunt a spend slider
 
-There is no slider labelled spend cap. Searching for one is how the
-five-minute clock gets another dozen fires while you read a thread. Pause is
-the control you have in the first two minutes.
+There is no per-bot slider labelled spend cap. The account-level On-demand
+monthly limit exists, in Grok Bot Settings or under Spending on
+cursor.com/dashboard, but a bot already working can finish past it, and
+searching threads for it is how the five-minute clock gets another dozen fires.
+Pause is the control you have in the first two minutes.
 
-The phone can pause and resume. It cannot edit, open history, test, or
-delete. Those need a desktop
+The phone can pause and resume, open run history, and delete a routine. It
+cannot edit or test. Those need a desktop
 ([mobile](https://docs.x.ai/grok-bot/mobile)).
 If you are away from that desk, pause is the whole hour.
 
@@ -54,8 +56,7 @@ broken is rarely the bot that emptied the pool.
 [Chief of Staff Briefing](/bots/chief-of-staff-briefing) and
 [Standup Scribe](/bots/standup-scribe) without those two ever looking busy.
 [Lead Scout](/bots/lead-scout) and [Churn Watch](/bots/churn-watch) on daily
-clocks can look innocent in the same hour. There is still no audit view of
-Bot actions. Treat the roster as one tank.
+clocks can look innocent in the same hour. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Treat the roster as one tank.
 
 Do not delete in order to pause. Deletion is a later move on one card, at a
 desk, after you have a written owner list. Leave the roster names in place
@@ -63,13 +64,13 @@ until you know which name is the poller.
 
 | Client | Pause this hour | List owners | Delete the poller | Resume (the danger) |
 |---|---|---|---|---|
-| iPhone, iOS 18+ | Yes. This is the stop button | From memory. No history | No. Needs desktop | Yes, in one tap. Do not |
-| Mac or Windows | Yes | Yes. Open each bot's routines | Yes, after the list exists | Yes. Still do not, this hour |
+| iPhone, iPad, or Android | Yes. This is the stop button | Yes, from each bot's routines and run history | It can. Wait for the desk and the list | Yes, in one tap. Do not |
+| Mac, Windows, or Linux | Yes | Yes. Open each bot's routines | Yes, after the list exists | Yes. Still do not, this hour |
 | Closing the laptop | No. The cloud computer keeps the clock | No | No | The clock was never paused |
-| Linux desktop, Android, or iPad | Not a Grok Bot client | Not a client | Not a client | Do not plan the bleed-stop here |
+| cursor.com/dashboard in a browser | No. It sets the Monthly Limit under Spending instead | No | No | Not a Grok Bot client |
 
-There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); iPad is not supported. Linux desktop,
-Android, and iPad are not ([FAQ](https://docs.x.ai/grok-bot/faq)).
+There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); the iOS app also runs on iPad
+([FAQ](https://docs.x.ai/grok-bot/faq)).
 Switching devices does not refill the week. See
 [supported platforms](/blog/grok-bot-supported-platforms).
 
@@ -187,9 +188,7 @@ week refills. A plan change is not a documented mid-week refill. If the
 product does not say it, this page will not say it either.
 
 Confirm overflow in the product and on the vendor's current pricing page.
-SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, and Cursor Teams
-Standard and Premium are the eligible paid paths, plus a one-time trial
-([more plans](https://x.ai/news/grok-bot-more-plans)).
+Every paid Cursor plan (Pro, Pro+, Ultra) and every self-serve Cursor Teams seat include Grok Bot, an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked, and a one-time trial exists ([plans](https://cursor.com/help/grok-bot/plans)).
 Confirm names and prices on
 [cursor.com/pricing](https://cursor.com/pricing) and
 [x.ai/pricing](https://x.ai/pricing).
@@ -202,12 +201,12 @@ undone, and it is not refunded
 Denying a send does not refill the pool. The 20-record window is not a
 receipt. Write the time and the wording you saw, then stop clicking.
 
-## Park this hour off the banner page and the no-cap policy page
+## Park this hour off the banner page and the spend-cap policy page
 
 Keep these pages apart or you will do the wrong hour of work. This page is
 the bleed-stop. [Grok Bot quota exceeded](/blog/grok-bot-quota-exceeded)
-decodes the banner. [No spend cap](/blog/grok-bot-spend-cap-and-token-burn)
-is the charter ceilings you write after.
+decodes the banner. [The spend-cap page](/blog/grok-bot-spend-cap-and-token-burn)
+is the monthly limit and the charter ceilings you write after.
 [How to schedule a Grok Bot routine](/blog/how-to-schedule-a-grok-bot-routine)
 is how a replacement clock gets a named owner.
 [Grok Bot cost](/blog/grok-bot-cost) is how usage adds up while you design a
@@ -217,7 +216,7 @@ roster.
 |---|---|---|
 | Stop the fire this hour | This page | Do not rewrite a charter while a five-minute clock is still armed |
 | Read the banner and the next instinct | [Quota exceeded](/blog/grok-bot-quota-exceeded) | Do not treat that page as permission to keep the poller |
-| Write retry and tool-call ceilings because there is no slider | [No spend cap](/blog/grok-bot-spend-cap-and-token-burn) | Do not hunt a dollar figure for the weekly pool |
+| Set the monthly limit, then write retry and tool-call ceilings because there is no per-bot slider | [Spend cap](/blog/grok-bot-spend-cap-and-token-burn) | Do not hunt a dollar figure for the weekly pool |
 | Attach a twice-daily clock to a new named bot | [Schedule a routine](/blog/how-to-schedule-a-grok-bot-routine) | Do not create from iPhone while the old five-minute card still exists |
 
 If you searched stop grok bot overspending, stay until every routine is
@@ -258,7 +257,7 @@ At a desktop, delete the bot whose tightest clock
 is five minutes. Copy the wording first if you still want it.
 Deleting removes its routines. It does not sign out Gmail.
 Leave every other bot paused. Do not resume from the phone.
-Do not hunt a spend-cap slider. There is not one.
+Do not hunt a per-bot spend-cap slider. There is not one.
 Do not invent a dollar figure for the weekly pool.
 
 OWNER LIST (one row per card)
@@ -408,7 +407,7 @@ When the weekly pool returns, resume from the pause list, coarsest clock
 first, at a desk. Create a new inbox owner only after the old five-minute
 card is gone.
 
-**Keep reading:** [Grok Bot Quota Exceeded: What That Message Actually Means](/blog/grok-bot-quota-exceeded), [No Spend Cap: How To Keep a Grok Bot Roster From Running Away](/blog/grok-bot-spend-cap-and-token-burn), [How to Schedule a Grok Bot Routine That Does Not Fail Silently](/blog/how-to-schedule-a-grok-bot-routine).
+**Keep reading:** [Grok Bot Quota Exceeded: What That Message Actually Means](/blog/grok-bot-quota-exceeded), [Grok Bot Spend Cap: Set the Monthly Limit, Then Budget in the Charter](/blog/grok-bot-spend-cap-and-token-burn), [How to Schedule a Grok Bot Routine That Does Not Fail Silently](/blog/how-to-schedule-a-grok-bot-routine).
 
 ## Frequently Asked Questions
 
@@ -438,7 +437,7 @@ Because they share one unpublished weekly allowance, and one of them can fire
 hundreds of times before Tuesday morning if its clock is five minutes. A
 daily briefing and a daily standup might run once each on Monday. An inbox
 bot on five minutes runs twelve times an hour, including overnight. The
-product has no Bot-specific spend cap and no audit view that names the
+product has no Bot-specific spend cap and no audit view outside Enterprise that names the
 poller, so the tell is a quiet Tuesday briefing, not an inbox warning. The
 count is the problem. No article can honestly print a dollar size for that
 pool.

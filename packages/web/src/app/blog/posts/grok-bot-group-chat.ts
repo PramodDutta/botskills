@@ -164,7 +164,7 @@ replies owed, waiting-on-others with ages, changed overnight. Every line
 carries a link. Quiet day means it says "light day" and stops.
 
 Monday 08:10, you read the pack on desktop. iPhone can pause and resume a bot;
-editing, history, testing, and deleting need desktop. You send zero, one, or
+Editing and testing a routine still need the desktop app. You send zero, one, or
 three of the drafts yourself. You move the double-booked 14:00 yourself.
 
 | Artifact | Inbox Triage | Chief of Staff Briefing | You |
@@ -266,7 +266,7 @@ Cleanup that can unsubscribe, delete, or forward is a different privilege
 class. Do not add it to this thread to keep the queue tidy. Tidying that
 leaves the building is send-shaped even when the verb is not send.
 
-There is no audit view of bot actions yet. You will not get a vendor timeline
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. You will not get a vendor timeline
 that proves which bot clicked. Your evidence is the sent folder, the charter
 refusals, and whatever you wrote down. That is a reason to keep send human.
 
@@ -326,10 +326,9 @@ Schedule Inbox Triage and Chief of Staff Briefing as two routines, staggered
 so the pack can cite the queue. [Scheduling](/blog/grok-bot-scheduling) covers
 cadence. The group is the place output lands, not the thing that runs.
 
-iPhone is a stop button for this setup. You can pause and resume. Editing,
-history, testing, and deleting need desktop.
+iPhone is a stop button for this setup. You can pause and resume. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine.
 
-There is no Grok Bot-specific spend cap. Weekly allowance, then on-demand from
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance, then on-demand from
 model and token cost, with no published dollar figure for the allowance. Two
 routines every weekday cost more than one. If the pack is unread, kill the
 routines before you add a third speaker.
@@ -352,10 +351,11 @@ before you connect anything new to the account. Removing a bot from the thread
 does not revoke the session it used. Deleting the bot does not either. Break
 the group, then revoke, if a high-privilege login already landed.
 
-Privacy Mode (Legacy) blocks Grok Bot entirely. Team-level execution ceilings
-and an admin Kill that deletes the VM while keeping durable storage are
-documented as coming, not shipped. Do not plan a group-chat security model
-around a toggle you do not have.
+Privacy Mode (Legacy) blocks Grok Bot entirely. A team-level execution
+ceiling and an Enterprise admin Terminate that deletes a member's computer
+while keeping the durable disk have both shipped. Neither separates one Bot
+in the thread from another, so do not plan a group-chat security model
+around them.
 
 ## Grade the pack on Monday minutes saved, then retire it if the number is zero
 

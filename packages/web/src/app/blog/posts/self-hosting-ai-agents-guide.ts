@@ -75,22 +75,23 @@ lives, this is the whole argument and the other three are decoration.
 Self-hosting hands that decision back. It is a real gain and it is also a real
 job, covered below.
 
-**Platform reach.** Grok Bot supports macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. The documentation lists a Linux desktop app as of September 2026, and
-Android and iPad are unsupported too. If your team runs Linux, self-hosting is
-not a preference, it is the only door.
+**Platform reach.** Grok Bot supports macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; the iOS app also runs on iPad. The documentation lists a Linux desktop app as of September 2026, so
+a Linux team is no longer locked out of the hosted product. What the hosted
+product still does not offer is a desktop image of your own for the agent.
 [What actually works on which platform](/blog/grok-bot-supported-platforms) has
 the detail.
 
-**A trail you can query.** The hosted product's own documentation says an audit
+**A trail you can query.** The hosted product's own documentation puts an audit
 view of bot actions
-[does not exist yet](https://docs.x.ai/grok-bot/teams-and-enterprises). A service
-on your own Postgres writes rows you can query today.
+[on Enterprise only](https://docs.x.ai/grok-bot/teams-and-enterprises), as audit
+logs and Action Recording; individual and self-serve Teams plans have none. A
+service on your own Postgres writes rows you can query today.
 
 | What you gain | What it costs | Who this is decisive for |
 |---|---|---|
 | Data residency and custody | You now hold a database of encrypted third-party credentials, and its backups | Anyone with a contractual answer to give |
 | Model choice per bot and per deployment | You own the provider bill, the model comparison, and the failure when a model degrades | Teams whose token spend exceeds a per-seat subscription |
-| Linux and any desktop you like | You maintain the desktop image and its packages | Linux shops, which the hosted product does not serve |
+| A desktop image you choose | You maintain the desktop image and its packages | Shops that need their own image, which the hosted product does not offer |
 | A queryable ledger of every external effect | Only if somebody runs the query. Nothing prompts you | Anyone who will be asked "what did it do on Tuesday" |
 | No per-seat licence | Infrastructure, upgrades, backups, monitoring, and the exposed surface | Teams past roughly four or five seats |
 | Nothing changes under you without your say | You are also the one who has to apply the security fix | Anyone burned by a pricing change mid-quarter |
@@ -106,31 +107,32 @@ and most competing articles have not been updated since.
 
 | Path to Grok Bot | Price | Includes Grok Bot |
 |---|---|---|
-| Cursor Pro+ | 60 dollars a month | Yes, and this is the cheapest paid route |
+| Cursor Pro | 20 dollars a month | Yes, and this is the cheapest paid route |
+| Cursor Pro+ | 60 dollars a month | Yes, with more weekly usage than Pro |
 | Cursor Ultra | 200 dollars a month | Yes |
-| Cursor Teams Standard | 40 dollars per user a month | Yes |
-| Cursor Teams Premium | 120 dollars per user a month | Yes |
-| SuperGrok Plus | 100 dollars a month | Yes |
-| SuperGrok | 30 dollars a month | No |
-| Cursor Pro | 20 dollars a month | No |
+| Cursor Teams (self-serve) | Per seat, on Cursor's team pricing | Yes, for every member |
+| Cursor Enterprise | Through the Cursor account team | Yes, once an admin enables it |
+| Individual SuperGrok, SuperGrok Plus or SuperGrok Heavy | On x.ai/pricing | Yes, once linked |
+| SuperGrok Lite | On x.ai/pricing | No |
 | Cursor Hobby | Free | No |
 
 A one-time trial is also an eligibility path for individuals. All of the above is
-from the vendors' own pricing and eligibility pages as of 21 August 2026;
+from the vendors' own pricing and eligibility pages as of 23 September 2026;
 [why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained)
 explains the ownership situation behind that table, and
 [Grok Bot cost](/blog/grok-bot-cost) covers how usage adds up on top of it.
 
-Two consequences follow. For one person, a 60 dollar subscription against a small
+Two consequences follow. For one person, a 20 dollar subscription against a small
 VM plus your own model spend is not an obvious win, and is often a loss once you
 price your own time. For a team, per-seat pricing compounds while a server does
 not, and the crossover arrives quickly.
 
 One more line belongs in the comparison and is easy to miss: there is no Grok Bot
-specific spend cap yet, per the documentation, and self-hosting does not give you
-one either. Neither side of this decision protects you from a roster that
-quietly triples its token usage.
-[No spend cap](/blog/grok-bot-spend-cap-and-token-burn) is the arithmetic on that.
+specific spend cap, per the documentation, only the account-level On-demand
+monthly limit, and self-hosting does not give you a per-bot cap either. Neither
+side of this decision protects you from a roster that quietly triples its token
+usage inside that limit.
+[No per-Bot spend cap](/blog/grok-bot-spend-cap-and-token-burn) is the arithmetic on that.
 
 ## The LICENSE file decides more than the feature list does
 
@@ -241,8 +243,8 @@ opt-in.
 | Approvals on external actions | Ship with the product | Opt-in. Nothing pauses until you write a rule or click a preset |
 | Unmatched action | Governed by the product's model | Resolver returns allow |
 | Shell and file writes | Not exposed the same way | Exempt from approvals outright |
-| Audit trail | No audit view yet | A queryable effects ledger, if somebody queries it |
-| Who can set a policy for everyone | A team ceiling is described as coming soon, not shipped | No workspace-wide rule exists. Rules belong to the user who created them |
+| Audit trail | No audit view outside Enterprise | A queryable effects ledger, if somebody queries it |
+| Who can set a policy for everyone | Team admins: Team Rules and a local-execution ceiling; team Auto-review rules are Enterprise only | No workspace-wide rule exists. Rules belong to the user who created them |
 | Model choice | None, by design | Yours, including the responsibility for it |
 
 Read the two right-hand columns together and the honest summary is that a default
@@ -593,18 +595,18 @@ transfers.
 
 | Line | Hosted, four seats | Self-hosted |
 |---|---|---|
-| Licence or subscription | Cursor Teams Standard at 40 dollars per user, so 160 dollars a month | Zero. Rakazo is Apache 2.0 |
+| Licence or subscription | Four self-serve Cursor Teams seats at Cursor's per-seat team price | Zero. Rakazo is Apache 2.0 |
 | Model spend | Included allowance, then on-demand overflow billed on model and token cost | Your provider bill, in full, from run one |
 | Compute | Included | A small host, plus more if you run Docker computers on it |
 | Desktops | Included | Included in the host, or a vendor bill if you use E2B or Daytona |
 | Setup time | An afternoon | A day, plus the failures in week one |
 | Ongoing operator time | None | The six standing tasks above. Call it two hours a month, honestly more at first |
-| Spend ceiling | None published, and no Grok Bot specific cap yet | None, unless you build one at the provider |
+| Spend ceiling | The account On-demand monthly limit; no Grok Bot specific cap | None, unless you build one at the provider |
 | Data custody | Vendor | Yours |
-| Linux desktops | Not supported | Supported |
+| Linux desktops | Supported since September 2026 | Supported |
 
-The subscription line is the one that crosses over. Four seats at 40 dollars is
-160 dollars a month before any model spend, and that number scales with headcount
+The subscription line is the one that crosses over. Four seats is four times the
+per-seat price every month before any model spend, and that number scales with headcount
 while a host does not. The operator-time line is the one people leave out, and
 for a team of four it is usually the deciding cost rather than the server.
 
@@ -671,7 +673,7 @@ Three groups, stated plainly, because the honest answer to "should I self-host"
 is often no.
 
 **One person with one machine and two bots.** The interruption is worth more to
-you than the ledger, and the ops tasks are pure overhead. A 60 dollar
+you than the ledger, and the ops tasks are pure overhead. A 20 dollar
 subscription is cheaper than your Saturday. Start hosted and revisit when
 something specific pushes you off it.
 
@@ -787,8 +789,9 @@ changes. Budget roughly two hours a month, more in the first quarter.
 
 ### Do I get a real audit trail if I self host?
 
-You get the data, which is more than the hosted product currently offers, since
-its documentation says an audit view does not exist yet. Rakazo writes a row for
+You get the data, which is more than the hosted product offers outside
+Enterprise, since its documentation puts audit logs and Action Recording on
+Enterprise only. Rakazo writes a row for
 every consequential action with request, result, and approval outcome, plus
 tables for runs, usage, memory revisions, and deletions. Two caveats matter.
 Read-only tools write no effect row, so it records what changed rather than what

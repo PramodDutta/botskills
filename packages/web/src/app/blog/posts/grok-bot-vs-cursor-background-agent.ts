@@ -19,7 +19,7 @@ Worked example below: an engineer who wants a pull request reviewed while a Grok
 
 ## Treat the Cursor login as a keyring that holds two products
 
-A Cursor account is identity and billing plumbing. It is not a product. After SpaceX acquired xAI (announced 2 February 2026) and closed the Anysphere acquisition (14 August 2026), Grok Bot's sign-in and plan check run through that identity. [Cursor Pro+ and Grok Bot](/blog/grok-bot-cursor-pro-plus) is the sixty-dollar individual door. The editor remains a code editor. Cloud Agents and Bugbot remain editor surfaces. Sharing a password does not merge them into one runtime.
+A Cursor account is identity and billing plumbing. It is not a product. After SpaceX acquired xAI (announced 2 February 2026) and closed the Anysphere acquisition (14 August 2026), Grok Bot's sign-in and plan check run through that identity. [Cursor Pro+ and Grok Bot](/blog/grok-bot-cursor-pro-plus) is the sixty-dollar individual door; Cursor Pro at twenty dollars now opens it too. The editor remains a code editor. Cloud Agents and Bugbot remain editor surfaces. Sharing a password does not merge them into one runtime.
 
 Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. Cursor's Cloud Agent docs still carry a naming-history line that Background Agents were renamed. The help article for background agents currently points at Cloud Agents. That rename is why grok bot vs cursor agent search lands in two documentation trees. Read both. Do not flatten them because the login modal used one logo.
 
@@ -31,7 +31,7 @@ Grok Bot is the product in [What is a Grok Bot](/blog/what-is-a-grok-bot). You n
 
 That computer keeps running when the laptop lid closes. [Inbox Triage](/bots/inbox-triage) can sort mail overnight. [Mail Cleanup Assistant](/bots/mail-cleanup-assistant) can draft a purge list and still not send. [Standup Scribe](/bots/standup-scribe) can turn notes into a digest. None of those jobs is clone this repo, run the test suite, open a pull request. If you needed that, you wanted the Cursor repo job, not a second Grok Bot.
 
-Grok Bot has no model picker, for members or admins, and none is planned. There is no Grok Bot-specific spend cap. Subscriptions include a weekly usage allowance, then on-demand billing from model and token cost. No public dollar figure for that allowance exists. An audit view of Bot actions does not exist yet. Privacy Mode (Legacy) blocks Grok Bot. Platforms: macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. Not iPad. The VM is Linux. That is not a Linux desktop client.
+Grok Bot has no model picker, for members or admins, and none is planned. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Subscriptions include a weekly usage allowance, then on-demand billing from model and token cost. No public dollar figure for that allowance exists. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Privacy Mode (Legacy) blocks Grok Bot. Platforms: macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. iPad runs the iOS app. The VM is Linux. That is not a Linux desktop client.
 
 Routines attach to one bot, max fifty, with twenty recent run records, and they die when the bot is deleted. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. That is not Cloud Agents.
 
@@ -88,7 +88,7 @@ Feature dumps go stale on the Cursor side. Score the objects on four axes that s
 | Identity | Cursor or SuperGrok plan check. Same Cursor login can be the door | Same Cursor login can start editor and cloud repo jobs. Confirm plan gates |
 | Machine | One persistent cloud computer per user. Screens are not isolation | Cursor currently describes isolated VMs per run. Recheck isolation language |
 | Job | Named teammate, plugins, routines, standing work after the lid closes | Repo job: environment, branch, tests, handoff through source control |
-| Stop line | Charter boundary plus product approvals. No audit view yet | Whatever stop, spend limit, and network policy Cursor currently exposes |
+| Stop line | Charter boundary plus product approvals. No audit view outside Enterprise | Whatever stop, spend limit, and network policy Cursor currently exposes |
 
 A fifth axis is tempting: model choice. Grok Bot has none, and none is planned. Recheck Cloud Agent model options on Cursor. Do not plan a Grok Bot rollout on a picker you saw in the editor.
 
@@ -99,13 +99,13 @@ The door and the editor extras are not one meaning even when they print on one C
 | Invoice line, checked 25 August 2026 | Grok Bot | Editor Background Agent / Cloud Agent extras |
 |---|---|---|
 | Cursor Hobby | Not included | Confirm Cursor. Do not assume cloud repo jobs on a free SKU |
-| Cursor Pro at $20 | Not included | Paid editor SKU. Confirm whether Cloud Agents still require only a paid plan |
-| Cursor Pro+ at $60 | Included. Cheapest documented paid individual door | Confirm what else that SKU currently bundles on cursor.com/pricing |
+| Cursor Pro at $20 | Included. Cheapest documented paid individual door | Paid editor SKU. Confirm whether Cloud Agents still require only a paid plan |
+| Cursor Pro+ at $60 | Included, with more weekly usage than Pro | Confirm what else that SKU currently bundles on cursor.com/pricing |
 | Cursor Ultra at $200 | Included | Confirm extras on Cursor, not here |
-| Cursor Teams Standard $40/user or Premium $120/user | Included | Team Cloud Agent and Bugbot settings are Cursor admin work. Confirm |
-| SuperGrok Plus at $100 | Included | You may still hold a Cursor login for the editor. Do not merge the products |
+| A self-serve Cursor Teams seat | Included for every member | Team Cloud Agent and Bugbot settings are Cursor admin work. Confirm |
+| An individual SuperGrok or SuperGrok Plus | Included once linked | You may still hold a Cursor login for the editor. Do not merge the products |
 
-The interesting row is Pro at $20. It is paid. It does not include Grok Bot. If Cursor still documents Cloud Agents as requiring a paid plan, you could have repo jobs without the teammate. Confirm both pages the morning you buy. SuperGrok Heavy is on the Grok Bot eligibility list. Its price is unpublished, so do not print one. Privacy Mode (Legacy) blocks Grok Bot. Cursor's Cloud Agent security page has also said Legacy privacy mode is not supported. Confirm that too. One toggle can shut two products for different reasons.
+The interesting row is Pro at $20. It is paid, and since September it includes Grok Bot. If Cursor still documents Cloud Agents as requiring a paid plan, the same $20 can open both the repo jobs and the teammate. Confirm both pages the morning you buy. SuperGrok Heavy is on the Grok Bot eligibility list. Its price is unpublished, so do not print one. Privacy Mode (Legacy) blocks Grok Bot. Cursor's Cloud Agent security page has also said Legacy privacy mode is not supported. Confirm that too. One toggle can shut two products for different reasons.
 
 A one-time trial is an eligibility path for individuals on the Grok Bot side. It is not a Cloud Agent trial unless Cursor says so.
 
@@ -156,11 +156,11 @@ Most grok bot vs cursor agent failures are filing errors. The symptom is real. T
 | No GitHub comment from Inbox | Inbox is a mail teammate. It was never the repo job | Cloud Agents dashboard, Bugbot on the PR, or a human reviewer |
 | Cloud Agent asked about unread mail | You briefed a repo worker as if it were Grok Bot | Move mail to a named Grok Bot. Confirm plugins on docs.x.ai |
 | Grok Bot ignored SKILL.md in the repo | Expected. Bot does not read that file | If you needed skill files, you wanted Grok Build, not Bot |
-| Pro at $20 user cannot start Grok Bot | Pro does not include Grok Bot | Invoice spelling. Pro+ or another eligible plan. Trial |
+| Hobby user cannot start Grok Bot | Hobby does not include Grok Bot | Invoice spelling. Pro or another eligible plan. Trial |
 | Privacy Mode (Legacy) blocks the teammate | Documented Grok Bot block | Cursor privacy settings. Cloud Agents may be blocked too. Confirm |
 | Deleted Grok Bot, Gmail still signed in | Deleting a bot does not clean the computer | Sessions and files on the shared VM. Not Cursor agent history |
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Confirm Cursor's current iOS story for Cloud Agents. Do not expect the Grok Bot iPhone client to be that dashboard.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Confirm Cursor's current iOS story for Cloud Agents. Do not expect the Grok Bot iPhone client to be that dashboard.
 
 When the ticket is wrong, the fix is a noun. Restarting Grok Bot will not unstick a Cloud Agent VM. Restarting a Cloud Agent will not unscrew a Grok Bot plugin.
 
@@ -170,7 +170,7 @@ The strongest objection is honest: Kiran already pays Cursor. Grok Bot asked her
 
 Because the machines, jobs, and stop lines still diverge. SpaceX owns both stories. The Grok Bot FAQ still describes a computer shared across bots. Cursor still describes Cloud Agents as isolated repo VMs. Those paragraphs do not collapse because the parent is the same. If Cursor later documents that Grok Bot is an alias of Cloud Agents, believe Cursor. As of the Grok Bot docs checked 25 August 2026 and the Cloud Agent overview read for this article, they are not aliases.
 
-The objection wins in one case. If Kiran only writes code and never wants a standing mailbox teammate, she can skip Grok Bot. Cursor Pro at $20 still will not include Grok Bot, which is fine if she is skipping it. If she only wants overnight mail and never wants a repo VM, she can skip Cloud Agents and still need an eligible Grok Bot plan. The invoice looking unified does not pick the job.
+The objection wins in one case. If Kiran only writes code and never wants a standing mailbox teammate, she can skip Grok Bot. Cursor Pro at $20 now includes Grok Bot too, so skipping it is a choice, not a plan limit. If she only wants overnight mail and never wants a repo VM, she can skip Cloud Agents and still need an eligible Grok Bot plan. The invoice looking unified does not pick the job.
 
 What the objection does not win: turning Cloud Agents off will not make Inbox comment on a pull request. Turning Grok Bot off will not move Gmail triage onto a Dockerfile in .cursor/environment.json. You can disable one. You cannot merge them by subtraction.
 
@@ -212,6 +212,6 @@ No. Claude Code compatibility, SKILL.md, CLAUDE.md, and related local files are 
 
 ### Should you disable Background Agents if you already run a Grok Bot on Cursor Pro+?
 
-Only if you do not want repo jobs. Pro+ is the cheapest documented paid individual door into Grok Bot as of 25 August 2026. It does not turn Cloud Agents into Grok Bot, and turning Cloud Agents off will not make the mail teammate open a pull request. If you write code and you still receive standing mail, keep both, named, with two briefs. Confirm Cloud Agent, Bugbot, and billing details on Cursor's current pages before you treat any extra as included or as forbidden.
+Only if you do not want repo jobs. Cursor Pro at $20 is the cheapest documented paid individual door into Grok Bot as of 23 September 2026, and Pro+ adds weekly usage. Neither turns Cloud Agents into Grok Bot, and turning Cloud Agents off will not make the mail teammate open a pull request. If you write code and you still receive standing mail, keep both, named, with two briefs. Confirm Cloud Agent, Bugbot, and billing details on Cursor's current pages before you treat any extra as included or as forbidden.
 `,
 };

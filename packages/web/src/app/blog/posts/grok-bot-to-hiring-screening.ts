@@ -414,7 +414,7 @@ One operational note before you point anything at an applicant folder. All bots
 on your account share one persistent cloud computer, with shared files and
 shared signed-in browser sessions, and deleting a bot does not remove either.
 Candidate documents are among the most sensitive files you will ever put on that
-machine, an audit view of bot actions does not exist yet, and the documentation
+machine, an audit view of bot actions does not exist outside Enterprise, and the documentation
 says plainly not to treat separate bots as a security boundary. Work through
 [the safety checklist](/blog/grok-bot-safety-checklist) first, keep the CVs in a
 folder you can actually clear, and clear it when the role closes. The same

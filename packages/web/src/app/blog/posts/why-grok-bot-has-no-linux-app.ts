@@ -39,7 +39,7 @@ The FAQ names three formats and nothing else: a .deb package, an .rpm package, o
 
 In practice the three formats cover the ground, which is more than most desktop software manages on its first Linux release. The .deb is the Debian and Ubuntu family. The .rpm is Fedora, RHEL and their derivatives. The AppImage is the format built to run on anything without a package manager, and it is the one to try if your distribution takes neither of the others. The official desktop path is x.ai/bot, the same place the Mac and Windows installers come from; [the download page](/blog/download-grok-bot) covers the eligibility check that has to come first.
 
-Two things the install does not do, and both are worth saying before the first routine is written. It does not make your workstation the bot's computer, so nothing you have installed locally is available to a bot. And it does not sign you in: the client needs an account with an eligible plan, which the mobile page lists as SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, or Cursor Teams Standard or Premium.
+Two things the install does not do, and both are worth saying before the first routine is written. It does not make your workstation the bot's computer, so nothing you have installed locally is available to a bot. And it does not sign you in: the client needs an account with an eligible plan, which the mobile page lists as SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, or Cursor Teams.
 
 ## Reject the SSH story a second time
 
@@ -62,13 +62,13 @@ In September she installs the .rpm from x.ai/bot on the ThinkPad, signs in with 
 | Same week | Opened run history on Fedora for the first time in a month | Found a routine that had been silently skipping a source |
 | Ongoing | Phone for approvals and pauses, Fedora for edits | The same split every Mac user has |
 
-The third row is the point. Rationed authoring means rationed auditing, and the routine that had drifted was invisible from a phone. [Bots that get quietly worse](/blog/the-bot-that-got-quietly-worse) is the long version of that failure.
+The third row is the point. Rationed authoring means rationed auditing, and the routine that had drifted was invisible from the phone she had in August. [Bots that get quietly worse](/blog/the-bot-that-got-quietly-worse) is the long version of that failure.
 
 ## Keep the phone as the operator's console, on Linux as anywhere else
 
 Nothing about the Linux app changes the phone side, and the phone side changed a lot in the same docs update.
 
-The companion app for iPhone (iOS 18 or later) and Android (9 or later) can message bots, create them, approve or deny steps, take over the computer, and pause or resume routines. It cannot edit a routine's schedule or instruction, read run history, test, or delete a routine; those are desktop jobs, and the desktop can now be Linux.
+The companion app for iPhone (iOS 18 or later) and Android (9 or later) can message bots, create them, approve or deny steps, take over the computer, and pause or resume routines. It can also read a routine's run history and delete a routine. It cannot edit a routine's schedule or instruction or test one; those are desktop jobs, and the desktop can now be Linux.
 
 For a Linux user with an Android phone, which describes a great many Linux users, this is the first time both halves of the product have run on hardware they already owned. [Grok Bot on Android](/blog/grok-bot-android-status) covers the phone half.
 
@@ -84,7 +84,7 @@ The package is the easy part of a Linux install day and it is the part people pr
 | First run | Wait for the shared computer to be set up | Treating the wait as a broken install |
 | First edit | Open run history before touching anything | Editing a routine without knowing what it has been doing |
 
-Do the last row on purpose. If you authored bots on a borrowed machine and have only ever operated them from a phone, this is the first time you have been able to read what they did. Read before you edit, because the routine you were about to tweak may not be the one that needs attention.
+Do the last row on purpose. If you authored bots on a borrowed machine and have only ever operated them from a phone, this may be the first time you have read what they did at a desk. Read before you edit, because the routine you were about to tweak may not be the one that needs attention.
 
 None of those rows is Linux-specific. That is the point of putting them here: the September change turned a Linux install into an ordinary install, with the ordinary failure modes, and those failure modes are almost never about the operating system.
 
@@ -116,8 +116,7 @@ If a step needs a password, a two-factor code or a CAPTCHA, stop and wait for
 me to take over the computer from the desktop app or the phone.
 Do not treat sibling bots as isolation. Every bot on this account shares your
 cookies, sessions, files and credentials. Screens are not a security boundary.
-Keep runs reconstructable from files I can open, because there is no audit
-view of your actions yet.
+Keep runs reconstructable from files I can open, because this account has no audit view of your actions.
 \`\`\`
 
 The second and third lines exist because Linux users are the group most likely to write a routine that assumes a local path. [Grok Bot cannot see your files](/blog/grok-bot-cannot-see-files) is the failure that produces.
@@ -136,7 +135,7 @@ Install the package for your distribution and sign in. If the package installs a
 
 Open a bot you authored elsewhere and confirm it is present. If it is not, you signed into a different account than the one that holds the bots.
 
-Open a routine's run history on the Linux app. This is the job the phone cannot do and the borrowed machine rationed; if it works, the workaround is over.
+Open a routine's run history on the Linux app, then open its schedule for editing. Editing is the job the phone cannot do and the borrowed machine rationed; if it works, the workaround is over.
 
 Try to read a file the bot produced from your workstation's file manager. It should not be there, because it lives on the cloud computer. If you find yourself looking for it, re-read the two-Linuxes section.
 
@@ -150,7 +149,7 @@ Close the laptop and confirm a long read-only task still finishes. The bot runs 
 | Bot cannot find a file on my workstation | The bot runs where the app runs | Files live on the cloud computer's workspace |
 | Wanted a shell on the bot machine | Linux client means Linux access | The computer is managed; the bot is non-root; not documented |
 | Installed something from a forum during the gap | Unofficial equals official | Uninstall, rotate credentials, install from x.ai/bot |
-| Phone still cannot edit a routine | The phone became a full client | Editing, history, testing and deleting stay on desktop |
+| Phone still cannot edit a routine | The phone became a full client | Editing and testing stay on desktop; history and deleting now work on the phone |
 
 The forum row deserves a second look. For most of August, "Grok Bot Linux" searches returned wrappers and scripts using the name. None of them became official when the real package shipped. If one of them holds a login of yours, that login needs rotating whether or not you keep using the product, and the rotation is worth doing before you sign the real client into the same accounts.
 

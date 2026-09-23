@@ -1,35 +1,35 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot Has No Audit View Yet: How to Keep Your Own Receipts',
+  title: 'Grok Bot Audit View: Keep Your Own Receipts Outside Enterprise',
   description:
-    'Grok Bot has no audit view of bot actions yet. Keep a grok bot audit log yourself: output contracts, destinations, and a human check that can fail.',
+    'Grok Bot has no audit view of bot actions outside Enterprise. Keep a grok bot audit log yourself: output contracts, destinations, and a human check that can fail.',
   date: '2026-08-27',
   category: 'Safety',
   content: `
-# Grok Bot Has No Audit View Yet: How to Keep Your Own Receipts
+# Grok Bot Audit View: Keep Your Own Receipts Outside Enterprise
 
-The vendor questionnaire asks whether Grok Bot records every action a bot takes, and the documented answer is that an audit view of Bot actions does not exist yet. That is the current product. A security reviewer, a controller, or a buyer on a Cursor Teams plan is searching this sentence, not a demo rumour.
+The vendor questionnaire asks whether Grok Bot records every action a bot takes, and the documented answer is that an audit view of Bot actions does not exist outside Enterprise. That is the current product. A security reviewer, a controller, or a buyer on a Cursor Teams plan is searching this sentence, not a demo rumour.
 
-If you need a receipt, you keep it yourself. Twenty run records are not a ledger. Coming-soon admin Kill is not a log. Pause is not a log. An approval you clicked through is not a log unless you exported the proposal first.
+If you need a receipt, you keep it yourself. Twenty run records are not a ledger. An Enterprise admin Terminate is not a log. Pause is not a log. An approval you clicked through is not a log unless you exported the proposal first.
 
 Force the bot to write a run log into a document the company owns. Keep send on ask. Screenshot or export the proposed action. Put a human check in the path that is allowed to fail the close. The worked example is a finance bot that reconciles expenses: without an audit view, the only proof next quarter is the packet that bot was required to write. [Watching What Your Bot Did](/blog/bot-observability) covers receipts versus assertions. This page is the buying fact and the packet you can produce.
 
 ## Answer the audit-log row with the documented gap, not with a date
 
-Teams and enterprise buyers type "grok bot audit log" because procurement forms still assume a product has a central action history or it does not. Grok Bot's teams documentation states that an audit view of Bot actions does not exist yet. Write that as a present-tense fact. Do not attach a quarter. Do not write "coming in Q4". You do not have a date, and inventing one becomes a representation the moment someone copies it into a customer workbook.
+Teams and enterprise buyers type "grok bot audit log" because procurement forms still assume a product has a central action history or it does not. Grok Bot's teams documentation states that an audit view of Bot actions does not exist outside Enterprise. Write that as a present-tense fact. Do not attach a quarter. Do not write "coming in Q4". You do not have a date, and inventing one becomes a representation the moment someone copies it into a customer workbook.
 
 The honest cell has three parts: what is missing, what you keep instead, and who checks the substitute. Skip the third part and you have a hope.
 
 | Questionnaire row | What exists in Grok Bot today | Honest answer | Substitute you can show |
 |---|---|---|---|
-| Central audit log of bot actions | Not shipped | No product audit view of Bot actions yet | A company-owned packet the bot appends to on every run |
-| Who did what, when | No named actor ledger across bots | We cannot query actions by bot from the product | The packet names the bot, the run time, and the human who signed |
-| Retention of action history | Routine run records, last 20 per routine | Twenty records, then gone | The packet lives in a folder we retain under our own policy |
-| Admin stop of the fleet | Pause exists. Admin Kill is coming soon | Pause is a stop. Kill is not shipped, and is not a log | Pause plus the packet. Never list Kill as evidence of past work |
+| Central audit log of bot actions | Enterprise only: audit logs and Action Recording | Below Enterprise, no product audit view of Bot actions | A company-owned packet the bot appends to on every run |
+| Who did what, when | No named actor ledger across bots below Enterprise | We cannot query actions by bot from the product on our plan | The packet names the bot, the run time, and the human who signed |
+| Retention of action history | Routine run records, last 20 per routine; Enterprise Action Recording keeps 90 days | Below Enterprise, twenty records, then gone | The packet lives in a folder we retain under our own policy |
+| Admin stop of the fleet | Pause exists. On Enterprise, admins can switch Grok Bot off for the team or Terminate a member's computer; self-serve Teams have neither | Pause is a stop. Terminate is a halt, and is not a log | Pause plus the packet. Never list Terminate as evidence of past work |
 | Proof a send was reviewed | Send can sit on ask | Ask is a gate, not a record | Screenshot or export of the proposal, stored with the packet |
 
-Fill the right column or fail the form. [The Grok Bot Safety Checklist](/blog/grok-bot-safety-checklist) is the pre-flight before you connect the mailbox this packet will later have to explain. "We can see runs" is thin. "We have an audit log" is false, and a reviewer will know the difference in one screenshot request.
+Fill the right column or fail the form. [The Grok Bot Safety Checklist](/blog/grok-bot-safety-checklist) is the pre-flight before you connect the mailbox this packet will later have to explain. "We can see runs" is thin. "We have an audit log" is false below Enterprise, and a reviewer will know the difference in one screenshot request.
 
 ## Count a twenty-run history as a cache, never as a ledger
 
@@ -37,23 +37,23 @@ A routine assigns a workflow to one Bot. The app keeps the 20 most recent run re
 
 Inside the window, a run record answers one question: did this routine fire. It does not tell a controller which statement line moved, which receipt was attached, or which draft sat on ask. It is a heartbeat. It is not a grok bot audit log.
 
-Cite the twenty for debugging this afternoon. Never cite it as evidence you can produce in ninety days. Put the cadence in the packet header: product run history retains twenty records, this packet is the retention. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. If the exporter is on a phone, the proposal is gone unless the bot already wrote it elsewhere.
+Cite the twenty for debugging this afternoon. Never cite it as evidence you can produce in ninety days. Put the cadence in the packet header: product run history retains twenty records, this packet is the retention. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. If the exporter is on a phone, the proposal is gone unless the bot already wrote it elsewhere.
 
-## Treat coming-soon admin Kill as a stop button, not a paper trail
+## Treat admin Terminate as a stop button, not a paper trail
 
-Teams documentation describes an administrator Kill action as coming soon. Kill deletes the virtual machine. Durable storage is kept. There is no ship date in that sentence, and this article will not invent one.
+Teams documentation describes an administrator Terminate action, part of Grok Bot Computers on the Cursor dashboard. It is Enterprise only and for organization admins only. Terminate deletes a member's computer, running or hibernated. The durable disk is kept, and the member's next session starts a fresh computer on it.
 
-Kill is a future stop, not an audit log of Bot actions. Stopping a machine does not write down what the bots already did. Durable storage kept means files you hoped would vanish may still be there. Pause exists today and is also not a log. You pause so the next run does not happen. You do not pause in order to remember July.
+Terminate is a stop, not an audit log of Bot actions. Stopping a machine does not write down what the bots already did. A kept durable disk means files you hoped would vanish may still be there. Pause exists today and is also not a log. You pause so the next run does not happen. You do not pause in order to remember July.
 
 | Control | Shipped today | Stops future work | Records past work |
 |---|---|---|---|
 | Pause | Yes | Yes | No |
 | Send on ask / approval | Yes, as a gate | Yes, for the next click | No, unless you export or screenshot |
 | Routine run records | Yes, last 20 per routine | No | Only that a run fired, then the window slides |
-| Admin Kill | Coming soon, no date | Deletes the VM. Durable storage is kept | No. A halt is not a grok bot audit log |
+| Admin Terminate | Yes, Enterprise organization admins only | Only the running turn. The next session starts a fresh computer on the same durable disk | No. A halt is not a grok bot audit log |
 | Company-owned packet | You build it | No | Yes, if the charter required the append |
 
-Score Kill as a future halt, if you mention it at all. Score packets as evidence of past work. An approval controls the proposed action. It does not reverse work already completed. Denying the eleventh step leaves the first ten done, with no product view that lists them. Those ten needed to be in the packet first. [Draw the Approval Line on Reversibility](/blog/grok-bot-approval-rules-reversibility) is what must sit on ask. This page is what you keep once it sits there.
+Score Terminate as a halt, if you mention it at all. Score packets as evidence of past work. An approval controls the proposed action. It does not reverse work already completed. Denying the eleventh step leaves the first ten done, with no product view that lists them. Those ten needed to be in the packet first. [Draw the Approval Line on Reversibility](/blog/grok-bot-approval-rules-reversibility) is what must sit on ask. This page is what you keep once it sits there.
 
 ## Park every send behind ask so the proposal still exists
 
@@ -117,7 +117,7 @@ These eight columns are the only grok bot audit log you will have on a loud mont
 
 ## Make the human check a named step that is allowed to fail the close
 
-Contracts and destinations still fail if the last row is a rubber stamp. The missing product feature is an audit view. The missing organisational feature is a person allowed to stop the close.
+Contracts and destinations still fail if the last row is a rubber stamp. The missing product feature, below Enterprise, is an audit view. The missing organisational feature is a person allowed to stop the close.
 
 Name the person in the charter: finance owner, controller, or the founder who still signs the card. Name the SLA: reviewed before books close, within three business days of month end, and if it is not reviewed, nothing posts. "We will look next month" is a folder, not a check.
 
@@ -127,11 +127,11 @@ Sample, do not reread. Five proposed matches, open the receipts. Every unmatched
 
 ## Fill the questionnaire from artifacts, and leave blanks when you have none
 
-This is who searches the keyword. When the form asks whether you log all actions taken by AI agents, do not say yes because you have routines. Say: Grok Bot has no audit view of Bot actions yet. Each in-scope bot appends a run packet to a company-owned document. Send stays on ask. Proposed irreversible actions are exported or screenshotted before approval. A named human can fail the run. Attach a redacted July packet, not a marketing sentence.
+This is who searches the keyword. When the form asks whether you log all actions taken by AI agents, do not say yes because you have routines. Say: Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Each in-scope bot appends a run packet to a company-owned document. Send stays on ask. Proposed irreversible actions are exported or screenshotted before approval. A named human can fail the run. Attach a redacted July packet, not a marketing sentence.
 
-When it asks whether administrators can review a complete history of bot activity, say no, not in the product. You can review the packets you kept. Completeness equals whatever you required in charters. Bots without that line have no history you control.
+When it asks whether administrators can review a complete history of bot activity, on a self-serve plan say no, not in the product. You can review the packets you kept. Completeness equals whatever you required in charters. Bots without that line have no history you control.
 
-When it asks whether there is an admin kill switch, say pause exists today. An admin Kill that deletes the VM while keeping durable storage is documented as coming soon. It is not an audit log. Confirm the vendor's current teams page when you submit.
+When it asks whether there is an admin kill switch, say pause exists today. On Enterprise, the Enable Grok Bot for your team switch blocks every member without deleting their computers, and organization admins can Terminate a member's computer; it still keeps the durable disk. Self-serve Teams have no such switch. Neither is an audit log. Confirm the vendor's current teams page when you submit.
 
 Leave a blank rather than upgrade a cache into a control. Blanks can be scoped or covered by your substitute. Upgrades become lies when a reviewer asks for the admin audit console. Do not borrow [What is a Grok Bot](/blog/what-is-a-grok-bot) as if a product explanation were a control description.
 
@@ -139,9 +139,9 @@ Leave a blank rather than upgrade a cache into a control. Blanks can be scoped o
 
 The strongest case against this work is patience. The gap is documented. Building packets is unpaid. Waiting is free. A Teams buyer would rather write "roadmap" in the comments column.
 
-Patience fails because July still closes in August. If the bot runs this month, this month's actions are already unlogged by the product. A future audit view, if it ships, will not crawl backward into chats you already skimmed. You still will not have July. "Coming soon" is not a control. Reviewers will ask what you do in the meantime. If the answer is "we wait", you have no grok bot audit log.
+Patience fails because July still closes in August. If the bot runs this month, this month's actions are already unlogged by the product. A future audit view on your plan, if it ships, will not crawl backward into chats you already skimmed, and Enterprise Action Recording, which is off by default, only records from the day it is switched on. You still will not have July. "Coming soon" is not a control. Reviewers will ask what you do in the meantime. If the answer is "we wait", you have no grok bot audit log.
 
-The weaker version says twenty run records are close enough for a small team. They cover "did it run yesterday" if you look yesterday, not "what did it match on the fourteenth", and they vanish when you delete the bot. Small teams still get asked. Kill plus pause stops future work. It does not remember the last three weeks of a wrong merchant.
+The weaker version says twenty run records are close enough for a small team. They cover "did it run yesterday" if you look yesterday, not "what did it match on the fourteenth", and they vanish when you delete the bot. Small teams still get asked. Terminate plus pause stops work. It does not remember the last three weeks of a wrong merchant.
 
 Build the packet this month. If a vendor console appears later, keep yours: your format, your retention, unmatched reasons a controller can read.
 
@@ -171,11 +171,11 @@ The test is deletion, not a happy path on day one. Run the packet for a week on 
 | Chat transcript | Maybe, until you lose the thread | Not a records system |
 | File on the shared computer | Maybe. Deleting a bot does not wipe the disk | Another bot can read or overwrite it |
 | Company-owned packet plus captures | Yes, if sharing was set | This is the only grok bot audit trail you control |
-| Admin Kill, when it ships | VM gone, durable storage kept | Still not an audit view, and not this week's test |
+| Admin Terminate (Enterprise) | Computer gone, durable disk kept | Still not an audit view, and not this week's test |
 
 Rows gone means you stored the log on the shared computer or in chat. Fix the destination before a live card statement. Captures 404 means a personal screenshot heap. Put them in the same company folder. If another bot on the account can edit the packet, sharing is wrong: finance owner writes, other bots read or have no access. Access control lives in the destination product, not in the roster.
 
-Hide-from-sidebar is not delete and is not pause. Routines can still fire. The packet should still append, which is how you learn the hide did nothing. Then pause. Run deletion this afternoon on macOS or Windows. iPhone cannot delete. Do not wait for Kill to be the test.
+Hide-from-sidebar is not delete and is not pause. Routines can still fire. The packet should still append, which is how you learn the hide did nothing. Then pause. Run deletion this afternoon on macOS, Windows, or Linux. The phone can delete too, but test from a desk. Do not wait for an admin Terminate to be the test.
 
 ## Paste a charter that will not claim a match without appending the packet
 
@@ -239,11 +239,11 @@ Three lines do the load-bearing work. The destination is a company document. The
 
 ### Does Grok Bot have an audit log of bot actions?
 
-No. An audit view of Bot actions does not exist yet. That is a documented product gap, not a setup mistake. Routine run records are not a substitute: the app keeps the twenty most recent records per routine, and deleting a Bot deletes its routines. Keep a grok bot audit log by appending a packet to a document you own, keeping send on ask, and exporting or screenshotting the proposal before anyone approves an irreversible step.
+No. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. That is a documented product gap, not a setup mistake. Routine run records are not a substitute: the app keeps the twenty most recent records per routine, and deleting a Bot deletes its routines. Keep a grok bot audit log by appending a packet to a document you own, keeping send on ask, and exporting or screenshotting the proposal before anyone approves an irreversible step.
 
-### Is the coming admin Kill feature an audit log?
+### Is the admin Terminate action an audit log?
 
-No. Admin Kill is documented as coming soon. It deletes the virtual machine and durable storage is kept. There is no ship date in that description, and Kill would still not record what bots already did. Pause exists today and also does not record the past. Treat Kill, when it ships, as a halt. Treat your company-owned packet as the evidence of past work.
+No. Terminate, part of Grok Bot Computers, is Enterprise only and for organization admins only. It deletes a member's computer, the durable disk is kept, and the member's next session starts a fresh computer on it. Terminate does not record what bots already did. Pause exists today and also does not record the past. Treat Terminate as a halt. Treat your company-owned packet as the evidence of past work.
 
 ### Where should I store a grok bot audit trail if the computer is shared?
 

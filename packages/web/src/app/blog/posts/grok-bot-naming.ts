@@ -19,11 +19,11 @@ A name is a search query for a tired human. It is not a vault, not a computer, a
 
 You name a bot on the afternoon you create it, when the job is still in working memory. You search for that bot on a morning when Monday is empty, the iPhone can only pause, and three cards share a generic word. Design the string for the second person.
 
-Next August is you with a worse memory. It might also be a deputy told to pause the standup who cannot tell which assistant is the standup. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. A deputy on a train who cannot identify the owner card will pause nothing, or everything.
+Next August is you with a worse memory. It might also be a deputy told to pause the standup who cannot tell which assistant is the standup. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. A deputy on a train who cannot identify the owner card will pause nothing, or everything.
 
 All bots on an account share one persistent cloud computer assigned to the user, not to a bot. Each bot gets a screen. Screens are not security boundaries. Cookies, sessions, files, and CLI credentials are shared. A precise name does not isolate those. It only lets you find the profile you meant to hide, pause, or retire. Isolation is [least privilege](/blog/least-privilege-bots) and what you refuse to sign in. Naming is retrieval.
 
-There is no audit view of Bot actions yet. There is no team catalog of names. The sidebar is the index. If the index is three assistants, the index is broken.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. There is no team catalog of names. The sidebar is the index. If the index is three assistants, the index is broken.
 
 ## Encode JOB-NEVER-OWNER on the create screen, not in a later note
 
@@ -98,7 +98,7 @@ If two bots share a job family, the never-token is what splits them. MailCleanup
 
 ## Stamp initials so a year-later human is still findable
 
-OWNER is a person who can pause from iPhone and who edits on macOS or Windows. Linux desktop, Android, and iPad have no Grok Bot client. The Bot runs as a non-root user on a managed Linux VM. That VM is not a Linux desktop app. If the owner is travelling with only a phone, pause is the whole toolkit. The deputy needs to know which card to pause.
+OWNER is a person who can pause from iPhone and who edits on macOS, Windows or Linux. Android and iPad run the companion app. The Bot runs as a non-root user on a managed Linux VM. That VM is not the Linux desktop app. If the owner is travelling with only a phone, pause is the whole toolkit. The deputy needs to know which card to pause.
 
 Stamp a name or initials, not a team. Nothing is team-level. Routines do not belong to Northglass. They belong to one Bot on one user account. Harun on Harun's seat is the owner. Priya on Priya's seat is a different computer, because the computer is assigned to the user, not to a bot. Do not name a bot Northglass-Standup and expect the next hire to inherit it. Copy the charter as text onto the new seat. Do not hand off by hoping the string contains the company.
 
@@ -148,15 +148,15 @@ If the standing job is already missing, you are on [the missed-run page](/blog/g
 
 The strongest objection to JOB-NEVER-OWNER is honest: you type the name once, assistant is eight letters, InboxTriage-NeverSend-Harun is a slog, and you will remember which assistant is mail because you built it this afternoon.
 
-You type the name once. You search it for a year. You ask a deputy to pause it from a phone that cannot open history. You try to delete a stub on a Friday and the stub is the standup. The short string is expensive at retrieval. The long string is cheap at create.
+You type the name once. You search it for a year. You ask a deputy to pause it from a phone that can pause but cannot edit. You try to delete a stub on a Friday and the stub is the standup. The short string is expensive at retrieval. The long string is cheap at create.
 
-Remembering which assistant is mail is a property of this afternoon. Next August has three of them, and one vendor cookie you forgot. There is no audit view to tell you which profile used the cookie. The name will not tell you either if the name is assistant. The scheme at least tells you NeverLogin versus NeverSend.
+Remembering which assistant is mail is a property of this afternoon. Next August has three of them, and one vendor cookie you forgot. There is no audit view outside Enterprise to tell you which profile used the cookie. The name will not tell you either if the name is assistant. The scheme at least tells you NeverLogin versus NeverSend.
 
 The objection wins a slice when you have exactly one bot, no routine, and you will delete it tomorrow after a one-shot scrape. Even then, VendorEval-NeverPurchase-Harun is still one create, and [retirement](/blog/grok-bot-retirement) has a card it can find. Speed that produces three assistants is a setup whose failure mode is an empty Monday and a leftover login.
 
 ## Fail a Friday scan if two cards still share a generic word
 
-This check can fail. Sit at a desktop. iPhone cannot show you history and cannot let you rename or delete. Open the sidebar. Read every visible string out loud. If two cards share assistant, temp, helper, bot, new, copy, or test, fail. A fail is a change before Monday, not a note you intend to write.
+This check can fail. Sit at a desktop. Editing and testing routines need one, and the full sidebar reads better there. Open the sidebar. Read every visible string out loud. If two cards share assistant, temp, helper, bot, new, copy, or test, fail. A fail is a change before Monday, not a note you intend to write.
 
 | Check | Fail if | Fix before Monday |
 |---|---|---|
@@ -168,7 +168,7 @@ This check can fail. Sit at a desktop. iPhone cannot show you history and cannot
 
 Pass is boring: every card is JOB-NEVER-OWNER, no two share a banned family, keepers are on durable strings, and you can pick Monday's owner without opening chat. [Audit the fleet](/blog/grok-bot-fleet-audit) is the longer pass if you already have nine bots. This scan is only the names.
 
-There is no Grok Bot-specific spend cap. A cleanup Friday that deletes the wrong owner does not show up as a token line. It shows up as a missed DM.
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. A cleanup Friday that deletes the wrong owner does not show up as a token line. It shows up as a missed DM.
 
 ## Keep a paper index because Grok Bot has no team catalog of names
 
@@ -224,7 +224,7 @@ No. The roster string is a search index for humans. The charter is the instructi
 
 ### If I change the displayed name, do the routines stay on that bot?
 
-This page does not invent a rename menu. If your build offers a rename action, confirm it on macOS or Windows. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. A new string on the same bot is a label change on the same profile. Routines attach to one Bot, not to a nickname. They should stay with that Bot object. Files, cookies, and sessions stay on the shared computer. A renamed card is not a wipe. If you cannot find rename, recreate under the scheme, copy routine text first, then retire the old card.
+This page does not invent a rename menu. If your build offers a rename action, confirm it in the desktop app. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. A new string on the same bot is a label change on the same profile. Routines attach to one Bot, not to a nickname. They should stay with that Bot object. Files, cookies, and sessions stay on the shared computer. A renamed card is not a wipe. If you cannot find rename, recreate under the scheme, copy routine text first, then retire the old card.
 
 ### Why not name every bot assistant and keep the job in the charter?
 
@@ -232,6 +232,6 @@ Because you will search the sidebar, not the charter, when Monday is empty. Thre
 
 ### I already have three assistants. Should I delete two of them today?
 
-Not until you know which one owns a standing job. Open each card at a desk. List routines, last runs, and the charter. Copy any keeper routine text into a file you own. Recreate keepers under JOB-NEVER-OWNER names, enable the new copies, pause the old ones, then retire using the retirement checklist. Delete first and you recreate the missed-run case. Hide if you still need the chat. iPhone cannot delete. Files and sessions can remain after the name is gone. Naming cleanup is not a security wipe.
+Not until you know which one owns a standing job. Open each card at a desk. List routines, last runs, and the charter. Copy any keeper routine text into a file you own. Recreate keepers under JOB-NEVER-OWNER names, enable the new copies, pause the old ones, then retire using the retirement checklist. Delete first and you recreate the missed-run case. Hide if you still need the chat. The phone app can delete a Bot too, so finish the checklist before anyone taps it. Files and sessions can remain after the name is gone. Naming cleanup is not a security wipe.
 `,
 };

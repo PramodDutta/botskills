@@ -146,7 +146,7 @@ are shared across all of them. The documentation is blunt about it: do not
 use separate Bots as a security boundary. So when a bot edits a sheet through
 your signed-in session, the edit is attributed to you. Version history will
 not tell you a bot did it, and as of writing there is no audit view of bot
-actions to cross-reference. Running three bots and hoping the history sorts
+actions outside Enterprise to cross-reference. Running three bots and hoping the history sorts
 out which one misbehaved is not a plan.
 
 ## Decide where the bot's numbers are allowed to live
@@ -468,7 +468,7 @@ discards every human edit made since that snapshot. Older activity gets
 consolidated over time, which shortens your real recovery window. Attribution
 is the bigger gap: because all bots on an account share one computer and its
 signed-in browser sessions, an edit made through your session is recorded as
-yours, and as of writing there is no audit view of bot actions to check
+yours, and as of writing there is no audit view of bot actions outside Enterprise to check
 against. Prevent the write instead of planning to reverse it.
 `,
 };

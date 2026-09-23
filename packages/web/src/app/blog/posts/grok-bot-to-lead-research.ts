@@ -366,7 +366,7 @@ confident, the likeliest explanation is not thoroughness. Set the
 expectation in the charter, then check the not-found count in the digest
 before you read a single brief.
 
-Two practical notes on evidence. There is no audit view of bot actions
+Two practical notes on evidence. There is no audit view of bot actions outside Enterprise
 yet, so the digest and the brief file are your only record of what the
 bot did, which is a reason to have it write the blocked list and the
 counts rather than reporting them in chat. And the app keeps only the

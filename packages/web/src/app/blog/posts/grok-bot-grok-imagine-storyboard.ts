@@ -19,7 +19,7 @@ Primer: [what a Grok Bot is](/blog/what-is-a-grok-bot). The catalog listing is [
 
 Grok Imagine is an xAI image surface. Confirm it on xAI's current product pages the day you run, including whether it is on the account you will actually use. This article does not assert that Imagine is on every plan, does not print a price, and does not claim a quota. Those numbers move.
 
-Grok Bot is a different product. Eligibility for the bot is SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, Cursor Teams Standard, Cursor Teams Premium, plus a one-time trial ([FAQ](https://docs.x.ai/grok-bot/faq)). Cursor Pro+ at $60 a month is the cheapest paid Grok Bot path as of the 25 August 2026 check. That still does not tell you whether Imagine is available. Confirm Imagine separately. Do not merge the two bills.
+Grok Bot is a different product. Eligibility for the bot is every paid individual Cursor plan (Pro, Pro+, Ultra), the Cursor Teams plan, or a linked individual SuperGrok, SuperGrok Plus, or SuperGrok Heavy subscription, plus a one-time trial ([FAQ](https://docs.x.ai/grok-bot/faq)). Cursor Pro at $20 a month is the cheapest paid Grok Bot path as of the 23 September 2026 check. That still does not tell you whether Imagine is available. Confirm Imagine separately. Do not merge the two bills.
 
 There is no Grok Bot image API in the docs this site treats as authority. Do not charter an invented generate call. If Imagine is missing that day, the shot list is still the brief. Stop. Do not substitute random stock.
 
@@ -66,7 +66,7 @@ Three inventions show up whenever someone wants this desk to run overnight.
 
 First, a Grok Bot image API. Grok Bot has no model picker ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)). Never say it runs grok-4.6. There is no documented generate-image call for this runtime. A charter that pretends otherwise fails, then falls back to a browser. Keep Generate off the bot so that fallback has nowhere to go.
 
-Second, Imagine pricing copied from a screenshot. Confirm live. This article does not invent an Imagine dollar figure. There is no Grok Bot-specific spend cap. Weekly allowance then on-demand from model and token cost ([FAQ](https://docs.x.ai/grok-bot/faq)). No published dollar figure for that allowance. That is Grok Bot usage, not Imagine.
+Second, Imagine pricing copied from a screenshot. Confirm live. This article does not invent an Imagine dollar figure. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance then on-demand from model and token cost ([FAQ](https://docs.x.ai/grok-bot/faq)). No published dollar figure for that allowance. That is Grok Bot usage, not Imagine.
 
 Third, unpublished shortcuts: X drafts, Studio private uploads, Drive unlisted. Each one is already an object on a logged-in surface. An approval does not reverse work already completed ([approvals, security and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)). If the bot already created the object, you are in takedown territory.
 
@@ -130,13 +130,13 @@ A routine assigns a workflow to one bot. Max 50 routines per bot. The app keeps 
 
 You can generate on your own laptop and drop exports into \`/workspace\`. That is the default this page wants. Signing into Imagine on the Agent Computer looks faster because the prompts are already in \`shot-list.md\`. It stores a session on the one computer every bot shares. If that session is an xAI or X identity that can post, you did not build a storyboard desk. You built a logged-in publisher with extra steps.
 
-Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)). A browser login is a cookie on the disk you share. There is no audit view of Bot actions yet.
+Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)). A browser login is a cookie on the disk you share. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording.
 
 Deleting the storyboard bot does not log you out. [Inbox Triage](/bots/inbox-triage) can open the same tab later. Screens will not save you. Read [one computer, many screens](/blog/grok-bot-one-computer-many-screens) and [shared computer security](/blog/grok-bot-shared-computer-security) before you treat a dedicated storyboard bot as isolation.
 
 If a 2FA prompt appears while someone is opening Imagine, that is a live login. Do not type the code in chat. Prefer not completing the login on the Agent Computer. Generate on your laptop. Use [the 2FA incident page](/blog/grok-bot-2fa-prompt) if the prompt already happened.
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). Review stills on a desktop. There are Linux desktop and Android apps as of September 2026; iPad is still not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). Privacy Mode (Legacy) blocks Grok Bot entirely. If that mode is on, this desk does not run.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)). Review stills on a desktop. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later) ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). Privacy Mode (Legacy) blocks Grok Bot entirely. If that mode is on, this desk does not run.
 
 ## Paste a storyboard charter that names the three verbs this bot never takes
 
@@ -184,7 +184,7 @@ There is still no Grok Bot image API to make this clean. If the clicks are the p
 
 ## Prove the run never posted by counting files in and posts out
 
-There is no audit view of Bot actions yet. Proof is boring and local.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Proof is boring and local.
 
 After the run, \`shot-list.md\` must exist. If you generated, stills and \`manifest.csv\` must live under the named folder. X, Studio, public Drive, and client mail must be quiet in the window. Plant a canary: one flagged take with a magenta X on the kettle. It may exist in the folder. It must not exist on X.
 
@@ -225,7 +225,7 @@ This setup fits previsualisation: an eight-scene teaser, a chapter, stills that 
 
 If the request is the clock, publish yourself, or use a login this roster cannot see. If the request is YouTube, use [the YouTube manager](/blog/grok-bot-youtube-manager). If the request is clips, use [the clip desk](/blog/grok-bot-clip-youtube-podcast). If the request is a week of posts, use [social scheduling](/blog/grok-bot-to-social-scheduling) and still never hit Post from the bot.
 
-Coming soon, labelled not shipped: a team-level ceiling on local execution, and an admin Kill that deletes the VM while durable storage is kept. Neither is a reason to put stills in a public folder today. Approvals do not rewind a post ([approval rules](/blog/grok-bot-approval-rules-reversibility)).
+Now shipped: a team-level ceiling on local execution that team admins can set, and an Enterprise admin Terminate that deletes a member's computer while the durable disk is kept. Neither is a reason to put stills in a public folder today. Approvals do not rewind a post ([approval rules](/blog/grok-bot-approval-rules-reversibility)).
 
 The catalog stays [Grok Imagine Storyboard](/bots/grok-imagine-storyboard). Confirm Imagine on xAI when you need pixels. Keep Generate and every public verb on a human.
 

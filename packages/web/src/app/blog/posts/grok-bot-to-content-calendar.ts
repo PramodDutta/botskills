@@ -83,7 +83,7 @@ The runtime facts push you the same way. A routine belongs to a single bot,
 nothing is stored at team level, and deleting a bot deletes its routines along
 with it. The app keeps only the twenty most recent run records for a routine,
 so run history is a short window rather than an archive, and there is no audit
-view of bot actions available as of writing. A calendar that exists only as
+view of bot actions outside Enterprise. A calendar that exists only as
 accumulated context inside a bot is a calendar with a deletion risk and no
 recovery path.
 
@@ -190,8 +190,8 @@ decision. Drafting is chunky work that benefits from being done in one pass
 across several pieces. The bot running on Wednesday to tell you nothing changed
 is spend with no output, and frequency is the largest driver of cost here:
 subscriptions include a weekly usage allowance and overflow is billed on demand
-from model and token cost, with no Grok Bot specific spend cap available as of
-writing.
+from model and token cost, with no Grok Bot specific spend cap beyond the
+account On-demand monthly limit.
 
 Two runs is the shape that fits. A planning run at the start of the week that
 assigns slots and reports state counts. A drafting run midweek that produces
@@ -452,7 +452,7 @@ of every run and writes back at the end. A spreadsheet, a Notion database, or a
 markdown table in a repository all work. Keeping the calendar only as
 accumulated conversation is fragile: routines belong to a single bot and are
 deleted with it, only the twenty most recent run records are kept, and no audit
-view of bot actions exists as of writing. An external file also lets you steer
+view of bot actions exists outside Enterprise. An external file also lets you steer
 the bot by editing a cell.
 
 ### How often should a content calendar bot run?
@@ -462,7 +462,7 @@ start of the week assigns slots and reports state counts, and a midweek
 drafting run produces everything due in the next seven days. Daily runs mostly
 report that nothing changed, and frequency is the biggest cost driver, since
 subscriptions include a weekly usage allowance with overflow billed on demand
-and no Grok Bot specific spend cap available as of writing. Verify the first
+and no Grok Bot specific spend cap beyond the account On-demand monthly limit. Verify the first
 run lands at the local time you expect.
 `,
 };

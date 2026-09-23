@@ -126,7 +126,7 @@ A quote from a thread the bot opened is a new claim about what Nils said, not a 
 
 Do not schedule "every Friday at 16:00, read mail and dissent." That is a search. The safer routine is "read /memos/friday.md if it exists, write /dissent/YYYY-MM-DD.md, stop." If the memo is missing, the run is could-not-compute: no plan file, path tried, timestamp. It is not a tour of Slack until something looks shippable.
 
-On iPhone (iOS 18+) you can pause and resume. Editing the charter still needs macOS or Windows. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If you cannot paste the input path today, do not schedule the Friday run from a train.
+On iPhone (iOS 18+) you can pause and resume, approve steps, and edit a Bot profile. Editing or testing the routine still needs a macOS, Windows or Linux desktop. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). If you cannot paste the input path today, do not schedule the Friday run from a train.
 
 ## Refuse to log into customer tools just so the critic can check a number
 
@@ -144,7 +144,7 @@ A second bot is a second screen, not a second machine. The FAQ states that all o
 
 Write it in the dedicated chat, or a directory that cannot mail. If Notion appears on the seed listing, treat it as a file target you confirm on the vendor page, not a publish target. A Notion share to the leadership space is a post wearing a docs URL.
 
-Privacy Mode (Legacy) blocks Grok Bot entirely. The computer is a managed Linux VM; the Bot runs as a non-root user. That is not isolation between bots. An approval controls the proposed action. It does not reverse work already completed. Keep send off this bot so the approval screen never sees a post. There is no audit view of Bot actions yet. After the run, search sent mail, open #leadership, and confirm the dated file exists. Silence plus a file is the only proof. Files outlive the bot. Admin Kill, not shipped, deletes the VM and keeps durable storage.
+Privacy Mode (Legacy) blocks Grok Bot entirely. The computer is a managed Linux VM; the Bot runs as a non-root user. That is not isolation between bots. An approval controls the proposed action. It does not reverse work already completed. Keep send off this bot so the approval screen never sees a post. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. After the run, search sent mail, open #leadership, and confirm the dated file exists. Silence plus a file is the only proof. Files outlive the bot. Enterprise admin Terminate deletes the computer and still keeps the durable disk.
 
 ## Score a run by unsourced claims it named, not by how harsh the paragraphs sound
 
@@ -166,13 +166,13 @@ Harshness is not a column. Insulting Leona is a failed run even if the claims ar
 
 The strongest objection is honest: if the dissent never leaves the chat, why pay for a second bot to write it? Leona can reread her own memo. Nils can play critic in the room. Compute that does not change a decision looks like a toy.
 
-Eligibility widened on 21 August 2026. The cheapest paid path is Cursor Pro+ at $60 a month, checked against cursor.com/pricing on 25 August 2026. Cursor Pro at $20 does not include Grok Bot. No eligible SKU publishes a Grok Bot spend cap or an allowance in dollars. "This dissent costs too much" is a feeling until you open the vendor bill.
+Eligibility widened on 21 August 2026. The cheapest paid path is Cursor Pro at $20 a month, checked against cursor.com/pricing on 25 August 2026. Cursor Pro at $20 includes Grok Bot. No eligible SKU publishes a Grok Bot spend cap or an allowance in dollars. "This dissent costs too much" is a feeling until you open the vendor bill.
 
 The objection wins when the memo is already a page with sources, two tests, and a stop rule. Then the advocate should write three lines and you should skip the Friday routine. That is the seed listing working as designed.
 
 The objection loses when the cost is a sentence leaving the building. An 18 percent Nils repeats at 08:05 is not a draft. A Q4 SKU scare in the investor update is not a draft. What you can count is outbound: 0. What you can count is holes named: 2.
 
-A human critic in the room is better than a sending bot, and is not always there at 16:52 on a Friday. Unused dissent is the product. Used dissent in Slack is the incident. The objection also wins when you are over the weekly pool and still rerunning for a spicier no. Overflow is on-demand. Pause. Meter pages: [on-demand usage](/blog/grok-bot-on-demand-usage), [no spend cap ops](/blog/grok-bot-no-spend-cap-ops).
+A human critic in the room is better than a sending bot, and is not always there at 16:52 on a Friday. Unused dissent is the product. Used dissent in Slack is the incident. The objection also wins when you are over the weekly pool and still rerunning for a spicier no. Overflow is on-demand. Pause. Meter pages: [on-demand usage](/blog/grok-bot-on-demand-usage), [no per-Bot spend cap ops](/blog/grok-bot-no-spend-cap-ops).
 
 ## Assign the dissent routine to one bot and accept that deleting it deletes the run history
 

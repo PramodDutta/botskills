@@ -35,7 +35,7 @@ Review a draft skill before use. A demonstration can capture accidental account 
 
 A routine assigns a workflow to one bot. It answers "when should this bot attempt this job?" Grok Bot supports up to 50 routines per bot and keeps the 20 most recent run records per routine. Those are verified product limits, not planning recommendations.
 
-A routine is not a team asset and not an independent safety boundary. Deleting its bot deletes the routines. Pause and resume affect schedule execution, while charter edits change instructions. On iPhone, you can pause and resume; editing, history, testing, and deleting require desktop.
+A routine is not a team asset and not an independent safety boundary. Deleting its bot deletes the routines. Pause and resume affect schedule execution, while charter edits change instructions. On iPhone, you can pause and resume; Editing and testing a routine still need the desktop app.
 
 When a ticket says "disable the bot," ask whether the author means pause one routine, pause all routines, remove access, or delete the named worker. The operational outcomes differ sharply.
 

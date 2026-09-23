@@ -355,7 +355,7 @@ not finished diagnosing it.
 
 Keep the samples. Ten a week over a quarter is a hundred and thirty judgments,
 and that is the only evidence you will have about whether the triage improved,
-because run history is capped and no audit view exists.
+because run history is capped and no audit view outside Enterprise exists.
 
 ## Measure time to first human read, not classification accuracy
 
@@ -375,7 +375,7 @@ still open the account page before replying. If they do, your identifier
 extraction is missing fields, and that is a charter fix.
 
 Also keep your own log, deliberately. An audit view of bot actions does not
-exist yet, and each routine keeps only its 20 most recent run records. Twenty
+exist outside Enterprise, and each routine keeps only its 20 most recent run records. Twenty
 runs at a 30 minute cadence is about a day and a half of history. If you want to
 answer "what did it call this ticket on Tuesday" on Friday, the bot has to write
 that into a file itself, because the platform will not have kept it.
@@ -474,6 +474,6 @@ each group, and put the unsure pile at the top rather than the bottom. If you us
 Slack, use an existing channel rather than a new one, because a channel created
 for bot output stops being read within about a week. Also have the bot write its
 own log to a file: run history is capped at the 20 most recent records per
-routine, and no audit view exists yet.
+routine, and no audit view outside Enterprise.
 `,
 };

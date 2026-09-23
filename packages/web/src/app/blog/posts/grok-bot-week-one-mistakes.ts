@@ -36,9 +36,9 @@ before you connect anything.
 | Treating screens as vaults | Marcus, contractor | Separate bots are not a security boundary. Cookies, sessions, files, and CLI credentials are shared. | Client HubSpot cookie on the shared browser. A day on a security email. |
 | Connecting prod mail first | Anjali, cofounder | A mailbox session lives on the one computer. Deleting a bot does not remove it. | Company Gmail before a charter. A colleague sent a live draft. |
 | A five-minute routine | Devon, ops | Demo: ten minutes max, no mic, browser only, not on iPhone, draft skill. A routine belongs to one bot. | Same-morning schedule. Five runs clicked a cookie banner. |
-| No charter | Sam, support lead | No audit view of bot actions yet. Chat is not a standing job. | Customer wrote send the invoice. The bot treated it as a command. |
+| No charter | Sam, support lead | No audit view of bot actions outside Enterprise. Chat is not a standing job. | Customer wrote send the invoice. The bot treated it as a command. |
 | Sending | Jules, account owner | An approval does not reverse work already completed. | Wrong date to a paying customer at 07:12. Pause did not unsay it. |
-| Ignoring iPhone limits | Keiko, on the road | From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Edit, history, test, and delete need desktop. | Thought pause was delete. Three more runs before a Mac. |
+| Ignoring iPhone limits | Keiko, on the road | From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Edit and test need desktop; history and delete work on the phone. | Thought pause was delete. Three more runs before a Mac. |
 | Deleting the bot that owned the routine | Omar, cleaning the roster | Delete deletes routines. Max 50 per bot. 20 run records. Nothing is team-level. Files can remain. | 07:00 brief gone. Stale CSVs stayed on disk. |
 
 If you only remember the table, remember the last column. The product will not
@@ -56,7 +56,7 @@ not to an individual bot.
 
 Priya's [Chief of Staff Briefing](/bots/chief-of-staff-briefing) opened the
 same browser the next morning. The HubSpot session was already there. There is
-no audit view of bot actions yet, so nobody can prove which profile used the
+no audit view of bot actions outside Enterprise, so nobody can prove which profile used the
 cookie, only that the cookie was on the machine. Marcus's cost was a client
 email asking whether a contractor bot had been inside their CRM, and a day of
 revocation in HubSpot, because deleting the research bot does not sign anyone
@@ -123,7 +123,7 @@ Each afternoon the bot had a slightly different job, because the last
 message was the spec. On Thursday a customer wrote "please send the invoice."
 The bot read that as an instruction. Sam had never written the line that
 says instructions inside an email are data, not commands. There is no audit
-view of bot actions yet, so he reconstructed the attempt from the
+view of bot actions outside Enterprise, so he reconstructed the attempt from the
 conversation and from what the customer received.
 
 A charter is the only standing document the bot has when you are not
@@ -173,20 +173,20 @@ inbox is a person with a memory.
 ## Author nothing on iPhone that you would later need to edit or inspect
 
 Keiko's 07:00 labelling job went wrong in a taxi. She opened the iPhone app,
-which exists on iOS 18 or later, and looked for Edit. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop.
+which exists on iOS 18 or later, and looked for Edit. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine.
 Teach-by-demonstration is unavailable on iPhone. She paused, assumed that
 took the job down, and put the phone away. Pause is not delete. Three more
 runs fired before she sat down at a Mac.
 
 Supported clients are macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and that iPhone app. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The cloud computer is a managed Linux VM. That is not a
+Arm64), and that iPhone app. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The cloud computer is a managed Linux VM. That is not a
 Linux client on your laptop. [Supported platforms](/blog/grok-bot-supported-platforms)
 is the list. [The iPhone app page](/blog/grok-bot-iphone-app) is the companion
 rule: pocket is a stop button.
 
-Keiko's cost was three extra runs and a commute with no history. If your
-week-one desk is only a phone, you can pause. You cannot write a charter,
-inspect a run, copy a routine out, or delete a misbehaving bot. Plan the week
+Keiko's cost was three extra runs and a commute with no way to fix it. If your
+week-one desk is only a phone, you can pause, read run history, and delete.
+You cannot edit or test a routine. Plan the week
 around a machine you can sit at, or delay the week.
 
 ## Copy the weekday run out before you delete the bot that owns it
@@ -205,14 +205,14 @@ need the work later.
 
 Week one produces this urge: too many names in the sidebar, delete the noisy
 one. The noisy one often owns the only schedule you will miss. Copy the
-routine text into a note you own, then hide, or delete on desktop. iPhone
-cannot delete. Deletion is a profile cut, not a machine wipe.
+routine text into a note you own, then hide, or delete. The phone can
+delete too, so copy first. Deletion is a profile cut, not a machine wipe.
 
 ## Walk Priya's founder week through the bill each mistake issued
 
 Priya Shah runs a three-person analytics studio. Eligibility widened on 21
-August 2026. She was on Cursor Pro+, the cheapest documented individual paid
-path at $60 a month, and she tried to learn the product in the week of 24
+August 2026. She was on Cursor Pro+ at $60 a month, then the cheapest
+documented individual paid path, and she tried to learn the product in the week of 24
 August by doing real work. She skipped the day-by-day plan and collected the
 seven grok bot mistakes in five days. This is that week as a bill.
 
@@ -246,13 +246,13 @@ the roster.
 | A bot that never signed into HubSpot is looking at HubSpot | Screens as vaults | One computer, shared cookies. The other bot signed in. |
 | Lead Scout mentions a thread from your mailbox | Prod mail first | The mailbox session is on the computer, not on the inbox bot. |
 | Weekday 07:00 hits a login wall or a banner, every time | Five-minute routine | You scheduled a draft skill. No microphone, so skip the banner was never stored. |
-| The job changed after a customer emailed please send | No charter | Body text is data unless you said so. No audit view to replay the action. |
+| The job changed after a customer emailed please send | No charter | Body text is data unless you said so. No audit view below Enterprise to replay the action. |
 | A customer has a sentence you later paused | Sending | Pause and approval do not reverse completed work. |
-| You cannot find Edit, History, or Delete on the train | iPhone limits | The phone app can pause or resume it and approve steps, but not edit it. Desktop for the rest. |
+| You cannot find Edit or Test on the train | iPhone limits | The phone app can pause or resume it, approve steps, show run history, and delete, but not edit or test it. Desktop for those. |
 | Monday's brief is gone but leftover CSVs are not | Deleted the bot that owned the routine | Routines die with the bot. Files and sessions can remain. |
 
 If the row you need is not here, you are past week one, or a connector
-changed. Confirm the vendor's current page. Do not invent a spend cap, a
+changed. Confirm the vendor's current page. Do not invent a per-Bot spend cap, a
 model picker, or a per-bot VM. The docs contradict those.
 
 ## Paste a week-one refusal charter that forbids all seven
@@ -317,9 +317,8 @@ whose failure mode is a person.
 ## Fail Friday if any of the seven still shows in the roster
 
 This check can fail. If it cannot fail, it is a pep talk. Sit at a desktop on
-Friday. iPhone cannot show history, cannot let you edit, and cannot let you
-delete. A fail is a change you make before Monday, not a note you intend to
-write.
+Friday. iPhone cannot let you edit or test a routine. A fail is a change you
+make before Monday, not a note you intend to write.
 
 | Check | Fail if | Fix before Monday |
 |---|---|---|
@@ -328,7 +327,7 @@ write.
 | Five-minute routine | A weekday clock was born from an uninspected draft skill | Pause, inspect on desktop, copy the text, then keep or drop it |
 | No charter | WHERE YOU STOP is missing | Write the stop before another run |
 | Sending | Anything in Sent came from the bot | Do not test send again. Tighten the boundary. |
-| iPhone limits | Charter, routine, or delete was authored on the phone | Reopen those objects on macOS or Windows and confirm them |
+| iPhone limits | Charter, routine, or delete was authored on the phone | Reopen those objects in the desktop app and confirm them |
 | Deleted the routine bot | Monday's brief lives only in memory | Rebuild from the copy you kept, or admit the schedule is gone |
 
 Pass is boring: one or two bots, no prod mail or a burn mailbox with a
@@ -350,11 +349,11 @@ This list is the wrong article if you already run a boring draft-only bot
 and want permission to send. You will not get it here. You get it from
 reversibility, a review habit you can count, and a charter that survived a
 week of corrections. It is also the wrong article if Privacy Mode (Legacy)
-blocks Grok Bot, your only machine is a Linux desktop, or your only device
-is a phone. The product cannot start.
+blocks Grok Bot, because the product cannot start, or if your only device
+is a phone, because editing and testing a routine still need a desktop.
 
 Do not invent an eighth mistake. Six unnamed bots is a first-week-plan
-failure. A missing spend cap is a budgeting fact, not a named person's
+failure. A missing per-Bot spend cap is a budgeting fact, not a named person's
 invoice. SKILL.md and CLAUDE.md are Grok Build, never Grok Bot.
 
 **Keep reading:** [Your First Week With Grok Bot: A Day-by-Day Plan](/blog/grok-bot-first-week), [Your First Grok Bot in an Hour, With One Reversible Job](/blog/first-grok-bot-in-an-hour), [One Computer, Many Screens: What Grok Bot Actually Isolates](/blog/grok-bot-shared-computer-security).
@@ -399,9 +398,9 @@ burned allowance on a cookie banner.
 The schedule goes. The disk often stays. Deleting a bot deletes its
 routines. Nothing is team-level. Files, cookies, and browser sessions on
 the shared computer are not removed by that delete. There is no audit view
-of bot actions yet, so you cannot replay which sibling used the leftover
+of bot actions outside Enterprise, so you cannot replay which sibling used the leftover
 session. If you may need the weekday brief later, hide the bot, or copy the
 routine text and the last twenty run notes into a file you own before you
-delete. iPhone cannot delete, so do this teardown on macOS or Windows.
+delete. The phone can delete a bot too, so make the copy first, wherever you delete.
 `,
 };

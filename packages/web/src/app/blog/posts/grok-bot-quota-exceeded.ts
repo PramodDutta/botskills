@@ -12,12 +12,13 @@ export const post: BlogPost = {
 The copy on screen says Grok Bot quota exceeded, and the next instinct is to
 hit retry as if a flaky network were the cause. That instinct is the expensive
 one. The banner is not a crash, not an expired card, and not a Bot-specific
-spend cap. It is the weekly usage pool on the account going empty.
+spend cap. It is the weekly usage pool on the account going empty, or, with
+on-demand on, the account reaching its On-demand monthly limit.
 
 This page is the next hour. Pause every routine. Do not keep retrying. Then
 decide, once, whether overflow is even allowed on the plan you hold. It is not
-[the no-cap policy page](/blog/grok-bot-spend-cap-and-token-burn), which writes
-ceilings into charters because the product has none. It is not
+[the monthly-limit and charter page](/blog/grok-bot-spend-cap-and-token-burn), which writes
+ceilings into charters because the product has no per-bot one. It is not
 [the bill-shape page](/blog/grok-bot-cost), which is how usage adds up while
 you are still inside the pool. For the product itself, see
 [what a Grok Bot is](/blog/what-is-a-grok-bot).
@@ -38,7 +39,7 @@ None of those is what the docs describe
 |---|---|---|
 | The product crashed | The weekly included pool is empty | Pause, then wait or allow overflow on purpose |
 | This one bot is broken | The account pool is shared across every bot | Pause every routine, not only the one that failed |
-| A spend cap fired | There is no Grok Bot-specific spend cap | Do not search for a slider. Pause is the ceiling |
+| A spend cap fired | No Grok Bot-specific cap exists. Only the account's On-demand monthly limit can stop overflow | Check that limit in Settings. Pause is the ceiling for a bot |
 | A credit count you can top up | No published dollar, credit, or run figure | Refuse any quoted figure. Read your usage screen |
 
 The size of the weekly allowance is not published. This article will not invent
@@ -54,7 +55,8 @@ briefing you actually open. That is why the first hour is fleet-wide.
 There is no published allowance amount. The FAQ describes a weekly usage
 allowance and on-demand overflow. It does not print a number you can budget
 against. The enterprise page states there is no Grok Bot-specific spend cap
-yet. It also does not print a number. A thread that names a dollar amount is
+yet and points to account-level on-demand controls. It also does not print a
+number. A thread that names a dollar amount is
 not a source.
 
 What you can know without a figure is the shape. The pool resets weekly. Inside
@@ -62,10 +64,7 @@ it, extra retries do not show up as a separate invoice line. Past it, extra
 retries are on-demand if the plan allows overflow. The hour after quota
 exceeded is the hour you are standing on that step.
 
-Which plan you hold does not publish the missing number either. SuperGrok Plus,
-SuperGrok Heavy, Cursor Pro+, Cursor Ultra, and Cursor Teams Standard and
-Premium are the eligible paid paths, plus a one-time trial
-([more plans](https://x.ai/news/grok-bot-more-plans)). Confirm names and prices
+Which plan you hold does not publish the missing number either. Every paid Cursor plan (Pro, Pro+, Ultra) and every self-serve Cursor Teams seat include Grok Bot, an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked, and a one-time trial exists ([plans](https://cursor.com/help/grok-bot/plans)). Confirm names and prices
 on [cursor.com/pricing](https://cursor.com/pricing) and
 [x.ai/pricing](https://x.ai/pricing).
 [How the Cursor account maps to Grok Bot](/blog/grok-bot-cursor-account-explained)
@@ -83,7 +82,7 @@ overflow is on, each retry is on-demand work. If overflow is off, each retry
 is a wasted loop, and the next scheduled fire will do the same thing until you
 pause the routine. Clicking again is not how the week refills.
 
-The product does not give you an audit view of Bot actions yet. You cannot open
+Outside Enterprise, the product does not give you an audit view of Bot actions. You cannot open
 a ledger and see which retry crossed the line, or which bot did. The run
 history window keeps the 20 most recent records per routine. That window is a
 cache, not a bill
@@ -101,8 +100,7 @@ Denying a send does not refund the empty pool. Stop before the next attempt.
 ## Pause every standing routine before you touch billing or overflow
 
 Pause is available on the phone. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
-Editing, history, testing, and deleting need desktop
-([mobile](https://docs.x.ai/grok-bot/mobile)). If you are away from the laptop,
+Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)). If you are away from the laptop,
 that is enough for this hour. You are stopping the next fire, not patching a
 charter from a train.
 
@@ -160,17 +158,17 @@ page. [Scheduling](/blog/grok-bot-scheduling) is how to pick a clock. Do not
 read the 2,016 as a price. There is no published price per run. Read it as a
 count. That count spends a weekly pool faster than a twice-daily bot.
 
-## Split this banner from the no-cap page and the bill-shape page
+## Split this banner from the spend-cap page and the bill-shape page
 
 Keep these three pages apart or you will do the wrong hour of work. This page
-is the banner and the next hour. [No spend cap](/blog/grok-bot-spend-cap-and-token-burn)
+is the banner and the next hour. [The monthly limit and charter page](/blog/grok-bot-spend-cap-and-token-burn)
 is the charter ceilings you write after. [Grok Bot cost](/blog/grok-bot-cost)
 is the bill shape while you are still designing a roster.
 
 | Question in your head | The page that answers it | What that page will not do |
 |---|---|---|
 | What does quota exceeded mean, and what do I tap now? | This page | It will not give you a dollar figure or a next-month charter |
-| Why is there no slider, and how do I write a ceiling? | [No spend cap](/blog/grok-bot-spend-cap-and-token-burn) | It will not walk the banner or the first hour |
+| Where is the monthly limit, and how do I write a ceiling? | [Spend cap and monthly limit](/blog/grok-bot-spend-cap-and-token-burn) | It will not walk the banner or the first hour |
 | How does usage add up before I ever see the banner? | [Grok Bot cost](/blog/grok-bot-cost) | It will not tell you to pause a live routine |
 | Which clock should this job have used? | [Scheduling](/blog/grok-bot-scheduling) | It will not explain the empty-pool message |
 
@@ -197,7 +195,8 @@ documented refill. If the product does not say it, this page will not say it
 either.
 
 There is still no Grok Bot-specific spend cap in either branch. Overflow
-becomes a slope, not a cap. The only hard stop you own in this hour is pause.
+becomes a slope that runs until the account's On-demand monthly limit, and a
+run in progress can finish past that. The only hard stop you own in this hour is pause.
 Grok Bot has no model picker for members or admins. You cannot limp through
 the week on a cheaper model. Frequency, pause, and "do not retry" are the
 levers you have.
@@ -238,7 +237,7 @@ Do not retry the failed run.
 Pause every routine on every bot. iPhone pause is enough.
 Write bot name, routine name, and the time you paused.
 Do not open teach-by-demonstration. Do not start a manual test run.
-Do not hunt a spend-cap slider. There is not one.
+Do not hunt a per-bot spend-cap slider. There is not one.
 Confirm overflow in the product and on the vendor pricing page.
 If overflow is off, wait for the weekly pool. Do not upgrade to guess a refill.
 If overflow is on, resume at most one bot, once, manually, then stop.
@@ -304,8 +303,9 @@ pause again.
 
 After a successful manual run, confirm the five-minute inbox routine is still
 paused. If it is running, the recovery test failed even if the briefing looked
-fine. The clock is the incident. iPhone can pause and resume. It cannot give
-you history. Resume nothing from the phone until you have desktop.
+fine. The clock is the incident. The phone can pause, resume, and show run
+history, but it cannot edit the clock. Resume nothing from the phone until you
+have desktop.
 
 ## Concede the argument for keeping a five-minute poll, then show where it loses
 
@@ -352,7 +352,7 @@ Attended research. A long public-page sweep you are watching, once, is not a
 routine. If it hits quota exceeded, stop. Do not convert it into a scheduled
 job so it can "finish overnight."
 
-Platforms do not change the pool. There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); iPad is not supported. Linux desktop, Android, and iPad are not
+Platforms do not change the pool. There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); the iOS app also runs on iPad
 ([FAQ](https://docs.x.ai/grok-bot/faq)). Switching devices does not refill the
 week. The computer is a managed Linux VM, not a Linux desktop client, and not
 a second pool. See [supported platforms](/blog/grok-bot-supported-platforms).
@@ -363,7 +363,7 @@ Whether Grok Bot is worth another week is a question for after pause:
 
 Everywhere else on this site a boundary is the action the bot never takes
 without a human. In the hour after grok bot quota exceeded, you are the one
-who needs a boundary. The product will not cap you. Overflow may keep serving
+who needs a boundary. The product will not cap a bot for you. Overflow may keep serving
 work. Retry will look like diligence. The line is pause.
 
 You never resume a five-minute inbox routine in the same week you hit the
@@ -379,7 +379,7 @@ deletes. When the weekly pool returns, resume from the pause list, coarsest
 clock first. Write the ceiling into the charter next, because this hour will
 happen again if the dropdown stays where it was on Monday.
 
-**Keep reading:** [No Spend Cap: How To Keep a Grok Bot Roster From Running Away](/blog/grok-bot-spend-cap-and-token-burn), [Grok Bot Cost: What You Pay and How Usage Adds Up](/blog/grok-bot-cost), [Grok Bot Scheduling: Daily, Weekly, and Triggered Runs](/blog/grok-bot-scheduling).
+**Keep reading:** [Grok Bot Spend Cap: Set the Monthly Limit, Then Budget in the Charter](/blog/grok-bot-spend-cap-and-token-burn), [Grok Bot Cost: What You Pay and How Usage Adds Up](/blog/grok-bot-cost), [Grok Bot Scheduling: Daily, Weekly, and Triggered Runs](/blog/grok-bot-scheduling).
 
 ## Frequently Asked Questions
 
@@ -388,8 +388,8 @@ happen again if the dropdown stays where it was on Monday.
 It means the weekly included usage pool on the account is gone. Eligible
 subscriptions include a weekly usage allowance, and work beyond that allowance
 is billed on demand from model and token cost if your plan allows overflow.
-The banner is not a crash, not a single broken bot, and not a spend cap
-firing. All bots on the account share that pool, so a quiet briefing can fail
+The banner is not a crash, not a single broken bot, and not a per-bot spend
+cap firing. All bots on the account share that pool, so a quiet briefing can fail
 because a noisy inbox routine spent the week. Pause every routine before you
 debug the bot that showed the message.
 
@@ -405,10 +405,12 @@ work you cannot map to a choice.
 
 ### Does quota exceeded mean Grok Bot has a spend cap I can raise?
 
-No. There is no Grok Bot-specific spend cap. The enterprise documentation
-states that directly. Quota exceeded is the weekly included pool emptying, not
-a ceiling you configured. You will not find a dollar slider that stops overflow
-or prints a published allowance. The stop you own in the next hour is pause.
+Not a per-bot one. There is no Grok Bot-specific spend cap, and the enterprise
+documentation states that directly. The account-level On-demand monthly limit
+is the one cap you can raise, in Settings or at cursor.com/dashboard under
+Spending. Quota exceeded is usually the weekly included pool emptying; with
+on-demand on, it can also be that monthly limit. You will not find a per-bot
+dollar slider or a published allowance. The stop you own in the next hour is pause.
 The stop you own after that is a charter that forbids retries, alternate
 routes, and any purchase, top-up, or paid upgrade the bot might try in order
 to keep working.

@@ -294,7 +294,8 @@ the whole approach.
 
 Your evidence base for this decision is the day two count and the day six
 tally, and it is worth knowing why those matter so much: there is no audit
-view of bot actions yet, so the product cannot reconstruct the week for you.
+view of bot actions outside Enterprise, so on an individual account the
+product cannot reconstruct the week for you.
 Your notes are the record. If you skipped days two and six, the honest answer
 on day seven is "the same", because you have nothing to widen on.
 
@@ -334,10 +335,10 @@ enjoyable and reviewing one is not.
 | The output is good and you stopped reading it by Thursday | No word cap and no evidence rule, so it summarises everything | Cap the length and require a link or an ID on every claim |
 | A run failed Tuesday and you noticed Friday | No heartbeat, so silence looks the same as success | Ask for a message even on an empty run |
 | You corrected it in chat and it forgot | A chat correction lasts until that conversation ends | Move every correction into the charter, the same day |
-| The bill moved in week one | Broad trigger, no scope ceiling, and no Grok Bot spend cap exists yet | Cap items read per run, and forbid the bot re-running itself |
+| The bill moved in week one | Broad trigger, no scope ceiling, and no per-bot spend cap exists | Cap items read per run, forbid the bot re-running itself, and set the account's On-demand monthly limit |
 
-The last row is worth reading twice, because there is no setting that solves
-it. A subscription includes a weekly usage allowance and overflow is billed on
+The last row is worth reading twice, because no setting solves it. The
+account's On-demand monthly limit caps the bill, not the scope. A subscription includes a weekly usage allowance and overflow is billed on
 demand from model and token cost, so a scope ceiling in the charter is the
 budgeting instrument. The
 [cost breakdown](/blog/grok-bot-cost) covers how that accumulates in practice.
@@ -361,15 +362,14 @@ answer from reading about it.
 This plan assumes one person, a desktop, and a job that crosses two tools.
 Change any of those and parts of it stop working.
 
-If your only machine is a Linux desktop, the plan does not start. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). There is an Android app as of September 2026 (Android 9 or later); iPad is still not supported. Supported platforms are macOS on
+If your only machine is a Linux desktop, use the Linux desktop app, available as of September 2026 (.deb, .rpm or AppImage). There is an Android app as of September 2026 (Android 9 or later), and the iOS app also runs on iPad (iPadOS 18 or later). Supported platforms are macOS on
 Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or
 later, and
 [the platforms reference](/blog/grok-bot-supported-platforms) has the current
 list.
 
 If your only device is an iPhone, days three, five, six, and seven all need a
-desktop. On iPhone you can pause and resume, but editing, history, testing,
-and deleting require the desktop app. Teaching a workflow by demonstration is
+desktop. On iPhone you can pause and resume, read run history, and delete a routine, but editing and testing a routine still need the desktop app. Teaching a workflow by demonstration is
 unavailable on iPhone as well, so plan the week around a machine you can sit
 at.
 

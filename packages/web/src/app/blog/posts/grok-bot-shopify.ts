@@ -323,8 +323,8 @@ single bot rather than to your team, and deleting the bot deletes its
 routines, so the daily report vanishes with the bot that owns it. Write down
 what your store bot is scheduled to do somewhere outside the bot. And if you
 manage the store from your phone, be aware that the iPhone app supports
-pausing and resuming a routine while editing, testing, and history need a
-desktop, so plan your emergency action as a pause rather than a fix.
+pausing and resuming a routine and reading its run history, while editing and
+testing need a desktop, so plan your emergency action as a pause rather than a fix.
 
 ## Sequence the first month, and expect month three to look the same
 

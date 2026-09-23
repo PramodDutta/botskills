@@ -184,7 +184,7 @@ Second, give the bot a report format that names the layer it touched, not just
 the outcome. A run that reports "wrote 41 record values in the Status field,
 made no schema changes" is auditable. A run that reports "cleaned up statuses"
 is not. This matters more than usual because an audit view of bot actions does
-not exist in the product yet, so the bot's own log is your only ledger, and a
+not exist in the product outside Enterprise, so the bot's own log is your only ledger, and a
 vague ledger is not one.
 
 ## Diagnose an Airtable incident by the layer it happened in

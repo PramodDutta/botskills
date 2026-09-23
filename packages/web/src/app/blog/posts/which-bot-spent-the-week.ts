@@ -189,7 +189,7 @@ Where the objection wins outright: if your bots are genuinely similar in cadence
 
 This page is about attributing usage across several bots on one account. It stops applying in three places.
 
-If the question is what the two phase meter actually is, meaning the weekly pool and then on demand billing, [the allowance page](/blog/grok-bot-weekly-allowance) covers the mechanism rather than the attribution. If you have already emptied the pool and need to stop the bleeding this hour, [no spend cap ops](/blog/grok-bot-no-spend-cap-ops) is the triage order. And if the real question is which bots to keep at all rather than which is expensive, that is [a fleet audit](/blog/grok-bot-fleet-audit).
+If the question is what the two phase meter actually is, meaning the weekly pool and then on demand billing, [the allowance page](/blog/grok-bot-weekly-allowance) covers the mechanism rather than the attribution. If you have already emptied the pool and need to stop the bleeding this hour, [no per-Bot spend cap ops](/blog/grok-bot-no-spend-cap-ops) is the triage order. And if the real question is which bots to keep at all rather than which is expensive, that is [a fleet audit](/blog/grok-bot-fleet-audit).
 
 Bots that help here: [Bot Advisor](/bots/bot-advisor) reviews the roster weekly and names what overlaps and what went silent. [Stuck Bot Foreman](/bots/stuck-bot-foreman) tells you whether a long run is working or frozen, which is what stops a retry loop early. [VM Overwatch](/bots/vm-overwatch) watches the shared computer itself. And [Chief of Staff Router](/bots/chief-of-staff-router) is where a cadence decision should be recorded rather than left in one person's memory.
 

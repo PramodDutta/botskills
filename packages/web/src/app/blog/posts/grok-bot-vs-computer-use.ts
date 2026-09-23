@@ -15,7 +15,7 @@ A computer-use clip is always the same shape. Someone starts a turn. The model c
 
 This page is the category. It is not [Grok Bot vs ChatGPT Agent](/blog/grok-bot-vs-chatgpt-agent). That article is OpenAI Agent as a named surface, including the recap that Agent may already be gone. Stay here for grok bot computer use against computer use as a class: Anthropic computer use, the OpenAI computer tool, cloud browsers, desktop GUI drivers, and roundups that treat a click demo as a hire. Confirm the vendor page the day you buy. This article will not print their prices or feature lists as fact.
 
-The Grok Bot side is documented. One persistent cloud computer is assigned to your user account, not to a bot. Each bot gets a screen. Screens are not security boundaries. Cookies, sessions, files, and command-line credentials are shared. Deleting a bot does not clean the desk. A routine belongs to one bot. The worker is a managed Linux VM, not a Linux desktop app. Mechanism: [how Grok bots actually work](/blog/how-bots-on-grok-actually-work).
+The Grok Bot side is documented. One persistent cloud computer is assigned to your user account, not to a bot. Each bot gets a screen. Screens are not security boundaries. Cookies, sessions, files, and command-line credentials are shared. Deleting a bot does not clean the desk. A routine belongs to one bot. The worker is a managed Linux VM, not the Linux desktop app. Mechanism: [how Grok bots actually work](/blog/how-bots-on-grok-actually-work).
 
 ## Call generic computer use a session you start, not a hire you keep
 
@@ -79,7 +79,7 @@ On Tuesday she creates Morning Watch, a named Grok bot, pastes a charter, and as
 | Tuesday 07:30 | She opens the vendor app and starts again | Brief is on the desk. Laptop was closed |
 | Next Tuesday | She remembers the prompt, or she does not | Same bot, same stop line, last week's SAME band |
 
-The 05:00 row is the product. Day one looks the same: a markdown page with three URLs. Day thirty is the test. On the session path, Nia has skipped nights and lost last week's numbers. On the bot path, Morning Watch still has the charter, the routine, and a short run history. The app keeps the 20 most recent run records per routine. That is not an audit log. There is no audit view of Bot actions yet.
+The 05:00 row is the product. Day one looks the same: a markdown page with three URLs. Day thirty is the test. On the session path, Nia has skipped nights and lost last week's numbers. On the bot path, Morning Watch still has the charter, the routine, and a short run history. The app keeps the 20 most recent run records per routine. That is not an audit log. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording.
 
 If a rival page sits behind a login, do not assume a generic computer-use surface can sign in. Confirm credential rules on that vendor. Grok Bot can hold a signed-in session because she signed in on that computer. That is also the blast radius. [Lead Scout](/bots/lead-scout) that may only research still sits on the same machine as whatever else she staffed.
 
@@ -89,7 +89,7 @@ A named bot without a routine is a persistent desk with no alarm. The 05:00 job 
 
 A routine assigns a workflow to one bot. Max 50 routines per bot. The app keeps 20 most recent run records per routine. Deleting that bot deletes its routines. Nothing is team-level. You can hand someone the charter text. They recreate the bot on their own eligible account. Kill the bot, kill the clock. The files may remain. The alarm will not. Scheduling traps: [how to schedule a Grok Bot routine](/blog/how-to-schedule-a-grok-bot-routine).
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Plan the first bad morning around a Mac or a Windows box. Teach-by-demonstration captures a browser walkthrough for up to ten minutes, no microphone, draft skill, browser only, unavailable on iPhone. Generic computer use usually has no routine object. Confirm any vendor scheduler. Do not treat a session you start as a weekday hire because you intend to start it again.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Plan the first bad morning around a Mac, Windows, or Linux box. Teach-by-demonstration captures a browser walkthrough for up to ten minutes, no microphone, draft skill, browser only, unavailable on iPhone. Generic computer use usually has no routine object. Confirm any vendor scheduler. Do not treat a session you start as a weekday hire because you intend to start it again.
 
 ## Expect the cloud computer to own 05:00 after the laptop sleeps
 
@@ -99,21 +99,21 @@ Grok Bot background work runs on the persistent cloud computer. Closing the app,
 
 Generic computer use splits here. An API harness on a VM you keep can fire at 05:00 if you scheduled it. A desktop GUI driver that takes the foreground, as some OpenAI Computer Use copy has described on Windows, cannot do useful work while the lid is shut. Cloud browser continuation is a vendor claim: confirm it the day you run it. Closing the lid also does not partition the roster. If a sibling bot has a standing send, that send is still on the same desk at 05:00.
 
-## Stop treating Grok Bot as a Linux desktop you install
+## Stop treating the Grok Bot worker as a Linux desktop you install
 
-Roundups hear "managed Linux VM" and tell people to install Grok Bot on Ubuntu. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The worker is Linux. The client is not.
+Roundups hear "managed Linux VM" and tell people to install Grok Bot on Ubuntu. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The worker is Linux. The client can be too, but it is not the worker.
 
-Grok Bot supports macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. Not iPad. The bots use a managed Linux VM as a non-root user. That is the worker, not a package you apt-install. Platforms: [supported platforms](/blog/grok-bot-supported-platforms).
+Grok Bot supports macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. iPad runs the iOS app. The bots use a managed Linux VM as a non-root user. That is the worker, not a package you apt-install. Platforms: [supported platforms](/blog/grok-bot-supported-platforms).
 
 | Client or worker | Documented for Grok Bot? | What people mix up |
 |---|---|---|
 | macOS app (Apple silicon and Intel) | Yes | The control surface, not the overnight machine |
 | Windows app (x64 and Arm64) | Yes | Same: control surface |
-| iPhone (iOS 18+) or Android (9+) | Yes: pause, resume and approve | Not an editor, not a history desk |
-| Linux desktop, Android, iPad | No | The worker VM is Linux. That is not a desktop client |
+| iPhone (iOS 18+) or Android (9+) | Yes: pause, resume, approve, run history, delete | Not an editor |
+| Linux desktop (x64 and Arm64), iPad | Yes, since September 2026; iPad runs the iOS app | The worker VM is Linux too. It is not the desktop client |
 | The account computer | Managed Linux VM, bot is non-root | Shared by every bot. Not a per-bot VM |
 
-Generic computer use often is a Linux desktop in a literal sense: you rent a VM and point the model at that display. That is a reason to pick Anthropic computer use or the OpenAI computer tool if you already operate Linux boxes. It is not a reason to expect a Grok Bot .deb. SKILL.md and CLAUDE.md are Grok Build, never Grok Bot.
+Generic computer use often is a Linux desktop in a literal sense: you rent a VM and point the model at that display. That is a reason to pick Anthropic computer use or the OpenAI computer tool if you already operate Linux boxes. It is not the same thing as the Grok Bot .deb, which installs a client, not a worker. SKILL.md and CLAUDE.md are Grok Build, never Grok Bot.
 
 ## Paste a Morning Watch charter that refuses contact before it names URLs
 
@@ -162,7 +162,7 @@ It wins when someone will maintain the harness next quarter. Screenshot loops br
 
 It loses for the reader who searched grok bot computer use because they do not want to be that ops team. They want a named worker, a screen, a routine, and a cloud computer that still fires after the lid closes. They will not patch a Playwright loop on a Sunday. A session plus a calendar reminder is not that worker. They skip a night. The prompt drifts. A contact verb creeps back in.
 
-It also loses on the object model. Cron plus a session still starts a session. Grok Bot still has a bot you can pause from a phone, a 50-routine cap, a 20-record history, and a delete that kills the clock on purpose. Those are product facts, not metaphors. If you need a Linux box you ssh into, buy that, and stop asking Grok Bot to be the missing desktop app.
+It also loses on the object model. Cron plus a session still starts a session. Grok Bot still has a bot you can pause from a phone, a 50-routine cap, a 20-record history, and a delete that kills the clock on purpose. Those are product facts, not metaphors. If you need a Linux box you ssh into, buy that, and stop asking the Grok Bot worker to be that box.
 
 ## Diagnose a Tuesday gap that started as a perfect Monday click-through
 
@@ -176,11 +176,11 @@ When the week goes wrong, name the shape before you rewrite the prompt.
 | You deleted Morning Watch and the rival portal is still signed in | Deletion does not wipe files or sessions | Rotate the session yourself |
 | Cloud browser stopped on a login wall | Public-page limits as that vendor documented them | Confirm live. A standing signed-in desk is Grok Bot's shape |
 | Grok Bot never appeared on the Linux laptop | An installer story from before September 2026 | There is a Linux desktop app as of September 2026 (.deb, .rpm, AppImage) |
-| On-demand charges after a heavy watch week | No Grok Bot spend cap | Review usage. Do not wait for a ceiling that does not exist |
+| On-demand charges after a heavy watch week | No per-Bot spend cap, only the account On-demand monthly limit | Review usage. Set the On-demand monthly limit before a heavy week |
 
 If the job is logging into a supplier portal every Monday, verify that any generic computer-use surface is allowed to do that today. Grok Bot can hold a session on the shared computer. Files may remain after a bot is deleted. Routines will not.
 
-Eligibility is the door, not the comparison. Beta launched 11 August 2026. Eligibility widened 21 August 2026. Included: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, Cursor Teams Standard and Premium, plus a one-time trial. Cheapest paid path: Cursor Pro+ at 60 dollars a month. Cursor Hobby, Cursor Pro at 20 dollars, and SuperGrok at 30 dollars do not include it. SuperGrok Plus at 100 dollars does. Teams Standard is 40 dollars per user per month, Premium 120. No Grok Bot spend cap, no published allowance figure, no model picker. Confirm third-party computer-use prices on those vendors. [Grok Bot cost](/blog/grok-bot-cost). [Grok Bot free trial](/blog/grok-bot-free-trial).
+Eligibility is the door, not the comparison. Beta launched 11 August 2026. Eligibility widened 21 August 2026 and has widened since. Included: every paid Cursor plan (Pro, Pro+, Ultra) and Cursor Teams, a linked individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+, plus a one-time trial. Cheapest paid path: Cursor Pro at 20 dollars a month. Cursor Hobby, the free plan, does not include it. No Grok Bot-specific spend cap beyond the account On-demand monthly limit, no published allowance figure, no model picker. Confirm third-party computer-use prices on those vendors. [Grok Bot cost](/blog/grok-bot-cost). [Grok Bot free trial](/blog/grok-bot-free-trial).
 
 ## Prove persistence with checks a session will fail
 
@@ -188,7 +188,7 @@ Do not trust the Monday demo. Run checks that can fail.
 
 Create Morning Watch. Write /desk/am/probe.md. Close the app and the laptop. Confirm the file is still there. A session that died with the tab will fail this. Assign the 05:00 routine. Wait for one weekday fire with the lid shut. If nothing wrote /desk/am/latest.md, you have a chat, not a hire. Confirm the routine is on this bot, not imagined as team-level.
 
-Paste a second bot on the same account and look for the competitor portal cookie you hoped was private to Morning Watch. If it is visible, you learned the jar. Split accounts, or keep that login off this computer. Delete a scratch bot after copying any keeper routine. Confirm routines are gone and the file remains. Open Grok Bot on a Linux desktop if that is your only machine: the missing client is the platform list. Fail a planted contact. If Morning Watch submits a "request pricing" form, the charter is decoration. Pause from iPhone if you must. Fix from desktop.
+Paste a second bot on the same account and look for the competitor portal cookie you hoped was private to Morning Watch. If it is visible, you learned the jar. Split accounts, or keep that login off this computer. Delete a scratch bot after copying any keeper routine. Confirm routines are gone and the file remains. Open Grok Bot on a Linux desktop if that is your only machine: since September 2026 the client exists there. Fail a planted contact. If Morning Watch submits a "request pricing" form, the charter is decoration. Pause from iPhone if you must. Fix from desktop.
 
 ## Leave one-shot GUI work on a session you watch
 
@@ -196,7 +196,7 @@ You can keep both shapes. Stop using one object for the other object's job.
 
 Keep generic computer use for work that wants a pair of hands on a GUI or a page, then wants to end. Reproduce the checkout bug. Drive the Windows app in the foreground while you watch. Confirm each session's permissions at the start. Confirm Anthropic, OpenAI, and everyone else on their current pages. Do not staff a weekday 05:00 watch on a turn you might remember to start.
 
-Keep Grok Bot computer use for unfinished work that wants a name, a charter, a screen, a routine, and a desk that still has last night's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). Persistence is the product. Clicks are the demo.
+Keep Grok Bot computer use for unfinished work that wants a name, a charter, a screen, a routine, and a desk that still has last night's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is capped only at the account level. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). Persistence is the product. Clicks are the demo.
 
 **Keep reading:** [Grok Bot vs ChatGPT Agent: Computer Use Against Named Bots](/blog/grok-bot-vs-chatgpt-agent), [Grok Bot With the Laptop Closed: What Keeps Running and What Does Not](/blog/grok-bot-runs-with-laptop-closed), [How Grok Bots Actually Work, Without the Dedicated-Computer Myth](/blog/how-bots-on-grok-actually-work).
 
@@ -216,7 +216,7 @@ Cloud work can. A routine assigned to one bot fires on the shared cloud computer
 
 ### Is there a Linux desktop app for Grok Bot computer use?
 
-No. Grok Bot has a Linux desktop app and an Android app as of September 2026; iPad is still not supported. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. The worker is a managed Linux VM where the bot runs as a non-root user. That VM is not a desktop client you install. A Linux box you ssh into is a harness you run, confirmed live, not a missing Grok Bot package.
+Yes, as of September 2026. Grok Bot has a Linux desktop app (.deb, .rpm or AppImage) and an Android app, and the iOS app also runs on iPad. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), iPhone on iOS 18 or later, and Android 9 or later. The worker is a managed Linux VM where the bot runs as a non-root user. That VM is not the desktop client you install. A Linux box you ssh into is a harness you run, confirmed live, not a missing Grok Bot package.
 
 `,
 };

@@ -13,11 +13,11 @@ Rina wanted to move a support classifier from her seat to Jo's. Copying the char
 
 To copy grok bot to another seat safely, treat the listing as source material and each seat as a separate setup. Recreate the job, reconnect only approved inputs, test with fixtures, then sign out and clean the first seat. Do not copy a browser profile, cookie, credential file, or secret.
 
-Eligibility must exist independently for the second seat. Verified paths include SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, and Cursor Teams Standard and Premium. A one-time trial is also an eligibility path for individuals. This article does not claim a transfer button, export feature, or team-level bot store.
+Eligibility must exist independently for the second seat. Verified paths include every paid Cursor plan (Pro, Pro+, Ultra), Cursor Teams, and a linked individual SuperGrok, SuperGrok Plus, SuperGrok Heavy, or X Premium+ subscription. A one-time trial is also an eligibility path for individuals. This article does not claim a transfer button, export feature, or team-level bot store.
 
 ## Confirm the second seat is eligible before changing the first
 
-Keep the working seat intact while you verify that Jo can access Grok Bot through an eligible subscription or trial. Cursor Hobby and Cursor Pro do not include it. Cursor Pro+ at $60 per month is the cheapest verified paid path in the facts provided for this corpus. Do not invent access from a plan name that is not on the verified list.
+Keep the working seat intact while you verify that Jo can access Grok Bot through an eligible subscription or trial. Cursor Hobby, the free plan, does not include it. Cursor Pro at $20 per month is the cheapest verified paid path, checked 23 September 2026. Do not invent access from a plan name that is not on the verified list.
 
 Open the second seat and confirm the product is actually available. Do not sign out Rina yet. Migration starts with a usable destination, not a teardown.
 
@@ -90,7 +90,7 @@ If the item fails, return to fixtures. Do not reopen seat-one automation as a wo
 
 Copy the schedule and workflow onto the second bot, but choose a new first run after the old routine is paused. Do not claim routine history transfers. Save the charter, schedule, and heartbeat path outside both bots.
 
-The first scheduled run should use a small input window and alert Jo if the heartbeat is missing. On iPhone, Jo can pause and resume, while editing, history, testing, and deleting require desktop. [The routine scheduling guide](/blog/how-to-schedule-a-grok-bot-routine) covers that operating boundary.
+The first scheduled run should use a small input window and alert Jo if the heartbeat is missing. On iPhone, Jo can pause and resume, while Editing and testing a routine still need the desktop app. [The routine scheduling guide](/blog/how-to-schedule-a-grok-bot-routine) covers that operating boundary.
 
 ## Sign out every service on the first computer
 
@@ -226,7 +226,7 @@ This guide does not claim a direct transfer feature. Treat the listing and your 
 
 ### Which seats are eligible for Grok Bot?
 
-Verified eligibility includes SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, and Cursor Teams Standard and Premium. A one-time trial is also an eligibility path for individuals. Cursor Hobby and Cursor Pro do not include Grok Bot. Confirm access on the destination before changing the working source seat, because plan names and account state must be checked in the live product. Do not assume that copying a listing transfers eligibility, billing, or a subscription.
+Verified eligibility includes every paid Cursor plan (Pro, Pro+, Ultra), Cursor Teams, and a linked individual SuperGrok, SuperGrok Plus, SuperGrok Heavy, or X Premium+ subscription. A one-time trial is also an eligibility path for individuals. Cursor Hobby, the free plan, does not include Grok Bot, and a SuperGrok link is permanent to the Cursor account it was made on. Confirm access on the destination before changing the working source seat, because plan names and account state must be checked in the live product. Do not assume that copying a listing transfers eligibility, billing, or a subscription.
 
 ### When should I sign out the first computer?
 

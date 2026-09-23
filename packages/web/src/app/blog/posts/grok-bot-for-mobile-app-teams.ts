@@ -170,7 +170,7 @@ The same logic applies to incident response more broadly. The instinct when a cr
 
 Fairly stated: UA is a fast loop, the advantage comes from reacting inside a day, and a human gate on every budget change reintroduces exactly the latency the bot was meant to remove. If a competitor's system reallocates budget hourly and yours waits for someone to wake up, you lose.
 
-The honest answer is that the gate costs you real speed, and it is still correct here, for a reason specific to this product rather than a general caution. There is no bot-specific spend cap. Subscriptions carry a weekly usage allowance and then bill on demand, and separately, your ad account has its own budget with no relationship to that. A misconfigured loop touching both is not one runaway meter, it is two, and neither of them stops on its own.
+The honest answer is that the gate costs you real speed, and it is still correct here, for a reason specific to this product rather than a general caution. There is no bot-specific spend cap, only the account-level On-demand monthly limit. Subscriptions carry a weekly usage allowance and then bill on demand, and separately, your ad account has its own budget with no relationship to that. A misconfigured loop touching both is not one runaway meter, it is two, and neither of them stops on its own.
 
 Where the objection wins: within a fixed, already-approved budget, reallocating between existing campaigns is a much smaller action than raising a ceiling. If you want to relax the gate anywhere, relax it there, with the total pinned by a human and the bot moving money only inside it.
 

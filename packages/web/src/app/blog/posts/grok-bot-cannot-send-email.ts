@@ -25,7 +25,7 @@ Gate three is the session. All bots on a Grok Bot account share one persistent c
 
 A fourth picture looks the same from your phone and is not one of the three: the bot can send, and it is parked on an approval you did not see. That decode belongs in [how to set approvals so sends never slip](/blog/how-to-set-grok-bot-approvals) and in [the stall restart](/blog/grok-bot-stalled). Do not grant a wider Gmail bundle to clear an approval you have not opened.
 
-There is no audit view of Bot actions yet. Open Sent, Drafts, and the label search on the desktop before you change a grant.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Open Sent, Drafts, and the label search on the desktop before you change a grant.
 
 ## Treat a never-send charter as the working product, not a defect
 
@@ -63,7 +63,7 @@ Hosted MCP sign-in tokens stay with Cursor's backend. A browser Gmail session li
 
 The third cause is a login that used to work. Last week the bot labeled mail and left drafts. This week it asks you to sign in, or reports that it cannot send when it cannot open the mailbox. Password change, revoked third-party access, expired cookie, 2FA wall: none of those is a reason to add send.
 
-Open the bot's screen on a Mac (Apple silicon or Intel) or on Windows (x64 or Arm64). The iPhone app (iOS 18+) can pause and resume. Editing, history, testing, and deleting still need desktop. Diagnosing from the couch is how you type a password into chat. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent runs on a managed Linux VM as a non-root user. That is not a Linux desktop you sit at.
+Open the bot's screen on a Mac (Apple silicon or Intel) or on Windows (x64 or Arm64). The iPhone app (iOS 18+) can pause and resume. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Diagnosing from the couch is how you type a password into chat. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The agent runs on a managed Linux VM as a non-root user. That is not a Linux desktop you sit at.
 
 A Google login wall or a 2FA field is gate three. Type the code on the cloud desktop, never into the transcript. A Gmail inbox that loads, with drafts present, is not gate three. Reconnect only after you have named a dead session, and only to the same read-and-draft grant. A reconnect that "just Accepts" the current bundle is how send arrives as a side effect.
 
@@ -172,7 +172,7 @@ The strongest objection is Priya's Slack: if it cannot send, it has automated no
 
 Writing the fee letter from a blank page takes Mira eight to twelve minutes, plus the rate lookup she still got wrong. Reading the draft takes forty seconds. The send click takes one. Fail closed keeps the writing and gives back the click. That is almost all of the work. It is not all of the feeling of work, because Priya cannot see a Sent row.
 
-The cases where the objection wins are narrower than they sound. Transactional mail that must leave without a human (password resets, receipts, dunning) does not belong on this computer. There is no audit view. All bots share the machine. Use the mail system that already sends those messages.
+The cases where the objection wins are narrower than they sound. Transactional mail that must leave without a human (password resets, receipts, dunning) does not belong on this computer. Outside Enterprise there is no audit view. All bots share the machine. Use the mail system that already sends those messages.
 
 "I will grant send and never use it" is the same grant. A later routine, a group chat, or an inbound message that looks like a command can use the right you took because Thursday felt idle.
 
@@ -257,7 +257,7 @@ Open the bot screen in the desktop app. If Gmail loads and Drafts contains work,
 
 ### Should I grant send so the bot finally does something?
 
-No on day one, and usually not later either. Fourteen drafts in Bot/Reply-Needed are the bot doing the expensive part. Granting send because a cofounder cannot see a Sent row trades a reversible paragraph for mail that cannot be taken back. There is no audit view of Bot actions yet. If create-draft arrives bundled with send, refuse the bundle rather than take send as a convenience. Transactional mail that must leave unattended belongs in the system that already sends it, not on this shared computer.
+No on day one, and usually not later either. Fourteen drafts in Bot/Reply-Needed are the bot doing the expensive part. Granting send because a cofounder cannot see a Sent row trades a reversible paragraph for mail that cannot be taken back. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. If create-draft arrives bundled with send, refuse the bundle rather than take send as a convenience. Transactional mail that must leave unattended belongs in the system that already sends it, not on this shared computer.
 
 ### Does deleting the mail bot stop Grok Bot from sending later?
 

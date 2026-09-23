@@ -44,7 +44,7 @@ The sentence you should keep in the charter is the one the docs already
 wrote: do not use separate bots as a security boundary.
 
 The computer is a managed Linux VM. The bot runs as a non-root user. That
-does not wall Mail Cleanup off from \`~/.aws\`. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. None of that is a
+does not wall Mail Cleanup off from \`~/.aws\`. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. None of that is a
 second disk. The architecture tour is
 [One Computer, Many Screens](/blog/grok-bot-shared-computer-security). This
 page assumes you already believe the computer is shared.
@@ -76,15 +76,14 @@ those keys belong on an eligible account that does not hold the mailbox
 session.
 
 Eligible plans, per the [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq), are
-SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, and Cursor Teams
-on Standard and Premium, plus a one-time trial for individuals
+Cursor Pro, Pro+, Ultra, and Cursor Teams, plus a one-time trial for
+individuals
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
-Cursor Hobby, Cursor Pro at $20, and SuperGrok at $30 do not include Grok
-Bot. Confirm the live SKU before you treat any dollar figure as an order.
+Every paid Cursor plan includes Grok Bot, from Cursor Pro at $20; Cursor Hobby, the free plan, does not, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Confirm the live SKU before you treat any dollar figure as an order.
 
 A second computer is a second eligible identity, not a second bot card.
 Adding Staging AWS next to Mail Cleanup on the same login gives you two
-screens and one \`~/.aws\`. A distinct user on Cursor Pro+ or Teams Standard
+screens and one \`~/.aws\`. A distinct user on Cursor Pro or a Cursor Teams seat
 gets another computer. A colleague's Teams seat is their computer, not a
 partition inside yours.
 
@@ -133,8 +132,7 @@ A usage table is data. A credentials.csv is a key you left on the desk.
 
 This move is weaker than a second computer and weaker than hosted MCP. It is
 stronger than signing into the AWS console "for a minute" on Agent Computer.
-A minute is how console cookies get born. There is no audit view of Bot
-actions yet. Use the live console only on a computer whose entire roster is
+A minute is how console cookies get born. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Use the live console only on a computer whose entire roster is
 allowed to be that identity. On the mail account, that identity is Gmail,
 not IAM. A 403 from a datacenter egress IP is a reason to keep the AWS
 login off this machine, not a reason to complete a harder login here.
@@ -216,10 +214,12 @@ teardown order is
 [how to delete a Grok Bot safely](/blog/delete-a-grok-bot-safely). That page
 is offboarding. This page is isolation.
 
-Admin Kill, documented as coming rather than shipped, would delete the VM
-while durable storage is kept. Do not plan this week's keys around it.
+Admin terminate is an Enterprise-only control: an organization admin can end
+a member's computer while the durable disk is kept, so it is not a wipe
+either. Do not plan this week's keys around it.
 Privacy Mode (Legacy) blocks Grok Bot entirely, which is a policy decision,
-not a per-bot vault. iPhone cannot delete. A pause on a phone is not a wipe.
+not a per-bot vault. The phone can delete a bot now. A pause or a delete on a
+phone is not a wipe.
 
 ## Write the mail-bot computer charter so ~/.aws is a fire, not a convenience
 
@@ -269,10 +269,9 @@ mail does not quietly become the maximum for AWS.
 
 ## Answer the budget argument that a renamed Staging bot is cheaper than a second seat
 
-The strongest objection to this menu is price. Cursor Pro+ at $60 a month is
-the cheapest paid path that includes Grok Bot, checked against Cursor
-pricing as of 25 August 2026. Teams Standard at $40 per user per month also
-includes it. SuperGrok Plus at $100 includes Grok Bot access. A renamed bot
+The strongest objection to this menu is price. Cursor Pro at $20 a month is the cheapest paid path that includes Grok Bot, checked against Cursor
+pricing as of 23 September 2026. A self-serve Cursor Teams seat also
+includes it, and a linked individual SuperGrok grants usage. A renamed bot
 is free. Free looks like isolation if you have not watched a throwaway
 screen list buckets.
 
@@ -311,12 +310,12 @@ console. The only passing result is failure.
 | Calls a hosted MCP write | Tool list is too wide | Drop the write tools. Token location is not a verb filter |
 | No profile, no session, no identity | Isolation held today | Keep it that way. The check goes stale if you paste keys later |
 
-There is no audit view of Bot actions yet. The throwaway bot is the
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. The throwaway bot is the
 dashboard you can run this afternoon, on desktop. iPhone will not let you
 build and delete that probe. Isolation is a property of the disk today, not
 of a bot you named last month.
 
-## Confirm the second seat on the live pricing page before you treat sixty dollars as a wall
+## Confirm the second seat on the live pricing page before you treat twenty dollars as a wall
 
 Prices move. Eligibility widened on 21 August 2026
 ([xAI announcement](https://x.ai/news/grok-bot-more-plans)). Roundups from
@@ -326,18 +325,18 @@ cheapest door. Confirm before you budget a second computer.
 | Path people try | Isolation you actually get | What to confirm live |
 |---|---|---|
 | Rename a bot Staging AWS | A screen on the mail computer | Nothing. This is not a seat. |
-| Second Cursor Pro+ user | A second computer | [cursor.com/pricing](https://cursor.com/pricing), $60/mo as of 25 August 2026 |
-| Extra Teams Standard identity | A second computer for that user | $40 per user per month, both Standard and Premium include Grok Bot |
-| SuperGrok Plus second identity | A second computer | [x.ai/pricing](https://x.ai/pricing), $100/mo includes Grok Bot access |
+| Second Cursor Pro user | A second computer | [cursor.com/pricing](https://cursor.com/pricing), $20/mo as of 23 September 2026 |
+| Extra self-serve Cursor Teams member | A second computer for that user | Every member has Grok Bot, no Premium seat. Confirm the seat price on Cursor |
+| SuperGrok linked to a second Cursor user | A second computer | [x.ai/pricing](https://x.ai/pricing). The link is permanent |
 | One-time trial as a standing vault | A meter, once | Trial is not a second computer you keep |
-| Cursor Pro at $20, or SuperGrok at $30 | No Grok Bot | Those SKUs do not include it |
+| Cursor Hobby, or SuperGrok Lite | No Grok Bot | Those SKUs do not include it |
 
 Cursor Ultra at $200 includes Grok Bot. It is not the cheapest second
 computer. SuperGrok Heavy is eligible. Do not invent a dollar figure for
 Heavy. Shopping for the first door is
 [the cheapest way into Grok Bot](/blog/cheapest-way-into-grok-bot). Sign-in
 is [why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained).
-There is no Grok Bot-specific spend cap. Do not treat a cap as an isolation
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Do not treat a cap as an isolation
 control. It is not shipped as one.
 
 ## Send sandbox warning readers and least-privilege readers to those pages, then stay on the menu
@@ -386,7 +385,8 @@ Stop copying, or accept that isolation is gone.
 
 If the worst secret cannot sit next to a curious prompt, change the bench.
 Do not rename the screen. Do not delete the bot and call it a wipe. Do not
-wait for an audit view that does not exist yet. Do not wait for admin Kill.
+wait for an audit view, which exists only on Enterprise. Do not wait for an
+admin to terminate the computer.
 The four moves are the product you have. Staging AWS keys on the mail-bot
 computer are the product refusing those moves.
 
@@ -429,9 +429,9 @@ reviewer. The product ships weekly.
 
 ### Is a second Cursor Pro+ account the only way to isolate grok bot credentials from inbox work?
 
-No. A second eligible account is the only second computer, and Cursor Pro+
-at $60 a month is the cheapest paid individual door as of 25 August 2026,
-which you should confirm live. Teams Standard at $40 per user per month is
+No. A second eligible account is the only second computer, and Cursor Pro
+at $20 a month is the cheapest paid individual door as of 23 September 2026,
+which you should confirm live. A self-serve Cursor Teams seat is
 another included identity. You can also keep staging AWS off the mail-bot
 computer entirely: hosted MCP with a tight tool list, a CSV a human already
 exported, or aws on a laptop that never syncs ~/.aws here. The free option

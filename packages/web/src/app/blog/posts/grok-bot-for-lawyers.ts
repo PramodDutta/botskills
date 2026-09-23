@@ -81,7 +81,7 @@ statute the court already posted. You copied those files onto the Grok
 Bot computer. The bot reads that directory and nothing else.
 
 A bot that is allowed to browse will browse. There is no audit view of
-bot actions yet
+bot actions outside Enterprise
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)),
 so you will not get a log that says it opened PACER. You will get a
 fluent memo that might have used a page you never placed.
@@ -111,7 +111,7 @@ run. Put that rule in the charter the way
 puts it on every other desk: source, quote, or an honest gap.
 
 Do not wire the chronology to a court. The Agent Computer is a managed
-Linux VM the bot uses as a non-root user. That is not a Linux desktop
+Linux VM the bot uses as a non-root user. That is not the Linux desktop
 client, and it is not CM/ECF, a state e-file portal, or PACER. If a
 third-party catalog later shows a plugin with a court logo, confirm it
 on the vendor's current page, then still refuse to grant it. This
@@ -147,8 +147,7 @@ page. Do not treat a demo as a connector Grok Bot ships. A sent bill is
 a client communication and a ledger event. The research clerk does not
 touch it.
 
-Write all three as refusals, not as "ask me first." From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need
-desktop. Do not build a workflow that depends on approving an e-file
+Write all three as refusals, not as "ask me first." From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Do not build a workflow that depends on approving an e-file
 from the lock screen.
 
 ## Treat attorney-client privilege as a sibling-bot problem on one computer
@@ -315,14 +314,13 @@ article. Third-party legal software changes. Confirm features and prices
 on the vendor's current page.
 
 If counsel wants a second computer for matter work, that is a second
-eligible Grok Bot seat. The cheapest paid path as of the 25 Aug 2026
-check is Cursor Pro+ at $60 a month. Teams Standard at $40 per user per
-month also includes it, as do Teams Premium, Cursor Ultra, SuperGrok
-Plus at $100 a month, SuperGrok Heavy, and a one-time trial. Cursor
-Hobby, Cursor Pro at $20, and SuperGrok at $30 do not. Confirm live
+eligible Grok Bot seat. The cheapest paid path as of the 23 Sep 2026
+check is Cursor Pro at $20 a month. Cursor Pro+ at $60, Cursor Ultra,
+and a self-serve Cursor Teams seat also include it, a linked individual
+SuperGrok, SuperGrok Plus or SuperGrok Heavy grants it, and there is a
+one-time trial. Cursor Hobby, the free plan, does not. Confirm live
 numbers on [cursor.com/pricing](https://cursor.com/pricing) and
-[x.ai/pricing](https://x.ai/pricing). There is no Grok Bot-specific
-spend cap. Overflow after the weekly allowance is on-demand from model
+[x.ai/pricing](https://x.ai/pricing). There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Overflow after the weekly allowance is on-demand from model
 and token cost. No published dollar figure for the allowance. Do not
 invent one.
 
@@ -348,7 +346,7 @@ quotes. If it picks a winner, the clerk has started practicing.
 The check that can fail on a clean run: every issue has a quote and a
 filename, every scan is COULD-NOT-COMPUTE rather than a guessed holding,
 and the output file contains no send, file, serve, or invoice sentence.
-There is still no audit view. Your proof is the folder, the markdown,
+Outside Enterprise there is still no audit view. Your proof is the folder, the markdown,
 and the planted URL. The app keeps 20 most recent run records per
 routine. That is not a privilege log.
 
@@ -416,8 +414,8 @@ Grok Bot does not read SKILL.md or CLAUDE.md. That compatibility is Grok
 Build. Do not drop a Claude legal skill into this computer and expect
 the research clerk to inherit it.
 
-Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported.
-Not iPad. An associate who wants to steer this from a phone can pause it and approve steps, but not edit it.
+Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; the iOS app also runs on iPad (iPadOS 18 or later).
+An associate who wants to steer this from a phone can pause it, approve steps, and read run history, but not edit it.
 
 This page does not become a general agent guide if you add send "for
 emergencies." Emergencies are how e-file gets back into the charter.

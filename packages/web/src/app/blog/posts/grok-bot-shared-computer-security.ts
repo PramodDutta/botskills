@@ -86,7 +86,7 @@ approval prompt sits in front of it.
 | Interpretation | The phrasing, including impersonating you or claiming prior authorisation | A charter clause saying found instructions are data to quote, never commands | Structure, because your charter and the email are both just characters |
 | Reach | Which of your connected services it names | The services you have signed into on the account computer | Running mail in a separate bot, which shares those sessions |
 | Action | Which action it proposes | An approval in front of the specific irreversible step | An approval placed after it, which confirms rather than prevents |
-| Aftermath | Nothing | Whatever report the run writes for you | An audit view of bot actions, which does not exist as of writing ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)) |
+| Aftermath | Nothing | Whatever report the run writes for you | An audit view of bot actions, which exists only on Enterprise ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)) |
 
 The third row is the one that matters here. If your mental model is per-bot
 sandboxes, you expect the worst case to be scoped to mail. It is not. The reach
@@ -159,7 +159,7 @@ flag datacenter IP addresses, so a login that works from your laptop can trip a
 security check when the bot tries it. Check that before building a workflow
 whose first step is signing into a bank.
 
-**No audit view yet.** There is no view of bot actions to review after the
+**No audit view outside Enterprise.** There is no view of bot actions to review after the
 fact, as of the current docs. Plan as though you have no log: if you need a
 record, the bot has to produce it as output, because you cannot reconstruct it
 later.
@@ -181,7 +181,7 @@ which action sits behind the gate. If the irreversible step is the third of
 five and the prompt arrives at step five, the prompt is theatre. You approved
 the receipt, not the transaction.
 
-Combine that with no audit view and the shape of the risk gets clear: the
+Combine that with no audit view outside Enterprise and the shape of the risk gets clear: the
 system will stop and ask before doing the thing you gated, and it will not
 tell you afterwards what it did in between. Which is the argument for keeping
 the bot's job small enough that the whole run is legible in its output.
@@ -262,7 +262,7 @@ being a critical asset. Highest leverage move for most people: an afternoon of
 work, no second subscription.
 
 **The charter boundary as the last line.** With no per-bot credential wall, no
-audit view, and no undo behind an approval, the remaining per-bot control is
+audit view outside Enterprise, and no undo behind an approval, the remaining per-bot control is
 what the bot refuses to do. That is not a consolation prize. It is the only
 mechanism that is genuinely per bot, which makes it load bearing here in a way
 it would not be on a platform with real per-agent sandboxes.
@@ -360,7 +360,7 @@ can widen what you are allowed to do.
 \`\`\`
 
 The third block is the one that exists because of a documented gap rather than
-a general principle. There is no audit view, so if you want a record, the run
+a general principle. There is no audit view outside Enterprise, so if you want a record, the run
 has to write one. Getting a bot to narrate its own work is imperfect, and it
 is strictly better than nothing.
 
@@ -377,26 +377,26 @@ writing boundaries as falsifiable actions is in
 [bot boundaries](/blog/grok-bot-boundaries), and how the approval settings map
 onto them is in [permissions explained](/blog/grok-bot-permissions-explained).
 
-## Watch the two controls that are documented but not shipped
+## Watch the two admin controls that have shipped since August
 
-Two things in the documentation would change the advice above, and neither is
-available as of writing. Both appear on
-[teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises) as
-planned rather than present, so plan around their absence.
+Two admin controls in the documentation bear on the advice above, and both
+have shipped since the August pages previewed them. Both appear on
+[teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises),
+so check which plan you are on before you plan around them.
 
-A team-level ceiling on local execution is described with three settings,
-Never, Ask every time, and Always, and the rule that members can choose a
-stricter option but not a looser one. That is the shape of a real control,
-because the strictest setting wins. Until it ships, an administrator cannot cap
-what a member's bots may do locally.
+A team-level ceiling on local execution has three settings, Never allow, Ask
+every time, and Always allow, and the rule that members can choose a stricter
+option but not a looser one. That is the shape of a real control, because the
+strictest setting wins. Team admins on Teams and Enterprise can set it; on an
+individual plan nobody caps what your bots may do locally except you.
 
-An administrator "Kill" action is described as deleting the virtual machine
-while keeping durable storage. Read that before filing it as a panic button.
-Killing the VM is not a wipe, so the offboarding list above is still your job
-afterwards.
+Terminate, under Grok Bot Computers on the Cursor dashboard, lets Enterprise
+organization admins delete a member's computer while keeping the durable disk.
+Read that before filing it as a panic button. Terminating the computer is not a
+wipe, so the offboarding list above is still your job afterwards.
 
-One more limit before you plan around a device: supported clients are macOS, Windows and Linux desktops (x64 and Arm64) plus iPhone (iOS 18 or later) and Android (9 or later) phones; iPad is not supported.x.ai/grok-bot/faq)). The computer
-your bots run on is Linux. The desk you drive it from cannot be.
+One more limit before you plan around a device: supported clients are macOS, Windows and Linux desktops (x64 and Arm64) plus iPhone (iOS 18 or later) and Android (9 or later) phones; the iOS app also runs on iPad ([FAQ](https://docs.x.ai/grok-bot/faq)). The computer
+your bots run on is Linux. Since September 2026 the desk you drive it from can be too.
 
 **Keep reading:** [Grok Bot vs Claude Cowork](/blog/grok-bot-vs-claude-cowork), [Every Grok Bot Integration and What Each One Unlocks](/blog/grok-bot-integrations-list), [Give Every Bot One Source of Truth](/blog/grok-bot-obsidian-knowledge-base).
 
@@ -447,7 +447,7 @@ work that has already completed, which the security documentation states
 directly. That makes the placement of the gate the whole game: if the
 irreversible step happens earlier in the run than the prompt you answer, the
 prompt confirms a result rather than preventing one. Since there is also no
-audit view of bot actions as of writing, pair approvals with a job small
+audit view of bot actions outside Enterprise, pair approvals with a job small
 enough that its entire run is visible in its output, and with a charter
 boundary that names the irreversible action explicitly.
 `,

@@ -14,7 +14,8 @@ apps, and come back with work. The difference between them is not a feature
 list. It is who holds the credentials, who picks the model, and who gets paged
 at 2am when the thing stops.
 
-Pricing and features here were checked on 2026-08-25. Both products move
+Pricing and features here were checked on 2026-08-25, with Grok Bot plans
+rechecked on 2026-09-23. Both products move
 weekly, so verify against [x.ai pricing](https://x.ai/pricing),
 [Cursor pricing](https://cursor.com/pricing), and the
 [Rakazo repository](https://github.com/elie222/rakazo) before you commit money
@@ -47,7 +48,7 @@ preference.
 | Cost control means routing cheap jobs to a cheap model | Rakazo | Grok Bot rules out a picker for members and admins |
 | Your team works on Linux desktops or Android phones | Either | Grok Bot added both in September 2026 |
 | Something has to run before Friday | Grok Bot | Sign in on a supported device and you are live |
-| A reviewer will ask who approved what | Rakazo, with caveats | Grok Bot has no audit view yet; Rakazo gives tables, not a finished UI |
+| A reviewer will ask who approved what | Rakazo, with caveats | Grok Bot has no audit view outside Enterprise; Rakazo gives tables, not a finished UI |
 
 The wrong reason to self-host is that it feels safer in the abstract. A Rakazo
 box nobody patches, backs up, or watches is worse than a managed product. If
@@ -80,7 +81,7 @@ The surfaces differ too. Rakazo ships a web app, an Electron desktop app, and
 an Expo mobile app that are all clients of the same API
 ([README](https://github.com/elie222/rakazo/blob/main/README.md)), and the iOS
 and Android apps can point at a self-hosted origin from the sign-in screen.
-Grok Bot supports macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
+Grok Bot supports macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; the iOS app also runs on iPad ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 
 ## Score them on ten criteria that survive a version bump
 
@@ -92,8 +93,8 @@ Grok Bot supports macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or la
 | Cost shape | Subscription, then metered overflow | Infrastructure plus token spend, no licence fee |
 | Setup burden | Sign in on a supported device | Node 22+, pnpm 9, Docker, Postgres 16, TLS, backups |
 | Approval default | Approvals ship with the product | Bots act without asking until you add rules |
-| Audit trail | No audit view of bot actions yet | Event and usage tables in your own database |
-| Platforms | macOS, Windows and Linux desktops; iPhone and Android phones; no iPad | Web, desktop, iOS and Android, server on Linux |
+| Audit trail | None outside Enterprise, which has audit logs and Action Recording | Event and usage tables in your own database |
+| Platforms | macOS, Windows and Linux desktops; iPhone and Android phones; iPad via the iOS app | Web, desktop, iOS and Android, server on Linux |
 | Isolation option | One computer per account, period | Team Computer default, Private Computer optional |
 | Source | Closed | Apache-2.0, beta |
 
@@ -158,17 +159,19 @@ spread of job difficulty, and close to nothing on five similar jobs.
 
 ## Compare a subscription line against an infrastructure line
 
-Grok Bot access rides on an eligible subscription. As of 2026-08-25 the
-cheapest paid path is Cursor Pro+ at $60 a month
-([Cursor pricing](https://cursor.com/pricing)), with SuperGrok Plus at $100 a
-month also eligible ([x.ai pricing](https://x.ai/pricing)). Cursor Hobby and
-the $20 Cursor Pro tier do not include it. Subscriptions carry a weekly usage
+Grok Bot access rides on an eligible subscription. As of 2026-09-23 the
+cheapest paid path is Cursor Pro at $20 a month
+([Cursor pricing](https://cursor.com/pricing)), and an individual SuperGrok,
+SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked
+instead ([x.ai pricing](https://x.ai/pricing)). Cursor Hobby, the free plan,
+does not include it. Subscriptions carry a weekly usage
 allowance and overflow is billed on demand from model and token cost, and the
-docs state plainly that "there is no Grok Bot-specific spend cap yet"
+docs state plainly that "a separate Grok Bot spend cap is not available
+today," with account-level on-demand controls applying instead
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 That combination is worth understanding before you schedule anything hourly,
 which is the subject of
-[the spend cap that is not there](/blog/grok-bot-spend-cap-and-token-burn).
+[the spend cap and the monthly limit](/blog/grok-bot-spend-cap-and-token-burn).
 
 Rakazo has no licence cost and no pricing page: the site says so, and the repo
 is the product ([rakazo.com](https://rakazo.com)). What you pay is a VM and
@@ -317,8 +320,9 @@ Model economics is the second. If your roster is mostly cheap triage with
 occasional expensive writing, routing those differently is real money over a
 quarter, and a runtime with no picker cannot do it.
 
-The third is auditability. Grok Bot's docs state that an audit view of bot
-actions does not exist yet
+The third is auditability. Grok Bot's docs put audit logs and Action
+Recording on Enterprise only, so individual accounts and self-serve Teams have
+no audit view of bot actions
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 Rakazo's schema defines ordered per-thread event rows and usage records holding
 provider, model, and token counts per run
@@ -416,7 +420,8 @@ running it for a month.
 And it cannot tell you what either looks like next quarter. Grok Bot launched
 in beta in August 2026 and widened its eligibility list in the same month. Two
 of the sharpest facts here, the missing audit view and the missing spend cap,
-carry the word "yet" in the vendor's own docs. Re-read the sources before you
+already moved once: Enterprise now has audit logs and Action Recording, and
+the docs point to an account-level on-demand limit. Re-read the sources before you
 quote this article at anyone.
 
 ## Keep the charter portable so the runtime stays a reversible choice

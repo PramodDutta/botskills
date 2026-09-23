@@ -3,48 +3,48 @@ import type { BlogPost } from './index';
 export const post: BlogPost = {
   title: 'Prove Grok Bot to a Risk Committee',
   description:
-    'Prove grok bot to a risk committee with product facts: no audit view, no spend cap, one shared computer, screens are not vaults, approval is not undo. Do not invent SOC2.',
+    'Prove grok bot to a risk committee with product facts: audit logs only on Enterprise, no per-Bot spend cap, one shared computer, approval is not undo. Do not invent SOC2.',
   date: '2026-08-28',
   category: 'Guide',
   content: `
 # Prove Grok Bot to a Risk Committee
 
-The CISO would not put Grok Bot on the 19 August 2026 agenda until Soren could show a dedicated virtual machine per bot and a searchable action log. Both objects are missing from the product. The SKU was tabled. This page is the pack Soren should have carried.
+The CISO would not put Grok Bot on the 19 August 2026 agenda until Soren could show a dedicated virtual machine per bot and a searchable action log. Both objects are missing from the self-serve product. The SKU was tabled. This page is the pack Soren should have carried.
 
-You prove grok bot to a risk committee by writing the gaps in the same ink as the buy: no audit view of Bot actions yet, no Grok Bot-specific spend cap, one persistent cloud computer per account, screens that are not vaults, and an approval that does not undo completed work. You do not invent a SOC 2 report. You do not invent a per-bot jail. You do not attach a ship date to a coming-soon label.
+You prove grok bot to a risk committee by writing the gaps in the same ink as the buy: no audit view of Bot actions outside Enterprise, no Grok Bot-specific spend cap, one persistent cloud computer per account, screens that are not vaults, and an approval that does not undo completed work. You do not invent a SOC 2 report. You do not invent a per-bot jail. You do not attach a ship date to a coming-soon label.
 
 This is a committee pack. It is not [how to answer a security questionnaire](/blog/how-to-answer-security-questionnaires). It is not [Grok Bot for security teams](/blog/grok-bot-for-security-teams). It is not [the budget talking sheet](/blog/explain-grok-bot-to-your-boss). Stay here if the room is scoring isolation and residual risk.
 
 This page is not legal advice and not a certification opinion. Facts follow [the Grok Bot FAQ](https://docs.x.ai/grok-bot/faq), [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps), [approvals, security and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy), and [teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises), checked 25 August 2026. Confirm live vendor pages the morning of the meeting.
 
-## Carry a gap sheet into the committee, never a SOC 2 story the vendor never published
+## Carry a gap sheet into the committee, never a SOC 2 story the Grok Bot docs never published
 
 A risk committee needs a representation it can live with after the minutes land in the folder. The 19 August failure was a one-pager that listed controls the product does not ship, copied from a roundup that still treated each bot as a private machine.
 
 Write the gap sheet in current tense. No roadmap poetry. Two facts kill a pilot before it starts: Privacy Mode (Legacy) blocks Grok Bot entirely, and hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. That second sentence is a token-location exception, not a reason to call the VM a vault. Browser cookies, sessions, files, and command-line credentials still live on the shared computer.
 
-If someone wants a SOC 2, ISO, HIPAA, or PCI sentence, leave the cell blank and open the vendor page that morning. [Grok Bot in regulated industries](/blog/grok-bot-regulated-industries) is the line for records and counsel. This pack only says what the product is.
+If someone wants a certification sentence, write only what the docs name: ISO/IEC 27001 and ISO/IEC 42001, held by Anysphere with Grok Bot in scope. For SOC 2, HIPAA, or PCI, leave the cell blank and open the vendor page that morning. [Grok Bot in regulated industries](/blog/grok-bot-regulated-industries) is the line for records and counsel. This pack only says what the product is.
 
-| Packet row they will ask | Documented product, 25 Aug 2026 | Sentence you write |
+| Packet row they will ask | Documented product, 23 Sep 2026 | Sentence you write |
 |---|---|---|
 | Dedicated VM per bot | One computer per account. Screens are not vaults | We cannot isolate bots with extra names |
-| Searchable action log | No audit view of Bot actions yet | We keep our own packets. The product does not |
-| Spend cap we can type into finance | No Grok Bot-specific spend cap. No published allowance figure | Weekly pool, then on-demand. We will not invent a number |
+| Searchable action log | Enterprise only: audit logs and Action Recording. None on individual or self-serve Teams plans | We keep our own packets. Below Enterprise the product does not |
+| Spend cap we can type into finance | No Grok Bot-specific spend cap, only the account On-demand monthly limit. No published allowance figure | Weekly pool, then on-demand up to that limit. We will not invent an allowance number |
 | SOC 2 for Grok Bot | Not a fact this site will invent | Blank until the vendor page says it |
 
 The committee can still say no. A yes built on a dedicated VM and a vendor action log is the expensive kind.
 
 ## Open the pack by naming one shared computer, then refuse the dedicated-VM request
 
-Start with the object. A Grok Bot is a named job on one persistent cloud computer assigned to the user account. The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop app, and it is not one VM per bot. Primer: [what a Grok Bot is](/blog/what-is-a-grok-bot). Architecture: [One Computer, Many Screens](/blog/grok-bot-shared-computer-security). Teaching line: [do not use separate bots as a security boundary](/blog/grok-bot-not-a-sandbox).
+Start with the object. A Grok Bot is a named job on one persistent cloud computer assigned to the user account. The computer is a managed Linux VM. The bot runs as a non-root user. That is not the Linux desktop app, and it is not one VM per bot. Primer: [what a Grok Bot is](/blog/what-is-a-grok-bot). Architecture: [One Computer, Many Screens](/blog/grok-bot-shared-computer-security). Teaching line: [do not use separate bots as a security boundary](/blog/grok-bot-not-a-sandbox).
 
 The CISO's first condition, a dedicated VM per bot, is not a setting you missed. It is not the product. Creating Bot B adds a screen on the same computer. Cookies, signed-in sessions, files, and CLI credentials are shared. Deleting a bot does not remove those files or sessions. If finance and research must not see each other's logins, you need a second eligible account (a second computer, a second bill), not a second name in the sidebar.
 
 Say that in the first two minutes. If you wait until after the demo, the committee will have already scored isolation as a pass.
 
-Supported clients are a risk fact. Documented: macOS on Apple silicon and Intel, Windows on x64 and Arm64, iPhone on iOS 18 or later. Not supported: Linux desktop, Android, iPad. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. The cloud computer being Linux does not give an Ubuntu laptop a client.
+Supported clients are a risk fact. Documented: macOS on Apple silicon and Intel, Windows on x64 and Arm64, Linux on x64 and Arm64, iPhone on iOS 18 or later, Android 9 or later, and iPad through the iOS app (iPadOS 18 or later). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. The cloud computer being Linux is not what gives an Ubuntu laptop a client; the Linux desktop app is.
 
-Coming soon, labeled as not shipped, with no date: a team-level ceiling on local execution, and an admin Kill that deletes the VM while durable storage is kept. Do not list either as a control you have today. Kill is a future stop, not a paper trail.
+Two admin controls that August pages only previewed have shipped: team admins on Teams and Enterprise can cap local execution, and Enterprise organization admins can Terminate a member's computer, which still keeps the durable disk. List either only if your plan has it and someone set it. Terminate is a stop, not a paper trail.
 
 ## Write screens-are-not-vaults on page one before anyone scores isolation
 
@@ -81,34 +81,34 @@ Do not invent what Privacy Mode encrypts. This pack only records the block. If t
 
 ## Print no-audit-view as a current gap, not as a dated promise
 
-The CISO's second condition, a searchable action log, is also not a setting you missed. An audit view of Bot actions does not exist yet. Write that as present tense. Do not attach a quarter. Inventing a date becomes a representation the moment the minutes are filed.
+The CISO's second condition, a searchable action log, is also not a setting you missed. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Write that as present tense. Do not attach a quarter. Inventing a date becomes a representation the moment the minutes are filed.
 
 What exists is thinner than a ledger. A routine assigns a workflow to one Bot. Max 50 routines per Bot. The app keeps the 20 most recent run records per routine. That is a sliding window. Deleting a Bot deletes its routines. Nothing about that store is team-level. Pause is a stop, not a log.
 
-The substitute is yours: force the bot to write a packet the company owns on every run. Keep send on ask, or keep send off. Screenshot or export the proposed action. Name a human who is allowed to fail the close. Receipts: [Grok Bot has no audit view yet](/blog/grok-bot-no-audit-log-yet). If the company cannot buy software that lacks a central action history, this SKU is a no, dated against the 25 August 2026 docs. Coming-soon admin Kill is not an audit log.
+The substitute is yours: force the bot to write a packet the company owns on every run. Keep send on ask, or keep send off. Screenshot or export the proposed action. Name a human who is allowed to fail the close. Receipts: [Grok Bot has no audit view outside Enterprise](/blog/grok-bot-no-audit-log-yet). If the company cannot buy software that lacks a central action history, a self-serve SKU is a no; audit logs and Action Recording are Enterprise only. Enterprise admin Terminate is not an audit log either.
 
 | Evidence they will request | What ships today | What you keep instead |
 |---|---|---|
-| Vendor audit view of every bot action | Not available yet | A company-owned packet appended on every run |
-| Ninety-day retention of actions | Last 20 run records per routine | The packet lives in a folder you retain |
+| Vendor audit view of every bot action | Enterprise only: Action Recording, off by default | A company-owned packet appended on every run |
+| Ninety-day retention of actions | Enterprise Action Recording keeps 90 days. Otherwise last 20 run records per routine | The packet lives in a folder you retain |
 | Proof a send was reviewed | Send can sit on ask | Screenshot or export of the proposal, stored with the packet |
-| Admin history of Kill | Kill is coming soon, not shipped | Do not list Kill as evidence of past work |
+| Admin stop of a member's computer | Enterprise only: Terminate, which keeps the durable disk | Do not list Terminate as evidence of past work |
 
 ## Print no-spend-cap as a current gap, and refuse to invent an allowance dollar
 
-There is no Grok Bot-specific spend cap. Subscriptions include a weekly usage allowance. Overflow is on-demand, billed from model and token cost. No plan publishes that allowance as a dollar figure. If you type a number into the pack so finance looks settled, you have made a representation the vendor did not make.
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Subscriptions include a weekly usage allowance. Overflow is on-demand, billed from model and token cost. No plan publishes that allowance as a dollar figure. If you type a number into the pack so finance looks settled, you have made a representation the vendor did not make.
 
-Say it in the room: we cannot cap this product at a number today. We can cap the work. One standing job. A human review. A calendar check on usage. No five-minute crawl, 288 times a day, "just to keep it warm." After a yes: [no spend cap](/blog/grok-bot-spend-cap-and-token-burn).
+Say it in the room: we cannot cap Grok Bot on its own at a number today, only the account's on-demand spend. We can cap the work. One standing job. A human review. A calendar check on usage. No five-minute crawl, 288 times a day, "just to keep it warm." After a yes: [no per-Bot spend cap](/blog/grok-bot-spend-cap-and-token-burn).
 
-Doors, confirmed live before anyone pays: Cursor Pro+ at $60 a month is the cheapest documented individual paid path. SuperGrok Plus at $100 includes Grok Bot. SuperGrok at $30 does not. Cursor Hobby and Cursor Pro at $20 do not. Cursor Teams Standard at $40 per user and Premium at $120 per user both include. Cursor Ultra at $200 includes. A one-time trial is an eligibility path for individuals. SuperGrok Heavy is eligible. Do not print Heavy as $300. Eligibility widened on 21 August 2026.
+Doors, confirmed live before anyone pays: Cursor Pro at $20 a month is the cheapest documented individual paid path, and Cursor Pro+ at $60 and Cursor Ultra at $200 include it too. Cursor Hobby, the free plan, does not. An individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Every member of a self-serve Cursor Teams plan has it, with no Premium seat. A one-time trial is an eligibility path for individuals. Do not print Heavy as $300. Eligibility widened on 21 August 2026.
 
-There is no model picker for members or admins, and the vendor does not plan to allow that choice. Do not tell the committee they can pick a cheaper model to cap spend. Do not say Grok Bot runs grok-4.6. If a numeric cap is a hard requirement, the honest close is not this SKU.
+There is no model picker for members or admins, and the vendor does not plan to allow that choice. Do not tell the committee they can pick a cheaper model to cap spend. Do not say Grok Bot runs grok-4.6. If a numeric Grok Bot-only cap is a hard requirement, the honest close is not this SKU.
 
 ## Treat every approval as a gate on the next click, never as undo of finished work
 
 Committees hear "approval" and map it onto maker-checker with a rewind. The product sentence is the opposite: an approval controls the proposed action. It does not reverse work already completed. If a send already left, Deny does not unsend it. If a purchase already posted, Ask does not refund it. Setup: [how to set Grok Bot approvals](/blog/how-to-set-grok-bot-approvals).
 
-Write the operational consequence: irreversible actions stay off this computer, or they sit on ask with a human who is actually watching, plus a packet you keep because there is no vendor audit view. Send, pay, publish, production admin, and key rotation are not "we will approve them live" on day one.
+Write the operational consequence: irreversible actions stay off this computer, or they sit on ask with a human who is actually watching, plus a packet you keep because there is no vendor audit view below Enterprise. Send, pay, publish, production admin, and key rotation are not "we will approve them live" on day one.
 
 A charter boundary is the control you actually have. [Inbox Triage](/bots/inbox-triage) labels and drafts, never send. [Mail Cleanup Assistant](/bots/mail-cleanup-assistant) never sends, never replies, and never permanently deletes. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) stays a pack. Those boundaries are instructions plus your review habit. They are not an undo log.
 
@@ -122,9 +122,9 @@ Soren's June one-pager had copied a public roundup. It said each bot ran on its 
 
 In the room the CISO asked two questions. Can we give the finance bot its own VM so the research bot cannot open the bank tab. Can we pull a log of every action if something leaves the building.
 
-The true answers are no and no. Not "not yet, we will see." Not "yes, with guardrails." Soren said "we can isolate with names" and "we can export run history." The committee heard dedicated VMs and a ledger. The SKU was tabled. That is the dated failure.
+On a self-serve plan the true answers are no and no. Not "not yet, we will see." Not "yes, with guardrails." Soren said "we can isolate with names" and "we can export run history." The committee heard dedicated VMs and a ledger. The SKU was tabled. That is the dated failure.
 
-The minutes should have held this written no: neither condition is the product. Isolation at VM strength is a second eligible account, not a second sidebar name. Hosted MCP tokens stay with Cursor's backend. That exception does not move browser logins off the VM. Twenty run records per routine are a cache, not an action log. An approval is not undo. Privacy Mode (Legacy), if still on, blocks the product. There is no Grok Bot-specific spend cap. We will not invent SOC 2. If those gaps are disqualifying, do not buy this SKU for this job this quarter.
+The minutes should have held this written no: neither condition is the self-serve product. Isolation at VM strength is a second eligible account, not a second sidebar name. Hosted MCP tokens stay with Cursor's backend. That exception does not move browser logins off the VM. Twenty run records per routine are a cache, not an action log. An approval is not undo. Privacy Mode (Legacy), if still on, blocks the product. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. We will not invent SOC 2. If those gaps are disqualifying, do not buy this SKU for this job this quarter.
 
 After that written no, a narrower yes is still possible: one never-send job, packets you own, send off, production admin cookies off the machine, Privacy Mode checked. That is a trial with residual risk named. It is not the CISO's original object.
 
@@ -141,33 +141,37 @@ This is not legal advice and not a certification opinion.
 What it is
 - Named jobs on ONE persistent cloud computer assigned to the USER ACCOUNT
 - Each bot gets a SCREEN. Screens are work surfaces, not vaults
-- Computer is a managed Linux VM. Bot runs non-root. Not a Linux desktop app
+- Computer is a managed Linux VM. Bot runs non-root. Not the Linux desktop app
 - Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer
 - Browser cookies, sessions, files, CLI credentials ARE on the computer
 
 What it is not
 - A dedicated VM per bot
-- A vendor audit view of Bot actions (does not exist yet)
-- A Grok Bot-specific spend cap (none. No published allowance dollar)
+- A vendor audit view of Bot actions below Enterprise (audit logs and
+  Action Recording are Enterprise only)
+- A Grok Bot-specific spend cap (none. Account On-demand monthly limit
+  only. No published allowance dollar)
 - Undo of completed work (approval is a gate on the next click)
-- A SOC 2 / ISO / HIPAA claim we will invent
-- A Linux desktop, Android, or iPad client
+- A SOC 2 / HIPAA claim we will invent (the docs name only ISO/IEC
+  27001 and ISO/IEC 42001, with Grok Bot in scope)
+- A Mac-only product (Windows, Linux, iPhone, Android and iPad run it)
 
-Doors (checked 25 Aug 2026, confirm before pay)
-- Cursor Pro+ $60/mo: cheapest individual paid door
-- SuperGrok Plus $100/mo: includes. SuperGrok $30 does not
-- Cursor Teams Standard $40/user/mo and Premium $120: both include
-- Cursor Ultra $200/mo: includes
-- Hobby, Cursor Pro $20: do not include
+Doors (checked 23 Sep 2026, confirm before pay)
+- Cursor Pro $20/mo: cheapest individual paid door
+- Individual SuperGrok, SuperGrok Plus, X Premium+: link for usage
+- Cursor Teams (self-serve): every member included, no Premium seat
+- Cursor Pro+ $60/mo and Ultra $200/mo: include, more weekly usage
+- Hobby (free) and SuperGrok Lite: do not include
 - Trial: limited usage, one-time
-- SuperGrok Heavy: eligible. Do not print an unpublished Heavy price
+- SuperGrok Heavy: link it. Do not print an unpublished Heavy price
 
 Hard blocks
 - Privacy Mode (Legacy) blocks Grok Bot entirely. Ask before the agenda
 - No model picker. Do not claim a cheaper model as a cap
 - Static egress IPs. Some services flag datacenter addresses
-- Coming soon, NOT shipped, no date: team local-execution ceiling; admin
-  Kill deletes the VM and durable storage is kept. Kill is not a log
+- Shipped admin controls: team local-execution ceiling (Teams and
+  Enterprise); Terminate (Enterprise org admins) keeps the durable disk.
+  Terminate is not a log
 
 First job if the committee still says a narrow yes
 - Never-send. Briefing pack or inbox drafts. Human sends
@@ -177,7 +181,7 @@ First job if the committee still says a narrow yes
 
 CISO conditions from 19 August 2026
 - Dedicated VM per bot: NOT THE PRODUCT
-- Searchable action log: NOT THE PRODUCT
+- Searchable action log: NOT ON SELF-SERVE (Enterprise only)
 \`\`\`
 
 If they still want a demo, show a pack filling itself, not a send and not an admin console.
@@ -188,18 +192,18 @@ The strongest objection in this room is not "we should wait." It is the claim th
 
 Take it at face value. Named bots are real. Charters are real. Ask is real. None of them is a VM. None of them is a vendor action log. A name is a screen. A charter is text. A sibling bot on the same computer can still open the leftover cookie. Ask is a gate on the proposed action. If nobody is watching, or if the reviewer is on iPhone and cannot edit, the gate is a hope. If the action already completed, the gate does not rewind it. Twenty run records are a sliding window, not ninety days of who-did-what.
 
-Where the objection wins: one person, one reversible job, packets we own, no vendor audit view, no spend cap. That committee can say a narrow yes. Where it loses: written conditions for per-bot machines and a queryable vendor log. Those are not met by names and prose. Say no. A second eligible account is the isolation move that actually adds a computer. It also adds a bill. Offer that as architecture, not as a free sidebar trick.
+Where the objection wins: one person, one reversible job, packets we own, no vendor audit view, no per-Bot spend cap. That committee can say a narrow yes. Where it loses: written conditions for per-bot machines and a queryable vendor log. Those are not met by names and prose. Say no. A second eligible account is the isolation move that actually adds a computer. It also adds a bill. Offer that as architecture, not as a free sidebar trick.
 
 ## Fail the pack in the room if any row still claims a VM, a log, or a cap
 
-A pack that cannot fail is a brochure. Run this check on a projector, on the live docs from 25 August 2026, not on a June screenshot. Fail the pack if any slide row still claims a control the product does not ship.
+A pack that cannot fail is a brochure. Run this check on a projector, on the live docs from the meeting morning, not on a June screenshot. Fail the pack if any slide row still claims a control the product does not ship.
 
 | Slide still says | Why it fails | Repair before any vote |
 |---|---|---|
 | Each bot has its own VM, sandbox, or jail | One computer per account. Screens are not vaults | Rewrite as one computer, many screens |
-| Audit log, action history, or SIEM feed from Grok Bot | No audit view of Bot actions yet | Write the gap. Keep company packets |
+| Audit log, action history, or SIEM feed from Grok Bot | Enterprise only. Individual and self-serve Teams plans have no audit view | Write the gap for your plan. Keep company packets |
 | Weekly allowance is $X | No published dollar figure | Delete the number |
-| SOC 2, ISO, or HIPAA as a Grok Bot fact | Not a fact this pack will invent | Blank, plus a vendor URL from this morning |
+| SOC 2 or HIPAA as a Grok Bot fact | The docs name only ISO/IEC 27001 and ISO/IEC 42001 | Cite those two from trust.cursor.com. Leave the rest blank, plus a vendor URL from this morning |
 | Privacy Mode is compatible | Privacy Mode (Legacy) blocks Grok Bot entirely | Ask whether the setting will change |
 
 If any row fails, do not vote. Edit the pack or table the SKU. The 19 August failure was a vote on a slide that would have failed this check.
@@ -220,15 +224,15 @@ Claude Code, SKILL.md, and CLAUDE.md compatibility is Grok Build, never Grok Bot
 
 SpaceX acquired xAI (announced 2 February 2026). SpaceX's acquisition of Anysphere (Cursor) closed 14 August 2026. Do not tell the committee that xAI acquired Cursor. Vendor identity belongs in due diligence. It does not fill an audit-view gap.
 
-## Leave ISO numbers and legal opinions off this page on purpose
+## Cite the two ISO certifications and leave legal opinions off this page on purpose
 
-Do not invent SOC 2, ISO 27001, a HIPAA BAA, a PCI ROC, or a FedRAMP package for Grok Bot. If a member asks whether the vendor is certified, the pack says: confirm on the vendor's current trust or security page the morning of the vote. A blank is safer than a number from a blog.
+Anysphere holds ISO/IEC 27001 and ISO/IEC 42001 with Grok Bot in scope, and the reports are at trust.cursor.com. The Grok Bot docs name no other certification. Cursor's site footer shows company-level badges, SOC 2 among them, but a company badge does not say which products a report covers, so confirm SOC 2 report scope with the Cursor account team. Do not invent a HIPAA BAA, a PCI ROC, or a FedRAMP package for Grok Bot. If a member asks whether the vendor is certified, the pack says: two ISO certifications with Grok Bot in scope, confirmed on trust.cursor.com the morning of the vote. A blank is safer than a number from a blog.
 
-This page is not legal advice. It will not tell you whether residual risk is acceptable, whether Privacy Mode must stay on, or whether a second eligible account is enough isolation for counsel. Those are company decisions. This pack only stops you from representing a dedicated VM, a vendor action log, a spend cap, an undo button, or a certification the product pages do not state.
+This page is not legal advice. It will not tell you whether residual risk is acceptable, whether Privacy Mode must stay on, or whether a second eligible account is enough isolation for counsel. Those are company decisions. This pack only stops you from representing a dedicated VM, a vendor action log below Enterprise, a Grok Bot-only spend cap, an undo button, or a certification the product pages do not state.
 
 Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. The product ships weekly. Re-read the four docs pages before the next committee. If a control has shipped, update the gap sheet. If it has not, do not keep last quarter's hope in the minutes.
 
-**Keep reading:** [Grok Bot Has No Audit View Yet: How to Keep Your Own Receipts](/blog/grok-bot-no-audit-log-yet), [One Computer, Many Screens: What Grok Bot Actually Isolates](/blog/grok-bot-shared-computer-security), [Why Legacy Privacy Mode Blocks Grok Bot Entirely](/blog/grok-bot-privacy-mode).
+**Keep reading:** [Grok Bot Audit View: Keep Your Own Receipts Outside Enterprise](/blog/grok-bot-no-audit-log-yet), [One Computer, Many Screens: What Grok Bot Actually Isolates](/blog/grok-bot-shared-computer-security), [Why Legacy Privacy Mode Blocks Grok Bot Entirely](/blog/grok-bot-privacy-mode).
 
 ## Frequently Asked Questions
 
@@ -238,14 +242,14 @@ No. All bots on an account share one persistent cloud computer assigned to the u
 
 ### Does Grok Bot ship an audit log we can show the risk committee?
 
-An audit view of Bot actions does not exist yet. Do not attach a ship date. Routines keep the 20 most recent run records per routine, with a maximum of 50 routines per bot, and that store is not team-level. Pause is a stop, not a ledger. An approval is a gate, not a receipt unless you export the proposal. If the committee requires a vendor action log, this SKU cannot meet that requirement today. Keep your own packets if you still run a narrow never-send job.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Do not attach a ship date. Routines keep the 20 most recent run records per routine, with a maximum of 50 routines per bot, and that store is not team-level. Pause is a stop, not a ledger. An approval is a gate, not a receipt unless you export the proposal. If the committee requires a vendor action log, a self-serve plan cannot meet that requirement; ask the Cursor account team about Enterprise. Keep your own packets if you still run a narrow never-send job.
 
 ### What should we write in the pack about SOC 2 or other certifications?
 
-Leave the cell blank unless the vendor's current page states the claim that morning. Do not invent SOC 2, ISO, HIPAA, or PCI coverage for Grok Bot from a roundup or from this site. A blank that you will confirm is a representation you can defend. A certificate number you guessed is not. This page is not legal advice. Send certification questions to counsel and to the vendor trust page, not to a committee slide you filled to look complete.
+Write the two certifications the Grok Bot docs name: Anysphere holds ISO/IEC 27001 and ISO/IEC 42001 with Grok Bot in scope, with reports at trust.cursor.com. Leave every other cell blank unless the vendor's current page states the claim that morning, and confirm SOC 2 report scope with the Cursor account team. Do not invent SOC 2, HIPAA, or PCI coverage for Grok Bot from a roundup or from this site. A blank that you will confirm is a representation you can defend. A certificate number you guessed is not. This page is not legal advice. Send certification questions to counsel and to the vendor trust page, not to a committee slide you filled to look complete.
 
 ### If a reviewer clicks Deny, does that undo work the bot already finished?
 
-No. An approval controls the proposed action. It does not reverse work already completed. A send that already left stays sent. A purchase that already posted stays posted. Put irreversible actions off this computer, or park them on ask with a human at a desktop who is actually watching, and keep your own packet because there is no vendor audit view. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Do not staff the last-mile role to a reviewer who cannot open history at a desktop.
+No. An approval controls the proposed action. It does not reverse work already completed. A send that already left stays sent. A purchase that already posted stays posted. Put irreversible actions off this computer, or park them on ask with a human at a desktop who is actually watching, and keep your own packet because there is no vendor audit view below Enterprise. From the phone app (iPhone or Android) you can approve steps, read run history and pause or resume a routine, but not edit it. Do not staff the last-mile role to a reviewer who cannot reach a desktop to edit or test a routine.
 `,
 };

@@ -79,7 +79,7 @@ A tile can exist and still do nothing. That is state three, and it is the one pe
 
 Signed in fails in boring ways. You closed the consent screen. A second factor never reached the Bot computer. The provider revoked last week's grant. You signed into the wrong mailbox. Or you signed into Gmail in the shared browser and never completed plugin consent, so you are not in state three. You are in state two plus a leftover session.
 
-There is no audit view of Bot actions yet. You cannot later ask which bot opened Gmail at 02:14. Diagnosis happens at connect time, in front of you.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. You cannot later ask which bot opened Gmail at 02:14. Diagnosis happens at connect time, in front of you.
 
 Test sign-in with a read that can fail. Ask Inbox Triage for a header you can check yourself: the newest unread sender, or a subject you just mailed to yourself. If the bot invents an empty inbox, or says it cannot access Gmail, sign-in is not done. If it quotes mail, some path is live, and you still have to ask which: plugin grant, or browser cookie. Those two paths are not interchangeable. Do not rebuild the bot to "refresh" a token the bot does not own.
 
@@ -191,7 +191,7 @@ If a third-party name such as Composio appears in your Plugins list, confirm sco
 
 Independent feeds are not documentation. Confirm in the product. Then connect the minimum. [Least privilege](/blog/least-privilege-bots) is the policy. Once the state is named, leftover design questions go to [the plugins catalog article](/blog/grok-bot-plugins-catalog), leftover server questions go to [the MCP page](/blog/grok-bot-mcp-servers), and leftover scope questions go to [the Gmail guide](/blog/grok-bot-gmail).
 
-Where this breaks down: desktop is unavailable, and iPhone will not let you edit. That is not a catalog problem. Platforms are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The cloud computer being Linux does not give you a Linux client.
+Where this breaks down: desktop is unavailable, and iPhone will not let you edit. That is not a catalog problem. Platforms are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The cloud computer being Linux does not give you a Linux client.
 
 ## Keep send disconnected while the connector path is still unproven
 

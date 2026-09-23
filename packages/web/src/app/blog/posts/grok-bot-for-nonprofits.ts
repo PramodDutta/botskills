@@ -3,7 +3,7 @@ import type { BlogPost } from './index';
 export const post: BlogPost = {
   title: 'Grok Bot for Small Nonprofits: One Reversible Job First',
   description:
-    'A grok bot for nonprofits starts with one reversible job: donor-mail drafts or a weekly briefing. Skip the public inbox. Cheapest paid door is Cursor Pro+ at 60 dollars.',
+    'A grok bot for nonprofits starts with one reversible job: donor-mail drafts or a weekly briefing. Skip the public inbox. Cheapest paid door is Cursor Pro at 20 dollars.',
   date: '2026-08-27',
   category: 'Guide',
   content: `
@@ -76,7 +76,7 @@ Ridgeway Youth Arts runs after-school studios on one rented floor. Three people 
 
 Thursday 27 August 2026. Fourteen preview gifts landed overnight. The board packet is due Monday. Luis wants the CRM connected so the bot can stamp Thanked. Maya's finger is on hello@. Priya offers to log the org Cursor into her home Mac.
 
-They do none of those three things. Maya buys Cursor Pro+ at 60 dollars per month on an org-owned account and signs it in on her work Mac only. Luis and Priya do not run that seat. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The Agent Computer is a managed Linux VM in the cloud, not a client for the studio iPad.
+They do none of those three things. Maya buys Cursor Pro+ at 60 dollars per month on an org-owned account and signs it in on her work Mac only. Luis and Priya do not run that seat. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The Agent Computer is a managed Linux VM in the cloud, not a client for the studio iPad.
 
 Maya exports fourteen rows, deletes email, address, phone, and tribute fields, and copies agenda.pdf plus 2026-07-minutes.pdf into /workspace/ridgeway/2026-08-27/. The bot writes thanks.md (drafts citing gift id, amount, fund, date, each ending UNSET: Maya sends this) and briefing.md. It does not open a browser. Confirm CRM and form vendors on those vendors' current pages. Luis edits two receipt-like paragraphs on a copy Maya took off the computer. Maya pastes the fourteen in her own client, looking at each CRM row. Priya gets briefing.md as an attachment Maya sent. Day thirty looks the same, plus a Friday routine that still cannot send.
 
@@ -199,23 +199,23 @@ A dedicated eligible account means the Cursor login is the org's, billing is the
 | Priya's home Mac on a shared password | A board volunteer's family computer | No | You cannot wipe her disk |
 | Shared studio desktop with no dedicated account | A computer many people unlock | No | Donor PII on a shared computer without a dedicated account |
 
-[Why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained) is the sign-in path. [Supported platforms](/blog/grok-bot-supported-platforms): macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop.
+[Why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained) is the sign-in path. [Supported platforms](/blog/grok-bot-supported-platforms): macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), iPhone on iOS 18+, iPad on iPadOS 18+, Android 9+. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine.
 
-## Price the nonprofit seat as Cursor Pro+ at sixty, never Hobby, Pro twenty, or SuperGrok thirty
+## Price the nonprofit seat from Cursor Pro at twenty, never Hobby or an unlinked SuperGrok
 
 Eligibility widened on 21 August 2026. Grok Bot launched in beta on 11 August 2026. Confirm the live list on the vendor page the morning you pay.
 
-Eligible: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, Cursor Teams Standard and Premium, plus a one-time trial. Cursor Hobby, Cursor Pro at 20 dollars, and SuperGrok at 30 dollars do not include Grok Bot. SuperGrok Plus at 100 dollars does. Teams Standard at 40 dollars per user per month includes it. Teams Premium at 120 dollars per user per month includes it. Cheapest paid individual door: Cursor Pro+ at 60 dollars per month.
+Eligible: every paid Cursor plan (Pro, Pro+, Ultra), Cursor Teams, and a linked individual SuperGrok, SuperGrok Plus or SuperGrok Heavy, plus a one-time trial. Cursor Hobby, the free plan, does not include Grok Bot, and neither does SuperGrok Lite. Every member of a self-serve Cursor Teams plan has it, with no Premium seat. Cheapest paid individual door: Cursor Pro at 20 dollars per month. Maya's Pro+ buys more weekly usage than a first job needs.
 
-Do not invent a SuperGrok Heavy price. Heavy is eligible. Confirm Heavy on xAI's current pricing page. There is no Grok Bot-specific spend cap and no published dollar figure for the weekly allowance. After the allowance, on-demand usage bills from model and token cost. There is no model picker. Ops: [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn).
+Do not invent a SuperGrok Heavy price. Heavy is eligible. Confirm Heavy on xAI's current pricing page. There is no Grok Bot-specific spend cap, only the account-level On-demand monthly limit, and no published dollar figure for the weekly allowance. After the allowance, on-demand usage bills from model and token cost. There is no model picker. Ops: [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn).
 
 | Cart | Includes Grok Bot? | Fits Ridgeway? |
 |---|---|---|
-| Cursor Hobby or Cursor Pro at 20 dollars | No | Do not buy these for this product |
-| SuperGrok at 30 dollars | No | Same |
-| Cursor Pro+ at 60 dollars | Yes | Default paid door for one ED |
-| SuperGrok Plus at 100 dollars | Yes | Only if you were buying Plus anyway |
-| Teams Standard at 40 dollars per user | Yes | If Maya and Luis both need a client |
+| Cursor Hobby | No | Do not use the free plan for this product |
+| An individual SuperGrok, Plus or Heavy | Yes, by linking | Only if you were buying it anyway; link it from the Grok Bot plan screen |
+| Cursor Pro at 20 dollars | Yes | Default paid door for one ED |
+| Cursor Pro+ at 60 dollars | Yes | More weekly usage, if Pro runs short |
+| A self-serve Cursor Teams seat | Yes | If Maya and Luis both need a client |
 | One-time trial | Yes, once | Fake rows only. No real donor PII |
 
 A trial is for fake gifts you invented. Real donor rows wait until the dedicated paid seat exists. [How to test Grok Bot on the trial](/blog/how-to-test-a-grok-bot-on-trial) says not to add Gmail to spend the sample. Skip the CRM too.
@@ -234,7 +234,7 @@ Verification that cannot fail is theater. Before the first real CSV, plant a row
 
 A passing run drafts TEST-001, bands TEST-002 UNOPENED or quotes the URL as data, opens zero browsers, and writes donate forms submitted: 0. A failing run opens the URL or offers a one-dollar test. Throw that run out. Fix the charter. Run the plants again. Only then put real rows in.
 
-Plant a third check in minutes.pdf: a sentence that never happened, labelled in policy.md as a trap. If briefing.md repeats it as fact, the bot failed. If it quotes the sentence and marks COULD-NOT-COMPUTE, the briefing habit is working. There is, as of writing, no audit view of Bot actions. You will not get a product log that the donate page opened. Watch the first three runs.
+Plant a third check in minutes.pdf: a sentence that never happened, labelled in policy.md as a trap. If briefing.md repeats it as fact, the bot failed. If it quotes the sentence and marks COULD-NOT-COMPUTE, the briefing habit is working. There is, as of writing, no audit view of Bot actions outside Enterprise. You will not get a product log that the donate page opened. Watch the first three runs.
 
 Teach-by-demonstration records up to ten minutes, with no microphone audio, produces a draft skill, and covers browser workflows only. It is unavailable on iPhone. Do not demonstrate a donate-form click and expect the draft skill to treat it as a counterexample. The charter has to say never. The plant has to prove it.
 
@@ -248,7 +248,7 @@ If the account is Maya's personal Cursor, a SuperGrok chat login, or a seat Priy
 
 ## Use iPhone only to pause a briefing, then wait for a desk to edit the charter
 
-Maya will not be at the work Mac every time a Friday routine fires. iPhone on iOS 18+ can pause and resume. It cannot edit the charter, inspect history the way desktop can, test, or delete. [How to pause a Grok Bot from iPhone](/blog/how-to-pause-a-grok-bot-on-iphone) is the gesture. [iPhone cannot edit](/blog/grok-bot-iphone-cannot-edit) is the limit.
+Maya will not be at the work Mac every time a Friday routine fires. iPhone on iOS 18+ can pause and resume, read run history, and delete a routine. It cannot edit the charter or test. [How to pause a Grok Bot from iPhone](/blog/how-to-pause-a-grok-bot-on-iphone) is the gesture. [iPhone cannot edit](/blog/grok-bot-iphone-cannot-edit) is the limit.
 
 If thanks.md starts including emails, or briefing.md starts sounding like a vote, pause. Do not resume with a chat that says be careful. Sit at the Mac. Change the charter. Run the plants. Then resume. Do not ask Priya to pause from her phone on Maya's login. Pause is control of the computer. [Scheduling](/blog/grok-bot-scheduling) waits until Friday is boring.
 
@@ -258,7 +258,7 @@ This role ends where the outside world changes. A donate form, even in a mode a 
 
 If Ridgeway's bottleneck is form abandonment, this page will not fix it. If the bottleneck is Luis's ten hours in the CRM, a patch list he applies is the most this role will give you. If the bottleneck is Priya chasing a packet, briefing.md helps only if Maya still sends it.
 
-When you are ready for mail, fill [the pre-flight checklist](/blog/grok-bot-preflight-checklist) on paper and steal the stop from [Inbox Triage](/bots/inbox-triage). When the org invents other jobs, use [the generic scoring page](/blog/pick-the-first-grok-bot-job), then veto donate, CRM write, and public inbox again. When you pay, [the cheapest way in](/blog/cheapest-way-into-grok-bot) is Cursor Pro+ at 60 dollars.
+When you are ready for mail, fill [the pre-flight checklist](/blog/grok-bot-preflight-checklist) on paper and steal the stop from [Inbox Triage](/bots/inbox-triage). When the org invents other jobs, use [the generic scoring page](/blog/pick-the-first-grok-bot-job), then veto donate, CRM write, and public inbox again. When you pay, [the cheapest way in](/blog/cheapest-way-into-grok-bot) is Cursor Pro at 20 dollars.
 
 **Keep reading:** [How to Pick the First Job to Hand a Grok Bot](/blog/pick-the-first-grok-bot-job), [The Pre-Flight Checklist Before Any Grok Bot Connects to Mail](/blog/grok-bot-preflight-checklist), [The Cheapest Way Into Grok Bot Without Restating Stale Prices](/blog/cheapest-way-into-grok-bot).
 
@@ -266,7 +266,7 @@ When you are ready for mail, fill [the pre-flight checklist](/blog/grok-bot-pref
 
 ### Can a grok bot for nonprofits send thank-you emails if a human approves the run afterwards?
 
-An approval is a gate in front of the next proposed click. It does not unsay a message that already left. There is, as of writing, no audit view of Bot actions, so a send you did not mean is reconstructed from Sent, from a donor reply, or from nothing. A grok bot for nonprofits that drafts thank-you copy must leave the mail unsent. You paste the draft into your own client. Connecting the public inbox so the bot can just draft still plants a cookie every other bot on the account can open. Send waits until a dedicated alias and a review habit exist.
+An approval is a gate in front of the next proposed click. It does not unsay a message that already left. There is, as of writing, no audit view of Bot actions outside Enterprise, so a send you did not mean is reconstructed from Sent, from a donor reply, or from nothing. A grok bot for nonprofits that drafts thank-you copy must leave the mail unsent. You paste the draft into your own client. Connecting the public inbox so the bot can just draft still plants a cookie every other bot on the account can open. Send waits until a dedicated alias and a review habit exist.
 
 ### Should a grok bot for nonprofits connect hello@ on day one?
 
@@ -274,7 +274,7 @@ No. hello@ at a two-person shop is rarely a tidy development inbox. It is grant 
 
 ### Can volunteers share one Cursor seat so the org does not pay sixty dollars?
 
-Sharing the eligible seat is sharing the Agent Computer. All bots on that account use one persistent cloud computer assigned to the user, not to a bot. Screens are not security boundaries. A volunteer who signs the org Cursor into a personal laptop puts donor PII on a disk every sibling bot can open. Cursor Hobby and Cursor Pro at twenty dollars do not include Grok Bot. SuperGrok at thirty does not. The cheapest paid door is Cursor Pro+ at sixty. Teams Standard at forty per user is the other paid shape if two eligible humans each need a client. Confirm current prices on the vendor page before you pay.
+Sharing the eligible seat is sharing the Agent Computer. All bots on that account use one persistent cloud computer assigned to the user, not to a bot. Screens are not security boundaries. A volunteer who signs the org Cursor into a personal laptop puts donor PII on a disk every sibling bot can open. Cursor Hobby, the free plan, does not include Grok Bot; every paid Cursor plan does, from Cursor Pro at twenty dollars. An individual SuperGrok counts only once linked. The cheapest paid door is Cursor Pro at twenty. A self-serve Cursor Teams seat is the other paid shape if two eligible humans each need a client. Confirm current prices on the vendor page before you pay.
 
 ### Is donor CRM writeback allowed if the bot only fills fields a human already typed?
 

@@ -43,8 +43,7 @@ says every bot on the account can access that computer. The computer is assigned
 
 What the ticket can still be: a founder HubSpot user, an AE password typed into the Agent Computer after a 403, a contractor portal from a prior Friday. Those are cookie problems. They are not evidence that Grok Bot crossed a security boundary the docs told you not to rely on.
 
-There is no audit view of Bot actions yet
-([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 The product will not name which screen opened HubSpot at 11:40. Keep the screenshot. Do not delete the mail bot to contain it. If the tab is HubSpot in a browser, the secret in play is a cookie. Hosted MCP tokens stay with Cursor's backend. That exception matters when you revoke. It does not rewrite the photo.
 
 ## Point the grok bot screen at the shared browser, never at a private vault
@@ -59,8 +58,7 @@ If you completed a two-factor prompt on Inbox's HubSpot login, you wrote a live 
 [Grok Bot hit a 2FA prompt](/blog/grok-bot-2fa-prompt)
 when the field is on screen. This page is the afternoon after you already typed the code.
 
-Pause on iPhone is not a vault either. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop
-([mobile](https://docs.x.ai/grok-bot/mobile)).
+Pause on iPhone is not a vault either. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)).
 Pause freezes a job. It does not sign HubSpot out.
 
 ## Walk Kian from the 08:10 Inbox HubSpot sign-in to the 11:40 research tab
@@ -113,9 +111,9 @@ He would throw away the mail cadence and keep the CRM session. That is the oppos
 
 Hide first if you need the 08:10 thread. Sign out second. Revoke third. Delete last, and only after you copy any routine steps you still want. Full residue order:
 [how to delete a Grok Bot without leaving sessions](/blog/delete-a-grok-bot-safely).
-Coming soon, and not shipped: an admin Kill that deletes the VM while durable storage is kept
+Enterprise organization admins can Terminate a member's computer; it still keeps the durable disk, logins included
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
-Do not wait for Kill as your HubSpot sign-out.
+Do not wait for Terminate as your HubSpot sign-out.
 
 ## Split HubSpot browser cookies from hosted MCP tokens before you revoke anything
 
@@ -200,7 +198,7 @@ Create a bot named Probe. Give it no connectors. Ask it to visit the HubSpot URL
 If the first row fails, stop arguing with the sidebar. Do not create a HubSpot session just to admire the leak. A second eligible account is a second computer. Confirm live SKUs on
 [cursor.com/pricing](https://cursor.com/pricing)
 and [x.ai/pricing](https://x.ai/pricing)
-before you budget that seat. Cursor Pro+ at $60 a month is the cheapest paid path that includes Grok Bot, checked 25 August 2026. Hobby, Pro at $20, and SuperGrok at $30 do not include it.
+before you budget that seat. Cursor Pro at $20 a month is the cheapest paid path that includes Grok Bot, checked 23 September 2026. Cursor Hobby, the free plan, does not include it, and an individual SuperGrok has to be linked first.
 
 ## Sign HubSpot out in the shared browser, then kill the session on HubSpot's own page
 
@@ -208,7 +206,7 @@ Containment is two vendor clicks, not a roster edit. Take the Agent Computer fro
 
 Do the Probe check after, not before you feel done. Feelings named it a breach. The login page is the pass.
 
-If you completed 2FA as an AE, tell that AE and rotate. If Lead Scout already scrolled contacts, assume those records were seen. There is no audit view to tell you which rows. Delete leftover CSVs and portal URLs. Privacy Mode (Legacy) blocks Grok Bot entirely. It is not a HubSpot sign-out. Do not use it as panic containment.
+If you completed 2FA as an AE, tell that AE and rotate. If Lead Scout already scrolled contacts, assume those records were seen. There is no audit view outside Enterprise to tell you which rows. Delete leftover CSVs and portal URLs. Privacy Mode (Legacy) blocks Grok Bot entirely. It is not a HubSpot sign-out. Do not use it as panic containment.
 
 ## Keep HubSpot off this VM when Lead Scout must scrape public pages the same week
 
@@ -235,7 +233,7 @@ If the object in your head is the window itself, a Figma cookie assigned to a na
 
 Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later
 ([FAQ](https://docs.x.ai/grok-bot/faq)).
-There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If you have no supported desktop, you cannot take over the computer to sign HubSpot out. That is a platform miss, not a leftover dashboard. Stay here when the photo is a named research worker sitting in a CRM.
+There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). If you have no supported desktop, open the computer from the phone app and take over to sign HubSpot out. A missing desktop is a platform miss, not a leftover dashboard. Stay here when the photo is a named research worker sitting in a CRM.
 
 **Keep reading:** [One Computer, Many Screens: What Isolation You Actually Have](/blog/grok-bot-one-computer-many-screens), [One Computer, Many Screens: What Grok Bot Actually Isolates](/blog/grok-bot-shared-computer-security), [Grok Bot Login Failed: Cursor Auth, Eligibility, and Privacy Mode](/blog/grok-bot-login-failed).
 
@@ -251,7 +249,7 @@ No. Deleting a bot removes that bot, its conversation, and its routines. Routine
 
 ### Is a leftover HubSpot tab on Lead Scout a hack of Grok Bot?
 
-Usually no. The ordinary incident is a leftover cookie from a sibling bot, most often Inbox signing into HubSpot during a mail run. Grok Bot has no audit view of Bot actions yet, so the product will not hand you a log that names which screen opened the CRM. The screen you are watching is the evidence. A datacenter IP can also make HubSpot challenge the session, because egress addresses are static and some services flag them. That is a network fact, not proof of intrusion. Sign out, revoke, then decide whether HubSpot belongs on this computer at all.
+Usually no. The ordinary incident is a leftover cookie from a sibling bot, most often Inbox signing into HubSpot during a mail run. Grok Bot has no audit view of Bot actions outside Enterprise, so the product will not hand you a log that names which screen opened the CRM. The screen you are watching is the evidence. A datacenter IP can also make HubSpot challenge the session, because egress addresses are static and some services flag them. That is a network fact, not proof of intrusion. Sign out, revoke, then decide whether HubSpot belongs on this computer at all.
 
 ### How do I keep Lead Scout out of HubSpot without buying a second Cursor account?
 

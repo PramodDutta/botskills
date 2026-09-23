@@ -15,7 +15,8 @@ are not the same kind of object. One is a product you operate. The other is a
 set of parts you assemble into something you then have to operate yourself.
 The right pick depends almost entirely on whether you want to be the operator.
 
-Everything below was checked on 2026-08-25 against
+Everything below was checked on 2026-08-25, with the audit rows rechecked
+on 2026-09-23, against
 [the Grok Bot docs](https://docs.x.ai/grok-bot/faq) and
 [Anthropic's Claude Code and Agent SDK docs](https://code.claude.com/docs/en/overview).
 Both move weekly, so verify before you build a budget or a rollout on any line
@@ -53,7 +54,7 @@ decision into a staffing question rather than a technical one.
 |---|---|---|
 | A machine that survives between sessions | Included, a managed Linux VM that xAI operates and patches | You provision, patch and monitor the host or container |
 | An approvals surface a non-engineer can use | Included, and it stops a proposed action before it runs | You write the permission callback and whatever interface wraps it |
-| An immutable action log | Not available, the docs state an audit view does not exist yet | Absent until you write it, and then exactly the shape your auditor asked for |
+| An immutable action log | Not on individual or self-serve Teams plans. Enterprise has audit logs and Action Recording | Absent until you write it, and then exactly the shape your auditor asked for |
 | A hard spend ceiling | Not available, the docs state there is no bot-specific spend cap yet | You meter it, because you are the one calling the API |
 | Choosing the model | Not available, and explicitly not planned | Per call, per session, per routine |
 
@@ -99,7 +100,7 @@ gets logged.
 With Grok Bot the harness is the product. That is the point of buying it. You
 get approvals, routines, teach-by-demonstration, and a machine that stays alive
 between sessions, none of which you had to build. You also inherit the gaps.
-The docs note that an audit view of bot actions does not exist yet, and that
+The docs note that an audit view of bot actions does not exist outside Enterprise, and that
 there is no bot-specific spend cap yet. You cannot patch either, because you do
 not own the harness.
 
@@ -314,7 +315,7 @@ to pick.
 | Thirty days in | The Grok Bot build | The Claude build |
 |---|---|---|
 | Runs you can still inspect | The 20 most recent records the app keeps per routine | Every run, in whatever store you wrote it to |
-| What you can prove about a specific click | Nothing beyond the transcript, since the docs state an audit view does not exist yet | Whatever your log captured, because you defined the fields |
+| What you can prove about a specific click | Nothing beyond the transcript. Even Enterprise Action Recording keeps counts and durations for computer use, not the clicks | Whatever your log captured, because you defined the fields |
 | Where the site logins live | In the shared browser profile on the account's one computer, reachable by every other bot on it | Wherever your secret store puts them, scoped to this job |
 | Which model produced last week's digest | Whichever the fixed set served, with billing following it | The one you named, unchanged unless you changed it |
 | What happens if you delete the bot | Its routines go with it, and the shared files and sessions stay behind | Nothing, the code is in your repository |
@@ -328,7 +329,7 @@ of these builds.
 
 The best argument against the product is that a hosted agent is a dependency with
 someone else's roadmap attached, and the gaps above are not gaps you can close. A
-missing audit view stays missing until a vendor decides otherwise, the missing
+missing audit view stays missing outside Enterprise until a vendor decides otherwise, the missing
 spend ceiling stays missing, and the fixed model set is documented as a choice
 with no plan to reverse it. On the SDK, none of those are anybody's decision but
 yours.
@@ -374,7 +375,7 @@ these rows have one defensible answer, and about half close the decision alone.
 |---|---|---|---|
 | Something running today, set up by a non-engineer | Minutes, in an app | Hours to days, in code | Grok Bot |
 | A named model that does not change underneath you | No picker, and none planned | Named per call, session or routine | Claude |
-| An immutable log of every action | Audit view does not exist yet | Absent until you write it | Claude |
+| An immutable log of every action | Enterprise only, as audit logs and Action Recording | Absent until you write it | Claude |
 | A hard ceiling on spend | No bot-specific spend cap yet | You meter it, because you call the API | Claude |
 | A logged-in browser that survives a pause | Persistent cloud computer with the sessions intact | Your environment, and therefore your uptime | Grok Bot |
 | Execution on hardware you control, for data residency | Not eligible, the computer is not yours | Your process, container, or self-hosted | Claude |

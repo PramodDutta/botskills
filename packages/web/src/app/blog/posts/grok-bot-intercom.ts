@@ -192,8 +192,9 @@ Grant the first three rows. Everything from "reply" downward is a decision to
 make deliberately, in a meeting, not by accepting a default bundle.
 
 Two Grok Bot realities belong in that decision. There is no audit view of bot
-actions yet, so if a customer reports an odd message, the reconstruction runs
-on Intercom's history rather than anything the bot kept. And approvals gate a
+actions outside Enterprise, so on an individual or self-serve Teams account,
+if a customer reports an odd message, the reconstruction runs on Intercom's
+history rather than anything the bot kept. And approvals gate a
 proposed action without reversing completed work, the right control for a send
 precisely because it is the only moment that exists. The
 [permissions walkthrough](/blog/grok-bot-permissions-explained) goes through
@@ -217,9 +218,9 @@ Intercom does provide a redaction call for a conversation part, so the record
 can be edited. That is useful and it is not an undo. Redaction reaches the
 thread, not the email already in somebody's mail client.
 
-Then find out whether it was the first one. Grok Bot has no audit view of its
-own actions yet, so the only complete list of what your bot sent lives in
-Intercom, filtered to the admin account you handed over. Run that filter the
+Then find out whether it was the first one. Outside Enterprise, Grok Bot has
+no audit view of its own actions, so the only complete list of what your bot
+sent lives in Intercom, filtered to the admin account you handed over. Run that filter the
 day you set up the bot, so you know where to look before you need it.
 
 ## The hardest line in this series, and why it holds here

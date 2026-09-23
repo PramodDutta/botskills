@@ -47,7 +47,7 @@ For temporary changes, create a new version and name the reviewer. Do not let th
 
 The first right in a PTO handover is permission to pause covered routines. Pausing prevents a late run from overlapping a manual recovery. The second right is inspection of named artifacts. Recovery authority comes third and should be bounded by checkpoints.
 
-On iPhone, Grok Bot allows pause and resume, but editing, history, testing, and deleting require desktop. If Rhea will travel with only a phone, name a desktop operator for inspection. Do not turn phone access into permission to guess that a folder is empty.
+On iPhone, Grok Bot allows pause and resume, but Editing and testing a routine still need the desktop app. If Rhea will travel with only a phone, name a desktop operator for inspection. Do not turn phone access into permission to guess that a folder is empty.
 
 The backup may deny or leave an unclear approval pending. They must not accept a payload they cannot verify merely to keep the schedule moving.
 
@@ -239,7 +239,7 @@ No. A handover should use approved organizational access or a separately authori
 
 ### Can the backup edit routines from an iPhone?
 
-No. Verified Grok Bot documentation says iPhone users can pause and resume, while editing, history, testing, and deleting require desktop. A traveling backup can perform the urgent safe action by pausing, then hand inspection and editing to the named desktop operator. The handover should make this split explicit. The phone user must not infer file state they cannot inspect or issue a fresh run merely because the expected destination is empty.
+No. Verified Grok Bot documentation says iPhone users can pause and resume, while Editing and testing a routine still need the desktop app. A traveling backup can perform the urgent safe action by pausing, then hand inspection and editing to the named desktop operator. The handover should make this split explicit. The phone user must not infer file state they cannot inspect or issue a fresh run merely because the expected destination is empty.
 
 ### How should ownership return after PTO?
 

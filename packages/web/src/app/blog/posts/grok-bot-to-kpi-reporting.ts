@@ -452,7 +452,7 @@ Two operational notes. A routine belongs to a single bot, and the app keeps only
 the 20 most recent run records for it, so roughly five months of weekly history
 before the earliest runs age out. If the historical series matters, have the bot
 append each week's rows to a document you own rather than relying on run history.
-There is no audit view of bot actions as of writing, which makes your own
+There is no audit view of bot actions outside Enterprise, which makes your own
 appended file the only durable record of what was reported and when.
 
 And watch the cost shape. A report that queries six systems, retries failures,

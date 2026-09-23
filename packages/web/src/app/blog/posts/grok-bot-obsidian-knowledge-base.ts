@@ -262,8 +262,8 @@ from a draft someone still has open.
 And you get a record of bot activity that does not depend on your runtime
 providing one. That matters concretely with Grok Bot: as of writing, the
 documentation states that an audit view of Bot actions
-[does not exist yet](https://docs.x.ai/grok-bot/teams-and-enterprises). If you
-want to know what your bots changed last week, a versioned vault is currently
+[exists only on Enterprise](https://docs.x.ai/grok-bot/teams-and-enterprises). If
+you are not on Enterprise and want to know what your bots changed last week, a versioned vault is currently
 the most reliable answer available to you.
 
 Two practical notes. Commit on a schedule rather than on every write, or a

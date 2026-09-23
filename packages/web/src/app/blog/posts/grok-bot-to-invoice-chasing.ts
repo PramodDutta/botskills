@@ -379,7 +379,7 @@ exactly as intended.
 Read the unclear list every single week, without exception. It is short, it
 takes under a minute, and it is where the discrepancies live. An unclear list
 nobody reads is just a place where problems go to be silently ignored, and with
-no audit view of bot actions available as of writing, the ledger of what
+no audit view of bot actions outside Enterprise, the ledger of what
 happened is the one you keep.
 
 ## Answer the objection that a draft-only chaser saves no time

@@ -149,8 +149,7 @@ the channel is a shared credential. Read
 treat a dedicated YouTube bot as isolation.
 
 Hosted MCP tokens stay with Cursor's backend. A browser login to
-studio.youtube.com is a cookie on the disk you share. There is no audit view of
-Bot actions yet. You will not get a log of which screen used the session.
+studio.youtube.com is a cookie on the disk you share. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. You will not get a log of which screen used the session.
 
 | What you signed into on the computer | Who can open it next | What you do instead |
 |---|---|---|
@@ -300,8 +299,8 @@ Publish once, on purpose.
 It wins on typing time. It loses on the session. Filling Studio requires the
 channel login on the shared computer. Every other bot inherits that cookie.
 [Lead Scout](/bots/lead-scout) does not need YouTube to rank a page. It can
-still open a tab that already has the session. There is no audit view of which
-screen used it.
+still open a tab that already has the session. Outside Enterprise there is no
+audit view of which screen used it.
 
 It also loses on the form. Draft and Publish are neighbors. A markdown file in
 \`/workspace/youtube/packets/\` has no Publish neighbor. You cannot complete that
@@ -313,7 +312,7 @@ upload still creates an object on the channel and still required the login.
 
 ## Prove Studio stayed closed with a check that fails if studio.youtube.com opened
 
-There is no audit view of Bot actions yet. Proof is negative space plus a
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Proof is negative space plus a
 planted check.
 
 After a run, the dated packet must exist, with three title options per cut and
@@ -434,7 +433,7 @@ one.
 
 ### How do I prove the bot never published?
 
-There is no audit view of Bot actions yet. After the run, the dated packet file
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. After the run, the dated packet file
 must exist. studio.youtube.com and youtube.com/upload must be absent from that
 screen's browser. On your laptop, Studio must show no new processing video, no
 new scheduled premiere, and no new Community post in the window. A planted

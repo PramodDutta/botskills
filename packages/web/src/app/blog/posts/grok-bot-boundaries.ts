@@ -179,7 +179,7 @@ The cost was not the message, which was close to correct. It was that the reply
 committed the company to a resolution timeline nobody had agreed to, in writing,
 to a customer already mid-complaint. Approvals do not help here: an approval
 controls the proposed action and does not reverse completed work, so there was
-nothing left to approve. There is no audit view of bot actions yet either, so
+nothing left to approve. There is no audit view of bot actions outside Enterprise either, so
 the bot's own summary was the only account of what happened.
 
 The rewrite is one sentence longer and closes the whole class:
@@ -269,7 +269,7 @@ work surfaces rather than separate security boundaries, and that you should not
 use separate bots as a security boundary. The intuitive fix, isolating the bot
 that reads untrusted mail in a bot of its own, isolates nothing.
 
-Second, there is no audit view of bot actions yet. If an injection succeeds,
+Second, individual accounts have no audit view of bot actions. If an injection succeeds,
 your record of it is the summary written by the manipulated run, which argues
 for boundaries that fail closed. The scope-level version of this is in
 [the case for least privilege on every connection](/blog/least-privilege-bots),
@@ -302,14 +302,17 @@ sending. It cannot stop a bot believing an email that told it to, and it will
 not notice that the sixteenth correct action this hour was one too many.
 
 Spend is where people most often assume a setting exists. As of writing there is
-no Grok Bot specific spend cap, and subscriptions include a weekly usage
-allowance with overflow billed on demand, so the ceiling on a runaway loop is
-whatever your charter and schedule say. Write the numbers down: items per run,
-runs per day, what the bot does on hitting them.
+no Grok Bot specific spend cap. Subscriptions include a weekly usage
+allowance, overflow is billed on demand, and the only dollar ceiling is the
+account-level On-demand monthly limit, which a run already in progress can
+finish past. So the practical ceiling on a runaway loop is whatever your
+charter and schedule say. Write the numbers down: items per run, runs per day,
+what the bot does on hitting them.
 [The guide to bot cost control](/blog/bot-cost-control) works that through.
 
-One control is announced but not shipped as of writing: a team level ceiling on
-local execution offering Never, Ask every time, and Always, where members can
+One control that was announced has since shipped: a team level ceiling on
+local execution offering Never allow, Ask every time, and Always allow, which
+team admins on Teams and Enterprise can set, and where members can
 choose stricter but not looser. That is the right model for how the two
 mechanisms relate. The setting fixes the widest anyone may go; the charter goes
 narrower.

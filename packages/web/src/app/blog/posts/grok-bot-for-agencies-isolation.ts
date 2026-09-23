@@ -49,25 +49,24 @@ You did not get hacked. You reused a browser the way the product is built. A scr
 | Thursday 16:55 | You, after the CSV | The job is done, the session is "theirs" | The same cookie, still live |
 | Friday 09:10 | Client B research bot | Public pages, maybe an ads library | Client A's admin, already authenticated |
 
-A bot you create next week with an empty connection list still sits on this computer. Deleting the reporting bot later does not remove the session. There is no audit view of bot actions yet
-([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
+A bot you create next week with an empty connection list still sits on this computer. Deleting the reporting bot later does not remove the session. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 Confirm current Shopify login behaviour on the vendor's own page before you brief a client. A browser login on this computer is a roster login.
 
 ## Price one eligible seat per client against the leak you are buying
 
 The computer follows the user account. For an agency that means a spreadsheet: one eligible Grok Bot seat per client whose admin must never sit next to another client's admin.
 
-The cheapest paid path is Cursor Pro+ at $60 a month. Teams Standard at $40 per user per month also includes Grok Bot. So do Teams Premium, Cursor Ultra, SuperGrok Plus at $100 a month, SuperGrok Heavy, and a one-time trial. Cursor Hobby, Cursor Pro at $20, and SuperGrok at $30 do not. Confirm live numbers on [cursor.com/pricing](https://cursor.com/pricing) and [x.ai/pricing](https://x.ai/pricing) before you quote a client.
+The cheapest paid path is Cursor Pro at $20 a month. A self-serve Cursor Teams seat also includes Grok Bot, with no Premium seat needed. So do Cursor Pro+, Cursor Ultra, a linked individual SuperGrok, SuperGrok Plus or SuperGrok Heavy, and a one-time trial. Cursor Hobby and SuperGrok Lite do not. Confirm live numbers on [cursor.com/pricing](https://cursor.com/pricing) and [x.ai/pricing](https://x.ai/pricing) before you quote a client.
 
-| Client computers you actually need | If each is Cursor Pro+ | If each is Teams Standard | What you isolated | What you did not buy |
+| Client computers you actually need | If each is Cursor Pro | If each is Cursor Pro+ | What you isolated | What you did not buy |
 |---|---|---|---|---|
-| 1 (the whole agency on one user) | $60 / mo | $40 / user / mo | Nothing between clients | Convenience, one cookie jar |
-| 4 | $240 / mo | $160 / mo | Four computers | Any console you still paste across accounts |
-| 8 | $480 / mo | $320 / mo | Eight computers | A cheaper named-bot story |
+| 1 (the whole agency on one user) | $20 / mo | $60 / mo | Nothing between clients | Convenience, one cookie jar |
+| 4 | $80 / mo | $240 / mo | Four computers | Any console you still paste across accounts |
+| 8 | $160 / mo | $480 / mo | Eight computers | A cheaper named-bot story |
 
 Two user accounts are two computers. Staff who copy a CSV across those accounts have rebuilt the leak by hand. The product cannot stop a human with two windows. It can stop a research bot from inheriting a cookie that does not exist on its machine.
 
-A trial is not twelve isolated computers. There is no Grok Bot-specific spend cap. Overflow after the weekly allowance is on-demand from model and token cost, with no published dollar figure. Bill shape is in
+A trial is not twelve isolated computers. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Overflow after the weekly allowance is on-demand from model and token cost, with no published dollar figure. Bill shape is in
 [Grok Bot cost](/blog/grok-bot-cost).
 If the client will not pay for a second seat, do not log their console into the shared computer.
 
@@ -125,7 +124,7 @@ The instinct is to delete the Client A bots and call the environment clean. Dele
 | Order CSVs and screenshots | No | Shared filesystem | Delete the files, including copies another bot made |
 | Hosted MCP sign-in tokens | Not stored on the computer | Cursor's backend | Revoke the connection in settings |
 
-Copy routine text you still need. Revoke at the source first. Sign out in the shared browser. Delete exports. Delete the bots last. If you delete first, you lose the cheapest list of what that bot was connected to: its own charter. Do not claim in an offboarding letter that you reviewed a product log. There is no audit view yet.
+Copy routine text you still need. Revoke at the source first. Sign out in the shared browser. Delete exports. Delete the bots last. If you delete first, you lose the cheapest list of what that bot was connected to: its own charter. Do not claim in an offboarding letter that you reviewed a product log. There is no audit view outside Enterprise.
 
 [Churn Watch](/bots/churn-watch)
 never pings the customer. That is the right success-bot boundary. It is not an offboarding tool. Offboarding is a person with a checklist.
@@ -198,13 +197,13 @@ Three setups show up in agency Slack. Only two of them match the docs.
 
 | Setup | Isolates the computer? | Closes the Shopify cookie path? | Cost shape | Honest sentence to a client |
 |---|---|---|---|---|
-| One eligible account per client | Yes | Yes, unless a human copies data across | Another Pro+ or Teams seat (confirm live pricing) | We do not run your admin on a machine that holds another client |
+| One eligible account per client | Yes | Yes, unless a human copies data across | Another Pro or Teams seat (confirm live pricing) | We do not run your admin on a machine that holds another client |
 | One account, hosted MCP and exports only, no client consoles | No | Yes, if nobody completes a client login | One eligible seat | We never hold your console in our bot browser |
 | Named bots per client, consoles signed in "for that bot" | No | No | One seat, and a leak | We have labels. We do not have walls |
 
 Row three is the default and the row the docs warn you off. If you are already there, move: buy row one for the clients whose contracts require it, or execute row two this week. Sign out, revoke, delete leftover CSVs, and stop the next 2FA prompt. Row two is cheaper and easier to lie about. Treat a client login on this computer as an incident. Row one is expensive and honest. It is the only option that survives a research bot you have not invented yet.
 
-Approvals do not rescue row three. An approval gates a proposed action. It does not reverse completed work, and it does not unspread a cookie. There is no spend cap and no model picker that turns one computer into two.
+Approvals do not rescue row three. An approval gates a proposed action. It does not reverse completed work, and it does not unspread a cookie. There is no per-Bot spend cap and no model picker that turns one computer into two.
 
 ## Answer the partner who says named bots already isolate the roster
 
@@ -212,7 +211,7 @@ The strongest objection inside an agency is managerial. The partner says: we alr
 
 Part of that is true. Named bots isolate review surfaces. Job scope is worth naming. Routines stay on that bot. The sidebar is a staffing aid.
 
-None of that is credential isolation. Codes of conduct fail when a junior completes 2FA to be helpful. Naming schemes fail when the research bot opens the same browser. Noticing a leaked order number in a draft is detection after the session already existed. You also have no product audit view, so "we would notice" is a hope about whoever was on review that morning.
+None of that is credential isolation. Codes of conduct fail when a junior completes 2FA to be helpful. Naming schemes fail when the research bot opens the same browser. Noticing a leaked order number in a draft is detection after the session already existed. Outside Enterprise you also have no product audit view, so "we would notice" is a hope about whoever was on review that morning.
 
 Where the objection wins: you are truly on the exports-and-hosted-MCP row. No client console has ever been typed into this computer. Charge the client for the slower export path if you must. Do not charge them for a vault you did not build.
 
@@ -244,7 +243,7 @@ A shop that has never typed a client password into the Agent Computer, and that 
 
 A shop whose MSA, DPA, or insurer requires isolated processing for each tenant should buy row one for those tenants. This article is not legal advice. It is a translation of the public docs: the computer is assigned to the user account, not to the bot.
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop, so do not run offboarding from a phone. Supported desks are macOS and Windows. There are Linux desktop and Android apps as of September 2026; iPad is still not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app, so do not run offboarding from a phone. Supported desks are macOS, Windows, and Linux. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later) ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 The bot computer is a managed Linux VM running a non-root user. That is not a Linux desktop you install, and it does not give Client A a private cookie jar. Privacy Mode (Legacy) on a Cursor workspace blocks Grok Bot entirely. Check it before you promise a bot on a client's workspace.
 
 ## Carry a client departure list that survives deleting the bot
@@ -272,7 +271,7 @@ No. Every bot on one Grok Bot account shares a single persistent cloud computer 
 
 ### Is one Cursor account per client the only real computer isolation for an agency?
 
-Yes, if what you need is a second computer. The cloud computer follows the user account, so two eligible accounts are two computers. That is expensive: Cursor Pro+ is the cheapest paid path at $60 a month per account as of the dated public pages, and Teams Standard is $40 per user per month, both of which you should confirm live before quoting. The other honest option is not a second computer. It is never logging client consoles into the shared one, and using hosted MCP plus exports only. Named bots on one account are not a third isolation mode.
+Yes, if what you need is a second computer. The cloud computer follows the user account, so two eligible accounts are two computers. That costs a seat per client: Cursor Pro is the cheapest paid path at $20 a month per account as of 23 September 2026, and a self-serve Cursor Teams seat covers each member, both of which you should confirm live before quoting. The other honest option is not a second computer. It is never logging client consoles into the shared one, and using hosted MCP plus exports only. Named bots on one account are not a third isolation mode.
 
 ### Can hosted MCP and exports replace logging into client consoles on the shared computer?
 
@@ -280,6 +279,6 @@ They can close the cookie path if you actually stop logging in. Hosted MCP sign-
 
 ### If we delete the Client A bots, is their Shopify login gone from the agency machine?
 
-No. Deleting a bot removes that bot and its routines. It does not remove shared-computer files or browser sessions the bot left signed in. Sign out on the Agent Computer, revoke access at the store (confirm on the vendor's current security page), delete leftover CSVs, and revoke any hosted MCP connection for that client. There is no audit view of bot actions yet, so do not claim you reviewed a product log. Prove the session is gone by opening the store URL from a throwaway bot and seeing a login screen.
+No. Deleting a bot removes that bot and its routines. It does not remove shared-computer files or browser sessions the bot left signed in. Sign out on the Agent Computer, revoke access at the store (confirm on the vendor's current security page), delete leftover CSVs, and revoke any hosted MCP connection for that client. There is no audit view of bot actions outside Enterprise, so do not claim you reviewed a product log. Prove the session is gone by opening the store URL from a throwaway bot and seeing a login screen.
 `,
 };

@@ -3,7 +3,7 @@ import type { BlogPost } from './index';
 export const post: BlogPost = {
   title: 'Grok Bot for Enterprises: What the Waitlist Actually Means',
   description:
-    'Grok Bot enterprise access is not a documented SKU with a price on this site. Teams Standard and Premium include Bot per seat. Confirm any waitlist on Cursor or xAI.',
+    'Grok Bot enterprise access runs through the Cursor account team, not a form on this site. Every self-serve Teams member already has Bot. Confirm any waitlist live.',
   date: '2026-08-27',
   category: 'Guide',
   content: `
@@ -11,9 +11,9 @@ export const post: BlogPost = {
 
 A screenshot labeled grok bot enterprise waitlist landed in the security channel, and the next message asked whether that is a SKU with a form you can submit this afternoon.
 
-It is not, not on this site. This page will not invent a Grok Bot Enterprise product, a waitlist form, a SOC 2 report, an SSO spec, or a ship date. Cursor Teams Standard at forty dollars per user per month and Teams Premium at one hundred twenty per user already include Grok Bot per seat, checked as of 25 August 2026 against the [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and [Cursor team pricing](https://cursor.com/docs/account/pricing). Confirm those numbers the morning you quote them. If a vendor page currently shows waitlist language, that is their live copy.
+It is not, not on this site. This page will not invent a Grok Bot Enterprise product, a waitlist form, a SOC 2 report, an SSO spec, or a ship date. Every member of a self-serve Cursor Teams plan already has Grok Bot, checked on 23 September 2026 against the [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and [Cursor team pricing](https://cursor.com/docs/account/pricing). The same FAQ says Enterprise access is rolling out and sends Enterprise customers to their Cursor account team. Confirm seat prices the morning you quote them. If a vendor page currently shows waitlist language, that is their live copy.
 
-The rest of this page is the CISO packet: what is documented, what security will still hate, and the worked case where Dana asks for a dedicated VM per bot and an audit log. Neither of those is the product. [Grok Bot on Cursor Teams Standard](/blog/grok-bot-teams-standard) is the seat math. [Do not use separate bots as a security boundary](/blog/grok-bot-not-a-sandbox) is the isolation fact. [Grok Bot has no audit view yet](/blog/grok-bot-no-audit-log-yet) is the receipt fact.
+The rest of this page is the CISO packet: what is documented, what security will still hate, and the worked case where Dana asks for a dedicated VM per bot and an audit log. The first is not the product on any plan. The second exists only on Cursor Enterprise, as audit logs and Action Recording. [Grok Bot on Cursor Teams Standard](/blog/grok-bot-teams-standard) is the seat math. [Do not use separate bots as a security boundary](/blog/grok-bot-not-a-sandbox) is the isolation fact. [Grok Bot has no audit view outside Enterprise](/blog/grok-bot-no-audit-log-yet) is the receipt fact.
 
 ## Treat waitlist as marketing copy you confirm on the vendor, never as a SKU
 
@@ -25,32 +25,32 @@ This article hedges the word on purpose. If you saw grok bot enterprise waitlist
 |---|---|---|
 | grok bot enterprise waitlist | Marketing language until a vendor page says otherwise today | Cursor and xAI, not a recap, not a PNG |
 | Grok Bot Enterprise as a priced SKU | Not documented here. No price, no form, no date | The same live pages. If they still have no SKU, there is no SKU |
-| Teams Standard includes Grok Bot | Yes. $40 per user per month as of 25 August 2026 | [Cursor team pricing](https://cursor.com/docs/account/pricing) and the FAQ |
-| Teams Premium includes a better Bot | Same Bot product, $120 per user per month | Same pages. Premium is a richer Cursor SKU, not a Bot SKU |
+| Teams Standard includes Grok Bot | Yes. Every self-serve Teams member has it, checked 23 September 2026 | [Cursor team pricing](https://cursor.com/docs/account/pricing) and the FAQ |
+| Teams Premium includes a better Bot | Same Bot product. No Premium seat is needed for access | Same pages. Premium is a richer Cursor SKU, not a Bot SKU |
 
 Screenshot the vendor page, not the tweet. If the live page and this article disagree, the live page wins.
 
-## Read Teams Standard and Premium as the documented company-shaped doors
+## Read Cursor Teams as the documented company-shaped doors
 
-Companies already have a documented path into Grok Bot, and it is not a mystery SKU. Cursor Teams Standard and Cursor Teams Premium both include Grok Bot. Eligibility widened on 21 August 2026 to SuperGrok Plus, Cursor Pro+, and all Cursor Teams plans ([xAI announcement](https://x.ai/news/grok-bot-more-plans)). Beta launched 11 August 2026. Those dates are product history, not a waitlist close date.
+Companies already have a documented path into Grok Bot, and it is not a mystery SKU. Cursor Teams Standard and Cursor Teams Premium both include Grok Bot, for every member of a self-serve Teams plan, and Cursor Enterprise enables it through the account team. Eligibility widened on 21 August 2026 to SuperGrok Plus, Cursor Pro+, and all Cursor Teams plans ([xAI announcement](https://x.ai/news/grok-bot-more-plans)). Beta launched 11 August 2026. Those dates are product history, not a waitlist close date.
 
 The include is per seat. Buy twelve Teams Standard seats and you bought twelve eligibility stamps, not one company Bot farm. Each eligible user gets one persistent cloud computer assigned to that user account, not to a bot ([computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)).
 
-Premium at one hundred twenty does not attach a fleet console, a model picker, a spend cap, a per-bot VM, or an audit view. After the access check passes, Standard and Premium receive the same documented Bot. [Grok Bot on Cursor Teams Standard](/blog/grok-bot-teams-standard) is the invoice page. Stay here if the question is whether you must wait for something named Enterprise before anyone may run a bot.
+Premium does not attach a fleet console, a model picker, a spend cap, a per-bot VM, or an audit view. After the access check passes, Standard and Premium receive the same documented Bot. [Grok Bot on Cursor Teams Standard](/blog/grok-bot-teams-standard) is the invoice page. Stay here if the question is whether you must wait for something named Enterprise before anyone may run a bot.
 
-Other eligible doors still exist: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, and a one-time trial. Cursor Hobby and Cursor Pro at twenty dollars do not include Grok Bot. SuperGrok at thirty does not. SuperGrok Plus at one hundred does. SuperGrok Heavy is eligible; its price is not a figure this page will print. Confirm numbers on [cursor.com/pricing](https://cursor.com/pricing) and [x.ai/pricing](https://x.ai/pricing) the morning you brief finance. Privacy Mode (Legacy) blocks Grok Bot entirely.
+Other eligible doors still exist: every paid individual Cursor plan (Pro, Pro+, Ultra), a linked individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription, and a one-time trial. Cursor Hobby, the free plan, does not include Grok Bot; every paid Cursor plan does, from Cursor Pro at twenty dollars. SuperGrok Lite does not, and SuperGrok Team and Enterprise cannot link. The SuperGrok prices are not figures this page will print. Confirm numbers on [cursor.com/pricing](https://cursor.com/pricing) and [x.ai/pricing](https://x.ai/pricing) the morning you brief finance. Privacy Mode (Legacy) blocks Grok Bot entirely.
 
 ## Refuse to invent a Grok Bot Enterprise SKU, a form, or a ship date
 
 The docs page is titled teams and enterprises. A title is not a catalog SKU. Coming-soon sentences on that page are not shipped features.
 
-Two items the teams docs describe as coming rather than present: a team-level ceiling on local execution, and an administrator Kill that would delete the virtual machine while durable storage is kept. Neither has a ship date we can quote. Kill, if it ships, is a halt. A halt is not an audit log. Durable storage kept means files you hoped would vanish may still be there. Do not fill a questionnaire with those lines as if they were controls you have today. Do not tell a CISO that Enterprise will add them.
+Two items the teams docs described in August as coming have since shipped. Team admins on Teams and Enterprise can cap local execution. Enterprise organization admins can Terminate a member's computer from Grok Bot Computers on the Cursor dashboard, and it still keeps the durable disk. Terminate is a halt. A halt is not an audit log. Durable storage kept means files you hoped would vanish may still be there. Fill a questionnaire with those lines only for the plan you hold: the ceiling on Teams or Enterprise, Terminate on Enterprise alone.
 
 SOC 2 is a report a vendor publishes, or it is not. This site does not have a Grok Bot SOC 2 letter to quote. This page will not specify SAML, OIDC, SCIM, or an IdP. Organization login belongs on Cursor's current account pages. Mapping it onto a Grok Bot Enterprise tenant is invention. The honest cells are empty cells plus a URL.
 
 ## Count one computer per person even when the buyer is a company
 
-Enterprise buyers hear Linux VM and picture a fleet they can subnet. The Agent Computer is a managed Linux VM. The Bot process runs as a non-root user. That is not a Linux desktop client, and it is not one VM per named bot. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. Android joined the list in September 2026; iPad is still not on it ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
+Enterprise buyers hear Linux VM and picture a fleet they can subnet. The Agent Computer is a managed Linux VM. The Bot process runs as a non-root user. That is not a Linux desktop client, and it is not one VM per named bot. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. Android joined the list in September 2026, and the iOS app also runs on iPad with iPadOS 18 or later ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 
 The isolation unit is the user account. All bots on that account share one persistent cloud computer. Ten named bots are ten screens and one disk. Two people on Teams Standard are two computers. Parking twelve bot names on Dana's account still leaves you with Dana's computer.
 
@@ -70,14 +70,14 @@ Dana is VP of Security at a forty-person B2B shop that already pays Cursor for t
 
 Tuesday, 10:05. You sit with the FAQ, the computer page, and the teams page open. You do not sit with a form.
 
-She wants each bot on its own VM so research cannot read production keys. The computer is assigned to the user account, not to a bot. Screens are not vaults. Separate bots are not a security boundary. She wants a year of actions in the SIEM. An audit view of Bot actions does not exist yet. Twenty run records per routine are a sliding window, not a ledger. Pause is a stop. Coming-soon Kill is not shipped, and a halt is not a history. [Grok Bot has no audit view yet](/blog/grok-bot-no-audit-log-yet) is how you keep a packet yourself.
+She wants each bot on its own VM so research cannot read production keys. The computer is assigned to the user account, not to a bot. Screens are not vaults. Separate bots are not a security boundary. She wants a year of actions in the SIEM. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Twenty run records per routine are a sliding window, not a ledger. Pause is a stop. Enterprise admin Terminate is a halt, and a halt is not a history. [Grok Bot has no audit view outside Enterprise](/blog/grok-bot-no-audit-log-yet) is how you keep a packet yourself.
 
-She says then we wait for the waitlist. Waiting does not mint a VM per bot or a log. If those two rows are hard requirements, Grok Bot is the wrong runtime today. If the company can operate with one computer per person, send on ask, and a company-owned packet, the seats already include Bot.
+She says then we wait for the waitlist. Waiting does not mint a VM per bot on any plan. The log exists only on Cursor Enterprise, and it arrives through the account team, not a waitlist. If a VM per bot is a hard requirement, Grok Bot is the wrong runtime today. If the company can operate with one computer per person, send on ask, and a company-owned packet, the seats already include Bot.
 
 | Dana's row | What she wanted | What the product is | Honest cell |
 |---|---|---|---|
 | Dedicated VM per bot | One machine, one bot, keys cannot cross | One machine per user. Every bot on that user shares it | No. Isolation unit is the account |
-| Audit log of Bot actions | Who did what, when, exportable, retained | No audit view yet. 20 run records per routine | No product log. We keep a packet |
+| Audit log of Bot actions | Who did what, when, exportable, retained | No audit view outside Enterprise. 20 run records per routine | No product log on Teams. We keep a packet |
 | Per-bot credential vault | Research cannot see ~/.aws from deploy | Shared cookies, files, CLI creds | No. Docs forbid using bots as a boundary |
 | Org-owned routines | Monday job outlives the person | Routine glued to one Bot. Delete Bot, clock dies | No team-level routines |
 
@@ -91,11 +91,11 @@ Buying the seats does not make the architecture nicer. A security team that alre
 |---|---|---|
 | Delete bot, secrets gone | Deleting a bot leaves files and sessions | Offboarding is account deletion, not a rename |
 | Org routine catalog | Max 50 routines per Bot, 20 run records, nothing team-level | The clock dies with the bot and the person |
-| Product spend cap | None. Overflow billed from model and token cost | Finance cannot point at a Bot-specific ceiling |
+| Product spend cap | No Bot-specific cap. Only the account-level on-demand monthly limit | Finance cannot point at a Bot-specific ceiling |
 | Admin model lock | No picker, for members or admins | Security cannot restrict the serving model |
 | Approval as undo | An approval controls the proposed action. It does not reverse work already completed | The first ten steps can already be done |
-| Mobile admin | phone app can pause, resume and approve | History, edit, test, and delete need desktop |
-| Kill as evidence | Coming soon, no date. Deletes VM, keeps durable storage | Not shipped, and a halt is not a log |
+| Mobile admin | phone app can pause, resume, approve, show run history, and delete a routine | Editing and testing a routine need desktop |
+| Terminate as evidence | Enterprise organization admins only. Deletes the computer, keeps the durable disk | A halt is not a log |
 
 Static egress IPs cut both ways. Some reviewers like an allowlist. Some hate datacenter ranges that destination sites already block. Privacy Mode (Legacy) is a hard stop, not a degraded mode. Teach-by-demonstration is not an audit trail. [The Grok Bot safety checklist](/blog/grok-bot-safety-checklist) is the pre-flight. [Shared computer security](/blog/grok-bot-shared-computer-security) is the architecture. They will still hate the gaps. The question is whether the jobs you want can live inside them.
 
@@ -121,7 +121,7 @@ False fills fail the first screenshot request. Honest fills fail some deals. Fai
 
 A routine assigns a workflow to one Bot. Maximum fifty routines per Bot. The app keeps the twenty most recent run records per routine. Deleting a Bot deletes its routines. Nothing is team-level ([skills, routines and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations)).
 
-Enterprise buyers hear Teams and picture a shared calendar of jobs. The product does not have that object. If you schedule a Monday pack on Priya's bot and Priya leaves, the clock leaves with her unless you copied the charter onto someone else's seat and created a new routine. Renaming her bot does not move the computer. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)).
+Enterprise buyers hear Teams and picture a shared calendar of jobs. The product does not have that object. If you schedule a Monday pack on Priya's bot and Priya leaves, the clock leaves with her unless you copied the charter onto someone else's seat and created a new routine. Renaming her bot does not move the computer. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)).
 
 [How to schedule a Grok Bot routine](/blog/how-to-schedule-a-grok-bot-routine) is the clock page. [Standup Scribe](/bots/standup-scribe) is the right shape for a Monday DM: one owner, internal only. Put it on the person who will still be here. Twenty run records are a debug cache, not the year of history Dana asked for. If you need retention, the bot writes a packet into a folder the company owns on every run.
 
@@ -135,9 +135,9 @@ Owner: Priya (this Cursor Teams Standard seat). Security reviewer: Dana.
 Date of vendor check: [fill the morning you pay]
 
 What we claim, and only this:
-- Cursor Teams Standard at $40/user/mo includes Grok Bot. Teams Premium at
-  $120/user/mo includes the same Bot product. Confirm live on Cursor team
-  pricing and https://docs.x.ai/grok-bot/faq.
+- every member of a self-serve Cursor Teams plan has Grok Bot, no Premium
+  seat needed. A Teams Premium seat includes the same Bot product. Confirm
+  live on Cursor team pricing and https://docs.x.ai/grok-bot/faq.
 - Each eligible user gets one persistent cloud computer assigned to that
   user, not to a bot. Screens are not security boundaries.
 - There is no documented Grok Bot Enterprise SKU, waitlist form, SOC 2
@@ -147,7 +147,7 @@ What we claim, and only this:
 What we explicitly do not claim:
 - Dedicated VM per bot. Audit view of Bot actions. Per-bot credential
   isolation. Team-level routines. A Grok Bot-specific spend cap. A model
-  picker. A ship date for coming-soon Kill or team execution ceilings.
+  picker. Admin Terminate as a wipe (Enterprise only, keeps the disk).
 
 Job allowed on this seat:
 - Chief of staff briefing from public pages plus our docs folder.
@@ -168,11 +168,11 @@ If the job cannot survive those nos, do not buy the seats in order to negotiate 
 
 ## Answer the objection that waiting for Enterprise is the safe play
 
-The strongest case against buying now is simple. Security has two hard rows. The product fails both. A waitlist screenshot exists in Slack. Waiting costs nothing this month. Buying Teams Standard is buying a personal cloud desktop with a company invoice, then pretending the invoice changed the architecture. Premium at one hundred twenty is the same trap with a larger line.
+The strongest case against buying now is simple. Security has two hard rows. The product fails both. A waitlist screenshot exists in Slack. Waiting costs nothing this month. Buying Teams Standard is buying a personal cloud desktop with a company invoice, then pretending the invoice changed the architecture. Premium is the same trap with a larger line.
 
-Grant the two rows. Dana is not confused. Dedicated VM per bot is not the product. An audit view is not the product. Those sentences stay true if you wait a quarter, unless a vendor page you can screenshot has actually changed. Waiting is not a control. It is a delay. This page does not have evidence a SKU is about to exist, and will not invent a date so the delay feels like a plan.
+Grant the two rows. Dana is not confused. Dedicated VM per bot is not the product. An audit view is not on the Teams seats; Cursor Enterprise has audit logs and Action Recording, through the account team. Those sentences stay true if you wait a quarter, unless a vendor page you can screenshot has actually changed. Waiting is not a control. It is a delay. This page does not have evidence a SKU is about to exist, and will not invent a date so the delay feels like a plan.
 
-The objection wins when those two rows are truly blocking. Confirm another vendor's current page. Do not keep a waitlist PNG on the roadmap as if it were a committed SKU. [Claude Cowork](/blog/grok-bot-vs-claude-cowork) and [ChatGPT Work](/blog/grok-bot-vs-chatgpt-work) are different products. Confirm those vendors live. The objection loses when the jobs you want are internal briefs, draft-only mail, and public-source research, and Dana has accepted the shared computer in the brief. Then the documented doors already include Bot. Sitting on Hobby or Pro at twenty while you wait for a SKU this site cannot see is how you spend a quarter with no briefing bot and the same architecture on the other side.
+The objection wins when those two rows are truly blocking. If the log is the blocker, ask your Cursor account team about Enterprise. If the VM per bot is, confirm another vendor's current page. Do not keep a waitlist PNG on the roadmap as if it were a committed SKU. [Claude Cowork](/blog/grok-bot-vs-claude-cowork) and [ChatGPT Work](/blog/grok-bot-vs-chatgpt-work) are different products. Confirm those vendors live. The objection loses when the jobs you want are internal briefs, draft-only mail, and public-source research, and Dana has accepted the shared computer in the brief. Then the documented doors already include Bot. Sitting on Hobby while you wait for a SKU this site cannot see is how you spend a quarter with no briefing bot and the same architecture on the other side.
 
 ## Verify entitlement and waitlist language on live vendor pages yourself
 
@@ -180,17 +180,17 @@ These checks can come back false. If they do, you do not have grok bot enterpris
 
 | Check | Pass | Fail |
 |---|---|---|
-| This morning's [FAQ](https://docs.x.ai/grok-bot/faq) still lists Cursor Teams Standard and Premium as eligible | The documented company-shaped doors still exist | This page is stale. Shop the FAQ, not the Slack PNG |
-| [Cursor team pricing](https://cursor.com/docs/account/pricing) still shows $40 Standard and $120 Premium including Bot | The prices you quoted still exist | Re-quote. Do not defend an old number |
+| This morning's [FAQ](https://docs.x.ai/grok-bot/faq) still lists Cursor Teams as eligible | The documented company-shaped doors still exist | This page is stale. Shop the FAQ, not the Slack PNG |
+| [Cursor team pricing](https://cursor.com/docs/account/pricing) still shows the seat prices you quoted, with Bot included | The prices you quoted still exist | Re-quote. Do not defend an old number |
 | Cursor and xAI pages, opened today, either show waitlist copy or they do not | You know whether waitlist is live vendor language | You are still arguing from a recap. Stop |
-| Invoice plus that person's account screen say Teams Standard or Premium, not Pro at $20, not Hobby | That person has a door | Reinstalling will not promote them |
+| Invoice plus that person's account screen say Cursor Teams, not Hobby | That person has a door | Reinstalling will not promote them |
 | No org screen lists Bot actions across the team | The missing audit view is still missing | Do not write "we have an enterprise audit log" |
 
-If the FAQ and this page disagree, the FAQ wins. Dates on this page are 25 to 27 August 2026. [Grok Bot cost](/blog/grok-bot-cost) is usage shape after the door is open. [Spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn) is the missing ceiling. Official desktop path: [x.ai/bot](https://x.ai/bot). The waitlist check fails when the live page has no such language. That failure is useful.
+If the FAQ and this page disagree, the FAQ wins. Dates on this page are 25 to 27 August 2026, with plan facts rechecked on 23 September 2026. [Grok Bot cost](/blog/grok-bot-cost) is usage shape after the door is open. [Spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn) is the missing ceiling. Official desktop path: [x.ai/bot](https://x.ai/bot). The waitlist check fails when the live page has no such language. That failure is useful.
 
 ## Keep irreversible jobs behind a human click the product will not log
 
-There is still no audit view. That fact decides where the click lives. Anything that leaves the building (mail, posts, purchases, merges, payments) sits on ask, with a screenshot or export of the proposal stored next to the packet, or it does not run.
+Outside Enterprise there is still no audit view. That fact decides where the click lives. Anything that leaves the building (mail, posts, purchases, merges, payments) sits on ask, with a screenshot or export of the proposal stored next to the packet, or it does not run.
 
 An approval controls the proposed action. It does not reverse work already completed. Denying step eleven leaves steps one through ten done, with no product view that lists them. Those ten needed to be in the packet first. [Approval rules and reversibility](/blog/grok-bot-approval-rules-reversibility) is the control surface. This page is why you cannot point at an enterprise log instead.
 
@@ -202,24 +202,24 @@ The shopping task is not complete when someone finds waitlist copy. It is comple
 
 If Dana's two rows stay blocking, stop. The waitlist, if it exists on a vendor page today, is still not a dedicated VM and still not a log. If her two rows become accepted constraints, buy the documented seat, run the internal job, keep send on ask, and keep your own receipts. That is grok bot enterprise as it actually exists on this site: a keyword people search, a Teams include you can verify, and a product a security team will still hate for reasons the docs already state.
 
-**Keep reading:** [Grok Bot on Cursor Teams Standard](/blog/grok-bot-teams-standard), [do not use separate bots as a security boundary](/blog/grok-bot-not-a-sandbox), [Grok Bot has no audit view yet](/blog/grok-bot-no-audit-log-yet).
+**Keep reading:** [Grok Bot on Cursor Teams Standard](/blog/grok-bot-teams-standard), [do not use separate bots as a security boundary](/blog/grok-bot-not-a-sandbox), [Grok Bot has no audit view outside Enterprise](/blog/grok-bot-no-audit-log-yet).
 
 ## Frequently Asked Questions
 
 ### Is Grok Bot enterprise a documented SKU with a waitlist form on this site?
 
-No. This site does not document a Grok Bot Enterprise SKU, a waitlist form, a queue position, or a ship date. Cursor Teams Standard at forty dollars per user per month and Teams Premium at one hundred twenty per user both include Grok Bot, checked as of 25 August 2026 against the FAQ and Cursor team pricing. If Cursor or xAI currently shows waitlist language, that is their live copy. Confirm it there today. Do not copy a Slack screenshot into a purchase order, and do not ask a recap to host a form it does not have.
+No. This site does not document a Grok Bot Enterprise SKU, a waitlist form, a queue position, or a ship date. Every member of a self-serve Cursor Teams plan has Grok Bot, checked on 23 September 2026 against the FAQ and Cursor's plans page, and the FAQ says Enterprise access is rolling out through your Cursor account team. If Cursor or xAI currently shows waitlist language, that is their live copy. Confirm it there today. Do not copy a Slack screenshot into a purchase order, and do not ask a recap to host a form it does not have.
 
 ### Do Cursor Teams Standard and Teams Premium include Grok Bot today?
 
-Yes, as of 25 August 2026. Both Teams SKUs include Grok Bot per seat. The include is an eligibility stamp on a person, not a company-owned bot roster. Each eligible user gets one persistent cloud computer. Premium is not a better Bot. It is a richer Cursor SKU at a higher price, with the same documented Bot after the access check passes. Cursor Hobby and Cursor Pro at twenty dollars do not include Grok Bot. Confirm the live invoice and the FAQ the morning you brief staff, because plan names move.
+Yes, rechecked on 23 September 2026. Every member of a self-serve Teams plan has Grok Bot, with no Premium seat or admin request required. The include is an eligibility stamp on a person, not a company-owned bot roster. Each eligible user gets one persistent cloud computer. Premium is not a better Bot. It is a richer Cursor SKU at a higher price, with the same documented Bot after the access check passes. Cursor Hobby, the free plan, does not include Grok Bot; every paid Cursor plan does, from Cursor Pro at twenty dollars. Confirm the live invoice and the FAQ the morning you brief staff, because plan names move.
 
 ### If we join a waitlist, do we get a dedicated VM per bot and an audit log?
 
-Not according to anything this page is allowed to assert. The current product assigns one computer to the user account, not to a bot, and an audit view of Bot actions does not exist yet. A waitlist, if a vendor page even shows one, is marketing language until that page also documents those two controls. This article will not invent them, and will not invent a date on which they arrive. If those rows are hard requirements, treat Grok Bot as the wrong runtime today and confirm another vendor live.
+Not a VM per bot, on any plan: the current product assigns one computer to the user account, not to a bot. An audit log is documented only on Cursor Enterprise, as audit logs and Action Recording, and you reach it through your Cursor account team, not a waitlist form. A waitlist, if a vendor page even shows one, is marketing language. This article will not invent a date on which anything arrives. If a VM per bot is a hard requirement, treat Grok Bot as the wrong runtime today and confirm another vendor live.
 
 ### How should we answer security questions about SOC 2 and SSO for Grok Bot?
 
-Leave those cells honest. This site has no Grok Bot SOC 2 letter to quote, and this article will not specify a Grok Bot SSO design. Ask Cursor and xAI for whatever they currently publish, and only paste a letter that names Grok Bot. Sign-in runs through Cursor, so organization login details belong on Cursor's live account pages. Isolation is still one computer per user, screens are not vaults, and there is still no audit view. Write those facts. Do not fill the blank with a rumour so the spreadsheet looks complete.
+Leave those cells honest. This site has no Grok Bot SOC 2 letter to quote, and this article will not specify a Grok Bot SSO design. Ask Cursor and xAI for whatever they currently publish, and only paste a letter that names Grok Bot. Sign-in runs through Cursor, so organization login details belong on Cursor's live account pages. Isolation is still one computer per user, screens are not vaults, and there is still no audit view outside Enterprise. Write those facts. Do not fill the blank with a rumour so the spreadsheet looks complete.
 `,
 };

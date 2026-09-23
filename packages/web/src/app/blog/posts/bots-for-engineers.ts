@@ -417,8 +417,8 @@ to a change in the code. If most comments change nothing, the bot is spending
 your attention rather than saving it, and the fix is a narrower charter rather
 than more authority. If you are running several bots and want the general version
 of that measurement, [bot observability](/blog/bot-observability) covers what to
-log when the runtime keeps no audit view of its own, which as of writing it does
-not.
+log when the runtime keeps no audit view of its own, which outside Enterprise it
+does not.
 
 ## The strongest objection: a noisy reviewer is worse than none
 

@@ -371,7 +371,7 @@ day, and
 [the boundaries guide](/blog/grok-bot-boundaries) covers how to phrase the stop
 line that condition one of the readiness test asks you for.
 
-**Keep reading:** [Grok Bot Setup Guide](/blog/grok-bot-setup-guide), [No Spend Cap](/blog/grok-bot-spend-cap-and-token-burn), [The Charter Template](/blog/grok-bot-starter-charter-template).
+**Keep reading:** [Grok Bot Setup Guide](/blog/grok-bot-setup-guide), [Spend Cap and the Monthly Limit](/blog/grok-bot-spend-cap-and-token-burn), [The Charter Template](/blog/grok-bot-starter-charter-template).
 
 ## Frequently Asked Questions
 

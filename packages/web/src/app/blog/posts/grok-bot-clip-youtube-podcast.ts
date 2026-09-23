@@ -164,7 +164,7 @@ across every bot on the account. Deleting a bot does not remove them.
 | Sign in to a social platform | Never | Stop and ask instead |
 
 There is one more reason to keep this bot's surface small: an audit view of bot
-actions does not exist yet. If something did post, you would be reconstructing
+actions does not exist outside Enterprise. If something did post, you would be reconstructing
 what happened from the platform side rather than from a log. Prevention is the
 only control that currently works, which is the argument in
 [the guide to bot boundaries](/blog/grok-bot-boundaries).

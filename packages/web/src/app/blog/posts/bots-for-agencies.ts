@@ -196,8 +196,8 @@ from a client who is still with them.
 Start from the documented behaviour. Deleting a bot does not remove
 shared-computer files or browser sessions. Deleting a bot does delete its
 routines, and nothing is stored at team level, so the automation disappears
-while the artifacts it created do not. There is no audit view of bot actions
-yet, and the app keeps only the twenty most recent run records per routine, with
+while the artifacts it created do not. There is no audit view of bot actions outside Enterprise,
+and the app keeps only the twenty most recent run records per routine, with
 a maximum of fifty routines per bot. Put those together and the position is
 uncomfortable: your record of what a bot touched for a departing client is thin,
 capped, per bot, and deleted along with the bot that made it.
@@ -470,7 +470,8 @@ If the answer is visible and no, a person does it.
 Treat a signed-in client session on a shared machine as available to everything
 on that machine, because cookies and sessions are shared across all your bots
 and deleting a bot does not remove them. There is also no audit view of bot
-actions yet, so you would be reconstructing any incident by hand. Use exports or
+actions outside Enterprise, so on an agency's own seats you would be
+reconstructing any incident by hand. Use exports or
 a read-only viewer seat you pull yourself, keep spending authority with a human,
 and check what your client contract says about processing their data on
 third-party systems before you connect anything.

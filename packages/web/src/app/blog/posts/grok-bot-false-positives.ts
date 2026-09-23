@@ -19,7 +19,7 @@ This is not [every claim sourced](/blog/grok-bot-evidence-rules). A false flag c
 
 Eleven red mornings in a row is a product smell. Markets do not reprice that often. Inboxes do not mint eleven refund crises. If the dashboard is always red, the bot is optimizing for looking busy.
 
-There is still no audit view of Bot actions. Fluency is not a score. On-time is not a score. A crisis you cannot reproduce on the live page is the miss this charter has to forbid.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Fluency is not a score. On-time is not a score. A crisis you cannot reproduce on the live page is the miss this charter has to forbid.
 
 People defend the always-red bot because it feels like coverage. Reed told the watcher, in chat, keep it useful, do not send me empty files. The routine cannot see that chat. A routine assigns a workflow to one bot (max 50 per bot, 20 recent run records kept). If the standing instructions reward a filled table, you will get a filled table.
 
@@ -92,7 +92,7 @@ Usefulness-performance is a specific instruction leak. Must-find-three-items. Al
 
 Teach-by-demonstration will not save you. That feature records up to ten minutes of a browser workflow, no microphone, desktop only, and produces a draft skill. A click path is not a false-positive rule.
 
-Write the block before you schedule. On iPhone (iOS 18+) you can pause and resume. Editing still needs macOS or Windows. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM, which is not a Linux desktop app. If you cannot paste the ban today, do not turn the routine on today.
+Write the block before you schedule. On iPhone (iOS 18+) you can pause and resume. Editing still needs the desktop app. The desktop app runs on macOS, Windows and Linux; the phone app runs on iPhone, Android and, through the iOS app, iPad. The agent runs on a managed Linux VM, which is not a Linux desktop app. If you cannot paste the ban today, do not turn the routine on today.
 
 [Least privilege](/blog/least-privilege-bots) still applies. A read-only grant does not stop a watcher from inventing a cut. Verb gates stop machines from acting. The usefulness ban stops humans from being trained to ignore the machine. You want both.
 

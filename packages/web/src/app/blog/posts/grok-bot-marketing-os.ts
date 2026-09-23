@@ -121,7 +121,8 @@ changed campaign, and if the auditor can pause it can also unpause.
 | Pause or archive a campaign | No | A write is a write, and unpause is the same button |
 
 The reason the No column is absolute rather than budget-limited: there is no
-Grok Bot spend cap yet. Subscriptions include a weekly usage allowance with
+Grok Bot-specific spend cap, and the account On-demand monthly limit covers Grok
+Bot usage, not ad spend. Subscriptions include a weekly usage allowance with
 on-demand overflow, and an ad account has its own separate money. A budget
 ceiling written into a charter is a sentence the bot has been asked to respect,
 not a limit anything enforces.
@@ -324,7 +325,7 @@ could, needs a charter fix.
 | Sent mail | Open the sent folder on the connected mail account | Anything you did not send yourself |
 
 Run the sent-folder check even when nothing looks wrong, because no audit view of
-bot actions exists yet. The chat transcript records what the bot proposed and the
+bot actions exists outside Enterprise. The chat transcript records what the bot proposed and the
 provider's logs are the only record of what left.
 
 One more reason to test rather than assume: every bot on the account shares one

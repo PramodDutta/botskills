@@ -98,8 +98,8 @@ That is a presence check on the Mac or Windows box in front of you. The cloud
 computer is a managed Linux VM. The bot runs there as a non-root user. Your
 key is not plugged into that VM.
 
-Windows support for that forwarding is rolling out. Confirm on your own
-machine. There is a Linux desktop app and an Android app as of September 2026; iPad is not supported. The desktop apps receive the forwarded prompt ([FAQ](https://docs.x.ai/grok-bot/faq)). iPhone on iOS 18+ is a
+The Use hardware security keys setting is on by default on macOS and Windows
+and not yet supported on Linux, and every use asks you to approve it first. There is a Linux desktop app and an Android app as of September 2026, and the iOS app also runs on iPad. The macOS and Windows desktop apps receive the forwarded prompt ([approvals, security, and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)). iPhone on iOS 18+ is a
 companion. It does not replace that desk.
 
 Touching the key does not change who owns the session that follows.
@@ -156,9 +156,7 @@ is data you wanted. The codes are a key.
 
 If you generated backup codes during the stall because the authenticator app
 was on a dead phone, finish the login, copy the export, sign out, and move
-those codes off this VM. Then delete the copy on the computer yourself. There
-is no audit view of bot actions yet
-([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
+those codes off this VM. Then delete the copy on the computer yourself. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 
 A password-manager "save this" prompt is the quiet version of the same
 incident. The CSV can stay if the job needs it. Backup codes cannot. A "trust
@@ -181,7 +179,7 @@ pass. It never contacts anyone. It opens the shared browser to collect public
 pages. The bank cookie is still there. Lead Scout does not need a second 2FA.
 You already did that at 09:12. The cookie is the grant.
 
-Wednesday 08:00. You still have no audit view. Lead Scout's report looks like
+Wednesday 08:00. You still have no audit view outside Enterprise. Lead Scout's report looks like
 research. Capability does not annotate itself.
 
 | Clock | Actor | Action | What is now true on the account computer |
@@ -308,11 +306,11 @@ paste anything.
 |---|---|---|---|
 | Bot says it is stuck on verification | Correct human wall | Take control, type on the desktop if you intend the login | Paste digits into chat |
 | Bot asks you to send the code | It is treating chat as a password manager | Refuse, take control, remind it of the human wall | Send the code "just this once" |
-| Hardware-key overlay appears on your Mac | WebAuthn forwarded from the computer browser | Touch the key if you intend the login | Assume Windows will do the same without checking |
-| Hardware-key overlay never appears on Windows | Forwarding for physical keys is still rolling out | Complete 2FA another way on a takeover | Leave backup codes on the VM as a workaround |
+| Hardware-key overlay appears on your Mac or Windows PC | WebAuthn forwarded from the computer browser | Touch the key if you intend the login | Assume the Linux app will do the same without checking |
+| Hardware-key overlay never appears | Use hardware security keys is off, or you are on Linux, where keys are not yet supported | Check Settings -> General -> Security Key, or complete 2FA another way on a takeover | Leave backup codes on the VM as a workaround |
 | Research bot loads the bank already signed in | You left a cookie after an earlier 2FA | Sign out now, then treat this as an incident | Delete the research bot and assume the session died |
 
-There is no Grok Bot-specific spend cap. A retry loop on a 2FA wall spends
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. A retry loop on a 2FA wall spends
 weekly allowance, then on-demand, and still cannot type the code. Stop it. See
 [spend and token burn](/blog/grok-bot-spend-cap-and-token-burn). Some services
 flag datacenter addresses. That pain is a reason to get a connector, not a
@@ -342,9 +340,9 @@ step. If a job cannot survive a sign-out after each export, the job is a
 standing identity on the account computer. Decide whether Lead Scout should
 exist on the same account.
 
-Team-level ceilings on local execution, and admin Kill that deletes the VM
-while keeping durable storage, are documented as not shipped. Plan around
-their absence.
+Team admins can now cap local execution, and Enterprise organization admins
+can Terminate a member's computer; it still keeps the durable disk and its
+logins. Neither signs the bank out. Plan the sign-out yourself.
 
 ## Prove the session is gone with a check that can come back dirty
 
@@ -362,7 +360,7 @@ screenshots, otp notes, the bank host name. Delete what you would not want a
 research bot to open. The CSV can stay if the job needs it. The codes cannot.
 
 Do this on a day when nothing is on fire. It is the only proof you have,
-because there is no audit view to query later.
+because there is no audit view outside Enterprise to query later.
 
 Where this breaks down: a session that does not show as a login wall, asking
 the finance bot to check, iPhone-only (pause and resume cannot finish WebAuthn
@@ -408,7 +406,7 @@ Yes. All bots on the account share one persistent cloud computer assigned to the
 
 ### Do hardware security keys work on the Grok Bot computer?
 
-Yes, with a documented split. WebAuthn prompts in the computer browser are forwarded to the member desktop app and the physical key. That is you touching hardware on the Mac or Windows box in front of you, not the bot inventing a passkey. Windows support for that forwarding is rolling out, so confirm on your own machine. Completing the key still leaves a signed-in session on the shared computer. The key does not isolate bots from each other, and it does not replace signing out after the job.
+Yes, with a documented split. WebAuthn prompts in the computer browser are forwarded to the member desktop app and the physical key. That is you touching hardware on the Mac or Windows box in front of you, not the bot inventing a passkey. The Use hardware security keys setting is on by default on macOS and Windows, is not yet supported on Linux, and asks you to approve every use. Completing the key still leaves a signed-in session on the shared computer. The key does not isolate bots from each other, and it does not replace signing out after the job.
 
 ### After a 2FA login on the shared computer, what should I do before other bots run?
 

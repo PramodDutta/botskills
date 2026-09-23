@@ -298,7 +298,7 @@ queued each, and whether I sent, edited, or discarded the draft.
 \`\`\`
 
 That last block exists because, as of writing, there is no audit view of bot
-actions. If a question about your outreach ever arrives, the only record of
+actions outside Enterprise. If a question about your outreach ever arrives, the only record of
 what was proposed and what you did with it is the one your bot wrote.
 
 ## Keep these eight jobs out of every charter you write

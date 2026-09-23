@@ -417,7 +417,7 @@ only sampling tells you which you have.
 
 Keep your own triage history in a file rather than relying on run records. Each
 routine keeps only its 20 most recent runs, so an hourly triage bot holds under
-a day of history, and no audit view of bot actions exists yet. If you want to
+a day of history, and no audit view of bot actions outside Enterprise exists yet. If you want to
 ask in a month why an issue got labelled the way it did, the note has to be
 written where you can still read it.
 

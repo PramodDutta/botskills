@@ -125,7 +125,7 @@ actually have: which one to turn on first, given your week.
 | Tuned static analysis plus mandatory human review already | Nothing here yet | A third opinion in the same thread is where comment fatigue starts | The reviewer specifically |
 | Async team across time zones | Standup Scribe | The daily artifact is the coordination, and it costs ninety seconds to check | The manager bot, until you run four or more |
 | Four or more bots running already | Bot Advisor, then Persistent Bot Memory | The failure at this size is nobody remembering how bot three was configured | Adding a seventh bot |
-| Your workstation runs Linux | Whichever runtime you can install | The desktop client question decides this before the ranking does | Planning around a client that does not exist for you |
+| Your workstation runs Linux | The pick for your team shape, since Grok Bot now has a Linux desktop app | The desktop client no longer decides this before the ranking does | Planning a hardware-key sign-in on Linux, where keys are not yet supported |
 
 The last row is not a joke and it is covered below. The two above it are the
 ones teams get wrong in opposite directions: teams with no bots turn on three
@@ -187,13 +187,13 @@ code. If reproducibility matters to you, that is an argument for a runtime where
 you supply the model.
 
 **There is a Linux desktop app as of September 2026.** Supported desktop platforms are macOS on
-Apple silicon and Intel, and Windows on x64 and Arm64, plus iPhone on iOS 18 and
-later. Linux desktop and Android apps are documented as supported since September 2026; iPad is documented as not supported. The irony is not lost on
-anyone: the audience most likely to be on a Linux workstation is the audience
+Apple silicon and Intel, Windows on x64 and Arm64, and Linux on x64 and Arm64, plus iPhone on iOS 18 and
+later. Linux desktop and Android apps are documented as supported since September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The catch is narrower
+now: the audience most likely to be on a Linux workstation is the audience
 this list is written for. The underlying computer the bot drives is itself a
-managed Linux VM where the bot runs as a non-root user, which makes the absence
-of a Linux client a client decision rather than a platform one, and it is still
-a blocker if your laptop runs Fedora.
+managed Linux VM where the bot runs as a non-root user, and the Linux client
+ships as .deb, .rpm, and AppImage, so a Fedora laptop runs it. What is still
+missing on Linux is hardware security key support for the Bot's browser.
 
 **Non-determinism means you cannot regression-test the reviewer.** Run the same
 pull request through twice and you will get two overlapping but different sets

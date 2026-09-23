@@ -11,7 +11,7 @@ export const post: BlogPost = {
 
 The Grok Bot free trial, announced with the 21 August 2026 access expansion, is the first time people without an eligible paid plan can touch the product. It is also the easiest way to learn the wrong lesson. The trial is limited usage. It is not a week of unrestricted agents. One long assignment, especially a browser crawl, can consume most of the credit. Spend it like a lab: one named bot, one reversible job, a boundary that forbids send and pay, and a written note of what finished.
 
-Do not copy launch-week posts that still describe a Mac-only Ultra product with no trial. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. Linux desktop, Android, and iPad are not. Paid doors after the trial start at Cursor Pro+ at $60 a month for individuals and Cursor Teams Standard at $40 a seat. The trial itself has no published numeric credit on the SAFE list, so this page will not invent one.
+Do not copy launch-week posts that still describe a Mac-only Ultra product with no trial. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; the iOS app also runs on iPad (iPadOS 18 or later). Paid doors after the trial start at Cursor Pro at $20 a month for individuals and a self-serve Cursor Teams seat for teams. The trial itself has no published numeric credit on the SAFE list, so this page will not invent one.
 
 ## Treat the trial as a compute sampler, not a holiday
 
@@ -28,7 +28,7 @@ The [setup guide](/blog/grok-bot-setup-guide) is how you install. This page is h
 
 ## Confirm you are actually on the trial path
 
-Eligible paid plans already include Grok Bot. If you are on Pro+, Ultra, Teams, SuperGrok Plus, or Heavy, you are not "trying Grok Bot." You are using the product you already bought. The trial is for everyone else. SuperGrok $30 and Cursor Pro $20 still do not include Grok Bot as a plan feature. The trial is the way those accounts sample it without an immediate upgrade, with whatever limits the vendor attached that day.
+Eligible paid plans already include Grok Bot. If you are on Cursor Pro, Pro+, Ultra, Teams, or a linked SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription, you are not "trying Grok Bot." You are using the product you already bought. The trial is for everyone else, mainly Cursor Hobby, the free plan, which does not include Grok Bot. An individual SuperGrok subscriber can link instead of trying. The trial is the way the rest sample it without an immediate upgrade, with whatever limits the vendor attached that day.
 
 Download from the official bot surface, sign in, and check which entitlement the app shows. Do not assume a ChatGPT-style free tier. There is no documented standalone free Grok Bot plan. Privacy Mode (Legacy) blocks Grok Bot entirely, so a trial will not save you if that mode is on.
 
@@ -68,21 +68,21 @@ Teach-by-demonstration records up to ten minutes of visible computer interaction
 
 ## Expect Windows and iPhone, and stop expecting Linux
 
-Stale trial writeups still say Mac only. The FAQ lists macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18+. It also lists a Linux desktop app as of September 2026. Android is supported as of September 2026 (Android 9 or later); iPad is not. If your only machine is a Linux workstation, the trial will not give you a client. The agent computer is a managed Linux VM in the cloud, which does not install a desktop app on your ThinkPad.
+Stale trial writeups still say Mac only. The FAQ lists macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18+. It also lists a Linux desktop app as of September 2026. Android is supported as of September 2026 (Android 9 or later), and the iOS app also runs on iPad (iPadOS 18 or later). If your only machine is a Linux workstation, install the Linux desktop app (.deb, .rpm or AppImage). The agent computer is a managed Linux VM in the cloud, which does not install a desktop app on your ThinkPad.
 
-iPhone can pause and resume. Editing, history, testing, and deleting need desktop. Starting a trial exclusively from a phone is how you cannot inspect what you just burned.
+iPhone can pause and resume. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Starting a trial exclusively from a phone is how you cannot edit or test what you just burned.
 
 ## Budget the trial against a paid door you would actually buy
 
-When the credit ends, the next step is a plan, not another secret free tier. Cursor Pro+ at $60 is the cheapest documented individual paid path. SuperGrok Plus is $100. Teams Standard is $40 a seat. Ultra is $200. Do not use unpublished Heavy prices. [Grok Bot cost](/blog/grok-bot-cost) explains the weekly allowance plus on-demand overflow you will live with after the trial. There is still no Grok Bot-specific spend cap.
+When the credit ends, the next step is a plan, not another secret free tier. Cursor Pro at $20 a month is the cheapest documented individual paid path. Pro+ is $60. A self-serve Cursor Teams seat includes Grok Bot for every member. Ultra is $200. An individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Do not use unpublished Heavy prices. [Grok Bot cost](/blog/grok-bot-cost) explains the weekly allowance plus on-demand overflow you will live with after the trial. There is still no Grok Bot-specific spend cap.
 
 | After the trial | Individual | Team |
 |---|---|---|
-| Cheapest documented paid door | Cursor Pro+ $60/mo | Teams Standard $40/user/mo |
-| Also eligible | SuperGrok Plus $100, Ultra $200, Heavy (price unpublished here) | Teams Premium $120/user/mo |
-| Still not included | Cursor Pro $20, SuperGrok $30, Hobby | n/a |
+| Cheapest documented paid door | Cursor Pro $20/mo | Any seat on a self-serve Teams plan |
+| Also eligible | Pro+ $60, Ultra $200, a linked SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ | Enterprise, through the Cursor account team |
+| Still not included | Hobby, SuperGrok Lite | SuperGrok Team and Enterprise cannot link |
 
-If the trial job was not worth $60 a month of recovered time, do not upgrade "to keep tinkering." Tinkering is how overflow billing starts.
+If the trial job was not worth $20 a month of recovered time, do not upgrade "to keep tinkering." Tinkering is how overflow billing starts.
 
 ## Recognise the five ways a trial fails
 
@@ -91,7 +91,7 @@ If the trial job was not worth $60 a month of recovered time, do not upgrade "to
 | Credit gone after one evening | A long unattended browse | One question, stop when blocked |
 | Nothing useful, lots of prose | No output contract | Demand a table and URLs |
 | Gmail still signed in after you deleted the bot | Shared computer, deletion does not clean sessions | Revoke in Google, not only in the bot list |
-| iPhone trial you cannot inspect | Mobile cannot edit or show history fully | Use desktop for the trial |
+| iPhone trial you cannot fix | Mobile cannot edit or test a routine | Use desktop for the trial |
 | "It sent something" | Brief without a send boundary | Kill the connection, treat as a failed test |
 
 The last row is not a cute lesson. An approval does not reverse completed work. A trial that sends is a trial you should end.
@@ -121,7 +121,7 @@ The trial is short. Memory is not a source. Write: time started, brief used, plu
 
 | Field | Why it exists |
 |---|---|
-| Start time and client (Mac, Windows, Linux, iPhone, Android) | Mobile-only trials hide history |
+| Start time and client (Mac, Windows, Linux, iPhone, Android) | Mobile-only trials cannot edit or test |
 | Exact brief | You will misremember the boundary |
 | Plugins and OAuth grants | Deletion does not revoke them |
 | Artifact produced | Worth is an artifact, not a feeling |
@@ -184,14 +184,14 @@ No. The 21 August 2026 trial is limited usage, consumed by work and tokens. Trea
 
 ### Do I need a credit card to start the Grok Bot free trial?
 
-Follow the current checkout in the official app. Some writeups say a card is collected up front. This page will not invent the billing-form details. What you can plan for is that there is no documented forever-free Grok Bot plan, and that after the metered trial the paid doors start at Cursor Pro+ at $60 a month for individuals. Read the screen in front of you, not a launch blog.
+Follow the current checkout in the official app. Some writeups say a card is collected up front. This page will not invent the billing-form details. What you can plan for is that there is no documented forever-free Grok Bot plan, and that after the metered trial the paid doors start at Cursor Pro at $20 a month for individuals. Read the screen in front of you, not a launch blog.
 
 ### Can I try Grok Bot on Linux or Android during the trial?
 
-Not with a native client. The FAQ lists macOS, Windows and Linux desktop apps plus iPhone and Android companion apps. It lists a Linux desktop app as of September 2026. Android and iPad are unsupported. The cloud computer is a managed Linux VM, which is not a Linux desktop client. If you only have Linux or Android, the trial will not give you a supported way to operate the product.
+Yes. The FAQ lists macOS, Windows and Linux desktop apps plus iPhone and Android companion apps, and the iOS app also runs on iPad. The Linux desktop app and Android 9 or later arrived in September 2026. The cloud computer is a managed Linux VM, which is not a Linux desktop client. A phone or an iPad can run the trial, but editing and testing a routine still need a desktop.
 
 ### What should I do after the Grok Bot free trial ends?
 
-Either upgrade onto an eligible plan because one job earned it, or revoke every login you created and stop. Do not leave a Gmail session on a shared computer you no longer intend to pay for. Do not assume deleting the bot cleaned the VM. The cheapest documented individual paid path is Cursor Pro+ at $60 a month. Teams Standard is $40 a seat. Re-read vendor pricing the day you choose.
+Either upgrade onto an eligible plan because one job earned it, or revoke every login you created and stop. Do not leave a Gmail session on a shared computer you no longer intend to pay for. Do not assume deleting the bot cleaned the VM. The cheapest documented individual paid path is Cursor Pro at $20 a month. A self-serve Cursor Teams seat includes Grok Bot for every member. Re-read vendor pricing the day you choose.
 `,
 };

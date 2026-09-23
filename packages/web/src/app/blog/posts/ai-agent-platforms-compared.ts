@@ -62,7 +62,7 @@ requirement on any one outranks every preference below it.
 | Hosting | Whose machine the work physically runs on | Every hosted product |
 | Model choice | Can you name the model per job or call | Grok Bot, which documents no picker |
 | Approval model | Does it stop the action or ask nicely | Approvals that are a line in a prompt |
-| Audit trail | What you can show somebody in six months | Grok Bot, with no audit view yet |
+| Audit trail | What you can show somebody in six months | Grok Bot, with no audit view outside Enterprise |
 | Cost shape | Does the bill stop, queue, or climb | Anything with no ceiling |
 | Setup burden | How long until it works, and who runs it | Self-hosting, with nobody to run it |
 | Reach | Connectors and MCP, or a browser that clicks | Connector-only tools, when there is no API |
@@ -180,7 +180,7 @@ event into one hash-chained append-only log, and Rakazo keeps per-thread event
 rows and token counts per run in your own Postgres.
 
 Everything else keeps a transcript, and Grok Bot is the sharpest constraint here:
-an audit view of bot actions does not exist yet, and a routine keeps only its 20
+an audit view of bot actions does not exist outside Enterprise, and a routine keeps only its 20
 most recent run records, which go when the bot goes. A transcript written by the
 thing you are checking is evidence of intent, not outcome, the argument in
 [watching what your bot did](/blog/bot-observability).
@@ -192,7 +192,7 @@ month is an inconvenience or an incident.
 
 | Platform | What you are billed for | What a runaway month does |
 |---|---|---|
-| Grok Bot | A weekly allowance, then overflow | "There is no Grok Bot-specific spend cap yet" |
+| Grok Bot | A weekly allowance, then overflow | "A separate Grok Bot spend cap is not available today"; overflow runs to the account On-demand monthly limit |
 | Rakazo | Infrastructure plus your own tokens | Your provider bill, usage recorded per run |
 | OpenClaw, Hermes, Buzz | No published tiers for any of the three | Your own provider and hosting spend |
 | OpenMausBot | Nothing extra, it drives CLIs you pay for | Your existing CLI subscriptions |
@@ -229,14 +229,15 @@ as a security boundary. Deleting a bot does not remove those files or sessions.
 Because sessions persist, it is logged in on Monday because you logged it in last
 Tuesday. Detail in
 [what the shared computer actually isolates](/blog/grok-bot-shared-computer-security),
-and reach, macOS, Windows and Linux desktops plus iPhone and Android phones, with iPad unsupported, in
+and reach, macOS, Windows and Linux desktops plus iPhone and Android phones, with the iOS app also running on iPad, in
 [Grok Bot on Windows, Linux and iPad](/blog/grok-bot-supported-platforms).
 
-Access rides on an eligible subscription. As of 21 August 2026 the cheapest paid
-path is [Cursor Pro+](https://cursor.com/pricing) at 60 dollars a month, with
-Cursor Ultra at 200, Cursor Teams Standard at 40 per user and Premium at 120, and
-[SuperGrok Plus](https://x.ai/pricing) at 100. Cursor Hobby and the 20 dollar Pro
-tier do not include it. Already holding a qualifying plan makes your marginal
+Access rides on an eligible subscription. As of 23 September 2026 the cheapest paid
+path is [Cursor Pro](https://cursor.com/pricing) at 20 dollars a month, with
+Pro+ at 60, Ultra at 200, every seat on a self-serve Cursor Teams plan, and a
+linked individual [SuperGrok](https://x.ai/pricing), SuperGrok Plus, SuperGrok
+Heavy or X Premium+ subscription. Cursor Hobby, the free plan, does not include
+it. Already holding a qualifying plan makes your marginal
 cost zero, which is the strongest argument for it, and the rules are in
 [why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained).
 
@@ -496,7 +497,7 @@ scheduler comparison people often want is
 
 | Platform | Harness | Hosting | Approval | Audit |
 |---|---|---|---|---|
-| Grok Bot | Vendor's | Managed VM, one per account | Gate, no undo | None yet |
+| Grok Bot | Vendor's | Managed VM, one per account | Gate, no undo | Enterprise only |
 | Rakazo | Yours | Self-hosted, beta | Off by default | Your Postgres |
 | OpenClaw | Yours | Your machine, one operator | Permissive on host | Not documented |
 | Hermes | Yours | Seven backends | Fails closed | Not documented |
@@ -524,7 +525,7 @@ first.
 | Data must not leave your infrastructure | Grok Bot, Lindy, Zapier, Make, cloud browser | The self-hosted six, plus Claude and the API tool |
 | Your desktops run Linux | Either, since September 2026 | Everything else here |
 | The job begins behind a sign-in | ChatGPT cloud browser | Grok Bot, Rakazo, or your own harness |
-| A reviewer will ask about a date | Grok Bot, no audit view yet | Zapier, Make, n8n, Buzz, Rakazo |
+| A reviewer will ask about a date | Grok Bot, no audit view outside Enterprise | Zapier, Make, n8n, Buzz, Rakazo |
 | Nobody will run a server and a database | Rakazo, Buzz, self-hosted n8n | Grok Bot, Lindy, Zapier, Make |
 | Bots run unattended overnight | Anything permissive by default | Hermes, whose cron mode denies by default |
 | The bill must be a budget line | Grok Bot, per its documented missing cap | Zapier, Make, n8n, Lindy |

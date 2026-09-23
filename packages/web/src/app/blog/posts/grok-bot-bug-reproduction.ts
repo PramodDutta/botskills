@@ -34,7 +34,7 @@ The [plain Grok Bot primer](/blog/what-is-a-grok-bot) is the named-teammate mode
 
 ## Run WELCOME15 on the shared computer browser, then refuse every git verb
 
-Grok Bot runs on a managed Linux VM assigned to your user account, not to a bot. The Bot is a non-root user on that VM. That is not a Linux desktop app. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. There are Linux desktop and Android apps as of September 2026; iPad is still not supported.
+Grok Bot runs on a managed Linux VM assigned to your user account, not to a bot. The Bot is a non-root user on that VM. That is not a Linux desktop app. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later).
 
 All bots on the account share that computer. Cookies, sessions, files, and CLI credentials are shared. [Inbox Triage](/bots/inbox-triage) can open the same staging.shop tab Repro just logged into. Deleting Repro does not sign that session out and does not delete \`/workspace/repro\`.
 
@@ -44,7 +44,7 @@ Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. That 
 
 ## Save numbered screenshots under /workspace before you write the step list
 
-Chat is a commentary track. The packet is files. Grok Bot has no audit view of bot actions yet, so the PNGs and STEPS.md are the receipt.
+Chat is a commentary track. The packet is files. Grok Bot has no audit view of bot actions outside Enterprise, so the PNGs and STEPS.md are the receipt.
 
 Name a folder per ticket: \`/workspace/repro/PAY-904-WELCOME15/\`. Write the screenshot, then the STEPS.md line. Never write the list from memory after a ten-click blur. The filename is the order. If 04 is missing, the packet is not done.
 
@@ -102,7 +102,7 @@ A Cursor login is a keyring, not one product. SpaceX acquired xAI (announced 2 F
 
 ## Walk one WELCOME15 failure from the cart through the toast that restores the price
 
-Jules is on Cursor Pro+, the sixty-dollar individual door. SuperGrok Plus, SuperGrok Heavy, Cursor Ultra, and Cursor Teams Standard and Premium also include Grok Bot, plus a one-time trial. Cursor Hobby and Cursor Pro at twenty do not. SuperGrok at thirty does not.
+Jules is on Cursor Pro+, the sixty-dollar individual tier. Cursor Pro at twenty, Cursor Ultra, and Cursor Teams also include Grok Bot, an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked, and there is a one-time trial. Cursor Hobby does not include it.
 
 Monday 09:14. Ticket PAY-904: "WELCOME15 does nothing." Body is one sentence and a cropped phone photo. Triage already wrote NO REPRODUCTION AVAILABLE and five questions. Jules answers one of them: staging host, SKU canvas-tote-navy, test user shop+qa@, code WELCOME15, expected 15 percent off, actual toast then full price.
 
@@ -120,7 +120,7 @@ Friday check: Did Repro open a pull request. No. Did anything merge without a hu
 
 Standing instructions are what a routine loads. A chat reminder dies on the second morning. A routine assigns a workflow to one bot, max fifty per bot, twenty most recent run records. Deleting the bot deletes the routines. It does not wipe the screenshots. Keep a copy of this charter off the computer.
 
-Do not put this in SKILL.md. Paste it on macOS or Windows. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
+Do not put this in SKILL.md. Paste it in the desktop app. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 
 \`\`\`text
 You are Repro, a grok bot bug reproduction desk. You click the
@@ -168,7 +168,7 @@ HEARTBEAT
 Every run writes /workspace/repro/<ticket-id>/HEARTBEAT.md with:
 reproduced | cannot-reproduce | blocked-2fa | blocked-selector | stalled
 and a count of PNG files. No heartbeat means the run did not happen.
-There is no audit view of Bot actions. This file is the receipt.
+There is no audit view of Bot actions outside Enterprise. This file is the receipt.
 
 RESTART
 If you stall, do not empty the cart. List the folder. Resume from

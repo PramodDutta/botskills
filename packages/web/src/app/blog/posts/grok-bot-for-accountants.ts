@@ -66,9 +66,9 @@ The first of the month is that clock. Both CSVs exist. The six lines that will t
 | Matcher plus receipt packet | Monthly plus weekly | Pack, then a HOLD pile | When receipts are a separate mess. See [expense manager](/blog/grok-bot-expense-manager) |
 | Matcher plus auto-file | Continuous File | Cleanup of returns you did not mean | Never on this page |
 
-Daily is how an accountant bot dies: it cries wolf on Tuesday about a deposit that will post Thursday. A routine belongs to one bot. Nothing is team-level. There is no audit view of Bot actions yet. Append every pack to a document you own.
+Daily is how an accountant bot dies: it cries wolf on Tuesday about a deposit that will post Thursday. A routine belongs to one bot. Nothing is team-level. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Append every pack to a document you own.
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop app.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. The desktop app runs on macOS, Windows and Linux; the phone app runs on iPhone, Android and, through the iOS app, iPad. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop app.
 
 ## Feed both files as closed exports the bot cannot refresh from a portal
 
@@ -233,7 +233,7 @@ Separate bots are not separate computers. xAI's own line is that you do not use 
 
 A grok bot for accountants that "has its own login" is still the same jar as Inbox Triage. Isolation is a menu of four moves, spelled out in [how to isolate Grok Bot credentials](/blog/how-to-isolate-grok-bot-credentials): a second eligible account when money and mail cannot share a disk, hosted MCP so tokens never land in a profile file, exports rather than a standing admin console, and sign-out after every 2FA. There is no fifth move called rename-the-bot.
 
-Eligible paths include SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, Cursor Teams Standard, Cursor Teams Premium, and a one-time trial. Cursor Hobby, Cursor Pro, and SuperGrok at the lower tier do not include it. Confirm prices on the vendor's current page. There is no Grok Bot-specific spend cap. Weekly allowance then on-demand from model and token cost. Never invent a dollar figure. See [Grok Bot cost](/blog/grok-bot-cost). If Harborwick's bank cookie cannot live next to a mailbox that receives one-time codes, that is a second-seat problem. [Least privilege](/blog/least-privilege-bots) applies: if the accounting tool offers a post or file-return scope, do not grant it.
+Eligible paths include Cursor Pro, Cursor Pro+, Cursor Ultra, every seat on a self-serve Cursor Teams plan, Cursor Enterprise once an admin enables it, a linked SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription, and a one-time trial. Cursor Hobby, the free plan, does not include it. Confirm prices on the vendor's current page. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance then on-demand from model and token cost. Never invent a dollar figure. See [Grok Bot cost](/blog/grok-bot-cost). If Harborwick's bank cookie cannot live next to a mailbox that receives one-time codes, that is a second-seat problem. [Least privilege](/blog/least-privilege-bots) applies: if the accounting tool offers a post or file-return scope, do not grant it.
 
 ## Answer the partner who says matching is wasted if the bot cannot click File
 
@@ -269,7 +269,7 @@ If the duplicate plant comes back MATCHED twice, uniqueness is decoration. Stop 
 
 A grok bot for accountants stops being the right tool when the work is no longer two closed CSVs. Paper checks stay EXCEPTION as OUTSTANDING-CHECK until they clear. Multiple entities need a path per books (\`2026-08-harborwick/\` versus \`2026-08-holdco/\`). Intercompany is OTHER until a person says otherwise. Payroll, sales tax, VAT, and information returns stay off the bot. Confirm deadlines on the authority's current page. This is not tax advice. Do not enroll ID.me or a bank passkey on the Agent Computer unless the whole roster may hold that identity.
 
-Multi-entity consolidations, period-end FX, and audited books are person jobs. There is no audit view of Bot actions yet. If the dated pack is not enough for your auditor, find out now rather than in March. If the bank will not give you a CSV, and the only path is a signed-in session that can also Pay, download at the desk or skip the automation.
+Multi-entity consolidations, period-end FX, and audited books are person jobs. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. If the dated pack is not enough for your auditor, find out now rather than in March. If the bank will not give you a CSV, and the only path is a signed-in session that can also Pay, download at the desk or skip the automation.
 
 If the remaining pain is receipts, that is Expense Manager. If it is card lines versus PDFs, that is expense reconciliation. If it is posting, that is the QuickBooks page, and the answer is still never post. [Do not use separate bots as a security boundary](/blog/grok-bot-not-a-sandbox). A CSV dropped at the desk cannot file a return. A logged-in portal can.
 

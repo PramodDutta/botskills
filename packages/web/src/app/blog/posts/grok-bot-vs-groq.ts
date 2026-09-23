@@ -132,7 +132,7 @@ xAI's docs say, verbatim, that you should not use separate bots as a
 security boundary. Browser cookies, signed-in sessions, files, and
 command-line credentials are shared. Deleting a bot does not remove those
 files or sessions. Hosted MCP sign-in tokens stay with Cursor's backend.
-There is no audit view of bot actions yet. An approval does not reverse
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. An approval does not reverse
 work already completed.
 
 That is why a groq bot gmail setup is not "safe because I will make a
@@ -144,12 +144,11 @@ import a Groq mental model (keys, endpoints, a process per service) into
 Grok Bot (one computer, many names).
 
 The computer is a managed Linux VM. The bot runs as a non-root user. That
-is not a Linux desktop client. Supported clients are macOS (Apple silicon
-and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Details sit on
+is not the Linux desktop client. Supported clients are macOS (Apple silicon
+and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Details sit on
 [what actually works on Windows, Linux and iPad](/blog/grok-bot-supported-platforms).
 Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21
-August 2026. There is no model picker. There is no bot-specific spend
-cap. Read [Grok Bot cost](/blog/grok-bot-cost) after you know you meant
+August 2026. There is no model picker. There is no bot-specific spend cap, only the account-level On-demand monthly limit. Read [Grok Bot cost](/blog/grok-bot-cost) after you know you meant
 this product.
 
 ## Walk a groq bot gmail search through the three landings
@@ -168,8 +167,8 @@ copy the draft back into Gmail by hand. That can save twenty minutes
 today. Tomorrow's mail is still your problem. Nothing ran at 07:30. You
 talked to Grok the chatbot. You did not hire a bot.
 
-Landing three is Grok Bot. You are in a desktop client on macOS or
-Windows. You name a bot. You paste a charter that forbids send. You
+Landing three is Grok Bot. You are in a desktop client on macOS, Windows,
+or Linux. You name a bot. You paste a charter that forbids send. You
 connect Gmail with the smallest scope you can live with. The computer is
 in the cloud. Overnight mail can be read without your laptop. That is the
 product behind the search, and the only landing that matches
@@ -202,16 +201,16 @@ vendor pages we treat as safe.
 | Plan you might already pay for | Grok Bot included? | What people get wrong |
 |---|---|---|
 | Cursor Hobby | No | Free Cursor is not a back door |
-| Cursor Pro at 20 dollars a month | No | The most common mistaken buy |
-| Cursor Pro+ at 60 dollars a month | Yes | Cheapest paid individual path as of 25 August 2026 |
-| SuperGrok at 30 dollars a month | No | The cheaper SuperGrok tier is chat-shaped, not Bot |
-| SuperGrok Plus at 100 dollars a month | Yes | Listed as including Grok Bot access |
-| Cursor Ultra, Cursor Teams Standard and Premium, SuperGrok Heavy | Eligible | Confirm live prices. Do not invent Heavy's sticker |
+| Cursor Pro at 20 dollars a month | Yes | Cheapest paid individual path as of 23 September 2026 |
+| Cursor Pro+ at 60 dollars a month | Yes | More weekly usage than Pro, not a different bot |
+| SuperGrok (individual) | Yes, by linking | Link it from the Grok Bot plan screen; it grants usage and is not a Cursor plan |
+| SuperGrok Plus | Yes, by linking | The same permanent link as base SuperGrok, with more usage |
+| Cursor Ultra, Cursor Teams, SuperGrok Heavy | Eligible | Confirm live prices. Do not invent Heavy's sticker |
 | One-time trial | Limited usage, not an unlimited week | Spend it on one reversible job, then revoke logins if you leave |
 
 If you hold both a Cursor subscription and a SuperGrok subscription, Grok
 Bot uses whichever has more usage. Privacy Mode (Legacy) blocks Grok Bot
-entirely. There is no bot-specific spend cap. Subscriptions include a
+entirely. There is no bot-specific spend cap, only the account-level On-demand monthly limit. Subscriptions include a
 weekly usage allowance, then on-demand billing from model and token cost.
 No published dollar figure for that allowance exists here, so this page
 will not invent one. Access mechanics live on
@@ -272,8 +271,8 @@ missing Gmail plugin on an inference dashboard.
 | Named bots, screens, a cloud computer | Grok Bot | Stay. Write the stop line before you connect Gmail |
 | Python snippet importing a Groq client | A tutorial about Groq | It will not sort mail. Do not paste your mailbox password into it |
 | "Each bot has its own computer" in a roundup | A wrong article about Grok Bot | Ignore the isolation claim. Read the shared-computer page |
-| Linux desktop installer for Grok Bot | A wish | It does not exist. Use macOS, Windows, or iPhone on iOS 18+ |
-| A spend cap slider for Grok Bot | A wish | There is no bot-specific cap. Watch weekly allowance and token burn |
+| Linux desktop installer for Grok Bot | The real client, since September 2026 | Install only the official .deb, .rpm or AppImage |
+| A spend cap slider for Grok Bot | A wish | There is no bot-specific cap. Set the account On-demand monthly limit and watch token burn |
 
 The roundup row survives after you leave Groq. Plenty of Grok Bot
 explainers still claim a private VM per bot. That claim is false on the
@@ -315,13 +314,13 @@ You can point to a homepage and say Groq, Grok chat, or Grok Bot without
 using the other two names in the same sentence. If you cannot, you are
 still blending objects.
 
-The app you installed is a Grok Bot client on macOS, Windows, or iPhone
-on iOS 18+, and it shows named bots, not an API key dashboard. If you
+The app you installed is a Grok Bot client on macOS, Windows, Linux,
+iPhone on iOS 18+, or Android, and it shows named bots, not an API key dashboard. If you
 have a Groq key in an env file and no bot roster, you bought inference.
 
 You can name the plan that made Grok Bot eligible, or you can name the
-trial. If you are on Cursor Pro at 20 dollars or SuperGrok at 30 dollars
-and the bot will not start, that is the plan, not a spelling problem.
+trial. If you are on Cursor Hobby, the free plan, or a SuperGrok you never
+linked, and the bot will not start, that is the plan, not a spelling problem.
 
 You have at most one mail-connected bot on the shared computer, and its
 charter forbids send. If you connected mail on a trial you intend to
@@ -409,10 +408,10 @@ only has to keep grok.com from eating the rest of your afternoon.
 ### How do I get Grok Bot after I searched groq bot by mistake?
 
 Leave groq.com. Confirm an eligible plan or the limited-usage trial, then
-install a supported client: macOS, Windows, or iPhone on iOS 18 or later.
-Cursor Pro+ at 60 dollars a month is the cheapest documented paid
-individual path. Cursor Pro at 20 dollars and SuperGrok at 30 dollars do
-not include Grok Bot. Create one bot, paste a charter that forbids send,
+install a supported client: macOS, Windows, Linux, iPhone on iOS 18 or
+later, or Android 9 or later. Cursor Pro at 20 dollars a month is the
+cheapest documented paid individual path. Cursor Hobby, the free plan, does
+not include Grok Bot, and an individual SuperGrok has to be linked first. Create one bot, paste a charter that forbids send,
 and only then connect Gmail. A Groq API key will not open this product.
 Read the Cursor account page for the full door list.
 

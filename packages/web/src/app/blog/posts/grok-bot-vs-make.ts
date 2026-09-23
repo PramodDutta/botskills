@@ -205,7 +205,7 @@ along.
 Three documented facts sharpen this. First, the Grok Bot docs are explicit that
 an approval "controls the proposed action. It does not reverse work already
 completed", so approval is a gate in front of an action, not an undo. Second, an
-audit view of Bot actions does not exist yet, and a routine keeps only the 20
+audit view of Bot actions does not exist outside Enterprise, and a routine keeps only the 20
 most recent run records, so your forensic trail after a bad night is thin
 compared with a scenario's execution history. Third, with no product-level spend
 cap yet, a bot that decides to keep trying has no ceiling imposed by the runtime.
@@ -238,7 +238,7 @@ comes from the pages cited above.
 | The credit bill doubled with no change in volume | An added module multiplies across every run, or an AI step costs more than one credit | Count modules per run, not runs, and price AI steps separately |
 | The bot did the task differently on Tuesday | Variance, the property you selected when you chose an agent | Constrain the output shape, or move the step into a scenario |
 | The bot kept trying and the spend kept climbing | No product-level spend cap yet, so nothing stops it from the runtime side | Put the stop condition in the charter, in advance, in plain language |
-| Nobody can reconstruct what the bot did last night | No audit view yet, and a routine keeps only its 20 most recent run records | Require the bot to log to a file you own, and treat that as the record |
+| Nobody can reconstruct what the bot did last night | No audit view outside Enterprise, and a routine keeps only its 20 most recent run records | Require the bot to log to a file you own, and treat that as the record |
 
 The two halves fail differently, which is worth naming. Make's failures are
 configuration you can point at afterwards. The bot's failures are absences: a
@@ -369,7 +369,7 @@ afternoon of drawing. For a solo operator with a dozen irregular tasks a week,
 that is a decisive advantage, and the scenario canvas is a tax on work that never
 repeats identically. Where it stops winning is the moment the job touches
 something that must stay consistent. There is no Rollback, an approval does not
-reverse completed work, no audit view exists yet, a routine retains only its 20
+reverse completed work, no audit view outside Enterprise, a routine retains only its 20
 most recent run records, and there is no Grok Bot specific spend cap yet. Those
 five absences are tolerable when the worst outcome is a bad draft, and not
 tolerable when it is a wrong ledger entry made at 2am.

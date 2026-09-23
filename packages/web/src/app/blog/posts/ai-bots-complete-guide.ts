@@ -372,7 +372,7 @@ different writers.
 
 The append only log matters more than it looks, and it exists because of a
 documented gap rather than a preference. On Grok Bot the vendor states that an
-[audit view of Bot actions does not exist yet](https://docs.x.ai/grok-bot/teams-and-enterprises), and routines keep only the
+[audit view of Bot actions does not exist outside Enterprise](https://docs.x.ai/grok-bot/teams-and-enterprises), and routines keep only the
 20 most recent run records. If you want to answer "what did this bot do three weeks ago",
 you keep that ledger yourself or you do not get to ask.
 
@@ -397,39 +397,45 @@ the usage that accumulates behind it.
 The access side changed on 21 August 2026, which is why most articles you find
 are quoting stale figures. Eligibility widened that day to SuperGrok Plus, Cursor
 Pro+, and all Cursor Teams plans, per
-[the x.ai announcement](https://x.ai/news/grok-bot-more-plans).
+[the x.ai announcement](https://x.ai/news/grok-bot-more-plans). It widened again
+by 23 September 2026, when
+[Cursor's plans page](https://cursor.com/help/grok-bot/plans) listed every paid
+Cursor plan, Pro included, and individual SuperGrok links.
 
 | Plan | Price | Includes Grok Bot | Source |
 |---|---|---|---|
 | Cursor Hobby | Free | No | [cursor.com/pricing](https://cursor.com/pricing) |
-| Cursor Pro | $20/mo | No | [cursor.com/pricing](https://cursor.com/pricing) |
-| Cursor Pro+ | $60/mo | Yes, and this is the cheapest paid path | [cursor.com/pricing](https://cursor.com/pricing) |
-| Cursor Ultra | $200/mo | Yes | [cursor.com/pricing](https://cursor.com/pricing) |
-| Cursor Teams Standard | $40/user/mo | Yes | [cursor.com/docs](https://cursor.com/docs/account/pricing) |
-| Cursor Teams Premium | $120/user/mo | Yes | [cursor.com/docs](https://cursor.com/docs/account/pricing) |
-| SuperGrok | $30/mo | No | [x.ai/pricing](https://x.ai/pricing) |
-| SuperGrok Plus | $100/mo | Yes | [x.ai/pricing](https://x.ai/pricing) |
+| Cursor Pro | $20/mo | Yes, and this is the cheapest paid path | [cursor.com/pricing](https://cursor.com/pricing) |
+| Cursor Pro+ | $60/mo | Yes, with more weekly usage than Pro | [cursor.com/pricing](https://cursor.com/pricing) |
+| Cursor Ultra | $200/mo | Yes, with the highest weekly usage | [cursor.com/pricing](https://cursor.com/pricing) |
+| Cursor Teams Standard | See Cursor team pricing | Yes, for every member of a self-serve Teams plan | [cursor.com/docs](https://cursor.com/docs/account/pricing) |
+| Cursor Teams Premium | See Cursor team pricing | Yes, but no member needs it for access | [cursor.com/docs](https://cursor.com/docs/account/pricing) |
+| SuperGrok | See x.ai | Yes, once linked to a Cursor account | [x.ai/pricing](https://x.ai/pricing) |
+| SuperGrok Plus | See x.ai | Yes, once linked to a Cursor account | [x.ai/pricing](https://x.ai/pricing) |
 
 A one time trial is also an eligibility path for individuals, per the
 [teams and enterprises documentation](https://docs.x.ai/grok-bot/teams-and-enterprises), and if you hold both a Cursor and a
 SuperGrok subscription [the FAQ](https://docs.x.ai/grok-bot/faq) states that Grok Bot uses whichever has
 more usage.
-The gap between the two twenty dollar tiers is the thing that catches people:
-Cursor Pro at $20 does not include Grok Bot and Cursor Pro+ at $60 does.
+The thing that catches people now is the tier gap:
+Cursor Pro at $20 and Cursor Pro+ at $60 both include Grok Bot and differ only
+in weekly usage.
 
 On the usage side, two documented facts shape everything. Subscriptions include a
 weekly usage allowance and overflow is billed on demand from model and token
 cost. And the vendor states plainly that
-[there is no Grok Bot specific spend cap yet](https://docs.x.ai/grok-bot/teams-and-enterprises). There is no figure published for what the included allowance is worth, so
+[a separate Grok Bot spend cap is not available today](https://docs.x.ai/grok-bot/teams-and-enterprises),
+with account-level on-demand controls applying instead. There is no figure published for what the included allowance is worth, so
 anyone quoting one is guessing.
 
-No cap means the ceiling is whatever you wrote into the charter. Three levers
+No per-bot cap means the ceiling for a bot is whatever you wrote into the
+charter, with the account's On-demand monthly limit as the backstop. Three levers
 carry nearly all of it: how often the bot runs, how much it reads per run, and
 whether a failing step is allowed to retry forever. Cap retries at one, name the
 sources rather than saying "search the web", and treat the schedule dropdown as
 the most expensive field on the page.
 [What you pay and how usage adds up](/blog/grok-bot-cost) has the estimation
-formula. [Keeping a roster from running away with no spend cap](/blog/grok-bot-spend-cap-and-token-burn)
+formula. [Keeping a roster from running away with no per-Bot spend cap](/blog/grok-bot-spend-cap-and-token-burn)
 covers the retry loop specifically, [keeping costs predictable as usage
 grows](/blog/bot-cost-control) covers the roster level view, and
 [why access runs through a Cursor account](/blog/grok-bot-cursor-account-explained)
@@ -679,8 +685,9 @@ Credit what genuinely protects you. The machine is a managed Linux VM where the
 bot runs as a non root user, and hosted MCP sign in tokens stay with Cursor's
 backend rather than on the computer, both per
 [the teams and enterprises page](https://docs.x.ai/grok-bot/teams-and-enterprises).
-Two further controls appear on that page as not yet shipped, a team level ceiling
-on local execution and an admin Kill action, so plan as though neither exists.
+Two further controls on that page have shipped since August: team admins on
+Teams and Enterprise can cap local execution, and Enterprise organization admins
+can Terminate a member's computer, which still keeps the durable disk.
 
 [One computer, many screens](/blog/grok-bot-shared-computer-security) walks the
 whole isolation model. [The safety checklist before you connect your
@@ -796,12 +803,13 @@ that makes the setup improve instead of resetting.
 
 ### How much do AI bots cost to run?
 
-There are two costs. Access is a subscription, and as of 21 August 2026 the
-cheapest paid path to Grok Bot is Cursor Pro+ at $60 a month, per
-cursor.com/pricing; Cursor Pro at $20 does not include it. Usage sits on top: subscriptions
+There are two costs. Access is a subscription, and as of 23 September 2026 the
+cheapest paid path is Cursor Pro at $20 a month, per
+cursor.com/pricing. Usage sits on top: subscriptions
 include a weekly allowance and overflow is billed on demand from model and token
-cost. The vendor states there is no Grok Bot specific spend cap yet, so your
-ceiling is whatever the charter enforces. Cadence drives the bill more than
+cost. The vendor states a separate Grok Bot spend cap is not available today,
+so your ceiling per bot is whatever the charter enforces, with the account's
+On-demand monthly limit behind it. Cadence drives the bill more than
 anything else you can change.
 
 ### Can an AI bot be left running unattended safely?

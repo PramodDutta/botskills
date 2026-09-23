@@ -13,7 +13,7 @@ Company Gmail still opens on the founder's personal Pro+ computer the Monday aft
 
 You will not find Move, Transfer, or Reassign. A named bot is a screen on one persistent cloud computer assigned to the user account, not to the bot ([computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)). Two invoices are not two computers until they are two accounts. Paying Teams on the same Cursor user who already holds Pro+ leaves one disk. That dual-SKU trap lives on [When You Hold Cursor and SuperGrok](/blog/grok-bot-both-subscriptions). This page is the founder who thinks the company card already moved Inbox Desk.
 
-Copy the charter, recreate the job on the work seat, then sign leftover company sessions out of the personal computer. [How to Share a Grok Bot](/blog/share-a-grok-bot) is the intern who asked for your bot. [Grok Bot on Cursor Teams Standard](/blog/grok-bot-teams-standard) is the forty-dollar eligibility line. Stay here if you already ran company work on personal Pro+ and finance just bought Teams.
+Copy the charter, recreate the job on the work seat, then sign leftover company sessions out of the personal computer. [How to Share a Grok Bot](/blog/share-a-grok-bot) is the intern who asked for your bot. [Grok Bot on Cursor Teams Standard](/blog/grok-bot-teams-standard) is the per-seat eligibility line. Stay here if you already ran company work on personal Pro+ and finance just bought Teams.
 
 ## Scan the Grok Bot sidebar for a Move to Work control that does not exist
 
@@ -39,7 +39,7 @@ Write the missing button down as a product fact. Finance posted the seats. The a
 
 A personal Cursor Pro+ charge and a company Cursor Teams Standard charge look like a handoff. They are two SKUs. They are not two machines until they are two identities.
 
-Cursor Pro+ at sixty dollars a month is the cheapest documented paid individual door as of the 25 August 2026 check against [cursor.com/pricing](https://cursor.com/pricing). Confirm that number live. Cursor Teams Standard at forty dollars per user per month includes Grok Bot as a per-person stamp, checked against [Cursor team pricing](https://cursor.com/docs/account/pricing) and the [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq). Confirm those figures the morning you pay. Teams Premium at one hundred twenty is the same Bot product on a richer Cursor SKU. Cursor Hobby, Cursor Pro at twenty, and SuperGrok at thirty do not include Grok Bot. SuperGrok Plus at one hundred does.
+Cursor Pro at twenty dollars a month is the cheapest documented paid individual door as of the 23 September 2026 check against [cursor.com/pricing](https://cursor.com/pricing). Confirm that number live. A self-serve Cursor Teams seat includes Grok Bot for every member as a per-person stamp, checked against [Cursor team pricing](https://cursor.com/docs/account/pricing) and the [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq). Confirm those figures the morning you pay. A Teams Premium seat is the same Bot product on a richer Cursor SKU, and it is not required for access. Cursor Hobby, the free plan, does not include Grok Bot, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead.
 
 Sign-in still runs through a Cursor account ([why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained)). The computer follows that identity. The [FAQ](https://docs.x.ai/grok-bot/faq) is blunt about a related case: if you have both a Cursor and a SuperGrok subscription, Grok Bot uses whichever has more usage. Two eligible charges do not mint two computers.
 
@@ -51,7 +51,7 @@ Do not cancel personal Pro+ on the afternoon the company card posts. Do not dele
 
 The work login needs its own eligible stamp. A Teams seat assigned to someone else does not activate Grok Bot for Willa. Sign-in knows the plan. The installer does not. Eligibility widened on 21 August 2026 ([xAI announcement](https://x.ai/news/grok-bot-more-plans)).
 
-Do the move from a Mac or a Windows desk. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later ([FAQ](https://docs.x.ai/grok-bot/faq)). There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent computer is a managed Linux VM, not a Linux desktop client. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)).
+Do the move from a Mac, Windows, or Linux desk. Supported clients are macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later ([FAQ](https://docs.x.ai/grok-bot/faq)). There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The agent computer is a managed Linux VM, not the Linux desktop client. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)).
 
 Keep personal Pro+ until the work account screen prints an eligible Teams SKU, the named job exists, and one routine has a run record you opened. Cancelling the individual line while company Gmail still lives on that computer is [what survives if you drop Grok Bot](/blog/what-survives-if-you-drop-grok-bot), not a seat move.
 
@@ -63,7 +63,7 @@ You are copying text. You are not cloning a computer. Cookies, sessions, files, 
 
 A listing paste is a ceiling, not a live clone. [Inbox Triage](/bots/inbox-triage) and [Chief of Staff Briefing](/bots/chief-of-staff-briefing) give the work seat a job shape and a boundary. They do not give it the personal Gmail cookie. [How to write a Grok Bot charter](/blog/how-to-write-a-grok-bot-charter-2026) is the template if the personal bot never had standing text.
 
-Do this before you sign into the work identity on the same laptop. Switching Cursor users mid-copy is how people lose the chat they were about to paste. There is no audit view of Bot actions yet. The product will not reprint last month's instructions after you close the personal roster.
+Do this before you sign into the work identity on the same laptop. Switching Cursor users mid-copy is how people lose the chat they were about to paste. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. The product will not reprint last month's instructions after you close the personal roster.
 
 | Item on the personal computer | Lives where | Moves if you copy the charter | Survives if you later delete the personal bot |
 |---|---|---|---|
@@ -104,7 +104,7 @@ This is an invented worked example, not a customer story. Willa, Oakrelay, and t
 
 Willa founded Oakrelay, a nine-person ops tooling shop. From late March 2026 she paid Cursor Pro+ herself at sixty dollars a month because the company had no Teams seats. She ran three named bots on that personal account: Inbox Desk on company Gmail, Morning Brief on calendar plus mail, and a churn watcher fed from a CRM export. Two weekday routines. Four vendor sessions on the shared personal browser: Gmail, Notion, Linear, HubSpot. Personal GitHub sat on the same computer because it was her laptop and her Cursor user.
 
-On 24 August 2026 finance bought nine Cursor Teams Standard seats at forty dollars per user per month. Someone in Slack wrote: Willa's bots should just show up under the company login now.
+On 24 August 2026 finance bought nine Cursor Teams Standard seats. Someone in Slack wrote: Willa's bots should just show up under the company login now.
 
 On 25 August 2026 at 09:10 she signed into Grok Bot with Willa@oakrelay. The sidebar was empty. She scanned for Move, Transfer, Reassign. Nothing. At 09:28 she almost added the Teams seat onto her personal Cursor user so the roster would stay. That would have been two invoices, one computer. Company Gmail would have stayed next to personal GitHub. Offboarding later would have been a person-delete that also killed her personal mail bot.
 
@@ -133,7 +133,7 @@ Sit on the personal identity. Open the shared browser. Sign out of company Gmail
 
 Hosted MCP grants on the personal Cursor user stay with Cursor's backend. Signing the vendor out of the browser does not pull them. Revoke those in personal Cursor settings.
 
-[Rotate vendor access after a bad Grok Bot incident](/blog/rotate-vendor-access-after-a-bad-grok-bot-incident) is the incident version of this list, for when a sibling bot already loaded a console it should not have. This page is the planned leftover: you meant to leave the personal computer, and the cookie stayed. [How to delete a Grok Bot without leaving logins behind](/blog/delete-a-grok-bot-safely) is the sidebar click after the vendors are dark. Admin Kill is coming soon: it deletes the VM but durable storage is kept. Do not wait for Kill as a transfer tool. It is not shipped, and it would not move the bot onto the work seat anyway.
+[Rotate vendor access after a bad Grok Bot incident](/blog/rotate-vendor-access-after-a-bad-grok-bot-incident) is the incident version of this list, for when a sibling bot already loaded a console it should not have. This page is the planned leftover: you meant to leave the personal computer, and the cookie stayed. [How to delete a Grok Bot without leaving logins behind](/blog/delete-a-grok-bot-safely) is the sidebar click after the vendors are dark. Admin Terminate, Enterprise only and for organization admins only, deletes a member's computer but keeps the durable disk. Do not treat Terminate as a transfer tool. It would not move the bot onto the work seat anyway.
 
 Keep personal vendors on the personal computer if you still want a personal job there. Sign out the company ones. Mixing them is how Inbox Desk on a personal seat keeps drafting Oakrelay mail in September.
 
@@ -158,13 +158,13 @@ These checks can come back dirty. If they do, you recreated a job and left a com
 | Work sidebar shows Inbox Desk you created, and personal sidebar still shows its own Inbox Desk or a paused leftover | Two accounts, two computers | You are looking at one laptop session, or you attached Teams to the personal user |
 | A remaining personal bot cannot open company Gmail, Notion, Linear, or HubSpot without a login prompt | Company sessions left the personal computer | A cookie remained, or you never signed out |
 | The work bot cannot open personal Gmail or personal GitHub without its own sign-in | Personal sessions did not leak onto the work computer | You signed a personal account into the work browser just this once |
-| Ops can name the SKU on the work account (Teams Standard, Teams Premium, Ultra, or another eligible stamp) | The work identity is eligible without the personal login | Hobby, Pro at twenty, or SuperGrok at thirty, papered over with the personal password |
+| Ops can name the SKU on the work account (Teams Standard, Teams Premium, Ultra, or another eligible stamp) | The work identity is eligible without the personal login | Hobby, or a SuperGrok that was never linked, papered over with the personal password |
 | The work routine has a run record you opened, and the personal company-facing routine is frozen | Clocks split by identity | Both still fire, or only the personal one still fires |
 | Hosted MCP on the personal Cursor user is revoked for company servers, or listed as unused | Backend grants match the leftover plan | A personal grant still calls a company tool |
 
 Ask a remaining personal bot, not the one you are about to delete, to load the company Gmail URL. Pass is a login wall. Fail is the inbox, a staff name in the corner, or yesterday's thread list. Do not ask the work bot to reopen personal Gmail to confirm isolation. That mints a fresh cookie on the wrong computer.
 
-If the [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and this page disagree, the FAQ wins. Dates on this page are 24 to 28 August 2026. There is no Grok Bot-specific spend cap and no model picker. Confirm eligibility on the live invoice the morning you argue with finance.
+If the [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and this page disagree, the FAQ wins. Dates on this page are 24 to 28 August 2026, with plan facts rechecked 23 September 2026. There is no Grok Bot-specific spend cap beyond the account On-demand monthly limit, and no model picker. Confirm eligibility on the live invoice the morning you argue with finance.
 
 ## Answer the founder who says the company invoice already moved the named bots
 
@@ -214,7 +214,7 @@ If a control named Move to Work appears, ignore it until the live FAQ documents 
 
 ## Stop this page when the problem is two SKUs on one login, not two logins
 
-This page stops when the work identity exists, the job has been recreated, and the personal computer cannot open company vendors without a fresh login. It does not own the dual-SKU usage pool. It does not own the forty-dollar Teams line item. It does not own an intern who asked for your bot by name.
+This page stops when the work identity exists, the job has been recreated, and the personal computer cannot open company vendors without a fresh login. It does not own the dual-SKU usage pool. It does not own the Teams line item. It does not own an intern who asked for your bot by name.
 
 If both a Cursor charge and a SuperGrok charge already sit on one human and you think that isolated work from home, leave. That is [When You Hold Cursor and SuperGrok](/blog/grok-bot-both-subscriptions). Two invoices are still one computer. This page will not unsay that.
 
@@ -224,13 +224,13 @@ If someone wants to run your named bot without becoming a second account, leave.
 
 If the leftover is already an incident (a research bot loaded a company console), leave. That is [rotate vendor access](/blog/rotate-vendor-access-after-a-bad-grok-bot-incident). If you are cancelling Pro+ entirely, leave. That is [what survives if you drop Grok Bot](/blog/what-survives-if-you-drop-grok-bot).
 
-## Park intern sharing, the forty-dollar SKU, and dual-house billing on their own pages
+## Park intern sharing, the Teams SKU, and dual-house billing on their own pages
 
 The architecture under all four pages is the same: one computer per user account, screens are not security boundaries, cookies survive delete, routines die with the bot, nothing is team-level. The procedure differs.
 
 Share is a teammate who wants your card. Teams Standard is finance buying eligibility. Both-subscriptions is two houses on one identity. This page is a founder who already ran company work on personal Pro+ and now has a work seat. Copy the charter. Recreate on the work seat. Sign leftover personal sessions out. There is no transfer button.
 
-A coming-soon team-level ceiling on local execution, and an admin Kill that deletes the VM but keeps durable storage, are not a migrate-to-work tool. Label them not shipped. Do not wait for them. Do the recreate this week from a desktop.
+The team-level ceiling on local execution that team admins can now set, and the Enterprise admin Terminate that deletes a member's computer but keeps the durable disk, are not a migrate-to-work tool. Do not lean on them. Do the recreate this week from a desktop.
 
 Confirm live prices and the live FAQ the morning you brief finance. Eligibility moved on 21 August 2026. The in-product entitlement wins over a screenshot in Slack.
 
@@ -244,7 +244,7 @@ No documented control exists. There is no Move, Transfer, or Reassign on the nam
 
 ### If the company buys Teams, do my personal Pro+ bots appear on the work login?
 
-No. Cursor Teams Standard at forty dollars per user per month includes Grok Bot as a per-person eligibility stamp, checked as of 25 August 2026. The work login is a different user account with its own cloud computer. Named bots that live on the personal Pro+ account do not appear in the work sidebar. Recreate each job from the charter. Teams Premium at one hundred twenty is the same Bot product on a richer Cursor SKU, still without a transfer button, a model picker, a spend cap, or an audit view of Bot actions yet.
+No. A self-serve Cursor Teams seat includes Grok Bot for every member as a per-person eligibility stamp, checked as of 23 September 2026. The work login is a different user account with its own cloud computer. Named bots that live on the personal Pro+ account do not appear in the work sidebar. Recreate each job from the charter. A Teams Premium seat is the same Bot product on a richer Cursor SKU, still without a transfer button, a model picker, a Grok Bot-only spend cap, or an audit view of Bot actions, which is Enterprise only.
 
 ### Can I attach the Teams seat to my personal Cursor account and skip the recreate?
 

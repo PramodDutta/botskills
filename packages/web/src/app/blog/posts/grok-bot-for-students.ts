@@ -50,7 +50,7 @@ The temptation is a fleet on day one: recap bot, quiz bot, TA-mailer, auto-submi
 | Recap plus campus Gmail | Weekly plus a leftover cookie | Pack, then every sibling bot can open school mail | Never. See [the preflight checklist](/blog/grok-bot-preflight-checklist) |
 | Recap plus auto-submit | Continuous Turn in | Cleanup of work you did not mean to hand in | Never on this page |
 
-Nightly is how a student bot dies: it nags on Tuesday about a problem due Thursday, then "finishes" it. A routine belongs to one bot. Nothing is team-level. There is no audit view of Bot actions yet. Append every pack to a folder you own. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop app.
+Nightly is how a student bot dies: it nags on Tuesday about a problem due Thursday, then "finishes" it. A routine belongs to one bot. Nothing is team-level. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Append every pack to a folder you own. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Linux desktop and Android apps shipped in September 2026, and the iOS app runs on iPad. The agent runs on a managed Linux VM as a non-root user, which is not a Linux desktop app.
 
 ## Feed the bot only lecture files you copied onto /workspace yourself
 
@@ -257,15 +257,15 @@ Do not read whether the pack looks tidy. Try to break it. Before you trust a Sun
 
 If the blank scan comes back as an OWNED quote, the source rule is decoration. Stop the routine. If the problem-set lure comes back with answers, the integrity freeze is not in the charter the routine loaded. If the submit lure is obeyed, the verb list is theater. Attack ten OWNED cards against the source PDFs. [The safety checklist](/blog/grok-bot-safety-checklist) is the connect-time version of that review.
 
-## Price the student seat as Cursor Pro+ at sixty or the trial, never Hobby or Pro at twenty
+## Price the student seat as Cursor Pro at twenty or the trial, never Hobby
 
-Eligibility is not "I already pay Cursor." Cursor Hobby does not include Grok Bot. Cursor Pro at twenty dollars a month does not include Grok Bot. The cheapest paid individual path that does is Cursor Pro+ at sixty a month, checked against [cursor.com/pricing](https://cursor.com/pricing) as of 25 August 2026. SuperGrok at thirty does not include it. SuperGrok Plus at one hundred does. Cursor Ultra includes it and is not the cheap door. Cursor Teams Standard at forty per user per month and Premium at one hundred twenty both include it. Those are workplace SKUs, not a student discount. Confirm the live number on the vendor page the morning you pay.
+Eligibility is a paid plan, not "I already use Cursor." Cursor Hobby, the free plan, does not include Grok Bot. Cursor Pro at twenty dollars a month includes Grok Bot, and it is the cheapest paid individual path, checked against [cursor.com/pricing](https://cursor.com/pricing) as of 23 September 2026. Pro+ at sixty and Ultra include it with more weekly usage and are not the cheap door. An individual SuperGrok can be linked instead. A self-serve Cursor Teams seat includes it for every member. Those are workplace SKUs, not a student discount. Confirm the live number on the vendor page the morning you pay.
 
-A one-time trial is also an eligibility path. Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. On the trial, [how to test Grok Bot on the trial](/blog/how-to-test-a-grok-bot-on-trial) is explicit: do not add Gmail to spend the sample. [The cheapest way into Grok Bot](/blog/cheapest-way-into-grok-bot) ranks the doors. [Why Hobby and Pro do not include it](/blog/grok-bot-hobby-and-pro-exclusion) is the miss after a failed installer. [Grok Bot cost](/blog/grok-bot-cost) is usage after the door is open.
+A one-time trial is also an eligibility path. Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. On the trial, [how to test Grok Bot on the trial](/blog/how-to-test-a-grok-bot-on-trial) is explicit: do not add Gmail to spend the sample. [The cheapest way into Grok Bot](/blog/cheapest-way-into-grok-bot) ranks the doors. [Cursor Hobby vs Cursor Pro for Grok Bot](/blog/grok-bot-hobby-and-pro-exclusion) is the miss after a failed installer. [Grok Bot cost](/blog/grok-bot-cost) is usage after the door is open.
 
-There is no Grok Bot-specific spend cap. Weekly allowance then on-demand from model and token cost. Never invent a dollar figure for the allowance. There is no model picker. Claude Code, SKILL.md, and CLAUDE.md compatibility is Grok Build, never Grok Bot.
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance then on-demand from model and token cost. Never invent a dollar figure for the allowance. There is no model picker. Claude Code, SKILL.md, and CLAUDE.md compatibility is Grok Build, never Grok Bot.
 
-Borrowing a parent's Pro+ seat so you can skip sixty dollars puts your campus identity on their computer. Pay for a student-owned eligible path, use the trial and keep school logins off the disk, or skip Grok Bot and recap on a laptop the roster cannot see.
+Borrowing a parent's Pro+ seat so you can skip twenty dollars puts your campus identity on their computer. Pay for a student-owned eligible path, use the trial and keep school logins off the disk, or skip Grok Bot and recap on a laptop the roster cannot see.
 
 ## Hand the pack back when the job is the portal, a live lecture, or notes you do not own
 
@@ -289,7 +289,7 @@ No. The pack is built from files you copied onto the Agent Computer: lecture PDF
 
 ### Can I put Grok Bot on Cursor Hobby or the Pro twenty dollar plan as a student?
 
-No. Cursor Hobby does not include Grok Bot. Cursor Pro at twenty dollars a month does not include Grok Bot. The cheapest paid individual path that does is Cursor Pro+ at sixty a month, checked against cursor.com/pricing as of 25 August 2026. SuperGrok at thirty does not include it. SuperGrok Plus at one hundred does. A one-time trial is also an eligibility path. Confirm the live list on the vendor page the morning you pay. Borrowing a parent's Pro+ seat so you can skip the bill puts your campus cookies on their computer. That is the account mix-up this page exists to stop.
+Not on Hobby; yes on Pro. Cursor Hobby, the free plan, does not include Grok Bot. Cursor Pro at twenty dollars a month includes it, and it is the cheapest paid individual path, checked against cursor.com/pricing as of 23 September 2026. An individual SuperGrok can be linked instead. A one-time trial is also an eligibility path. Confirm the live list on the vendor page the morning you pay. Borrowing a parent's paid seat so you can skip the bill puts your campus cookies on their computer. That is the account mix-up this page exists to stop.
 
 ### What if my parent already signed Cursor into the same account I use for campus SSO?
 

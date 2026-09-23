@@ -128,9 +128,9 @@ desktop
 [Computer and apps](https://docs.x.ai/grok-bot/computer-and-apps) repeats
 the chat ban. The 2FA article is the field-level rule. This article is why
 the field appeared: a grok bot datacenter ip, not a forgotten password.
-Hardware keys are forwarded to the desktop app. Windows support for that
-forwarding is rolling out. Completing the key still leaves a signed-in
-session on the shared computer.
+Hardware keys are forwarded to the desktop app. That setting is on by
+default on macOS and Windows and not yet supported on Linux. Completing the
+key still leaves a signed-in session on the shared computer.
 
 Sign out is the last step of the job. If the job cannot survive a
 sign-out, the job is a standing identity on the account computer. The
@@ -218,7 +218,7 @@ Inbox Triage to grab the code.
 
 [One Computer, Many Screens: What Grok Bot Actually Isolates](/blog/grok-bot-shared-computer-security)
 is the architecture. Isolation is the account, not the roster card named
-Ledger Copy. There is no audit view of Bot actions yet. The dirty check
+Ledger Copy. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. The dirty check
 after sign out is the log. Approvals do not reverse a session already
 written
 ([approvals, security, and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)).
@@ -239,8 +239,7 @@ or block. Three: a file Dana produced on her laptop and placed on the
 computer. Inventing last week's spend so
 [Chief of Staff Briefing](/bots/chief-of-staff-briefing) looks staffed is
 the failure. Retrying a hard block until weekly allowance turns into
-on-demand is the expensive version of the same failure. There is no Grok
-Bot-specific spend cap. Overflow bills from model and token cost. There is
+on-demand is the expensive version of the same failure. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Overflow bills from model and token cost. There is
 no published dollar figure for the weekly allowance. Do not invent one
 ([FAQ](https://docs.x.ai/grok-bot/faq),
 [teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
@@ -296,12 +295,13 @@ minimum here is often no live finance GUI at all.
 
 A site that loads on the laptop and challenges the computer is working as
 the vendor intended. Reinstalling Grok Bot does not mint a residential
-address. There are Linux desktop and Android apps as of September 2026; iPad is still not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). The VM is Linux. That is not a
+address. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later) ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). The VM is Linux. That is not a
 Linux desktop you can move to your house.
 
 Sessions inside the computer can drop when the computer is recreated or
 its network address changes. A reset can still look like a new device to a
-bank. Kill deletes the running VM and keeps durable storage. None of those
+bank. An Enterprise admin Terminate deletes the running computer and keeps
+the durable disk. None of those
 controls turn egress into your home ISP. Grok Bot has no model picker.
 Changing models will change nothing about IP reputation.
 
@@ -311,7 +311,7 @@ Changing models will change nothing about IP reputation.
 | Computer challenged, then sibling bots see a dashboard | Cookie left in the jar | Sign out, dirty-check with another bot | The finance bot's name |
 | Hard block on a vendor you do not own | Their risk engine won | Laptop export or hosted MCP | A retry loop |
 | Cursor window never populated | Eligibility or privacy | The login-failed article | Bank 2FA |
-| Challenge after a computer reset | New device plus same datacenter range | Expect 2FA again | A hope that Kill mints a home IP |
+| Challenge after a computer reset | New device plus same datacenter range | Expect 2FA again | A hope that Terminate mints a home IP |
 
 If you contact support, collect Grok Bot version, OS, the exact vendor
 message, and whether the same URL loads on your laptop. Do not include
@@ -326,16 +326,18 @@ or walk you through installing one on the VM. A residential proxy
 extension is the same idea. It is not a documented control. It still
 shares cookies across bots. Read the vendor's current terms, not here.
 
-The teams page, checked 25 August 2026, offers two documented network
+The docs, checked 23 September 2026, offer two documented network
 moves besides living with the flag. One: allowlist the Grok Bot egress
-ranges on your own services. Two: have the member try the beta setting
-that routes computer traffic through their own computer. Confirm that
-sentence on the live page before you rely on it. The product ships weekly.
-Beta language moves. Routing through the member computer is not a VPN SKU
+ranges on your own services. Two: have the member turn on Route egress
+through this desktop under Settings -> Computer, so destinations see the
+desktop's IP. That is a documented setting, not a beta. Enterprise teams
+can also use Team Setup to install Tailscale or Cloudflare Tunnel; of
+those two, only a Tailscale exit node changes the address a bank sees.
+Routing through the member computer is not a VPN SKU
 you buy from a third party. Copy the current wording from docs, not from
 this paragraph a month later.
 
-If the beta setting is off, or it does not change the bank's mind, you are
+If the desktop route is off, or it does not change the bank's mind, you are
 back to takeover, sign-out, laptop file, or hosted MCP. Password-manager
 policy and passkeys prove you are the member. They do not hide the ASN.
 
@@ -382,7 +384,7 @@ Where this breaks down: a session that does not show as a login wall, a
 passkey stored on the computer, iPhone-only teardown, or deleting Ledger
 Copy and calling that cleanup. Deletion removes the profile and its
 routines. It does not sign the bank out. It does not change egress. There
-is no audit view to query later. You are the log.
+is no audit view outside Enterprise to query later. You are the log.
 
 ## Answer the claim that allowlisting the range will unblock every bank
 
@@ -404,9 +406,9 @@ computer as roster-wide. Allowlisting proves the traffic is hers. It does
 not isolate bots from each other.
 
 The other form of the objection is "we will put a VPN on the VM." Grok
-Bot does not ship that product. A third-party hop is not a documented
-control. The documented beta that routes computer traffic through the
-member computer is a different sentence. Copy it from the live docs. Do
+Bot does not ship that product. Outside Enterprise Team Setup, a
+third-party hop is not a documented control. The documented Route egress
+through this desktop setting is a different sentence. Copy it from the live docs. Do
 not rebrand it as a VPN. If it is missing from the live page the week
 you ship, it is missing.
 
@@ -430,10 +432,10 @@ No. Grok Bot login failed is Cursor authentication: the handshake in the browser
 
 ### Should I leave the bank signed in so tomorrow's export skips the datacenter challenge?
 
-No. Completing 2FA writes a session onto the one persistent cloud computer assigned to your user, not to the finance bot. Inbox Triage, Lead Scout, and every other bot on the account can open that dashboard. Screens are not a security boundary. Deleting the finance bot does not sign the bank out, and there is no audit view of who used the cookie. Sign out after the file is copied. If a daily login is too expensive, export from your laptop and place the CSV on the computer, or use a hosted MCP path whose tokens stay with Cursor's backend.
+No. Completing 2FA writes a session onto the one persistent cloud computer assigned to your user, not to the finance bot. Inbox Triage, Lead Scout, and every other bot on the account can open that dashboard. Screens are not a security boundary. Deleting the finance bot does not sign the bank out, and outside Enterprise there is no audit view of who used the cookie. Sign out after the file is copied. If a daily login is too expensive, export from your laptop and place the CSV on the computer, or use a hosted MCP path whose tokens stay with Cursor's backend.
 
 ### Can I publish Grok Bot IP ranges or buy a VPN so the computer looks like my house?
 
-No. Ask the account team for current ranges only when you own the destination, and keep that list in a private ticket. Do not print CIDRs in a blog, a ticket the vendor can forward, or a Slack channel. Grok Bot does not ship a consumer VPN. A third-party hop on the VM is not a documented control and still shares cookies across bots. The documented options are allowlisting on services you run, and, if still present on the live teams page, the beta setting that routes computer traffic through your own computer. Confirm that wording the day you rely on it.
+No. Ask the account team for current ranges only when you own the destination, and keep that list in a private ticket. Do not print CIDRs in a blog, a ticket the vendor can forward, or a Slack channel. Grok Bot does not ship a consumer VPN. Outside Enterprise Team Setup, a third-party hop on the VM is not a documented control, and any hop still shares cookies across bots. The documented options are allowlisting on services you run, the Route egress through this desktop setting that sends computer traffic through your own desktop, and on Enterprise a Team Setup client such as a Tailscale exit node. Confirm that wording the day you rely on it.
 `,
 };

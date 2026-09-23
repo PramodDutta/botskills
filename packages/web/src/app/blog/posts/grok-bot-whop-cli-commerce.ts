@@ -220,8 +220,9 @@ the vendor, how long is it kept, and can the agent edit it. If the documentation
 does not answer all three, assume a diary and keep your own record alongside.
 
 This matters concretely for Grok Bot users. As of writing, the documentation
-states that an audit view of Bot actions
-[does not exist yet](https://docs.x.ai/grok-bot/teams-and-enterprises). If your
+puts audit logs and Action Recording
+[on the Enterprise plan only](https://docs.x.ai/grok-bot/teams-and-enterprises),
+so individual and self-serve Teams accounts have no audit view of Bot actions. If your
 runtime does not keep the ledger, the tool's own log is the ledger, and picking
 a tool that keeps one is a real selection criterion rather than a nice to have.
 The broader treatment of that problem is in

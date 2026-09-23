@@ -123,7 +123,7 @@ with both.
 | Where data lives | Hosted managed Linux VM | Your machine or your server | Your machine, VPS, or serverless backend | Your relay, Postgres, Redis, object store |
 | Model choice | None. No picker for members or admins | Hosted, gateway, or local providers | Any provider, switchable with one command | Set by whichever harness you attach |
 | Hosting | Vendor only | Self-host, Docker and Nix paths in repo | Self-host, seven terminal backends | Self-host, or one-click Railway relay |
-| Audit trail | No audit view yet | Not documented as a first-class feature | Not documented as a first-class feature | Hash-chain log, core to the design |
+| Audit trail | No audit view outside Enterprise | Not documented as a first-class feature | Not documented as a first-class feature | Hash-chain log, core to the design |
 | Approval model | Per-action approvals, no rollback | Config-driven, permissive by default | Risk-classified, on by default | Approval gates still being wired up |
 | Isolation unit | One shared computer per account | One gateway per operator | Per-session containers available | Per-identity keypair |
 | Published price | Yes, via subscription tiers | None published | None published | None published |
@@ -218,12 +218,12 @@ one persistent cloud computer, with browser cookies, signed-in sessions, files,
 and command-line credentials shared across them, and deleting a bot does not
 remove those. We wrote that up in detail in [what the shared computer really
 means for Grok Bot security](/blog/grok-bot-shared-computer-security). And there
-is no audit view of bot actions yet.
+is no audit view of bot actions outside Enterprise.
 
-Platform reach is narrower than people expect too: macOS, Windows, and iPhone on
-iOS 18 or later, and, since September 2026, Linux desktop and Android apps as well, with iPad still unsupported, which we cover in [Grok Bot supported platforms](/blog/grok-bot-supported-platforms). For a
-solo operator that is often irrelevant. For a Linux-first team it ends the
-conversation before pricing does.
+Platform reach is wider than it was: macOS, Windows, and iPhone on
+iOS 18 or later, and, since September 2026, Linux desktop and Android apps as well, with the iOS app also running on iPad, which we cover in [Grok Bot supported platforms](/blog/grok-bot-supported-platforms). For a
+solo operator that is often irrelevant. For a Linux-first team it no longer
+ends the conversation before pricing does.
 
 ## Ask who stops the bot, then read all four approval models
 
@@ -266,8 +266,7 @@ an undo, and that is true on all four.
 ## Price only what is published, and name what is not
 
 Grok Bot is the only one of the four with a price you can read. Access comes
-through a subscription rather than a separate SKU, and the cheapest paid path is
-Cursor Pro+ at 60 dollars a month per [Cursor's pricing
+through a subscription rather than a separate SKU, and the cheapest paid path is Cursor Pro at $20 a month per [Cursor's pricing
 page](https://cursor.com/pricing), with Cursor Ultra at 200, Cursor Teams
 Standard at 40 per user and Premium at 120 per user, and SuperGrok Plus at 100 a
 month on [x.ai/pricing](https://x.ai/pricing). Cursor Hobby and the 20 dollar
@@ -286,8 +285,9 @@ Check [portal.nousresearch.com](https://portal.nousresearch.com) yourself.
 
 What all three self-hosted options share is a cost shape, not a price: an
 infrastructure line plus your own token spend, plus the hours you spend
-operating it. Grok Bot's shape is a subscription line with an uncapped tail,
-since its own docs state "There is no Grok Bot-specific spend cap yet". Neither
+operating it. Grok Bot's shape is a subscription line with a tail capped only
+by the account-level On-demand monthly limit, since its own docs state "A
+separate Grok Bot spend cap is not available today". Neither
 shape is cheaper in the abstract. We worked through the arithmetic for solo
 operators in [running a one-person company on
 bots](/blog/one-person-company-grok-bot).
@@ -335,8 +335,7 @@ email.
 
 ## Match your situation to one of the four
 
-Pick Grok Bot if you already pay for a qualifying Cursor or SuperGrok plan, work
-on macOS or Windows, and want bots doing real work by Friday. Nobody has to
+Pick Grok Bot if you already pay for a qualifying Cursor or SuperGrok plan, work on macOS, Windows or Linux, and want bots doing real work by Friday. Nobody has to
 operate a service. That is worth more than most self-hosting arguments admit.
 
 Pick OpenClaw if you are one person, you want your assistant reachable from the
@@ -363,7 +362,7 @@ usually the faster decision.
 
 | If this describes you | Pick | The fact that decides it | What you take on |
 |---|---|---|---|
-| You already pay for a qualifying Cursor or SuperGrok plan and work on macOS or Windows | Grok Bot | Access is included in the plan, so the marginal cost is zero | No model choice, no audit view, and one shared computer behind every bot |
+| You already pay for a qualifying Cursor or SuperGrok plan and work on macOS, Windows or Linux | Grok Bot | Access is included in the plan, so the marginal cost is zero | No model choice, no audit view outside Enterprise, and one shared computer behind every bot |
 | Your desktops run Linux | Either | Grok Bot has a Linux desktop app as of September 2026 | Whichever operating burden the self-hosted choice brings |
 | One person, one machine, reachable from the chat apps you already use | OpenClaw | Its README states it is designed for a single operator | A gateway you run, with sandboxing you opt into rather than inherit |
 | Five colleagues will share the assistant | Not OpenClaw | Its security guide says it is not a hostile multi-tenant boundary for several adversarial users on one gateway | Separate installs, or Hermes with per-session containers |
@@ -371,7 +370,7 @@ usually the faster decision.
 | Data has to stay in a jurisdiction you choose | Hermes or OpenClaw | Both are self-hosted. Grok Bot's computer is a hosted managed VM | Infrastructure, updates, and key rotation |
 | The open question is who did what, across a team | Buzz | Signed events in one hash-chained log, with identity as the primitive rather than a permission flag | A relay, Postgres, Redis, object storage, and a key per agent |
 | You need something that stops an action, not a record that it happened | Hermes now, Buzz later | Buzz's README puts workflow approval gates in the still-being-wired-up column | Living with the gap: an audit trail is not a gate |
-| You are building a compliance programme on top of it | None of the four, yet | Buzz's README warns against exactly that, and Grok Bot has no audit view | Manual record keeping until one of them ships it |
+| You are building a compliance programme on top of it | None of the four, yet | Buzz's README warns against exactly that, and Grok Bot has no audit view outside Enterprise | Manual record keeping until one of them ships it |
 
 ## Combine a runtime with a workspace, which is already supported
 

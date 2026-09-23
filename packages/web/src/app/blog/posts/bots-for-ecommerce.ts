@@ -378,7 +378,7 @@ by week three, and a skimmed brief is worse than no brief, since it costs usage
 against your weekly allowance with overflow billed on demand, and it buys you
 the feeling of coverage without the coverage.
 
-One more habit for the account itself. As of writing there is no audit view of
+One more habit for the account itself. As of writing there is no audit view outside Enterprise of
 bot actions, so if you want a record of what your bots did in your store, the
 bot has to write it and you have to keep it. Have the brief append its own run
 log to a file: date, sources reached, sources failed, counts in each block.

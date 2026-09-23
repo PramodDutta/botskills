@@ -101,7 +101,7 @@ files, and command line credentials are shared across all of them. Each bot gets
 its own screen, and the documentation says plainly that the screens are separate
 work surfaces rather than separate security boundaries, and that separate bots
 should not be used as a security boundary. Deleting a bot leaves the shared
-files and browser sessions in place, and there is no audit view of bot actions
+files and browser sessions in place, and there is no audit view of bot actions outside Enterprise
 yet, so nothing reconstructs what was touched except a log you keep yourself.
 
 Four habits carry the weight.
@@ -156,7 +156,7 @@ resolution.
 | Delete exports, downloads, and scratch files outside the engagement folder | Nothing sweeps them, and they are the copies you will forget |
 | Clear or archive the engagement memory file | Memory persists independently of any single piece of work |
 | Retire the bot only after the four steps above | Deleting a Bot does not remove shared-computer files or browser sessions |
-| Save your own run log of what the bot touched | As of writing there is no audit view of Bot actions |
+| Save your own run log of what the bot touched | As of writing there is no audit view of Bot actions outside Enterprise |
 
 That last row changes what you can promise. If a client asks in March what your
 automation touched in November, the only answer available is a log you decided to

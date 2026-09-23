@@ -389,16 +389,16 @@ three bots, no appetite for being an operator: take the hosted product.
 Four situations flip it, and they are specific rather than ideological. Your bots
 need to reach something a hosted runtime cannot see, such as a database behind
 your own network. You need the record, because an audit trail you can query is a
-self-hosting property and the Grok Bot documentation still says an audit view of
-Bot actions
-[does not exist yet](https://docs.x.ai/grok-bot/teams-and-enterprises). You have
+self-hosting property and the Grok Bot documentation keeps audit logs and
+Action Recording
+[on Enterprise only](https://docs.x.ai/grok-bot/teams-and-enterprises). You have
 a residency or contractual constraint that makes "where does this run" someone
 else's question to ask you. Or your desktops are Linux, which the hosted product only started supporting in September 2026, with a .deb, .rpm or AppImage desktop app.
 
-Price the alternative honestly while you decide. As of 21 August 2026 the
-cheapest paid route to Grok Bot is Cursor Pro+ at 60 dollars a month, with Cursor
-Ultra, the Cursor Teams plans and SuperGrok Plus at 100 dollars a month also
-carrying access, while Cursor's free and 20 dollar tiers do not. A small VM plus
+Price the alternative honestly while you decide. As of 23 September 2026 the
+cheapest paid route is Cursor Pro at $20 a month, with Pro+, Ultra, the
+Cursor Teams plans and a linked individual SuperGrok subscription also
+carrying access, while Cursor's free tier does not. A small VM plus
 your own model spend is not obviously cheaper for one person, and is often
 clearly cheaper for a team. The full comparison is in
 [Rakazo versus Grok Bot](/blog/rakazo-vs-grok-bot).

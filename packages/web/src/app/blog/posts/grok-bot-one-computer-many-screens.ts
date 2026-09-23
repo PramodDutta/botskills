@@ -157,10 +157,10 @@ open that file is the computer doing what it was documented to do.
 
 The Agent Computer is a managed Linux VM. The process runs as a non-root
 user. That does not give each bot its own user, and it is not a Linux
-desktop client. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Clients are
+desktop client. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). Clients are
 macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS
-18+. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Desktop is required to edit, inspect
-history, test, or delete. None of that slices a Figma cookie by screen.
+18+. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Desktop is required to edit or test; the
+phone can show run history and delete a routine. None of that slices a Figma cookie by screen.
 
 Beta launched 11 August 2026. Eligibility widened 21 August 2026. Screens did
 not become vaults in that interval.
@@ -176,7 +176,7 @@ and land in the same file.
 If you still need the transcript that named the export folder, hide the bot
 instead of deleting it. When you do delete, revoke at Figma first, sign the
 browser out, remove the export folder, then delete the bot. Deleting first is
-theatre. There is no audit view of bot actions yet, so you will not get a
+theatre. There is no audit view of bot actions outside Enterprise, so you will not get a
 later list of which screen opened Q4
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 
@@ -313,11 +313,11 @@ and a real decision about whether Figma belongs on the machine.
 Isolation you actually have is the eligible account. Screens do not add a
 second unit. A designer who wants parallel work then has three honest setups.
 
-The cheapest paid path that includes Grok Bot is Cursor Pro+ at $60 a month.
-Cursor Hobby and Cursor Pro at $20 do not include it. SuperGrok at $30 does
-not. SuperGrok Plus at $100 does. SuperGrok Heavy does. Cursor Ultra does.
-Teams Standard at $40 per user per month and Teams Premium at $120 per user
-per month both include it, plus a one-time trial. Confirm live numbers on
+The cheapest paid path that includes Grok Bot is Cursor Pro at $20 a month.
+Cursor Hobby, the free plan, does not include it; every paid Cursor plan does, Pro+ and Ultra included,
+and so does every seat on a self-serve Cursor Teams plan. An individual SuperGrok,
+SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked
+instead, and there is a one-time trial. Confirm live numbers on
 [cursor.com/pricing](https://cursor.com/pricing)
 and [x.ai/pricing](https://x.ai/pricing) before you budget a second seat.
 
@@ -420,6 +420,6 @@ No. Deleting a bot removes that bot, its conversation, and its routines. Shared-
 
 ### What isolation do I actually have if grok bot screens are only a focus UI?
 
-The unit is the eligible account, which is the computer. A second eligible account is a second computer. The other honest option is never signing into Figma on the Agent Computer, and exporting from your laptop instead. Cursor Pro+ at $60 a month is the cheapest paid path that includes Grok Bot. Teams Standard at $40 per user per month is another included seat. Confirm both live before you budget. Hosted MCP tokens stay with Cursor's backend, off the disk, which closes a browser-login path without turning a named screen into a vault. One-computer hygiene is valid when you would let every sibling bot open Q4.
+The unit is the eligible account, which is the computer. A second eligible account is a second computer. The other honest option is never signing into Figma on the Agent Computer, and exporting from your laptop instead. Cursor Pro at $20 a month is the cheapest paid path that includes Grok Bot. A seat on a self-serve Cursor Teams plan is another included seat. Confirm both live before you budget. Hosted MCP tokens stay with Cursor's backend, off the disk, which closes a browser-login path without turning a named screen into a vault. One-computer hygiene is valid when you would let every sibling bot open Q4.
 `,
 };

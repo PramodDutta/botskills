@@ -187,7 +187,7 @@ static egress addresses, and the documentation notes that some services flag
 datacenter ranges
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 Every bot on your account shares those addresses, so the IP tells you the
-platform and never the bot. There is also no audit view of bot actions in the
+platform and never the bot. There is also no audit view of bot actions outside Enterprise in the
 product as of writing, which means CloudTrail is not the corroborating record.
 It is the only record.
 
@@ -199,11 +199,12 @@ actions can apply a restrictive policy when a threshold is crossed, which is
 worth configuring, but it fires on delayed data and cannot unwind the spend that
 triggered it.
 
-Now stack the second uncapped meter on top. Subscriptions include a weekly usage
+Now stack the second meter on top. Subscriptions include a weekly usage
 allowance and anything past it is billed on demand from model and token cost,
-and the documentation states there is no Grok Bot specific spend cap yet. A loop
-that retries a paginated read against a large account burns money on both sides
-of the connection at once, and neither side stops it.
+and the documentation states there is no Grok Bot specific spend cap, only the
+account On-demand monthly limit, which a run already in progress can finish
+past. A loop that retries a paginated read against a large account burns money
+on both sides of the connection at once, and neither side stops it in time.
 
 The part people find surprising is that read-only calls are not free.
 

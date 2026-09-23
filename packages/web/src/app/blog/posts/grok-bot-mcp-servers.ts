@@ -45,7 +45,7 @@ Confirm the current wording on [docs.x.ai](https://docs.x.ai/grok-bot/teams-and-
 
 The fallback feels harmless because you are "just looking." You open the admin UI, type your password, maybe pass a challenge, confirm the account that 403'd, and leave the tab. You did not connect a plugin. You did not paste a token. You signed into a website, which is what people do all day.
 
-On this computer that login is not a private tab. Browser cookies and signed-in sessions are shared across every bot on the account. Deleting the bot whose screen you used does not remove those sessions. There is no audit view of Bot actions yet, so you will not get a later list of which named worker loaded the console overnight. Sign-in time is when isolation happens, or it does not.
+On this computer that login is not a private tab. Browser cookies and signed-in sessions are shared across every bot on the account. Deleting the bot whose screen you used does not remove those sessions. There is no audit view of Bot actions outside Enterprise, so you will not get a later list of which named worker loaded the console overnight. Sign-in time is when isolation happens, or it does not.
 
 The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop app, and it does not shrink the cookie jar. Traffic leaves from static egress addresses, and some services flag datacenter IPs, so a 403 debug may also hit a login challenge. Once the session exists, it exists for the roster.
 
@@ -113,7 +113,7 @@ Inspect the list before the first run, and again when the owner says they added 
 
 The [least privilege](/blog/least-privilege-bots) page is the policy version of this table: connect the minimum, not the maximum. This page is the grok bot mcp version: the minimum is the tool list you inspected, not the nickname of the server.
 
-If a write tool exists, disconnect it at the server or refuse it in the charter and test the refusal. Hoping the bot will not notice is not a third option. There is no audit view to catch the time it did. Confirm a third-party server's current tool list on the vendor's page the day you connect. Do not copy a feature list from a roundup, and do not trust a plugin count from a social post.
+If a write tool exists, disconnect it at the server or refuse it in the charter and test the refusal. Hoping the bot will not notice is not a third option. There is no audit view outside Enterprise to catch the time it did. Confirm a third-party server's current tool list on the vendor's page the day you connect. Do not copy a feature list from a roundup, and do not trust a plugin count from a social post.
 
 ## Use the browser for that admin UI only after you accept identity-wide reach
 
@@ -177,7 +177,7 @@ A check that cannot fail is a story you tell yourself. Run these on the day you 
 | Revoke the hosted connection, then ask for list_accounts | Auth error | The tool still works, so you revoked the wrong grant |
 | Search usage-brief.md for console URLs | None | You are seeding the next inheritance |
 
-If Lead Scout can load the console, you do not have a hosted-MCP-only setup. You have a cookie. Sign out on the computer, then revoke at the identity provider. Source revoke without a local sign-out can leave a cookie that still works. Local sign-out without a revoke leaves a grant you forgot. There is no audit view. You are the log.
+If Lead Scout can load the console, you do not have a hosted-MCP-only setup. You have a cookie. Sign out on the computer, then revoke at the identity provider. Source revoke without a local sign-out can leave a cookie that still works. Local sign-out without a revoke leaves a grant you forgot. Outside Enterprise there is no audit view. You are the log.
 
 ## Retire a bot without pretending the cookie left with it
 
@@ -199,7 +199,7 @@ Second, what the tools or the identity can do. Two GET-style MCP tools are a sma
 | Admin UI only, session left up | Cookie jar | Full admin identity | No, unless that identity was built to be shared |
 | Admin UI, signed out, no MCP | Nowhere | None until you sign in again | Yes, and you have no automation |
 
-Pay, send, and publish sit on the verb axis, not the storage axis. A hosted token that can send is still send. Approvals gate a proposed action. They do not reverse work already completed. There is no Grok Bot-specific spend cap. Do not use "the token is hosted" as a reason to connect a verb you cannot undo.
+Pay, send, and publish sit on the verb axis, not the storage axis. A hosted token that can send is still send. Approvals gate a proposed action. They do not reverse work already completed. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Do not use "the token is hosted" as a reason to connect a verb you cannot undo.
 
 ## Keep pay, send, and publish off both paths until a person is in the loop
 

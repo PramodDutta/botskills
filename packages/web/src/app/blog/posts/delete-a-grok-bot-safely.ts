@@ -98,7 +98,7 @@ sitting in the shared browser.
 
 Copy the routine instructions into a file you own before you destroy them.
 Twenty run records is a thin history even while the bot is alive. After
-delete, it is zero. There is no audit view of Bot actions yet, so the routine
+delete, it is zero. There is no audit view of Bot actions outside Enterprise, so the routine
 panel and whatever files you made the bot append are the record. How
 schedules fire is in [Grok Bot Scheduling](/blog/grok-bot-scheduling). This
 teardown only needs: stop the clock before you pull the credentials.
@@ -238,23 +238,22 @@ Copy that text into a file you own, off the shared computer if it contains
 client names. You are preserving the method, not the login. The login should
 already be dead.
 
-This is not an audit log. There is no audit view of Bot actions yet. Twenty
+This is not an audit log. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Twenty
 rows per routine is not a compliance record. If a client later asks what the
 bot touched, you will answer from files you kept and the source system's
 logs. Make the bot append each run to a file you own while it still exists,
 or accept that you cannot reconstruct it. Deleting a routine by itself is
 also immediate and has no undo. Copy first there too.
 
-## Finish the teardown on desktop, because iPhone cannot delete
+## Finish the teardown on desktop, even though the phone can delete
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
-deleting need desktop. Supported clients are macOS on Apple silicon and
-Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The bots run on a managed
-Linux VM. The desk you drive it from cannot be a Linux desktop, and it cannot
-be your phone if the job is delete.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Supported clients are macOS on Apple silicon and
+Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The bots run on a managed
+Linux VM. The phone can delete a Bot and take over the computer, but do the
+sign-out and file pass from a desktop on macOS, Windows, or Linux.
 
 Trying the same teardown from a phone is a second failure, not a shortcut.
-If you are away from a Mac or Windows machine, pause the routines and wait.
+If you are away from a desktop, pause the routines and wait.
 
 ## Stop treating a replacement bot as a new sandbox
 
@@ -327,17 +326,19 @@ or Outlook. The pre-flight list before you connect a mailbox is
 [the safety checklist](/blog/grok-bot-safety-checklist). Teardown is that
 list in reverse, plus delete at the end.
 
-## Leave admin Kill on the coming-soon list, not in this week's plan
+## Leave admin Terminate out of this week's plan, because it keeps the disk
 
-Teams documentation describes an administrator Kill action that deletes the
-VM while keeping durable storage. That control is coming soon, not shipped.
-Do not wait for it. Even when it ships, durable storage is kept. Killing the
-VM is not a wipe of the files you care about. You would still owe a file
+Teams documentation describes an administrator Terminate action, part of
+Grok Bot Computers on the Cursor dashboard. It is Enterprise only and for
+organization admins only, and it deletes a member's computer while keeping
+the durable disk. Do not wait for it. Terminating the computer is not a
+wipe of the files you care about. You would still owe a file
 pass.
 
-A related coming-soon control is a team-level ceiling on local execution
-(Never / Ask every time / Always), where members can choose a stricter option
-but not a looser one. That is about the Mac or Windows machine in front of
+A related control, now available to team admins on Teams and Enterprise, is
+a team-level ceiling on local execution (Never allow / Ask every time /
+Always allow), where members can choose a stricter option but not a looser
+one. That is about the Mac or Windows machine in front of
 you, not leftover HubSpot cookies on the cloud computer. It does not replace
 this checklist.
 
@@ -399,9 +400,9 @@ Shared computer files and sign-ins are not isolated by Bot and may remain.
 The computer is a managed Linux VM assigned to your user account, not to
 that Bot, so every remaining bot keeps using the same disk and the same
 browser. If you need the leftover HubSpot tab gone, you sign out and revoke
-it. Admin Kill, which deletes the VM while keeping durable storage, is
-coming soon, not shipped, and even that is not a wipe of the files you care
-about.
+it. Admin Terminate, which Enterprise organization admins can use to delete
+a member's computer, still keeps the durable disk, so it is not a wipe of
+the files you care about either.
 
 ### Should I hide a Grok Bot instead of deleting it?
 
@@ -415,8 +416,8 @@ to open.
 
 ### Can I delete a Grok Bot from my iPhone?
 
-You cannot finish a real teardown from iPhone. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop, meaning
-macOS or Windows. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Pause routines from the phone if you are away from a desk, then
+Yes, the phone app can delete a Bot, but do not finish a real teardown there. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app, meaning
+macOS, Windows, or Linux. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). Pause routines from the phone if you are away from a desk, then
 run sign-out, file removal, and delete on a supported desktop. A mobile tap
 that only tidies a list is how leftover CRM sessions survive a "deleted"
 bot.

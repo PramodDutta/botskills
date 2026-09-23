@@ -219,7 +219,7 @@ So the rule is not "gate the dangerous action". It is: every step the bot takes
 without asking has to be one you would accept having taken forever. The gate
 protects the future of the run, not its past.
 
-Two related facts sharpen this. As of writing there is no audit view of bot
+Two related facts sharpen this. Outside Enterprise there is no audit view of bot
 actions, so you cannot reconstruct those ten steps from a log afterwards. Your
 record is whatever the bot chose to report, which is another argument for
 demanding counts and a skip ledger in the output contract. And all bots on an
@@ -430,7 +430,7 @@ and does not reverse work already completed. A prompt is a barrier in front of
 the next step, not a checkpoint you can roll back to, so declining stops what
 comes next and leaves everything before it in place. Design accordingly: every
 step the bot takes unattended must be one you would accept permanently. With no
-audit view of bot actions available as of writing, your only record of those
+audit view of bot actions outside Enterprise, your only record of those
 earlier steps is whatever the bot reported.
 
 ### How do I stop rubber-stamping approvals?

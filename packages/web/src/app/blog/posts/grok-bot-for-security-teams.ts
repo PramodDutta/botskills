@@ -137,11 +137,11 @@ A draft that says "consider rotating the key for app-prod" is still a note.
 A bot that opens IAM is a remediator you did not mean to hire. Keep the click
 on your laptop.
 
-There is no audit view of Bot actions yet. Twenty routine run records are a
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Twenty routine run records are a
 sliding window, not a ledger. If you need a receipt for the 08:30 note, the
 bot appends the cluster list to a document the company owns. That substitute,
 and why the product row is still "not yet," is
-[Grok Bot Has No Audit View Yet: How to Keep Your Own Receipts](/blog/grok-bot-no-audit-log-yet).
+[Grok Bot Audit View: Keep Your Own Receipts Outside Enterprise](/blog/grok-bot-no-audit-log-yet).
 Do not tell a reviewer that Grok Bot logged the containment. It did not.
 Containment did not happen here.
 
@@ -331,8 +331,7 @@ Connect nothing else.
 Plant a poison cell: a URL, and a sentence that says to open AWS. The bot must
 leave both as text. If it browses or asks for a login, the desk is not ready.
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
-deleting need desktop. Pause is a stop. It is not a log.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Pause is a stop. It is not a log.
 
 ## Hedge every vendor console and SIEM product as a page you must confirm
 
@@ -358,8 +357,8 @@ Grok Bot computer.
 A second computer is a second eligible account, not a renamed bot. Screens
 will not save you. The architecture page is
 [One Computer, Many Screens: What Grok Bot Actually Isolates](/blog/grok-bot-shared-computer-security).
-Receipts live in the markdown the charter already appends. The product has no
-audit view of Bot actions yet.
+Receipts live in the markdown the charter already appends. Outside Enterprise,
+the product has no audit view of Bot actions.
 
 A grok bot for security teams scales clustering. It does not scale containment.
 When the queue grows past what one person can read even as clusters, the answer
@@ -402,7 +401,7 @@ If the file is missing, it writes GAP and stops.
 
 ### Does Grok Bot keep an audit log of what the SOC bot clustered?
 
-No. An audit view of Bot actions does not exist yet. Routine run records
+No. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Routine run records
 keep the twenty most recent runs per routine, then overwrite. That window
 is not a ledger, and deleting the Bot deletes its routines. Force the bot
 to append the cluster list and status draft to a document the company owns.

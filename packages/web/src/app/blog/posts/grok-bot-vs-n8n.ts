@@ -166,16 +166,17 @@ boundaries", and "Do not use separate Bots as a security boundary." Deleting a
 Bot does not remove shared-computer files or browser sessions.
 
 Two further constraints that a self-hosting reader will care about. An audit
-view of Bot actions does not exist yet, which is a meaningful gap if you are
+view of Bot actions does not exist outside Enterprise, which is a meaningful gap if you are
 used to reading n8n's execution history. And there is no Grok Bot specific spend
-cap yet, so the runtime imposes no ceiling of its own. A team-level ceiling on
-local execution with Never, Ask every time and Always settings is documented as
-coming, described so that "members can choose a stricter option, but not a
-looser one", along with an admin Kill that deletes the VM while keeping durable
-storage. Neither has shipped, so plan as though they do not exist.
+cap, so the only ceiling the runtime imposes is the account On-demand monthly limit. A team-level ceiling on
+local execution with Never, Ask every time and Always settings has shipped for
+team admins on Teams and Enterprise, and a member's own stricter setting still
+applies under it. Enterprise organization admins can also Terminate a member's
+computer, which still keeps the durable disk. Neither applies to an individual
+plan, so a solo self-hoster should plan as though they do not exist.
 
 What you get in exchange is reach that no self-hosted workflow engine has: a
-real desktop with a browser and a shell, on macOS, Windows and Linux desktops, or from an iPhone or Android phone, able to operate any tool a person can operate. There is an Android app as of September 2026 (Android 9 or later); iPad is still not supported. Our writeup on
+real desktop with a browser and a shell, on macOS, Windows and Linux desktops, or from an iPhone or Android phone, able to operate any tool a person can operate. There is an Android app as of September 2026 (Android 9 or later), and the iOS app also runs on iPad (iPadOS 18 or later). Our writeup on
 [what sharing one computer actually means](/blog/grok-bot-shared-computer-security)
 covers how to design around the shared-credential model rather than against it.
 
@@ -192,7 +193,7 @@ a month-four requirement. These are the ones that actually arrive.
 | You cannot diff a workflow or roll one back | Git version control is a paid feature | Export the workflow JSON into your own repository on a schedule and diff it there |
 | Paid features stopped working on an isolated network | Business and Enterprise keys "must ping our license server daily to stay active" | Allow that one egress path, or drop back to Community and design around it |
 | The quota drained faster than one instance explains | A key may be applied to unlimited instances, and combined usage from all of them counts toward the quota | Track which instances carry the key before you buy more capacity |
-| You cannot reconstruct what a Grok Bot did last Tuesday | An audit view of Bot actions does not exist yet | Make the bot write its own run log, and keep the boundary tight enough that the log suffices |
+| You cannot reconstruct what a Grok Bot did last Tuesday | An audit view of Bot actions does not exist outside Enterprise | Make the bot write its own run log, and keep the boundary tight enough that the log suffices |
 | A routine's history is thinner than you planned around | The app keeps the 20 most recent run records per routine, and deleting a Bot deletes its routines | Export what you need on a schedule, and never treat the app as the archive |
 
 The first row ends honeymoons, so it gets its own section.
@@ -228,7 +229,7 @@ handover.
 | Licence | Sustainable Use License, fair-code, source available | Proprietary, bundled with a subscription |
 | Commercial resale | Not permitted under the Sustainable Use License | Not applicable, it is a hosted product |
 | Cost shape | Executions on cloud, server plus time when self-hosted | Weekly allowance, then on-demand overflow |
-| Cost ceiling | Your plan, or your hardware | "There is no Grok Bot-specific spend cap yet" |
+| Cost ceiling | Your plan, or your hardware | No Grok Bot-specific cap; the account On-demand monthly limit applies |
 | Who authors the path | You, as nodes on a canvas | The bot, per run |
 | Tools with no API | Only reachable if you write a node | Driveable through the browser like a person |
 | Run history | Full execution log per run | 20 most recent run records per routine |
@@ -376,13 +377,13 @@ Choose Grok Bot when the work requires operating tools that have no API and no
 node, when the input is unstructured enough that a graph is the wrong shape, and
 when you have nobody to run a server and no appetite to acquire one. Accept in
 exchange that the machine is not yours, the model is not yours to pick, the
-audit view is not there yet, and the spend has no product-level ceiling.
+audit view is Enterprise only, and the spend has no Grok Bot ceiling beyond the account On-demand monthly limit.
 
 Choose both when your data must stay put but the work reaches outside it, which
 is a very common shape and the one the pattern above is built for. And note the
 entry cost before you plan: n8n's Community edition is free forever on your own
-hardware, while Grok Bot needs an eligible subscription, currently Cursor Pro+ at
-$60 a month as the cheapest paid route per
+hardware, while Grok Bot needs an eligible subscription, currently Cursor Pro at
+$20 a month as the cheapest paid route per
 [cursor.com/pricing](https://cursor.com/pricing). If you are weighing this as a
 solo operator, our
 [one person company writeup](/blog/one-person-company-grok-bot) works through the

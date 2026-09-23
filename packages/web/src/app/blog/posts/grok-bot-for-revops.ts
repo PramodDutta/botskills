@@ -45,7 +45,7 @@ The sentence you will hear is almost always the same. We do not have a fourth hi
 
 Keep Salesforce clean, parsed the way a CRO means it, includes merge, fill, reassign, move stale opportunities, nudge AEs, and sometimes email the lead a recap so the record looks alive. That is a junior contractor with write access. A grok bot for revops is not that contractor. The product you can leave running is a patch list. A human applies the rows they agree with, in their own client, after they have opened the ids.
 
-The honest translation: we will not hire a fourth person to click merge two hundred times. Agreed. The bot flags. Whoever owns the CRM this quarter clicks. Headcount does not go down. Irreversible clicks stop arriving from a process you cannot see. Grok Bot has no audit view of Bot actions yet. The three dated files are the receipts. Copy them out. The app keeps twenty most recent run records per routine.
+The honest translation: we will not hire a fourth person to click merge two hundred times. Agreed. The bot flags. Whoever owns the CRM this quarter clicks. Headcount does not go down. Irreversible clicks stop arriving from a process you cannot see. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. The three dated files are the receipts. Copy them out. The app keeps twenty most recent run records per routine.
 
 ## Treat owner, stage, and lead mail as writes this role never signs
 
@@ -81,7 +81,7 @@ Second choice is a hosted connector whose sign-in token stays with Cursor's back
 | Hosted connector or hosted MCP (confirm the vendor that day) | Cursor's backend, never on the computer | No cookie, but hosted tools stay account-wide | Yes, after you inspect for writes |
 | You signed into Salesforce or the ads GUI in the shared browser | Cookie jar on the shared computer | Any bot that opens a URL can act as that identity | No |
 
-The third row is how three-person teams get hurt. Export failed, so someone signed an AE in "just this once" and left the tab open. A research bot later opened a Salesforce URL and worked as that AE. No CRM plugin was granted to it. The cookie was enough. Role rule: none of the three desks log in as you in a browser. See also [Grok Bot and Salesforce](/blog/grok-bot-salesforce). Linux desktop, Android, and iPad are not Grok Bot clients. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
+The third row is how three-person teams get hurt. Export failed, so someone signed an AE in "just this once" and left the tab open. A research bot later opened a Salesforce URL and worked as that AE. No CRM plugin was granted to it. The cookie was enough. Role rule: none of the three desks log in as you in a browser. See also [Grok Bot and Salesforce](/blog/grok-bot-salesforce). Linux desktop, Android, and iPad (through the iOS app) are all Grok Bot clients now. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 
 ## Hand hygiene as a patch list a human applies after opening both ids
 
@@ -184,7 +184,7 @@ The failures that kill a grok bot for revops are quiet. The three files still ar
 | A live legal deal jumped to Closed Lost | Stale-stage flag was treated as a cleanup license | Quote SLA. Never move stage |
 | The three files went unread by week three | One bot mixed the jobs, or they arrived every morning | Split the bots. Monday only. Cap each file |
 
-Grok Bot has no audit view of Bot actions yet, so the dated files are the receipt. A Salesforce note that just documents the duplicate is still a write, and in some CRMs a send. Connect less.
+Grok Bot has no audit view of Bot actions outside Enterprise, so the dated files are the receipt. A Salesforce note that just documents the duplicate is still a write, and in some CRMs a send. Connect less.
 
 ## Answer the CRO who calls a write-blocked bot unpaid intern work
 
@@ -192,7 +192,7 @@ The strongest case against this setup is the CRO's original hire request. If the
 
 Because the merge, the bid, and the stamp are the expensive objects, not the flags. Exact email is still two people on a shared inbox. Dana's contractor-versus-hire pair was one person with two owners and one open deal. Auto-keeping the newer row would have been a forecast incident. Auto-bidding overnight would have been spend she could not unsay. Auto-stamping red would have been a customer email.
 
-A three-person team cannot afford irreversible clicks from a process with no audit view. Eighteen AEs will notice an owner change. A customer will notice a check-in. The ads auction will notice a bid. Fail-closed is not intern work. It is how three people keep the book without becoming the bot's cleanup crew.
+A three-person team cannot afford irreversible clicks from a process with no audit view outside Enterprise. Eighteen AEs will notice an owner change. A customer will notice a check-in. The ads auction will notice a bid. Fail-closed is not intern work. It is how three people keep the book without becoming the bot's cleanup crew.
 
 The objection wins when Luis already lives in every record, when a native Salesforce duplicate job with human review already exists and you will actually use it, and when paid is a trader you have staffed on purpose with a different product. Those are real limits. They are not a reason to give one Grok Bot write access to Salesforce and the ads account because you lack a fourth hire.
 
@@ -234,6 +234,6 @@ Prefer three bots, three folders, three charters. They can share the account, wh
 
 ### What does fail-closed mean for a three-person RevOps team?
 
-It means the bot is allowed to be useless on a quiet week and is forbidden from being irreversible on a loud one. Zero HIGH pairs is a valid Monday. A red with sources and no customer email is a valid Monday. A spend note with no bid change is a valid Monday. What you cannot afford, with three people and no audit view of Bot actions, is a merge that moved a deal, a health field that mailed a customer, or a saved bid while Mei was commuting. Headcount stays three. The fourth teammate is a stack of lists you apply by hand.
+It means the bot is allowed to be useless on a quiet week and is forbidden from being irreversible on a loud one. Zero HIGH pairs is a valid Monday. A red with sources and no customer email is a valid Monday. A spend note with no bid change is a valid Monday. What you cannot afford, with three people and no audit view of Bot actions outside Enterprise, is a merge that moved a deal, a health field that mailed a customer, or a saved bid while Mei was commuting. Headcount stays three. The fourth teammate is a stack of lists you apply by hand.
 `,
 };

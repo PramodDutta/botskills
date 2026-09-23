@@ -1,17 +1,17 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot Has No Spend Cap: How to Budget Anyway',
+  title: 'Grok Bot Has No Per-Bot Spend Cap: How to Budget Anyway',
   description:
-    'Grok Bot has no spend cap and no per-bot limit today. Build a practical budget instead: workload units, stop rules, review cadence and variance checks.',
+    'Grok Bot has no per-bot spend cap, only an account-level monthly limit. Build a practical budget anyway: workload units, stop rules, review cadence and variance checks.',
   date: '2026-08-29',
   category: 'Guide',
   content: `
-# Grok Bot Has No Spend Cap: How to Budget Anyway
+# Grok Bot Has No Per-Bot Spend Cap: How to Budget Anyway
 
 Priya writes "$40 maximum" at the top of a bot brief and assumes the sentence changes billing. It does not. The number is a management intention until a verified control can enforce it.
 
-A **spend cap** is a system-enforced ceiling that stops additional billable use after a threshold. According to the Spend section of VERIFIED-FACTS-2026-08-25, there is no Grok Bot-specific spend cap yet. The same section says subscriptions include a weekly usage allowance and overflow is on-demand, billed from model and token cost. It publishes no allowance amount, so this article will not invent one.
+A **spend cap** is a system-enforced ceiling that stops additional billable use after a threshold. According to the Spend section of VERIFIED-FACTS-2026-08-25, there is no Grok Bot-specific spend cap yet. The same section says subscriptions include a weekly usage allowance and overflow is on-demand, billed from model and token cost. It publishes no allowance amount, so this article will not invent one. Cursor's plans page, checked 23 September 2026, adds one account-level control: the On-demand monthly limit in Grok Bot Settings (or cursor.com/dashboard, Spending, Monthly Limit) caps overflow for the whole account, though a run already in progress can finish past it.
 
 Budgeting still has value. A budget is a plan for deciding how much work to authorize, observe, and stop. By the end, you can build a workload budget that remains honest about the missing product cap.
 
@@ -105,7 +105,7 @@ The Spend section says overflow is billed from model and token cost. That makes 
 
 ## Answer the manager who wants one hard number
 
-The strongest objection is that a manual plan is not a budget if it cannot promise a maximum. For a hard financial ceiling, that objection is correct. According to the Spend section, the specific Grok Bot cap needed for that promise does not exist yet.
+The strongest objection is that a manual plan is not a budget if it cannot promise a maximum. For a hard financial ceiling, that objection is correct. According to the Spend section, the specific Grok Bot cap needed for that promise does not exist yet. The account's On-demand monthly limit comes closest, but it covers the whole account and is not a hard stop in the middle of a run.
 
 The honest choices are to reduce authorized scope, shorten review intervals, use separate procurement controls outside the product when verified and appropriate, or defer the workload. Do not offer Priya a fake guarantee.
 
@@ -149,7 +149,7 @@ This method cannot create the absent Grok Bot-specific spend cap, publish the we
 
 For subscription eligibility and published plan prices, read [who can actually run Grok Bot](/blog/who-can-actually-run-grok-bot) or [the cheapest way into Grok Bot](/blog/cheapest-way-into-grok-bot). For model routing, read [why the model behind Grok Bot is not published](/blog/why-the-model-behind-grok-bot-is-unpublished).
 
-Stop using this worksheet as soon as someone needs a contractual ceiling. At that point, obtain a verified enforcement mechanism or do not authorize the exposure.
+Stop using this worksheet as soon as someone needs a contractual ceiling. At that point, set the account-level On-demand monthly limit, knowing a run in progress can finish past it, or do not authorize the exposure.
 
 ## Build Priya's four-line budget now
 
@@ -203,7 +203,7 @@ Keep reading: [bot cost control](/blog/bot-cost-control), [what an approval actu
 
 ### Is there a Grok Bot-specific spend cap?
 
-No, according to the Spend section of VERIFIED-FACTS-2026-08-25. A number in a prompt, spreadsheet, or team policy is not the missing system-enforced ceiling. Use smaller authorized batches and manual review thresholds to reduce unreviewed exposure, but describe them accurately. If a hard maximum is required, obtain a separately verified enforcement control or defer the work.
+Not per bot, according to the Spend section of VERIFIED-FACTS-2026-08-25. The only product ceiling is the account-level On-demand monthly limit, which caps overflow for the whole account and can be overrun by a run already in progress. A number in a prompt, spreadsheet, or team policy is not that ceiling. Use smaller authorized batches and manual review thresholds to reduce unreviewed exposure, but describe them accurately. If a hard maximum is required, obtain a separately verified enforcement control or defer the work.
 
 ### How large is the weekly usage allowance?
 

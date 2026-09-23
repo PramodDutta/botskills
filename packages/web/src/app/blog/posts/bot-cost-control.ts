@@ -42,7 +42,7 @@ that quietly grows because the world it reads got bigger.
 The shape of the bill in general, including a per-run estimation formula you
 fill in with your own measurements, is in
 [the Grok Bot cost breakdown](/blog/grok-bot-cost). What to do when a single bot
-is actively running away, given that there is no Grok Bot spend cap as of
+is actively running away, given that there is no Grok Bot-specific spend cap beyond the account On-demand monthly limit as of
 writing, is in
 [the spend cap guide](/blog/grok-bot-spend-cap-and-token-burn). This piece is
 the steady state in between, which is where you will spend most of your time.
@@ -224,7 +224,7 @@ If a task needs spend, describe it in one line and wait for me.
 \`\`\`
 
 The self-report line is the clause people cut and then regret, so it is worth
-defending. Because an audit view of bot actions does not exist yet, nothing in
+defending. Because an audit view of bot actions does not exist outside Enterprise, nothing in
 the product will tell you which bot consumed what. A counter the bot writes
 itself is a proxy you own, and it is enough: when a bot's page count doubles
 between two Tuesdays, you have found the change before the invoice does. The
@@ -304,7 +304,7 @@ retry that began firing where it never used to.
 
 That distinction is the whole discipline. A model that keeps getting revised
 upward is not a bad model, it is a correct model reporting drift, and the drift
-is the finding. Because an audit view of bot actions does not exist yet, the
+is the finding. Because an audit view of bot actions does not exist outside Enterprise, the
 self-report lines are your only ledger, which is the case argued in
 [the bot observability guide](/blog/bot-observability).
 

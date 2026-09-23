@@ -11,7 +11,7 @@ export const post: BlogPost = {
 
 Roundups keep pairing Grok Bot with Manus as if both were a roster of named bots you staff and leave running overnight.
 
-They are not that pair. Grok Bot vs Manus is standing named teammates on one persistent cloud computer versus a general agent product whose homepage, on 27 August 2026, offered slides, websites, design, and games. Confirm every Manus verb, price, and architecture claim on [manus.im](https://manus.im) the day you buy. Grok Bot facts below were checked against [the Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps) as of 25 August 2026. Persistence and the shared computer are the Grok facts.
+They are not that pair. Grok Bot vs Manus is standing named teammates on one persistent cloud computer versus a general agent product whose homepage, on 27 August 2026, offered slides, websites, design, and games. Confirm every Manus verb, price, and architecture claim on [manus.im](https://manus.im) the day you buy. Grok Bot facts below were checked against [the Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps) as of 25 August 2026, with plans rechecked 23 September 2026. Persistence and the shared computer are the Grok facts.
 
 If the other name is a computer-use session inside ChatGPT, read [Grok Bot vs ChatGPT Agent](/blog/grok-bot-vs-chatgpt-agent). If it is a desktop operator, read [Grok Bot vs Claude Cowork](/blog/grok-bot-vs-claude-cowork).
 
@@ -64,7 +64,7 @@ Roundups get this sentence wrong, and it decides whether Grok Bot vs Manus is ev
 
 All bots on a Grok Bot account share one persistent cloud computer assigned to the user, not to a bot. Ten named bots are ten screens and one filesystem. Connect Gmail for the pack and that session is on the computer. The research bot you add on Thursday can see it. Deleting the research bot does not log the pack desk out. Read [One Computer, Many Screens](/blog/grok-bot-shared-computer-security).
 
-The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. See [supported platforms](/blog/grok-bot-supported-platforms). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. A routine assigns a workflow to one bot. Max 50 routines. Twenty recent run records. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view yet.
+The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). See [supported platforms](/blog/grok-bot-supported-platforms). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. A routine assigns a workflow to one bot. Max 50 routines. Twenty recent run records. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view outside Enterprise.
 
 Cloud work continues after you close the app or pocket the iPhone. Local file actions still need that machine awake. Sends set to require approval still wait on you. Sleep is not approval. Approvals do not reverse work already completed. See [Grok Bot With the Laptop Closed](/blog/grok-bot-runs-with-laptop-closed) and [approvals, rules, reversibility](/blog/grok-bot-approval-rules-reversibility). Beta launched 11 August 2026. Eligibility widened 21 August 2026. Still one computer per account.
 
@@ -134,16 +134,16 @@ If you try the same pack on Manus, confirm the live path: a prompt, Mail Manus, 
 | Path | Grok Bot included? | What to remember |
 |---|---|---|
 | Cursor Hobby | No | Free Cursor does not include the bot runtime |
-| Cursor Pro at 20 dollars a month | No | A common mistaken buy |
-| Cursor Pro+ at 60 dollars a month | Yes | Cheapest paid path as of 25 August 2026 |
-| SuperGrok at 30 dollars a month | No | The cheaper SuperGrok tier does not include Grok Bot |
-| SuperGrok Plus at 100 dollars a month | Yes | Listed as including Grok Bot access |
-| SuperGrok Heavy, Cursor Ultra, Cursor Teams Standard (40 dollars/user/month), Teams Premium (120 dollars/user/month), one-time trial | Eligible | Confirm live SuperGrok Heavy pricing. Do not trust a viral 300 dollar Heavy figure |
+| Cursor Pro at 20 dollars a month | Yes | Cheapest paid path, checked 23 September 2026 |
+| Cursor Pro+ at 60 dollars a month | Yes | More weekly usage than Pro |
+| SuperGrok (individual) | Yes, by linking | Link it from the Grok Bot plan screen; it grants usage and is not a Cursor plan |
+| SuperGrok Plus | Yes, by linking | Never stacks with a Cursor plan |
+| SuperGrok Heavy (linked), Cursor Ultra, any seat on a self-serve Cursor Teams plan, one-time trial | Eligible | Confirm live SuperGrok Heavy pricing. Do not trust a viral 300 dollar Heavy figure |
 | Manus plans | Confirm on [manus.im/pricing](https://manus.im/pricing) | Do not invent a dollar figure, a credit pack, or a VM surcharge |
 
-There is no Grok Bot-specific spend cap. Weekly allowance, then on-demand from model and token cost. No published dollar figure for the allowance. Never invent one. No model picker. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. See [Grok Bot Cost](/blog/grok-bot-cost) and [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn).
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance, then on-demand from model and token cost. No published dollar figure for the allowance. Never invent one. No model picker. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. See [Grok Bot Cost](/blog/grok-bot-cost) and [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn).
 
-Model Grok Bot as 60 dollars (or 100, or a Team seat at 40 or 120 dollars per user per month) plus overflow you cannot cap. A lower Manus entry price, if one still exists on your region of the pricing page, is a good reason to run a one-off pack in a general agent. It is a bad reason to staff a standing 06:00 owner on a task that might not be there on Tuesday.
+Model Grok Bot as 20 dollars on Cursor Pro (or 60 on Pro+, 200 on Ultra, or a Teams seat) plus overflow up to the On-demand monthly limit you set. A lower Manus entry price, if one still exists on your region of the pricing page, is a good reason to run a one-off pack in a general agent. It is a bad reason to staff a standing 06:00 owner on a task that might not be there on Tuesday.
 
 Manus currently describes credits on [Plans and Pricing](https://manus.im/docs/introduction/plans.md) and shows live numbers on [pricing](https://manus.im/pricing). Docs currently name Free, Pro, and Team. One card currently prints Free Cloud Computer. This article will not print a Manus dollar price as fact. Help copy currently says everything is subject to the actual pricing page. Confirm the meter, scheduled-task cap, and mail address on your account. Do not map Manus credits onto Grok Bot's unpublished weekly allowance.
 
@@ -153,7 +153,7 @@ The expensive Grok Bot mistake in this comparison is staffing Overnight Pack Des
 
 You bought two screens. The Gmail session is account-wide. Naming does not partition credentials. Deleting the scout after a scare does not log Pack Desk out. Prefer read-only. Put money and sending on a different account from draft packs. Write the stop line before you paste a login. When a bot is done, rotate the sessions yourself.
 
-On Manus, blast radius is whatever the live product can touch on the path you chose. Browser Operator currently describes using your authentic local IP and existing logins. Confirm that. Do not treat it as the xAI shared computer, and do not treat it as proof Manus lacks a cloud environment. You have not been given a VM inventory either way. Hosted MCP sign-in tokens on the Grok Bot side stay with Cursor's backend, not on the computer. There is still no audit view of Grok Bot actions. Confirm whether Manus currently sells an audit trail. Do not invent it.
+On Manus, blast radius is whatever the live product can touch on the path you chose. Browser Operator currently describes using your authentic local IP and existing logins. Confirm that. Do not treat it as the xAI shared computer, and do not treat it as proof Manus lacks a cloud environment. You have not been given a VM inventory either way. Hosted MCP sign-in tokens on the Grok Bot side stay with Cursor's backend, not on the computer. There is still no audit view of Grok Bot actions outside Enterprise. Confirm whether Manus currently sells an audit trail. Do not invent it.
 
 ## Trace the failure where a Manus task and a Grok routine were treated as the same object
 
@@ -183,7 +183,7 @@ It loses when the name has to survive. Customers, vendors, noise, seven must-rea
 
 Open [manus.im](https://manus.im) today. If the first tiles are still slides, websites, design, and games, you are looking at a general agent product, not a Grok roster. Open [manus.im/pricing](https://manus.im/pricing). If you cannot see live credit copy, you are not ready to budget Manus. If you see Free Cloud Computer on a card, write it down as a phrase, not as a VM you measured.
 
-Name the Grok object: one persistent cloud computer per account, screens not walls, routines per bot, no spend cap, no model picker, a Linux desktop app since September 2026. Create Overnight Pack Desk, assign one weekday routine, close the laptop. In the morning the pack file is either there or it is not. On Manus, run one pack as a task and ask the next morning whether a named worker still owns 06:00 without you.
+Name the Grok object: one persistent cloud computer per account, screens not walls, routines per bot, no per-Bot spend cap, no model picker, a Linux desktop app since September 2026. Create Overnight Pack Desk, assign one weekday routine, close the laptop. In the morning the pack file is either there or it is not. On Manus, run one pack as a task and ask the next morning whether a named worker still owns 06:00 without you.
 
 Connect Gmail on Grok Bot only after the charter forbids send. Then add a second bot and notice that it can see the same session. If that surprise makes the pack unsafe, you wanted two accounts, not two names.
 
@@ -193,7 +193,7 @@ Keep both only if you can name which object owns which job.
 
 Keep Manus, if manus.im still describes it this way, for delivered artefacts: a deck, a site, a one-off research pack, a forwarded thread you will never run again. Confirm Mail Manus, scheduled tasks, projects, and Browser Operator on their current pages. Hedge every price and every computer word. Do not staff Manus as a Grok-style roster unless Manus currently sells that object in words you can quote.
 
-Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a routine, and last night's inbox pack. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The phone app (iPhone or Android) can pause the routine and approve steps but cannot edit it.
+Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a routine, and last night's inbox pack. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow has no per-bot cap, only the account's On-demand monthly limit. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The phone app (iPhone or Android) can pause the routine and approve steps but cannot edit it.
 
 A general agent returns work you asked for tonight. A named bot is still there on Monday, on a shared computer whose blast radius you accepted on purpose.
 
@@ -215,7 +215,7 @@ Cloud work can. Grok Bot runs on a persistent cloud computer assigned to your us
 
 ### Is Manus cheaper than Grok Bot?
 
-Grok Bot's cheapest paid path is Cursor Pro+ at 60 dollars a month. Cursor Hobby and Cursor Pro at 20 dollars do not include it, and SuperGrok at 30 dollars does not. SuperGrok Plus at 100 dollars does. Teams Standard and Premium include it. There is no Grok Bot spend cap: weekly allowance, then on-demand, with no published dollar figure for the allowance. Manus prices and credits belong on manus.im/pricing. This article will not invent them. Confirm both the day you buy, including whether the live Manus plan still matches last month's help article.
+Grok Bot's cheapest paid path is Cursor Pro at 20 dollars a month. Every paid Cursor plan includes Grok Bot, from Cursor Pro at $20; Cursor Hobby, the free plan, does not, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Cursor Teams include it. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies: weekly allowance first, then on-demand up to that limit, with no published dollar figure for the allowance. Manus prices and credits belong on manus.im/pricing. This article will not invent them. Confirm both the day you buy, including whether the live Manus plan still matches last month's help article.
 
 `,
 };

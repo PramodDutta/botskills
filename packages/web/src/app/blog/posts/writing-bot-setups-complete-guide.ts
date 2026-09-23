@@ -457,12 +457,13 @@ articles on that, and
 Two modes chaining is the shape of most real incidents. Stale context feeds
 confident fabrication, and the silent no-op hides both.
 
-## Write your own receipts, because there is no audit view to fall back on
+## Write your own receipts, because there is no audit view outside Enterprise to fall back on
 
 Here is the fact that decides how much of this belongs in the charter rather than
 in a settings panel: on the hosted product, an audit view of bot actions
-[does not exist yet](https://docs.x.ai/grok-bot/teams-and-enterprises). There is
-no screen you can open in three weeks to find out what a bot did on a Tuesday.
+[exists only on Enterprise](https://docs.x.ai/grok-bot/teams-and-enterprises). On
+any other plan there is no screen you can open in three weeks to find out what a
+bot did on a Tuesday.
 
 So the receipts are an output contract. If the bot does not write down what it
 did, in a place you control, it did not happen in any recoverable sense. Three
@@ -532,8 +533,8 @@ write.
 | Model choice | No model picker, for members or admins, and none planned per [the docs](https://docs.x.ai/grok-bot/teams-and-enterprises) | Yours to configure, per credential, deployment, or environment | On the hosted side, write for a model you cannot pin. Avoid instructions that assume a context window size |
 | Isolation | One shared computer per account, one screen per bot, sessions and files shared | Per-bot containers available, and a Team Computer whose per-bot folders the docs say are not security boundaries | Never write "keep this bot's credentials separate". It is not a thing either product gives you |
 | Approvals | Approvals ship with the product | Rules are opt-in, and the UI says bots act without asking by default | On self-hosted, the charter carries more weight, because fewer actions pause by default |
-| Audit | No audit view yet | A queryable effects ledger in your own Postgres | Hosted charters must produce their own receipts as output |
-| Spend | No Grok Bot specific spend cap yet, per the docs | Your own provider bill, your own caps | Write a step budget into the method, on both, since neither stops a loop for you |
+| Audit | No audit view outside Enterprise | A queryable effects ledger in your own Postgres | Hosted charters must produce their own receipts as output |
+| Spend | No Grok Bot specific spend cap, only the account On-demand monthly limit, per the docs | Your own provider bill, your own caps | Write a step budget into the method, on both, since neither stops a loop for you |
 
 The middle rows are the ones people get wrong in both directions. On the hosted
 product they assume separate bots isolate credentials, which the documentation
@@ -731,12 +732,13 @@ sessions, files, and command-line credentials are shared across all bots on the
 account, and deleting a bot does not remove them. No charter changes that. If two
 jobs must not share credentials, they need separate accounts, not separate bots.
 
-**Cost is not writing.** There is no Grok Bot specific spend cap yet, per the
-documentation, and self-hosted runtimes bill you at your provider. A step budget
+**Cost is not writing.** There is no Grok Bot specific spend cap, only the
+account-level On-demand monthly limit, per the documentation, and self-hosted
+runtimes bill you at your provider. A step budget
 in the method helps with runaway loops; it does not help with a roster that is
 individually reasonable and collectively expensive.
 [Keeping bot costs predictable](/blog/bot-cost-control) and
-[no spend cap](/blog/grok-bot-spend-cap-and-token-burn) cover the arithmetic.
+[no per-Bot spend cap](/blog/grok-bot-spend-cap-and-token-burn) cover the arithmetic.
 
 Where all three bite at once is a multi-bot roster, and that has its own
 structure: layers, ownership, and one bot that never talks to another bot's

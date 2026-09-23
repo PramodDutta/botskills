@@ -214,7 +214,7 @@ catalog will not decide it for you, because a charter is portable and the
 decision is about where your credentials live. Settle that first.
 
 If you are on a Linux desktop, an Android phone, or an iPad, check platform
-support before you invest an evening in charter writing. As of September 2026, Grok Bot supports macOS, Windows and Linux on desktop, and iPhone and Android on mobile; iPad is not supported.
+support before you invest an evening in charter writing. As of September 2026, Grok Bot supports macOS, Windows and Linux on desktop, and iPhone and Android on mobile; the iOS app also runs on iPad.
 
 And if what you want is a comparison of every place bot setups come from,
 including the ones that are better than us at things, we wrote that too rather

@@ -23,7 +23,7 @@ Grok Bot background work continues if you close the app, the laptop, or the iPho
 
 The [plain definition of a Grok Bot](/blog/what-is-a-grok-bot) already separates the window you type into from the job that keeps a desktop. If the preview is an approval, a login, or a page that no longer matches the last click, the bot is waiting. If the preview is a spinner with no prompt and \`/workspace\` has new files, a tool call likely ended without a result.
 
-Do not grade the stall from your phone if you need to inspect files. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. Pause so the job does not keep retrying while you get to a machine that can list the folder. Resume is a desktop verb.
+Do not grade the stall from your phone if you need to inspect files. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Pause so the job does not keep retrying while you get to a machine that can list the folder. Resume is a desktop verb.
 
 ## Sort the freeze into wait, selector, 2FA, or tool timeout
 
@@ -52,7 +52,7 @@ Write nothing in chat until you can say one sentence: "It is waiting on X" or "T
 
 ## Inventory every file already sitting under /workspace
 
-The disk is the log. Grok Bot has no audit view of bot actions yet, so the product will not show you a tidy list of writes. The files are the list.
+The disk is the log. Grok Bot has no audit view of bot actions outside Enterprise, so the product will not show you a tidy list of writes. The files are the list.
 
 List \`/workspace\` before you instruct anything. Sort by name, then by time. You are looking for a NOTES.md or equivalent, a numbered screenshot sequence, a draft that was supposed to wait, and any identifier that exists in a destination system: an order ID, a message ID, a comment URL, a label already applied.
 
@@ -205,7 +205,7 @@ Open the bot's screen before you type anything. A silent sit is usually a wait, 
 
 ### Can I tell the bot to start the job from the beginning?
 
-Only when the workspace is empty and the destination shows that nothing irreversible happened. If NOTES.md already records an order ID, a sent-message ID, or a completed checkpoint, a start-over instruction will redo that verb. Grok Bot has no audit view of bot actions, so you cannot look up the send inside the product. Check the destination, then resume from the last written checkpoint. Starting over feels faster. Doubling a send is not.
+Only when the workspace is empty and the destination shows that nothing irreversible happened. If NOTES.md already records an order ID, a sent-message ID, or a completed checkpoint, a start-over instruction will redo that verb. Grok Bot has no audit view of bot actions outside Enterprise, so you cannot look up the send inside the product. Check the destination, then resume from the last written checkpoint. Starting over feels faster. Doubling a send is not.
 
 ### How do I know a send already went out?
 

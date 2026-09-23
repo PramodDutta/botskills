@@ -33,7 +33,7 @@ Even if the Agent name is gone, OpenAI still documents other computer-use shapes
 
 A Grok bot is a named role with a charter, a screen, and optional routines. The computer is assigned to your user account, not to an individual bot. All bots share one persistent cloud computer. Screens are work surfaces, not security boundaries. The docs say not to use separate bots as a security boundary. Cookies, sessions, files, and command-line credentials are common to every bot. Deleting a bot does not remove those files or browser sessions. Routines die with the bot. The desk does not. Read [What Is a Grok Bot?](/blog/what-is-a-grok-bot) and [One Computer, Many Screens](/blog/grok-bot-shared-computer-security) rather than inferring a private VM from two names.
 
-The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Grok Bot supports macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. See [supported platforms](/blog/grok-bot-supported-platforms).
+The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Grok Bot supports macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). See [supported platforms](/blog/grok-bot-supported-platforms).
 
 A routine assigns a workflow to one bot. Max 50 routines per bot. The app keeps 20 most recent run records per routine. Deleting a bot deletes its routines. Nothing is team-level. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Schedule it as in [How to Schedule a Grok Bot Routine](/blog/how-to-schedule-a-grok-bot-routine). Group chat is not a wall.
 
@@ -114,7 +114,7 @@ Ask me. Waiting is correct. Inventing a repositioning is not.
 
 That charter is pointless on a one-off Agent session. It is the whole product on a bot you intend to leave running. Competitor Desk never publishes and never contacts the rival. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) never distributes. [Inbox Triage](/bots/inbox-triage) never sends. Write the verb you are afraid of, then keep the bot off that verb.
 
-Assign the routine to this bot only. Max 50 routines. The app keeps 20 recent run records. Delete Competitor Desk and the 05:00 job dies. Signed-in sessions on the shared computer do not. Rotate those yourself. Scheduling traps: [How to Schedule a Grok Bot Routine](/blog/how-to-schedule-a-grok-bot-routine). Closed lid: [Grok Bot With the Laptop Closed](/blog/grok-bot-runs-with-laptop-closed). Teach-by-demonstration captures a browser walkthrough for up to ten minutes, no microphone, draft skill, browser only, unavailable on iPhone. There is no audit view of Bot actions yet.
+Assign the routine to this bot only. Max 50 routines. The app keeps 20 recent run records. Delete Competitor Desk and the 05:00 job dies. Signed-in sessions on the shared computer do not. Rotate those yourself. Scheduling traps: [How to Schedule a Grok Bot Routine](/blog/how-to-schedule-a-grok-bot-routine). Closed lid: [Grok Bot With the Laptop Closed](/blog/grok-bot-runs-with-laptop-closed). Teach-by-demonstration captures a browser walkthrough for up to ten minutes, no microphone, draft skill, browser only, unavailable on iPhone. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording.
 
 ## Count blast radius in cookies and files, never in a session name
 
@@ -130,7 +130,7 @@ This page hedges on purpose. OpenAI has moved labels on this family more than on
 
 Re-open the OpenAI pages already linked above the day you buy. If a recap still shows operator.chatgpt.com, treat it as history. If a table gives ChatGPT a dedicated VM per chat, demand a URL from OpenAI. This article will not invent that VM.
 
-Grok Bot facts were checked against xAI docs as of 25 August 2026: [FAQ](https://docs.x.ai/grok-bot/faq) and [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps). Beta launched 11 August 2026. Eligibility widened 21 August 2026.
+Grok Bot facts were rechecked against xAI and Cursor docs on 23 September 2026: [FAQ](https://docs.x.ai/grok-bot/faq) and [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps). Beta launched 11 August 2026. Eligibility widened 21 August 2026.
 
 ## Compare cost shape without inventing ChatGPT Agent prices
 
@@ -139,16 +139,16 @@ Look at the bills you can document. Leave Agent's bill on OpenAI's site.
 | Path | Grok Bot included? | What to remember |
 |---|---|---|
 | Cursor Hobby | No | Free Cursor does not include the bot runtime |
-| Cursor Pro at 20 dollars a month | No | A common mistaken buy |
-| Cursor Pro+ at 60 dollars a month | Yes | Cheapest paid path as of 25 August 2026 |
-| SuperGrok at 30 dollars a month | No | The cheaper SuperGrok tier does not include Grok Bot |
-| SuperGrok Plus at 100 dollars a month | Yes | Listed as including Grok Bot access |
-| SuperGrok Heavy, Cursor Ultra, Cursor Teams Standard and Premium, one-time trial | Eligible | Confirm live prices. Do not trust a viral 300 dollar Heavy figure |
+| Cursor Pro at 20 dollars a month | Yes | Cheapest paid path, checked 23 September 2026 |
+| Cursor Pro+ at 60 dollars a month | Yes | More weekly usage than Pro |
+| SuperGrok (individual) | Yes, by linking | Link it from the Grok Bot plan screen; it grants usage and is not a Cursor plan |
+| SuperGrok Plus | Yes, by linking | Never stacks with a Cursor plan |
+| SuperGrok Heavy, Cursor Ultra, Cursor Teams, one-time trial | Eligible | Confirm live prices. Do not trust a viral 300 dollar Heavy figure |
 | ChatGPT Agent | Confirm on OpenAI's pages | Do not invent a dollar figure, a credit pack, or a VM surcharge |
 
-There is no Grok Bot-specific spend cap. Weekly allowance, then on-demand from model and token cost. No published dollar figure for the allowance. Never invent one. No model picker. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. Arithmetic: [Grok Bot Cost](/blog/grok-bot-cost) and [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn).
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance, then on-demand from model and token cost. No published dollar figure for the allowance. Never invent one. No model picker. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. Arithmetic: [Grok Bot Cost](/blog/grok-bot-cost) and [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn).
 
-ChatGPT Agent may be cheaper to start, or gone, or bundled into a plan you already pay for. Confirm that the day you subscribe. A lower entry price is a good reason to run a one-off click-through in ChatGPT. It is a bad reason to staff a standing 05:00 watch on a session. Model Grok Bot as 60 dollars (or 100, or a Team seat at 40 or 120 dollars per user per month) plus overflow you cannot cap. See [Grok Bot free trial](/blog/grok-bot-free-trial).
+ChatGPT Agent may be cheaper to start, or gone, or bundled into a plan you already pay for. Confirm that the day you subscribe. A lower entry price is a good reason to run a one-off click-through in ChatGPT. It is a bad reason to staff a standing 05:00 watch on a session. Model Grok Bot as 20 dollars on Cursor Pro (or 60 on Pro+, 200 on Ultra, or a Teams seat) plus overflow up to the On-demand monthly limit you set. See [Grok Bot free trial](/blog/grok-bot-free-trial).
 
 ## Refuse the dedicated virtual machine story for ChatGPT
 
@@ -156,7 +156,7 @@ Roundups want a tidy picture: Grok Bot has a cloud computer, ChatGPT Agent has a
 
 Do not assert that ChatGPT Agent gives you a dedicated virtual machine. OpenAI has described a virtual browser in older Agent copy, cloud browser as a product, and Computer Use as control of your Mac or Windows GUI. Those are sessions and surfaces. Confirm the current environment on OpenAI. If you need an isolated box you operate, that is the API computer tool plus a VM you run, not a ChatGPT setting this article will fabricate.
 
-Grok Bot's computer is real and documented, and it is still the wrong picture if you heard that each bot gets a VM. One computer per account. Managed Linux VM. Non-root user. Screens, not sandboxes. Not a Linux desktop app. Deleting a bot does not delete the VM. There is no Grok Bot Linux desktop, Android, or iPad client.
+Grok Bot's computer is real and documented, and it is still the wrong picture if you heard that each bot gets a VM. One computer per account. Managed Linux VM. Non-root user. Screens, not sandboxes. Not a Linux desktop app. Deleting a bot does not delete the VM. There are Linux desktop and Android clients as of September 2026, and the iOS app also runs on iPad.
 
 ## Name what still runs after you close the laptop
 
@@ -171,7 +171,7 @@ Overnight competitor check only makes sense after you name which computer is doi
 | ChatGPT Computer Use on Windows foreground, as currently documented | Your Windows desktop | Needs the device unlocked and the target app visible, per OpenAI |
 | ChatGPT cloud browser or cloud Work | Confirm on OpenAI | Public writeups describe background continuation. Believe OpenAI the day you run it |
 
-The first row is why a 05:00 routine can fire while the lid is shut. Desktop Computer Use on Windows currently reads as a session that occupies the machine you are looking at. Approvals on Grok Bot control the proposed action. They do not reverse work already completed. There is no audit view of Grok Bot actions yet.
+The first row is why a 05:00 routine can fire while the lid is shut. Desktop Computer Use on Windows currently reads as a session that occupies the machine you are looking at. Approvals on Grok Bot control the proposed action. They do not reverse work already completed. There is no audit view of Grok Bot actions outside Enterprise.
 
 ## Name the surface before you rewrite the overnight prompt
 
@@ -185,7 +185,7 @@ When the week goes wrong, name the surface before you rewrite the prompt.
 | Cloud browser stopped on a login wall | Public-page limits as OpenAI has documented them | Confirm live. A standing signed-in desk is Grok Bot's shape |
 | Grok Bot never appeared on your Linux laptop | An installer story from before September 2026 | There is a Linux desktop app as of September 2026 (.deb, .rpm, AppImage) |
 | Windows Computer Use stole the pointer | Foreground use as currently documented | Confirm OpenAI. Use a second device if you need to keep working |
-| On-demand charges after a heavy watch week | No Grok Bot spend cap | Review usage. Do not wait for a ceiling that does not exist |
+| On-demand charges after a heavy watch week | No per-Bot spend cap, only the account On-demand monthly limit | Review usage. Set the On-demand monthly limit before a heavy week |
 | Thursday's brief cannot see Wednesday's file | You used a session, not a desk | Named bot plus a folder on the shared computer |
 
 If the job is logging into a supplier portal every Monday, verify that any ChatGPT computer-use surface is allowed to do that today. Grok Bot can hold a session on the shared computer. Recover files from the shared computer if they remain after a bot is deleted. Routines will not remain.
@@ -208,7 +208,7 @@ You can keep both. Stop using one object for the other object's job.
 
 Keep ChatGPT computer use (Agent if it still exists on your plan, otherwise the live substitute OpenAI names) for work that wants a pair of hands on a GUI or a page, then wants to end. Confirm each session's permissions at the start. Do not invent a dedicated ChatGPT VM so the metaphor matches Grok Bot.
 
-Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a routine, and a desk that still has last night's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The phone app (iPhone or Android) can pause the routine and approve steps but cannot edit it.
+Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a routine, and a desk that still has last night's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow has no per-bot cap, only the account's On-demand monthly limit. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The phone app (iPhone or Android) can pause the routine and approve steps but cannot edit it.
 
 Use Work, not Agent, when the need is a long job that returns a file. Use Tasks, not Agent, when the need is a clock and a message. Use Bot when 05:00 still needs a named teammate. A computer-use session returns a screen you watched. A named bot is still there on Monday, on a shared computer whose blast radius you accepted on purpose.
 
@@ -230,7 +230,7 @@ Cloud work can. Grok Bot runs on a persistent cloud computer assigned to your us
 
 ### Is ChatGPT Agent cheaper than Grok Bot?
 
-Grok Bot's cheapest paid path is Cursor Pro+ at 60 dollars a month. Cursor Hobby and Cursor Pro at 20 dollars do not include it, and SuperGrok at 30 dollars does not. SuperGrok Plus at 100 dollars does. Teams Standard and Premium include it. There is no Grok Bot spend cap: weekly allowance, then on-demand, with no published dollar figure for the allowance. ChatGPT Agent prices belong on OpenAI's pages. This article will not invent them. Confirm both the day you buy, including whether Agent still exists as a billed surface.
+Grok Bot's cheapest paid path is Cursor Pro at 20 dollars a month. Every paid Cursor plan includes Grok Bot, from Cursor Pro at $20; Cursor Hobby, the free plan, does not, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Cursor Teams include it. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies: weekly allowance first, then on-demand up to that limit, with no published dollar figure for the allowance. ChatGPT Agent prices belong on OpenAI's pages. This article will not invent them. Confirm both the day you buy, including whether Agent still exists as a billed surface.
 
 `,
 };

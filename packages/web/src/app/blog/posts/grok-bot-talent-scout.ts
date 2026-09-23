@@ -109,7 +109,7 @@ a worksheet becomes a filter.
 All bots on your account share one persistent cloud computer, assigned to you,
 not to the bot. Screens are not security boundaries. Cookies, sessions, and
 files are shared. Deleting Talent Scout does not delete the folder. Clear it
-when the requisition closes. There is no audit view of bot actions yet, so
+when the requisition closes. There is no audit view of bot actions outside Enterprise, so
 \`run-log.md\` is the receipt you will have.
 
 ## Split Talent Scout from the inbound application reader by who never applied
@@ -385,7 +385,7 @@ The strongest objection is operational. You already have twenty pages. A human
 can skim twenty pages. Why pay a weekly allowance, then on-demand token cost
 after that, for a sheet you still have to read, if the bot cannot send the note?
 
-Part of that is true. There is no Grok Bot-specific spend cap. There is a weekly
+Part of that is true. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. There is a weekly
 allowance, then on-demand billing from model and token cost, and no published
 dollar figure for the allowance, so do not invent one. If you never open
 \`sheet.md\`, delete the scout.

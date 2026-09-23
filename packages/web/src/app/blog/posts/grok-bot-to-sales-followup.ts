@@ -359,7 +359,7 @@ will never do by hand.
 Keep in mind that a routine belongs to one bot and the app keeps only the 20
 most recent run records for it, so the evidence trail for what was proposed and
 when is short. If the follow-up log matters to you, have the bot append to a
-document you own rather than relying on run history. There is no audit view of
+document you own rather than relying on run history. There is no audit view outside Enterprise of
 bot actions as of writing, which makes your own written record the only one that
 exists.
 

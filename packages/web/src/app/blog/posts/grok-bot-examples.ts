@@ -257,8 +257,8 @@ the second week, once the novelty of reading the output has worn off.
 | Two digests describe the same work differently | Two bots read one source with slightly different charters | Give each bot a written line naming what it does not own |
 | The output is 900 words and you skim it | No word cap and no evidence rule, so it summarises everything | Cap the length, and require a link or an ID on every claim |
 | It reports "handled" and you cannot check | No skipped section, so absence of a problem is unprovable | Require WHAT I SKIPPED AND WHY on every single run |
-| A run stopped halfway and you found out Friday | No heartbeat, and no audit view of bot actions exists yet | Ask for a message even on an empty run, so silence is a signal |
-| The bill moved and you cannot attribute it | Broad trigger, no scope ceiling, no Grok Bot spend cap yet | Cap items read per run and forbid the bot re-running itself |
+| A run stopped halfway and you found out Friday | No heartbeat, and no audit view of bot actions outside Enterprise exists yet | Ask for a message even on an empty run, so silence is a signal |
+| The bill moved and you cannot attribute it | Broad trigger, no scope ceiling, no Grok Bot-specific spend cap, only the account On-demand monthly limit | Cap items read per run and forbid the bot re-running itself |
 
 The last row matters more than it looks. There is no Grok Bot specific spend
 cap at the time of writing, and subscriptions include a weekly allowance with
@@ -285,7 +285,7 @@ Separating your finance bot from your marketing bot does not separate their
 credentials: if a Stripe session is signed in on the shared computer, every bot
 can reach it, whatever its charter says. Deleting a bot is not a revocation,
 because shared-computer files and browser sessions survive the deletion. And
-there is no audit view of bot actions yet, so "which bot did that" is a
+individual accounts have no audit view of bot actions, so "which bot did that" is a
 question the product cannot currently answer.
 
 The response is not to run fewer bots. It is to accept that the charter is the
@@ -345,11 +345,11 @@ If the judgement changes every time, such as pricing a bespoke deal or handling
 a distressed customer, delegating it produces confident output on a question
 that needed you.
 
-And one hard platform limit before you plan a roster. Grok Bot supports macOS
-on Apple silicon and Intel, Windows on x64 and Arm64, and iPhone on iOS 18 and
-later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If your
-only machine is a Linux desktop, none of the 25 is available today, whatever
-your subscription says. The
+And one platform fact before you plan a roster. The Grok Bot desktop app runs
+on macOS (Apple silicon and Intel), Windows (x64 and Arm64) and, since September
+2026, Linux (x64 and Arm64). The phone app runs on iPhone (iOS 18 or later),
+Android (9 or later) and, through the iOS app, iPad. All 25 work from any of
+those desks once your subscription includes Grok Bot. The
 [supported platforms reference](/blog/grok-bot-supported-platforms) has the
 current list.
 

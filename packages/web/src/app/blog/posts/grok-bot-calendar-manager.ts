@@ -65,8 +65,7 @@ If you cannot paste the never-book block today, do not turn the weekday
 routine on today. Teach-by-demonstration records up to ten minutes of a
 browser workflow, no microphone audio, desktop only, and produces a draft
 skill. Unavailable on iPhone. A click path that ends on Save is a draft skill
-that books. Do not teach this job by demonstrating a live create. There is no
-audit view of Bot actions yet. The packet is the record. If it does not say
+that books. Do not teach this job by demonstrating a live create. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. The packet is the record. If it does not say
 PROPOSED, REJECTED, or HUMAN-BOOKS on every requested conversation, you have a
 story, not a control.
 
@@ -148,8 +147,7 @@ appointment into a morning brief. Confirm scopes on the vendor's current
 page.
 
 If the paste is older than you allowed, the routine should refuse, not "just
-look." From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing the charter, history,
-testing, and deleting need desktop. If a partner texts you in a taxi, pause.
+look." From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine need desktop. If a partner texts you in a taxi, pause.
 Book it yourself.
 
 ## Walk Mateo's fundraising week from one briefing to three ranked holds

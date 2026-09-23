@@ -108,8 +108,8 @@ sessions either.
 Read that in support terms. If you sign into your helpdesk once, on that
 machine, with an agent account that can send, then "my triage bot has no send
 permission" is a sentence about your charter and not about your system. Any bot
-on the account is one screen away from the same session, and there is no audit
-view of bot actions yet to tell you afterwards which one used it.
+on the account is one screen away from the same session, and outside Enterprise
+there is no audit view of bot actions to tell you afterwards which one used it.
 
 ## Enforce the send permission in the helpdesk, not in the prompt
 

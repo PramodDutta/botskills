@@ -352,28 +352,29 @@ any number, including these.
 | Path | Price as of writing | Includes Grok Bot | Sensible when |
 |---|---|---|---|
 | Cursor Hobby | Free | No | You are evaluating the editor, not bots |
-| Cursor Pro | $20/mo | No | The most common wrong assumption on this list |
-| Cursor Pro+ | $60/mo | Yes | Cheapest paid path for one person |
+| Cursor Pro | $20/mo | Yes | Cheapest paid path for one person |
+| Cursor Pro+ | $60/mo | Yes | More weekly usage than Pro for a busier roster |
 | Cursor Ultra | $200/mo | Yes | Heavy daily use across a full roster |
-| Cursor Teams Standard | $40/user/mo | Yes | Two or more people, cheapest per seat |
-| Cursor Teams Premium | $120/user/mo | Yes | A team that has outgrown Standard's usage |
-| SuperGrok | $30/mo | No | You want the assistant, not the bots |
-| SuperGrok Plus | $100/mo | Yes | You already live in the Grok apps |
-| SuperGrok Heavy | Not published | Yes | Rarely the right first purchase for one person |
+| Cursor Teams (self-serve) | Per seat, on Cursor's team pricing | Yes, every member | Two or more people on one plan |
+| Cursor Enterprise | Through the account team | Yes, once an admin enables it | An organisation that needs audit logs and admin controls |
+| SuperGrok (individual) | On x.ai/pricing | Yes, once linked | You already pay xAI and want no second bill |
+| SuperGrok Plus | On x.ai/pricing | Yes, once linked | You already live in the Grok apps |
+| SuperGrok Heavy | Not published | Yes, once linked | Rarely the right first purchase for one person |
 | A one-time trial | Free, once | Yes | Deciding whether any of this fits your week |
 
 Two details save people money. If you hold both a Cursor and a SuperGrok
 subscription, Grok Bot draws on whichever has more usage available, so paying
 for both to "get more" is rarely the lever people assume it is. And there is no
-Grok Bot specific spend cap as of writing: the subscription carries a weekly
-usage allowance, and work beyond it bills on demand from actual model and token
-cost. The absence of a hard ceiling is the reason a cost limit belongs in the
+Grok Bot specific spend cap as of writing, only the account-level On-demand
+monthly limit: the subscription carries a weekly usage allowance, and work
+beyond it bills on demand from actual model and token cost. The absence of a
+per-bot ceiling is the reason a cost limit belongs in the
 charter, which is the argument [bot cost control](/blog/bot-cost-control) makes
 at length.
 
 Against those numbers, put the hours from the first table in this article. Six
 hours a week of recurring multi-tool work is roughly 26 hours a month, and you
-do not need a spreadsheet to compare that with a $60 line item. What you do
+do not need a spreadsheet to compare that with a $20 line item. What you do
 need is honesty about the review time. If six hours of work becomes four hours
 of reviewing bot output, the trade is far worse than it looked, and the fix is
 a sharper quality block rather than a bigger plan.
@@ -399,7 +400,7 @@ before anyone names them. The wider catalogue of what goes wrong and why is in
 
 ## Prove the roster is doing what you think it is doing
 
-There is no audit view of bot actions as of writing, so the ledger is yours to
+There is no audit view of bot actions outside Enterprise, so the ledger is yours to
 keep. Once a week, run a check that is capable of failing. A check that always
 passes is decoration.
 
@@ -481,8 +482,8 @@ definition exists. Positioning, pricing, and hiring judgment fail the checkable
 test on purpose, because you are still forming the opinion a charter would have
 to encode.
 
-And anything the platform does not reach stays with you for now. As of September 2026 there are Linux desktop and Android apps, iPad is not supported, and the phone app is a remote for pausing and approving rather than a place to build. If your working
-machine is a Linux laptop, that is a real constraint on this whole approach,
+And anything the platform does not reach stays with you for now. As of September 2026 there are Linux desktop and Android apps, the iOS app also runs on iPad, and the phone app is a remote for pausing, approving and reading run history rather than a place to build. If your only
+machine is a phone or an iPad, that is a real constraint on this whole approach,
 and [the supported platforms breakdown](/blog/grok-bot-supported-platforms)
 covers the options honestly.
 

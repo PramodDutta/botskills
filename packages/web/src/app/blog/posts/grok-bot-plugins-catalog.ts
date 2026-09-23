@@ -23,7 +23,7 @@ A catalog answers "what exists." You need "what does every bot I will ever creat
 
 Read the list as a key ring, not as an app store. Each tile is a standing grant. It outlives the task and the bot you were configuring. It sits there for [Chief of Staff Briefing](/bots/chief-of-staff-briefing) and for the bot you have not named yet.
 
-There is no audit view of Bot actions yet. You cannot later ask which bot opened Gmail at 02:14. Isolation has to happen at connect time.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. You cannot later ask which bot opened Gmail at 02:14. Isolation has to happen at connect time.
 
 The [least privilege guide](/blog/least-privilege-bots) is the policy version. This page is the Plugins version: which path, in which order, and what "for this bot only" actually means. The isolation picture is in [what the shared computer actually isolates](/blog/grok-bot-shared-computer-security).
 
@@ -97,7 +97,7 @@ So the order is not "connect send, then be careful with approvals." Do not conne
 
 [Lead Scout](/bots/lead-scout) belongs on the third row. Research that can also send is no longer research. [Inbox Triage](/bots/inbox-triage) belongs on the first row. Send stays off even after the week if you like the review step.
 
-There is no Grok Bot-specific spend cap. Overflow is on-demand from model and token cost, with no published dollar figure for the weekly allowance.
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Overflow is on-demand from model and token cost, with no published dollar figure for the weekly allowance.
 [Spend and token burn](/blog/grok-bot-spend-cap-and-token-burn) is the money version. [Draw the approval line on reversibility](/blog/grok-bot-approval-rules-reversibility) is the click version. If the tile can send or pay, it stays off until the week of drafts is real.
 
 ## Treat a Gmail plugin as a session the research bot can open
@@ -193,7 +193,7 @@ The strongest argument against connecting less is not "the bot feels incomplete.
 
 That argument is half right. You should write the refuse line. The SESSIONS block above is that line. It reduces accidents when you are watching.
 
-It is not isolation. Charters are instructions, not a sandbox. There is no audit view to catch the time a bot ignored the line. There is no per-bot cookie jar. A prompt injection can ask the research bot to use any tools it has, and an open session counts. A rushed operator can ask the convenient question, as on Wednesday, and the mail bot's charter will not be consulted.
+It is not isolation. Charters are instructions, not a sandbox. There is no audit view outside Enterprise to catch the time a bot ignored the line. There is no per-bot cookie jar. A prompt injection can ask the research bot to use any tools it has, and an open session counts. A rushed operator can ask the convenient question, as on Wednesday, and the mail bot's charter will not be consulted.
 
 The cases where the argument wins are small. A bot that cannot reach the network. A bot you run only while watching. A job with no useful session on the machine. If Gmail is connected, those cases do not include Lead Scout.
 

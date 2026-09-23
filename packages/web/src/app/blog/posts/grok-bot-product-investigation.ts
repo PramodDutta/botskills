@@ -117,7 +117,7 @@ endings. They are invention wearing a hedge.
 
 Could-not-compute is success: the bot looked, named the miss, and stopped.
 Inventing the Monday pricing page so stand-up has a sentence is the failure.
-There is no audit view of Bot actions yet. The failing check is yours: every
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. The failing check is yours: every
 cause claim has SOURCE plus QUOTE, or SCREENSHOT plus VISIBLE, or
 COULD-NOT-COMPUTE.
 
@@ -277,8 +277,8 @@ calendar event, and it must not promote ATMOSPHERE into CAUSE. Put the pack
 in a document with no send button.
 
 On iPhone (iOS 18+) you can pause and resume. Editing the charter still
-needs macOS or Windows. Linux desktop, Android, and iPad have no Grok Bot
-client. The agent runs on a managed Linux VM, which is not a Linux desktop
+needs a desktop: macOS, Windows, or Linux. Android and iPad have phone-app
+clients too. The agent runs on a managed Linux VM, which is not the Linux desktop
 app. If you cannot paste the Evidence block today, do not turn the routine
 on today.
 
@@ -336,8 +336,7 @@ broken.
 If she needs a shippable sentence every run, she will retune the charter
 until the cause line is never empty. Then the desk is a story generator.
 Retire it. A weekly KPI report with a written definition is a better use of
-the allowance than a mystery bot that cannot bear silence. There is no Grok
-Bot-specific spend cap. Weekly allowance then on-demand from model and
+the allowance than a mystery bot that cannot bear silence. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance then on-demand from model and
 token cost. No published dollar figure for the allowance. Never invent one.
 
 The objection wins in one case: there are no tickets, no screenshots, and
@@ -360,7 +359,7 @@ worth opening.
 | Cause is never empty | The charter was retuned to please stand-up | Restore could-not-compute as success. Sample three packs |
 
 Row two first: Closed is the expensive lie. There is no audit view of Bot
-actions yet, so you look at the tracker. If 4412 moved, take write off this
+actions outside Enterprise, so you look at the tracker. If 4412 moved, take write off this
 bot. A silent empty extract is worse than a loud error. Silence becomes a
 cause.
 
@@ -414,11 +413,11 @@ you will not file any. It also breaks down when the fix is a deploy you
 want in the next hour. A person with the login owns that hour.
 
 Grok Bot runs on macOS (Apple silicon and Intel), Windows (x64 and Arm64),
-and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported.
-Eligibility: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra,
-Cursor Teams Standard and Premium, plus a one-time trial. Cheapest paid
-path as of 25 August 2026: Cursor Pro+ at $60 a month. Hobby and Pro at $20
-do not include it. SuperGrok at $30 does not. Confirm packaging on the
+and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later).
+Eligibility: every paid Cursor plan (Pro, Pro+, Ultra), Cursor Teams, a
+linked individual SuperGrok tier, plus a one-time trial. Cheapest paid
+path as of 23 September 2026: Cursor Pro at $20 a month. Hobby, the free
+plan, does not include it. Confirm packaging on the
 vendor's page. Beta 11 August 2026. Eligibility widened 21 August 2026. No
 model picker. Primer:
 [what a Grok Bot is](/blog/what-is-a-grok-bot).
@@ -433,8 +432,8 @@ Safety:
 
 It can write an internal pack. It cannot set Closed. Finding a cause is not
 a disposition. A wrong Closed hides the remaining defect the way a wrong
-duplicate merge hides a second bug. There is no audit view of Bot actions
-yet, so you prove the stop by opening the ticket after the run. Status
+duplicate merge hides a second bug. There is no audit view of Bot actions outside Enterprise,
+so you prove the stop by opening the ticket after the run. Status
 should still be Open. An approval after Closed does not unsend the
 notification the reporter already read. Keep tracker write off this bot if
 your vendor allows a read-only grant. Confirm that on the tracker vendor's
@@ -463,7 +462,7 @@ disappear, retire the desk. You are asking for a story generator.
 
 ### How do I prove the bot never wrote Closed or shipped a change?
 
-Grok Bot has no audit view of Bot actions yet, so you check the world. Plant
+Grok Bot has no audit view of Bot actions outside Enterprise, so you check the world. Plant
 a canary ticket whose status must stay Open. After the run, that ticket is
 still Open, with no bot comment. Production copy and flags are unchanged.
 The pack folder has a new dated file. Search the tracker, if your vendor's

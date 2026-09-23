@@ -35,7 +35,7 @@ The sentence prevents scope drift. A bot might also have opened other tabs, but 
 
 Pause every routine that can reach the affected service or consume the same input. Do not wait to identify which routine fired. A routine assigns one workflow to one bot, and deleting a bot deletes its routines. Pause is the reversible containment move.
 
-On iPhone running iOS 18 or later, Grok Bot supports pause and resume. Editing, history, testing, and deleting require desktop. If Toma is away from his computer, he pauses from the phone first and inspects later from supported macOS or Windows software.
+On iPhone running iOS 18 or later, Grok Bot supports pause and resume. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. If Toma is away from his computer, he pauses from the phone first and inspects later from the desktop app.
 
 Do not delete the named bot as a panic button. Deleting it can remove conversation context and routines you need to understand the event, while shared-computer files and browser sessions can remain. [Delete a Grok Bot safely](/blog/delete-a-grok-bot-safely) explains why roster cleanup is not containment.
 
@@ -75,7 +75,7 @@ Record only identifiers and outcomes in the incident log. Do not paste secret va
 
 Capture the confirmation page, message identifier, pull request URL, changed record, or vendor event history that proves the action. Save copies outside the shared computer when permitted. Record local time and timezone. Preserve the current charter and routine wording before editing them.
 
-Do not ask the bot, "What did you do?" and treat its answer as the incident record. The answer can help form hypotheses, but it is not an audit trail. Verified documentation says an audit view of Bot actions does not exist yet. Use external artifacts and service-side records.
+Do not ask the bot, "What did you do?" and treat its answer as the incident record. The answer can help form hypotheses, but it is not an audit trail. Verified documentation says an audit view of Bot actions does not exist outside Enterprise. Use external artifacts and service-side records.
 
 The lack of an audit view makes a preexisting heartbeat valuable. A dated output listing inputs, items touched, and boundary flags can narrow the window. It does not prove every click. Keep the distinction in the log.
 

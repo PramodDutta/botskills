@@ -96,7 +96,7 @@ role without pretending to be the role.
 
 Daily is how a CS bot dies: it cries wolf on Tuesday about an account you
 cannot see until Thursday. A routine belongs to one bot. The app keeps the
-twenty most recent run records, and there is no audit view of bot actions
+twenty most recent run records, and there is no audit view of bot actions outside Enterprise
 as of writing. Append every pack to a document you own. Twenty Fridays is
 five months. A year of pattern will not live in the run list.
 
@@ -354,7 +354,7 @@ does not, the log is theatre.
 Once a month, pick one call after you hang up and ask whether the first
 ten minutes held a surprise the pack should have caught. If yes, that is
 a source gap. If no for four weeks, consider a second bot for a second
-job. There is still no audit view of bot actions. Your proof is the pack
+job. There is still no audit view of bot actions outside Enterprise. Your proof is the pack
 file, the book file, and the planted sentence. Twenty run records will
 not keep a year.
 

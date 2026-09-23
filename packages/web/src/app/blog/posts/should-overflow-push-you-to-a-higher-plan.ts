@@ -26,7 +26,7 @@ versus Teams versus Ultra. It is not
 [the this-hour bleed-stop](/blog/how-to-stop-grok-bot-overspending).
 If those clocks are still live, do that hour first.
 
-Prices checked 25 August 2026 against
+Prices checked 25 August 2026, plan access rechecked 23 September 2026, against
 [cursor.com/pricing](https://cursor.com/pricing),
 [Cursor team pricing](https://cursor.com/docs/account/pricing), and
 [x.ai/pricing](https://x.ai/pricing). Confirm the live invoice. This page
@@ -54,8 +54,8 @@ weekly pool follows that grain.
 [Lead Scout](/bots/lead-scout) and [Churn Watch](/bots/churn-watch) on daily
 clocks can look innocent in the same hour.
 
-iPhone can pause and resume. It cannot edit, open history, test, or delete
-([mobile](https://docs.x.ai/grok-bot/mobile)). Resume is the danger. One tap
+The phone app can pause, resume, open run history, and delete a routine. It
+cannot edit or test one ([mobile](https://docs.x.ai/grok-bot/mobile)). Resume is the danger. One tap
 puts the poller back into on-demand. Closing the laptop is not a pause.
 Hide is not a pause. Teach-by-demonstration records up to ten minutes and
 produces a draft skill. That is more work on an empty pool. Do not use it
@@ -69,14 +69,14 @@ five-minute clock is still scheduled.
 | Page | You are here when | You decide | You do not |
 |---|---|---|---|
 | This after-spike SKU page | Clocks paused, staring at a higher plan | Stay, Pro+, Plus, Teams, or Ultra | Auto-upgrade. Invent an allowance dollar. Quote a Heavy price |
-| [Cheapest door](/blog/cheapest-way-into-grok-bot) | No eligible invoice yet | Trial, then Pro+ at $60 if the job repeats | Buy Ultra because a briefing was blank |
+| [Cheapest door](/blog/cheapest-way-into-grok-bot) | No eligible invoice yet | Trial, then Pro at $20 if the job repeats | Buy Ultra because a briefing was blank |
 | [Pro+ stamp](/blog/grok-bot-cursor-pro-plus) | Moving from Pro at $20 to Pro+ at $60 | What sixty dollars attaches | Treat sixty as a Bot tank overflow proved too weak |
 | [Friday review](/blog/grok-bot-no-spend-cap-ops) | Pool still has room, calendar says 16:40 | Pass or fail the roster | Hold a meeting while the poller fires |
 | [This-hour stop](/blog/how-to-stop-grok-bot-overspending) | Pool empty, tight clock still live | Pause, list owners, delete the five-minute poller | Open billing first |
 
 Quota language is [quota exceeded](/blog/grok-bot-quota-exceeded). The
 two-phase meter is [weekly allowance](/blog/grok-bot-weekly-allowance).
-Stay here for the cart. There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); iPad is not supported. Linux desktop, Android, and iPad are not
+Stay here for the cart. There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); the iOS app also runs on iPad
 ([FAQ](https://docs.x.ai/grok-bot/faq)). Switching devices does not refill
 the week.
 
@@ -87,11 +87,12 @@ ran, you already held an eligible path, or you spent trial credit. A higher
 plan is then a second door, not the first.
 
 Eligible paid paths, widened 21 August 2026
-([more plans](https://x.ai/news/grok-bot-more-plans)): SuperGrok Plus,
-SuperGrok Heavy, Cursor Pro+, Cursor Ultra, Cursor Teams Standard, Cursor
-Teams Premium, plus a one-time trial
-([FAQ](https://docs.x.ai/grok-bot/faq)). Cursor Hobby does not include Grok
-Bot. Cursor Pro at $20 does not. SuperGrok at $30 does not.
+([more plans](https://x.ai/news/grok-bot-more-plans)) and again since:
+every paid Cursor plan (Pro, Pro+, Ultra), every member of a self-serve
+Cursor Teams plan, and a linked individual SuperGrok, SuperGrok Plus,
+SuperGrok Heavy or X Premium+ subscription, plus a one-time trial
+([FAQ](https://docs.x.ai/grok-bot/faq)). Cursor Hobby, the free plan, does
+not include Grok Bot.
 
 Read the invoice spelling, then the in-app entitlement, then the vendor
 page. Do not infer eligibility from a Slack screenshot or from this article.
@@ -99,12 +100,12 @@ Privacy Mode (Legacy) blocks Grok Bot entirely
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 A correct Ultra invoice will not save you if that mode is on.
 
-If the invoice already says Pro+, Plus, Teams Standard, Teams Premium,
-Ultra, or Heavy, you already bought a door. Overflow did not revoke it.
+If the invoice already says Pro, Pro+, Ultra, Teams, or a linked SuperGrok,
+Plus, Heavy or X Premium+, you already bought a door. Overflow did not revoke it.
 The after-spike default is stay. The work is pause.
 
-If the invoice still says Hobby, Pro at twenty, or SuperGrok at thirty, you
-should not have a standing roster. Overflow language then usually means
+If the invoice still says Hobby, or a SuperGrok subscription you never
+linked, you should not have a standing roster. Overflow language then usually means
 the one-time trial, or an invoice you are misreading. Confirm before you
 convert panic into Ultra.
 [The exclusion page](/blog/grok-bot-hobby-and-pro-exclusion) is that
@@ -123,19 +124,19 @@ especially if it also quotes SuperGrok Heavy.
 
 There is no Grok Bot-specific spend cap
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
-Stepping from sixty to two hundred does not raise a Bot ceiling. A
-team-level ceiling on local execution is coming soon, not shipped. There
-is no model picker. An approval does not reverse work already completed
+The account-level On-demand monthly limit is the only ceiling, and it
+sits on the account, not on a SKU. Stepping from sixty to two hundred
+does not raise a Bot ceiling. There is no model picker. An approval does not reverse work already completed
 ([approvals, security and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)).
 Paying a higher SKU does not undo Monday's polls.
 
 | Claim you will hear while the cart is open | What the docs actually support | What you write on the sheet |
 |---|---|---|
 | The weekly pool is a known dollar amount | No published dollar figure | Refuse the figure. Pause the clock |
-| Ultra includes a bigger Bot tank | Ultra includes Grok Bot. Allowance size unpublished on every SKU | Do not rank SKUs by an invented tank |
+| Ultra includes a bigger Bot tank | Ultra has the highest weekly usage tier. No SKU publishes a size | Rank by tier. Do not write a size |
 | SuperGrok Heavy has a printed price that buys headroom | Heavy is eligible. Its price is not on x.ai/pricing | Leave Heavy out until that page prints a number |
-| Teams adds a company spend cap | Team-level ceiling is coming soon, not shipped | Do not buy seats to mint a cap today |
-| A plan change refills this week | Not documented | Do not assert a refill |
+| Teams adds a company spend cap | No Grok Bot-specific cap on any plan. Account-level on-demand controls apply | Do not buy seats to mint a cap today |
+| A plan change refills this week | An upgrade raises the tier. A reset of spent usage is not documented | Do not assert a refill |
 
 ## Rank stay, Pro+, Plus, Teams, and Ultra as five after-spike answers
 
@@ -144,14 +145,14 @@ are "you already had a door" or "you are buying people, not capacity."
 
 | After-spike answer | Right when | Wrong when | What it still does not buy |
 |---|---|---|---|
-| Stay and pause | Invoice already names Pro+, Plus, Teams, Ultra, or Heavy | Five-minute clock still live | A spend cap, a published pool, a refill |
-| Cursor Pro+ at $60 | Invoice still Hobby or Pro at $20, job repeats | You already pay Pro+ | A private computer, a picker, a Bot ceiling |
-| SuperGrok Plus at $100 | xAI already bills you, a Cursor editor seat would be waste | You already hold Plus | A documented larger weekly tank |
-| Teams Standard $40/user or Premium $120/user | Named people need eligible accounts | Dummy team of one, or extra seats to enlarge your pool | Team-owned routines, a fleet budget |
+| Stay and pause | Invoice already names Pro, Pro+, Ultra, Teams, or a linked SuperGrok | Five-minute clock still live | A spend cap, a published pool, a refill |
+| Cursor Pro+ at $60 | Pro at $20 runs dry every week with sane clocks | You already pay Pro+ | A private computer, a picker, a Bot ceiling |
+| Linking SuperGrok Plus | xAI already bills you, a Cursor editor seat would be waste | You already hold Plus, or a Cursor plan (the two never stack) | Usage on top of a Cursor plan, or an unlink later |
+| A self-serve Cursor Teams seat | Named people need eligible accounts | Dummy team of one, or extra seats to enlarge your pool | Team-owned routines, a fleet budget |
 | Cursor Ultra at $200 | You already wanted Ultra for the editor | Tuesday was blank and inbox is still on five minutes | A Bot spend cap, a published allowance dollar |
 
-Stay is the default once a door exists. Pro+ is the cheapest documented
-paid individual door if a door does not exist.
+Stay is the default once a door exists. Cursor Pro at $20 is the cheapest
+paid door if a door does not exist; Pro+ and Ultra raise the weekly tier.
 [SuperGrok Plus](/blog/grok-bot-supergrok-plus) is the xAI door.
 [Teams Standard](/blog/grok-bot-teams-standard) is a per-person stamp, not
 a capacity upgrade. Ultra is an editor SKU that happens to include Bot.
@@ -185,31 +186,32 @@ the pool is empty and waits. Do not create inbox-2 on five minutes from
 iPhone while the original is paused. Duplicate does not isolate cookies.
 Two enabled copies is two fires.
 
-## Open Cursor Pro+ only if Hobby or twenty-dollar Pro still sits on the invoice
+## Open Cursor Pro+ only if Pro runs dry every week with sane clocks
 
-Pro+ at $60 is the cheapest documented paid individual door, checked 25
-August 2026. It is the right after-spike buy only when the spike revealed
-that you never had a standing door, and you still want the job.
+Cursor Pro at $20 is the cheapest paid door, checked 23 September 2026.
+Pro+ at $60 is the right after-spike buy only when the clocks are already
+sane and Pro's weekly tier still runs dry every week.
 
 Overflow on a trial is not proof you should convert at two hundred.
-Overflow on Pro+ is proof you already converted at sixty. If you are still
-on twenty, you were not supposed to have a fleet of standing routines.
+Overflow on Pro or Pro+ is proof you already converted. If you are still
+on Hobby, you were not supposed to have a fleet of standing routines.
 Pause, then decide whether the job repeats. If it does not, walk away.
-The trial is one time. If it does, buy Pro+ as a door, then write the
+The trial is one time. If it does, buy Pro as a door, then write the
 clock at twice a weekday, never five minutes.
 [How to schedule a routine](/blog/how-to-schedule-a-grok-bot-routine) is
 that create.
 
 Pro+ does not mint extra Bot knobs. You receive the same Grok Bot every
 eligible plan receives: a named agent on a managed Linux VM, non-root, a
-screen per bot. Sixty instead of twenty buys eligibility, not a cap, a
-picker, a dedicated machine, or an audit view.
+screen per bot. Sixty instead of twenty buys a higher weekly tier, not a
+cap, a picker, a dedicated machine, or an audit view.
 [What a Grok bot is](/blog/what-is-a-grok-bot) is that object. Do not open
-a dummy Cursor team to shave twenty dollars off sixty.
+a dummy Cursor team to reach a door Pro already opens.
 
 ## Keep SuperGrok Plus as the xAI house, not as a refill of this week
 
-Plus at $100 includes Grok Bot access. SuperGrok at $30 does not. After a
+An individual SuperGrok Plus subscription can be linked for Grok Bot
+access, and so can SuperGrok, SuperGrok Heavy and X Premium+. After a
 spike, Plus is not a larger tank you can prove.
 
 If the invoice already says SuperGrok Plus, stay there. Do not add Cursor
@@ -230,8 +232,9 @@ unpublished as everyone else's.
 
 ## Buy a Teams seat only for a person who needs a computer, never to enlarge a pool
 
-Teams Standard at $40 per user per month includes Grok Bot. Teams Premium
-at $120 per user per month includes it too. Both are per-person stamps.
+Every member of a self-serve Cursor Teams plan has Grok Bot, with no
+Premium seat required. A Premium seat includes the same Bot. Both are
+per-person stamps.
 The computer is assigned to the user account, not to a bot, and not to
 the Cursor team object in billing.
 
@@ -243,7 +246,7 @@ by buying Premium. You copy the charter as text onto the new seat.
 Premium is a richer Cursor SKU. It is the same Grok Bot. If finance wants
 Premium because overflow needs a company plan, this page says no. A
 company spend cap for Bot is not shipped. An org audit view of Bot actions
-is not shipped. A dummy team of one still leaves you with one computer,
+is Enterprise only, not on self-serve Teams. A dummy team of one still leaves you with one computer,
 one pool, and a five-minute clock. Pause the poller. Seat questions wait.
 
 ## Leave Cursor Ultra and unpublished Heavy off the after-spike cart
@@ -258,8 +261,8 @@ exists. If you already wanted Ultra for the editor, overflow did not
 change that PO. If you did not want it yesterday, blank Tuesday is not a
 reason to want it this morning.
 
-Ultra does not attach a Bot-specific spend cap, a published larger weekly
-allowance, a model picker, a private VM per bot, an audit view, or a
+Ultra does not attach a Bot-specific spend cap, a published allowance
+size, a model picker, a private VM per bot, an audit view, or a
 mid-week refill. Confirm editor extras on
 [cursor.com/pricing](https://cursor.com/pricing). SuperGrok Heavy is
 eligible. Leave it off the cart until
@@ -288,7 +291,7 @@ then hundreds of polls against the same unpublished weekly pool.
 
 Tuesday 25 August 2026, 07:00. The briefing is blank. Quota language is
 on the card. At 07:12 Yara opens billing. Ultra at $200 looks like
-capacity. Plus at $100 looks like a second house. A roundup tab still
+capacity. Plus looks like a second house. A roundup tab still
 quotes SuperGrok Heavy. She almost switches Pro+ to Ultra because overflow
 sounded like the $60 door was too small. The five-minute clock is still
 armed. The Sunday leftover is still armed.
@@ -319,13 +322,12 @@ Date and time I paused every routine:
 Tightest clock still armed after pause (must not be five minutes):
 Five-minute inbox owner: paused / copied wording / deleted at desk
 Invoice spelling today (Hobby / Pro $20 / Pro+ $60 / Ultra $200 /
-  Teams Standard $40 per user / Teams Premium $120 per user /
-  SuperGrok $30 / SuperGrok Plus $100 / SuperGrok Heavy unpublished /
-  trial):
+  Teams seat / linked SuperGrok, SuperGrok Plus, SuperGrok Heavy or
+  X Premium+ / trial):
 Eligible door already on this invoice? yes / no
 Overflow confirmed in the product? on / off / unclear, so I will not guess
 Did I open a higher-SKU cart before pause? yes / no (if yes, close it)
-Decision: STAY / buy Pro+ as a missing door / buy Plus as a missing
+Decision: STAY / buy Pro or Pro+ as a missing door / buy Plus as a missing
   xAI door / buy Teams seats for named people / buy Ultra only because
   I already wanted the editor
 Forbidden on this sheet: any dollar figure for the weekly allowance,
@@ -345,7 +347,7 @@ Prove the decision with a check that can fail. Four facts: the pause
 time, the tightest remaining clock, the invoice spelling, and whether
 the higher-SKU cart is closed. Pass: every routine paused, no five-minute
 owner left live, invoice already eligible or a missing door written as
-Pro+ or Plus, cart closed. Fail: inbox still on five minutes, you paid
+Pro, Pro+ or Plus, cart closed. Fail: inbox still on five minutes, you paid
 Ultra before pause, you wrote an allowance dollar, you wrote a Heavy
 price.
 
@@ -368,18 +370,21 @@ Grant the meter. Eligible plans include a weekly pool, then on-demand.
 A blank Tuesday is real work that did not ship. A PO for Ultra is a
 number finance can file.
 
-The argument still loses as a standing rule. No published page says
-Ultra includes a larger Grok Bot pool than Pro+, or that Plus does, or
-that Heavy does. Heavy still has no printed price. No published page
-says a SKU change refills the week. Docs still say there is no Grok
+The argument still loses as a standing rule. Cursor's plans page does
+rank the tiers (Pro below Pro+, Pro+ below Ultra), but no page prints
+the size of any of them, and a Plus or Heavy link never stacks on a
+Cursor plan. Heavy still has no printed price. No published page says a
+SKU change resets what the week already spent. Docs still say there is no Grok
 Bot-specific spend cap. A five-minute inbox bot will eat an unpublished
 pool on Ultra the same way it ate one on Pro+. You will find that out
 the next Tuesday, with a larger editor invoice.
 
-Where the argument wins is not overflow. The invoice is still Hobby, Pro
-at twenty, or SuperGrok at thirty, the trial meter is spent, and the job
-repeats. Then you buy a door: Pro+ at $60 or Plus at $100, not Ultra at
-$200 unless the editor SKU was already the PO. Named people who need
+Where the argument wins is not overflow. The invoice is still Hobby, or a
+SuperGrok subscription nobody linked, the trial meter is spent, and the
+job repeats. Then you open a door: Pro at $20 or a SuperGrok link, not
+Ultra at $200 unless the editor SKU was already the PO. It also wins when
+every clock is already sane and the pool still empties every week: that
+is what the higher weekly tiers are for. Named people who need
 accounts buy Teams seats. That is headcount, not a refill. Where it wins
 for one morning: you already wanted Ultra for the editor, clocks are
 already paused, and the five-minute owner is already deleted. Buy Ultra
@@ -405,7 +410,8 @@ two-phase meter without a purchase order, that is
 the poller is gone:
 [is Grok Bot worth it](/blog/is-grok-bot-worth-it).
 
-The boundary is yours, because the product will not cap you. You never
+The boundary is yours, because the product will not cap a bot for you.
+The account-level On-demand monthly limit is the only ceiling it offers. You never
 let overflow auto-upgrade the invoice. You never invent an allowance
 dollar. You never print a Heavy price. You never let the bot initiate a
 paid upgrade to keep working. You never resume a five-minute inbox
@@ -415,24 +421,24 @@ routine in the same week the pool emptied.
 channel. Stay is the after-spike default when a door already exists.
 Pause is how stay is allowed to be true.
 
-**Keep reading:** [How to Stop a Grok Bot Roster From Burning the Weekly Pool](/blog/how-to-stop-grok-bot-overspending), [The Cheapest Way Into Grok Bot Without Restating Stale Prices](/blog/cheapest-way-into-grok-bot), [Operating Without a Spend Cap: A Weekly Review That Can Fail](/blog/grok-bot-no-spend-cap-ops).
+**Keep reading:** [How to Stop a Grok Bot Roster From Burning the Weekly Pool](/blog/how-to-stop-grok-bot-overspending), [The Cheapest Way Into Grok Bot Without Restating Stale Prices](/blog/cheapest-way-into-grok-bot), [Operating Without a Per-Bot Spend Cap: A Weekly Review That Can Fail](/blog/grok-bot-no-spend-cap-ops).
 
 ## Frequently Asked Questions
 
 ### Should overflow push you to a higher grok bot plan?
 
-Not by default. Overflow means the included weekly pool is empty and further work is on-demand from model and token cost, if your plan allows it. A higher SKU is an eligibility stamp, not a documented larger pool, not a spend cap, and not a mid-week refill. Pause every routine first, especially any five-minute inbox clock. Stay on the invoice you already hold if that invoice is already Pro+, Plus, Teams, Ultra, or Heavy. Step up only if you still lack a door and the job actually repeats.
+Not by default. Overflow means the included weekly pool is empty and further work is on-demand from model and token cost, if your plan allows it. A higher SKU raises the weekly tier, but it is not a published pool size, not a spend cap, and not a documented reset of what you already spent. Pause every routine first, especially any five-minute inbox clock. Stay on the invoice you already hold if that invoice is already Pro, Pro+, Ultra, Teams, or a linked SuperGrok. Step up only if you still lack a door and the job actually repeats.
 
 ### Does buying Cursor Ultra refill this week's empty pool?
 
-No published page says a plan change refills the week. Cursor Ultra at two hundred dollars a month includes Grok Bot. So does Cursor Pro+ at sixty. Both still meter a weekly allowance, then on-demand overflow. Neither prints a dollar figure for that allowance. Neither ships a Grok Bot-specific spend cap. If a five-minute inbox bot emptied Pro+, the same clock can empty Ultra. Pause the clock. Confirm live prices on the Cursor pricing page. Do not treat two hundred as a bigger Bot tank.
+Moving from Pro+ to Ultra raises included Grok Bot usage to the Ultra tier, the highest, but no published page says it resets what the week already spent. Cursor Ultra at two hundred dollars a month includes Grok Bot. So do Cursor Pro+ at sixty and Pro at twenty. All three meter a weekly allowance, then on-demand overflow. None prints a dollar figure for that allowance. Neither ships a Grok Bot-specific spend cap. If a five-minute inbox bot emptied Pro+, the same clock can empty Ultra. Pause the clock. Confirm live prices on the Cursor pricing page. Do not treat two hundred as the fix for a five-minute clock.
 
 ### I already pay Cursor Pro+. Should I add SuperGrok Plus after overflow?
 
-Only if you want the xAI house for reasons that are not this Tuesday. Holding both means Grok Bot uses whichever subscription has more usage. That is not documented as a refill of an empty week. Plus at one hundred is a door, not a larger unpublished tank you can prove. Pause first. If Pro+ already made you eligible, stay. Read the both-subscriptions page if you already hold both for other reasons, and keep Heavy out of the cart until xAI prints a price.
+Only if you want the xAI house for reasons that are not this Tuesday. Cursor's plans page says linking SuperGrok Plus on Pro+ does not add Grok Bot usage: the two never stack, Grok Bot uses whichever has more, and the link is permanent. Plus is a door, not a refill of an empty week. Pause first. If Pro+ already made you eligible, stay. Read the both-subscriptions page if you already hold both for other reasons, and keep Heavy out of the cart until xAI prints a price.
 
 ### What if overflow appeared and my invoice still says Hobby or Pro?
 
-Hobby and Cursor Pro at twenty do not include Grok Bot. SuperGrok at thirty does not either. If you saw overflow language, you are likely on the one-time trial or on a different invoice than you think. Confirm the live entitlement. The trial is limited usage, not a weekly pool with a published overflow slope. Do not convert panic into Ultra. Pause, spend nothing else, then pick a door from the cheapest-way page if the job repeats, usually Pro+ at sixty.
+Cursor Pro at twenty includes Grok Bot now, so overflow on Pro means its weekly tier ran out. Hobby, the free plan, does not include Grok Bot, and a SuperGrok subscription counts only once it is linked. If you saw overflow language on Hobby, you are likely on the one-time trial or on a different invoice than you think. Confirm the live entitlement. The trial is limited usage, not a weekly pool with a published overflow slope. Do not convert panic into Ultra. Pause, spend nothing else, then pick a door from the cheapest-way page if the job repeats, usually Cursor Pro at twenty.
 `,
 };

@@ -272,7 +272,7 @@ pointless one, and the fix is editorial rather than technical.
 
 A charter is an instruction, not a guarantee, and the hosted runtime cannot help
 you here: the documentation notes that an audit view of Bot actions does not
-exist yet. So the verification has to come from the platform side, which is
+exist outside Enterprise. So the verification has to come from the platform side, which is
 fine, because the platform side is where the evidence lives anyway.
 
 Run this once a week for the first month, then monthly.

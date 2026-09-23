@@ -13,7 +13,7 @@ People install Grok Bot to get a better Grok chat, then discover Tuesday's inbox
 
 That is the grok bot vs grok mix-up in one night. People treat installing Grok Bot as getting a better Grok chat. It is not. grok.com and the Grok app are conversation. You type, you get a reply, the thread is the product. Grok Bot is named bots, routines, plugins, approvals, and one shared persistent cloud computer assigned to your user account. Same family name. Different job. Different blast radius.
 
-Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. Search collapses the two products because both say Grok. Your credit card does not. Confirm chat SKUs on [x.ai](https://x.ai) the day you buy. Bot SKUs below were checked 25 August 2026. For a definition without a comparison, use [What Is a Grok Bot?](/blog/what-is-a-grok-bot). This page is only the split, with Grok Build parked in a third column so it does not steal the argument.
+Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. Search collapses the two products because both say Grok. Your credit card does not. Confirm chat SKUs on [x.ai](https://x.ai) the day you buy. Bot SKUs below were rechecked 23 September 2026. For a definition without a comparison, use [What Is a Grok Bot?](/blog/what-is-a-grok-bot). This page is only the split, with Grok Build parked in a third column so it does not steal the argument.
 
 ## Stop treating a Grok Bot install as an upgrade to grok.com
 
@@ -39,7 +39,7 @@ Routines attach a workflow to one bot. Maximum 50 per bot. The app keeps the 20 
 
 The computer is one persistent cloud machine per user account. Every bot shares cookies, sessions, files, and CLI credentials. Each bot gets a screen. Docs are blunt: do not use separate bots as a security boundary. Deleting a bot does not remove shared files or browser sessions. Isolation lives in [One Computer, Many Screens](/blog/grok-bot-shared-computer-security), not in a second name.
 
-Supported clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The computer is a managed Linux VM, which is not a Linux desktop client. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. No model picker for members or admins. Do not assert that Grok Bot runs grok-4.6. The Bot serving set is unpublished. No Grok Bot-specific spend cap: weekly allowance, then on-demand. No published dollar figure for the allowance. Never invent one. See [Grok Bot cost](/blog/grok-bot-cost).
+Supported clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The computer is a managed Linux VM, which is not a Linux desktop client. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. No model picker for members or admins. Do not assert that Grok Bot runs grok-4.6. The Bot serving set is unpublished. No Grok Bot-specific spend cap: weekly allowance, then on-demand. No published dollar figure for the allowance. Never invent one. See [Grok Bot cost](/blog/grok-bot-cost).
 
 ## Leave Grok Build in the third column so the names stop collapsing
 
@@ -57,27 +57,27 @@ Three rows. Three docs trees. One brand. If you cannot point at which row is on 
 
 ## Buy Grok Bot on Cursor and SuperGrok tiers that actually include it
 
-Access is where grok bot vs grok becomes a billing error. Grok Bot is bundled. No standalone Bot SKU in the docs we checked. Eligible: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, Cursor Teams Standard and Premium, plus a one-time trial. Eligibility widened on 21 August 2026.
+Access is where grok bot vs grok becomes a billing error. Grok Bot is bundled. No standalone Bot SKU in the docs we checked. Eligible: every paid Cursor plan (Pro, Pro+, Ultra), Cursor Teams, and a linked individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription, plus a one-time trial. Eligibility first widened on 21 August 2026.
 
-The traps are Cursor Hobby, Cursor Pro at 20 dollars a month, and SuperGrok at 30 dollars a month. People already paying for "Grok" or for Cursor assume Bot is in the bundle. It is not, on those tiers. Cheapest paid path as of 25 August 2026: Cursor Pro+ at 60 dollars a month. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. A one-time trial is not a forever SKU. See [Grok Bot free trial](/blog/grok-bot-free-trial) and [Cursor account explained](/blog/grok-bot-cursor-account-explained).
+The traps are Cursor Hobby, SuperGrok Lite, and an individual SuperGrok nobody linked. People already paying for "Grok" or for Cursor assume Bot is in the bundle. On Hobby and Lite it is not. On SuperGrok it arrives only after you link it from the Grok Bot plan screen. Cheapest paid path, checked 23 September 2026: Cursor Pro at 20 dollars a month. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. A one-time trial is not a forever SKU. See [Grok Bot free trial](/blog/grok-bot-free-trial) and [Cursor account explained](/blog/grok-bot-cursor-account-explained).
 
 | What you already pay | Grok Bot included? | What people assume |
 |---|---|---|
 | grok.com / Grok app (confirm the chat SKU on x.ai) | Chat access is not proof of Bot | "I have Grok, so I have Grok Bot" |
-| SuperGrok at 30 dollars a month | No | "SuperGrok is the Grok plan" |
-| SuperGrok Plus at 100 dollars a month | Yes, listed as Grok Bot access | Correct for Bot, still not a chat upgrade |
+| SuperGrok (individual) | Yes, by linking | Link it from the Grok Bot plan screen; it grants usage and is not a Cursor plan |
+| SuperGrok Plus | Yes, by linking | Correct for Bot, still not a chat upgrade |
 | SuperGrok Heavy | Eligible. Confirm the live price on x.ai | Do not trust a viral Heavy figure |
 | Cursor Hobby | No | Free Cursor unlocked the teammate |
-| Cursor Pro at 20 dollars a month | No | The common mistaken upgrade |
-| Cursor Pro+ at 60 dollars a month | Yes. Cheapest documented paid path | Often skipped because Pro looked close enough |
-| Cursor Ultra, Teams Standard (40/seat), Teams Premium (120/seat) | Yes | Teams Standard is easy to miss |
+| Cursor Pro at 20 dollars a month | Yes. Cheapest paid path | Often missed because it sounds too cheap |
+| Cursor Pro+ at 60 dollars a month | Yes, with more weekly usage | Bought for usage, not for a different bot |
+| Cursor Ultra, any seat on a self-serve Cursor Teams plan | Yes | Teams seats are easy to miss |
 | One-time trial | Eligible for individuals | That trial leftovers isolate a mailbox |
 
 ## Hedge Grok chat pricing on x.ai instead of copying a screenshot
 
-Third-party roundups love a grid with a winner in bold. The Bot column can be sourced. The chat column goes stale, and half the grids mix API token prices, SuperGrok, and X Premium into one "Grok" cell. Do not budget Grok chat from this page. Open x.ai, write down the chat SKU, then separately check whether it is also Bot-eligible. SuperGrok at 30 dollars is the documented Grok-branded plan that does not include Bot. Other chat SKUs: confirm.
+Third-party roundups love a grid with a winner in bold. The Bot column can be sourced. The chat column goes stale, and half the grids mix API token prices, SuperGrok, and X Premium into one "Grok" cell. Do not budget Grok chat from this page. Open x.ai, write down the chat SKU, then separately check whether it is also Bot-eligible. SuperGrok Lite is the documented Grok-branded plan that does not include Bot, and SuperGrok Team and Enterprise cannot link. Other chat SKUs: confirm.
 
-The same hedge applies to clients. grok.com is a site. There is a Grok app. What phones, what desktops, what happens on X: confirm live. Do not copy Bot's platform list onto chat, and do not copy chat's web URL onto Bot and expect a Linux desktop app. Bot facts above were checked 25 August 2026. A pricing tweet from May is not a source.
+The same hedge applies to clients. grok.com is a site. There is a Grok app. What phones, what desktops, what happens on X: confirm live. Do not copy Bot's platform list onto chat, and do not copy chat's web URL onto Bot and expect a browser client. Bot facts above were rechecked 23 September 2026. A pricing tweet from May is not a source.
 
 ## Ask chat to watch the inbox, then watch the request fail as a standing job
 
@@ -132,7 +132,7 @@ Chat blast radius is mostly the text you pasted and whatever the chat product re
 
 Grok Bot blast radius is the desk. One computer. Cookies, sessions, files, CLI credentials. A [Lead Scout](/bots/lead-scout) that may only research still sits on the same machine as Inbox Triage. Naming does not partition credentials. Screens are not security boundaries. Deleting Inbox Triage does not log the browser out. You rotate the session. Delete removes the bot and its routines. It does not unsay the login. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. That does not make Gmail cookies private to one screen.
 
-Chat leakage is a transcript problem. Bot leakage is a computer problem. Installing Bot because you wanted a smarter transcript gives you the larger radius for free. An audit view of Bot actions does not exist yet. Prefer draft-only. See [Least privilege bots](/blog/least-privilege-bots).
+Chat leakage is a transcript problem. Bot leakage is a computer problem. Installing Bot because you wanted a smarter transcript gives you the larger radius for free. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Prefer draft-only. See [Least privilege bots](/blog/least-privilege-bots).
 
 ## Fire a routine on one bot and accept the twenty-run history cap
 
@@ -158,13 +158,13 @@ Most grok bot vs grok confusion is a sentence with the wrong noun.
 
 Fail the noun test and every later decision is theatre. Connect mail only after the row is Grok Bot, the charter has WHERE YOU STOP, and you accept that every other bot on the account shares the session.
 
-If you live on a Linux laptop, Grok Bot has no desktop app for you. Chat in a browser may still work. Confirm. Do not buy Pro+ to unlock a Linux Bot client. [Supported platforms](/blog/grok-bot-supported-platforms) is the Bot client list. This page will not invent chat clients to match it.
+If you live on a Linux laptop, Grok Bot has a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). Chat in a browser may still work. Confirm. Any eligible plan unlocks the Linux Bot client; no tier is Linux-only. [Supported platforms](/blog/grok-bot-supported-platforms) is the Bot client list. This page will not invent chat clients to match it.
 
 ## Concede the case where a chat window is the whole job
 
 The strongest argument against this article is that you already open Grok every morning, you already paste the messy question, and a named bot is ceremony around a conversation you actually have. That case wins more often than Bot marketing wants it to.
 
-It wins when the work is thinking or one-off: a tradeoff, a rewritten email, a page you will not revisit. Those jobs want turns, not a VM. Staffing Inbox Triage for a mailbox you check twice a year is how you leave a Gmail grant on a shared machine for no cadence. It wins on friction: opening grok.com is cheaper in attention than naming a bot and connecting plugins. A chat you use beats a roster you meant to staff. It wins on price if your current chat SKU is enough. SuperGrok at 30 dollars does not include Bot. Stay there if chat is the job. Buying Plus or Pro+ "so Grok gets better" is the upgrade fallacy this page is for.
+It wins when the work is thinking or one-off: a tradeoff, a rewritten email, a page you will not revisit. Those jobs want turns, not a VM. Staffing Inbox Triage for a mailbox you check twice a year is how you leave a Gmail grant on a shared machine for no cadence. It wins on friction: opening grok.com is cheaper in attention than naming a bot and connecting plugins. A chat you use beats a roster you meant to staff. It wins on price if your current chat SKU is enough. SuperGrok does not bring Bot until you link it, and the link is permanent. Stay there if chat is the job. Buying Plus or Pro+ "so Grok gets better" is the upgrade fallacy this page is for.
 
 It loses when the name has to survive you forgetting. Weekday mail, daily lead ranking, a Monday brief that must open last week's file: those jobs fail as repeated chats because you are the memory and the stop line. The prompt drifts. "Just send the obvious ones" appears. A charter is a written refusal that does not depend on you retyping it before coffee. It also loses on desk stalls: a portal, 2FA, a four-minute export, a labelled archive that must still exist in October. Conversation cannot hold that stall. A persistent computer can, and that capability is the blast radius.
 
@@ -191,9 +191,9 @@ If you cannot fail a row, you cannot risk-assess the product. A mailbox connecte
 
 You can keep grok.com and Grok Bot. Stop using one object for the other object's job.
 
-Keep chat for talk: drafts you will paste yourself, questions that end when the answer lands, one-off rewrites. Confirm what that product stores. Do not ask it to watch a mailbox as a standing employee. Keep Grok Bot for standing work: named jobs, routines, plugins, last week's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Overflow is uncapped. Linux and Android are Bot clients as of September 2026; iPad is not. Keep Grok Build in the repo if you want a CLI. Do not put mail on that story. See [Grok Bot vs Grok Build](/blog/grok-bot-vs-grok-build).
+Keep chat for talk: drafts you will paste yourself, questions that end when the answer lands, one-off rewrites. Confirm what that product stores. Do not ask it to watch a mailbox as a standing employee. Keep Grok Bot for standing work: named jobs, routines, plugins, last week's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Overflow has no per-bot cap, only the account's On-demand monthly limit. Linux and Android are Bot clients as of September 2026, and the iOS app also runs on iPad. Keep Grok Build in the repo if you want a CLI. Do not put mail on that story. See [Grok Bot vs Grok Build](/blog/grok-bot-vs-grok-build).
 
-A coherent week: chat for a pricing-page argument, Inbox Triage for drafts you send, [Standup Scribe](/bots/standup-scribe) for a record nobody ships from, Chief of Staff Briefing for a Monday diff. Nobody asks grok.com to be the mailbox. Nobody asks Bot to pin grok-4.6. An incoherent week is one word, Grok, covering all of that. That week is how a SuperGrok receipt gets treated as a Bot license.
+A coherent week: chat for a pricing-page argument, Inbox Triage for drafts you send, [Standup Scribe](/bots/standup-scribe) for a record nobody ships from, Chief of Staff Briefing for a Monday diff. Nobody asks grok.com to be the mailbox. Nobody asks Bot to pin grok-4.6. An incoherent week is one word, Grok, covering all of that. That week is how an unlinked SuperGrok receipt gets treated as a Bot license.
 
 Worth-it framing is a standing-job question, not a "do I like chatting with Grok" question: [Is Grok Bot worth it?](/blog/is-grok-bot-worth-it).
 
@@ -211,7 +211,7 @@ Do not assert that. grok-4.6 is a documented model with a published cutoff on th
 
 ### I already pay for SuperGrok. Do I have Grok Bot?
 
-Not on SuperGrok at 30 dollars a month. That plan does not include Grok Bot. SuperGrok Plus at 100 dollars a month lists Grok Bot access. SuperGrok Heavy is eligible. Cursor Pro+ at 60 dollars a month is the cheapest documented paid Bot path. Cursor Pro at 20 dollars does not include it. Chat access on grok.com is not proof of Bot. Confirm both the chat SKU and the Bot SKU on x.ai and cursor.com the day you subscribe.
+Only after you link it. An individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked to your Cursor account from the Grok Bot plan screen; the link is permanent and grants usage, not a Cursor plan. SuperGrok Lite does not include Grok Bot, and SuperGrok Team or Enterprise cannot link. Cursor Pro at 20 dollars a month is the cheapest paid Cursor path, and it includes Bot. Chat access on grok.com is not proof of Bot. Confirm both the chat SKU and the Bot SKU on x.ai and cursor.com the day you subscribe.
 
 ### Can I use Grok chat and Grok Bot at the same time?
 

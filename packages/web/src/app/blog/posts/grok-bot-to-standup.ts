@@ -255,7 +255,7 @@ never actually requested the review.
 Posting is also the irreversible verb here. The runtime is explicit that
 an approval controls the proposed action and does not reverse work
 already completed, so approving after the fact is not a mechanism that
-exists. There is also no audit view of bot actions yet, so an accidental
+exists. There is also no audit view of bot actions outside Enterprise, so an accidental
 channel post is not something you can reconstruct afterwards. You have
 one control, and it is the sentence in the charter.
 
@@ -492,7 +492,7 @@ public claim about your work and, on the blocked line, about a colleague
 who never saw it. The bot cannot tell that the reviewer was out sick or
 that you never actually requested the review. Posting is also the
 irreversible action in this workflow, since an approval controls a
-proposed action rather than reversing completed work, and no audit view
+proposed action rather than reversing completed work, and no audit view outside Enterprise
 of bot actions exists yet to reconstruct an accidental post.
 
 ### How do I tell whether the standup bot is actually accurate?

@@ -284,7 +284,7 @@ identity underneath them is wrong.
 | Test messages land in spam every time | New sending identity with no reputation, sent from static datacenter egress IPs | Expect it. Warm the address slowly, and never send bulk from it |
 | A summary quotes an instruction as if it were yours | Injected text was read as operator intent | Only the last line of your own message counts. Everything else is data |
 | Two bots reply to the same CC | The address is wired to more than one bot or routine | One address, one operating bot. Routines are per bot and die with it |
-| You cannot reconstruct what it did last week | An audit view of bot actions does not exist yet | The chat summary is the record. Make it detailed and read it |
+| You cannot reconstruct what it did last week | An audit view of bot actions does not exist outside Enterprise | The chat summary is the record. Make it detailed and read it |
 
 The third row is the failure this article exists to prevent. On a shared machine
 a bot that cannot reach its own mailbox is standing next to yours, and
@@ -336,7 +336,7 @@ you edit them.
 Sign out of every mail session on the VM and re-run the bot. It should stop and
 say the mailbox is unavailable. This is also the check that shows you what the
 shared machine was carrying, since deleting a bot does not remove shared
-sessions or files, and there is no audit view to consult instead.
+sessions or files, and there is no audit view outside Enterprise to consult instead.
 
 Any failure is a stop. Fix the rule, then run all four again a week later rather
 than assuming the fix held.

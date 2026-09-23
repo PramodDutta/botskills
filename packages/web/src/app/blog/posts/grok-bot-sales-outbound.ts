@@ -283,7 +283,7 @@ bot can label messages also gives this desk a path to a private thread. Do
 not connect mail "for" outbound. If it is already connected, say so in the
 charter and keep drafts in the doc.
 
-There is no Grok Bot-specific spend cap. Weekly allowance, then on-demand
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance, then on-demand
 from model and token cost. No published dollar figure, so do not plan as if a
 ceiling will catch a runaway browse loop. Cap the list at ten.
 
@@ -336,7 +336,7 @@ plan.
 
 ## Prove the stop by planting a name the bot must research and must not contact
 
-Grok Bot has no audit view of Bot actions yet. You cannot open a log and see
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. You cannot open a log and see
 "did not send." You check the places a message would appear, and you plant a
 trap that would show up if one left.
 
@@ -355,8 +355,7 @@ if you still want the bot gone.
 
 Watch the first run. Teach-by-demonstration records a browser workflow for up
 to ten minutes, no microphone audio, and produces a draft skill, not a
-sender. It is unavailable on iPhone. Do not teach it to click Send. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need
-desktop.
+sender. It is unavailable on iPhone. Do not teach it to click Send. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine.
 
 If you cannot complete those checks, you have a hope, not a never-send setup.
 
@@ -464,7 +463,7 @@ keeps cookies for every bot you will ever create on the account.
 
 ### How do I prove the bot did not contact anyone?
 
-Grok Bot has no audit view of Bot actions yet, so you check the places a
+Grok Bot has no audit view of Bot actions outside Enterprise, so you check the places a
 message would appear. After a run, open sent mail, the LinkedIn outbox or
 pending invitations if you use that product, and CRM sequence membership for
 the ten names. All three should be unchanged. The outbound document should

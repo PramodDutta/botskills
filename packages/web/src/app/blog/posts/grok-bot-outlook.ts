@@ -371,7 +371,7 @@ Send on Behalf, or Full Access
 ([mailbox auditing](https://learn.microsoft.com/en-us/purview/audit-mailboxes)).
 
 What it will not tell you is which bot did it. The Grok Bot documentation is
-explicit that an audit view of bot actions does not exist yet, and the runtime
+explicit that an audit view of bot actions does not exist outside Enterprise, and the runtime
 compounds this: all bots on an account share one persistent computer, with
 browser cookies and signed-in sessions shared across every bot on it. The
 documentation says directly that separate bots are not a security boundary. The

@@ -348,7 +348,7 @@ browser cookies, and signed-in sessions are shared across all of them. The
 documentation is direct about the implication: do not use separate bots as a
 security boundary. Deleting a bot removes neither the shared files nor the
 browser sessions it left behind, and an audit view of bot actions does not
-exist as of writing.
+exist outside Enterprise as of writing.
 
 So a second bot on the same account, through the same signed-in mail session,
 can read the drafts the first one wrote. If the sensitive part of your work is

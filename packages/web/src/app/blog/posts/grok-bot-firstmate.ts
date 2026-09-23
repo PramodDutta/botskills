@@ -204,7 +204,7 @@ briefs, asks which one runs first, and refuses to treat publish as a default
 because Clip Desk's boundary is unpublished. If you answer "both, and live,"
 it still waits on the live click. That wait is the product.
 
-Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The iPhone client
+Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; the iOS app also runs on iPad (iPadOS 18 or later). There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The iPhone client
 pauses and resumes. It does not replace desktop for editing a roster or
 testing a door. Do not approve a specialist send from a phone glance. Open
 the packet on desktop, read the three-line translation, then click.
@@ -271,9 +271,8 @@ are for a proposed action, not for a category of future messages.
 | After a bot delete | Sessions that delete does not clear | Gmail or X still signed in on the computer |
 
 Eligibility for Grok Bot includes SuperGrok Plus, Cursor Pro+, Cursor Ultra,
-and Cursor Teams Standard and Premium, plus a one-time trial. Cursor Hobby
-and Cursor Pro at $20 do not include it. SuperGrok at $30 does not. The
-cheapest paid path currently listed is Cursor Pro+ at $60 a month. None of
+and Cursor Teams, plus a one-time trial. Cursor Hobby, the free plan, does not include it; every paid Cursor plan does, from Cursor Pro at $20. An individual SuperGrok subscription can be linked instead. The
+cheapest paid path is Cursor Pro at $20 a month. None of
 those plans add a second computer when you add a specialist. Budget the door
 as process, not as isolation.
 

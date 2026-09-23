@@ -55,7 +55,7 @@ responsible and are not.
 | Checkout open, address and slot chosen | A pre-filled order one button from placed | A stray click places it; paid delivery slots and tips creep in | No. The reversible step is behind you |
 | Order placed under a spending cap | A confirmation email | Every wrong line is now a return, and there is no product-level spend cap to lean on | No |
 
-The fourth row deserves the flat refusal. There is no Grok Bot spend cap yet,
+The fourth row deserves the flat refusal. There is no Grok Bot-specific spend cap, only the account On-demand monthly limit,
 so a budget ceiling written into a charter is a sentence the bot is asked to
 respect rather than a limit the platform enforces. A number in a prompt is not
 a control.
@@ -326,7 +326,8 @@ chat. These are the failures worth recognising on sight.
 | Report cites a price you cannot find | It read a third-party seller offer, not the default listing | Require the seller name in the citation |
 
 The last row on a shared machine has no clean recovery. An audit view of bot
-actions does not exist yet, so the report the bot posts in chat is the record.
+actions does not exist outside Enterprise, so the report the bot posts in chat
+is the record.
 That is an argument for making the report detailed enough to reconstruct the
 run, and for reading it rather than skimming it.
 
@@ -341,7 +342,8 @@ good use of a human.
 Part of that is right. The savings are in the reconstruction, and the review is
 short. But three things break the budget-cap version specifically.
 
-There is no platform-level spend cap. A ceiling in a charter is a sentence,
+There is no platform-level cap on what the bot spends at a store. A ceiling in
+a charter is a sentence,
 enforced by the same system that occasionally reorders the wrong pack size. A
 spending limit that lives in the same place as the bug is not a limit.
 

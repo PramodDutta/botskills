@@ -15,7 +15,8 @@ both say they will take that job. They take it in very different ways, and the
 difference shows up in week two rather than week one.
 
 Prices and features below were checked on 2026-08-25 against each vendor's own
-documentation. Both products ship fast. Before you commit a budget, re-read
+documentation, with Grok Bot's plan, audit and spend-limit details rechecked on
+2026-09-23. Both products ship fast. Before you commit a budget, re-read
 [Lindy's pricing page](https://www.lindy.ai/pricing) and the
 [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) yourself.
 
@@ -130,8 +131,8 @@ form.
 | Model choice | No model picker, for members or admins, with automatic failover | Model selection across all models, listed on every paid tier |
 | Approval model | Approvals on proposed actions, which do not reverse completed work | Per-integration guardrails: always allow, require approval, or never |
 | Team scope | Routines are per-bot and die with the bot | Workspace routines managed by admins |
-| Audit trail | An audit view of bot actions does not exist yet | Audit logs listed at the Enterprise tier |
-| Cost shape | Subscription allowance plus on-demand overflow, no bot-specific spend cap yet | Per-seat subscription with a shared credit pool that pauses when empty |
+| Audit trail | Audit logs and Action Recording on Enterprise only; none on individual or self-serve Teams plans | Audit logs listed at the Enterprise tier |
+| Cost shape | Subscription allowance plus on-demand overflow, no bot-specific spend cap, only the account On-demand monthly limit | Per-seat subscription with a shared credit pool that pauses when empty |
 
 ## Answer six questions and the choice makes itself
 
@@ -142,10 +143,10 @@ requirement, because a hard requirement beats every preference below it.
 | --- | --- | --- |
 | Does a colleague need to see and correct the output? | Lindy | The thread is the record, and a reply is the correction |
 | Does one important tool exist only as a website you log into? | Grok Bot | MCP needs a vendor to publish a server; a browser needs only a login |
-| Will someone ask for an audit trail this quarter? | Lindy, Enterprise tier | Grok Bot's docs say an audit view does not exist yet |
+| Will someone ask for an audit trail this quarter? | Either, on an Enterprise tier | Grok Bot's docs put audit logs and Action Recording on Enterprise only |
 | Does the job stall for hours and then resume? | Grok Bot | A persistent machine can hold a half-finished form |
 | Do you need a bill you can predict? | Lindy | Credits pause when they run out rather than overflowing |
-| Does anyone work on Linux or Android? | Either | Grok Bot added Linux desktop and Android apps in September 2026; iPad is still out |
+| Does anyone work on Linux or Android? | Either | Grok Bot added Linux desktop and Android apps in September 2026, and its iOS app also runs on iPad |
 
 If two rows point in different directions, the tie-break is the surface split
 further down, not a compromise product.
@@ -233,15 +234,15 @@ members or admins, and its docs say there is no plan to add one
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 
 You need an audit trail now. Lindy's Enterprise tier adds SSO, audit logs, and
-HIPAA with a signed BAA. Grok Bot's own docs say an audit view of bot actions
-does not exist yet. If a compliance reviewer is going to ask who approved what,
+HIPAA with a signed BAA. Grok Bot's own docs put audit logs and Action Recording
+on its Enterprise plan only, with nothing for individuals or self-serve Teams. If a compliance reviewer is going to ask who approved what,
 that is close to decisive.
 
 You need automation that outlives one person. Workspace routines belong to the
 workspace. Grok Bot routines belong to a bot and die with it.
 
 You run Linux or Android. Grok Bot supports macOS, Windows, and iPhone on iOS
-18 or later, and, since September 2026, Linux and Android as well; iPad is not supported. Lindy reaches you through Slack, which runs
+18 or later, and, since September 2026, Linux and Android as well; the iOS app also runs on iPad. Lindy reaches you through Slack, which runs
 everywhere.
 
 ## Buy Grok Bot when the door is a login and the job pauses
@@ -269,21 +270,22 @@ someone who only mentions it in Slack, though a teammate who joins through
 Slack gets a seven-day free trial before the seat is billed.
 
 Grok Bot has no price of its own. It rides on a subscription, and the cheapest
-path as of 21 August 2026 is [Cursor Pro+](https://cursor.com/pricing) at 60
-dollars a month, with Cursor Ultra at 200, Cursor Teams Standard at 40 per user
-and Premium at 120, and [SuperGrok Plus](https://x.ai/pricing) at 100. Cursor
-Hobby and the 20 dollar Cursor Pro plan do not include it. A one-time trial is
-an eligibility path for individuals.
+path as of 23 September 2026 is [Cursor Pro](https://cursor.com/pricing) at 20
+dollars a month, with Cursor Pro+ at 60 and Cursor Ultra at 200, every seat on a
+self-serve Cursor Teams plan, and a linked individual
+[SuperGrok](https://x.ai/pricing) subscription. Cursor Hobby, the free plan,
+does not include it. A one-time trial is an eligibility path for individuals.
 
 | Situation | Lindy | Grok Bot |
 | --- | --- | --- |
-| One person, light use | Plus at 29.99 a month, 3,000 credits | Cursor Pro+ at 60 a month, or the one-time trial |
-| Five people, all of them mention it | Five Plus seats, 149.95 a month, 15,000 pooled credits | Cursor Teams Standard at 40 each, 200 a month |
+| One person, light use | Plus at 29.99 a month, 3,000 credits | Cursor Pro at 20 a month, or the one-time trial |
+| Five people, all of them mention it | Five Plus seats, 149.95 a month, 15,000 pooled credits | Five self-serve Cursor Teams seats, every member included; confirm the per-seat price live |
 | Two heavy users, three occasional | Still five seats, but admins can set credit allocations per seat | Still five subscriptions, since eligibility is per account |
-| The month a job runs away with itself | Credit-using actions pause until the reset, no overage | No bot-specific spend cap yet, so overflow is billed on demand |
+| The month a job runs away with itself | Credit-using actions pause until the reset, no overage | No bot-specific spend cap, so overflow is billed on demand up to the account On-demand monthly limit |
 
 The shapes differ in the way that matters. Lindy's worst case is that work
-stops. Grok Bot's worst case is an on-demand bill you did not model, because the
+stops. Grok Bot's worst case is an on-demand bill you did not model, up to
+whatever monthly limit you set, because the
 included weekly allowance is not published as a figure. If predictable is what
 you are buying, that is the deciding sentence. The same trade-off shows up in
 [Grok Bot vs ChatGPT Tasks](/blog/grok-bot-vs-chatgpt-tasks), and the general
@@ -308,7 +310,7 @@ one is slower: you sign in, you check the pages render, and you find that one of
 the five flags the datacenter IP address the docs warn about. By day thirty the
 value is that the bot still reads the two pages that require a session, and it
 picked up mid-form on the Friday the portal logged it out. The failure you hit
-is that the run history is 20 records deep and there is no audit view, so
+is that the run history is 20 records deep and there is no audit view outside Enterprise, so
 "what did it read on the 14th" is a question with no answer.
 
 The honest summary is that Lindy wins the month on visibility and Grok Bot wins
@@ -341,7 +343,8 @@ It is wrong about cost and reliability, in three specific ways. A connector
 call returns structured data, while a browser run returns whatever the page
 looked like that morning, so the failure modes are layout changes and bot checks
 rather than schema errors. A browser run costs tokens proportional to the pages
-it reads, and Grok Bot has no bot-specific spend cap yet, while a connector call
+it reads, and Grok Bot has no bot-specific spend cap, only the account On-demand
+monthly limit, while a connector call
 costs a credit from a pool that stops when it is empty. And the browser route
 concentrates credentials: one account, one computer, every session shared, with
 the docs telling you not to treat separate bots as a boundary.
@@ -407,11 +410,11 @@ important tool only exists as a website you log into, it does not.
 
 Lindy is per seat, so five people on Plus is 149.95 dollars a month at the
 pricing published on 2026-08-25, with credits pooled across the workspace. Grok
-Bot rides on an existing subscription, so five people on Cursor Teams Standard
-at 40 dollars per user is 200 a month and includes it. The number on the invoice
-is close. The difference is the tail: Lindy pauses when credits run out, while
-Grok Bot's docs say there is no bot-specific spend cap yet, so overflow usage is
-billed on demand.
+Bot rides on an existing subscription, so five people on a self-serve Cursor
+Teams plan all get it, at Cursor's per-seat price; confirm that live and compare
+the two invoices. The difference is the tail: Lindy pauses when credits run out, while
+Grok Bot's docs say there is no separate Grok Bot spend cap, so overflow usage is
+billed on demand up to the account On-demand monthly limit.
 
 ### Can Lindy reach a tool that has no integration?
 

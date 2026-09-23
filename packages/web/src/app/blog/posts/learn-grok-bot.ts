@@ -206,9 +206,9 @@ Continue with [What Makes a Weak Boundary, With Six Real Examples](/blog/what-ma
 
 ## Who Can Actually Run Grok Bot, a Decision Tree
 
-Access is decided by exact eligibility paths, not by the vague fact that an account is paid. The verified list includes SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, Cursor Teams Standard, and Cursor Teams Premium. A one-time trial is also an eligibility path for individuals. Cursor Hobby and Cursor Pro do not include Grok Bot. The documented cheapest paid path is Cursor Pro+ at $60 per month.
+Access is decided by exact eligibility paths, not by the vague fact that an account is paid. The verified list includes every paid Cursor plan (Pro, Pro+, Ultra), every member of a self-serve Cursor Teams plan, and a linked individual SuperGrok, SuperGrok Plus, SuperGrok Heavy, or X Premium+ subscription. A one-time trial is also an eligibility path for individuals. Cursor Hobby, the free plan, does not include Grok Bot, and neither does SuperGrok Lite. The documented cheapest paid path is Cursor Pro at $20 a month.
 
-Build the decision tree from the plan label visible in current billing. Separate individual accounts from team-managed seats, then copy the full tier name. Do not collapse Pro and Pro+ into the same branch. If the label is regional, abbreviated, missing, or absent from the verified eligibility list, mark the result unresolved and check current primary documentation.
+Build the decision tree from the plan label visible in current billing. Separate individual accounts from team-managed seats, then copy the full tier name. Record Pro and Pro+ separately: both include Grok Bot, at different weekly usage. If the label is regional, abbreviated, missing, or absent from the verified eligibility list, mark the result unresolved and check current primary documentation.
 
 The misconception is that price alone proves access. It does not, and current plan facts can change. The verified material also says that when a user has both Cursor and SuperGrok subscriptions, Grok Bot uses whichever has more usage. That rule does not publish the size of either allowance.
 
@@ -252,7 +252,7 @@ Inventory every routine with its owning bot, purpose, cadence, inputs, output de
 
 The common misconception is that recurring means durable or shared. Recurrence describes when work starts, not who owns the saved assignment or what survives deletion. The recent run record window is also not a permanent archive. If history matters, preserve the needed evidence elsewhere under your own retention policy.
 
-On the phone app, the verified facts allow pausing, resuming and approving, not editing. Editing, history, testing, and deletion require desktop. Continue with [What a Routine Is, and Where It Dies With the Bot](/blog/what-a-routine-is-and-where-it-dies) for the lifecycle inventory and recovery rehearsal.
+On the phone app, the verified facts allow pausing, resuming, approving, reading run history, and deleting a routine, not editing. Editing and testing require desktop. Continue with [What a Routine Is, and Where It Dies With the Bot](/blog/what-a-routine-is-and-where-it-dies) for the lifecycle inventory and recovery rehearsal.
 
 ## The Five Questions to Answer Before Your First Bot
 

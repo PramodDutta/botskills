@@ -40,7 +40,7 @@ anyone. Make those lines true in the runtime, not only in the charter.
 | Action | Can you put the world back | Requires you | Finishes alone |
 |---|---|---|---|
 | Send mail, a DM, a form, or a public reply | No | Yes | Never |
-| Pay, subscribe, or name a price to a counterparty | No. There is no Grok Bot spend cap | Yes | Never |
+| Pay, subscribe, or name a price to a counterparty | No. There is no per-bot spend cap | Yes | Never |
 | Delete mail, files, rows, or branches that are not named junk | No | Yes | Never |
 | Publish a post, page, or release with a public URL | No | Yes | Never |
 | Draft a reply or a first-touch note to disk | Yes, it never left | No | Yes |
@@ -59,13 +59,11 @@ Grok Bot runs on a persistent cloud computer assigned to your user account,
 not to a bot. Phone and laptop are remotes.
 
 Supported clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64),
-and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history,
-testing, and deleting need desktop. Teach by demonstration is unavailable on
+and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Teach by demonstration is unavailable on
 iPhone.
 
 A send prompt is a decision about a proposed action. Read it, compare it to
-the draft on disk, and approve or deny that one step on the Mac or Windows
-client. iPhone is not a reliable edit surface.
+the draft on disk, and approve or deny that one step in the desktop client. iPhone is not a reliable edit surface.
 
 [Grok Bot on iPhone](/blog/grok-bot-iphone-app) is the companion split.
 [The supported platforms list](/blog/grok-bot-supported-platforms) is the
@@ -76,9 +74,9 @@ from a commute.
 |---|---|---|
 | Mac (Apple silicon or Intel) | Read the proposed action, approve or deny, change which verbs wait | Nothing this job needs |
 | Windows (x64 or Arm64) | The same as Mac | The same |
-| iPhone, iOS 18+ | Pause and resume a routine | Edit the rule, open history, test, delete, teach by demonstration |
+| iPhone, iOS 18+ | Allow or deny a proposed step, pause or resume a routine, read its run history, delete it | Edit the rule, test, teach by demonstration |
 | Chat transcript | Read commentary the bot chose to write | Treat chat as the prompt. The ask sits on the screen |
-| Linux desktop, Android, or iPad | Not a Grok Bot client | Do not plan to review sends here |
+| Linux desktop, Android, or iPad | Linux is a full desktop client. Android and iPad work like iPhone | Edit rules on a desktop |
 
 Closing the laptop does not pause the cloud computer. A send sitting on ask
 stays unsent. The failure is assuming the job died, typing start over from
@@ -211,7 +209,7 @@ a logged-in Gmail, a CRM, a CLI token. They also inherit files.
 folder is a file problem. Opening Gmail because you logged it in for
 Outbound Draft is a session problem. Both happen on the same computer.
 
-There is no audit view of bot actions yet. You will not get "Bot B used Bot
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. You will not get "Bot B used Bot
 A's cookie at 11:04." You will get whatever the bot writes, plus the screen
 and sent mail.
 
@@ -326,11 +324,10 @@ Paste a second charter into Account Research that repeats the never-open-mail
 line. If you add "just check sent mail for tone" to the research bot, you
 are rebuilding the house key. Put tone in a folder instead.
 
-## Reconstruct a slipped send from the session and the disk, because there is no audit view
+## Reconstruct a slipped send from the session and the disk, because there is no audit view outside Enterprise
 
 When a send has already slipped, stop rewriting the charter. Find out
-whether the mail left, and whether a sibling used the session. There is no
-audit view. Chat is not a log. The disk, the bot screen, and sent mail are
+whether the mail left, and whether a sibling used the session. Outside Enterprise there is no audit view. Chat is not a log. The disk, the bot screen, and sent mail are
 the record.
 
 | Symptom | What likely happened | First move |
@@ -409,9 +406,9 @@ Teach by demonstration is unavailable on iPhone. Approvals are the four
 parks, the session hygiene, and the charter block, not a recorded click
 path.
 
-If Linux is your only machine, you do not have a Grok Bot desktop client.
-The FAQ lists a Linux desktop app as of September 2026, so install it.
-Reviewing sends is not an iPad job either.
+If Linux is your only machine, the FAQ lists a Linux desktop app as of
+September 2026, so install it. Reviewing sends on an iPad works like
+iPhone: allow or deny, then edit the rule at a desk.
 
 Once the parks are in, a real ask should be obvious when you sit down.
 That is the point of a grok bot approvals setup that belongs on
@@ -433,8 +430,7 @@ keep research off the mailbox. Two names are labels, not walls.
 
 ### Can I finish Grok Bot approvals setup from iPhone during a commute?
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
-deleting need the desktop app. An approval for a send is a decision
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. An approval for a send is a decision
 about a proposed action, and the copy you must match lives on that desktop.
 If a send is sitting and you cannot reach a desk, pause so the run does not
 keep trying a click you have not read. Do not treat pause as a rewrite of

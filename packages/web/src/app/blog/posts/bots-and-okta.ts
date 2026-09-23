@@ -92,7 +92,7 @@ Record the sibling name, URL, time, and visible result. The test does not prove 
 
 An admin console check that relies on a standing browser cookie is a persistent authority path. Do not schedule it merely because the first supervised run worked. Convert the question to an approved report or narrow read source, keep it manual, or have the identity owner choose a separately governed mechanism.
 
-Grok Bot supports up to 50 routines per bot and keeps the 20 most recent run records per routine. Those capacity and history facts do not provide a security boundary or complete audit. There is no audit view of Bot actions yet. Build your own heartbeat, but do not confuse it with a vendor audit record.
+Grok Bot supports up to 50 routines per bot and keeps the 20 most recent run records per routine. Those capacity and history facts do not provide a security boundary or complete audit. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Build your own heartbeat, but do not confuse it with a vendor audit record.
 
 ## Paste a read-only console-check charter
 

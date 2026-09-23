@@ -97,8 +97,7 @@ YouTube account moves watch history on an identity you care about.
 Daily comment sweeps are how a creator bot dies: it answers the wrong
 person, names the child, or thanks spam in your voice. A routine belongs
 to one bot. Max 50 routines per bot. The app keeps the 20 most recent run
-records per routine. Nothing is team-level. There is no audit view of Bot
-actions yet. Append every packet to a file you own. Deleting a bot
+records per routine. Nothing is team-level. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Append every packet to a file you own. Deleting a bot
 deletes its routines and does not delete a Studio cookie. Do not hang an
 also-reply step on the Sunday routine.
 
@@ -177,8 +176,7 @@ bot too.
 Creators work in kitchens and hallways. Grok Bot on iPhone is a remote,
 not a studio. Documented scope, from the
 [mobile page](https://docs.x.ai/grok-bot/mobile): iPhone on iOS 18 or
-later. On that phone you can pause and resume a routine. Editing,
-history, testing, and deleting need a desktop. Teach by demonstration is
+later. On that phone you can pause and resume a routine. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Teach by demonstration is
 unavailable on iPhone.
 
 Pause stops future work on that routine. It does not rewrite "never
@@ -190,7 +188,7 @@ the filming hour around those sentences. Do not invent a pocket editor
 on top of them.
 
 Supported clients are macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and iPhone on iOS 18+. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The Agent Computer is a managed Linux VM. That is
+Arm64), and iPhone on iOS 18+. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The Agent Computer is a managed Linux VM. That is
 not a Linux desktop client, and it is not your phone. If a listing draft
 starts looking like an upload while you film, pause, then get to a desk.
 Do not finish a Studio login from the phone.
@@ -378,7 +376,7 @@ not the same test. Comments fail the public test.
 
 ## Prove the channel stayed quiet with a planted transcript and a closed Studio tab
 
-There is no audit view of Bot actions yet. Proof is negative space plus
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Proof is negative space plus
 a planted check. After Sunday, the dated packet must exist, with three
 title options per cut and a quoted span under each. Chat that says it
 replied to comments or posted to Community is a fail even if the tone
@@ -428,7 +426,7 @@ No. A public comment is a message on a watch page with a name attached. A Commun
 
 ### What can I do from iPhone if a listing draft starts looking like an upload?
 
-Pause. Resume only if you already trust the charter. Editing, history, testing, and deleting need a Mac or a Windows desk. Teach by demonstration is unavailable on iPhone. You cannot rewrite never-upload from the kitchen while the camera is rolling. If a sibling bot inherited a Studio cookie, pause that routine too. Then get to a desk, sign the channel out on the Agent Computer, and read the iPhone pause-only limit. Do not finish a Studio login from the phone. The cloud computer's browser is not your phone.
+Pause. Resume only if you already trust the charter. Editing and testing a routine need a Mac or a Windows desk. Teach by demonstration is unavailable on iPhone. You cannot rewrite never-upload from the kitchen while the camera is rolling. If a sibling bot inherited a Studio cookie, pause that routine too. Then get to a desk, sign the channel out on the Agent Computer, and read the iPhone pause-only limit. Do not finish a Studio login from the phone. The cloud computer's browser is not your phone.
 
 ### Why keep Studio off the shared computer for only two videos a week?
 

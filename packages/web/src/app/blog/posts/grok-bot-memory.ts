@@ -97,7 +97,7 @@ can read it top to bottom in under two minutes, because you will need to do
 exactly that during pruning.
 
 There is a second reason to keep the log, unrelated to memory. There is no
-audit view of bot actions as of writing, so an append-only log the bot writes
+audit view of bot actions outside Enterprise as of writing, so an append-only log the bot writes
 and never edits is the closest thing to a record you will have. It just should
 not be the thing the bot reads at startup. [Making a bot's work
 observable](/blog/bot-observability) covers the log side properly.

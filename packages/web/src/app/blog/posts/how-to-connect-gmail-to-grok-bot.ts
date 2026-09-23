@@ -15,11 +15,11 @@ This is the click path, not [the Gmail permissions catalogue](/blog/grok-bot-gma
 
 ## Sit at a desktop before any Gmail consent screen appears
 
-Do this on a Mac (Apple silicon or Intel) or on Windows (x64 or Arm64). The iPhone app (iOS 18+) can pause and resume. Editing, history, testing, and deleting still need desktop. Connecting mail from the couch is how you press Allow while a customer is waiting.
+Do this on a Mac (Apple silicon or Intel), on Windows (x64 or Arm64), or on the Linux desktop app. The iPhone app (iOS 18+) can pause and resume. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Connecting mail from the couch is how you press Allow while a customer is waiting.
 
-There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The agent runs on a managed Linux VM in the cloud as a non-root user. That is not a Linux desktop you sit at.
+There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The agent runs on a managed Linux VM in the cloud as a non-root user. That is not a Linux desktop you sit at.
 
-Confirm eligibility on the vendor page that morning. Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. Included paths, as of 25 August 2026: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+ at $60 a month, Cursor Ultra, Cursor Teams Standard ($40 per user per month) and Premium ($120 per user per month), plus a one-time trial. Cursor Hobby, Cursor Pro at $20, and SuperGrok at $30 still do not include it. Prices move. Recheck.
+Confirm eligibility on the vendor page that morning. Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. Included paths, as of 23 September 2026: every paid Cursor plan (Pro at $20 a month, Pro+ at $60, Ultra at $200), every self-serve Cursor Teams seat, and a linked individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+, plus a one-time trial. Cursor Hobby, the free plan, does not include it. Prices move. Recheck.
 
 If you are on the trial, stop. [How to test Grok Bot on the trial](/blog/how-to-test-a-grok-bot-on-trial) is explicit: do not add Gmail to spend the sample.
 
@@ -70,7 +70,7 @@ Read means the bot can see headers, bodies, attachments, or some mix of those. D
 | Send, reply, reply-all, forward | Mail can leave | Never | Never |
 | Filters, forwarding, vacation, signature, trash, delete | The mailbox itself changes | Never | Never |
 
-If create-draft and send arrive as one Allow, do not Allow. The session can still send when a later prompt, a routine, or a message that looks like instructions asks it to. There is no audit view of Bot actions yet. Your only record is the mailbox.
+If create-draft and send arrive as one Allow, do not Allow. The session can still send when a later prompt, a routine, or a message that looks like instructions asks it to. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Your only record is the mailbox.
 
 Hosted MCP sign-in tokens stay with Cursor's backend. A browser Gmail session lives on the computer. If you are unsure which one you just created, assume the session is on the shared computer.
 
@@ -141,7 +141,7 @@ Send eight messages to the alias from an address you control. Write the expected
 | 7 | Mail from Lena that belongs on hello@, forwarded by mistake | Bot/Unsure | No |
 | 8 | A follow-up on plant 1, same thread | Bot/Reply-Needed | Yes, after reading the whole thread |
 
-Run once. Open Gmail. Count. Write the score in a note you own. There is no audit view to replace that note. If more than two are wrong, do not add send and do not give it hello@ for more context. Fix the job sentence. If Unsure is empty on a messy set, the bot is guessing.
+Run once. Open Gmail. Count. Write the score in a note you own. There is no audit view outside Enterprise to replace that note. If more than two are wrong, do not add send and do not give it hello@ for more context. Fix the job sentence. If Unsure is empty on a messy set, the bot is guessing.
 
 Plant 5 exists because inbound mail is a prompt-injection surface. A clerk that obeys the email is not a clerk. Flag it, label Unsure, stop.
 
@@ -190,7 +190,7 @@ Do not widen send because a draft went out unchanged. Unchanged means Jules agre
 
 If you add [Chief of Staff Briefing](/bots/chief-of-staff-briefing) on the same account, it may already hold a Google session for calendar. List every bot on the account before you click Connect.
 
-Grok Bot has no spend cap of its own. After the weekly allowance, usage is on-demand from model and token cost. There is no published dollar figure for the allowance. Do not invent one. There is still no reason to grant send to save a click Jules is already willing to make.
+Grok Bot has no per-Bot spend cap of its own. After the weekly allowance, usage is on-demand from model and token cost, up to the account On-demand monthly limit. There is no published dollar figure for the allowance. Do not invent one. There is still no reason to grant send to save a click Jules is already willing to make.
 
 ## Treat the leftover Gmail session as a login every remaining bot can open
 
@@ -200,7 +200,7 @@ Deleting the mail bot later will delete that bot's routines and that bot's scree
 
 [Shared-computer security](/blog/grok-bot-shared-computer-security) is the longer version. A Gmail cookie on this computer is a company login for every bot on the account, including bots you have not built yet.
 
-There is no audit view of Bot actions yet. You will not get a list of which bot opened Gmail.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. You will not get a list of which bot opened Gmail.
 
 SpaceX acquired xAI (announced 2 February 2026) and acquired Anysphere/Cursor (closed 14 August 2026). xAI did not acquire Cursor. None of that isolates Gmail per bot.
 
@@ -226,7 +226,7 @@ Claude Code, SKILL.md, and CLAUDE.md compatibility is Grok Build, never Grok Bot
 
 The strongest objection on this click path is not "reviewing drafts is not automation." That one lives in the Gmail catalogue. The objection here is mechanical: the consent screen will not let you create drafts unless you also allow send, so taking the bundle is the only way to get the job.
 
-If that is the screen you are looking at, the answer is still no on day one. A draft you cannot have without send is send with a hope attached. There is no audit view to confirm the hope. A later routine, a group chat instruction, or an inbound message that looks like a command can use the grant you took because the UI was inconvenient.
+If that is the screen you are looking at, the answer is still no on day one. A draft you cannot have without send is send with a hope attached. There is no audit view outside Enterprise to confirm the hope. A later routine, a group chat instruction, or an inbound message that looks like a command can use the grant you took because the UI was inconvenient.
 
 Stay inside the how-to: keep the bot on the alias with read and labels only, and write suggested replies into a document you own. Or wait. Or use Gmail yourself for drafts until a narrower screen exists. Confirm current connector behavior on the vendor's page that morning.
 
@@ -234,7 +234,7 @@ The second form is "I will grant send and never use it." That is the same grant.
 
 The third form is "Jules is slow, so the bot should send the ones she always approves." Two unchanged drafts is evidence that the drafts are good. It is not evidence that send should move. Leave Send on the human who already lives in Gmail.
 
-If the business cannot exist for a week without automated send from hello@, Grok Bot is the wrong first control. Hire a person, or keep sending yourself. One shared computer, no published spend cap, no model picker, and no audit view is a poor place for the company's voice on day one.
+If the business cannot exist for a week without automated send from hello@, Grok Bot is the wrong first control. Hire a person, or keep sending yourself. One shared computer, no per-Bot spend cap, no model picker, and no audit view outside Enterprise is a poor place for the company's voice on day one.
 
 ## Revoke Google access first when you want that session gone
 
@@ -256,7 +256,7 @@ When the job is over, retire the alias. An unused alias that still receives pass
 
 ### Can I connect Gmail to Grok Bot from the iPhone app?
 
-Use the desktop app for the connect. The iPhone app, on iOS 18 or later, can pause and resume a bot. Editing, history, testing, and deleting still need desktop. A Gmail consent screen is an edit. If you Allow from the phone, you will not have a clean way to inspect what you granted, test a send refusal, or delete the bot if the grant is wrong. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The managed Linux VM in the cloud is not a substitute for sitting at the desktop client.
+Use the desktop app for the connect. The iPhone app, on iOS 18 or later, can pause and resume a bot. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. A Gmail consent screen is an edit. If you Allow from the phone, you will not have a clean way to inspect what you granted or test a send refusal. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The managed Linux VM in the cloud is not a substitute for sitting at the desktop client.
 
 ### Does deleting the Gmail bot sign Gmail out of the shared computer?
 
@@ -264,7 +264,7 @@ No. All bots on the account share one persistent cloud computer assigned to you,
 
 ### What should I do if the consent screen bundles send with create draft?
 
-Do not Allow on day one. Read the screen in front of you and sort every line into read, draft, or send. If those intents are one button, you do not have a draft-only grant. Keep the bot on labels and read, write suggested replies in a document you own, or wait for a narrower screen. Confirm current behavior on the vendor's page. Granting send with a promise not to use it is still send. There is no audit view to watch the promise.
+Do not Allow on day one. Read the screen in front of you and sort every line into read, draft, or send. If those intents are one button, you do not have a draft-only grant. Keep the bot on labels and read, write suggested replies in a document you own, or wait for a narrower screen. Confirm current behavior on the vendor's page. Granting send with a promise not to use it is still send. There is no audit view outside Enterprise to watch the promise.
 
 ### When is it safe to connect hello@ after the alias already works?
 

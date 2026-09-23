@@ -280,7 +280,7 @@ open it. The damage is somewhere else.
 | A customer replies to a "check-in" you did not write | Mail plugin, shared Gmail session, or a draft left in the outbox | Disconnect send. Search sent mail. Rotate the session |
 | Ticket text became a next step that sounds like a promise | The bot treated a customer sentence as an instruction | Quote-and-ignore rule. Internal next steps stay labelled UNSENT |
 
-Grok Bot has no audit view of Bot actions yet, so the pack itself is the
+Grok Bot has no audit view of Bot actions outside Enterprise, so the pack itself is the
 receipt. A weekly job burns twenty run records in twenty weeks. Copy the pack
 out. A four-day weekend that drops seats below the band is right about the
 arithmetic and wrong about the week. Name that exception in bands.md. Do not
@@ -302,8 +302,7 @@ spent the only quiet conversation you were going to get.
 
 The honest concession is this. If you will not read the pack, do not run the
 bot. A color nobody uses is compute you could have spent on
-[the spend and token problem](/blog/grok-bot-spend-cap-and-token-burn). There
-is no Grok Bot-specific spend cap. Weekly allowance, then on-demand from model
+[the spend and token problem](/blog/grok-bot-spend-cap-and-token-burn). There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance, then on-demand from model
 and token cost, with no published dollar figure. Do not invent one. A daily
 scan of the whole book is the expensive way to learn nothing new.
 
@@ -329,8 +328,7 @@ field moved, the stop failed. Fix the grant first, then the charter.
 Run the canary once before you schedule the routine, and once after the first
 plugin change. Set the cadence on
 [Grok Bot scheduling](/blog/grok-bot-scheduling) only after it is clean. On
-iPhone you can pause and resume. Editing, history, testing, and deleting still
-need desktop.
+iPhone you can pause and resume. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine.
 
 ## Hand the save motion to churn watch, which still does not email the customer
 
@@ -375,7 +373,7 @@ If your org already auto-sets discounts or forecast categories from a health
 field, do not let a bot write that field. The
 [safety checklist](/blog/grok-bot-safety-checklist) is the pre-flight for
 anything that can reach a customer. This job should fail that checklist if
-mail is connected. Linux desktop, Android, and iPad are not Grok Bot clients.
+mail is connected. Linux desktop, Android, and iPad (through the iOS app) are Grok Bot clients too.
 
 ## Grade the week by packs you actually opened, never by scores sitting in the CRM
 
@@ -435,7 +433,7 @@ is three products with three blast radii.
 
 ### How do I prove the bot did not contact anyone?
 
-There is no audit view of Bot actions yet. Proof is negative space. After
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Proof is negative space. After
 Monday, search sent mail for Harbor, Maple, and Willow. Open those three CRM
 records and confirm health, risk, and owner did not gain a bot write. The pack
 folder should have a new dated file. If you planted Canary Sandbox, its domain

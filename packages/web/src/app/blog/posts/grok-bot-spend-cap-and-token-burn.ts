@@ -1,22 +1,23 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Grok Bot Spend Cap: None Exists, So Budget in the Charter',
+  title: 'Grok Bot Spend Cap: Set the Monthly Limit, Then Budget in the Charter',
   description:
-    'There is no Grok Bot spend cap. The ceiling has to live in your charters: run budgets, retry limits and a weekly review that keeps a roster from running away.',
+    'There is no per-Bot spend cap, only the account-level On-demand monthly limit. The rest lives in your charters: run budgets, retry limits and a weekly review.',
   date: '2026-08-25',
   category: 'Guide',
   content: `
-# Grok Bot Spend Cap: None Exists, So Budget in the Charter
+# Grok Bot Spend Cap: Set the Monthly Limit, Then Budget in the Charter
 
-The product does not have a brake. That is not a complaint, it is the
-documented state of things as of writing, and it changes how you should set
-up every bot you own.
+The product does not have a per-bot brake. It has one account-level brake, the
+On-demand monthly limit, and a bot already working can finish past it. That is
+not a complaint, it is the documented state of things as of writing, and it
+changes how you should set up every bot you own.
 
-Three facts stack up badly together. There is no spend cap. The included
+Three facts stack up badly together. There is no per-Bot spend cap, only the account-level On-demand monthly limit. The included
 allowance is not published as a number anywhere. Anything past that allowance
-bills on demand. So the only ceiling in the system is the one you write into
-each bot yourself, and this is how to write it.
+bills on demand. So the only per-bot ceiling in the system is the one you
+write into each bot yourself, and this is how to write it.
 
 ## Start from what the documentation actually commits to
 
@@ -24,21 +25,26 @@ Two pages carry the load here, and both are worth reading in full before you
 schedule anything.
 
 The Grok Bot enterprise page states it plainly:
-"There is no Grok Bot-specific spend cap yet."
+"A separate Grok Bot spend cap is not available today. Account-level on-demand
+controls apply."
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises))
 
 The [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) supplies the other half:
 eligible subscriptions include a weekly usage allowance, and usage beyond that
-allowance is billed on demand, derived from model and token cost.
+allowance is billed on demand, derived from model and token cost. Cursor's
+[plans page](https://cursor.com/help/grok-bot/plans) names the account-level
+brake: that on-demand usage counts toward the On-demand monthly limit, set in
+Grok Bot Settings or under Spending on cursor.com/dashboard.
 
 Notice what is missing. The size of the weekly allowance is not published. Not
 in dollars, not in credits, not in runs. If you have read a post quoting a
 figure, that figure was invented, and you should treat the rest of that page
 with the same suspicion. We are not going to guess at it either.
 
-One more documented gap matters here: an audit view of bot actions does not
-exist yet, per the same enterprise page. You cannot go back on Friday and ask
-which of your six bots consumed the week. That absence is why the rest of this
+One more documented gap matters here: outside Enterprise, there is no audit
+view of bot actions, per the same enterprise page; Enterprise has audit logs
+and Action Recording. On an individual or self-serve Teams account you cannot
+go back on Friday and ask which of your six bots consumed the week. That absence is why the rest of this
 article is about per-bot discipline rather than dashboards.
 
 Which subscription you hold does not change any of the arithmetic below.
@@ -46,7 +52,8 @@ Eligibility widened on 21 August 2026
 ([x.ai news](https://x.ai/news/grok-bot-more-plans)), and the current list of
 eligible plans lives on [cursor.com/pricing](https://cursor.com/pricing) and
 [x.ai/pricing](https://x.ai/pricing). Read those rather than trusting a figure
-quoted in an article, including this one. What no plan buys you is a ceiling.
+quoted in an article, including this one. What no plan buys you is a per-bot
+ceiling.
 
 ## Rank the five levers by how much each one multiplies
 
@@ -205,7 +212,7 @@ ceiling, not the estimate.
 
 ## Turn each lever into a charter clause you can paste
 
-Since the runtime has no cap, the charter is where the cap goes. Here is a
+Since the runtime has no per-bot cap, the charter is where the cap goes. Here is a
 complete one you can paste and adapt. Every block below maps to one of the
 five levers above.
 
@@ -252,7 +259,7 @@ retry ceiling of two just means two attempts per route, and routes are
 unlimited.
 
 The self-report block is the odd one out: it caps nothing. It exists because
-no audit view does, and a line reporting pages, calls, retries and ceilings
+no audit view outside Enterprise does, and a line reporting pages, calls, retries and ceilings
 hit is the only per-bot number you will ever have.
 
 ## Measure your own per-run cost before you schedule anything
@@ -299,9 +306,9 @@ The last row is the most common and the least discussed. A bot whose output
 you skip is not a cost problem in the runtime, it is a cost problem in the
 roster, and no clause fixes it.
 
-## No audit view means you keep the ledger
+## No audit view outside Enterprise means you keep the ledger
 
-Since an audit view of bot actions does not exist yet, you cannot answer
+Since an audit view of bot actions does not exist outside Enterprise, you cannot answer
 "which bot burned the week" after the fact. Four habits substitute for it.
 
 **One job per bot.** A bot doing four things blends four cost profiles into
@@ -409,7 +416,7 @@ spend one: the bot never buys anything, whatever else it is allowed to do.
 
 Everywhere else on this site we argue that a boundary is a safety mechanism,
 the single line naming what a bot never does without a human. In an
-environment with no spend cap, that line is also the budget.
+environment with no per-Bot spend cap, that line is also the budget.
 
 Two clauses do almost all of the work. The bot never initiates spend: no
 purchases, no upgrades, no credit top-ups, no paying for a report so it can
@@ -436,11 +443,13 @@ This sits inside a wider guide: [When Bots Go Wrong](/blog/when-bots-go-wrong) c
 
 ### Does Grok Bot have a spend cap?
 
-No. The Grok Bot enterprise documentation states directly that there is no
-Grok Bot-specific spend cap yet, as of August 2026. Eligible subscriptions
-include a weekly usage allowance, and usage beyond that allowance is billed on
-demand based on model and token cost. Because there is no ceiling in the
-product and no audit view of bot actions yet, the practical control is
+Not a Grok Bot-specific one. The Grok Bot enterprise documentation says a
+separate Grok Bot spend cap is not available today and that account-level
+on-demand controls apply. Eligible subscriptions include a weekly usage
+allowance; usage beyond it is billed on demand based on model and token cost
+and counts toward the account's On-demand monthly limit, which a bot already
+working can pass. Because there is no per-bot ceiling in the product and no
+audit view of bot actions outside Enterprise, the practical control is
 per-bot: cap the schedule, cap the tool calls and page loads per run, set a
 hard retry ceiling, and forbid the bot from initiating any spend at all.
 

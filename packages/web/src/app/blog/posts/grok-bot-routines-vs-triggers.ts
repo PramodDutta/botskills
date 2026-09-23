@@ -53,7 +53,7 @@ about. If your goal was to revoke access, deleting the bot is not the action
 that does it.
 
 **Your phone is a kill switch, not a console.** On iPhone you can pause and
-resume routines only. Editing, history, testing and deleting all need a
+resume routines only. Editing and testing a routine all need a
 desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). That is a reasonable
 division of labour, but plan around it: if you are away from a laptop, your
 only available response to a misbehaving routine is to stop it. Which is an
@@ -305,9 +305,10 @@ from what you need, because fast routines are also the ones that can do the
 most damage before anyone looks.
 
 Now combine that with a second documented gap: an audit view of bot actions
-does not exist yet
+does not exist outside Enterprise
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
-Your evidence window is short and there is no system of record behind it.
+On an individual or self-serve Teams account, your evidence window is short
+and there is no system of record behind it.
 
 Two design consequences, and they are the reason this section exists.
 
@@ -398,8 +399,8 @@ Work that needs a decision partway through. If the middle of the job is a
 judgment call, the routine either waits, holding its bot until you notice, or
 it guesses. Split it so the routine ends at the decision and hands you a list.
 
-Work whose half-completed state is worse than not running. On iPhone your only
-control is pause and resume, so if stopping mid-flight leaves a partly updated
+Work whose half-completed state is worse than not running. On iPhone your controls
+are pause, resume, and delete, not edit, so if stopping mid-flight leaves a partly updated
 tracker, you have built something you cannot safely stop from the device you
 will actually have with you.
 

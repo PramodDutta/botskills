@@ -14,8 +14,7 @@ metaphor. Until then, everything your fleet does starts from a desktop session
 you are sitting in front of. Connect Telegram and the trigger surface becomes a
 chat thread, which is convenient in exactly the way that should make you careful.
 
-There is a real reason people want this. Grok Bot supports macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. And on iPhone the app lets you pause and resume runs, while editing,
-history, testing, and deleting all require a desktop. So if you are away from
+There is a real reason people want this. Grok Bot supports macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; the iOS app also runs on iPad. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). And on iPhone the app lets you pause and resume runs, while Editing and testing a routine all require a desktop. So if you are away from
 your machine, a messaging bridge is the only real remote you have.
 
 The [telegram fleet door](/bots/telegram-fleet-door) listing is built for that
@@ -169,7 +168,7 @@ this week?" is a question you want answered in one line, not reconstructed from
 a conversation.
 
 There is a hard constraint behind this. An audit view of bot actions does not
-exist on the platform yet. Routines are per bot, the app keeps only the twenty
+exist on the platform outside Enterprise. Routines are per bot, the app keeps only the twenty
 most recent run records per routine, and deleting a bot deletes its routines.
 Nothing is stored at team level. So a log file in the workspace is not a nice
 extra, it is the only durable record you will have.
@@ -398,9 +397,10 @@ allowlist from the identity file. Revoke any group invite links and, if the grou
 existed only for this, delete the group. Then delete the bot, last, once there is
 nothing left for it to reach.
 
-There is an admin capability described as coming rather than shipped, a kill
-action that deletes the VM while keeping durable storage. Treat it as unshipped
-until you see it in your own account, and do not plan a retirement around it.
+There is an admin capability that has shipped on Enterprise only: an
+organization admin can terminate a member's computer while keeping the durable
+disk. Unless you are on Enterprise you will not see it, and do not plan a
+retirement around it.
 
 One habit worth keeping: when group membership changes, treat the bind as expired
 until you have re-read the allowlist. Membership drift is how a private remote
@@ -416,8 +416,8 @@ start.
 ### Why control Grok Bot through Telegram at all?
 
 Because the official surfaces are limited when you are away from a desk. Grok Bot
-supports macOS, Windows, and iPhone on iOS 18 or later, plus, since September 2026, Linux desktop and Android apps; iPad is not supported. On iPhone you can pause and resume runs,
-but editing, history, testing, and deleting all require a desktop. A private
+supports macOS, Windows, and iPhone on iOS 18 or later, plus, since September 2026, Linux desktop and Android apps; the iOS app also runs on iPad. On iPhone you can pause and resume runs,
+but Editing and testing a routine all require a desktop. A private
 messaging bridge is therefore the practical remote for anyone on Android or away
 from their machine. The tradeoff is that your trigger surface becomes a chat
 thread, which is why the bind and the allowlist matter so much.

@@ -397,7 +397,7 @@ than you assumed, since bots run from static datacenter addresses that some
 services challenge on sight.
 
 Its own history is short. A routine belongs to one bot, the app keeps only the
-20 most recent run records for it, and there is no audit view of bot actions as
+20 most recent run records for it, and there is no audit view of bot actions outside Enterprise as
 of writing. A monthly audit ages out of the runtime's memory in under two
 years: fine for the current picture, useless year on year. Append each run to a
 document you own.
@@ -431,7 +431,7 @@ and per-seat plans grow without anyone deciding to grow them.
 
 Two practical notes on running it. A routine belongs to one bot and the app keeps
 only the 20 most recent run records for it, so a monthly audit's history ages out
-after about twenty months and there is no audit view of bot actions as of
+after about twenty months and there is no audit view of bot actions outside Enterprise as of
 writing. If you want a year-on-year view of what you were paying, have the bot
 append each run to a document you own.
 

@@ -53,7 +53,7 @@ Two people are two computers only when they are two user accounts. Jonah looking
 
 Sign-in runs through a Cursor account ([why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained)). The computer follows that identity. Naming a screen Research Scout does not mint a second machine and does not mint a shareable object.
 
-The agent runs as a non-root user on a managed Linux VM. That is not a Linux desktop client. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; iPad is not supported. Linux desktop, Android, and iPad have no Grok Bot app. From the phone app Jonah can approve steps and pause or resume a routine, but not edit it.
+The agent runs as a non-root user on a managed Linux VM. That is not a Linux desktop client. Supported clients are macOS, Windows and Linux on desktop, plus iPhone (iOS 18 or later) and Android (9 or later) companion apps; the iOS app also runs on iPad (iPadOS 18 or later). From the phone app Jonah can approve steps and pause or resume a routine, but not edit it.
 
 ## Walk Priya's intern request from Slack into a shared login
 
@@ -63,7 +63,7 @@ Jonah replies: I do not see it in my sidebar. Can you share it.
 
 Priya looks for Share, Invite, a teammate picker. She finds a named card on her account and nothing that would put that card on his. At 09:31 she almost DMs her Cursor password with a note to change it on Friday. That DM would have let Jonah open Research Scout. It would also have put her Gmail session, her /workspace customer notes, and every CLI credential into an intern laptop for fourteen days.
 
-She does not send the password. She copies the charter into a doc, exports three /workspace packs, pastes the [Lead Scout](/bots/lead-scout) listing (the job shape, not a live clone), and asks ops for a Cursor Teams Standard seat for Jonah, forty dollars for the month, confirmed on [Cursor team pricing](https://cursor.com/docs/account/pricing) the morning they pay.
+She does not send the password. She copies the charter into a doc, exports three /workspace packs, pastes the [Lead Scout](/bots/lead-scout) listing (the job shape, not a live clone), and asks ops for a Cursor Teams Standard seat for Jonah for the month, price confirmed on [Cursor team pricing](https://cursor.com/docs/account/pricing) the morning they pay.
 
 | Clock | Move | What Priya believed | What actually moved |
 |---|---|---|---|
@@ -90,7 +90,7 @@ Vague words like access and temporary login hide the inventory. Here is that inv
 | Hosted MCP sign-in tokens | Cursor's backend, not the VM | Not on the disk. Does not rescue a shared password. The browser is still his |
 | Named bot screens | One per bot, not a vault | He can click Research Scout. He can also click Inbox Triage |
 
-Deleting Research Scout after Jonah leaves does not empty that table. Deleting a bot does not remove shared-computer files or sessions. Isolation is deleting the user account. Priya cannot un-share a password by renaming a bot. There is no audit view of Bot actions yet. Twenty run records per routine are a sliding window on one bot, not a company ledger.
+Deleting Research Scout after Jonah leaves does not empty that table. Deleting a bot does not remove shared-computer files or sessions. Isolation is deleting the user account. Priya cannot un-share a password by renaming a bot. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Twenty run records per routine are a sliding window on one bot, not a company ledger.
 
 [Least privilege bots](/blog/least-privilege-bots) is the grant page. [The safety checklist](/blog/grok-bot-safety-checklist) is the first read before any session lands on a machine you might later hand to someone else.
 
@@ -122,13 +122,13 @@ If the listing's boundary cannot survive an intern, do not share the listing. A 
 
 ## Buy Jonah his own seat because Teams never minted a shared research bot
 
-Cursor Teams Standard at forty dollars per user per month includes Grok Bot. That sentence is true, and people hear it as we already paid for a company bot. They paid for a stamp on a person. The invoice page is [Grok Bot on Cursor Teams Standard](/blog/grok-bot-teams-standard). This page is the intern.
+A seat on a self-serve Cursor Teams plan includes Grok Bot for every member. That sentence is true, and people hear it as we already paid for a company bot. They paid for a stamp on a person. The invoice page is [Grok Bot on Cursor Teams Standard](/blog/grok-bot-teams-standard). This page is the intern.
 
 Priya's Research Scout does not appear in Jonah's sidebar when ops adds his seat. His computer is empty. That is isolation working. It is also why just use the research bot is a request the product cannot honor.
 
-Teams Premium at one hundred twenty per user also includes Grok Bot. Same Bot product, still no model picker, no spend cap, no audit view. A share link exists, and it copies configuration rather than access. Privacy Mode (Legacy) blocks Grok Bot entirely. Confirm his account screen, not a Slack screenshot.
+A Teams Premium seat also includes Grok Bot, though no member needs one for access. Same Bot product, still no model picker, no per-Bot spend cap, no audit view outside Enterprise. A share link exists, and it copies configuration rather than access. Privacy Mode (Legacy) blocks Grok Bot entirely. Confirm his account screen, not a Slack screenshot.
 
-If Jonah is sampling for two weeks, the one-time trial may be the door ([the Grok Bot free trial](/blog/grok-bot-free-trial)). Do not put him on Priya's login to skip procurement. Hobby and Pro at twenty do not include Grok Bot. Pro+ at sixty does. SuperGrok at thirty does not. SuperGrok Plus at one hundred does. SuperGrok Heavy is eligible; this page will not print a dollar figure for it. Confirm [cursor.com/pricing](https://cursor.com/pricing) the morning you buy.
+If Jonah is sampling for two weeks, the one-time trial may be the door ([the Grok Bot free trial](/blog/grok-bot-free-trial)). Do not put him on Priya's login to skip procurement. Hobby does not include Grok Bot. Every paid Cursor plan does, from Pro at twenty. An individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead; this page will not print SuperGrok prices. Confirm [cursor.com/pricing](https://cursor.com/pricing) the morning you buy.
 
 ## Recreate the research bot on the intern's own eligible computer
 
@@ -150,7 +150,7 @@ When the internship ends, delete Jonah's user account (confirm current Cursor of
 
 The strongest case against this page is not a missing feature request. It is trust. Jonah signed an NDA. He sits ten feet away. He will be gone in two weeks. Changing the password on Friday is the plan. Calling that sharing the computer is pedantry. The research bot already exists. Procurement for a seat takes longer than the internship. Hand him the login.
 
-Grant the NDA. Grant that Jonah is not an attacker. The inventory does not care. Cookies, sessions, files, and CLI credentials are still on the computer. Inbox Triage's Gmail session is still there. There is still no audit view. A password change on Friday does not rewind what he copied on Tuesday, and it does not tell you what he ran.
+Grant the NDA. Grant that Jonah is not an attacker. The inventory does not care. Cookies, sessions, files, and CLI credentials are still on the computer. Inbox Triage's Gmail session is still there. Outside Enterprise there is still no audit view. A password change on Friday does not rewind what he copied on Tuesday, and it does not tell you what he ran.
 
 Sitting at Priya's desk while she stays logged in is the same computer. Watching him does not split the home directory. Completing a 2FA prompt so he can finish a brief is how a customer console lands on a machine an intern can later open from his house, if the password also moved.
 
@@ -192,10 +192,10 @@ These checks can come back false. If they do, you did not share a job. You share
 | Jonah's sidebar shows a Research Scout he created, and Priya's sidebar still shows hers | Two computers, two names | He is looking at her laptop, or he is logged in as her |
 | Jonah cannot open Priya's Gmail, Notion, or staging site from his bot's browser without his own sign-in | Sessions did not move | A cookie moved, or the password moved |
 | The charter on his bot names Jonah as owner and forbids her password | The isolation line is in the standing instructions | Her name is still on the card he runs |
-| Ops can name the SKU on his account (Teams Standard, Pro+, SuperGrok Plus, trial) | He is eligible without her login | Hobby, Pro at twenty, or SuperGrok at thirty, papered over with her password |
+| Ops can name the SKU on his account (a Teams seat, Pro, Pro+, a linked SuperGrok, trial) | He is eligible without her login | Hobby, or an unlinked SuperGrok, papered over with her password |
 | After the internship, deleting Jonah's user is the offboarding step on the list | Isolation is the account | The list says delete the bot and keep the login for files |
 
-If the [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and this page disagree, the FAQ wins. Dates on this page are 25 to 27 August 2026. There is no Grok Bot-specific spend cap and no model picker. Confirm eligibility on the live invoice the morning you brief the intern.
+If the [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and this page disagree, the FAQ wins. Dates on this page are 25 to 27 August 2026, with plan facts rechecked on 23 September 2026. There is no Grok Bot-specific spend cap, only the account's On-demand monthly limit, and no model picker. Confirm eligibility on the live invoice the morning you brief the intern.
 
 ## Stop treating a listing paste as a live clone of your sessions
 
@@ -219,10 +219,10 @@ Because the link copies the configuration and nothing that makes it run. The cha
 
 ### If we buy the intern a Teams seat, do they inherit my research bot?
 
-No. Cursor Teams Standard at forty dollars per user per month includes Grok Bot as a per-person stamp, checked as of 25 August 2026. Each seat gets its own cloud computer. Named bots on your account do not appear in their sidebar. Teams Premium is the same Bot product on a richer Cursor SKU, still without a share button, a model picker, a spend cap, or an audit view of Bot actions yet. Recreate the bot from the charter on their seat. Confirm live prices on Cursor team pricing the morning you pay.
+No. A seat on a self-serve Cursor Teams plan includes Grok Bot as a per-person stamp, checked on 23 September 2026. Each seat gets its own cloud computer. Named bots on your account do not appear in their sidebar. Teams Premium is the same Bot product on a richer Cursor SKU, still without a share button, a model picker, a per-bot spend cap, or an audit view of Bot actions, which is Enterprise only. Recreate the bot from the charter on their seat. Confirm live prices on Cursor team pricing the morning you pay.
 
 ### Can I stay logged in and let the intern sit at my desk for two weeks?
 
-That is sharing the computer. Watching them does not split the home directory. Cookies, files, sessions, and command-line credentials stay on the one VM assigned to your user. There is no audit view of Bot actions yet, so you will not get a trustworthy log of what ran. Changing the password on Friday does not rewind copies they made on Tuesday. If they only need to read packs, email the files and skip Grok Bot. If they need to run the research job, buy them a seat or a trial and recreate the bot on their account.
+That is sharing the computer. Watching them does not split the home directory. Cookies, files, sessions, and command-line credentials stay on the one VM assigned to your user. There is no audit view of Bot actions outside Enterprise, so you will not get a trustworthy log of what ran. Changing the password on Friday does not rewind copies they made on Tuesday. If they only need to read packs, email the files and skip Grok Bot. If they need to run the research job, buy them a seat or a trial and recreate the bot on their account.
 `,
 };

@@ -225,8 +225,8 @@ the thing they constrain.
 
 The runtime facts make this stricter rather than looser. An approval controls a
 proposed action and does not reverse completed work, so an approval prompt is
-not an undo button for a payment that has left. And there is no audit view of
-bot actions yet, which is exactly the wrong property for the one function in a
+not an undo button for a payment that has left. And there is no audit view of bot actions outside
+Enterprise, which is exactly the wrong property for the one function in a
 company that runs on audit trails. Until there is one, you keep the trail: the
 bot appends findings to a dated file it may never edit, and last month's file is
 immutable.
@@ -245,7 +245,7 @@ remove the shared files or browser sessions it leaves behind.
 
 Read that as a finance person. A signed-in banking session on that machine is
 available to everything on it, not just the bot you had in mind, and with no
-audit view you would reconstruct events by hand afterwards. So the rule is
+audit view outside Enterprise you would reconstruct events by hand afterwards. So the rule is
 absolute: never sign a bot into a bank, a card portal, a payroll system, or a
 tax account. Not with read-only credentials, not "just this once".
 
@@ -421,9 +421,9 @@ Accruals and prepayments. Which period a cost belongs to is judgment about the
 substance of an arrangement. A bot can flag an invoice that spans a period
 boundary. It cannot allocate it.
 
-Audited books. Auditors ask what happened and when. The runtime has no audit
-view of bot actions yet, so your evidence is the immutable dated file and
-nothing else. If that is not enough for your auditor, find out now rather than
+Audited books. Auditors ask what happened and when. Outside Enterprise the
+runtime has no audit view of bot actions, so your evidence is the immutable
+dated file and nothing else. If that is not enough for your auditor, find out now rather than
 in March.
 
 Cash and paper. If a meaningful share of spend never produces a digital receipt,
@@ -474,8 +474,8 @@ match count falls proportionally rather than holding up.
 No. Every bot on the account shares one persistent cloud computer, and browser
 cookies, signed-in sessions, and files are shared across all of them, with the
 documentation stating plainly that separate bots are not a security boundary and
-that deleting a bot does not remove its sessions. There is also no audit view of
-bot actions yet. Export the statements yourself and let the bot read files
+that deleting a bot does not remove its sessions. There is also no audit view of bot actions outside
+Enterprise. Export the statements yourself and let the bot read files
 instead. If a bank challenges the bot with a step-up prompt, the correct
 behaviour is to stop, not to route around it.
 `,

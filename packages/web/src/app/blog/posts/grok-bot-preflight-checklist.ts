@@ -19,11 +19,11 @@ Open Grok Bot after the sheet has four filled blocks: identity, read, never-send
 
 If you cannot fill a block without hedging, that block is a fail. "Sort the inbox" is not identity. "Be careful with customers" is not a never-send list. "I will notice if something is weird" is not a failure signal. The sheet is allowed to stop you.
 
-Do this on a Mac or a Windows machine, even if you also use the iPhone app. On iPhone (iOS 18+) you can pause and resume. Editing, history, testing, and deleting need desktop. Connecting mail from the couch is how you skip the sheet. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM in the cloud. That is not a Linux desktop app.
+Do this on a Mac, Windows or Linux desktop, even if you also use the iPhone app. On iPhone (iOS 18+) you can pause and resume. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Connecting mail from the couch is how you skip the sheet. Android phones and iPads run the companion app with the same limits. The agent runs on a managed Linux VM in the cloud, which is separate from the Linux desktop app.
 
 If you are on the one-time trial widened on 21 August 2026, stop earlier. [How to test Grok Bot on the trial](/blog/how-to-test-a-grok-bot-on-trial) is explicit: do not add Gmail to spend the sample. A mailbox crawl plus a leftover cookie is a tour, not a measurement.
 
-Eligibility is not permission to connect hello@. SuperGrok Plus, SuperGrok Heavy, Cursor Pro+ ($60/mo), Cursor Ultra, and Cursor Teams Standard ($40/user/mo) and Premium ($120/user/mo) include Grok Bot, plus that trial. Cursor Hobby, Cursor Pro at $20, and SuperGrok at $30 still do not. Confirm the current list on the vendor page that morning.
+Eligibility is not permission to connect hello@. Every paid Cursor plan (Pro at $20/mo, Pro+ at $60/mo, Ultra at $200/mo) and every member of a self-serve Cursor Teams plan include Grok Bot, an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked, and there is that trial. Cursor Hobby and SuperGrok Lite still do not include it. Confirm the current list on the vendor page that morning.
 
 ## Record whose inbox this is, including everyone who shares the password
 
@@ -118,7 +118,7 @@ All bots on a Grok Bot account share one persistent cloud computer assigned to y
 
 Write this sentence on the sheet, in ink, before you connect: "A Gmail cookie on this computer is a company login for every bot on the account." [Shared-computer security](/blog/grok-bot-shared-computer-security) is the longer version. [How to delete a Grok Bot without leaving logins behind](/blog/delete-a-grok-bot-safely) is the teardown: revoke at Google first, remove leftover files, then delete the profile. Delete is a roster cut, not a machine wipe.
 
-There is no audit view of Bot actions yet. Your paper failure signal is the record. Do not "just check Gmail in the shared browser" during a trial. A session is a session.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Your paper failure signal is the record. Do not "just check Gmail in the shared browser" during a trial. A session is a session.
 
 If another bot already has a Google session, you are not starting from zero. List those bots on the sheet. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) that already reads a calendar through Google is already on the cookie jar you are about to deepen.
 
@@ -154,7 +154,7 @@ Print this table. Tick Pass or Fail in ink. A line without evidence is a Fail ev
 | 14 | Google third-party access URL written so revoke does not depend on memory | | | |
 | 15 | Connect will happen on desktop, not as an iPhone-only change | | | |
 
-Pass on all fifteen is the only Pass that counts. Fourteen and a shrug on the cookie line is a Fail. If line 9 fails, stop. If line 12 says trial, Connect is still forbidden. Keep the dated sheet. There is no audit view to replace it.
+Pass on all fifteen is the only Pass that counts. Fourteen and a shrug on the cookie line is a Fail. If line 9 fails, stop. If line 12 says trial, Connect is still forbidden. Keep the dated sheet. There is no audit view outside Enterprise to replace it.
 
 ## Spot the four ways a Monday pass expires before Friday
 
@@ -178,9 +178,9 @@ That objection wins if the bot's job is sending, and you should not give a day-o
 
 The objection also assumes hello@ is a clean queue. It is quotes plus payroll plus Tomas's threads plus the journalist who mailed the website. A bot that can see all of that will mix them.
 
-If Nadine's only hour is on iPhone, wait for the laptop. She cannot edit, inspect history, test, or delete properly from the phone. The quotes will still be in hello@ in the morning. They will not be in a cookie jar they cannot leave.
+If Nadine's only hour is on iPhone, wait for the laptop. She cannot edit or test from the phone, and the sheet needs a desk. The quotes will still be in hello@ in the morning. They will not be in a cookie jar they cannot leave.
 
-If the business cannot exist for a week without automated send from hello@, Grok Bot is the wrong first control. Hire a person, or keep sending yourself. One shared computer, no published spend cap, no model picker, and no audit view is a poor place for the company's voice on day one. Beta launched 11 August 2026. Eligibility widened 21 August 2026. The product is new. Your hello@ is not.
+If the business cannot exist for a week without automated send from hello@, Grok Bot is the wrong first control. Hire a person, or keep sending yourself. One shared computer, no per-bot spend cap, no model picker, and no audit view outside Enterprise is a poor place for the company's voice on day one. Beta launched 11 August 2026. Eligibility widened 21 August 2026. The product is new. Your hello@ is not.
 
 ## Refuse this checklist when the mailbox belongs to a client
 
@@ -190,7 +190,7 @@ Agency setups need a dedicated Grok Bot account, or no Gmail on Grok Bot, with e
 
 Refuse the checklist as a substitute for counsel. If hello@ is under litigation hold, labeling is still processing mailbox content.
 
-Refuse it when you only have iPhone, Linux desktop, Android, or iPad for the connect step. Pause and resume is not pre-flight. The managed Linux VM is not a desktop app.
+Refuse it when you only have an iPhone, an Android phone, or an iPad for the connect step. Pause and resume is not pre-flight. A Linux desktop is fine now; the managed Linux VM is still not a desktop app.
 
 Refuse it when you wanted Grok Build reading SKILL.md or CLAUDE.md. Grok Bot docs do not describe reading those files.
 

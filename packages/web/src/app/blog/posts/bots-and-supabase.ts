@@ -296,7 +296,7 @@ of those attribute the bot's traffic to the bot rather than to a generic pooler
 connection.
 
 The gap is real and worth stating rather than papering over. Combine it with the
-fact that an audit view of bot actions does not exist in the product as of
+fact that an audit view of bot actions does not exist outside Enterprise in the product as of
 writing, and the honest position is that you will know what the bot was allowed
 to read and rarely know precisely what it did read. That is another argument for
 the grant list being narrow: it is the only thing you can actually reason about

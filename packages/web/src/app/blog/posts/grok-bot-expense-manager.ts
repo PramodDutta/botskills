@@ -44,7 +44,7 @@ An approval in Grok Bot is a gate in front of the next click. It does not revers
 
 Put the list in the charter the routine loads, not in a Tuesday thread. Teach-by-demonstration records up to ten minutes of a browser workflow, no microphone, desktop only, and produces a draft skill. Unavailable on iPhone. A click path that ends on Submit is a draft skill that pays. Do not teach this job by demonstrating a live payment.
 
-There is no audit view of Bot actions yet. The packet is the record. If it does not say READY, DUP, or HOLD on every file, you have a story, not a control.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. The packet is the record. If it does not say READY, DUP, or HOLD on every file, you have a story, not a control.
 
 ## Treat a bank 2FA wall as a shared-computer incident you must unwind
 
@@ -104,7 +104,7 @@ Write the memo rule as a test. Example: any Meals row at or above 75.00 needs a 
 
 Lenora runs operations at Pressmark, an eleven-person packaging studio. The company card is in her name. On 26 August 2026 she dumps forty files into \`/workspace/expense-manager/2026-08/receipts/\` as r01 through r40: phone photos, Drive scans, vendor PDFs. She adds \`policy.md\` with five category names and the 75.00 meals memo rule. She does not connect the bank. She drops a card CSV she downloaded at her desk.
 
-Wednesday 07:15 the routine runs. A routine belongs to one bot. Nothing is team-level. She is on a train with iPhone (iOS 18+), so she can pause. Editing, history, testing, and deleting need desktop. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM, which is not a Linux desktop app.
+Wednesday 07:15 the routine runs. A routine belongs to one bot. Nothing is team-level. She is on a train with iPhone (iOS 18+), so she can pause. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. The desktop app runs on macOS, Windows and Linux; the phone app runs on iPhone, Android and, through the iOS app, iPad. The agent runs on a managed Linux VM, which is not a Linux desktop app.
 
 Wednesday 08:40 at a desk she opens \`packet.md\`. Forty blocks, filename order. 40 in, 40 out. Three DUP. One HOLD. Thirty-six READY.
 
@@ -234,7 +234,7 @@ Before you trust a weekday routine, copy the August folder to a test path. Add t
 
 If the duplicate plant comes back READY, the identity rule is decoration. Stop the routine. If the memo plant comes back with a purpose the file did not contain, that is an unsourced claim. If the pay lure is obeyed, the verb freeze is not in the charter the routine loaded.
 
-Attack ten READY rows: open the file, check amount to the cent, check the memo quote is findable in the source. Search the packet so each IDENTITY appears once among READY rows. DUP may repeat the ID. READY may not. There is no audit view to fall back on. The test lives in \`packet.md\` and \`run-log.md\`.
+Attack ten READY rows: open the file, check amount to the cent, check the memo quote is findable in the source. Search the packet so each IDENTITY appears once among READY rows. DUP may repeat the ID. READY may not. There is no audit view outside Enterprise to fall back on. The test lives in \`packet.md\` and \`run-log.md\`.
 
 [Least privilege](/blog/least-privilege-bots) applies here the same way it applies to mail. If the expense tool offers a pay-vendor or reimburse scope, do not grant it. Confirm in the live app.
 
@@ -264,7 +264,7 @@ Multiple entities or multiple cards need identity scoped per entity. A receipt t
 
 Tax treatment is not a category name in policy.md. A READY meals row can still be wrong for VAT. A person who knows the rule reviews that.
 
-If someone needs a payment released the same morning, they need a human on a bank the roster cannot see. Put that bank off this computer. There is no Grok Bot-specific spend cap. Weekly allowance then on-demand from model and token cost. Never invent a dollar figure for that allowance. See [Grok Bot cost](/blog/grok-bot-cost) for the token side.
+If someone needs a payment released the same morning, they need a human on a bank the roster cannot see. Put that bank off this computer. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance then on-demand from model and token cost. Never invent a dollar figure for that allowance. See [Grok Bot cost](/blog/grok-bot-cost) for the token side.
 
 **Keep reading:** [How to Build a Grok Bot That Can Reconcile Expenses](/blog/grok-bot-to-expense-reconciliation), [Grok Bot Hit a 2FA Prompt: What You Should Type, and What You Should Not](/blog/grok-bot-2fa-prompt), [Make a Grok Bot Show Its Work on Every Claim](/blog/grok-bot-evidence-rules).
 

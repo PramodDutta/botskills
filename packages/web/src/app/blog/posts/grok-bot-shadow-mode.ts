@@ -21,7 +21,7 @@ Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 20
 
 Four moves, always in this order. Same inputs: the pile you already worked, not a cleaned demo mailbox. Dated pack: a file with the date in the name, or Gmail drafts plus a score sheet you own. Chat is not the pack. Human score: MATCH, MISS-TONE, MISS-FACT, or WOULD-HARM against the action you would have taken. Fluency is not a label. Only then a routine. A routine assigns a workflow to one bot (max 50 per bot, 20 recent run records kept). Deleting the bot deletes the routines. Hang that on a scored week, not on a pretty Monday.
 
-Teach-by-demonstration is a different feature: up to ten minutes of a browser workflow, no microphone, desktop only, a draft skill. That recording is not a scored week. There is still no audit view of Bot actions. If you do not write the score, the week did not happen.
+Teach-by-demonstration is a different feature: up to ten minutes of a browser workflow, no microphone, desktop only, a draft skill. That recording is not a scored week. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. If you do not write the score, the week did not happen.
 
 ## Feed the bot the same morning pile you already handled yourself
 
@@ -37,7 +37,7 @@ A run that ends in a chat bubble is a demo. A run that ends in 2026-09-01-inbox-
 
 Put the score sheet in a document you own, not on the Agent Computer. Every bot on the account shares one persistent cloud computer assigned to the user, not to a bot. Each bot gets a screen. Screens are not security boundaries. A score sheet in /workspace is readable by every other bot. [Shared computer security](/blog/grok-bot-shared-computer-security) is the mechanism. Keep the grades off that disk.
 
-If the job is not mail, the pack still needs a date. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) shadows a brief against the three things you actually protected before noon. [Mail Cleanup Assistant](/bots/mail-cleanup-assistant) shadows an unsubscribe list against the list you would have approved. Score on macOS or Windows. On iPhone (iOS 18+) you can pause and resume. Editing, history, testing, and deleting need desktop. Linux desktop, Android, and iPad have no Grok Bot client. The agent runs on a managed Linux VM, which is not a Linux desktop app.
+If the job is not mail, the pack still needs a date. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) shadows a brief against the three things you actually protected before noon. [Mail Cleanup Assistant](/bots/mail-cleanup-assistant) shadows an unsubscribe list against the list you would have approved. Score at a desktop. On iPhone (iOS 18+) you can pause and resume. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. The desktop app runs on macOS, Windows and Linux; the phone app runs on iPhone, Android and, through the iOS app, iPad. The agent runs on a managed Linux VM, which is not a Linux desktop app.
 
 ## Score each pack against your intended action, recorded before you peek
 
@@ -93,7 +93,7 @@ Wednesday is worse. The customer asked for a status. The bot offered money. Neve
 
 Week two is the same rubric on a new pile with the new charter. Five more weekday mornings. Intended replies first. Sent checked. Same four labels. Pass on this job: zero MISS-FACT, zero WOULD-HARM, at most one MISS-TONE. Leah's week two: four MATCH mornings, one Friday MISS-TONE on a procurement thread she would have split. No invented dates. No invented money. That is the number that may justify a draft-only routine.
 
-If week two is as noisy as week one, do not schedule. Go back to [picking the first job](/blog/pick-the-first-grok-bot-job) if ordinary customer mail is WOULD-HARM. Go back to the miss quotes if the same fact error returned. Do not average the two weeks. A clean week two does not erase Wednesday's refund. It shows the refund rule held. Keep both sheets. There is no audit view. Deleting the bot will not keep them, and it will not wipe the Gmail session.
+If week two is as noisy as week one, do not schedule. Go back to [picking the first job](/blog/pick-the-first-grok-bot-job) if ordinary customer mail is WOULD-HARM. Go back to the miss quotes if the same fact error returned. Do not average the two weeks. A clean week two does not erase Wednesday's refund. It shows the refund rule held. Keep both sheets. Outside Enterprise there is no audit view. Deleting the bot will not keep them, and it will not wipe the Gmail session.
 
 [Grok Bot scheduling](/blog/grok-bot-scheduling) is how a routine fires. Read it after the scoreboard is quiet. A 07:30 job on a charter that still invents refunds is a scheduled miss.
 
@@ -166,7 +166,7 @@ Paste this after the pre-flight sheet, not instead of it. [Grok Bot and Gmail](/
 
 The strongest objection is not that the method is unclear. It is that the method spends five mornings a human already spends on mail. Priya, Leah's cofounder, puts it in Slack on Tuesday: we paid for a bot so mornings get shorter, and you are doing the mail twice.
 
-She is right about the cost. She is wrong about when it pays back. A MATCH week-two morning is shorter: Leah still skims, but she is not composing from zero. A WOULD-HARM draft that had been a routine send is a customer conversation and a refund she did not intend. There is no Grok Bot-specific spend cap. There is no product feature that unsends. The expensive object is the sentence that left, not the token line.
+She is right about the cost. She is wrong about when it pays back. A MATCH week-two morning is shorter: Leah still skims, but she is not composing from zero. A WOULD-HARM draft that had been a routine send is a customer conversation and a refund she did not intend. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. There is no product feature that unsends. The expensive object is the sentence that left, not the token line.
 
 Watching one run is not the week. One run is the demo Priya liked on Monday at 7:12, when five of six drafts matched and the sixth (Friday's ship date) had not been scored. The Wednesday refund had not happened. A cofounder who saw the pretty pile will vote to schedule. The scoreboard is how Leah votes with evidence. If after two weeks the miss rate is still high, Priya wins in a different way: this job should not be automated yet. That is a successful shadow week. You learned not to schedule. You did not learn it from a customer. Skip the intended-reply note and the week is ceremony. Write three intended actions first, every morning, or stop claiming you are in shadow mode.
 
@@ -212,6 +212,6 @@ Create a draft-only routine after a second week on the same rubric beats the fir
 
 ### Can I score grok bot shadow mode from my iPhone while I travel?
 
-You can pause and resume a run on iPhone with iOS 18 or later. Editing, history, testing, and deleting still need a desktop client on macOS or Windows. Scoring a dated pack means opening drafts, comparing them to the replies you wrote down first, and marking MATCH or miss on a sheet you own. Do that on a computer you can inspect. Linux desktop, Android, and iPad have no Grok Bot client. Travel is a reason to pause the week, not a reason to promote a routine from a phone because the lock screen looked fine.
+You can pause and resume a run on iPhone with iOS 18 or later. Editing and testing a routine still need the desktop app on macOS, Windows or Linux. Scoring a dated pack means opening drafts, comparing them to the replies you wrote down first, and marking MATCH or miss on a sheet you own. Do that on a computer you can inspect. The desktop app runs on macOS, Windows and Linux; the phone app runs on iPhone, Android and, through the iOS app, iPad. Travel is a reason to pause the week, not a reason to promote a routine from a phone because the lock screen looked fine.
 `,
 };

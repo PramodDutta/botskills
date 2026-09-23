@@ -41,7 +41,7 @@ Browser cookies, signed-in sessions, files, and command-line credentials are com
 
 xAI describes bots messaging each other in group chats. Treat that as a product claim from xAI marketing, not as a documented security model, and not as proof that two bots can keep secrets from each other. If they can message, they still sit on the same computer. A group chat is not a wall.
 
-Platforms are narrower than opening ChatGPT wherever you already work. Grok Bot supports macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If your working machine is a Linux laptop, this comparison is already over for Grok Bot on that machine.
+Platforms are narrower than opening ChatGPT wherever you already work. Grok Bot supports macOS (Apple silicon and Intel), Windows (x64 and Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). If your working machine is a Linux laptop, the desktop app now installs there as a .deb, .rpm or AppImage.
 
 ## Pick the product by persistence, not by a feature checklist
 
@@ -141,14 +141,14 @@ Look at the bills you can actually document.
 | Path | Grok Bot included? | What to remember |
 |---|---|---|
 | Cursor Hobby | No | Free Cursor does not unlock the bot runtime |
-| Cursor Pro at 20 dollars a month | No | A common mistaken buy |
-| Cursor Pro+ at 60 dollars a month | Yes | Cheapest paid path as of 25 August 2026 |
-| SuperGrok at 30 dollars a month | No | The cheaper SuperGrok tier does not include Grok Bot |
-| SuperGrok Plus at 100 dollars a month | Yes | Listed as including Grok Bot access |
-| SuperGrok Heavy, Cursor Ultra, Cursor Teams Standard and Premium, one-time trial | Eligible | Confirm live prices. Do not trust a viral 300 dollar Heavy figure |
+| Cursor Pro at 20 dollars a month | Yes | Cheapest paid path as of 23 September 2026 |
+| Cursor Pro+ at 60 dollars a month | Yes | More weekly usage than Pro |
+| SuperGrok (individual) | Yes, by linking | Link it from the Grok Bot plan screen; it grants usage and is not a Cursor plan |
+| SuperGrok Plus | Yes, by linking | Same link, more usage than SuperGrok |
+| SuperGrok Heavy, Cursor Ultra, Cursor Teams, one-time trial | Eligible | Confirm live prices. Do not trust a viral 300 dollar Heavy figure |
 | ChatGPT Work | Confirm on OpenAI's pages | Public writeups say some plans include it at a lower entry price than Grok Bot |
 
-Grok Bot's cost shape after you are in is not a flat ceiling. There is no Grok Bot-specific spend cap. You get a weekly allowance, then on-demand billing from model and token cost. There is no model picker, so you cannot throttle spend by picking a cheaper model in the bot surface. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage.
+Grok Bot's cost shape after you are in is not a flat ceiling. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. You get a weekly allowance, then on-demand billing from model and token cost. There is no model picker, so you cannot throttle spend by picking a cheaper model in the bot surface. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage.
 
 ChatGPT Work may be the cheaper door. Public writeups say so. Confirm the plan that actually includes it the day you subscribe. A lower entry price is a good reason to run one-off packs on Work. It is a bad reason to staff a standing mailbox on a task surface because ChatGPT was already there. Model Grok Bot as 60 dollars (or 100, or a Team seat) plus overflow you cannot cap. For the arithmetic, see [Grok Bot Cost](/blog/grok-bot-cost).
 
@@ -176,12 +176,12 @@ When the week goes wrong, name the surface before you rewrite the prompt.
 | Two Grok bots used the same mailbox cookies | Shared computer, by design | Treat the account as one security domain. Split accounts if you need a wall |
 | You deleted a bot and the vendor portal is still signed in | Deletion does not wipe files or sessions | Rotate the session yourself |
 | A Work pack you cannot restaff as a role next month | You used a task surface for a standing job | Put the job on a named bot, or accept a new Work job each time |
-| Grok Bot never appeared on your Linux laptop | Unsupported platform | Use ChatGPT on that machine, or use a supported OS |
-| On-demand charges after a heavy week | No Grok Bot spend cap | Review usage. Do not wait for a ceiling that does not exist |
+| Grok Bot never appeared on your Linux laptop | The app was never installed; Linux has one since September 2026 | Install the .deb, .rpm or AppImage from x.ai/bot |
+| On-demand charges after a heavy week | No per-Bot spend cap, only the account On-demand monthly limit | Review usage. Set the On-demand monthly limit before a heavy week |
 | The bot mailed a draft you meant to keep | Stop line missing, or send was proposed and approved | Put the verb in WHERE YOU STOP. Approvals do not undo a send |
 | Work stopped because a site needed a login | Confirm Work's current browser and credential rules | If you need a standing signed-in desk, that is Grok Bot's shape |
 
-If your job is "log into the supplier portal every Monday", verify that Work is allowed to do that today. Grok Bot can hold a session on the shared computer. That capability is also the blast radius. An audit view of Grok Bot actions does not exist yet. Routines belong to one bot and die with it. Recover files from the shared computer if they remain.
+If your job is "log into the supplier portal every Monday", verify that Work is allowed to do that today. Grok Bot can hold a session on the shared computer. That capability is also the blast radius. An audit view of Grok Bot actions does not exist outside Enterprise. Routines belong to one bot and die with it. Recover files from the shared computer if they remain.
 
 ## Answer the objection that Work already does the ambitious job
 
@@ -201,7 +201,7 @@ You can keep both. Stop using one object for the other object's job.
 
 Keep ChatGPT Work (once you have confirmed it on your plan) for unfinished work that wants a long run and a file, then wants to end. Packs, teardowns, rebuilds, "make this folder into a sheet". Confirm each job's permissions at the start. Do not leave a standing mailbox connected to a surface you treat as disposable.
 
-Keep Grok Bot for unfinished work that wants a name, a charter, a stop line, and a desk that still has last week's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Remember that every bot shares the computer, that deletion is not cleanup, that overflow is uncapped, and that iPad is not supported (Linux desktop and Android apps shipped in September 2026).
+Keep Grok Bot for unfinished work that wants a name, a charter, a stop line, and a desk that still has last week's file. Staff few bots. Connect few accounts. Write the verb that must never happen. Remember that every bot shares the computer, that deletion is not cleanup, that overflow stops only at the account-level On-demand monthly limit, and that a phone or iPad cannot edit or test a routine (Linux desktop and Android apps shipped in September 2026, and the iOS app also runs on iPad).
 
 Use Tasks, not Work, when the need is a clock and a message. Mixing the three into one "ChatGPT versus Grok" feeling will produce the wrong purchase three times. Pick by persistence. A task surface returns a document. A named bot is still there on Monday, on a shared computer whose blast radius you accepted on purpose.
 
@@ -219,7 +219,7 @@ No. xAI documents that every bot on your account shares one persistent cloud com
 
 ### Is ChatGPT Work cheaper than Grok Bot?
 
-Grok Bot's cheapest paid path is Cursor Pro+ at 60 dollars a month. Cursor Hobby and Cursor Pro at 20 dollars do not include it, and SuperGrok at 30 dollars does not. SuperGrok Plus at 100 dollars does. SuperGrok Heavy, Cursor Ultra, Cursor Teams Standard and Premium, and a one-time trial are also eligibility paths. There is no Grok Bot spend cap: weekly allowance, then on-demand. ChatGPT Work prices belong on OpenAI's pages. Public writeups say some ChatGPT plans include Work at a lower entry price than Grok Bot. Confirm both the day you buy.
+Grok Bot's cheapest paid path is Cursor Pro at 20 dollars a month. Every paid Cursor plan includes Grok Bot, from Cursor Pro at $20; Cursor Hobby, the free plan, does not, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Cursor Ultra, Cursor Teams, and a one-time trial are also eligibility paths. There is no Grok Bot-specific spend cap, only the account-level On-demand monthly limit: weekly allowance, then on-demand. ChatGPT Work prices belong on OpenAI's pages. Public writeups say some ChatGPT plans include Work at a lower entry price than Grok Bot. Confirm both the day you buy.
 
 ### Can I run ChatGPT Work and Grok Bot on the same jobs?
 

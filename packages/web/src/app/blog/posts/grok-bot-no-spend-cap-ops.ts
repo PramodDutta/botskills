@@ -1,13 +1,13 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Operating Without a Spend Cap: A Weekly Review That Can Fail',
+  title: 'Operating Without a Per-Bot Spend Cap: A Weekly Review That Can Fail',
   description:
-    'Grok bot no spend cap means a weekly review of routines, retries, and owners is the only brake. If the review slips, overflow is on-demand billing.',
+    'Grok bot no per-bot spend cap means a weekly review of routines, retries, and owners is your brake. The account On-demand monthly limit only caps the bill.',
   date: '2026-08-27',
   category: 'Guide',
   content: `
-# Operating Without a Spend Cap: A Weekly Review That Can Fail
+# Operating Without a Per-Bot Spend Cap: A Weekly Review That Can Fail
 
 An empty Friday 16:40 on the calendar is not a light week. It is two weeks
 of five-minute inbox fires whose last twenty records will not reconstruct
@@ -20,7 +20,7 @@ meeting.
 
 This page is the recurring Friday ritual. It is not
 [the no-cap policy page](/blog/grok-bot-spend-cap-and-token-burn),
-which writes ceilings into charters because the product has none. It is not
+which writes ceilings into charters because the product has no per-bot one. It is not
 [the emergency stop](/blog/how-to-stop-grok-bot-overspending),
 which pauses every routine this hour and deletes a five-minute poller. It
 is not
@@ -33,38 +33,39 @@ cloud computer assigned to the user, not to a bot
 ([computer and apps](https://docs.x.ai/grok-bot/computer-and-apps)).
 There is no Grok Bot-specific spend cap yet
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
-Eligible plans include a weekly usage allowance. Past that pool, work is
+The account-level On-demand monthly limit caps overflow billing for the
+whole account, not a bot. Eligible plans include a weekly usage allowance. Past that pool, work is
 billed on demand from model and token cost
 ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 No published page prints the allowance as dollars, credits, or runs. This
-page will not invent one. There is still no audit view of Bot actions. The
+page will not invent one. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. The
 Friday sheet is the audit.
 
 ## Treat Friday as the only brake the product will not ship
 
 People hunt a slider labelled spend cap, a dollar figure for the weekly
-pool, and a report that names the hungry bot. None of those controls exist
-as of writing. What you do have is a calendar and a desk.
+pool, and a report that names the hungry bot. None of those exist as of
+writing. The nearest control is the account-level On-demand monthly limit
+in Settings, which caps overflow for the account, not a bot. What you do
+have is a calendar and a desk.
 
 A routine assigns a workflow to one Bot. Max fifty routines per Bot. The
 app keeps the twenty most recent run records per routine. Deleting a Bot
 deletes its routines. Nothing is team-level
 ([skills, routines and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations)).
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting
-need desktop
-([mobile](https://docs.x.ai/grok-bot/mobile)).
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)).
 
 Friday is when you list the routines, name the owners, open the twenty
 records, and pause what nobody used. Miss it twice and a five-minute inbox
 bot has erased the burn. Monday then looks like a product failure. It is
-an unreviewed roster on an account with a grok bot no spend cap design.
+an unreviewed roster on an account with a grok bot no per-Bot spend cap design.
 
 Closing the laptop does not pause anything. Sleep is not a review. Hide is
 not a pause. A second bot is not a second budget. Screens are not security
 boundaries. Cookies, sessions, files, and CLI credentials are shared.
 Deleting a bot does not remove shared-computer files or sessions. The
 computer is a managed Linux VM. The Bot runs as a non-root user. That is
-not a Linux desktop client. There are Linux desktop and Android apps as of September 2026; iPad is still not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
+not a Linux desktop client. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later) ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 
 Put Friday 16:40 on a desktop, in the timezone the briefing
 already uses.
@@ -77,7 +78,7 @@ fire.
 | Page | You are here when | You do | You do not |
 |---|---|---|---|
 | This Friday ritual | The pool still has room, the calendar says 16:40 | List routines, name owners, read the last 20, pause unused | Pause every bot. Rewrite every charter. Delete in a panic |
-| [No spend cap policy](/blog/grok-bot-spend-cap-and-token-burn) | You are writing or tightening a bot | Put retry limits and run budgets in the charter | Pretend a Friday invite is a ceiling the product will enforce |
+| [Monthly limit and charter policy](/blog/grok-bot-spend-cap-and-token-burn) | You are writing or tightening a bot | Set the On-demand monthly limit, put retry limits and run budgets in the charter | Pretend a Friday invite is a ceiling the product will enforce |
 | [Emergency stop](/blog/how-to-stop-grok-bot-overspending) | The pool is empty this hour | Pause every routine, list 50-cap owners, delete the five-minute poller | Hold a review meeting while the poller still fires |
 | [Overnight runbook](/blog/grok-bot-runbook) | Breakfast is empty and a pack is missing | Heartbeat, pause, inspect /workspace, resume from a checkpoint | Diagnose spend from a missing Slack message |
 
@@ -104,7 +105,7 @@ ticket, not coarsen later.
 |---|---|---|---|
 | Router map | Every bot card and every routine is a written row, with the per-bot count | "We have a few." A card from July is missing | Open each card at a desk. Write the count. Max 50 per bot |
 | Named owner | First name, last name, backup named | Owner is ops, a channel, or a role | Pause that routine until a person is written |
-| Last 20 | History opened on desktop for every live routine, retry count written | You are on iPhone. You skipped a quiet bot | Do not leave. History is a desk job |
+| Last 20 | Run history opened for every live routine, retry count written | You skipped a quiet bot | Do not leave until every live routine is read |
 | Unused paused | Any clock whose output nobody opened this week is paused | Hidden in the sidebar, still scheduled | Pause. Hide is not pause |
 | Tight clocks | No mail job tighter than twice a weekday | Five-minute inbox still live | Pause it. Coarsen is a later create, not this fail |
 | Retry jump | Retry count is flat or down from last Friday | One became many | Pause. A login or a page likely broke. Do not retry from chat |
@@ -138,8 +139,8 @@ wording first at a desk. Deleting does not sign out Gmail or remove files
 on the shared computer. Friday records the owner. Session cleanup is
 [shared computer security](/blog/grok-bot-shared-computer-security).
 
-iPhone cannot give you this list from history. Memory on a train is not
-the map. Pause clocks you already distrust, then finish the written list
+The phone app can show each routine's schedule and run history, but
+memory on a train is not the map. Pause clocks you already distrust, then finish the written list
 at a desk. Pause from the phone is allowed. Declaring pass from the phone
 is not.
 
@@ -162,8 +163,9 @@ can fill the twenty slots with one bad evening. You are looking for a
 retry pile, a streak of failures, a run that never wrote the file it
 claimed, or a clock that fired while nobody was in the building.
 
-You cannot do this on iPhone. History needs desktop. If the only device
-in your bag is a phone, you can pause. You cannot pass assertion 3.
+The phone app can open run history now. It cannot edit or test the
+routine you find there. If the only device in your bag is a phone, read
+and pause, then write the sheet at a desk before assertion 3 passes.
 
 These twenty rows plus your sheet are the whole picture.
 [Scheduling](/blog/grok-bot-scheduling) attaches clocks.
@@ -211,7 +213,7 @@ Missing owner. If you cannot say who pauses
 A hiring freeze or a week of travel is how a named person stops being a
 named person without anyone editing the routine.
 
-Five-minute loop. Inbox work on five minutes is how a grok bot no spend
+Five-minute loop. Inbox work on five minutes is how a grok bot no per-Bot spend
 cap week ends early. If history still shows a five-minute mail job, fail.
 Pause it. Do not coarsen in the same sitting unless you are at a desk,
 you have copied the wording, and you will disable the five-minute original
@@ -251,7 +253,7 @@ window with about the last hundred minutes, not the fortnight. Briefing
 and standup still arrive, so those two feel healthy.
 
 Friday 15 August 16:40 is an offsite. Two skipped Fridays. The last twenty
-inbox records cannot tell Maya which night burned. There is no audit view.
+inbox records cannot tell Maya which night burned. Outside Enterprise there is no audit view.
 This page will not invent a pool size. The pool can still empty.
 
 Monday 18 August 07:00 the briefing does not write. Quota language is on
@@ -281,7 +283,7 @@ this into a file you own, not into a bot that will "keep an eye on spend."
 FRIDAY REVIEW (this is a test, it is allowed to fail)
 Date:
 Operator (first and last name):
-Desk: Mac or Windows. iPhone is pause only, never pass.
+Desk: Mac, Windows or Linux. The phone reads history and pauses, never passes.
 
 ASSERT 1 ROUTER MAP
 Every bot card listed. Every routine on that card listed.
@@ -321,7 +323,7 @@ Pause that clock before you leave the desk.
 Write FAIL, assertion number, bot name, routine name, time.
 Do not resume from the phone this weekend.
 Do not invent a dollar figure for the weekly pool.
-There is no Grok Bot-specific spend cap. You are the brake.
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. You are the brake.
 \`\`\`
 
 Change the operator name. Do not change the six assertions. If last week's
@@ -360,7 +362,7 @@ when something breaks.
 
 That argument describes the two weeks before Maya's Monday. Quiet is what
 a five-minute inbox looks like from the briefing card, and what a grok
-bot no spend cap account looks like while the unpublished pool still has
+bot no per-Bot spend cap account looks like while the unpublished pool still has
 room. Waiting for the banner is how you skip the only brake.
 
 A one-bot roster with a weekday clock and a named owner can pass in four
@@ -369,7 +371,7 @@ minutes. Pass still requires the four minutes, at a desk, with history.
 You notice [Standup Scribe](/bots/standup-scribe) when it is blank. You
 do not notice [Lead Scout](/bots/lead-scout) when Jules stopped reading
 it in July. You do not notice the inbox window shrinking to a hundred
-minutes. There is no audit view to email you which bot spent the week.
+minutes. There is no audit view outside Enterprise to email you which bot spent the week.
 
 If you are at the desk watching a single research sweep, you are the
 ceiling. That sweep is not a routine. If you converted it into a nightly
@@ -377,7 +379,7 @@ clock so it could finish without you, Friday owns it.
 
 A bot that reviews the other bots spends the pool, cannot see other
 screens as isolation, and cannot pause what you will not pause. The
-product gave you no cap, no allowance figure, and no audit view. The time
+product gave you no per-bot cap, no allowance figure, and no audit view outside Enterprise. The time
 is the control.
 
 ## Leave incidents, overflow decisions, and charter rewrites off the ritual
@@ -389,11 +391,13 @@ and use the runbook for the missed pack. Daily clocks on
 will still fire unless you pause them. Review the surviving roster on the
 next real Friday.
 
-Overflow. Eligible subscriptions include SuperGrok Plus, SuperGrok Heavy,
-Cursor Pro+, Cursor Ultra, and Cursor Teams Standard and Premium, plus a
-one-time trial. Confirm the current list on the vendor pages. No plan
-buys you a Bot-specific spend cap. If you choose on-demand work, write
-that you chose it, with a named window, at a desk.
+Overflow. Eligible subscriptions include every paid Cursor plan (Pro,
+Pro+, Ultra), Cursor Teams, and a linked individual SuperGrok, SuperGrok
+Plus, SuperGrok Heavy or X Premium+ subscription, plus a one-time trial.
+Confirm the current list on the vendor pages. No plan buys you a
+Bot-specific spend cap. If you choose on-demand work, set the On-demand
+monthly limit first, then write that you chose it, with a named window,
+at a desk.
 [What Grok Bot costs](/blog/grok-bot-cost) is shape, not a dollar figure
 for the weekly pool.
 
@@ -408,9 +412,9 @@ a figure. [The trial page](/blog/grok-bot-free-trial) is the right place.
 Pause still applies. Overflow assumptions do not.
 
 Platforms do not refill the week. Linux desktop, Android, and iPad are
-not clients
+clients now, and every client draws on the same account pool
 ([supported platforms](/blog/grok-bot-supported-platforms)).
-Do not plan Friday on a device that cannot open history.
+Plan Friday on a desktop, the only client that can edit or test a routine.
 
 ## Name the weeks a Friday review cannot see the bill
 
@@ -439,7 +443,7 @@ August 2026). Neither added a Bot-specific spend cap.
 
 ## Make a failed Friday the hard stop you own before you leave the desk
 
-In an environment with a grok bot no spend cap design, the boundary is
+In an environment with a grok bot no per-Bot spend cap design, the boundary is
 not a dollar. You never leave 16:40 with a failed assertion and a live
 clock.
 
@@ -455,15 +459,15 @@ pack. Those lines do not pause unused clocks. You do.
 
 If the sheet says FAIL, pause, write the row, leave the desk. Next Friday
 compares retries to this sheet. Weekly test, six assertions, pause on
-red. No spend cap is coming to save the skipped slot.
+red. No per-Bot spend cap is coming to save the skipped slot.
 
-**Keep reading:** [No Spend Cap: How To Keep a Grok Bot Roster From Running Away](/blog/grok-bot-spend-cap-and-token-burn), [How to Stop a Grok Bot Roster From Burning the Weekly Pool](/blog/how-to-stop-grok-bot-overspending), [Write a Runbook for a Grok Bot That Fails Overnight](/blog/grok-bot-runbook).
+**Keep reading:** [Grok Bot Spend Cap: Set the Monthly Limit, Then Budget in the Charter](/blog/grok-bot-spend-cap-and-token-burn), [How to Stop a Grok Bot Roster From Burning the Weekly Pool](/blog/how-to-stop-grok-bot-overspending), [Write a Runbook for a Grok Bot That Fails Overnight](/blog/grok-bot-runbook).
 
 ## Frequently Asked Questions
 
-### Why is a weekly review the only brake if Grok Bot has no spend cap?
+### Why is a weekly review the only brake if Grok Bot has no per-Bot spend cap?
 
-The product has no Grok Bot-specific spend cap. Eligible plans include a weekly usage allowance, then on-demand billing from model and token cost. The size of that allowance is not published as dollars, credits, or runs. There is no audit view of Bot actions. iPhone cannot show history. The twenty most recent run records per routine are the only in-product window. A Friday review that lists routines, names owners, reads those twenty rows, and pauses unused clocks is the brake you own. If the review slips, overflow is a decision you did not make.
+The product has no Grok Bot-specific spend cap; the account-level On-demand monthly limit caps overflow billing, not a bot. Eligible plans include a weekly usage allowance, then on-demand billing from model and token cost. The size of that allowance is not published as dollars, credits, or runs. There is no audit view of Bot actions outside Enterprise. The twenty most recent run records per routine are the only in-product window. A Friday review that lists routines, names owners, reads those twenty rows, and pauses unused clocks is the brake you own. If the review slips, overflow is a decision you did not make.
 
 ### What happens if I skip the Friday review for two weeks?
 
@@ -471,10 +475,10 @@ A five-minute inbox routine can fire through both weeks while you are away. The 
 
 ### Can I complete the Friday review from an iPhone?
 
-No. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need a desktop. The last twenty records are the evidence window, and you cannot open them on the phone. You can pause a clock you already know is unused, and you should if Friday finds you on a train. That pause is not the review. The review is the owner list plus the history pass plus the fail-and-pause decision, written on a sheet. Resume from the phone is how a paused unused bot returns before Monday.
+Not the whole of it. From the phone app (iPhone or Android) you can approve steps, pause or resume a routine, read its run history, and delete it, but not edit or test it. You can read the last twenty records and pause a clock you already know is unused, and you should if Friday finds you on a train. That pause is not the review. The review is the owner list plus the history pass plus the fail-and-pause decision, written on a sheet. Resume from the phone is how a paused unused bot returns before Monday.
 
 ### How is this Friday ritual different from the emergency stop and the policy page?
 
-The policy page writes ceilings into charters because the product has none. The emergency page pauses every routine this hour, lists fifty-cap owners, and deletes a five-minute poller. This page is the recurring Friday that should make the emergency rare. You list live routines, named owners, and the last twenty records, then pause unused clocks. You do not rewrite charters during the slot. You do not delete in a panic. A failed assertion pauses one clock before you leave the desk. Two skipped Fridays is how you end up on the emergency page on Monday.
+The policy page writes ceilings into charters because the product has no per-bot one. The emergency page pauses every routine this hour, lists fifty-cap owners, and deletes a five-minute poller. This page is the recurring Friday that should make the emergency rare. You list live routines, named owners, and the last twenty records, then pause unused clocks. You do not rewrite charters during the slot. You do not delete in a panic. A failed assertion pauses one clock before you leave the desk. Two skipped Fridays is how you end up on the emergency page on Monday.
 `,
 };

@@ -22,7 +22,7 @@ someone required it in the charter on day one.
 ## Your evidence window is shorter than you think
 
 Start from what the runtime actually keeps, because the design follows from
-it. As of writing, an audit view of Bot actions does not exist yet in Grok Bot
+it. As of writing, an audit view of Bot actions does not exist outside Enterprise in Grok Bot
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)),
 and a routine keeps only the 20 most recent run records
 ([skills, routines and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations)).
@@ -41,7 +41,7 @@ ask after something goes wrong, and then ask where each answer lives.
 | What did it change? | Nowhere, unless the bot wrote it down | Zero, by default |
 | Why did it decide that? | Nowhere. Reasoning is not retained for you | Zero |
 | What did it choose to leave alone? | Nowhere, and this is the dangerous one | Zero |
-| Which bot touched this account? | Nowhere. No audit view exists yet | Zero |
+| Which bot touched this account? | Nowhere. No audit view outside Enterprise | Zero |
 | Has this been getting worse for weeks? | A file the bot appended to, or nothing | As long as the file lives |
 
 Every row that reads "nowhere" is a row you can convert to "a file the bot
@@ -437,9 +437,10 @@ are written into the setup, not enabled in a settings screen.
 
 ### Does Grok Bot have an audit log of what a bot did?
 
-As of writing, no. The Grok Bot documentation states that an audit view of Bot
-actions does not exist yet, and routines retain only the 20 most recent run
-records each. That means your evidence window is short and it shrinks as your
+As of writing, only on Enterprise. The Grok Bot documentation puts audit logs
+and Action Recording on Enterprise only, so individual and self-serve Teams
+accounts have no audit view of Bot actions, and routines retain only the 20
+most recent run records each. That means your evidence window is short and it shrinks as your
 schedule gets tighter: an hourly routine cycles through all twenty records
 inside a day. The practical response is to have each bot append its own run
 line to a durable file it cannot rewrite, so that the history you need for

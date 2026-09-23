@@ -44,7 +44,7 @@ everything else you have running.
 | Separate bots separate credentials | Cookies, sessions, files, and CLI credentials are shared | Leftover logins are an account problem |
 | Deleting a bot cleans up after it | Deleting a bot does not remove shared files or sessions | Retirement needs a manual sweep |
 | A second bot is a sandbox | Verbatim: do not use separate bots as a security boundary | Overwatch cannot be sandboxed either |
-| There is an audit trail to consult | An audit view of bot actions does not exist yet | Your registry file is the record |
+| There is an audit trail to consult | An audit view of bot actions does not exist outside Enterprise | Your registry file is the record |
 
 The last row is why an overwatch bot writes things down. Without a log you own,
 the only history of what moved on that disk is whatever a chat window still
@@ -390,7 +390,7 @@ to skim its reports, and a skimmed report is where the halted backup and the
 orphan credential go to die.
 
 The review is also your only durable record. There is no audit view of bot
-actions on this platform yet, and routines are per bot with only the twenty most
+actions on this platform outside Enterprise, and routines are per bot with only the twenty most
 recent run records kept, all of which disappear when the bot does. Keep the
 review inside the allowlisted tree so it gets backed up too.
 

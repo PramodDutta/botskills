@@ -118,9 +118,9 @@ which one you pick.
 | Tool reach | Maintained connectors, 10,003+ listed | A cloud computer with a browser and a shell |
 | Unsupported tools | No connector means no step | Driveable through the UI like a person |
 | Billing unit | Tasks for Zaps, activities for Agents | Weekly subscription allowance, overflow on demand |
-| Spend ceiling | Your task tier is a hard number | "There is no Grok Bot-specific spend cap yet" |
+| Spend ceiling | Your task tier is a hard number | No separate Grok Bot cap; the account On-demand monthly limit applies |
 | Failure behaviour | Errors at a named step, autoreplay up to 5 attempts | The bot may try a different route instead |
-| Per-step record | Full input and output per node in Zap history | An audit view of Bot actions "does not exist yet" |
+| Per-step record | Full input and output per node in Zap history | None below Enterprise; Enterprise Action Recording logs sanitized actions |
 | Approval model | Human in the Loop action, Professional and up | Approvals on proposed actions, per charter |
 | Where it runs | Zapier's cloud | One managed Linux VM shared by all your Bots |
 | Reach onto a desktop | Browser and API only | macOS, Windows, Linux, iPhone, Android |
@@ -164,8 +164,9 @@ matters if MCP was how you planned to let a Zap talk to a bot.
 On the Grok Bot side there is no equivalent arithmetic to do, and that is the
 problem rather than a relief. Subscriptions include a weekly usage allowance,
 overflow is billed on demand from model and token cost, and the docs say plainly
-that there is no Grok Bot-specific spend cap yet. You can forecast a Zapier bill
-from a run count. You cannot forecast a bot bill from anything you control,
+that a separate Grok Bot spend cap is not available, only the account-level
+On-demand monthly limit. You can forecast a Zapier bill from a run count. You
+cannot forecast a bot bill that way, only bound it with that limit,
 which we worked through in
 [how Grok Bot usage turns into a bill](/blog/grok-bot-spend-cap-and-token-burn).
 
@@ -176,21 +177,22 @@ six months from now, what can you actually show someone?
 
 | What a reviewer asks | Zapier | Grok Bot |
 |---|---|---|
-| What ran on 14 March | Zap history, within the guaranteed window | No audit view of Bot actions yet |
+| What ran on 14 March | Zap history, within the guaranteed window | Enterprise Action Recording only; no audit view below Enterprise |
 | What did step 3 receive and return | Input and output stored per node | Not published |
-| How far back can I look | "a maximum of 60 days of Zap run data" | 20 most recent run records per routine |
+| How far back can I look | "a maximum of 60 days of Zap run data" | 20 most recent run records per routine; 90 days of Action Recording on Enterprise |
 | How many runs are visible | "will display up to 10,000 runs" | See above, per routine |
 | What happens if the bot is deleted | Not applicable, Zaps are account objects | Its routines go with it |
-| Where do older records live | An export you make yourself, on a schedule | Nowhere the product provides |
+| Where do older records live | An export you make yourself, on a schedule | An export you make yourself, or Enterprise OpenTelemetry Export |
 
 The Zapier figures come from
 [view and manage your Zap history](https://help.zapier.com/hc/en-us/articles/8496291148685-View-and-manage-your-Zap-history),
-read 2026-08-25. The Grok Bot figures come from its own routines documentation.
+read 2026-08-25. The Grok Bot figures come from its own routines and security
+documentation, rechecked 2026-09-23.
 
 The practical reading: neither tool is an archive. Zapier gives you a 60 day
 window and a self-service export, which is enough if somebody actually runs the
-export. Grok Bot gives you 20 runs per routine and tells you honestly that the
-audit view does not exist yet. If a reviewer will ever ask about a specific run,
+export. Grok Bot gives you 20 runs per routine and, below Enterprise, no audit
+view at all. If a reviewer will ever ask about a specific run,
 build the export before you need it, and put the irreversible step on the side
 of the system that keeps a record.
 
@@ -208,8 +210,8 @@ manage. That is a downgrade.
 
 **Work that needs a per-step audit trail.** Zap history gives you the input and
 output of every node on every run, inside that 60 day window. Grok Bot's docs
-say an audit view does not exist yet, and a routine keeps only the 20 most recent
-run records. If a compliance reviewer will ask "what exactly happened on 14
+put audit logs and Action Recording on Enterprise only, and a routine keeps only
+the 20 most recent run records. If a compliance reviewer will ask "what exactly happened on 14
 March", pick the graph.
 
 **Anything where a surprising result is unacceptable.** Invoicing, payroll,
@@ -393,8 +395,8 @@ not automated at all because nobody could face drawing the graph.
 
 Pick both when the job has a boring outer loop and one hard decision in the
 middle, which describes more real work than either vendor admits. And note the
-access question before you plan anything: Grok Bot is not on the cheapest tiers,
-with Cursor Pro+ at $60 a month currently the least expensive paid route per
+access question before you plan anything: Grok Bot is not on the free tiers,
+with Cursor Pro at $20 a month currently the least expensive paid route per
 [cursor.com/pricing](https://cursor.com/pricing), against a Zapier free tier that
 exists. If you want the full picture of running a business on this stack, we
 laid it out in
@@ -433,9 +435,9 @@ an approval the platform actually enforces rather than requests.
 They are not comparable enough for a single answer, and anyone who gives you one
 is guessing. Zapier publishes a task ladder starting at a free tier with 100
 tasks a month, so your ceiling is a number you choose in advance. Grok Bot comes
-bundled with eligible subscriptions, with Cursor Pro+ at $60 a month the
-cheapest paid route as of 2026-08-25, and its documentation states there is no
-Grok Bot specific spend cap yet. That means predictable cost favours Zapier at
+bundled with eligible subscriptions, with Cursor Pro at $20 a month the
+cheapest paid route as of 2026-09-23, and its documentation states there is no
+separate Grok Bot spend cap, only the account On-demand monthly limit. That means predictable cost favours Zapier at
 volume, while a bot can replace work no Zap could do at all.
 
 ### Can a Zapier workflow trigger a Grok Bot and use the result?

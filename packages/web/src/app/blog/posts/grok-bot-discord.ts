@@ -181,7 +181,7 @@ Reading it requires the VIEW_AUDIT_LOG permission, and an app taking a qualifyin
 action can attach its own reason string to the entry.
 
 That matters more than usual with a hosted bot, because the Grok Bot
-documentation is clear that an audit view of bot actions does not exist yet. Your
+documentation is clear that an audit view of bot actions does not exist outside Enterprise. Your
 reconstruction of what the bot did comes from Discord's log, not from the bot
 runtime, and it lasts 45 days. If you ever widen the bot past reading, that
 window is your entire memory of what happened, so decide now whether 45 days is

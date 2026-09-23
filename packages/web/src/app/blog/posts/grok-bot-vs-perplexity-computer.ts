@@ -11,7 +11,7 @@ export const post: BlogPost = {
 
 A sales standup will repeat a competitor price at 09:00 even if the overnight pack that invented it arrived with three blue citation chips.
 
-Grok Bot vs Perplexity is standing named jobs on one persistent cloud computer versus a research-and-computer product you confirm on [perplexity.ai](https://www.perplexity.ai). Persistence is the Grok fact. Citation chips are not a hire. Do not mix their cookie jars in your head. Confirm every Perplexity Computer, Comet, and plan claim on perplexity.ai the day you buy. This page will not invent a Perplexity price, credit pack, model count, or sandbox size. Grok Bot facts were checked against [the Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps) as of 25 August 2026.
+Grok Bot vs Perplexity is standing named jobs on one persistent cloud computer versus a research-and-computer product you confirm on [perplexity.ai](https://www.perplexity.ai). Persistence is the Grok fact. Citation chips are not a hire. Do not mix their cookie jars in your head. Confirm every Perplexity Computer, Comet, and plan claim on perplexity.ai the day you buy. This page will not invent a Perplexity price, credit pack, model count, or sandbox size. Grok Bot facts were checked against [the Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps) as of 25 August 2026, with plans rechecked 23 September 2026.
 
 This is not a remake of [Grok Bot vs ChatGPT Agent](/blog/grok-bot-vs-chatgpt-agent). That piece is computer-use sessions inside ChatGPT against named bots. This piece is a research agent you start (or a Computer / Comet surface you confirm live) against a teammate that still owns 04:30. If search only said computer use, read [Grok Bot vs Generic Computer Use](/blog/grok-bot-vs-computer-use). Primer: [What Is a Grok Bot?](/blog/what-is-a-grok-bot).
 
@@ -44,9 +44,9 @@ Roundups want two cloud computers and a brand pick. This article will not claim 
 
 A Grok bot is a named role with a charter, a screen, and optional routines. The computer is assigned to your user account, not to an individual bot. All bots share one persistent cloud computer. Screens are work surfaces, not security boundaries. The docs say not to use separate bots as a security boundary. Cookies, sessions, files, and command-line credentials are common to every bot. Deleting a bot does not remove those files or browser sessions. Routines die with the bot. The desk does not. Disk: [one computer, many screens](/blog/grok-bot-shared-computer-security). Mechanism: [how Grok bots actually work](/blog/how-bots-on-grok-actually-work).
 
-The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. See [supported platforms](/blog/grok-bot-supported-platforms). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
+The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). See [supported platforms](/blog/grok-bot-supported-platforms). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 
-A routine assigns a workflow to one bot. Max 50 routines. Twenty most recent run records per routine. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view of Bot actions yet. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. Claude Code, SKILL.md, and CLAUDE.md compatibility is Grok Build, never Grok Bot.
+A routine assigns a workflow to one bot. Max 50 routines. Twenty most recent run records per routine. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view of Bot actions outside Enterprise. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. Claude Code, SKILL.md, and CLAUDE.md compatibility is Grok Build, never Grok Bot.
 
 Staff [Lead Scout](/bots/lead-scout) when the standing job is public research that never contacts anyone. Staff [Chief of Staff Briefing](/bots/chief-of-staff-briefing) when the pack must never distribute itself. Both sit on the same cookie jar as whatever else you named. [Inbox Triage](/bots/inbox-triage) never sends, and it still inherits the rival-portal session if you left one signed in.
 
@@ -150,16 +150,16 @@ Look at the bills you can document. Leave Perplexity's bill on perplexity.ai.
 | Path | Grok Bot included? | What to remember |
 |---|---|---|
 | Cursor Hobby | No | Free Cursor does not include the bot runtime |
-| Cursor Pro at 20 dollars a month | No | A common mistaken buy |
-| Cursor Pro+ at 60 dollars a month | Yes | Cheapest paid path as of 25 August 2026 |
-| SuperGrok at 30 dollars a month | No | The cheaper SuperGrok tier does not include Grok Bot |
-| SuperGrok Plus at 100 dollars a month | Yes | Listed as including Grok Bot access |
-| SuperGrok Heavy, Cursor Ultra, Cursor Teams Standard at 40 dollars per user per month, Premium at 120, one-time trial | Eligible | Confirm live Heavy and Ultra prices. Do not trust a viral 300 dollar Heavy figure |
+| Cursor Pro at 20 dollars a month | Yes | Cheapest paid path, checked 23 September 2026 |
+| Cursor Pro+ at 60 dollars a month | Yes | More weekly usage than Pro |
+| SuperGrok (individual) | Yes, by linking | Link it from the Grok Bot plan screen; it grants usage and is not a Cursor plan |
+| SuperGrok Plus | Yes, by linking | Never stacks with a Cursor plan |
+| SuperGrok Heavy (linked), Cursor Ultra, any seat on a self-serve Cursor Teams plan, one-time trial | Eligible | Confirm live Heavy and Ultra prices. Do not trust a viral 300 dollar Heavy figure |
 | Perplexity search, Computer, Comet, or any computer-shaped plan | Confirm on perplexity.ai | Do not invent a dollar figure, a credit pack, a Max surcharge, or a VM price |
 
-There is no Grok Bot-specific spend cap. Weekly allowance, then on-demand from model and token cost. No published dollar figure for the allowance. Never invent one. No model picker. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. Arithmetic: [Grok Bot Cost](/blog/grok-bot-cost) and [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn). Trial door: [Grok Bot free trial](/blog/grok-bot-free-trial).
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance, then on-demand from model and token cost. No published dollar figure for the allowance. Never invent one. No model picker. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. Arithmetic: [Grok Bot Cost](/blog/grok-bot-cost) and [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn). Trial door: [Grok Bot free trial](/blog/grok-bot-free-trial).
 
-Perplexity may be cheaper to start, or priced on credits this article will not print. Confirm the day you subscribe. A lower entry price is a good reason to run a one-off cited teardown. It is a bad reason to staff a standing 04:30 pack on a session. Model Grok Bot as 60 dollars (or 100, or a Team seat at 40 or 120 dollars per user per month) plus overflow you cannot cap. Beta launched 11 August 2026. Eligibility widened 21 August 2026.
+Perplexity may be cheaper to start, or priced on credits this article will not print. Confirm the day you subscribe. A lower entry price is a good reason to run a one-off cited teardown. It is a bad reason to staff a standing 04:30 pack on a session. Model Grok Bot as 20 dollars on Cursor Pro (or 60 on Pro+, 200 on Ultra, or a Teams seat) plus overflow up to the On-demand monthly limit you set. Beta launched 11 August 2026. Eligibility widened 21 August 2026.
 
 ## Refuse to import a Perplexity sandbox story onto the Grok Bot cookie jar
 
@@ -213,7 +213,7 @@ You can keep both. Stop using one object for the other object's job.
 
 Keep Perplexity (search, Deep Research, Computer, Comet, whichever perplexity.ai currently names) for a sourced answer while you are present. Confirm permissions at the start. Do not invent a dedicated Perplexity VM so the metaphor matches Grok Bot.
 
-Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a routine, and last night's SOURCE lines. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped.
+Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a routine, and last night's SOURCE lines. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow has no per-bot cap, only the account's On-demand monthly limit.
 
 Use a research session when the need is one cited teardown. Use a named bot when 04:30 still needs a teammate. [Churn Watch](/bots/churn-watch) can sit on that same desk if the stop line forbids customer pings. It will still see the cookies.
 
@@ -235,7 +235,7 @@ Cloud work can. Grok Bot runs on a persistent cloud computer assigned to your us
 
 ### Is Perplexity cheaper than Grok Bot?
 
-Grok Bot's cheapest paid path is Cursor Pro+ at 60 dollars a month. Cursor Hobby and Cursor Pro at 20 dollars do not include it, and SuperGrok at 30 dollars does not. SuperGrok Plus at 100 dollars does. Teams Standard and Premium include it. There is no Grok Bot spend cap: weekly allowance, then on-demand, with no published dollar figure for the allowance. Perplexity Computer, Comet, and search prices belong on perplexity.ai. This article will not invent them. Confirm both the day you buy, including which Perplexity name is the billed surface.
+Grok Bot's cheapest paid path is Cursor Pro at 20 dollars a month. Every paid Cursor plan includes Grok Bot, from Cursor Pro at $20; Cursor Hobby, the free plan, does not, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Cursor Teams include it. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies: weekly allowance first, then on-demand up to that limit, with no published dollar figure for the allowance. Perplexity Computer, Comet, and search prices belong on perplexity.ai. This article will not invent them. Confirm both the day you buy, including which Perplexity name is the billed surface.
 
 `,
 };

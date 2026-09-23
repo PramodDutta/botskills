@@ -264,7 +264,7 @@ restriction while a live authenticated mail session sits on that machine is
 testing your charter with your real mailbox as the safety net. Connect without
 the send scope, and let mechanics carry the risk rather than prose.
 
-Capture the transcript yourself. As of writing there is no audit view of bot
+Capture the transcript yourself. Outside Enterprise there is no audit view of bot
 actions, so if you do not paste the output into a document as you go, your test
 record is whatever the bot said about itself. Keep the input, the expectation,
 and the actual output for all fifteen cases. It is one page.
@@ -469,6 +469,6 @@ capability you are testing rather than relying on the setup text to restrain
 it. That distinction matters because bots on one account typically share a
 machine and its signed-in browser sessions, so a charter restriction is not an
 enforcement mechanism. Capture every transcript yourself as you go, since there
-may be no audit view available to reconstruct what happened afterwards.
+may be no audit view outside Enterprise available to reconstruct what happened afterwards.
 `,
 };

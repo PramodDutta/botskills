@@ -27,7 +27,7 @@ A forty-minute job is several recordings, each ending at a result you can see wi
 | Audio | No microphone | Reasons you skipped a thread are not in the file. You type them later. |
 | Output | A draft skill | Nothing here is ready to schedule. Review is mandatory. |
 | Surface | Browser workflows only | Native apps, Finder, terminals, and desktop mail clients are out of scope. |
-| Device | Unavailable on iPhone | Record on macOS or Windows. The phone cannot teach this. |
+| Device | Unavailable on iPhone | Record in the desktop app (macOS, Windows or Linux). The phone cannot teach this. |
 
 People treat the ten-minute cap as a quota to spend. That produces rushed recordings that include setup and a send. If you cannot show the job in ten quiet minutes of browser clicks, write the job instead of performing it.
 
@@ -58,13 +58,13 @@ While you label, you skip a drip with a person's name in the from-field, skip a 
 
 Budget time after the capture for the paragraph that says what to do when the screen does not match: empty inbox, already labeled, two labels could fit. Talking to yourself during the recording does not help. The microphone is not in the capture.
 
-## Stay on macOS or Windows, because iPhone cannot record a demonstration
+## Stay on the desktop app, because the phone cannot record a demonstration
 
 Teach by demonstration is unavailable on iPhone. That is a documented product fact, not a temporary gap in a tutorial. Do not plan to record a demo on the train. The phone cannot do this.
 
-The iPhone app, on iOS 18 or later, can pause and resume a routine. It cannot edit a routine, view run history, test a routine, or delete a routine. Those need a desktop. Teaching sits with that second list. [The platform page](/blog/grok-bot-supported-platforms) is the full matrix, including the Linux and Android clients added in September 2026 and the iPad no. The computer your bots work on is a managed Linux VM, not a Linux app you install, and not a reason to treat iPhone as a recording studio.
+The iPhone app, on iOS 18 or later, can pause and resume a routine, show its run history and delete it. It cannot edit or test a routine. Those need a desktop, and teaching sits with them. [The platform page](/blog/grok-bot-supported-platforms) is the full matrix, including the Linux and Android clients added in September 2026 and the iPad, which runs the iOS app as of 23 September 2026. The computer your bots work on is a managed Linux VM, not a Linux app you install, and not a reason to treat iPhone as a recording studio.
 
-You record on macOS or Windows, in a browser, for at most ten minutes, then edit and test on the same class of machine. The phone is a stop button for a routine that already exists. If your only supported device is an iPhone, you cannot teach by demonstration.
+You record in the desktop app (macOS, Windows or Linux), on a browser workflow, for at most ten minutes, then edit and test on the same desk. The phone is a stop button for a routine that already exists. If your only supported device is an iPhone, you cannot teach by demonstration.
 
 ## Treat the output as a draft skill you still have to finish
 
@@ -108,7 +108,7 @@ After the draft exists, write the boundary in words, even though you never click
 
 Here is a recording you can actually make. It is eight minutes. It labels. It never sends. It uses a mailbox you own, not a shared alias, and not a customer-facing address.
 
-Before the recorder: you are on macOS or Windows, in the browser, signed into Gmail. Labels \`Bot/Receipts\`, \`Bot/FYI\`, and \`Bot/Reply-Needed\` already exist. Search is \`in:inbox newer_than:2d -label:Bot\`. Compose is not open. You will not create a fourth label on camera. You will not archive. You will not trash.
+Before the recorder: you are in the desktop app, with the Bot's browser signed into Gmail. Labels \`Bot/Receipts\`, \`Bot/FYI\`, and \`Bot/Reply-Needed\` already exist. Search is \`in:inbox newer_than:2d -label:Bot\`. Compose is not open. You will not create a fourth label on camera. You will not archive. You will not trash.
 
 | Clock | Message on screen (examples) | Click you make | Click you refuse |
 |---|---|---|---|
@@ -180,7 +180,7 @@ Name the skill after the job. "Gmail labeler, no send" is a name you can audit. 
 
 A routine assigns a workflow to one bot: one bot, not the team; a workflow you already edited, not the raw recording.
 
-Documented ceilings: at most 50 routines per bot. The app keeps the 20 most recent run records per routine. Deleting a bot deletes its routines. Nothing about this is team-level. Those 20 records are not a compliance log, and no audit view of bot actions exists yet. Copy summaries somewhere you control from day one.
+Documented ceilings: at most 50 routines per bot. The app keeps the 20 most recent run records per routine. Deleting a bot deletes its routines. Nothing about this is team-level. Those 20 records are not a compliance log, and no audit view of bot actions outside Enterprise exists yet. Copy summaries somewhere you control from day one.
 
 Deleting the bot does not clean the shared computer. Gmail sessions, files, and cookies can remain for every other bot. Routines die. Logins do not. Revoke the mailbox grant, then delete the bot.
 
@@ -225,7 +225,7 @@ If the trap passes three days in a row, you may save the skill and consider a ro
 
 ### Can I teach Grok Bot by demonstration on iPhone?
 
-No. Teach by demonstration is unavailable on iPhone. You record on a desktop, macOS or Windows, in a browser, for at most ten minutes, with no microphone audio. The iPhone app can pause and resume a routine. It cannot edit, test, inspect history, delete, or record a demonstration. If your only machine is a phone, this teaching path is closed. Pause and resume remain useful later as a remote stop button, once a desktop recording exists and a routine is already running.
+No. Teach by demonstration is unavailable on iPhone. You record in the desktop app, on a browser workflow, for at most ten minutes, with no microphone audio. The iPhone app can pause and resume a routine. It cannot edit, test, inspect history, delete, or record a demonstration. If your only machine is a phone, this teaching path is closed. Pause and resume remain useful later as a remote stop button, once a desktop recording exists and a routine is already running.
 
 ### Is the draft skill from a demonstration ready to schedule?
 

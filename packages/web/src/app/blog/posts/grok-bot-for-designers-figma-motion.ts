@@ -347,8 +347,9 @@ one at a time. The multiplicative failures are visible from a distance and
 invisible up close, which is the opposite of how people review.
 
 Worth knowing if your review happens on a tablet: Grok Bot's documentation lists macOS, Windows and Linux desktops and iPhone and Android phones as supported, and states
-that [iPad is not supported](https://docs.x.ai/grok-bot/faq). The iPhone app is
-also limited compared to desktop, so plan your review step around a laptop.
+that [the iOS app also runs on iPad](https://docs.x.ai/grok-bot/faq) with iPadOS 18
+or later. That app is limited compared to desktop, so plan your review step
+around a laptop.
 The platform detail is covered further in
 [which platforms Grok Bot actually runs on](/blog/grok-bot-supported-platforms).
 
@@ -503,12 +504,13 @@ counterexamples, and taste is mostly the second one.
 
 ### Can I run Grok Bot for design work on an iPad?
 
-No. The documentation lists supported platforms as macOS on Apple silicon and
-Intel, Windows on x64 and Arm64, and iPhone on iOS 18 or later, and states
-that iPad is not supported, alongside Linux desktop and Android. The iPhone
-app is also more limited than desktop, so it is not a substitute for a laptop
-in a review workflow. Plan for a Mac or Windows machine as the place the bot
-runs and where you review its output, and treat mobile as a way to check on
-something rather than to work.
+Only as a companion. The documentation lists macOS on Apple silicon and Intel,
+Windows on x64 and Arm64, Linux on x64 and Arm64, iPhone on iOS 18 or later,
+and Android 9 or later, and states that the iOS app also runs on iPad with
+iPadOS 18 or later. That app is more limited than desktop: it cannot edit or
+test a routine, so it is not a substitute for a laptop in a review workflow.
+Plan for a Mac, Windows or Linux machine as the place you author jobs and
+review output, and treat the iPad as a way to check on something rather than
+to work.
 `,
 };

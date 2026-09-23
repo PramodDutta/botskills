@@ -215,7 +215,7 @@ The one-way nature of the action is what settles it. An approval controls a
 proposed action; it does not reverse work already completed, so approving a
 deletion after the fact is not a rollback. Wiki trash retention varies and often
 does not preserve page history, inbound links, or attachments intact even when
-the page itself comes back. There is no audit view of bot actions as of writing,
+the page itself comes back. There is no audit view of bot actions outside Enterprise,
 so if a bot removed something at 3am during an unattended run, reconstructing
 what it removed and why is a manual archaeology exercise across whatever records
 you happen to keep.

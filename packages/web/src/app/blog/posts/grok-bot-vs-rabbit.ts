@@ -36,9 +36,9 @@ A Grok bot is a named role with a charter, a screen, and optional routines. The 
 
 That shared cookie jar is the load-bearing Grok fact here. Connect Gmail for the standing inbox and that session sits on the computer. The scout you add on Thursday can see it. Deleting the scout does not log Inbox Triage out. Read [One Computer, Many Screens](/blog/grok-bot-shared-computer-security) rather than inferring a private jar from two names.
 
-The computer is a managed Linux VM. The bot runs as a non-root user. That is not a Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. See [supported platforms](/blog/grok-bot-supported-platforms). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop.
+The computer is a managed Linux VM. The bot runs as a non-root user. That is not the Linux desktop client. Clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). See [supported platforms](/blog/grok-bot-supported-platforms). From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine.
 
-A routine assigns a workflow to one bot. Max 50 routines per bot. The app keeps 20 most recent run records per routine. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view of Bot actions yet. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. Claude Code, SKILL.md, and CLAUDE.md compatibility is Grok Build, never Grok Bot.
+A routine assigns a workflow to one bot. Max 50 routines per bot. The app keeps 20 most recent run records per routine. Deleting a bot deletes its routines. Nothing is team-level. No model picker. No audit view of Bot actions outside Enterprise. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. Claude Code, SKILL.md, and CLAUDE.md compatibility is Grok Build, never Grok Bot.
 
 Staff [Inbox Triage](/bots/inbox-triage) as the named teammate for the standing inbox. Staff [Mail Cleanup Assistant](/bots/mail-cleanup-assistant) only if cleanup is a different job with a different stop line. Both sit on the same cookie jar. Connect mail as in [How to Connect Gmail to Grok Bot Without Handing Over Send](/blog/how-to-connect-gmail-to-grok-bot), then keep send off the desk. [Grok Bot Gmail](/blog/grok-bot-gmail) is the longer mail map.
 
@@ -138,16 +138,16 @@ Look at the bills you can document. Leave Rabbit's bill on rabbit.tech.
 | Door you might buy | Includes the standing inbox runtime? | What to remember |
 |---|---|---|
 | Cursor Hobby | No Grok Bot | Free Cursor does not include it |
-| Cursor Pro at 20 dollars a month | No Grok Bot | A common mistaken buy |
-| Cursor Pro+ at 60 dollars a month | Yes, Grok Bot | Cheapest paid path as of 25 August 2026 |
-| SuperGrok at 30 dollars a month | No Grok Bot | The cheaper SuperGrok tier does not include it |
-| SuperGrok Plus at 100 dollars a month | Yes, Grok Bot | Listed as including Grok Bot access |
-| SuperGrok Heavy, Cursor Ultra, Teams Standard (40 dollars/user/month), Teams Premium (120 dollars/user/month), one-time trial | Eligible for Grok Bot | Confirm live SuperGrok Heavy pricing. Do not trust a viral 300 dollar Heavy figure |
+| Cursor Pro at 20 dollars a month | Yes, Grok Bot | Cheapest paid path as of 23 September 2026 |
+| Cursor Pro+ at 60 dollars a month | Yes, Grok Bot | More weekly usage than Pro |
+| Individual SuperGrok | Yes, by linking | Link it from the Grok Bot plan screen. The link is permanent |
+| SuperGrok Plus | Yes, by linking | The same link, with more usage |
+| SuperGrok Heavy, Cursor Ultra, self-serve Cursor Teams seats, one-time trial | Eligible for Grok Bot | Confirm live SuperGrok Heavy pricing. Do not trust a viral Heavy figure |
 | Rabbit plans, devices, or subscriptions | Confirm on [rabbit.tech](https://www.rabbit.tech) | Do not invent a dollar figure or a VM surcharge |
 
-There is no Grok Bot-specific spend cap. Weekly allowance, then on-demand from model and token cost. No published dollar figure for the allowance. Never invent one. No model picker. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. See [Grok Bot Cost](/blog/grok-bot-cost) and [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn). Trial shape: [Grok Bot free trial](/blog/grok-bot-free-trial).
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance, then on-demand from model and token cost. No published dollar figure for the allowance. Never invent one. No model picker. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. See [Grok Bot Cost](/blog/grok-bot-cost) and [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn). Trial shape: [Grok Bot free trial](/blog/grok-bot-free-trial).
 
-Model Grok Bot as 60 dollars (or 100, or a Team seat at 40 or 120 dollars per user per month) plus overflow you cannot cap. A lower Rabbit entry price, if one still exists on the site, is a good reason to ask one question about one thread. It is a bad reason to staff a standing 07:30 owner on a turn that might not be there on Tuesday.
+Model Grok Bot as 20 dollars (or 60, or 200, or a Team seat at Cursor's per-seat price) plus overflow capped only by the account On-demand monthly limit. A lower Rabbit entry price, if one still exists on the site, is a good reason to ask one question about one thread. It is a bad reason to staff a standing 07:30 owner on a turn that might not be there on Tuesday.
 
 ## Measure Grok Bot exposure in shared sessions, not in extra bot names you create
 
@@ -193,13 +193,13 @@ Connect Gmail on Grok Bot only after the charter forbids send. Then add a second
 
 ## Use iPhone only to pause the standing inbox, then change the routine on desktop
 
-The standing inbox will fail on a commute if you expected the phone to be a studio. Documented mobile scope: iPhone on iOS 18 or later. Pause works. Resume works. Editing, history, testing, and deleting need the desktop app. Teach-by-demonstration (up to ten minutes, no microphone audio, draft skill, browser workflows only) is unavailable on iPhone. The [iPhone app article](/blog/grok-bot-iphone-app) is the split. This section is only what that split does to 07:30.
+The standing inbox will fail on a commute if you expected the phone to be a studio. Documented mobile scope: iPhone on iOS 18 or later. Pause works. Resume works. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Teach-by-demonstration (up to ten minutes, no microphone audio, draft skill, browser workflows only) is unavailable on iPhone. The [iPhone app article](/blog/grok-bot-iphone-app) is the split. This section is only what that split does to 07:30.
 
-| Action on the standing inbox | iPhone (iOS 18+) | Desktop (macOS or Windows) |
+| Action on the standing inbox | iPhone (iOS 18+) | Desktop (macOS, Windows, or Linux) |
 |---|---|---|
 | Pause the 07:30 routine | Yes | Yes |
-| Edit the charter, the clock, or the stop line | No | Yes |
-| History, testing, deleting the bot | No | Yes |
+| Edit or test the charter, the clock, or the stop line | No | Yes |
+| Run history, deleting the routine or the bot | Yes | Yes |
 | Teach-by-demonstration of the inbox walkthrough | Unavailable | Up to ten minutes, no microphone, draft skill, browser only |
 
 Rabbit's pocket story is whatever rabbit.tech currently sells. Confirm it there. Do not assume a handheld in a review video is a Grok iPhone client. Pause is the overnight control you packed. The charter change waits for a desk.
@@ -208,7 +208,7 @@ Rabbit's pocket story is whatever rabbit.tech currently sells. Confirm it there.
 
 Keep both only if you can name which object owns which job. Keep Rabbit, if rabbit.tech still describes it this way, for a spoken ask or a one-off thread. Hedge r1, rabbit OS, prices, hardware, and any cloud VM.
 
-Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a routine, and last week's inbox file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer and the cookie jar. Deletion is not cleanup. Overflow is uncapped.
+Keep Grok Bot for unfinished work that wants a name, a charter, a screen, a routine, and last week's inbox file. Staff few bots. Connect few accounts. Write the verb that must never happen. Every bot shares the computer and the cookie jar. Deletion is not cleanup. Overflow is capped only at the account level.
 
 A consumer interface agent returns an answer you asked for tonight. A named bot is still there on Monday, on a shared computer whose blast radius you accepted on purpose.
 
@@ -222,7 +222,7 @@ No. Grok Bot is a roster of named bots on one persistent cloud computer assigned
 
 ### Does Rabbit give you a cloud virtual machine?
 
-This article will not assert that Rabbit has a cloud virtual machine, and it will not assert that Rabbit lacks one. rabbit.tech currently uses device copy and computer-controller copy. Confirm those sentences on the live site. Grok Bot does have one persistent cloud computer per account, a managed Linux VM where bots run as a non-root user, with a screen per bot and a cookie jar shared across every bot. That computer is not a Linux desktop app, and it is not a private VM per bot.
+This article will not assert that Rabbit has a cloud virtual machine, and it will not assert that Rabbit lacks one. rabbit.tech currently uses device copy and computer-controller copy. Confirm those sentences on the live site. Grok Bot does have one persistent cloud computer per account, a managed Linux VM where bots run as a non-root user, with a screen per bot and a cookie jar shared across every bot. That computer is not the Linux desktop app, and it is not a private VM per bot.
 
 ### Can a Grok Bot run the standing inbox job after I close the laptop?
 
@@ -230,7 +230,7 @@ Cloud work can. Grok Bot runs on a persistent cloud computer assigned to your us
 
 ### Is Rabbit cheaper than Grok Bot?
 
-Grok Bot's cheapest paid path is Cursor Pro+ at 60 dollars a month. Cursor Hobby and Cursor Pro at 20 dollars do not include it, and SuperGrok at 30 dollars does not. SuperGrok Plus at 100 dollars does. Teams Standard and Premium include it. There is no Grok Bot spend cap: weekly allowance, then on-demand, with no published dollar figure for the allowance. Rabbit prices belong on rabbit.tech. This article will not invent them. Confirm both the day you buy.
+Grok Bot's cheapest paid path is Cursor Pro at 20 dollars a month. Every paid Cursor plan includes Grok Bot; Cursor Hobby, the free plan, does not, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Cursor Teams include it. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies: weekly allowance first, then on-demand up to that limit, with no published dollar figure for the allowance. Rabbit prices belong on rabbit.tech. This article will not invent them. Confirm both the day you buy.
 
 `,
 };

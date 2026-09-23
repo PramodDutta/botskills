@@ -95,8 +95,8 @@ chance to reverse it.** Reversibility is a property of the whole unattended run,
 not a judgement about the final action. What a gate can and cannot do is covered
 in [approval gates for bots](/blog/approval-gates-for-bots).
 
-One documented fact sharpens it further. There is no audit view of bot actions as
-of writing, so you cannot reconstruct those ten changes from a system log
+One documented fact sharpens it further. There is no audit view of bot actions outside Enterprise,
+so you cannot reconstruct those ten changes from a system log
 afterwards: your record is whatever the bot chose to tell you. That is why
 [bot observability](/blog/bot-observability) treats the run log as something you
 specify rather than inherit.
@@ -438,11 +438,11 @@ and thought "I did not know it could do that", the charter was less specific tha
 you believed. The fix goes in the charter that day, not into your memory, because
 your memory is not what runs at 07:00 tomorrow.
 
-Worth tracking rather than planning around: a team-level ceiling on local
-execution with Never, Ask every time, and Always options has been described as
-coming, with members able to choose a stricter option but not a looser one. It
-has not shipped, so today the ceiling is your charter, per bot, with nothing
-above it.
+Worth knowing before you plan around it: a team-level ceiling on local execution
+with Never, Ask every time, and Always options has shipped for team admins on
+Teams and Enterprise, with members able to choose a stricter option but not a
+looser one. It covers only work on your own machine, so everywhere else the
+ceiling is your charter, per bot, plus any team rules an admin has set.
 
 ## Break your own delegation before a customer does
 
@@ -476,7 +476,7 @@ change the thing in the third column.
 | Something irreversible happened before any prompt | The gate sat on the last step, not on every unattended one | Grade every step. An approval does not reverse completed work |
 | The bot abandoned half a run waiting for you | Parking was defined as pausing rather than skipping | Park before starting, then continue with the rest of the run |
 | A parked item arrives with no target named | The park format was never specified | Require action, target, reason, and the fallback if you decline |
-| You cannot reconstruct what last Tuesday's run did | There is no audit view of bot actions as of writing | Require a run log of verbs and targets the bot may not edit |
+| You cannot reconstruct what last Tuesday's run did | There is no audit view of bot actions outside Enterprise | Require a run log of verbs and targets the bot may not edit |
 | One bot parks an action and another does it freely | Rules live per charter, and bots share the account and its sessions | Copy the flat five into every charter. Bots are not a boundary |
 | Reviewing the output takes as long as doing the job | Readiness check two never passed | Change the output shape until it is checkable, or take it back |
 | The bot is confidently wrong in a domain you cannot grade | You delegated something you have never done yourself | Take it back. A better prompt does not fix this one |
@@ -591,7 +591,7 @@ No. The documentation states that an approval controls the proposed action and
 does not reverse work already completed, so a prompt is a gate in front of the
 next step rather than a checkpoint you roll back to. Denying it stops what comes
 next and leaves everything before it in place. There is also no audit view of bot
-actions as of writing, so your record is whatever the bot reported. Design so
+actions outside Enterprise, so your record is whatever the bot reported. Design so
 that every unattended step before a gate is one you would accept permanently.
 
 ### What should I never hand over to a bot at all?

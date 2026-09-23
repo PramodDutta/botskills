@@ -55,7 +55,7 @@ A routine assigns a workflow to one bot and tells it when to run, on a schedule 
 
 A routine is not team-level memory. Max fifty routines per bot. The app keeps the twenty most recent run records per routine. Deleting a bot deletes its routines. You cannot treat overnight history as an archive.
 
-The adjacent risk is not "it stopped." It is "it kept going and you stopped watching." There is no Grok Bot-specific spend cap. Subscriptions include a weekly usage allowance, then on-demand billed from model and token cost. A routine that fires while you sleep still draws that allowance. Price the plan on the [cost page](/blog/grok-bot-cost). Decide whether a given night is allowed to run without you here, and put repeating jobs on [Grok Bot scheduling](/blog/grok-bot-scheduling).
+The adjacent risk is not "it stopped." It is "it kept going and you stopped watching." There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Subscriptions include a weekly usage allowance, then on-demand billed from model and token cost. A routine that fires while you sleep still draws that allowance. Price the plan on the [cost page](/blog/grok-bot-cost). Decide whether a given night is allowed to run without you here, and put repeating jobs on [Grok Bot scheduling](/blog/grok-bot-scheduling).
 
 ## Hold send on ask so a night job cannot leave
 
@@ -72,9 +72,9 @@ Overnight, the bot can finish the reversible half. The irreversible half sits un
 | Require Approval / Ask on send | Drafts, files, research | Cards waiting, nothing left the building | "It probably sent" |
 | Always allow on send | Whatever the run reached, including send | A thread you did not read at 03:12 | "The lid would have stopped it" |
 | Charter says never send, and the connector cannot send | The whole overnight job | A file or a draft folder | "I still need to babysit the click" |
-| No rule, vague "be careful" | Whatever the model attempted | A mix you cannot reconstruct (there is no audit view of bot actions yet) | "I will check the log" |
+| No rule, vague "be careful" | Whatever the model attempted | A mix you cannot reconstruct (individual accounts have no audit view of bot actions) | "I will check the log" |
 
-The last row is the honest failure. There is no audit view of bot actions yet. Put the stop in the rule and the charter, not in the lid.
+The last row is the honest failure. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Put the stop in the rule and the charter, not in the lid.
 
 ## File overnight lead briefs on the cloud computer, not this disk
 
@@ -111,7 +111,7 @@ Do not flatten those two columns into "my bots ran overnight." One produced work
 
 ## Use iPhone pause as the only overnight control you packed
 
-You can pause and resume from iPhone. Editing, history, testing, and deleting need desktop. Teach by demonstration is unavailable on the phone: up to ten minutes, no microphone audio, draft skill, browser workflows only, desktop only.
+You can pause and resume from iPhone. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Teach by demonstration is unavailable on the phone: up to ten minutes, no microphone audio, draft skill, browser workflows only, desktop only.
 
 That makes the phone a stop button you can carry, not a pocket desk. If a routine is doing something you do not like at 02:14, pause it. If a send card appears and you actually open the conversation, you can Approve once or Deny from the phone. Most people will not open it. The card waits. That is the safe default for a night you intended to sleep through.
 
@@ -120,7 +120,8 @@ That makes the phone a stop button you can carry, not a pocket desk. If a routin
 | Pause the routine | Yes | Undo files already written, or recall mail already sent |
 | Resume the routine | Yes | Prove the next fire is safe |
 | Approve once or Deny a send | Yes, if you open the conversation | Reverse work already completed |
-| Edit, history, test, delete, or teach | No | Those stay on a macOS or Windows desk |
+| Edit, test, or teach | No | Those stay on the desktop app (macOS, Windows or Linux) |
+| Read run history or delete a routine | Yes | Deleting cannot be undone, so export what you need first |
 | Reset the cloud computer | No | Mobile cannot reset |
 
 The [supported platforms](/blog/grok-bot-supported-platforms) page is the install list. This table is the overnight list. Pause does not undo. Pack it for the next step, and write the charter so the next step is the first irreversible one. If the source changed, pause, and fix it at the desk.
@@ -195,12 +196,12 @@ Run this once, on a weekday you can afford, before you put the job on a clock.
 |---|---|---|
 | Start a read-only job, shut the lid for 20 minutes, reopen | New files under \`/workspace\`, conversation shows progress without you | Nothing moved, or the bot wrote to a local path and stopped |
 | Quit the Grok Bot app mid-turn, wait, reopen | Turn continued on the cloud computer | Turn died with the window (you still think this is a local agent) |
-| Leave a send on Require Approval, shut the lid, wait | Draft exists, send card waiting, nothing in Sent | Mail in Sent, or you cannot tell because there is no audit view |
+| Leave a send on Require Approval, shut the lid, wait | Draft exists, send card waiting, nothing in Sent | Mail in Sent, or you cannot tell because there is no audit view outside Enterprise |
 | Set local execution to Never allowed, ask it to write a local file | Refusal, and the cloud file still written | It waited on a local approval you never saw |
 | Pause from iPhone, confirm the next scheduled fire did not happen | Routine paused, morning is quiet | It still fired (you paused the wrong bot, or you only closed the app) |
 | Sign out of a test site on the cloud computer, shut the lid, let another bot try it | Second bot cannot use the session | Session still there: you closed the laptop instead of signing out |
 
-Any fail in that table is a configuration problem, not a reason to try overnight for real. Click Sent. Do not trust the lid. There is no audit view yet, so the mailbox is the evidence. If the first row fails because you pointed the bot at this disk, you tested a local job. Move the path, then test again.
+Any fail in that table is a configuration problem, not a reason to try overnight for real. Click Sent. Do not trust the lid. There is no audit view outside Enterprise, so the mailbox is the evidence. If the first row fails because you pointed the bot at this disk, you tested a local job. Move the path, then test again.
 
 ## Reject the idea that a closed laptop is a kill switch
 

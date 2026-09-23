@@ -26,8 +26,7 @@ From [skills, routines and automations](https://docs.x.ai/grok-bot/skills-routin
 a routine assigns a workflow to one Bot, max 50 per Bot, the app keeps the
 20 most recent run records per routine, deleting a Bot deletes its routines,
 nothing is team-level. From [mobile](https://docs.x.ai/grok-bot/mobile):
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting
-need desktop.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine.
 
 ## Pick the named bot that will own this job before you open the schedule
 
@@ -63,13 +62,13 @@ with the card. Nothing is stored at team level.
 If the named bot does not exist yet, create it, paste the charter, then
 attach the routine.
 
-## Open a Mac or Windows client because the phone cannot create the routine
+## Open the desktop app because the phone cannot create the routine
 
 From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. You cannot create a routine, edit
-one, open history, test, or delete. A phone in your hand is the stop-button
+one, or test one; you can open its history and delete it. A phone in your hand is the stop-button
 flow, not the create flow.
 
-Platforms: macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. Not iPad. The bot runs
+Platforms: macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. iPad runs the iOS app. The bot runs
 on a managed Linux VM, which is not a Linux desktop app. See
 [what actually works on Windows, Linux and iPad](/blog/grok-bot-supported-platforms).
 
@@ -86,9 +85,9 @@ record a labelling pass and promote it into this Monday routine.
 | Pause or resume a looping job that already exists | Yes | Yes |
 | Create the Monday 07:00 routine | No | Yes |
 | Edit the charter, the time, or the owner | No | Yes |
-| Open the 20 run records | No | Yes |
+| Open the 20 run records | Yes | Yes |
 | Trigger a test run | No | Yes |
-| Delete the routine or the bot | No | Yes |
+| Delete the routine or the bot | Yes | Yes |
 
 If you are travelling, create before you leave.
 
@@ -111,7 +110,7 @@ you copied their text, leaves the owner alive.
 |---|---|---|
 | 0 to 49 on Standup Scribe | The new routine can attach | Create on this bot, then verify |
 | 50 on Standup Scribe | The fifty-first does not become a team job | Second named bot, or copy-and-remove a spare |
-| Unknown, because you are on iPhone | You cannot see the list you need | Wait for a desk. Do not guess |
+| Counted on iPhone | The phone shows each bot's routines but cannot create one | Count on the phone, create at a desk |
 | 12 on temp, including the standup | Create might work, ownership is already wrong | Move the standup to a durable name before you add more |
 
 If Monday is already empty and you think you hit fifty last week, that is a
@@ -241,8 +240,7 @@ verified routine.
 
 ## Inspect the twenty run records as a human, not as an archive
 
-The app keeps the 20 most recent run records per routine. An audit view of
-Bot actions does not exist yet. Twenty rows are the product. They slide.
+The app keeps the 20 most recent run records per routine. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Twenty rows are the product. They slide.
 They die with the routine when you delete the bot.
 
 After the test run, look at the row. Nothing in that row is the brief. The
@@ -257,7 +255,7 @@ you own if you need that. The product will not.
 
 | Question you want to answer | Twenty records can answer | The file can answer | Chat memory can answer |
 |---|---|---|---|
-| Did a fire happen this Monday? | Yes, if you open history on a desk this week | Only if the file date is today. A stale file can fake a yes | No |
+| Did a fire happen this Monday? | Yes, if you open history this week, on the phone or a desk | Only if the file date is today. A stale file can fake a yes | No |
 | Was the pack any good? | No | Yes, if you read it | Unreliable |
 | Did calendar fail? | No, unless you wrote COULD NOT COMPUTE in the file and then read that file | Yes | No |
 | What happened 25 Mondays ago? | No. The window has slid | Only if you copied the pack out | No |
@@ -279,7 +277,7 @@ The pack in \`/workspace\` will still be there. The mail cookie will still
 be there. The history will not. Write "hide, do not delete this bot" into
 the charter at create time so a future you sees the cost.
 
-iPhone cannot delete. Teardown still needs a desk. If the goal is to revoke
+The phone can delete a routine or a bot now, but teardown still belongs at a desk. If the goal is to revoke
 access, deleting the bot is the wrong tool. Revoke the session, then decide
 on hide versus delete.
 
@@ -288,13 +286,13 @@ on hide versus delete.
 | Sidebar looks crowded | Hide Standup Scribe | Delete Standup Scribe |
 | Temp is messy | Remove spare routines on temp, or delete temp only if it owns no standing job | Delete temp while it still owns the standup |
 | You want a clean security story | Revoke sessions. Separate bots do not isolate credentials | Delete the bot and assume logins are gone |
-| You are on a train | Pause if it is looping. Do nothing else | You cannot delete from iPhone |
+| You are on a train | Pause if it is looping. Do nothing else | Delete from the phone, which now works |
 
 Copy the charter out at create time. Keep a roster: job, owner bot,
 heartbeat path. The product will not keep this list. If quota exceeded
 appears while you are creating, pause looping jobs rather than retrying,
 and follow [Grok Bot quota exceeded](/blog/grok-bot-quota-exceeded). Do not
-delete bots to save quota. There is no Grok Bot-specific spend cap.
+delete bots to save quota. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies.
 
 ## Walk one Monday 07:00 standup pack from create to the first history check
 
@@ -363,9 +361,9 @@ BOUNDARY: never send. Never post to a team channel. Never create,
 edit, pause, or delete another bot or routine. Never delete this bot.
 Two attempts at any step, then write COULD NOT COMPUTE and stop.
 
-HUMAN CHECK (not a bot): after each Monday fire, open history on a
-desk, confirm a new row, confirm the heartbeat date is today.
-iPhone cannot do this check.
+HUMAN CHECK (not a bot): after each Monday fire, open history,
+confirm a new row, confirm the heartbeat date is today.
+Do the file check at a desk.
 \`\`\`
 
 Day one is the Friday test: files exist, one history row exists. Day thirty
@@ -385,7 +383,7 @@ message is a signal. For the first two weeks that can work, even though
 the product only keeps twenty run records and deletes them with the bot.
 
 The part that fails: you will stop reading. Week three you archive the DM.
-Week five you travel with only iPhone, which cannot open history. Week six
+Week five you travel with only iPhone and skip the history check. Week six
 you delete a bot named brief. The DM is missing. You call it a quiet week.
 No file was required. The twenty records died with the bot. Quiet and dead
 are now the same.
@@ -423,8 +421,7 @@ when the owner, the file, and the first of twenty records are real.
 
 ### Can I schedule a grok bot routine from iPhone?
 
-No. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Creating, editing, history,
-testing, and deleting need a desktop. The iPhone app exists on
+No. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Creating, editing and testing a routine still need the desktop app. The iPhone app exists on
 iOS 18 or later as a companion stop button, not as a workshop. If you tried
 to create a Monday 07:00 job on a train, assume it did not attach until you
 open the named bot on a desktop and see the routine plus a test row in the

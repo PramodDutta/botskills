@@ -135,7 +135,7 @@ number is doing arithmetic on units that do not match.
 The practical rule: check the vendor page the day you decide, write the date next
 to the number in your own notes, and re check before you scale up. For your
 Grok Bot side, [what it actually costs](/blog/grok-bot-cost) covers the plan
-picture, where Cursor Pro+ at sixty dollars a month is the cheapest paid route
+picture, where Cursor Pro at twenty dollars a month is the cheapest paid route
 and SuperGrok at thirty does not include access.
 
 ## Compare output shape: timestamps and search vs a blurry panel
@@ -285,7 +285,7 @@ files, and command line credentials are shared. A connector you added for a clip
 bot is reachable by every other bot you run, including the one you gave a broad
 research brief to at midnight.
 
-There is also an audit gap. An audit view of bot actions does not exist yet, so
+There is also an audit gap. An audit view of bot actions does not exist outside Enterprise, so
 "which bot used which connector" is not a question you can answer after the
 fact. That makes the pre authorisation decision the whole control.
 
@@ -453,7 +453,7 @@ No, connect what a job you are running needs and remove it afterwards. All your
 bots share one persistent cloud computer, screens are work surfaces rather than
 security boundaries, and cookies, sessions, files, and credentials are shared
 across every bot on the account. A connector added for one bot is reachable by
-all of them. There is also no audit view of bot actions yet, so you cannot
+all of them. There is also no audit view of bot actions outside Enterprise, so you cannot
 reconstruct which bot used which connector later. Deleting a bot does not clean
 up shared sessions, so removal is its own deliberate step.
 `,

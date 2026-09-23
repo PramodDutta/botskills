@@ -16,7 +16,8 @@ four days old and looks exactly like the last message from four minutes ago. You
 find out on Thursday, when someone asks why nobody chased the invoices.
 
 There is no dashboard that catches this for you. An audit view of bot actions
-does not exist yet, so there is no fleet health page, no run history you can
+does not exist outside Enterprise, and even Enterprise audit logs and Action
+Recording are records, not a health check, so there is no fleet health page, no run history you can
 scan across bots, and no alert when a job silently stops producing output. What
 exists is a chat per bot and your memory of what each one was supposed to be
 doing.
@@ -103,8 +104,7 @@ one.
 | Everything on time | No | No | Silence is the report |
 
 One page, one short message, not a thread. And know what you can actually do
-when it arrives: on iPhone you can pause and resume a bot, but editing,
-history, testing, and deleting all need the desktop app. A 2am page that requires
+when it arrives: on iPhone you can pause and resume a bot, but Editing and testing a routine all need the desktop app. A 2am page that requires
 desktop work is a page that should have waited until morning, so put that in the
 SLA rather than discovering it in bed.
 
@@ -416,8 +416,8 @@ version is the one that feels better to read.
 It reads what is visible from the outside and compares it to numbers you wrote
 down. Newest output time against that bot's SLA, the last error line, whether a
 run is still marked in progress with an unchanged screen, and whether a routine
-that was due produced nothing. No audit view of bot actions exists yet, so there
-is no fleet dashboard to query. That is why the registry file matters: it holds
+that was due produced nothing. No audit view of bot actions exists outside
+Enterprise, and no fleet dashboard exists anywhere, so there is nothing to query. That is why the registry file matters: it holds
 the roster and the SLAs, and without it the watchdog has nothing to compare
 against and should stop rather than guess.
 

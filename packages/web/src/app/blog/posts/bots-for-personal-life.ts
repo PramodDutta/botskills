@@ -151,7 +151,7 @@ often a total loss rather than an amendment. Have the bot do the research, which
 is genuinely tedious: the options, the layover times, the change-fee rules, the
 seat map, the total including bags. You press buy.
 
-One practical note on the mobile side. As of writing, the phone app (iPhone or Android) can pause a routine and approve steps but editing, history, testing, and deleting need a desktop, and there is no iPad app. If your travel plan depends on fixing a bot
+One practical note on the mobile side. As of writing, the phone app (iPhone or Android) can pause a routine and approve steps but Editing and testing a routine still need the desktop app, and the iOS app also runs on iPad. If your travel plan depends on fixing a bot
 from a departure lounge, it does not survive contact with an actual trip.
 
 ## The risk here is what you connect, not what you automate
@@ -205,7 +205,7 @@ your bank into that browser so the money bot can read balances, the grocery bot
 and the mail bot and the one you build in a hurry in November are all running on
 a machine where that session already exists. You are not granting access to a
 bot. You are granting it to the account, permanently, until you deliberately
-sign it out. As of writing there is also no audit view of bot actions, so you
+sign it out. As of writing there is also no audit view of bot actions outside Enterprise, so you
 cannot reconstruct afterwards what was reached.
 
 Three rules follow, and they are cheap.
@@ -379,7 +379,7 @@ of those three appear in the time calculation.
 Where the objection wins outright is worth naming plainly. Households with no
 regular week, where the bot's assumptions never settle. Chores that run less
 often than monthly, which rot between runs. Anyone without a desktop, since
-editing, history, testing and deleting all need one, the phone app (iPhone or Android) can only pause a routine and approve steps, and there is no iPad app. And anyone who will not
+Editing and testing a routine all need one, the phone app (iPhone or Android) can only pause a routine and approve steps, and the iOS app also runs on iPad. And anyone who will not
 read the output: an unread page is worse than no bot, because it costs usage and
 buys a false sense that the chore is handled.
 

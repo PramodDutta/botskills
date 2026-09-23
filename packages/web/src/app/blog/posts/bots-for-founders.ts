@@ -275,7 +275,7 @@ a working roster right up to the moment you notice you stopped reading.
 | The morning output arrives and you do not open it | The report grew longer than its usefulness | Narrow the scope: fewer sources, a harder filter, a hard cap on items |
 | Reports still track a priority you dropped last quarter | Nothing tells a bot the strategy moved | Reread every charter on the first day of each quarter |
 | Two bots tell you the same thing in different words | A seat crept into a neighbouring seat | Delete the newer one. Overlap doubles review and adds no information |
-| You cannot say what a bot did last week | There is no audit view yet, so no log exists unless you keep one | One line per output: date, bot, and acted, read, or skipped |
+| You cannot say what a bot did last week | There is no audit view outside Enterprise, so no log exists unless you keep one | One line per output: date, bot, and acted, read, or skipped |
 | A schedule vanished when you deleted a bot | Routines belong to a single bot and are deleted with it | Note which schedules die with which bot before you delete anything |
 | Output looks correct and is subtly stale | The prompt says "yesterday" while the schedule moved to weekly | Write lookback windows relative to the last run, never to a fixed day |
 
@@ -378,12 +378,13 @@ yourself.
 
 ### What does it cost a solo founder to run bots?
 
-The cheapest paid route to Grok Bot as of writing is Cursor Pro+ at sixty dollars
-a month, with Cursor Ultra, both Cursor Teams tiers, SuperGrok Plus at one
-hundred dollars a month and SuperGrok Heavy also included, and a one-time trial
-available for individuals. Cursor Hobby and Cursor Pro do not include it.
-Subscriptions carry a weekly usage allowance and anything beyond it is billed on
-demand from model and token cost, and there is no bot-specific spend cap in the
-product yet, so review is your only real throttle.
+The cheapest paid route to Grok Bot as of writing is Cursor Pro at twenty dollars
+a month, with Cursor Pro+, Cursor Ultra and Cursor Teams also included, a
+linked individual SuperGrok, SuperGrok Plus or SuperGrok Heavy as another path,
+and a one-time trial available for individuals. Cursor Hobby, the free plan,
+does not include it. Subscriptions carry a weekly usage allowance and anything
+beyond it is billed on demand from model and token cost, and there is no
+bot-specific spend cap in the product, only the account-level On-demand monthly
+limit, so review is your real per-bot throttle.
 `,
 };

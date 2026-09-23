@@ -105,7 +105,7 @@ bot for student work and keeping it apart from everything else does not
 describe anything real. Second, deleting that bot does not remove the files or
 the browser sessions it left behind on the shared computer. Work uploaded there
 is work that stays there until you remove it deliberately. As of writing there
-is also no audit view of bot actions, which means you cannot later demonstrate
+is also no audit view of bot actions outside Enterprise, which means you cannot later demonstrate
 what was accessed, and a data question you cannot answer is its own problem.
 The [shared computer security guide](/blog/grok-bot-shared-computer-security)
 covers exactly what is shared and how to clean up.

@@ -281,14 +281,12 @@ the forty percent jump. Add a targeting snapshot when you are ready to
 diagnose geo.
 
 If you already signed in, say so in the charter and still forbid Save. Then
-rotate the session. Deleting the bot will not log you out. There is no audit
-view of Bot actions yet.
+rotate the session. Deleting the bot will not log you out. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording.
 
 Do not connect Slack send. Paste the note yourself. Confirm each vendor's
 current consent screen. This article will not print a plugin count.
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
-deleting need desktop. Teach-by-demonstration records up to ten minutes of
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Teach-by-demonstration records up to ten minutes of
 browser workflow, no microphone audio, and produces a draft skill. It is
 unavailable on iPhone. Do not teach it to click Save. If a selector breaks,
 fail the run.
@@ -344,7 +342,7 @@ you cannot unsay. A bid is in that set.
 
 ## Prove the stop by planting a dummy campaign the bot must not edit
 
-Grok Bot has no audit view of Bot actions yet. You cannot open a log and see
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. You cannot open a log and see
 "did not change bids." You check the ads account, and you plant a campaign
 that would move if a write happened.
 
@@ -403,9 +401,9 @@ is half spent.
 If the only export you can get is a PDF with no yesterday, refuse the percent.
 
 Grok Bot runs on macOS (Apple silicon and Intel), Windows (x64 and Arm64),
-and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The computer is a managed Linux VM, which is not a
+and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The computer is a managed Linux VM, which is not a
 Linux desktop client. Eligibility is SuperGrok Plus, SuperGrok Heavy, Cursor
-Pro+, Cursor Ultra, Cursor Teams Standard and Premium, plus a one-time
+Pro+, Cursor Ultra, Cursor Teams, plus a one-time
 trial. Confirm current packaging on the vendor's page. A
 [plain overview](/blog/what-is-a-grok-bot) covers the product shape.
 
@@ -469,7 +467,7 @@ and do not invent names.
 
 ### How do I prove the bot did not change a campaign?
 
-Grok Bot has no audit view of Bot actions yet, so you check the ads account.
+Grok Bot has no audit view of Bot actions outside Enterprise, so you check the ads account.
 Plant a dummy campaign with a unique name and a bid you would never run.
 After the morning job, that bid, status, and geo should be unchanged. The
 notes folder should have grown. Slack should be quiet unless you pasted.

@@ -71,8 +71,7 @@ them to the conversation.
 | \`/workspace\` | Shared project folder on the account computer | Yes | Name that path in the next message |
 | A connector or hosted tool | Account-wide service access, not a Finder folder | The tool's own objects, not Desktop.app | Confirm the file lives in that service, not on your laptop |
 
-The phone app does not add a fourth disk: it pauses routines and approves steps, it does not browse files. Editing, history,
-testing, and deleting need a macOS or Windows desk. There is an Android app as of September 2026 (Android 9 or later); iPad is still not supported. A PDF on the phone is still not on the Agent
+The phone app does not add a fourth disk: it pauses routines and approves steps, it does not browse files. Editing and testing a routine need a macOS, Windows or Linux desk. There is an Android app as of September 2026 (Android 9 or later), and the iOS app also runs on iPad (iPadOS 18 or later). A PDF on the phone is still not on the Agent
 Computer. If the path starts with \`/Users/\` or \`C:\\\`, you named the laptop.
 If it starts with \`/workspace\`, you named the worker.
 
@@ -135,7 +134,7 @@ Then name the path. A prompt that says "the CSV I just dropped" names a
 gesture the Linux VM did not observe.
 
 Attach it to the conversation, then tell the bot to write a durable copy
-under \`/workspace/project/\`. There is no audit view of bot actions yet, so
+under \`/workspace/project/\`. There is no audit view of bot actions outside Enterprise, so
 the file on disk is the record. Or create it on Agent Computer: paste,
 download from a URL the cloud computer can reach, or write the rows. That
 is the Linux desktop, not Finder.
@@ -268,7 +267,7 @@ Desktop separately: Mac yes and \`/workspace\` no means copy. Mac no and
 \`/workspace\` no means you never had the file. Both yes means debug the
 rank, not the path.
 
-There is no audit view of bot actions yet. The two listings are the log.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. The two listings are the log.
 Keep them in a note you own. If the charter still needs a change, change
 the path line, not the personality.
 
@@ -313,8 +312,8 @@ sends. Those are instructions plus approval rules, not filesystem ACLs.
 They matter more once the sheet exists on a disk the mail bot can see. Do
 not paste customer rows into chat. Attach or copy, then point at
 \`/workspace\`. If the sheet cannot sit next to a mailbox cookie, it cannot
-sit on this computer. Cursor Pro+ at $60 a month is the cheapest paid path
-that includes Grok Bot, with Teams Standard at $40 per user per month as
+sit on this computer. Cursor Pro at $20 a month is the cheapest paid path
+that includes Grok Bot, with a self-serve Cursor Teams seat as
 another included seat. Confirm live prices before you budget a second
 seat. The
 [shared-computer security page](/blog/grok-bot-shared-computer-security)
@@ -349,9 +348,9 @@ fails at 02:00.
 
 A second eligible account is the move when the sheet cannot share a
 computer with a mailbox. A second bot is not that move. Desks are macOS
-(Apple silicon and Intel) and Windows (x64 and Arm64), plus iPhone on iOS
-18 or later for pause and resume. Linux desktop, Android, and iPad are not
-clients. The worker is still Linux.
+(Apple silicon and Intel), Windows (x64 and Arm64) and Linux (x64 and
+Arm64). Phones are iPhone on iOS 18 or later, Android 9 or later, and iPad
+through the iOS app (iPadOS 18 or later). The worker is still Linux.
 
 The claim is narrow. Grok bot cannot see files on your laptop. It sees the
 shared cloud computer. Put the file in \`/workspace\` (or another path that

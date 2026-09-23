@@ -39,23 +39,21 @@ continues after the pool hits zero is a purchase, if overflow is on. The
 week does not become a month because you think in months. The pool does not
 become a per-bot wallet because you named four bots.
 
-There is no Grok Bot-specific spend cap yet
+There is no Grok Bot-specific spend cap, only the account-level On-demand
+monthly limit
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 Grok bot weekly allowance is not that ceiling. It is the prepaid-looking
-phase. Overflow is the slope after it. Pause is the stop you own. A dollar
-slider is not in the product.
+phase. Overflow is the slope after it. Pause is the stop you own. The monthly
+limit is the only dollar setting, and it fences the whole account, not a bot.
 
 | What you pictured | What the docs describe | What that picture costs you |
 |---|---|---|
 | A monthly AI budget split across bots | A weekly included pool, then overflow | You discover the cut on a Wednesday, not on the first of the month |
 | A published dollar size for a spreadsheet | No published dollar, credit, or run figure | Any quoted number is fan fiction. Read your own invoice |
-| A Bot-specific spend cap you can raise | No Grok Bot-specific spend cap | Searching for a slider while clocks keep firing |
+| A Bot-specific spend cap you can raise | No Grok Bot-specific cap; one account-level On-demand monthly limit | Searching for a per-bot slider while clocks keep firing |
 | Overflow as a hard stop | Overflow as on-demand continuation if the plan allows it | Friday invoice for Thursday work you thought was still included |
 
-Which plan you hold does not print the missing number. SuperGrok Plus,
-SuperGrok Heavy, Cursor Pro+, Cursor Ultra, and Cursor Teams Standard and
-Premium are the eligible paid paths, plus a one-time trial
-([more plans](https://x.ai/news/grok-bot-more-plans)). Confirm names and
+Which plan you hold does not print the missing number. Every paid Cursor plan (Pro, Pro+, Ultra) and every self-serve Cursor Teams seat include Grok Bot, an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked, and a one-time trial exists ([plans](https://cursor.com/help/grok-bot/plans)). Confirm names and
 prices on [cursor.com/pricing](https://cursor.com/pricing) and
 [x.ai/pricing](https://x.ai/pricing). Seat price is the door, not the
 allowance.
@@ -70,7 +68,7 @@ screen is a work surface. A screen is not a second tank.
 
 That is why a quiet briefing can look healthy on Tuesday and still be the
 victim of a five-minute inbox clock you forgot you armed. There is no audit
-view of Bot actions yet, so Friday will not name which bot drank the week
+view of Bot actions outside Enterprise, so Friday will not name which bot drank the week
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 The app keeps the 20 most recent records per routine. That window is a cache,
 not a bill
@@ -105,7 +103,9 @@ model. Grok Bot has no model picker, for members or admins. You cannot limp
 through overflow on a discount SKU. Frequency, pause, and one manual run are
 the levers you have.
 
-There is still no Grok Bot-specific spend cap. Overflow is a slope. A
+There is still no Grok Bot-specific spend cap; the account-level On-demand
+monthly limit is the only fence, and a bot already working can finish past it.
+Overflow is a slope. A
 standing five-minute routine in phase two is a standing purchase. An
 approval does not reverse work already completed
 ([approvals, security and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)).
@@ -113,9 +113,7 @@ approval does not reverse work already completed
 are not a billing brake.
 
 The undocumented wish is that phase two waits for you. It does not. If you
-wanted a halt, you pause. iPhone can pause and resume. Editing, history,
-testing, and deleting need desktop
-([mobile](https://docs.x.ai/grok-bot/mobile)). The invoice is the setting
+wanted a halt, you pause. iPhone can pause and resume. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)). The invoice is the setting
 you can actually feel.
 
 ## Ask the product, not a thread, whether overflow is even available on this plan
@@ -139,8 +137,8 @@ refill rule. If you are looking at a banner, leave this page and read
 next hour. This page is the model you should have had on Monday.
 
 Either branch still has no published allowance figure and no Bot-specific
-spend cap. Cursor Pro+ at sixty dollars a month is the cheapest paid door as
-of the 25 August 2026 check. That is a seat price, not the size of grok bot
+spend cap. Cursor Pro at twenty dollars a month is the cheapest paid door as
+of the 23 September 2026 check. That is a seat price, not the size of grok bot
 weekly allowance. Confirm live.
 [The cheapest way into Grok Bot](/blog/cheapest-way-into-grok-bot) is the
 shopping page.
@@ -194,8 +192,9 @@ you hunt a price table while the Friday invoice is already the fact.
 | The pool is on fire this hour. What do I pause and delete? | [How to stop grok bot overspending](/blog/how-to-stop-grok-bot-overspending) | It will not retell the two-phase model from scratch |
 | Which SKU is the cheapest eligible door? | [Cheapest way into Grok Bot](/blog/cheapest-way-into-grok-bot) | It will not size the weekly pool. No page should |
 
-[No spend cap](/blog/grok-bot-spend-cap-and-token-burn) is the page for
-writing ceilings into charters, because the product still has none.
+[No per-Bot spend cap](/blog/grok-bot-spend-cap-and-token-burn) is the page for
+writing ceilings into charters, because the product has only the account-level
+On-demand monthly limit.
 
 ## Rank standing clocks by which phase they will occupy by midweek
 
@@ -268,15 +267,15 @@ is that hour.
 ## Diagnose a surprise invoice from the phase change, not from a missing slider
 
 The invoice is a lagging indicator. The phase change already happened. Match
-what you see to one move. Do not start by searching for a spend cap. There
-is not one.
+what you see to one move. Do not start by searching for a per-bot spend cap. There
+is not one; the account-level On-demand monthly limit is the only dollar setting.
 
 | What you see | What it usually is | The one move |
 |---|---|---|
 | Friday on-demand line, Thursday artifacts still arrived | Phase two ran unattended after Wednesday emptied the pool | Pause every routine now. Then coarsen the tightest clock |
 | Banner plus a successful retry | Overflow is on, and the retry was a purchase | Stop. Success is not a refill of grok bot weekly allowance |
 | Banner on every bot, nothing completing | Overflow off, or the product halted included work | Pause all. Wait for the week. Do not upgrade to guess a refill |
-| You cannot tell which bot spent the week | No audit view of Bot actions yet | Use your own pause list and clock list. The vendor will not name the card |
+| You cannot tell which bot spent the week | No audit view of Bot actions outside Enterprise | Use your own pause list and clock list. The vendor will not name the card |
 
 A successful tiny run is not proof the included pool refilled. It is proof
 the product will still serve work. Read the usage screen to see which phase
@@ -305,10 +304,10 @@ bot. No clock. If that run fails with quota language, you are not in a
 refilled week. If it succeeds, look at the usage screen again. Success plus
 an on-demand bump means you just bought the test.
 
-iPhone can pause and resume. It cannot give you history. Resume nothing from
+iPhone can pause and resume, and it can show run history. Resume nothing from
 the phone until you have desktop. Switching devices does not refill the week.
-There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); iPad is not supported. Linux desktop, Android,
-and iPad are not ([FAQ](https://docs.x.ai/grok-bot/faq)). See
+There are desktop apps for macOS, Windows and Linux, and companion apps for iPhone (iOS 18 or later) and Android (9 or later); the iOS app also runs on iPad
+([FAQ](https://docs.x.ai/grok-bot/faq)). See
 [supported platforms](/blog/grok-bot-supported-platforms). The computer is a
 managed Linux VM, not a second pool.
 
@@ -332,8 +331,9 @@ It loses as a standing setting. You will not coarsen the clock at lunch.
 The weekly pool is unpublished, so you cannot prove a tight poll fits inside
 grok bot weekly allowance. You find out when Friday bills phase two, or when
 [Chief of Staff Briefing](/bots/chief-of-staff-briefing) goes quiet on the
-other branch. There is still no audit view and no Bot-specific spend cap, so
-the slope has no product-side fence.
+other branch. There is still no audit view outside Enterprise and no Bot-specific spend cap, so
+the slope's only product-side fence is the account-level On-demand monthly
+limit, which a run already working can pass.
 
 For a genuine one-off, you at the desk, overflow confirmed, one manual run.
 Then stop. The shock is an unattended roster that kept purchasing after
@@ -424,10 +424,12 @@ first miss the change. The Friday invoice is how they notice phase two.
 
 No. A spend cap is a ceiling you set so spend cannot pass it. Grok Bot does
 not offer a Bot-specific spend cap. Grok bot weekly allowance is the included
-weekly pool. Overflow after that pool is a slope, not a cap. Pause is the
+weekly pool. Overflow after that pool is a slope, not a cap. The closest thing
+to a cap is the account-level On-demand monthly limit, which fences overflow
+for the whole account, and a run already working can finish past it. Pause is the
 stop you own. A charter that forbids retries, alternate routes, and any
 purchase, top-up, or paid upgrade is the stop you write. Approvals do not
 refund work already completed. Confirm the live invoice. Do not hunt a
-slider.
+per-bot slider.
 `,
 };

@@ -401,7 +401,7 @@ the written half of the relationship. Where a call produced something
 load-bearing, a human writes it down.
 
 Its own memory is short. A routine belongs to one bot, the app keeps only the
-20 most recent run records for it, and there is no audit view of bot actions as
+20 most recent run records for it, and there is no audit view of bot actions outside Enterprise as
 of writing. A daily board loses its history in under a month, which is the
 window pattern analysis needs. Append every board to a document you own from
 day one; the history you did not keep cannot be reconstructed.
@@ -436,7 +436,7 @@ you approving in one place, not the bot sending.
 
 Two operational notes. A routine belongs to a single bot, and the app keeps only
 the 20 most recent run records for it, so a daily board loses its history after
-about a month and there is no audit view of bot actions as of writing. Have the
+about a month and there is no audit view of bot actions outside Enterprise. Have the
 bot append the board to a document you own if the onboarding history matters,
 which for pattern analysis it does.
 

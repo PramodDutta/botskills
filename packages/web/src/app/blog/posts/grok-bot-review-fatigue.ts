@@ -42,8 +42,7 @@ you still need forty yeses a day, the gate is in the wrong place.
 
 Three articles sit next to each other and they are not interchangeable.
 
-The setup page tells you which verbs to park and where the prompt lives on
-a Mac or Windows client. It wires the desk. It does not diagnose the stamp.
+The setup page tells you which verbs to park and where the prompt lives on a desktop client. It wires the desk. It does not diagnose the stamp.
 
 The reversibility essay tells you why size is the wrong axis. Renaming four
 thousand files can finish alone. One outbound sentence cannot. It does not
@@ -185,15 +184,13 @@ after you cut labels: three "proceed" asks a week still get stamped.
 ## Refuse to use iPhone as the review desk when a send is sitting
 
 Supported clients: macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The Bot still runs on a managed Linux VM in
+Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The Bot still runs on a managed Linux VM in
 the cloud, as a non-root user. That is not a Linux desktop client you
 review from.
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
-deleting need desktop. Teach by demonstration is unavailable on iPhone. An
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Teach by demonstration is unavailable on iPhone. An
 approval for a send is a decision about a proposed action. The copy you
-must match, and the screen you must read, live on the Mac or Windows
-client.
+must match, and the screen you must read, live on the desktop client.
 
 iPhone cannot be the review desk. Pause is the pocket verb. Resume is a
 bet that the frozen job is still the job you want. Clearing a stack from
@@ -292,7 +289,7 @@ a prompt.
 ## Hunt a stamped send in sent mail and on disk, because chat is not a ledger
 
 When you suspect a stamp, stop rewriting the charter for an hour. Find out
-whether the mail left. There is no audit view. The disk, the bot screen,
+whether the mail left. Outside Enterprise there is no audit view. The disk, the bot screen,
 and sent mail are the record. [When a job sits silent](/blog/grok-bot-stalled)
 is what you read if nothing left and the run is frozen. This table is what
 you read if something may have left.
@@ -430,17 +427,17 @@ and body, not a busy queue that makes you feel in control.
 ### Can I review Grok Bot send approvals from iPhone?
 
 No. iPhone is not the review desk. On iPhone you can pause and resume a
-routine only. Editing, history, testing, and deleting need the desktop app. A send approval is a decision about a proposed action, and the
+routine only. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. A send approval is a decision about a proposed action, and the
 packet lives on that desktop. If a send is sitting and you cannot reach a
 desk, pause so the run does not keep trying a click you have not read. Do
-not clear a stack from the lock screen. The Linux desktop app and the Android app (both since September 2026) are also not substitute review surfaces for run history, which stays on desktop.
+not clear a stack from the lock screen. The Linux desktop app (since September 2026) is a full review desk, like macOS and Windows. The Android app, like the iPhone app, now shows run history, but a phone screen is still a poor place to compare a draft against the copy you must match.
 
 ### If I already rubber-stamped a send, does denying the next prompt take it back?
 
 No. An approval controls the proposed action and does not reverse work
 already completed. Denying the next prompt stops what comes next and leaves
 the mail that already left. Search sent, open the bot screen, and check
-the draft folder. There is no audit view of Bot actions yet, so chat is not
+the draft folder. There is no audit view of Bot actions outside Enterprise, so chat is not
 a ledger. Fix the relationship if it matters, then pull reversible asks
 off the line. Do not restart the job from a phone, or you can send twice.
 `,

@@ -343,7 +343,7 @@ for what you currently have to say, and dropping to one is a better setup than a
 guilty backlog.
 
 Keep your own record of what the bot staged, too. Each routine keeps only its 20
-most recent run records and no audit view of bot actions exists yet, so if you
+most recent run records and no audit view of bot actions outside Enterprise exists yet, so if you
 want to look back at what was drafted and when, the queue file has to be the
 history rather than the run log.
 

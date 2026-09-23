@@ -157,7 +157,7 @@ Use automation for private preparation and reserve approvals for boundary crossi
 
 The counterexample matters: if you cannot classify the environment or trust the charter, asking every time is a reasonable temporary containment mode. Keep the work paused where even a read exposes sensitive data. But treat universal prompting as a diagnostic posture, not proof that effects are reversible.
 
-Verified documentation describes a team-level ceiling for local execution as coming soon, not shipped. Do not build today's control story around an unavailable setting.
+Verified documentation now includes a team-level ceiling for local execution: team admins on Teams and Enterprise can set Always allow, Ask every time, or Never allow, and a member's stricter setting still applies. It caps the prompt policy. It does not make a finished effect reversible, so do not build today's control story around it alone.
 
 ## Walk Tomas through the watched-folder failure and recovery
 
@@ -181,7 +181,7 @@ Record the evidence in a small table that the next operator can reproduce. A gre
 
 This procedure breaks down when the team cannot pause the downstream system, identify changed objects, or restore state. If a purchase cannot be cancelled, a message cannot be recalled, or a destructive command has no backup, the approval must sit before the action and the automation must not bypass it. Where the preview cannot describe the target, return the action to a person.
 
-It also stops before mobile management details. On iPhone, Grok Bot supports pause and resume, while editing, history, testing, and deleting require desktop. Use [the iPhone companion guide](/blog/grok-bot-iphone-app) for that split. A phone pause can limit later work, but it does not reverse the work that already completed.
+It also stops before mobile management details. On iPhone, Grok Bot supports pause and resume, while Editing and testing a routine still need the desktop app. Use [the iPhone companion guide](/blog/grok-bot-iphone-app) for that split. A phone pause can limit later work, but it does not reverse the work that already completed.
 
 For shared credential risk, continue with [the shared computer guide](/blog/grok-bot-shared-computer-security). For inherited workflows whose sequence is unknown, use [the inherited-bot audit](/blog/how-to-audit-a-bot-you-inherited) before changing grants.
 

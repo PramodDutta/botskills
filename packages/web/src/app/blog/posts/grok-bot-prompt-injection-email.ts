@@ -283,7 +283,7 @@ something upstream has changed.
 | Two bots both reply to one message | The address is wired to more than one bot | One mailbox, one operating bot, one sentinel |
 
 The almost-action row matters most over time. An audit view of bot actions does
-not exist on this platform yet, so the log the sentinel writes is your only
+not exist on this platform outside Enterprise, so the log the sentinel writes is your only
 record of what nearly happened.
 
 ## Answer the case for trusting known senders without a second look
@@ -395,7 +395,7 @@ attempts, a colleague's account that started behaving oddly. None of that is
 visible from individual verdicts.
 
 A platform constraint makes this more important than it sounds. An audit view of
-bot actions does not exist yet, routines are per bot with only the twenty most
+bot actions does not exist outside Enterprise, routines are per bot with only the twenty most
 recent run records kept, and deleting a bot deletes its routines. So the
 almost-action log is a file you keep in the workspace, or it is nothing.
 

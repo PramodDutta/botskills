@@ -226,7 +226,7 @@ The case for automation also overstates the cost of the human step in this desig
 
 Store a minimal evaluation log in a team-controlled location. Include run identifier, charter version, covered scope, inspected conversation IDs, flags, reviewer decision, and defect category. Avoid copying full message bodies. Preserve links and only the short quotations necessary to explain each finding.
 
-If you use Grok Bot, do not assume the product supplies a complete audit view. The verified documentation says an audit view of bot actions does not exist yet. A routine belongs to one bot, and the application keeps only the twenty most recent run records per routine. That makes your own compact log necessary if you want to compare a finding from last month with today's behavior.
+If you use Grok Bot, do not assume the product supplies a complete audit view. The verified documentation says an audit view of bot actions does not exist outside Enterprise. A routine belongs to one bot, and the application keeps only the twenty most recent run records per routine. That makes your own compact log necessary if you want to compare a finding from last month with today's behavior.
 
 Also remember that deleting a bot does not remove shared-computer files or browser sessions. Decommissioning therefore includes removing the Help Scout session, deleting exported test data from the shared computer, revoking the dedicated credential, stopping the routine, and recording the final charter version. Deleting the named bot alone is not cleanup.
 

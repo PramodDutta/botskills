@@ -162,7 +162,7 @@ legal line: you stop, you do not create an account.
 Never paste a password or a one-time code into chat. A wall is not a missing
 button. Signing in to recover a renamed class puts a session on the one
 computer every bot shares. Deleting the watcher later does not remove that
-session. There is no audit view of Bot actions yet. [Lead Scout](/bots/lead-scout)
+session. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. [Lead Scout](/bots/lead-scout)
 does not need Northline's logged-in view. If you create that view to "fix"
 Tuesday, Lead Scout can open it on Wednesday. Sign-out and revoke stop that.
 
@@ -278,8 +278,7 @@ sessions for selector failures.
 
 A selector bug is weather. Carry-forward is a choice. If Tuesday's file still
 lists Monday's $79 Team plan and Northline no longer sells Team, you will
-argue with a prospect using a number that does not exist. There is no Grok
-Bot-specific spend cap. Weekly allowance then on-demand from model and token
+argue with a prospect using a number that does not exist. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance then on-demand from model and token
 cost. No published dollar figure for the allowance. A could-not-compute after
 one failed extract is cheaper than a ten minute screenshot hunt, and it is
 more honest.
@@ -343,7 +342,7 @@ structured door exists. Blindness on redesign is expected. Output
 could-not-compute. Do not invent." Daily on brittle HTML multiplies misses.
 Weekly, with a manual sweep, is the shape that holds.
 Platform limits still apply. macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and iPhone on iOS 18+ have clients. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The computer is a managed Linux VM, not a Linux
+Arm64), and iPhone on iOS 18+ have clients. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The computer is a managed Linux VM, not a Linux
 desktop client. On iPhone you can pause a looping routine. You cannot usefully
 edit the charter from the phone. If the site is yours, build the door.
 
@@ -389,7 +388,7 @@ safe overnight worker is the one that will look broken.
 Put that preference in the charter as the boundary. The one action this
 watcher never takes without a human is inventing a fact to keep the report
 pretty. Approvals gate a proposed action. They do not reverse a number already
-repeated in a deck. There is no audit view to catch the time the bot filled a
+repeated in a deck. There is no audit view outside Enterprise to catch the time the bot filled a
 hole. You are the log. Once the fetch is honest, the filter work (ignore
 banners, require quotes, confirm experiments twice) lives in the competitor
 monitoring article. Do not skip could-not-compute to get there.
@@ -415,7 +414,7 @@ No, not for competitor pages, and not as a patch for a renamed button. Grok
 Bot assigns one persistent cloud computer to your user account. Browser
 cookies are shared across every bot, including research jobs such as Lead
 Scout. Screens are not a security boundary. Deleting the watcher does not
-remove the session, and there is no audit view of who used it. A login wall is
+remove the session, and outside Enterprise there is no audit view of who used it. A login wall is
 a different layer from a missing selector. Hand challenges to a person. Prefer
 a connector or hosted MCP for anything load-bearing, and sign out if you had
 to authenticate.

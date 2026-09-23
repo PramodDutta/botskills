@@ -54,14 +54,14 @@ gaps are not the ones people guess.
 | macOS, Intel | Yes | Same as Apple silicon |
 | Windows x64 | Yes | A first-class desktop, not a fallback |
 | Windows Arm64 | Yes | Also first class, which surprises people |
-| iPhone, iOS 18 or later | Yes, partially | Pause, resume and approve; editing, history, testing, and deleting need a desktop |
+| iPhone, iOS 18 or later | Yes, partially | Pause, resume, approve, read run history and delete; editing and testing a routine still need the desktop app |
 | Linux desktop | Yes | .deb, .rpm or AppImage, listed in the FAQ since September 2026 |
-| Android | No | No app at all, so no remote control either |
-| iPad | No | The iPhone app is not an iPad app |
+| Android 9 or later | Yes, partially | The same companion app as iPhone, since September 2026 |
+| iPad, iPadOS 18 or later | Yes, partially | The iOS app also runs on iPad |
 
 Two consequences shape your setup. If your only machine runs Linux, the hosted
-path is closed to you today and the honest options are a Mac or Windows machine
-you already have access to, or a self-hosted runtime. And if you were planning
+path has been open since September 2026: install the .deb, .rpm or AppImage
+and follow the same steps as a Mac. And if you were planning
 to build and tune charters from your phone during a commute, plan differently:
 the phone is a remote control for a running bot, not a place to author one.
 [The full platform breakdown](/blog/grok-bot-supported-platforms) covers what
@@ -78,19 +78,20 @@ before paying.
 | Plan | Price as of writing | Includes Grok Bot |
 |---|---|---|
 | Cursor Hobby | Free | No |
-| Cursor Pro | $20/mo | No |
-| Cursor Pro+ | $60/mo | Yes, and it is the cheapest paid path |
+| Cursor Pro | $20/mo | Yes, and it is the cheapest paid path |
+| Cursor Pro+ | $60/mo | Yes, with more weekly usage than Pro |
 | Cursor Ultra | $200/mo | Yes |
-| Cursor Teams Standard | $40/user/mo | Yes |
-| Cursor Teams Premium | $120/user/mo | Yes |
-| SuperGrok | $30/mo | No |
-| SuperGrok Plus | $100/mo | Yes |
-| SuperGrok Heavy | Not published | Yes |
+| Cursor Teams (self-serve) | Per seat, on Cursor's team pricing | Yes, every member |
+| Cursor Enterprise | Through the account team | Yes, once an admin enables it |
+| SuperGrok (individual) | On x.ai/pricing | Yes, once linked |
+| SuperGrok Plus | On x.ai/pricing | Yes, once linked |
+| SuperGrok Heavy | Not published | Yes, once linked |
 | A one-time trial | Free, once | Yes, for individuals |
 
-The two rows that catch people are Cursor Pro at $20 and SuperGrok at $30. Both
-are the plan directly below an eligible one, and both are what someone
-remembers paying for when they say "I already have it." If you hold both a
+The two rows that catch people are Cursor Hobby and SuperGrok. Hobby is free
+and has no Grok Bot, and a SuperGrok subscription does nothing until you link
+it from the Grok Bot plan screen. Both are what someone remembers when they say
+"I already have it." If you hold both a
 Cursor and a SuperGrok subscription, Grok Bot draws on whichever has more usage
 available rather than adding them together. [How the account and plan chain
 actually works](/blog/grok-bot-cursor-account-explained) has the full picture
@@ -126,7 +127,7 @@ where your credentials live.
 | Model | Fixed set, no picker | Bring your own |
 | Setup effort | Account and connections | Install, configure, supply keys |
 | Credentials | Stored with the platform | Stay in your environment |
-| Desktop platforms | macOS and Windows only | Wherever you can run it, Linux included |
+| Desktop platforms | macOS, Windows and Linux | Wherever you can run it |
 | Best when | You want it working today | You need data to stay in-house |
 | Worst when | Policy forbids vendor-held tokens | Nobody on hand to maintain it |
 
@@ -165,7 +166,7 @@ Three practical consequences for setup:
 Two smaller facts worth knowing before you connect anything. Outbound traffic
 uses static egress IPs, and some services flag datacenter addresses, so a
 login that works from your laptop can behave differently from the bot's
-browser. And there is no audit view of bot actions as of writing, which means
+browser. And there is no audit view of bot actions outside Enterprise, which means
 the record of what your bots did is whatever you instructed them to report.
 [What the shared computer actually covers](/blog/grok-bot-shared-computer-security)
 goes through the full list.
@@ -327,7 +328,8 @@ empty result into a checkable one.
 
 Retry counts are worth being conservative about. A retry loop that runs
 unattended is the classic way to spend an unexpected amount of usage, and there
-is no Grok Bot specific spend cap as of writing: the subscription includes a
+is no Grok Bot specific spend cap as of writing, only the account-level
+On-demand monthly limit: the subscription includes a
 weekly allowance and work beyond it bills on demand from actual model and token
 cost. One retry, then a report, is the safe default for a first bot.
 
@@ -370,9 +372,9 @@ reversing work already done.
 
 Four situations where the ninety-minute path above is the wrong plan.
 
-**Linux-only shops.** There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). The realistic route is a
-self-hosted runtime, and the setup arc changes shape entirely because you own
-the install, the model keys, and the updates.
+**Linux-only shops.** This used to be the first exception. There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage), so the
+ninety-minute path now applies. Self-host only if policy, not the desktop,
+forces it, because then you own the install, the model keys, and the updates.
 
 **Organizations on Privacy Mode (Legacy).** That setting blocks Grok Bot
 outright, so no amount of correct plan selection will produce a bot. Confirm
@@ -381,11 +383,11 @@ the workspace setting before anyone buys a seat.
 **Teams that need per-bot isolation.** It does not exist. If your compliance
 requirement is that the finance bot cannot reach the marketing bot's sessions,
 the unit of separation available to you is an account, not a bot. A team-level
-ceiling on local execution has been described as coming, with members able to
-choose stricter but not looser settings, and as of writing it has not shipped.
+ceiling on local execution has shipped for team admins, and a member's
+stricter setting still applies, but it caps local execution, not the shared
+cloud computer.
 
-**Anything that needs a formal audit trail today.** There is no audit view of
-bot actions yet. You can build a serviceable substitute by having every bot
+**Anything that needs a formal audit trail today.** Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. You can build a serviceable substitute by having every bot
 write an append-only log it never edits, but that is a charter convention you
 maintain, not a platform guarantee, and it will not satisfy an auditor who
 wants a system record.

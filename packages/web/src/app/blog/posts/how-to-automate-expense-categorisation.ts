@@ -119,7 +119,7 @@ Six months later, nobody asks what account a row is in. They ask why. A decider
 field turns that from an archaeology exercise into a lookup, and it is the single
 column that makes the whole output defensible to somebody who was not there.
 
-This matters more than usual in a bot runtime. As of writing there is no audit
+This matters more than usual in a bot runtime. Outside Enterprise there is no audit
 view of bot actions, and the app keeps only the twenty most recent run records
 per routine, so a weekly job forgets its own history inside five months. Whatever
 the run wrote into the output file is the record. Nothing recoverable sits behind

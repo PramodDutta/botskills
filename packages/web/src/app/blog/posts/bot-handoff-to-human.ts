@@ -201,7 +201,7 @@ irreversible step and can still deliver the ask in the evening batch, because
 nothing is decaying while it waits.
 
 There is a device constraint worth planning around. On iPhone you can pause and
-resume a routine, while editing, history, testing, and deleting all require the
+resume a routine, while Editing and testing a routine all require the
 desktop app ([mobile](https://docs.x.ai/grok-bot/mobile)). So a handoff that can
 only be resolved by changing the charter is a handoff that waits for a laptop,
 whatever channel it arrived in. Write the defaults on the assumption that you

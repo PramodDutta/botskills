@@ -333,7 +333,7 @@ new tool. Bots do not drift toward sending on their own; they drift because the
 account gained a capability for a different job and this bot can see it.
 
 The account check is the one that matters most, because no audit view of bot
-actions exists yet. There is no log to reconstruct later, so the platform's own
+actions exists outside Enterprise. There is no log to reconstruct later, so the platform's own
 notifications, replies tab, and DM list are your only independent record of what
 left.
 
@@ -396,7 +396,7 @@ ranges. So the honest response to a sign-in challenge is to stop and tell you,
 not to route around it with another tool. A scout that cannot sign in is a scout
 that stays off this week.
 
-Review the sheet on a desktop. Supported clients are macOS, Windows and Linux desktops plus iPhone and Android phones, and the phone app can pause or resume a routine and approve steps, with editing, history, and testing needing desktop. Ten permalinks and ten drafts are not a
+Review the sheet on a desktop. Supported clients are macOS, Windows and Linux desktops plus iPhone and Android phones, and the phone app can pause or resume a routine, approve steps, and show run history, with editing and testing needing desktop. The iOS app also runs on iPad. Ten permalinks and ten drafts are not a
 phone task, and a glance-approve is how a dunk becomes a message.
 
 **Keep reading:** [How to Build a Grok Bot That Can Research Leads Overnight](/blog/grok-bot-to-lead-research), [Grok Bot and X](/blog/grok-bot-x-twitter), [Automating Social Content Without Losing Your Account](/blog/grok-bot-x-content-automation-risks).

@@ -11,7 +11,7 @@ export const post: BlogPost = {
 
 You closed the inbox at 9:12 and called it a win. Measuring bot ROI does not start at 9:12. It starts the afternoon before, when you write down how many minutes labeling actually took you last week, and it continues every afternoon you still spend opening drafts that should not have existed.
 
-A quieter inbox is a feeling. Measuring bot ROI is a diary of minutes: credit time you actually avoided on a named job, subtract review of bad drafts, and fail the week if the bot found a crisis on every line, even when the net looks positive. Twenty run records are not that diary. There is no audit view of Bot actions yet, so the sheet you keep is the only clock.
+A quieter inbox is a feeling. Measuring bot ROI is a diary of minutes: credit time you actually avoided on a named job, subtract review of bad drafts, and fail the week if the bot found a crisis on every line, even when the net looks positive. Twenty run records are not that diary. There is no audit view of Bot actions outside Enterprise, so the sheet you keep is the only clock.
 
 This page is the time-study method for any bot. It is not [Score Whether This Grok Bot Paid for Itself](/blog/score-whether-this-grok-bot-paid-for-itself), which asks whether hours you avoided beat overflow you copied from an invoice. Stay here until five weekdays have minutes. If the question is dollars, open the money twin.
 
@@ -112,9 +112,9 @@ A routine assigns a workflow to one Bot. The app keeps the 20 most recent run re
 
 Those rows show that a run fired. They do not show minutes you spent, minutes you would have spent, or whether a flag was a real crisis. A clock that fires every hour will push the first row off the list before tomorrow afternoon. Cite the twenty to debug a silent morning. Never cite them as proof a bot is saving you time.
 
-On iPhone you cannot open that history. Pause is available. Measuring bot ROI is not. There are Linux desktop and Android apps as of September 2026; iPad is still not supported ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). Reconstructing Monday from a Friday memory is invented ROI.
+On iPhone you can now open that history, and pause is available. Measuring bot ROI is not. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later) ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)). Reconstructing Monday from a Friday memory is invented ROI.
 
-There is no audit view of Bot actions yet ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)). If you need that packet, keep receipts on [the no-audit page](/blog/grok-bot-no-audit-log-yet). Twenty records are not that packet, and they are not this timesheet.
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)). If you need that packet, keep receipts on [the no-audit page](/blog/grok-bot-no-audit-log-yet). Twenty records are not that packet, and they are not this timesheet.
 
 ## Refuse every savings percentage that did not come from your own diary
 
@@ -134,7 +134,7 @@ Skip three afternoons and those rows are unscored. Three unscored rows in a five
 
 Put the sheet where the company owns it. Paz used one document: window start, window end, baseline rule, crisis rule, verdict date. The bot may append that a run finished. It may not fill minutes or grade its own flags.
 
-If you travel, pause rather than reconstructing after you return. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop ([mobile](https://docs.x.ai/grok-bot/mobile)). If you cannot look at the proposals the same day, unscored is the correct row.
+If you travel, pause rather than reconstructing after you return. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)). If you cannot look at the proposals the same day, unscored is the correct row.
 
 Privacy Mode (Legacy) blocks Grok Bot entirely. If it is on, there is no bot to time.
 
@@ -150,7 +150,7 @@ Grant this much: if you timed three baselines, five afternoons are filled, colum
 
 "The inbox feels faster" scores the mailbox, not this bot. Diary [Lead Scout](/bots/lead-scout) on a separate sheet or admit you are not measuring this bot.
 
-If you are not on an eligible plan, there is no bot to time. Cursor Hobby, Cursor Pro at 20 USD, and SuperGrok at 30 USD do not include Grok Bot. The cheapest individual paid door is Pro+ at 60 USD, checked 25 August 2026 on [cursor.com/pricing](https://cursor.com/pricing). [Shadow mode](/blog/grok-bot-shadow-mode) asks whether you would have done what the bot did. This diary asks how long it took. You can MATCH a fluent crisis you would never have filed. That MATCH is a trap if you credit it as saved minutes.
+If you are not on an eligible plan, there is no bot to time. Every paid Cursor plan includes Grok Bot; Cursor Hobby, the free plan, does not, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. The cheapest individual paid door is Cursor Pro at 20 USD, checked 23 September 2026 on [cursor.com/pricing](https://cursor.com/pricing). [Shadow mode](/blog/grok-bot-shadow-mode) asks whether you would have done what the bot did. This diary asks how long it took. You can MATCH a fluent crisis you would never have filed. That MATCH is a trap if you credit it as saved minutes.
 
 ## Keep send and permanent delete off the bot while the diary is open
 
@@ -174,7 +174,7 @@ Pause from the phone if needed. At a desk, coarsen or delete the clock, then rew
 
 After pause, time three hand mornings again. Paz does not carry 40 into September. Mood is not a trigger. Empty cells, crisis-every-run, and net at or below zero are. Write which one fired.
 
-Coming soon, not shipped: a team-level ceiling on local execution, and an admin Kill that deletes the VM while durable storage is kept. Kill is not a timesheet.
+Shipped since the August docs previewed them: a team-level ceiling on local execution for Teams and Enterprise admins, and Terminate, which lets Enterprise organization admins delete a member's computer while the durable disk is kept. Terminate is not a timesheet.
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
@@ -226,7 +226,7 @@ This page stops when the question is no longer minutes you can name.
 
 Hours versus overflow you copied from an invoice is [Score Whether This Grok Bot Paid for Itself](/blog/score-whether-this-grok-bot-paid-for-itself). That is the money twin. Do not copy an overflow line into this diary and call it measuring bot ROI. They are two clocks.
 
-Always-red output is [false positives](/blog/grok-bot-false-positives). Wrist-flick approvals are [review fatigue](/blog/grok-bot-review-fatigue). Proof of what the bot proposed is [no audit view yet](/blog/grok-bot-no-audit-log-yet).
+Always-red output is [false positives](/blog/grok-bot-false-positives). Wrist-flick approvals are [review fatigue](/blog/grok-bot-review-fatigue). Proof of what the bot proposed is [no audit view outside Enterprise](/blog/grok-bot-no-audit-log-yet).
 
 A send you cannot undo is an incident. A brief you would never have written by hand has no honest column A. If column A is a guess, time the job by hand three times or drop the diary.
 
@@ -251,7 +251,7 @@ This page is a time study. You log minutes you would have spent, minutes you sti
 
 ### Can the twenty run records replace a diary of minutes?
 
-No. A routine keeps the twenty most recent run records, then older rows vanish. Those rows show that a run fired. They do not show minutes you spent labeling, minutes you would have spent, or minutes you spent opening false crises. There is no audit view of Bot actions yet. Fill the diary the same afternoon. If you wait until the cache has slid, you cannot reconstruct measuring bot ROI from the product, and you should not invent the missing minutes. On iPhone you can pause. You cannot open that history.
+No. A routine keeps the twenty most recent run records, then older rows vanish. Those rows show that a run fired. They do not show minutes you spent labeling, minutes you would have spent, or minutes you spent opening false crises. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Fill the diary the same afternoon. If you wait until the cache has slid, you cannot reconstruct measuring bot ROI from the product, and you should not invent the missing minutes. On iPhone you can pause and open that history, and it still holds no minutes.
 
 ### What should I do if the bot finds a crisis on every morning run?
 

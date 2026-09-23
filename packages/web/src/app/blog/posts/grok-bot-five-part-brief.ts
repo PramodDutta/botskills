@@ -168,7 +168,7 @@ covering everything missing, then silence.
 
 Waiting feels wrong. You wanted the thing and a bot is asking about a reviewer.
 The alternative is a full run against a guessed scope, which costs the run, the
-review, and the rework. There is no product-level spend cap yet, and
+review, and the rework. There is no product-level spend cap, only the account On-demand monthly limit, and
 subscriptions carry a weekly allowance with on-demand overflow after it, so a
 wasted run is not free in time or usage.
 
@@ -386,7 +386,7 @@ in a customer's inbox.
 An approval controls the proposed action and does not reverse work already
 completed. So the only approval that means anything for an outbound message
 happens before the send, on the exact text, with the recipient visible. No audit
-view of bot actions exists yet either, which makes the chat transcript your only
+view of bot actions exists outside Enterprise either, which makes the chat transcript your only
 record of what was approved and when.
 
 Write the expiry into the brief. "You may draft. I approve each send

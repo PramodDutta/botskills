@@ -56,7 +56,7 @@ pages that genuinely have no other door.
 The economics here matter more than they normally would, because a lot of
 people meet Grok Bot through the one time trial that serves as an eligibility
 path for individuals. A trial is a fixed thing you spend once. After that the
-cheapest paid route is Cursor Pro+ at sixty dollars a month, and SuperGrok Plus
+cheapest paid route is Cursor Pro at twenty dollars a month, and SuperGrok Plus
 at a hundred includes access while SuperGrok at thirty does not. Subscriptions
 carry a weekly usage allowance, and once you pass it you are on demand,
 metered against actual model and token cost. There is no Grok Bot specific

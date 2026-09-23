@@ -3,13 +3,13 @@ import type { BlogPost } from './index';
 export const post: BlogPost = {
   title: 'How to Download Grok Bot on Mac, Windows, Linux, iPhone or Android',
   description:
-    'Download Grok Bot from x.ai/bot for Mac, Windows or Linux, or from the App Store or Google Play on phones, after confirming an eligible plan. iPad has no client.',
+    'Download Grok Bot from x.ai/bot for Mac, Windows or Linux, or from the App Store or Google Play on phones, after confirming an eligible plan. iPad runs the iOS app.',
   date: '2026-08-27',
   category: 'Tutorial',
   content: `
 # How to Download Grok Bot on Mac, Windows, Linux, iPhone or Android
 
-> **Correction, 4 September 2026.** When this page was written the Grok Bot docs listed no Linux desktop app and no Android app, and described the iPhone app as pause and resume only. The docs now list a Linux desktop app (x64 and Arm64, as a .deb, an .rpm or an AppImage) and an Android companion app for Android 9 or later, and the phone app can create bots, message them, approve steps, take over the computer and pause routines. iPad is still not supported. Sentences below that say otherwise are out of date and are being rewritten. The current platform list is on [Grok Bot supported platforms](/blog/grok-bot-supported-platforms) and the Android app has [its own page](/blog/grok-bot-android-status).
+> **Correction, 4 September 2026.** When this page was written the Grok Bot docs listed no Linux desktop app and no Android app, and described the iPhone app as pause and resume only. The docs now list a Linux desktop app (x64 and Arm64, as a .deb, an .rpm or an AppImage) and an Android companion app for Android 9 or later, and the phone app can create bots, message them, approve steps, take over the computer and pause routines. On 4 September iPad was still not supported. The current platform list is on [Grok Bot supported platforms](/blog/grok-bot-supported-platforms) and the Android app has [its own page](/blog/grok-bot-android-status). As of 23 September 2026 the iOS app also runs on iPad (iPadOS 18 or later).
 
 The Windows installer ran cleanly on Arm64, you signed in with the Cursor
 account you already pay for, and Grok Bot still looks like it never shipped.
@@ -17,8 +17,8 @@ account you already pay for, and Grok Bot still looks like it never shipped.
 That sequence is the normal failure. Search intent for download grok bot
 is transactional: a file, a store listing, a progress bar. The product
 fails one screen later, when the Cursor login that opens the editor
-refuses the bot because the plan is Hobby, Pro at $20, or SuperGrok at
-$30.
+refuses the bot because the plan is Hobby, the free one, or a SuperGrok
+subscription nobody linked.
 
 This page is the download path with the eligibility gate in front of it.
 It is not the [supported platforms](/blog/grok-bot-supported-platforms)
@@ -30,7 +30,7 @@ to know whether Get will open a product or an empty room.
 
 Official desktop path: [x.ai/bot](https://x.ai/bot). Official phone path:
 the iOS App Store search for Grok Bot, on an iPhone running iOS 18 or
-later. Do not follow a GitHub release, a Telegram zip, or a "Grok Bot for
+later, or Google Play on Android 9 or later. Do not follow a GitHub release, a Telegram zip, or a "Grok Bot for
 Linux" wrapper. Those are other software wearing this name.
 
 ## Confirm the plan before you download grok bot, not after sign-in
@@ -40,26 +40,26 @@ whether the binary can land on the disk. Sign-in is the real gate, and it
 runs against a Cursor identity, not against a clever download mirror.
 
 Eligible plans, from the [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq):
-SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, and Cursor
-Teams Standard and Premium, plus a one-time trial
+every paid Cursor plan (Pro, Pro+, Ultra), Cursor Teams, and a linked
+individual SuperGrok, SuperGrok Plus or SuperGrok Heavy, plus a one-time trial
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 Eligibility widened on 21 August 2026
 ([xAI announcement](https://x.ai/news/grok-bot-more-plans)). Launch-week
 posts that still describe a Mac-only Ultra product are stale.
 
-Closed doors with similar names: Cursor Hobby, Cursor Pro at $20 a month,
-SuperGrok at $30. SuperGrok Plus at $100 includes Grok Bot. Cursor Pro+
-at $60 is the cheapest documented paid path for one person
-([Cursor pricing](https://cursor.com/pricing), checked 25 August 2026).
-Do not print a SuperGrok Heavy dollar figure. Holding Hobby plus $30
-SuperGrok does not add up to an eligible identity.
+Closed doors with similar names: Cursor Hobby, SuperGrok Lite, and
+SuperGrok Team or Enterprise, which cannot link. An individual SuperGrok
+subscription grants usage once you link it from the Grok Bot plan screen. Cursor Pro at $20 a month is the cheapest documented paid path for one person
+([Cursor pricing](https://cursor.com/pricing), checked 23 September 2026).
+Do not print a SuperGrok Heavy dollar figure. Holding Hobby plus a
+SuperGrok you never linked does not add up to an eligible identity.
 
 | What you do first | What you learn | What you still do not know |
 |---|---|---|
 | Download, then sign in | Whether the binary launches | Whether the empty screen is a bug |
 | Open the invoice, then download | Whether this identity is on the list | How the first bot should be bounded |
 | Start a trial, then download | Whether you have a sampler | How large the credit is (unpublished) |
-| Upgrade to Pro+, then download | That the paid door is open | That you still have no spend cap |
+| Upgrade to Pro+, then download | That the paid door is open | That you still have no per-Bot spend cap |
 
 The right first move is the invoice. Two minutes with the plan name beats
 forty minutes of reinstalling an Arm64 build that already worked.
@@ -68,22 +68,21 @@ forty minutes of reinstalling an Arm64 build that already worked.
 
 There are two official clients, and they are not interchangeable.
 
-Desktop: go to [x.ai/bot](https://x.ai/bot) and take the macOS or Windows
-build. macOS covers Apple silicon and Intel. Windows covers x64 and
+Desktop: go to [x.ai/bot](https://x.ai/bot) and take the macOS, Windows or
+Linux build. macOS covers Apple silicon and Intel. Windows covers x64 and
 Arm64. Arm64 is first-class, not a stub
 ([Grok Bot FAQ](https://docs.x.ai/grok-bot/faq)).
 
-iPhone: App Store search for Grok Bot, iOS 18 or later. The phone app can pause or resume it and approve steps, but not edit it. Editing, history, testing, and deleting need a desktop
-([mobile](https://docs.x.ai/grok-bot/mobile)). A browser tab is not a
+iPhone: App Store search for Grok Bot, iOS 18 or later. The phone app can pause or resume a routine and approve steps, but not edit one. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)). A browser tab is not a
 third client. If a phone is your only device, you can download grok bot
-in the store sense and still be unable to author anything.
+in the store sense and still be unable to edit or test a routine.
 
 | Surface | Official door | After a healthy install you can | After a healthy install you still cannot |
 |---|---|---|---|
 | macOS (Apple silicon or Intel) | x.ai/bot | Create, edit, test, schedule, read history, delete | Pick a model, set a Grok Bot spend cap, see an audit view |
 | Windows x64 | x.ai/bot | The same desktop jobs as macOS | The same missing controls |
 | Windows Arm64 | x.ai/bot | The same desktop jobs as x64 | Prove eligibility. The binary does not do that |
-| iPhone, iOS 18+ | App Store search for Grok Bot | Pause and resume | Edit, history, test, delete, teach by demonstration |
+| iPhone, iOS 18+ (also iPad, iPadOS 18+) | App Store search for Grok Bot | Approve steps, take over the computer, pause and resume, read run history, delete a routine | Edit or test a routine, teach by demonstration |
 
 If the vendor page and the App Store disagree with a screenshot you saw
 on X, trust the vendor page. The product launched in beta on 11 August
@@ -98,8 +97,8 @@ repo that asks you to paste a Cursor session into a community wrapper.
 
 This site will not name those projects. Naming them is a link. A star
 count is not a substitute for [docs.x.ai](https://docs.x.ai/grok-bot/faq).
-If the file did not come from x.ai/bot or from the iOS App Store listing
-for Grok Bot, it is not the product this article is about.
+If the file did not come from x.ai/bot, the iOS App Store listing, or
+Google Play, it is not the product this article is about.
 
 Sign-in is a Cursor identity. A wrapper that captures that login has the
 account the cloud computer is assigned to. Do not debug a missing Linux
@@ -118,13 +117,13 @@ dollar amount you remember. Adjacent SKUs are designed to be confused.
 | Name on the invoice | After you download and sign in | What to do instead of reinstalling |
 |---|---|---|
 | Cursor Hobby | The client can launch. Grok Bot is not included | Start the one-time trial, or move to an eligible paid plan |
-| Cursor Pro, $20/mo | Same: editor access is not bot access | Pro+ at $60 is the cheapest documented individual paid door |
-| SuperGrok, $30/mo | Chat-side SuperGrok is not Plus | Plus at $100 includes Grok Bot. Confirm on x.ai/pricing |
+| Cursor Pro, $20/mo | Eligible: the cheapest documented individual paid door | If it is not, you are on the wrong account or Privacy Mode (Legacy) is on |
+| SuperGrok (individual) | Eligible once linked from the Grok Bot plan screen | Link from the right Cursor account. The link is permanent and does not stack with a Cursor plan |
 | Cursor Pro+, $60/mo | This identity should be eligible | If it is not, you are on the wrong account or Privacy Mode (Legacy) is on |
 | Cursor Ultra, $200/mo | Eligible | Do not buy Ultra only to get a "better bot." There is no model picker |
-| Cursor Teams Standard, $40/user/mo | Eligible for seats on that team plan | Confirm you signed into the team identity, not a leftover Hobby login |
-| Cursor Teams Premium, $120/user/mo | Eligible | Same identity check as Standard |
-| SuperGrok Plus, $100/mo | Eligible | Sign in with the identity that holds Plus, not a second Cursor Hobby |
+| Cursor Teams (self-serve) | Eligible: every member has access | Confirm you signed into the team identity, not a leftover Hobby login |
+| Cursor Teams, Premium seat | Eligible, but no Premium seat is required | Same identity check. A higher seat can raise weekly usage; access is the same |
+| SuperGrok Plus | Eligible once linked | Link the Grok account that holds Plus to the Cursor sign-in you use, not to a second Cursor Hobby |
 | SuperGrok Heavy | Eligible, on the FAQ list | Confirm current price on the vendor page. Do not trust a roundup |
 | One-time trial | Eligible as a sampler, limited usage | A lab, not a week of unrestricted agents |
 
@@ -169,8 +168,8 @@ entitled.
 | Thu 19:10 | Compares with a Pro+ teammate on x64 | Snapdragon is the split | The split is the invoice, not the chip |
 | Fri 09:20 | Reads Hobby on the bill, then the FAQ | I wasted an evening on a broken app | She wasted an evening on an ineligible identity |
 
-The fix is boring: start the trial, or move the identity to Pro+, Plus,
-Teams, Ultra, or Heavy. She does not need a different Windows build.
+The fix is boring: start the trial, move the identity to Pro, Pro+,
+Ultra or Teams, or link SuperGrok. She does not need a different Windows build.
 [Inbox Triage](/bots/inbox-triage) and
 [Standup Scribe](/bots/standup-scribe) are still drafts after the door
 opens.
@@ -182,7 +181,7 @@ one of them is a download.
 
 | What you see | Likely cause | What would actually change it | What will not |
 |---|---|---|---|
-| Installer will not run | Wrong OS: Linux desktop, Android, iPad, or an old iPhone | A supported machine, or wait | A community wrapper |
+| Installer will not run | Wrong OS version: iPhone or iPad below 18, Android below 9 | A supported machine, or an OS update | A community wrapper |
 | Installer runs, app will not launch | Local block: OS policy, broken package, store region | Retry from x.ai/bot or the App Store, check OS version | Changing Cursor plans |
 | App launches, sign-in works, no Grok Bot | Ineligible plan or Privacy Mode (Legacy) | Trial or eligible plan, or turn that mode off | A second installer |
 | App launches, roster exists, jobs fail later | Charter, connections, or usage, not the binary | A bounded first bot and a read of the run | Re-downloading the client |
@@ -197,37 +196,35 @@ FAQ list, then Privacy Mode (Legacy), then the wrong Cursor user. A
 failed download is a file problem. An empty product is an entitlement
 problem. Mixing them is how unofficial builds get a customer.
 
-## Skip iPad after one documented no; Linux and Android have clients now
+## Linux, Android and iPad have official clients now
 
-There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). There is an Android app as of September 2026 (Android 9 or later); iPad is still not supported. There is no
-iPad app. The FAQ says so. The teams page answers "Is there a Linux
-desktop app?" with no
+There is a Linux desktop app as of September 2026 (.deb, .rpm or AppImage). There is an Android app as of September 2026 (Android 9 or later), and the iOS app also runs on iPad (iPadOS 18 or later).
+The [FAQ](https://docs.x.ai/grok-bot/faq) says so. In August the teams page
+answered "Is there a Linux desktop app?" with no; that answer is gone
 ([teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises)).
 
-Do not spend the download session proving those sentences false. The
+Do not confuse the Linux client with the Linux computer. The
 cloud computer is a managed Linux VM. The bot runs as a non-root user.
 That is the worker, not a .deb. The argument lives on
 [Grok Bot on Linux](/blog/why-grok-bot-has-no-linux-app).
 The grid lives on
 [supported platforms](/blog/grok-bot-supported-platforms). If your
-only machine is Ubuntu, Pixel, or iPad, you cannot finish a download that
-lets you author work. A borrowed Mac can be a control surface. Wine
-and a Windows VM, if they ever open, are still Windows clients with
-extra steps, not a Linux download. Android has a companion app as of September 2026. iPad is not a large iPhone app. Until the docs replace the no,
-unofficial software is not a plan.
+only machine is a Pixel or an iPad, you can finish the download and still
+not edit or test a routine. A borrowed Mac can be a control surface. Wine
+and a Windows VM are Windows clients with extra steps; on Ubuntu, take
+the .deb instead. Android has a companion app as of September 2026. iPad runs the iPhone app. Unofficial
+software is still not a plan.
 
 ## Install the iPhone client as a remote pause, never as a workshop
 
 An App Store install is a real download grok bot action. It is also
 the easiest way to think you have a pocket desktop.
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
-deleting need desktop
-([mobile](https://docs.x.ai/grok-bot/mobile)). Teach by demonstration
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine ([mobile](https://docs.x.ai/grok-bot/mobile)). Teach by demonstration
 is unavailable on iPhone
 ([skills, routines and automations](https://docs.x.ai/grok-bot/skills-routines-and-automations)).
 
-Download the iPhone app if a macOS or Windows client already exists, or
+Download the iPhone app if a desktop client (macOS, Windows or Linux) already exists, or
 will exist, somewhere you may use. As your only client it is a pause
 control for routines you cannot create. Approvals do not reverse work
 already completed
@@ -263,9 +260,9 @@ Boundary: never send email, never post, never purchase, never
 delete, never change IAM. If a task needs one of those, fail the
 task and write the reason. Pause is not undo.
 
-If I have not confirmed this identity is on SuperGrok Plus,
-SuperGrok Heavy, Cursor Pro+, Cursor Ultra, Cursor Teams, or the
-one-time trial, do not start. Say ineligible and wait.
+If I have not confirmed this identity is on a paid Cursor plan,
+Cursor Teams, a linked individual SuperGrok, or the one-time
+trial, do not start. Say ineligible and wait.
 \`\`\`
 
 Change the question. Keep the refusals. Catalog shapes that already
@@ -296,7 +293,7 @@ See [Grok Bot and Gmail](/blog/grok-bot-gmail) and the
 [safety checklist](/blog/grok-bot-safety-checklist). The installer
 succeeding is not a reason to hand the VM your mail.
 
-There is no audit view of bot actions yet. Do not connect a payment
+Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Do not connect a payment
 surface to "test plugins," and do not print a plugin count from a
 news post. Connect nothing until the Clerk brief finishes without a
 login wall. Hosted MCP tokens stay with Cursor's backend. Files on
@@ -310,9 +307,9 @@ hurts.
 | Check | How you run it | What failure means |
 |---|---|---|
 | Official file only | The desktop binary came from x.ai/bot, or the phone app from an App Store search for Grok Bot | You are about to sign into other software. Stop |
-| Invoice name is on the FAQ list | Hobby, Pro $20, SuperGrok $30 are treated as no | Fix billing or start the trial before another install |
+| Invoice name is on the FAQ list | Hobby, SuperGrok Lite, and a SuperGrok nobody linked are treated as no | Fix billing, link SuperGrok, or start the trial before another install |
 | Privacy Mode (Legacy) is off | Workspace setting, not the download UI | No client on any OS will help until that mode changes |
-| The client OS is actually supported | macOS, Windows, Linux (x64 or Arm64), iPhone or Android | iPad is not a persistence issue. It is a no |
+| The client OS is actually supported | macOS, Windows, Linux (x64 or Arm64), iPhone, iPad or Android | An old OS version is not a persistence issue. It is a no |
 | After sign-in, you can create a bot on desktop | One named Clerk, no connections | If you cannot, this is entitlement or identity, not Arm64 |
 | A sibling bot can see a file the Clerk wrote | Create a note from bot A, list it from bot B | You were about to treat screens as isolation. Do not |
 
@@ -335,12 +332,12 @@ state, and learned.
 
 Parts of that are true. Confirming Arm64 support by running the
 official Windows build is a real test. Confirming that x.ai/bot
-serves a file is a real test. For someone already on Pro+, Plus, or
-Teams, download first is harmless.
+serves a file is a real test. For someone already on Pro, Pro+, Teams,
+or a linked SuperGrok, download first is harmless.
 
 The objection fails for the people who type the query. They are often
-on Hobby, on $20 Pro, or on $30 SuperGrok, because those are the
-plans they already bought for the editor or for chat. For them, a
+on Hobby, or on a SuperGrok they never linked, because those are the
+plans they already hold for the editor or for chat. For them, a
 successful installer plus a failed entitlement looks like a broken
 product. Broken-product stories send people to unofficial builds,
 to Arm-specific mirrors, to Linux wrappers. The cheap experiment
@@ -348,7 +345,7 @@ externalizes its cost onto the account.
 
 Two minutes on the invoice beats an evening of architecture theories.
 The [free trial](/blog/grok-bot-free-trial) is the sampler if you are
-not ready for Pro+. Use that door on purpose. Do not discover you
+not ready for Pro. Use that door on purpose. Do not discover you
 needed it after you blamed Snapdragon.
 
 If you are already eligible, skip the lecture. Official door, the
@@ -356,11 +353,12 @@ identity that holds the plan, a bounded Clerk, Gmail on another day.
 
 ## Name the cases where a clean install still cannot help you
 
-A perfect download cannot buy missing product. iPad only: no client. Linux and Android have had clients since September 2026. Borrow a supported screen, wait, or change runtimes.
+A perfect download cannot buy missing product. iPad only: the iOS app runs there (iPadOS 18 or later), but editing and testing a routine need a desktop. Linux and Android have had clients since September 2026. Borrow a desktop, wait, or change runtimes.
 Privacy Mode (Legacy): the binary is decoration. Per-bot credential
 isolation: one computer per account, screens are not a boundary. Audit
-view of bot actions: not shipped. Model picker: none, for members or
-admins. Grok Bot-specific spend cap: none. Weekly allowance, then
+view of bot actions: Enterprise only. Model picker: none, for members or
+admins. Grok Bot-specific spend cap: none, only the account-level
+On-demand monthly limit. Weekly allowance, then
 on-demand, with no published dollar figure
 ([cost](/blog/grok-bot-cost),
 [spend cap](/blog/grok-bot-spend-cap-and-token-burn)). SKILL.md and
@@ -385,8 +383,8 @@ write code: the ownership chain is
 [why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained).
 
 This article's job is narrower. Download grok bot from x.ai/bot or
-the iOS App Store search. Confirm trial, Pro+, Plus, Teams, Ultra, or
-Heavy first. A clean Arm64 install is not proof of access. Put a
+the iOS App Store search. Confirm trial, Pro, Pro+, Ultra, Teams, or a
+linked SuperGrok first. A clean Arm64 install is not proof of access. Put a
 boundary on the first bot before create feels like setup. See
 [what a Grok Bot is](/blog/what-is-a-grok-bot) and
 [is Grok Bot worth it](/blog/is-grok-bot-worth-it).
@@ -397,7 +395,7 @@ boundary on the first bot before create feels like setup. See
 
 ### Can I download Grok Bot if I am on Cursor Hobby or Cursor Pro at twenty dollars?
 
-You can fetch the official desktop binary and you can sign in. That is not the same as being eligible. Cursor Hobby and Cursor Pro at $20 do not include Grok Bot. SuperGrok at $30 does not either. The FAQ list is SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, and Cursor Teams Standard and Premium, plus a one-time trial for individuals. If the app opens and the product still looks empty, read the invoice before you hunt an Arm64 mirror. The installer already did its job.
+You can fetch the official desktop binary and you can sign in. On Hobby, that is not the same as being eligible. Cursor Hobby, the free plan, does not include Grok Bot; every paid Cursor plan does, from Cursor Pro at $20. An individual SuperGrok counts only after you link it from the Grok Bot plan screen. The FAQ list is every paid Cursor plan, Cursor Teams, and a linked individual SuperGrok, SuperGrok Plus or SuperGrok Heavy, plus a one-time trial for individuals. If the app opens and the product still looks empty, read the invoice before you hunt an Arm64 mirror. The installer already did its job.
 
 ### Where is the official download, and are GitHub or mirror builds safe to use?
 
@@ -405,10 +403,10 @@ Desktop clients come from x.ai/bot. The phone client comes from an iOS App Store
 
 ### Why did the Windows Arm64 installer work if I still cannot use Grok Bot?
 
-Because Windows Arm64 is a supported desktop. The binary launching means your OS is on the list, not that your plan is. People on Cursor Hobby hit this constantly: the Surface install looks professional, Google SSO works, the roster never appears, and Snapdragon gets the blame. Compare the plan name to the FAQ. Start the trial or move to Pro+, Plus, Teams, Ultra, or Heavy. Reinstalling will not promote Hobby. Unofficial Arm builds are how that confusion gets expensive.
+Because Windows Arm64 is a supported desktop. The binary launching means your OS is on the list, not that your plan is. People on Cursor Hobby hit this constantly: the Surface install looks professional, Google SSO works, the roster never appears, and Snapdragon gets the blame. Compare the plan name to the FAQ. Start the trial, move to Pro, Pro+, Ultra or Teams, or link SuperGrok. Reinstalling will not promote Hobby. Unofficial Arm builds are how that confusion gets expensive.
 
-### Can the iPhone App Store listing replace a Mac or Windows download?
+### Can the iPhone App Store listing replace a desktop download?
 
-No. The iPhone app pauses and resumes routines. Editing, history, testing, and deleting need a desktop client. Teach by demonstration is unavailable on iPhone. If a phone is your only device, you can complete a store install and still be unable to create the routines you would pause. Use the App Store listing as a remote stop button after a macOS or Windows client exists. A late pause also does not undo a send that already happened, so do not treat the phone as the reason it was safe to connect Gmail on download day.
+No. The iPhone app pauses and resumes routines, reads their run history and deletes them, and it can message Bots, approve steps and take over the computer for a login. Editing and testing a routine still need the desktop app client. Teach by demonstration is unavailable on iPhone. If a phone is your only device, you can complete a store install and still be unable to create the routines you would pause. Use the App Store listing as a remote stop button after a desktop client exists. A late pause also does not undo a send that already happened, so do not treat the phone as the reason it was safe to connect Gmail on download day.
 `,
 };

@@ -443,7 +443,7 @@ inbox still shrinks it over a year, because it gives you evidence for pruning
 that you never had before.
 
 Keep the surfaced file and the discard logs as real files. Each routine keeps
-only its 20 most recent run records, and no audit view of bot actions exists yet,
+only its 20 most recent run records, and no audit view of bot actions outside Enterprise exists yet,
 so a weekly digest holds under five months of run history at best and none of the
 detail you want. Write it down where you control it. If this is one of your first
 bots, [the one-person company guide](/blog/one-person-company-grok-bot) covers

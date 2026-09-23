@@ -19,7 +19,8 @@ rest of the comparison into fiction. If you believe you have ten sandboxes, you
 will connect ten logins. You have one computer.
 
 This article is about Grok Bot from xAI, the cloud teammate product, not Groq
-the chip company. Grok Bot facts below were checked on 2026-08-25 against
+the chip company. Grok Bot facts below were checked on 2026-08-25, with plan
+and audit facts rechecked on 2026-09-23, against
 [the Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) and
 [computer and apps](https://docs.x.ai/grok-bot/computer-and-apps). Claude Cowork
 facts are hedged on purpose. Anthropic's pages have been moving. Third-party
@@ -128,7 +129,7 @@ credentials, all shared across bots on the account.
 | Command-line credentials | Shared across every bot on the account | A token set up for one job is available in any terminal |
 | Screens | One per bot | Separate work surfaces, explicitly not security boundaries |
 | Hosted MCP sign-in tokens | Held by Cursor's backend, not stored on the computer | The documented exception; a browser login is not this |
-| Audit view of bot actions | Does not exist yet | You cannot replay who did what from a product log |
+| Audit view of bot actions | Does not exist outside Enterprise | You cannot replay who did what from a product log |
 
 Hosted MCP tokens are the one isolation win in that table, and they are easy to
 miss because the settings UI uses the word "connection" for both a backend
@@ -160,26 +161,28 @@ for you.
 ## Buy Grok Bot through the plans that actually include it
 
 Access is a subscription check, not a Grok Bot SKU you add at checkout.
-Eligible paths, per the FAQ: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+,
-Cursor Ultra, Cursor Teams Standard, Cursor Teams Premium, and a one-time
-trial. Eligibility widened on 21 August 2026. Cursor Pro+ at $60 a month is
-the cheapest paid path. SuperGrok Heavy is eligible; this page does not print
+Eligible paths, per the FAQ and Cursor's plans page: every paid Cursor plan
+(Pro, Pro+, Ultra), every member of a self-serve Cursor Teams plan, and a
+linked individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+
+subscription, plus a one-time trial. Eligibility first widened on 21 August
+2026. Cursor Pro at $20 a month is the cheapest paid path. SuperGrok Heavy
+is eligible by link; this page does not print
 a Heavy price because it is not a number you can verify from a primary page.
 
-| Path | Includes Grok Bot | Note, checked 2026-08-25 |
+| Path | Includes Grok Bot | Note, checked 2026-09-23 |
 |---|---|---|
 | Cursor Hobby (free) | No | Not a back door |
-| Cursor Pro ($20/mo) | No | Easy to confuse with Pro+ |
-| Cursor Pro+ ($60/mo) | Yes | Cheapest paid path on the published list |
+| Cursor Pro ($20/mo) | Yes | Cheapest paid path on the published list |
+| Cursor Pro+ ($60/mo) | Yes | More weekly usage than Pro |
 | Cursor Ultra | Yes | Eligible; get the current rate from Cursor |
-| Cursor Teams Standard ($40/user/mo) | Yes | Per-user |
-| Cursor Teams Premium ($120/user/mo) | Yes | Per-user |
-| SuperGrok ($30/mo) | No | The $30 plan is not the Plus plan |
-| SuperGrok Plus ($100/mo) | Yes | Includes Grok Bot access |
-| SuperGrok Heavy | Yes | Eligible; do not copy an unpublished dollar figure |
+| Cursor Teams Standard seat | Yes | Every member of a self-serve Teams plan |
+| Cursor Teams Premium seat | Yes | Not required for access |
+| SuperGrok | Yes, by linking | Link it from the Grok Bot plan screen; the link is permanent |
+| SuperGrok Plus | Yes, by linking | Never stacks with a Cursor plan |
+| SuperGrok Heavy | Yes, by linking | Do not copy an unpublished dollar figure |
 | One-time trial | Yes | Individual path; it is not a substitute for reading the live FAQ |
 
-There is no Grok Bot-specific spend cap. Subscriptions include a weekly usage
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Subscriptions include a weekly usage
 allowance. Overflow is on demand, billed from model and token cost. There is
 no model picker for members or admins. Hosted MCP sign-in tokens stay with
 Cursor's backend. The ownership chain behind the Cursor sign-in is
@@ -189,8 +192,8 @@ The shape of the bill, once you are on a qualifying plan, is
 number you read in a roundup. No published figure belongs in this article.
 
 Supported clients are macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If your daily machine is a Linux workstation, you do not install
-a Grok Bot desktop there.
+Arm64), and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). If your daily machine is a Linux workstation, install the Linux desktop
+app there (.deb, .rpm or AppImage).
 
 ## Recheck Anthropic yourself before you budget Claude Cowork
 
@@ -209,7 +212,7 @@ Budget Grok Bot from the table above, dated. Budget Cowork from Anthropic,
 dated the morning you buy. If a competitor page gives you both columns as
 settled, it is either stale or guessing. For Grok Bot, stale still means two
 specific errors: a private computer per bot, and a cheapest paid path other
-than Cursor Pro+ at $60 a month after 21 August 2026.
+than Cursor Pro at $20 a month.
 
 ## Leave overnight work on the computer that stays awake after the lid closes
 
@@ -304,10 +307,10 @@ recognise it in week two.
 | The research bot opens the CRM your sales bot signed into | Shared browser cookies on one computer | Sign the CRM out of the shared browser, or do not sign it in there |
 | Files from a deleted bot are still on disk | Deleting a bot does not remove shared-computer files | Delete the files yourself, then list the directory |
 | A leftover login still works after you removed the bot | Sessions live on the computer, not in the bot record | Sign out in the shared browser, then check |
-| iPad has no client | Not supported | Use a Mac, Windows or Linux desktop, or an iPhone or Android phone |
+| iPad cannot edit a routine | The iOS app runs on iPad (iPadOS 18 or later) with the phone's limits | Edit and test on a Mac, Windows or Linux desktop |
 | Cowork cannot see last night's cloud export | The file lives on the other machine | Run the job where the file already is |
 | A roundup promised a private VM per bot | The roundup described a product that is not this one | Re-read computer-and-apps; count one computer per account |
-| Nobody can show who did what last Thursday | An audit view of bot actions does not exist yet | Keep your own log outside the product, or do not run the job |
+| Nobody can show who did what last Thursday | An audit view of bot actions does not exist outside Enterprise | Keep your own log outside the product, or do not run the job |
 
 Add the second bot only after you can explain, in one sentence, what it can
 reach that the first bot can reach. If the honest sentence is "everything the
@@ -352,8 +355,8 @@ not need.
 
 Where it loses is overnight work, phone-only mornings, and logins that must
 stay alive on a machine that is not this lid. That is Grok Bot's product, which
-is why you inherit the shared computer, the missing spend cap, the missing
-model picker, and the missing audit view. If you needed to own the harness,
+is why you inherit the shared computer, the missing per-bot spend cap, the
+missing model picker, and, outside Enterprise, the missing audit view. If you needed to own the harness,
 that is Claude's agent tooling, not Cowork, and it is the other article.
 
 ## Refuse the jobs that neither product should run unattended
@@ -402,18 +405,15 @@ signing out and deleting files yourself, then checking that both are gone.
 
 ### Which is cheaper, Grok Bot or Claude Cowork?
 
-Compare subscription shape, not a guessed grid. For Grok Bot, the cheapest paid
-path currently listed is Cursor Pro+ at $60 a month. Cursor Hobby and Cursor
-Pro at $20 do not include it. SuperGrok Plus at $100 includes it; SuperGrok at
-$30 does not. There is no bot-specific spend cap, and overflow after the weekly
+Compare subscription shape, not a guessed grid. For Grok Bot, the cheapest paid path is Cursor Pro at $20 a month. Cursor Hobby, the free plan, does not include it; every paid Cursor plan does, from Cursor Pro at $20. An individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. There is no bot-specific spend cap, and overflow after the weekly
 allowance is billed from model and token cost. Third-party roundups currently
 place Cowork on paid Claude plans. Check Anthropic's current pricing before you
 treat either as the bargain.
 
 ### Can I run Grok Bot on Linux, Android, or an iPad?
 
-No. Supported clients are macOS on Apple silicon and Intel, Windows on x64 and
-Arm64, and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. If your daily machine is a Linux workstation, Grok Bot has had a desktop app for it since September 2026. Cowork's client list is something you should take
+Yes. Supported clients are macOS on Apple silicon and Intel, Windows on x64 and
+Arm64, Linux on x64 and Arm64, iPhone on iOS 18 or later, and Android 9 or later, and the iOS app also runs on iPad (iPadOS 18 or later). If your daily machine is a Linux workstation, Grok Bot has had a desktop app for it since September 2026. Cowork's client list is something you should take
 from Anthropic's current docs rather than from this page, because that surface
 has been moving.
 `,

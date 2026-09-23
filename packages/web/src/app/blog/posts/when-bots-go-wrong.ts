@@ -77,7 +77,7 @@ Column five points at the article covering that territory properly.
 | It ran at 3am | A timezone mismatch | Account, schedule, source zones | Name the zone, print the range used | [scheduling](/blog/grok-bot-scheduling) |
 | Daily output saying nothing | Silent success, no heartbeat | Is there a records-read count? | Report every run, empty ones included | [observability](/blog/bot-observability) |
 | Frozen partway through | Parked on a login, captcha, or its own question | Open the computer and look | Answer it or stop it. Never paste a code in chat | [troubleshooting](/blog/grok-bot-troubleshooting) |
-| Everything stopped at once | The allowance is gone | Check usage before any one bot | Find the bot that burned it, add a retry ceiling | [no spend cap](/blog/grok-bot-spend-cap-and-token-burn) |
+| Everything stopped at once | The allowance is gone | Check usage before any one bot | Find the bot that burned it, add a retry ceiling | [no per-Bot spend cap](/blog/grok-bot-spend-cap-and-token-burn) |
 | A tool returns nothing | Authorisation revoked upstream | Which account signed in? | Reconnect, recheck what the grant covers | [permissions](/blog/grok-bot-permissions-explained) |
 | Full report, short numbers | Rate limited or paginated mid-run | Requested against received | Stop and report when the two differ | [failure modes](/blog/bot-failure-modes) |
 | Output that fits anyone | No definition of good output | Could someone prove it wrong? | Add one good line and one bad line | [prompt engineering](/blog/bot-prompt-engineering) |
@@ -87,7 +87,7 @@ Column five points at the article covering that territory properly.
 | It sent something it should not | A stop line interpreted, not enforced | Was there a runtime rule? | A charter clause and a runtime rule, both | [boundaries](/blog/grok-bot-boundaries) |
 | It did something unasked | An instruction inside content it read | Reread the source for imperatives | Remove the capability, then add the clause | [failure modes](/blog/bot-failure-modes) |
 | A bot bought something | No spend boundary | Is there a never-spend line? | Add it, then check what else lacks one | [least privilege](/blog/least-privilege-bots) |
-| One bot's week looks like a month | A retry loop nobody stopped | Repeated identical attempts | Two attempts, then stop, no alternate routes | [no spend cap](/blog/grok-bot-spend-cap-and-token-burn) |
+| One bot's week looks like a month | A retry loop nobody stopped | Repeated identical attempts | Two attempts, then stop, no alternate routes | [no per-Bot spend cap](/blog/grok-bot-spend-cap-and-token-burn) |
 | Two bots wrote one field | No ownership rule | Who owns that destination? | One owner per destination, in both charters | [multi-bot teams](/blog/multi-bot-teams) |
 | Fine reports you stopped reading | Real job, wrong cadence | Decisions changed this month | Coarsen it, trigger it, or delete it | [what bots cost](/blog/what-ai-bots-cost) |
 | It cannot be reached | The agent computer needs recovery | Reopen, restart, then recover | Escalate gently. Reset is last, and loses work | [troubleshooting](/blog/grok-bot-troubleshooting) |
@@ -399,11 +399,11 @@ what did it change, what did it leave alone, has this run for weeks.
 | Did the routine run on Wednesday? | Run history, if the cadence is slow | Twenty runs, then gone |
 | What did it change? | Nowhere, unless the bot wrote it down | Zero, by default |
 | What did it decide not to touch? | Nowhere, and this is the dangerous one | Zero |
-| Which bot touched this account? | Nowhere. No audit view exists yet | Zero |
+| Which bot touched this account? | Nowhere. No audit view outside Enterprise | Zero |
 | Has this been getting worse? | A file the bot appended to, or nothing | As long as the file lives |
 
-Two documented facts set that table: an audit view of bot actions does not exist
-yet, and a routine keeps only the 20 most recent run records. Twenty sounds
+Two documented facts set that table: an audit view of bot actions does not exist outside Enterprise,
+and a routine keeps only the 20 most recent run records. Twenty sounds
 generous until you divide it by a cadence.
 
 Every row reading "nowhere" converts to "a file the bot wrote" with the counter
@@ -434,15 +434,14 @@ bot removes its routines and the run records you are about to need while leaving
 the files and sessions behind. And revoke at the connector rather than in the
 charter, because a charter edit is an instruction and a revoked grant is a fact.
 
-On a phone you can pause and resume a routine, and that is all: editing, history,
-testing, and deleting need the desktop app. So plan the containment step you can
+On a phone you can pause and resume a routine, and that is all: Editing and testing a routine still need the desktop app. So plan the containment step you can
 perform from wherever you usually are when things go wrong, which for most people
 is not at a desk.
 
 ## Capture the evidence in the same ten minutes, because it expires
 
 Containment and capture happen together, because the record is on a timer:
-twenty run records per routine, no audit view, and a screen that changes when the
+twenty run records per routine, no audit view outside Enterprise, and a screen that changes when the
 bot resumes.
 
 Capture five things. A screenshot of the run history list, the only proof of when
@@ -530,9 +529,9 @@ fact instead of before.
 ## Check the observation against the documented limits before reporting a bug
 
 Several things that feel like faults are published behaviour, and reporting one
-costs a week of waiting for an answer that already exists. The short list: no iPad app (Linux desktop and Android apps exist as of September 2026); the phone app pauses, resumes and approves but cannot edit;
+costs a week of waiting for an answer that already exists. The short list: iPad gets only the phone app (Linux desktop and Android apps shipped in September 2026, and the iOS app also runs on iPad); the phone app pauses, resumes, approves, reads run history and deletes but cannot edit or test;
 no model picker anywhere and none planned; only the 20 newest run records
-survive; no spend cap and no audit view; static egress IPs that some services
+survive; no per-Bot spend cap and no audit view outside Enterprise; static egress IPs that some services
 flag as datacenter addresses; Privacy Mode (Legacy) blocking Grok Bot entirely;
 and deletion that is not cleanup, because files and browser sessions stay behind.
 
@@ -562,7 +561,8 @@ have supplied anyway.
 It is wrong about the other three, for reasons unrelated to reasoning quality. A
 run that did not happen cannot be improved by a better model, because no model is
 running. A runaway loop is a property of the billing arrangement, and with no
-product level spend cap the only ceiling is the one you wrote. And injection is a
+per-bot spend cap, only the account On-demand monthly limit, the only per-bot
+ceiling is the one you wrote. And injection is a
 property of how text reaches a context window, where a model that follows
 instructions more faithfully is a better target rather than a safer one.
 
@@ -631,7 +631,7 @@ the approach and the approval limits one step.
 
 Shorter than most people assume. A routine keeps only the 20 most recent run
 records, so an hourly routine cycles through all twenty inside a day, and an
-audit view of agent actions does not exist yet. A run record is also not a ledger
+audit view of agent actions does not exist outside Enterprise. A run record is also not a ledger
 of consequences: it says a run happened, not which invoice moved. So have each
 bot append one line per run to a durable file it is forbidden to edit, recording
 examined, acted, skipped, and retry counts.

@@ -27,9 +27,9 @@ None of that makes a Gem a named bot on a cloud computer assigned to your accoun
 
 On Grok Bot you hire a name, you write a charter, you get a screen, and you may pin routines to that one bot. You do not get a private box. xAI documents that the computer belongs to the user account, not to the bot. Every bot on the account shares that one persistent cloud computer. Each bot gets a screen. Those screens are work surfaces. They are not security boundaries. The docs say, verbatim, not to use separate bots as a security boundary.
 
-Cookies, live browser sessions, files on disk, and CLI credentials are account-wide. Remove a bot and those leftovers stay. Routines die with the bot. The desk does not. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. There is no audit view of bot actions yet. Read [One Computer, Many Screens](/blog/grok-bot-shared-computer-security) rather than inferring a private VM from two names.
+Cookies, live browser sessions, files on disk, and CLI credentials are account-wide. Remove a bot and those leftovers stay. Routines die with the bot. The desk does not. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Read [One Computer, Many Screens](/blog/grok-bot-shared-computer-security) rather than inferring a private VM from two names.
 
-Supported Grok Bot clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18 or later. Missing: Linux desktop, Android, iPad. The remote computer is a managed Linux VM. The bot process is non-root. That VM is not a Linux desktop app you install. If your daily phone is Android, Gemini may still be there and Grok Bot will not.
+Supported Grok Bot clients: macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), iPhone on iOS 18 or later, and Android 9 or later; the iOS app also runs on iPad (iPadOS 18 or later). The remote computer is a managed Linux VM. The bot process is non-root. That VM is not a Linux desktop app you install. If your daily phone is Android, Gemini and the Grok Bot companion app can both be there.
 
 ## Keep the name when it survives, and buy a computer only when the job needs a desk
 
@@ -68,11 +68,11 @@ Staff [Inbox Triage](/bots/inbox-triage) on Grok Bot only after you write the ve
 
 ## Assign weekday inbox work to one bot's routines, then accept the fifty-routine cap
 
-A routine on Grok Bot assigns a workflow to one bot. Maximum 50 routines per bot. The app keeps the 20 most recent run records per routine. Deleting the bot deletes its routines. Nothing is team-level. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and deleting need desktop. If you edit Gems on your phone the way you edit a note, do not expect the same surface on Grok Bot's iPhone client.
+A routine on Grok Bot assigns a workflow to one bot. Maximum 50 routines per bot. The app keeps the 20 most recent run records per routine. Deleting the bot deletes its routines. Nothing is team-level. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. If you edit Gems on your phone the way you edit a note, do not expect the same surface on Grok Bot's iPhone client.
 
 Do not assert that Gems have a scheduler, a routine object, or a weekday clock. Confirm any automation Google currently attaches to a Gem on Google's pages. Public writeups about Gemini sometimes mix Gems with other Gemini features. Mixing them in your head will make you believe Inbox already runs at 07:00 because the Gem is named Inbox.
 
-Pin the weekday job to [Grok Bot scheduling](/blog/grok-bot-scheduling) on one bot, then live with the caps. Fifty routines is a trap if you treat one bot as a department. Twenty run records is not an audit log. There is no audit view of bot actions yet. If you needed a named Gem you open when you sit down, you never needed the routine.
+Pin the weekday job to [Grok Bot scheduling](/blog/grok-bot-scheduling) on one bot, then live with the caps. Fifty routines is a trap if you treat one bot as a department. Twenty run records is not an audit log. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. If you needed a named Gem you open when you sit down, you never needed the routine.
 
 ## Measure Grok Bot risk on cookies and home-directory files, never on Gem names
 
@@ -82,18 +82,18 @@ On Gems, blast radius is whatever Google currently lets that Gem see. Confirm th
 
 Connect the minimum accounts on the Grok side. Prefer read-only where the job only reads. Put money on a different account from research. When a bot is done, rotate the sessions yourself. Deleting the bot is not cleanup. Confirm what Google still stores for a Gem you have not opened in months.
 
-## Enter Grok Bot through Cursor Pro+ or SuperGrok Plus, never through a guessed Gem tier
+## Enter Grok Bot through Cursor Pro or a SuperGrok link, never through a guessed Gem tier
 
 Published Grok Bot prices sit below. This article will not invent Gem pricing, a Gemini plan gate, a Workspace SKU, or a list of apps a Gem can reach. Recheck those on Google. Public writeups compare Gems to Custom GPTs. Treat that as a picture, not a contract.
 
 | Path | Grok Bot on this plan? | Note |
 |---|---|---|
 | Cursor Hobby | No | Free Cursor does not include the bot runtime |
-| Cursor Pro, 20 dollars a month | No | Easy to buy by mistake |
-| Cursor Pro+, 60 dollars a month | Yes | Cheapest paid path as of 25 August 2026 |
-| SuperGrok, 30 dollars a month | No | This SuperGrok tier omits Grok Bot |
-| SuperGrok Plus, 100 dollars a month | Yes | Listed as including Grok Bot access |
-| SuperGrok Heavy, Cursor Ultra, Cursor Teams Standard and Premium, one-time trial | Eligible | Confirm live prices. Ignore a viral 300 dollar Heavy figure |
+| Cursor Pro, 20 dollars a month | Yes | Cheapest paid path, checked 23 September 2026 |
+| Cursor Pro+, 60 dollars a month | Yes | More weekly usage than Pro |
+| SuperGrok (individual) | Yes, by linking | Link it from the Grok Bot plan screen; it grants usage and is not a Cursor plan |
+| SuperGrok Plus | Yes, by linking | Never stacks with a Cursor plan |
+| SuperGrok Heavy, Cursor Ultra, Cursor Teams, one-time trial | Eligible | Confirm live prices. Ignore a viral 300 dollar Heavy figure |
 | Gemini Gems | Confirm on Google | Do not paste a Gemini screenshot into this comparison |
 
 Once you are eligible, the bill is not a ceiling. xAI has not published a Grok Bot-specific spend cap. Subscriptions include a weekly usage allowance, then on-demand billing from model and token cost. No published dollar figure for that allowance. No model picker on the bot surface. If both a Cursor and a SuperGrok subscription are present, Grok Bot uses whichever has more usage. See [Grok Bot Cost](/blog/grok-bot-cost). A cheaper Gemini door, if it exists on your account, is a good reason to keep watched drafting as Gems. It is a bad reason to staff unattended mail on a chat preset.
@@ -121,7 +121,7 @@ When the week goes wrong, name the machine before you rewrite the Gem instructio
 | You staffed three Grok screens because you had three Gems | Screens are not Gems and not vaults | One account computer. Split accounts if you need a wall |
 | You deleted a Grok bot and the mailbox is still signed in | Deletion does not wipe files or sessions | Sign out and rotate the session yourself |
 | Two Grok bots used the same mailbox cookies | Shared computer, by design | One account is one domain. Split accounts for a wall |
-| Grok Bot never appeared on Android or a Linux laptop | Unsupported Grok Bot platforms | Keep Gemini there. Use a supported OS for Grok Bot |
+| Grok Bot never appeared on Android or a Linux laptop | An install guide from before September 2026, or an ineligible plan | Install the official Android or Linux app, then check the plan |
 | Last week's brief is missing after you migrated from the Gem | The Gem never stored that file on the Grok computer | Copy the artefact yourself, then run the bot against the folder |
 
 If the job is "open the supplier portal every Monday", verify that Gemini currently allows that from a Gem. Grok Bot can keep a session warm on the shared computer. That warmth is the blast radius. If Tuesday failed because you were not at the keyboard, you did not have a prompt problem. You had a machine problem.
@@ -132,7 +132,7 @@ The honest objection is that Inbox already exists as a Gem, so a Grok bot is a p
 
 It wins when you are present. Tone of voice, a coding helper, a career-coach Gem, a brainstorm partner: Google's own examples. You open the Gem, you talk, you leave with text. Creating Inbox Desk on a shared computer for that job leaves sessions you did not need.
 
-It wins on friction. Opening a Gem is closer to continuing Gemini than naming a bot and living with uncapped overflow. If Google currently includes Gems on a plan you already pay for, confirm that, and keep the Gem for talk.
+It wins on friction. Opening a Gem is closer to continuing Gemini than naming a bot and living with overflow that has no per-bot cap. If Google currently includes Gems on a plan you already pay for, confirm that, and keep the Gem for talk.
 
 It loses when the name has to survive on a desk you are not looking at. Unread mail every weekday, daily lead ranking, a Monday brief that diffs last week: those jobs need last week's file, a clock, and a stop line that still holds at 07:00. A Gem can fake that if you paste the pile yourself every morning. Most people skip a week, and the send verb creeps back in because it was never pinned to a machine.
 
@@ -144,7 +144,7 @@ You can keep both. Stop using one name as proof you bought the other machine.
 
 Keep Gemini Gems (once you have confirmed them on your plan) for saved instructions and a conversation you start. House style. A coding helper. A coach. Drafting you watch. Confirm each Gem's permissions on Google. Do not assume a Gem can hold a mailbox session, and do not assume it cannot.
 
-Keep Grok Bot for a name, a charter, a stop line, and a desk that still has last week's file. Run a short roster. Connect the fewest logins that still do the job. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow is uncapped. There are Linux desktop and Android apps as of September 2026; iPad is still not supported.
+Keep Grok Bot for a name, a charter, a stop line, and a desk that still has last week's file. Run a short roster. Connect the fewest logins that still do the job. Write the verb that must never happen. Every bot shares the computer. Deletion is not cleanup. Overflow has no per-bot cap, only the account's On-demand monthly limit. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later).
 
 Paste this only after you have admitted the Gem never owned the folder. Change the paths. Do not connect a mailbox until the stop list is true.
 
@@ -186,7 +186,7 @@ Create a second Grok bot on the same account. If it can see the mailbox cookies 
 
 Delete a throwaway bot after a test login. If the vendor portal is still signed in, deletion did not clean the desk. Rotate the session. A Gem you delete may or may not drop uploads: confirm on Google, then do not use that answer as a Grok Bot cleanup plan.
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Edit Gems on your phone if Google still allows that. If Grok Bot is missing on Android, iPad, or a Linux desktop, keep the Gem there. Move standing mail to a supported Mac or Windows machine, or do not staff the bot.
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Edit Gems on your phone if Google still allows that. Grok Bot now runs on Android and iPad as a companion, but editing and testing a routine need a Mac, Windows or Linux desktop. Move standing mail to a desktop you actually use, or do not staff the bot.
 
 **Keep reading:** [What Is a Grok Bot? The Plain Explanation for Non-Engineers](/blog/what-is-a-grok-bot), [Grok Bot vs ChatGPT Work: Persistent Bots or a Task Surface](/blog/grok-bot-vs-chatgpt-work), [How Grok Bots Actually Work, Without the Dedicated-Computer Myth](/blog/how-bots-on-grok-actually-work).
 
@@ -206,7 +206,7 @@ Yes, if you split by machine, not by nickname. Keep the Gem for talk you start: 
 
 ### How much do Gemini Gems cost next to Grok Bot?
 
-Grok Bot's cheapest paid path is Cursor Pro+ at 60 dollars a month. Cursor Hobby and Cursor Pro at 20 dollars omit it. SuperGrok at 30 dollars omits it. SuperGrok Plus at 100 dollars includes Grok Bot access. SuperGrok Heavy, Cursor Ultra, Cursor Teams Standard and Premium, and a one-time trial are also eligibility paths. There is no Grok Bot spend cap: weekly allowance, then on-demand. Gemini Gems prices, plan gates, and whether Gems sit on a plan you already pay for belong on Google's pages. Confirm both the day you buy. Do not invent a Gem SKU from a screenshot.
+Grok Bot's cheapest paid path is Cursor Pro at 20 dollars a month. Cursor Hobby omits it. An individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Cursor Pro+, Cursor Ultra, Cursor Teams, and a one-time trial are also eligibility paths. There is no per-bot Grok Bot spend cap: weekly allowance, then on-demand up to the account's On-demand monthly limit. Gemini Gems prices, plan gates, and whether Gems sit on a plan you already pay for belong on Google's pages. Confirm both the day you buy. Do not invent a Gem SKU from a screenshot.
 
 `,
 };

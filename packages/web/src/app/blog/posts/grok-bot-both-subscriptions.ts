@@ -25,19 +25,19 @@ If you wanted two computers, you needed two eligible user accounts, which is two
 
 ## Quote the FAQ billing sentence and then stop inventing a stack
 
-The documented line sits under "How much does Grok Bot cost?" on the FAQ, checked live at [docs.x.ai/grok-bot/faq](https://docs.x.ai/grok-bot/faq). Eligible plans include SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, and Cursor Teams Standard and Premium. Subscriptions include weekly usage, then on-demand from model and token cost. Then the dual line: if you have both a Cursor and a SuperGrok subscription, Grok Bot uses whichever has more usage.
+The documented line sits under "How much does Grok Bot cost?" on the FAQ, checked live at [docs.x.ai/grok-bot/faq](https://docs.x.ai/grok-bot/faq). Grok Bot is included with every paid individual Cursor plan and with the Cursor Teams plan, and you can link an individual SuperGrok, SuperGrok Plus, or SuperGrok Heavy subscription. Subscriptions include weekly usage, then on-demand from model and token cost. Then the dual line: if you have both a Cursor and a SuperGrok subscription, Grok Bot uses whichever has more usage.
 
 That sentence is the whole stack rule. It does not say the pools add. It does not say research bots draw from xAI while deploy bots draw from Cursor. It says max, not sum. No published weekly dollar figure. No Grok Bot-specific spend cap. No model picker for members or admins. [Spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn) covers those absences.
 
-Cursor help pages have described linking a SuperGrok subscription from a Grok Bot plan screen, with usage metered on the Cursor account rather than as a second meter on Grok. Confirm that surface in the live product. Linking, if it is still there, is how two entitlements meet on one identity. It is still not a second computer.
+Cursor's [plans page](https://cursor.com/help/grok-bot/plans) describes linking an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy, or X Premium+ subscription from the Grok Bot plan screen, with usage metered on the Cursor account rather than as a second meter on Grok. The link is permanent once made. Linking is how two entitlements meet on one identity. It is still not a second computer.
 
 ## Keep this page off the Pro+ SKU cart and off the Plus SKU cart
 
 Search will hand you grok bot cursor and supergrok next to "is Pro+ enough" and "is Plus the xAI door." Those are different questions.
 
-[Cursor Pro+ and Grok Bot](/blog/grok-bot-cursor-pro-plus) owns one invoice line: Pro+ as the cheapest documented paid individual door as of the 25 August 2026 check, at sixty dollars a month on [cursor.com/pricing](https://cursor.com/pricing). Confirm that number live.
+[Cursor Pro+ and Grok Bot](/blog/grok-bot-cursor-pro-plus) owns one invoice line: Pro+ at sixty dollars a month on [cursor.com/pricing](https://cursor.com/pricing), a step above Cursor Pro at twenty, which is now the cheapest documented paid individual door. Confirm those numbers live.
 
-[SuperGrok Plus and Grok Bot](/blog/grok-bot-supergrok-plus) owns the other line: Plus at one hundred on [x.ai/pricing](https://x.ai/pricing). Confirm SuperGrok thirty versus Plus live. [The cheapest way into Grok Bot](/blog/cheapest-way-into-grok-bot) ranks doors. This page refuses to rank. If you already hold both eligible subscriptions, ranking is finished. The remaining mistake is assigning bots to invoices in your head, then putting secrets on the machine those invoices actually share.
+[SuperGrok Plus and Grok Bot](/blog/grok-bot-supergrok-plus) owns the other line: SuperGrok Plus on [x.ai/pricing](https://x.ai/pricing). Confirm the live price, and whether you are on base SuperGrok or Plus; both can be linked. [The cheapest way into Grok Bot](/blog/cheapest-way-into-grok-bot) ranks doors. This page refuses to rank. If you already hold both eligible subscriptions, ranking is finished. The remaining mistake is assigning bots to invoices in your head, then putting secrets on the machine those invoices actually share.
 
 Stay here for the dual-pool rule. Leave for a SKU page if you do not yet hold both.
 
@@ -53,9 +53,9 @@ Do not quote this article to finance. Quote the invoice, then the FAQ, then the 
 | In-product account, billing, or Grok Bot plan screen | The entitlement Grok Bot will actually read, including any SuperGrok link control | A second VM, a summed meter, or a per-bot disk |
 | Last week's screenshot in Slack | Nothing you should pay from | Anything. Pages moved after 21 August 2026 |
 
-On the live Cursor page checked while writing, Individual starts at twenty dollars a month with a Pro / Pro+ / Ultra switcher, and Grok Bot access sits in that list. That is a grouping, not your invoice. The FAQ still names Cursor Pro+, Cursor Ultra, and both Cursor Teams rungs. If the live page and the FAQ disagree, trust the in-product entitlement, then the FAQ.
+On the live Cursor page checked while writing, Individual starts at twenty dollars a month with a Pro / Pro+ / Ultra switcher, and Grok Bot access sits in that list. That is a grouping, not your invoice. The FAQ now says every paid individual Cursor plan and the Cursor Teams plan include Grok Bot, so the two agree. If the live page and the FAQ ever disagree, trust the in-product entitlement, then the FAQ.
 
-Open xAI pricing yourself. The FAQ still names SuperGrok Plus and SuperGrok Heavy among eligible xAI plans. A marketing row that now prints Grok Bot access does not change the dual-pool sentence. Privacy Mode (Legacy) still blocks Grok Bot entirely. Two correct invoices will not override that mode.
+Open xAI pricing yourself. The FAQ names SuperGrok, SuperGrok Plus, and SuperGrok Heavy as individual xAI plans you can link. A marketing row that now prints Grok Bot access does not change the dual-pool sentence. Privacy Mode (Legacy) still blocks Grok Bot entirely. Two correct invoices will not override that mode.
 
 ## Read whichever has more usage as a max, not as a sum
 
@@ -97,7 +97,7 @@ The computer is assigned to your user account, not to a bot, and not to a vendor
 
 Deleting \`home-bot\` does not remove the Gmail session or ~/.aws. Deletion removes that bot, its conversation, and its routines. Shared-computer files and logins may remain. Revoke at the source before you celebrate a delete. Hosted MCP tokens stay with Cursor's backend, not on disk. That is not a SuperGrok vault.
 
-The Agent Computer is a managed Linux VM. The bot runs as a non-root user. Non-root is not per-invoice isolation, and it is not a Linux desktop app. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Supported: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Pause is not a wipe.
+The Agent Computer is a managed Linux VM. The bot runs as a non-root user. Non-root is not per-invoice isolation, and it is not the Linux desktop app. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). Supported: macOS (Apple silicon and Intel), Windows (x64 and Arm64), iPhone on iOS 18+. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Pause is not a wipe.
 
 [Shared computer security](/blog/grok-bot-shared-computer-security) is the architecture page. The second invoice did not partition that architecture.
 
@@ -105,7 +105,7 @@ The Agent Computer is a managed Linux VM. The bot runs as a non-root user. Non-r
 
 The next cart after "I already pay twice" is a third SKU for safety. Ultra. Heavy. A dummy Teams workspace. Stop.
 
-Heavy is eligible. Its price is not a figure this page will print. Leave it out until [x.ai/pricing](https://x.ai/pricing) prints one. Ultra is eligible. It does not mint a private Bot. Teams Standard at forty dollars per seat and Premium at one hundred twenty both include Grok Bot when you actually have a team. Confirm those live.
+Heavy is eligible. Its price is not a figure this page will print. Leave it out until [x.ai/pricing](https://x.ai/pricing) prints one. Ultra is eligible. It does not mint a private Bot. A self-serve Cursor Teams seat includes Grok Bot for every member when you actually have a team, with no Premium seat required. Confirm that live.
 
 | Situation you are actually in | Keep both invoices? | Why that is honest |
 |---|---|---|
@@ -120,7 +120,7 @@ Sunk cost is not a second tank. Do not add a third line. Do not connect a second
 
 ## Spend overflow as on-demand after the larger pool empties
 
-When the larger weekly Bot pool is gone, the product does not fail over to the smaller vendor tank. Overflow is on-demand, billed from model and token cost, if your account allows on-demand. If on-demand is off, work stops. If it is on, the card keeps moving. There is no Grok Bot-specific spend cap to catch you.
+When the larger weekly Bot pool is gone, the product does not fail over to the smaller vendor tank. Overflow is on-demand, billed from model and token cost, if your account allows on-demand. If on-demand is off, work stops. If it is on, the card keeps moving up to the account On-demand monthly limit. There is no Grok Bot-specific spend cap to catch you.
 
 That is why Elena's Tuesday felt unfair. grok.com still had chat room. The editor still had agent room. Grok Bot was already into overflow, or already blocked. Two houses, one Bot gauge.
 
@@ -181,9 +181,9 @@ Finance can see two houses. They cannot see two Bot computers. Show them the FAQ
 
 Pro+ will not print never send. Plus will not print never push. The dual-pool rule will not print a boundary either. You write the verb the bot must never take before the next login that can survive a deleted bot.
 
-For Elena the verbs are send, pay, push, merge, deploy, and sign in. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) does not need them. Mail and GitHub wait until the computer only holds sessions she accepts as roster-wide. [The safety checklist](/blog/grok-bot-safety-checklist) is the first read before a mailbox hits the shared machine. Approvals control a proposed action. They do not reverse work already completed. There is no audit view of Bot actions yet. Two invoices do not add a log.
+For Elena the verbs are send, pay, push, merge, deploy, and sign in. [Chief of Staff Briefing](/bots/chief-of-staff-briefing) does not need them. Mail and GitHub wait until the computer only holds sessions she accepts as roster-wide. [The safety checklist](/blog/grok-bot-safety-checklist) is the first read before a mailbox hits the shared machine. Approvals control a proposed action. They do not reverse work already completed. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Two invoices do not add a log.
 
-On iPhone, pause if something is already going wrong. Editing needs desktop. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. Do not buy a second subscription hoping a Linux app appears on the SuperGrok side. SpaceX acquired xAI (announced 2 February 2026) and closed the Cursor acquisition (14 August 2026). That is why sign-in looks like Cursor. It does not mint two computers. Do not say xAI acquired Cursor.
+On iPhone, pause if something is already going wrong. Editing needs desktop. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). A second subscription does not add a platform; the same apps serve every eligible plan. SpaceX acquired xAI (announced 2 February 2026) and closed the Cursor acquisition (14 August 2026). That is why sign-in looks like Cursor. It does not mint two computers. Do not say xAI acquired Cursor.
 
 When both keys are present, operate like a person with one bench. Confirm live billing. Quote the FAQ. Keep the houses you actually use. Drop the story that two invoices were isolation.
 
@@ -205,6 +205,6 @@ No. Isolation is not a SKU. Named bots on one account share the computer. Buying
 
 ### How do I confirm which usage pool Grok Bot is drawing from this week?
 
-Open the in-product Grok Bot usage surface, not grok.com remaining and not the editor remaining. Note Bot weekly remaining, run one job, and see that a single Bot number moved. Open the FAQ line about both subscriptions so you are not expecting a sum. Open cursor.com/pricing and x.ai/pricing the same morning so you know which SKUs you actually hold, then match those names on the invoices. If a SuperGrok link control exists on the Grok Bot plan screen, confirm it there. If Bot is empty while another product still shows quota, you were reading the wrong meter.
+Open the in-product Grok Bot usage surface, not grok.com remaining and not the editor remaining. Note Bot weekly remaining, run one job, and see that a single Bot number moved. Open the FAQ line about both subscriptions so you are not expecting a sum. Open cursor.com/pricing and x.ai/pricing the same morning so you know which SKUs you actually hold, then match those names on the invoices. The SuperGrok link control is on the Grok Bot plan screen; confirm the link there. If Bot is empty while another product still shows quota, you were reading the wrong meter.
 `,
 };

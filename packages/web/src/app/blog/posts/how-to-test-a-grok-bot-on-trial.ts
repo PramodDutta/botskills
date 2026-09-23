@@ -23,15 +23,15 @@ Write the stop verb in the same sitting. Never send, purchase, create accounts, 
 
 Name the artifact: a table or a brief with a source list, not "insights." Fluency is free. A reusable page is the only thing the credit is for.
 
-Pick the machine before the run. On iPhone (iOS 18+) you can pause and resume. History, edits, testing, and deletion need desktop. macOS and Windows show the Agent Computer. Linux desktop, Android, and iPad are unsupported. The agent runs on a managed Linux VM in the cloud, which is not a Linux desktop client.
+Pick the machine before the run. On iPhone (iOS 18+) you can pause and resume a routine, read its run history, delete it, and open the Agent Computer. Edits and testing need a desktop, on macOS, Windows or Linux. Android phones and iPads run the same companion limits. The agent runs on a managed Linux VM in the cloud, which is not a Linux desktop client.
 
 ## Read the meter as limited usage, then confirm the window in the product
 
 SpaceXAI widened access on 21 August 2026 and described a one-time trial for individuals. The useful fact is the shape: limited usage, not unlimited runs until a calendar date. Some Cursor billing pages talk about a seven-day window around that usage. Confirm the current terms in the product and on [Cursor pricing](https://cursor.com/pricing) the morning you start.
 
-There is still no published numeric credit. Posts that print a dollar amount or a token count are guessing. Plan as if browsing is expensive. Loading pages, waiting, and retrying on a cloud desktop costs more than one API call for the same fact. [Token burn with no spend cap](/blog/grok-bot-spend-cap-and-token-burn) is the paid-plan version of that warning. On the trial, the same physics applies with a smaller tank.
+There is still no published numeric credit. Posts that print a dollar amount or a token count are guessing. Plan as if browsing is expensive. Loading pages, waiting, and retrying on a cloud desktop costs more than one API call for the same fact. [Token burn with no per-Bot spend cap](/blog/grok-bot-spend-cap-and-token-burn) is the paid-plan version of that warning. On the trial, the same physics applies with a smaller tank.
 
-If you already hold Cursor Pro+, Ultra, Teams Standard, Teams Premium, SuperGrok Plus, or Heavy, this is not a trial. You already have the product. SuperGrok at $30 and Cursor Pro at $20 still do not include Grok Bot. Privacy Mode (Legacy) blocks Grok Bot entirely.
+If you already hold Cursor Pro, Pro+, Ultra, a Cursor Teams seat, or a linked SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription, this is not a trial. You already have the product. Cursor Hobby, the free plan, still does not include Grok Bot, and an unlinked SuperGrok does not count until you link it. Privacy Mode (Legacy) blocks Grok Bot entirely.
 
 Leftover credit is a successful sample, not a reason to start a second experiment. The Gmail cookie you create tonight will still exist tomorrow.
 
@@ -127,7 +127,7 @@ Morning is the test. Not the overnight log. Not the feeling that it was working 
 
 Open every URL. If a link 404s, or points at a homepage with no mention of the claimed fact, that cell is a fail. Fluent prose over a dead link is the failure mode this job is designed to catch. You are not grading writing. You are grading whether the computer retrieved a page and told the truth about it.
 
-Look at the Agent Computer at least once. You are hunting logins you did not authorize and form fills you did not ask for. iPhone will not give you that inspection. Use desktop. Then stop. Leftover credit is evidence that you named a job small enough to measure. [Is Grok Bot worth it](/blog/is-grok-bot-worth-it) is the verdict after this packet, not before it. Do not upgrade to avoid wasting remaining usage. There is still no Grok Bot-specific spend cap. Copy a good packet into a document you own. The trial computer is not an archive.
+Look at the Agent Computer at least once. You are hunting logins you did not authorize and form fills you did not ask for. The phone can open it too, but a desktop screen is where you read it properly. Use desktop. Then stop. Leftover credit is evidence that you named a job small enough to measure. [Is Grok Bot worth it](/blog/is-grok-bot-worth-it) is the verdict after this packet, not before it. Do not upgrade to avoid wasting remaining usage. There is still no Grok Bot-specific spend cap. Copy a good packet into a document you own. The trial computer is not an archive.
 
 ## Score citations and coverage, not fluency
 
@@ -142,7 +142,7 @@ A generous reader will call any tidy table a success. Do not be generous. Score 
 | Outreach | None | A drafted email, a form fill, a follow on X |
 | Stop | Halted after the table | "I also checked your inbox" |
 
-You need four of five trigger URLs to work, and zero outreach, for a product pass. Three working URLs and two blocked cells is a maybe. Zero working URLs and a beautiful narrative is a fail. Homepage summaries are what a chat window already does. If the Agent Computer spent the night on four homepages, fix the charter or walk away. Do not "fix it" by connecting CRM. Date the score next to the charter. Cursor Pro+ at $60 a month is the cheapest documented individual paid door. SuperGrok Plus is $100. Teams Standard is $40 a seat. None of those prices is a reason to upgrade if the sheet failed.
+You need four of five trigger URLs to work, and zero outreach, for a product pass. Three working URLs and two blocked cells is a maybe. Zero working URLs and a beautiful narrative is a fail. Homepage summaries are what a chat window already does. If the Agent Computer spent the night on four homepages, fix the charter or walk away. Do not "fix it" by connecting CRM. Date the score next to the charter. Cursor Pro at $20 a month is the cheapest documented individual paid door. An individual SuperGrok subscription can be linked instead. A self-serve Cursor Teams seat includes Grok Bot for every member. None of those prices is a reason to upgrade if the sheet failed.
 
 ## Keep plugins, routines, and extra bots off the trial VM
 
@@ -156,7 +156,7 @@ Teaching by showing you click around records up to ten minutes of the screen, no
 
 The strongest objection to this method is honest. You are not buying a research chatbot. You are buying a teammate that can sit in Gmail and Calendar and Slack. If you never connect those, the trial is a lie. You tested a browser, not the product.
 
-That objection wins if your only question is whether connectors open. It loses if your question is whether you should pay. Paying is a weekly allowance plus on-demand overflow, on a shared computer, with no published numeric cap and no audit view of bot actions yet. Send, post, purchase, and public schedule are the parts you must not spend a sample on, because an approval does not undo them.
+That objection wins if your only question is whether connectors open. It loses if your question is whether you should pay. Paying is a weekly allowance plus on-demand overflow, on a shared computer, with no published numeric cap and no audit view of bot actions outside Enterprise. Send, post, purchase, and public schedule are the parts you must not spend a sample on, because an approval does not undo them.
 
 Once Gmail is signed in, every later bot on the account can inherit that session. You no longer tested research. You tested research on a machine that can also read mail. The trial is too small to afford a contaminated computer. Tours also have no pass condition. A five-row sheet does. You can fail it.
 
@@ -195,7 +195,7 @@ If you already hold an eligible paid plan, you are spending weekly allowance, no
 
 If the only work you would ever give a bot is sending mail, use the research analog, or skip. Do not "just send one test email to myself." That is a send. If you need a golden-set and injection tests, that is [testing your bot](/blog/testing-your-bot), after you pay.
 
-If you only have Linux desktop, Android, or iPad, you do not have a supported client. If you only have iPhone, you can pause and resume and you cannot inspect. Wait for a Mac or a Windows machine, or skip.
+If you only have a Linux desktop, use the Linux app. If you only have an iPhone, an Android phone, or an iPad, you can pause, resume, read run history, and open the computer, but you cannot edit or test. Wait for a desktop, or skip.
 
 If your five companies are private, pick five public analogs and label the sheet as analog research. Do not sign into a data vendor on the trial VM.
 
@@ -207,11 +207,11 @@ Copy four things into a note you own: the charter, the five company names, the m
 
 Revoke at the provider, not only in the bot list. Open the connected-apps page at Google and Slack even if you think you stayed on public pages. Watch the computer, then revoke, then copy the sheet off the VM.
 
-Write the upgrade rule before the meter hits zero. Upgrade only if you used the artifact in a real meeting or review, and you have revoked every unused login. [Supported platforms](/blog/grok-bot-supported-platforms) will not expand because you paid. The shared computer will still be shared. The missing spend cap will still be missing.
+Write the upgrade rule before the meter hits zero. Upgrade only if you used the artifact in a real meeting or review, and you have revoked every unused login. [Supported platforms](/blog/grok-bot-supported-platforms) will not expand because you paid. The shared computer will still be shared. The missing per-bot spend cap will still be missing.
 
 If the sheet passed and you would run this weekly, you have a candidate for a paid bot with the same send boundary. If it failed, stay on the chat product you already have. Compare [Grok Bot versus Claude Cowork](/blog/grok-bot-vs-claude-cowork) or [Grok Bot versus ChatGPT Work](/blog/grok-bot-vs-chatgpt-work) only after you have a packet. The last line of the note is the stop line you already used: never send, never pay, inspect, then stop.
 
-**Keep reading:** [What the Grok Bot trial is](/blog/grok-bot-free-trial) covers eligibility and the meter, [how to test a bot setup](/blog/testing-your-bot) is the golden-set method after you keep the product, and [token burn with no spend cap](/blog/grok-bot-spend-cap-and-token-burn) is what you live with if you upgrade.
+**Keep reading:** [What the Grok Bot trial is](/blog/grok-bot-free-trial) covers eligibility and the meter, [how to test a bot setup](/blog/testing-your-bot) is the golden-set method after you keep the product, and [token burn with no per-Bot spend cap](/blog/grok-bot-spend-cap-and-token-burn) is what you live with if you upgrade.
 
 ## Frequently Asked Questions
 

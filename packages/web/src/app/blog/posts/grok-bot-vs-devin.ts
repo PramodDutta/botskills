@@ -36,11 +36,11 @@ If the work still has an inbox after the laptop lid closes, you wanted Grok Bot.
 
 ## Keep Grok Bot as a named cloud teammate that cannot own a production merge
 
-Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. Platforms: macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. Not iPad. The computer is a managed Linux VM. The Bot is a non-root user on that VM, not a Linux desktop app. See [supported platforms](/blog/grok-bot-supported-platforms).
+Grok Bot launched in beta on 11 August 2026. Eligibility widened on 21 August 2026. Platforms: macOS (Apple silicon and Intel), Windows (x64 and Arm64), Linux (x64 and Arm64), and iPhone (iOS 18 or later) or Android (9 or later) phones. iPad runs the iOS app. The computer is a managed Linux VM. The Bot is a non-root user on that VM, not a Linux desktop app. See [supported platforms](/blog/grok-bot-supported-platforms).
 
 All bots on the account share one persistent cloud computer. Cookies, sessions, files, and CLI credentials are shared. Deleting a bot does not remove those files or sessions. Do not use separate bots as a security boundary. [One computer, many screens](/blog/grok-bot-shared-computer-security) and [least privilege](/blog/least-privilege-bots) are the isolation and grant articles.
 
-No model picker, for members or admins, and none is planned. No Grok Bot-specific spend cap. Weekly allowance, then on-demand from model and token cost. No public dollar figure exists. Do not invent one. See [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn) and [Grok Bot cost](/blog/grok-bot-cost). No audit view of Bot actions yet. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer.
+No model picker, for members or admins, and none is planned. No Grok Bot-specific spend cap, only the account-level On-demand monthly limit. Weekly allowance, then on-demand from model and token cost. No public dollar figure exists. Do not invent one. See [spend cap and token burn](/blog/grok-bot-spend-cap-and-token-burn) and [Grok Bot cost](/blog/grok-bot-cost). No audit view of Bot actions outside Enterprise. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer.
 
 Routines attach to one Bot, max fifty, with twenty recent run records, and they die when the bot is deleted. Nothing is team-level. From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it.
 
@@ -89,7 +89,7 @@ Feature dumps go stale on the Cognition side. Score grok bot vs Devin on axes th
 | Merge | Not the product job. Charter never-merge. Bot does not merge PRs | Confirm whether a human still approves every pull request |
 | Identity | Cursor or SuperGrok plan check. See [why Grok Bot needs a Cursor account](/blog/grok-bot-cursor-account-explained) | Cognition account. Not a Grok Bot SKU. Not included by that Cursor door |
 | Skill files | Does not read SKILL.md, CLAUDE.md, or AGENTS.md | Confirm Devin's own config story. Do not paste Bot docs into it |
-| Audit | No audit view of Bot actions yet | Confirm whatever log Cognition currently ships. Do not assume Grok Bot grew one |
+| Audit | No audit view of Bot actions outside Enterprise; Enterprise has audit logs and Action Recording | Confirm whatever log Cognition currently ships |
 
 A sixth axis is model choice. Grok Bot has none, and none is planned. Recheck Devin model options on Cognition. Overnight mail is a Grok Bot job because [scheduling](/blog/grok-bot-scheduling) attaches to one named bot and the computer stays up when the laptop sleeps. That is not a reason to let that same bot own production git.
 
@@ -99,13 +99,13 @@ Grok Bot eligibility is published. Devin pricing is not a Grok Bot fact. Do not 
 
 | Door, checked 25 August 2026 | Grok Bot | Devin |
 |---|---|---|
-| Cursor Pro at $20 | Not included | Paid Cursor is not Cognition. Confirm both vendors |
-| Cursor Pro+ at $60 | Included. Cheapest documented paid individual door | Not a Devin SKU. Confirm Cognition separately |
-| Cursor Teams Standard $40/user or Premium $120/user | Included | Team Devin, if offered, is Cognition admin work. Recheck |
-| SuperGrok Plus at $100 | Included | SuperGrok is not Cognition |
+| Cursor Pro at $20 | Included. Cheapest documented paid individual door | Paid Cursor is not Cognition. Confirm both vendors |
+| Cursor Pro+ at $60 | Included, with more weekly usage than Pro | Not a Devin SKU. Confirm Cognition separately |
+| A self-serve Cursor Teams seat | Included for every member | Team Devin, if offered, is Cognition admin work. Recheck |
+| SuperGrok Plus | Included once linked | SuperGrok is not Cognition |
 | SuperGrok Heavy | Eligible. Price unpublished. Do not print one | Still not Devin |
 
-Privacy Mode (Legacy) blocks Grok Bot. SuperGrok at $30 does not include it. Cursor Hobby and Cursor Pro at $20 do not. Cursor Ultra at $200 does. A one-time trial is an individual Grok Bot path, not a Devin trial unless Cognition says so. The interesting row is still Pro at $20: paid Cursor, no Grok Bot, and still no Devin unless you bought Devin. If finance wants one AI line item, they can still receive two invoices. SpaceX does not bill Cognition. [The Grok Bot safety checklist](/blog/grok-bot-safety-checklist) is the sequence before a mailbox, not a Devin onboarding doc.
+Privacy Mode (Legacy) blocks Grok Bot. An individual SuperGrok subscription can be linked for usage instead. Cursor Hobby, the free plan, does not include Grok Bot; Cursor Pro at $20 does, and so does Cursor Ultra at $200. A one-time trial is an individual Grok Bot path, not a Devin trial unless Cognition says so. The interesting row is still Pro at $20: paid Cursor, Grok Bot included since September, and still no Devin unless you bought Devin. If finance wants one AI line item, they can still receive two invoices. SpaceX does not bill Cognition. [The Grok Bot safety checklist](/blog/grok-bot-safety-checklist) is the sequence before a mailbox, not a Devin onboarding doc.
 
 ## Measure Grok Bot risk on the shared account computer, not on a Cognition workspace
 
@@ -161,7 +161,7 @@ Most grok bot vs Devin failures are filing errors. The symptom is real. The noun
 | Inbox never opened a pull request for the 409 | Inbox is a mail teammate. Bot does not merge PRs | Cognition session, a human branch, or Cursor Cloud Agents |
 | Devin asked about unread vendor mail | You briefed a coding agent as if it were Grok Bot | Move mail to a named Grok Bot. Confirm Devin scope on Cognition |
 | Grok Bot ignored SKILL.md in payments-api | Expected. Bot does not read that file | If you needed skill files, you wanted Grok Build |
-| Pro at $20 user cannot start Grok Bot | Pro does not include Grok Bot | Invoice spelling. Pro+ or another eligible plan. Trial |
+| Hobby user cannot start Grok Bot | Hobby does not include Grok Bot | Invoice spelling. Pro or another eligible plan. Trial |
 | Deleted Grok Bot, Gmail still signed in | Deleting a bot does not clean the computer | Sessions and files on the shared VM. Not a Devin workspace |
 
 From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Do not expect that client to be a Devin dashboard. Restarting Grok Bot will not unstick a Cognition session.
@@ -180,7 +180,7 @@ What the objection does not win: turning Devin off will not make Inbox merge the
 
 Verification has to be able to fail. If every check is that a login worked, you learned nothing.
 
-Name a Grok Bot and confirm you see a screen. If you cannot, you do not have Grok Bot yet. Check the invoice against the [eligibility list](https://docs.x.ai/grok-bot/faq). Check Privacy Mode (Legacy). Check platforms. A Linux desktop or an Android phone is the wrong Grok Bot client even if a Devin recap mentioned a desktop app.
+Name a Grok Bot and confirm you see a screen. If you cannot, you do not have Grok Bot yet. Check the invoice against the [eligibility list](https://docs.x.ai/grok-bot/faq). Check Privacy Mode (Legacy). Check platforms. A Linux desktop and an Android phone have been Grok Bot clients since September 2026, so an old OS version is the usual miss, not the brand.
 
 Open Cognition, or the Devin product URL they currently publish, and confirm you are on that vendor. If that UI is missing, you do not have Devin. Do not call that a Grok Bot outage.
 

@@ -71,22 +71,22 @@ will happen again.
 | Plan | Price as published | Includes Grok Bot | Worth knowing |
 |---|---|---|---|
 | Cursor Hobby | Free | No | Not an access path |
-| Cursor Pro | 20 USD a month | No | The tier people assume works |
-| Cursor Pro+ | 60 USD a month | Yes | Cheapest paid path for an individual |
+| Cursor Pro | 20 USD a month | Yes | Cheapest paid path for an individual |
+| Cursor Pro+ | 60 USD a month | Yes | More weekly usage than Pro |
 | Cursor Ultra | 200 USD a month | Yes | Includes it, at a very different price |
-| Cursor Teams Standard | 40 USD per user a month | Yes | Cheapest per-seat route |
-| Cursor Teams Premium | 120 USD per user a month | Yes | Includes it |
-| SuperGrok | 30 USD a month | No | The x.ai tier that does not |
-| SuperGrok Plus | 100 USD a month | Yes | Listed as including Grok Bot access |
-| SuperGrok Heavy | Not published | Yes | Eligible, and we will not guess |
+| Cursor Teams (self-serve) | Per seat, on Cursor's team pricing | Yes | Every member, no Premium seat |
+| Cursor Enterprise | Through the account team | Yes | Once an admin enables it |
+| SuperGrok (individual) | On x.ai/pricing | Yes, once linked | Link it from the Grok Bot plan screen |
+| SuperGrok Plus | On x.ai/pricing | Yes, once linked | A link never stacks with a Cursor plan |
+| SuperGrok Heavy | Not published | Yes, once linked | Eligible, and we will not guess |
 
 Sources: [cursor.com/pricing](https://cursor.com/pricing),
 [x.ai/pricing](https://x.ai/pricing), and the
 [Grok Bot FAQ](https://docs.x.ai/grok-bot/faq) for the eligibility list.
 
 Three readings matter more than the numbers. The cheapest paid route is Cursor
-Pro+ at 60 USD a month, or Teams Standard at 40 USD per user, so anyone quoting
-an entry price of 120, 200 or 300 is describing the world before 21 August 2026.
+Pro at 20 USD a month, so anyone quoting a higher entry price is describing an
+older eligibility list.
 A one-time trial for individuals is cheaper still and left out of most round-ups.
 And holding both a Cursor and a SuperGrok subscription does not stack into one
 larger pool: Grok Bot uses whichever has more usage available.
@@ -120,7 +120,7 @@ planned, and that billing follows whichever model served the request. So the
 standard lever from every other agent stack, running a cheaper model for the
 boring jobs, is not available. Three controls remain: how often it runs, how much
 it reads, and how much it writes. The documentation trail is in
-[the no spend cap guide](/blog/grok-bot-spend-cap-and-token-burn).
+[the no per-Bot spend cap guide](/blog/grok-bot-spend-cap-and-token-burn).
 
 ## Treat the subscription as a floor and the charter as the ceiling
 
@@ -230,7 +230,7 @@ for a human at every 2FA prompt or captcha rather than trying to get past one.
 
 The loop written out attempt by attempt, including the turn where a retry ceiling
 stops helping, is in
-[the no spend cap guide](/blog/grok-bot-spend-cap-and-token-burn), and the same
+[the no per-Bot spend cap guide](/blog/grok-bot-spend-cap-and-token-burn), and the same
 failure as one of seven recurring modes is in
 [the seven ways bot setups fail](/blog/bot-failure-modes). A
 [subscription pruner](/bots/subscription-pruner) meeting a new device check is
@@ -333,7 +333,7 @@ rather than a cost optimisation: one bot reads each source and writes a digest
 the others read. And every new bot adds review load, which is the constraint that
 actually binds.
 
-Splitting earns its place for a second reason. With no audit view of bot actions
+Splitting earns its place for a second reason. With no audit view of bot actions outside Enterprise
 yet, a bot doing four jobs blends four cost profiles into one signal you cannot
 tune. One job per bot is the only way to get attributable usage from an
 environment that attributes nothing. The structural version is in
@@ -488,7 +488,7 @@ If a task needs spend, describe it in one line and wait for me.
 \`\`\`
 
 The self-report line caps nothing and is the clause people cut first. It exists
-because no audit view does. A counter the bot writes itself is the only per-bot
+because no audit view outside Enterprise does. A counter the bot writes itself is the only per-bot
 number you will ever have, and when a page count doubles between two Tuesdays you
 have found the change before the invoice does.
 
@@ -612,9 +612,9 @@ and [connecting the minimum, not the maximum](/blog/least-privilege-bots) after.
 ### How much does an AI agent cost per month?
 
 Access and usage are separate numbers. For Grok Bot, the cheapest published paid
-route as of 25 August 2026 is Cursor Pro+ at 60 USD a month for an individual or
-Cursor Teams Standard at 40 USD per user for a team, with SuperGrok Plus at 100
-USD a month as the x.ai route, plus a one-time trial. Usage on top of that is not
+route as of 23 September 2026 is Cursor Pro at 20 USD a month for an individual
+or a self-serve Cursor Teams seat for a team, with a linked individual SuperGrok
+as the x.ai route, plus a one-time trial. Usage on top of that is not
 predictable from any published figure, because it depends on how often your bots
 run and how much each run reads. Measure your own per-run consumption over three
 days and multiply by the cadence you want.

@@ -249,7 +249,7 @@ A completed note is not success if it wrote one false field. Treat any wrong-rec
 
 Review rejection clusters. If reps repeatedly reject customer launch dates proposed as Close Date, strengthen the date-role rules. If spelling causes most rejections, stop mapping unconfirmed names into structured contact roles. If unresolved records dominate, improve the approved candidate packet rather than broadening browser access.
 
-Run history is not a permanent audit system. Grok Bot keeps the twenty most recent run records per routine, and an audit view of bot actions does not exist yet. Store your own dated review packet and receipt outside that rolling view according to your organization’s retention policy. Do not invent a retention period that your policy has not approved.
+Run history is not a permanent audit system. Grok Bot keeps the twenty most recent run records per routine, and an audit view of bot actions does not exist outside Enterprise. Store your own dated review packet and receipt outside that rolling view according to your organization’s retention policy. Do not invent a retention period that your policy has not approved.
 
 ## Share the configuration only after you remove private examples
 

@@ -17,7 +17,7 @@ This page is the replacement decision. It is not [Grok Bot vs Zapier](/blog/grok
 
 Start with last week's actual tabs, not with a fantasy of headcount you can delete. Write four columns for the overnight shift: the URL opened, the extract copied, the destination, and the click that left the building (Slack post, CMS paste, form, trial, nothing). Three hours of sitting is not a job description. The job is the extracts plus the irreversible click, if there was one.
 
-Do not convert those hours into a wage-savings percent. This article will not invent one. As of 25 August 2026 the cheapest paid path is Cursor Pro+ at $60 per month. SuperGrok Plus at $100 includes Grok Bot. Cursor Hobby, Cursor Pro at $20, and SuperGrok at $30 do not. Ultra at $200 includes it. Teams Standard at $40 and Premium at $120 per user per month both include it. A one-time trial exists. There is no Grok Bot-specific spend cap. Weekly allowance, then on-demand from model and token cost, with no published dollar figure. None of that is a VA wage. Budget the seat. Do not pretend it is a percentage of a person.
+Do not convert those hours into a wage-savings percent. This article will not invent one. As of 23 September 2026 the cheapest paid path is Cursor Pro at $20 a month. Every paid Cursor plan includes Grok Bot, with Pro+ at $60 and Ultra at $200 adding weekly usage, and so does every member of a self-serve Cursor Teams plan. An individual SuperGrok can be linked instead. Cursor Hobby, the free plan, does not include it. A one-time trial exists. There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Weekly allowance, then on-demand from model and token cost, with no published dollar figure. None of that is a VA wage. Budget the seat. Do not pretend it is a percentage of a person.
 
 | Kind of overnight work | Example extract | Hand it to a grok bot? | What a human still does |
 |---|---|---|---|
@@ -54,7 +54,7 @@ Teach by demonstration records visible computer interaction for at most ten minu
 | Duration | At most ten minutes | One named extract per recording, or skip the camera and write the charter |
 | Audio | No microphone | Skip rules the VA muttered are missing until you type them |
 | Surface | Browser workflows only | Finder screenshots, native apps, and terminals stay with a person |
-| Device | Unavailable on iPhone | Record on macOS or Windows. The phone is a pause button later |
+| Device | Unavailable on iPhone | Record in the desktop app. The phone is a pause button later |
 | Output | A draft skill | Review, add refusals, then maybe schedule. Raw tape is not a worker |
 
 A forty-minute wander through six sites is not a loop. A loop is one named extract you can see without narration: Tideframe homepage H1, stop. Tideframe pricing table, stop. Repeat for Orbitalist and Vellumstack. Prefer one handwritten charter that lists the six URLs. The recorder is a first paragraph for a click path, not the shift. If you cannot name the extract in one sentence, write the job instead of performing it. When you need the camera, the twin is [teach Grok Bot by demonstration](/blog/teach-grok-bot-by-demonstration).
@@ -67,9 +67,9 @@ Type the skip rules into the draft. Ignore banners, chat widgets, shuffled testi
 
 Grok Bot does not read \`SKILL.md\` or \`CLAUDE.md\` from a repo. That compatibility lives on Grok Build, unpacked in [Grok Bot vs Grok Build](/blog/grok-bot-vs-grok-build). Do not drop a Claude skill into this runtime and call the VA replaced.
 
-## Refuse to teach the VA path from an iPhone, and do not wait for an iPad client
+## Refuse to teach the VA path from an iPhone or an iPad
 
-Teach by demonstration is unavailable on iPhone. Record on macOS (Apple silicon or Intel) or Windows (x64 or Arm64), in a browser. The iPhone app, on iOS 18 or later, can pause and resume a routine. It cannot edit, view history, test, or delete. Teaching sits with that second list. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The computer is a managed Linux VM, bot as non-root, not a Linux client you install. [Supported platforms](/blog/grok-bot-supported-platforms) is the matrix. [How to pause a Grok Bot from your iPhone](/blog/how-to-pause-a-grok-bot-on-iphone) is the stop button after a routine exists.
+Teach by demonstration is unavailable on iPhone. Record on macOS (Apple silicon or Intel) or Windows (x64 or Arm64), in a browser. The iPhone app, on iOS 18 or later, can pause and resume a routine, read its run history, and delete it. It cannot edit or test. Teaching sits with that second list. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The computer is a managed Linux VM, bot as non-root, not a Linux client you install. [Supported platforms](/blog/grok-bot-supported-platforms) is the matrix. [How to pause a Grok Bot from your iPhone](/blog/how-to-pause-a-grok-bot-on-iphone) is the stop button after a routine exists.
 
 If the only machine at 22:00 is a phone, you cannot replace the VA shift tonight. Pause an existing routine from the train. Do not teach a new one from the train. Privacy Mode (Legacy) blocks Grok Bot entirely. Confirm the current Cursor setting rather than guessing from a Slack screenshot.
 
@@ -98,9 +98,9 @@ All bots on an account share one persistent cloud computer assigned to the user,
 
 If the VA was signed into a paid research dashboard or a shared Google account, that session is about to become a house key. Every other bot on the account can reach it. [One computer, many screens](/blog/grok-bot-one-computer-many-screens) is the architecture. [How to isolate Grok Bot credentials](/blog/how-to-isolate-grok-bot-credentials) is the alias work. Do that before the first harvest run.
 
-The replacement harvest should not need those logins. Public pages only. If a price is behind a wall, the pack says BLOCKED and a person decides in their own browser. Confirm third-party tool terms on that vendor's page. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer, and that does not clean the Tideframe cookie. There is no audit view of Bot actions yet. Static egress IPs mean some services flag datacenter addresses. A blocked load belongs in the pack as FETCH-FAILED, not as a retry that starts a trial.
+The replacement harvest should not need those logins. Public pages only. If a price is behind a wall, the pack says BLOCKED and a person decides in their own browser. Confirm third-party tool terms on that vendor's page. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer, and that does not clean the Tideframe cookie. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording. Static egress IPs mean some services flag datacenter addresses. A blocked load belongs in the pack as FETCH-FAILED, not as a retry that starts a trial.
 
-Coming soon, and not shipped: a team-level ceiling on local execution, and an admin Kill that deletes the VM while durable storage is kept. Do not plan teardown around Kill. It would not wipe the session the way people hope.
+Shipped since: a team-level ceiling on local execution, and, on Enterprise, an admin terminate that ends a member's computer while the durable disk is kept. Do not plan teardown around terminate. It does not wipe the session the way people hope.
 
 ## Treat a late approval as a stop on the next click, not a rewind of the last paste
 
@@ -220,7 +220,7 @@ No. An approval controls the proposed action. It does not reverse work already c
 
 ### Will deleting the research bot sign the VA tools out of the shared computer?
 
-No. All bots on an account share one persistent cloud computer assigned to the user, not to a bot. Screens are not security boundaries. Cookies, sessions, files, and command-line credentials remain when you delete a named bot. Sign the research dashboards out yourself on that computer, then confirm the session is gone. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. There is no audit view of Bot actions yet, so do not treat delete as a cleanup log or as proof the overnight shift is gone.
+No. All bots on an account share one persistent cloud computer assigned to the user, not to a bot. Screens are not security boundaries. Cookies, sessions, files, and command-line credentials remain when you delete a named bot. Sign the research dashboards out yourself on that computer, then confirm the session is gone. Hosted MCP sign-in tokens stay with Cursor's backend, not on the computer. There is no audit view of Bot actions outside Enterprise, so do not treat delete as a cleanup log or as proof the overnight shift is gone.
 
 ### Who still publishes the competitor pack after you replace a VA shift with a grok bot?
 

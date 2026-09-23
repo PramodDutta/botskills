@@ -35,7 +35,7 @@ inboxes and a quiet suspicion that two of them are doing the same work.
 Nothing in the runtime assembles that picture for you. As of writing, a routine
 is assigned to a single bot, a bot tops out at 50 routines, and the app keeps
 only the 20 most recent run records per routine. Delete a bot and its routines
-go with it. There is no team-level version of any of this, and no audit view of
+go with it. There is no team-level version of any of this, and no audit view outside Enterprise of
 bot actions exists yet. The cross-bot view is not hidden in a settings panel
 somewhere. It does not exist unless you build something that assembles it.
 
@@ -259,7 +259,7 @@ a clean operation: deleting a bot deletes its routines along with it, and
 deleting a bot does not remove files or signed-in browser sessions from the
 shared computer, because that computer is assigned to your account rather than
 to any individual bot. So a retirement leaves residue in one place and
-destroys work in another, and there is no audit view to reconstruct what was
+destroys work in another, and there is no audit view outside Enterprise to reconstruct what was
 lost. That is a decision a human makes with a coffee, not a decision a bot
 makes at 3am because a usage report looked thin.
 
@@ -489,7 +489,7 @@ useful to say that day.
 It should read them and recommend, never change them. Retiring a bot is not a
 reversible operation: its routines are deleted with it, while files and
 signed-in browser sessions persist on the shared computer that belongs to your
-account rather than to any single bot. With no audit view of bot actions
+account rather than to any single bot. With no audit view of bot actions outside Enterprise
 available as of writing, a wrong deletion is not something you can reconstruct
 afterwards. Have the bot produce the overlap, gap, retire, and drift lists with
 evidence attached, then make the structural calls yourself.

@@ -53,20 +53,17 @@ delete the lesson, unless the lesson never left the screen.
 
 Hour one starts when the client you actually use can create, run, and inspect
 a bot. Grok Bot supports macOS on Apple silicon and Intel, Windows on x64 and
-Arm64, and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026; iPad is still not supported. The cloud computer is a managed Linux VM. That
-is not a Linux client on your laptop. If your only machine is a Linux
-workstation, this hour cannot start. [Supported
+Arm64, and iPhone on iOS 18 or later. There are Linux desktop and Android apps as of September 2026, and the iOS app also runs on iPad (iPadOS 18 or later). The cloud computer is a managed Linux VM. That
+is not the Linux client on your laptop. If your only machine is a Linux
+workstation, install the Linux desktop app and this hour can start. [Supported
 platforms](/blog/grok-bot-supported-platforms) is the current client list.
 
-iPhone can pause and resume. Editing, history, testing, and deleting need
-desktop. Do not author the first Grok Bot on a phone.
+iPhone can pause and resume. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Do not author the first Grok Bot on a phone.
 
-Eligible plans, checked 2026-08-25, are SuperGrok Plus, SuperGrok Heavy,
-Cursor Pro+, Cursor Ultra, Cursor Teams Standard, Cursor Teams Premium, plus
-a one-time trial. Cursor Hobby, Cursor Pro at $20, and SuperGrok at $30 do
-not include Grok Bot. Cheapest documented individual paid door: Cursor Pro+
-at $60 a month. SuperGrok Plus is $100. Teams Standard is $40 per user per
-month, Premium $120. Do not print a SuperGrok Heavy price. [Cursor
+Eligible plans, rechecked 2026-09-23, are every paid Cursor plan (Pro, Pro+,
+Ultra) and every self-serve Cursor Teams seat, plus a one-time trial. Cursor
+Hobby, the free plan, does not include Grok Bot, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Cheapest documented individual paid door: Cursor Pro
+at $20 a month. Do not print a SuperGrok Heavy price. [Cursor
 access](/blog/grok-bot-cursor-account-explained) is the sign-in story. [Is
 Grok Bot worth it](/blog/is-grok-bot-worth-it) is the money question after a
 run.
@@ -167,7 +164,7 @@ bot writes unknown.
 
 Do not point hour one at your inbox, your drive, your CRM, or a list of
 twenty domains. Those inputs require connections or they invite a crawl.
-There is no Grok Bot-specific spend cap. Subscriptions include a weekly
+There is no Grok Bot-specific spend cap, but the account-level On-demand monthly limit applies. Subscriptions include a weekly
 usage allowance, then overflow billed from model and token cost. A wandering
 browse is how a trial and a weekly allowance both vanish. [Spend and token
 burn](/blog/grok-bot-spend-cap-and-token-burn) is the later control.
@@ -192,7 +189,7 @@ successful, because inspect will catch it. An unfinished run you abandoned to
 go create Inbox Triage is a failed hour.
 
 Grok Bot has no model picker. Admins cannot pick one either. Fix the job, not
-a dropdown that does not exist. There is no audit view of bot actions yet.
+a dropdown that does not exist. Individual accounts and self-serve Teams still have no audit view of Bot actions; Enterprise has audit logs and Action Recording.
 Inspect is your audit. Stay for the run.
 
 When it stops, do not immediately rerun. Inspect first. If the miss is a
@@ -410,11 +407,11 @@ an hour well spent. A sidebar of unnamed assistants is not.
 ### Can I finish a first Grok Bot in sixty minutes if I already pay for an eligible plan?
 
 Yes, if the hour stays one job. Confirm a desktop client (Mac, Windows or Linux)
-opens and that the entitlement is Grok Bot, not a cheaper Cursor or SuperGrok
-tier that excludes it. Create one bot named Lead Scout, paste a charter with
+opens and that the entitlement is Grok Bot, not Cursor Hobby or a SuperGrok
+tier that cannot be linked. Create one bot named Lead Scout, paste a charter with
 a never-contact line, and run it once on a public page or an attached public
 document. Inspect every sourced claim. Stop without Gmail, without a routine,
-and without a second hire. the phone app can pause a routine and approve steps but not edit it, so the hour does not start until you can edit and inspect on a desktop.
+and without a second hire. The phone app can pause a routine, approve steps, and show run history but not edit it, so the hour does not start until you can edit and inspect on a desktop.
 
 ### Should I connect Gmail in the first hour if the bot will only draft?
 
@@ -422,7 +419,7 @@ No. Hour one proves that a named bot can produce checkable work on a safe
 input. Signing into Gmail stores a mailbox session on the one cloud computer
 every bot on the account shares. Deleting the bot does not remove that
 session. Draft-only is a charter sentence, not a security boundary, and there
-is no audit view of bot actions yet. Connect mail later, after a brief you
+is no audit view of bot actions outside Enterprise. Connect mail later, after a brief you
 trust and after you understand how sessions persist. The first Grok Bot
 should still be sourced research, not an inbox.
 

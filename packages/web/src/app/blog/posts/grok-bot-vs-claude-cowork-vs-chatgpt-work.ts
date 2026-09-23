@@ -53,7 +53,7 @@ Grok Bot is that desk. You name the bot, write the charter, connect the minimum 
 
 Routines attach to one bot (max 50, 20 recent run records) and die with it. Nothing is team-level. A standing cloud role for the intern is a second Grok Bot account, not a second bot name on yours.
 
-Launched beta 11 August 2026. Eligibility widened 21 August 2026. Cheapest paid path: Cursor Pro+ at $60 a month. Cursor Hobby, Cursor Pro at $20, and SuperGrok at $30 do not include it. SuperGrok Plus at $100 does. Also eligible: SuperGrok Heavy, Cursor Ultra, Cursor Teams Standard and Premium, plus a one-time trial. No Grok Bot-specific spend cap, no published allowance figure, no model picker. Weekly allowance, then on-demand.
+Launched beta 11 August 2026. Eligibility widened 21 August 2026. Cheapest paid path: Cursor Pro at $20 a month. Every paid Cursor plan includes Grok Bot; Cursor Hobby, the free plan, does not, and an individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ subscription can be linked instead. Cursor Teams and a one-time trial also qualify. No Grok Bot-specific spend cap beyond the account On-demand monthly limit, no published allowance figure, no model picker. Weekly allowance, then on-demand.
 
 Put the overnight inbox here. Not the intern's NDA folder. Not Thursday's one-off deck.
 
@@ -115,7 +115,7 @@ Cowork and Work on Windows are vendor-page questions. Confirm folder grants, com
 
 Do not move the company mailbox onto the intern's Windows laptop so they can "own inbox" with a desktop operator. Overnight mail then dies when their PC sleeps or goes home in a bag. The inbox belongs on the account computer, draft-only. Local files stay local. One-off packs stay on a task surface.
 
-Linux desktop, Android, and iPad are not Grok Bot clients. Do not invent a Linux Grok Bot app because someone likes Ubuntu.
+Linux desktop, Android, and iPad (through the iOS app) are Grok Bot clients as of September 2026. If someone likes Ubuntu, install the official Linux app, not a community wrapper.
 
 ## Paste a three-home routing charter the founder can reuse
 
@@ -168,7 +168,7 @@ Run the three jobs on paper through four weeks. The fork is which computer was s
 
 Week one, matching homes. Draft-only inbox bot on Grok Bot. Intern grants Cowork (confirmed) one Downloads subfolder. One Work job (confirmed) for Thursday's board pack. Inbox pack appears while both lids are closed. NDAs never left Windows. Board pack ends.
 
-Week four, forced Grok Bot because you already pay for Cursor Pro+ at $60 a month. The intern logs into your account "so they can see the NDA bot." Those files now sit next to the mailbox session. You deleted Thursday's deck bot. The vendor portal they used is still signed in. A [churn watch](/bots/churn-watch) bot you added in week three can open that portal. No audit view exists yet.
+Week four, forced Grok Bot because you already pay for Cursor Pro+ at $60 a month. The intern logs into your account "so they can see the NDA bot." Those files now sit next to the mailbox session. You deleted Thursday's deck bot. The vendor portal they used is still signed in. A [churn watch](/bots/churn-watch) bot you added in week three can open that portal. No audit view outside Enterprise.
 
 Week four, forced Cowork as a desktop operator is often described. Intern PC off. 07:15 pack missing. You are on a train with a phone that can pause a Grok bot you never staffed.
 
@@ -206,7 +206,7 @@ Cowork, on the intern's Windows box. Grant one folder. Ask it to list that folde
 
 Work. Start a one-off pack. When it finishes, try to treat it as a named coworker next week without pasting a new goal. If you have to be the memory, you confirmed a task surface. Check whether each person's plan actually includes Work.
 
-Platform. Founder Mac and intern Windows: supported Grok Bot clients. Phone app (iPhone or Android): approve steps and pause or resume a routine, but no editing. Linux, Android, iPad: no Grok Bot app. Cowork and Work: vendor pages.
+Platform. Founder Mac and intern Windows: supported Grok Bot clients. Phone app (iPhone or Android): approve steps and pause or resume a routine, but no editing. Linux desktop and iPad (iOS app): supported too. Cowork and Work: vendor pages.
 
 A check that cannot fail is not a check.
 
@@ -224,7 +224,7 @@ Two humans on one Grok Bot account are one computer. If you cannot afford a seco
 
 None of these products is a wall between two humans who should not see each other's logins, not if they share a Grok Bot account, and not if you paste the intern's NDA folder into a ChatGPT job on the founder's login. Isolation is an account choice, a disk choice, or a decision not to copy the file.
 
-Do not let any of the three send, pay, post publicly, merge, or delete without a human. Write the stop verb before you pick the home. Do not run a job that needs an immutable action log on Grok Bot: an audit view of bot actions does not exist yet. Do not use Grok Build compatibility as a Grok Bot feature. Claude Code, SKILL.md, and CLAUDE.md belong to Grok Build.
+Do not let any of the three send, pay, post publicly, merge, or delete without a human. Write the stop verb before you pick the home. Do not run a job that needs an immutable action log on Grok Bot: an audit view of bot actions does not exist outside Enterprise. Do not use Grok Build compatibility as a Grok Bot feature. Claude Code, SKILL.md, and CLAUDE.md belong to Grok Build.
 
 The jobs that survive are boring on purpose: overnight drafts, local filing the intern can undo, one-off packs that end. [Inbox triage](/bots/inbox-triage) never sends. [Chief of staff briefing](/bots/chief-of-staff-briefing) never invites. If the job fails that filter, keep it.
 
@@ -242,7 +242,7 @@ No. Every bot on one account shares one persistent cloud computer assigned to th
 
 ### Can I treat Claude Cowork or ChatGPT Work prices in this article as current?
 
-No. This page does not print Cowork or Work prices, and it does not freeze their feature lists as fact. Confirm Cowork on Anthropic's current product and pricing pages the morning you buy. Confirm Work on OpenAI's current ChatGPT Work page, including which plans and which clients actually include it that day. Grok Bot's cheapest published paid path is Cursor Pro+ at $60 a month, with other eligible subscriptions listed in xAI's FAQ as of 25 August 2026. Do not copy a three-column bargain grid from a roundup.
+No. This page does not print Cowork or Work prices, and it does not freeze their feature lists as fact. Confirm Cowork on Anthropic's current product and pricing pages the morning you buy. Confirm Work on OpenAI's current ChatGPT Work page, including which plans and which clients actually include it that day. Grok Bot's cheapest published paid path is Cursor Pro at $20 a month, with other eligible subscriptions listed in xAI's FAQ and Cursor's plans page as of 23 September 2026. Do not copy a three-column bargain grid from a roundup.
 
 ### What if I run the overnight inbox on the intern's Windows laptop instead of the cloud computer?
 

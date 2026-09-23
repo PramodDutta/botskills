@@ -43,7 +43,8 @@ unused name, writes one markdown file, marks the name done, and stops. If the
 file is empty, it stops without hunting for more shops.
 
 Forty shops at one a weekday is eight weeks. Eleven shops overnight is a spam
-event. Grok Bot has no published spend cap. Subscriptions include a weekly
+event. Grok Bot has no per-bot spend cap, only the account's On-demand
+monthly limit. Subscriptions include a weekly
 allowance, then overflow bills from model and token cost. There is no dollar
 figure to quote for that allowance. A metro crawl burns the pool on work you
 cannot review.
@@ -204,11 +205,10 @@ Name the routine \`research-one-plumber\`, not \`update-the-index\`. The second
 name is how a helpful bot picks Submit. When \`queue.txt\` is empty, write
 queue empty and stop. Do not search for more shops.
 
-From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing, history, testing, and
-deleting need desktop. Do not tell the bot to just update the live listing
+From the phone app (iPhone or Android) you can approve steps and pause or resume a routine, but not edit it. Editing and testing a routine still need the desktop app; the phone can now show run history and delete a routine. Do not tell the bot to just update the live listing
 from the phone. Pause. Open desktop. Read the file.
 
-There is still no audit view of bot actions. A green run is not a clean index.
+There is still no audit view of bot actions outside Enterprise. A green run is not a clean index.
 See [the routine that did not run](/blog/grok-bot-routine-did-not-run) for the
 record cap.
 
@@ -314,8 +314,8 @@ rows with four invented mobiles is not coverage. It is a moderation event and
 a reputation event. The shops will not thank you for the volume.
 
 It also loses on the session. Filling the live form requires the owner login
-on the shared computer. Every other bot inherits that cookie. There is no
-audit view of which screen used it. A markdown file in
+on the shared computer. Every other bot inherits that cookie. Outside
+Enterprise there is no audit view of which screen used it. A markdown file in
 \`/workspace/directory-research/\` has no Submit neighbor. You cannot complete
 that file into a public listing without leaving the computer.
 
@@ -423,10 +423,10 @@ this roster cannot see.
 
 It stops applying on a computer that already holds the directory session you
 refuse to sign out of. Sign out first, or do the research on a different
-eligible account. Eligible paths include SuperGrok Plus, SuperGrok Heavy,
-Cursor Pro+ at $60 a month as the cheapest paid individual path, Cursor Ultra,
-and Cursor Teams Standard and Premium. Cursor Hobby and Cursor Pro at $20 do
-not include Grok Bot. Privacy Mode (Legacy) blocks Grok Bot entirely. None of
+eligible account. Eligible paths include every paid Cursor plan, with
+Cursor Pro at $20 a month as the cheapest paid individual path, Cursor Teams,
+and a linked individual SuperGrok, SuperGrok Plus, SuperGrok Heavy or X
+Premium+ subscription. Cursor Hobby, the free plan, does not include Grok Bot. Privacy Mode (Legacy) blocks Grok Bot entirely. None of
 those facts create a second computer on one account.
 
 **Keep reading:** [The Five-Part Grok Bot Brief: Outcome, Sources, Constraints, Deliverable, Review](/blog/grok-bot-five-part-brief), [How To Build A Prospect Sheet Where Every Cell Has A Source](/blog/how-to-build-a-prospect-research-sheet), [How to Build a Grok Bot That Can Run a Content Calendar](/blog/grok-bot-to-content-calendar).

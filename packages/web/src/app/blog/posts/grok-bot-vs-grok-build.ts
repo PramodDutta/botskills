@@ -78,7 +78,7 @@ Build's model story is the CLI's and the API's, which is a different product mee
 
 ## Price them as different bills
 
-Grok Bot is bundled: Cursor Pro+ at $60 is the cheapest documented individual door, Teams Standard at $40 a seat, SuperGrok Plus at $100, no standalone SKU, weekly allowance then on-demand, no bot-specific spend cap. Grok Build's cost is whatever the CLI and the model metering are on the day you run it, plus the machine it sits on. grok-4.6 API pricing, when you use the API, is a token bill. Adding those three together as "what Grok costs" is how a spreadsheet lies.
+Grok Bot is bundled: Cursor Pro at $20 is the cheapest documented individual door, a self-serve Cursor Teams seat, SuperGrok Plus at $100, no standalone SKU, weekly allowance then on-demand, no bot-specific spend cap. Grok Build's cost is whatever the CLI and the model metering are on the day you run it, plus the machine it sits on. grok-4.6 API pricing, when you use the API, is a token bill. Adding those three together as "what Grok costs" is how a spreadsheet lies.
 
 [Grok Bot cost](/blog/grok-bot-cost) is only the teammate product. Do not file a Build invoice under that heading.
 

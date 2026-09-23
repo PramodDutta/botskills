@@ -66,7 +66,7 @@ smallest repository set that works, read where read is enough.
 | SSH deploy key | One repository, read or read and write | None unless you rotate | Which key, not which human | Only for a build box |
 
 The fourth column matters because Grok Bot's documentation is explicit that an
-audit view of bot actions does not exist yet. If the runtime cannot say which
+audit view of bot actions does not exist outside Enterprise. If the runtime cannot say which
 bot did what, the credential has to. A fine-grained token bounds the answer to
 two named repositories; a classic token bounds it to anything your account can
 reach, which is not a bound.
@@ -352,7 +352,7 @@ at creation and nothing will remind you what you ticked.
 
 Build one more check into the routine: have the bot end every run naming which
 repositories it read and which write actions it took. No audit view exists
-yet, so a record you want on Friday has to be written on Tuesday.
+outside Enterprise, so a record you want on Friday has to be written on Tuesday.
 
 ## Answer the strongest case for letting the bot merge
 
