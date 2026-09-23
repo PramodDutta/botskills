@@ -1,246 +1,227 @@
 import type { BlogPost } from './index';
 
 export const post: BlogPost = {
-  title: 'Cursor Teams Premium: $120 Seat, Still One Computer Per Person',
+  title: 'Grok Bot on Cursor Teams: Every Seat Included, No Premium Needed',
   description:
-    'Evaluate grok bot teams premium at $120 per user monthly with a seat roster, account ownership map, workload pilot, access review, and exit test.',
-  date: '2026-08-29',
+    'Grok Bot on Cursor Teams needs no Premium seat and no admin request: every self-serve member has it. How seat usage, on-demand billing and one computer per person work.',
+  date: '2026-09-23',
   category: 'Guide',
   content: `
-# Cursor Teams Premium: $120 Seat, Still One Computer Per Person
+# Grok Bot on Cursor Teams: Every Seat Included, No Premium Needed
 
-Dev's procurement sheet has one row labeled "Grok Bot workspace, $120." That row hides the unit that matters. Cursor Teams Premium is $120 per user per month and includes Grok Bot. The computer is assigned to a user account, not to a team bot name or shared department queue.
+> **What changed on 23 September 2026:** this page used to be a buying guide for Cursor Teams Premium. It treated Grok Bot on Teams as a seat-by-seat purchase built around the Premium seat, weighed Premium against Standard, and quoted per-seat prices from an August check. The Cursor plans page now answers the question that guide was built around: joining a self-serve Teams plan does not require a Premium seat for Grok Bot, every member has access, and nobody has to ask an admin. The page has been rewritten for admins whose job changed from buying access to governing it. It quotes no seat prices; Cursor's Team pricing page is the source for those.
 
-A grok bot teams premium purchase therefore needs a person-by-person roster. For each seat, decide who owns the account, which workflows may share that person's computer, what sources it may reach, who covers absence, how use is reviewed, and what happens when the person leaves. This guide evaluates that operating shape. It does not repeat the cheaper individual paths or the Teams Standard guide.
+If you run a self-serve Cursor Teams plan, every member already has Grok Bot on their own Cursor account. You did not assign it, you cannot switch it off for them, and on-demand usage is on by default for the plan. That combination is the real admin problem. It is a spending and governance problem, not a seat problem.
 
-## Price the roster by user instead of by bot
+Checked on 23 September 2026 against the [Cursor plans page for Grok Bot](https://cursor.com/help/grok-bot/plans), the [teams and enterprises page](https://docs.x.ai/grok-bot/teams-and-enterprises) and the [Grok Bot security FAQ](https://docs.x.ai/grok-bot/security-faq). Grok Bot is in beta, and its plan rules for teams changed between the August and September checks.
 
-Dev starts with four proposed users, so the published seat price produces $480 per month before taxes or other account-specific charges: four multiplied by $120. Four users are his scenario choice. The arithmetic is not a quote from Cursor, and the source price should be rechecked before purchase.
+## Read the plans page answer before you open a seat request
 
-Do not multiply by bot count. One seated user may create several workflows, while a second person needs their own user seat for their account. The number of named bots is an operational capacity question, not the billing unit stated in the verified facts.
+The plans page asks the exact question this page used to answer the long way: does joining a Cursor Teams plan require a Premium seat for Grok Bot? Its answer is no. On a self-serve Teams plan, every member gets Grok Bot on their Cursor account. Admins do not assign a Premium seat. Members do not request access. Grok Bot usage draws from the Teams allowance for that member's seat, and on-demand usage is enabled by default for the Teams plan.
 
-| Roster idea | Seats counted | Monthly scenario arithmetic | Problem to resolve |
-|---|---:|---:|---|
-| 1 operator, 4 bots | 1 | $120 | All workflows share that user's computer |
-| 4 operators, 1 bot each | 4 | $480 | Four account owners and handoffs |
-| Shared department login | Do not model as person | Misleading | Ownership and account policy |
-| 2 users after pilot | 2 | $240 | Which workloads justify seats |
+The teams and enterprises page says the same thing from the admin side. On the Teams plan, Grok Bot is on by default and every member has access with no admin action. The Grok Bot card on the dashboard is a status line reading Grok Bot is enabled for your team, with no switch beside it. The Grok Bot FAQ adds that self-serve Teams Standard and Premium seats both include Grok Bot.
 
-The title's "one computer per person" is shorthand for the documented user-account assignment. It does not promise a device for every employee who merely receives a report.
-
-## Confirm eligibility without turning it into architecture
-
-The verified facts list Cursor Teams Premium among the plans eligible for Grok Bot. Eligibility means the plan can provide access. It does not mean every proposed workflow is approved, isolated, useful, or compliant.
-
-Dev keeps two decisions separate. Procurement confirms plan, seat price, account ownership, and access. The workflow owner confirms data, source permissions, output boundary, review, and value. A successful login does not close the second decision.
-
-For the broad eligibility menu, use [Who Can Actually Run Grok Bot](/blog/who-can-actually-run-grok-bot). For the $40 per-user Teams Standard alternative, use [Grok Bot Teams Standard](/blog/grok-bot-teams-standard). This page focuses on what the Premium seat changes in roster economics and what it does not change in account design.
-
-## Assign every seat to a named accountable operator
-
-Each proposed seat row names the person, manager, business purpose, approved data classes, expected workflows, source owners, backup reviewer, start date, review date, and offboarding owner. "Marketing" cannot own a browser session or answer an access-review question.
-
-The operator is not required to perform every downstream task. They are the accountable account user who understands what lives on that computer and who can coordinate cleanup. If company account policy forbids generic credentials, do not create one for convenience.
-
-| Seat field | Example | Why it matters | Reject when |
+| Your plan | Grok Bot access | Who turns it on | Usage comes from |
 |---|---|---|---|
-| Named user | Dev | Maps computer to accountable account | Only department name exists |
-| Workflow purpose | Weekly sourced launch brief | Bounds expected activity | "Use AI" is the purpose |
-| Source owner | Product operations | Grants and revokes access | No owner can approve source |
-| Backup reviewer | Lina | Covers report review | Backup needs shared login |
-| Exit owner | Identity operations | Coordinates suspension and cleanup | Offboarding is unspecified |
+| Self-serve Cursor Teams | Every member | Nobody; on by default | The member's seat allowance, then on-demand (on by default) |
+| Cursor Enterprise | All members or chosen groups | An admin, after working with the Cursor account team | The Cursor contract |
+| Teams on Privacy Mode (Legacy) | Off | Move off the legacy mode first | Not applicable |
+| Legacy request-based Teams plan | Off | Stays off on that plan type | Not applicable |
+| Individual Pro, Pro+ or Ultra | The account holder | Included with the plan | The plan's weekly tier |
 
-## Group workloads by what may share one computer
+If a member reports that Grok Bot is missing, the seat type is not the first suspect. The account they signed in with is, then the team's privacy mode, then whether the plan is a legacy request-based one.
 
-All bots on a user's account share one persistent cloud computer, with separate screens that are not security boundaries. That one sentence is the architecture fact needed here; [Screens Are Not Boundaries](/blog/screens-are-not-boundaries) contains the detailed treatment.
+## Treat the seat as a usage tier, never as an access key
 
-Dev groups candidate workflows by data and credential compatibility. A public competitor monitor and a private customer-renewal workflow should not be combined merely because one user wants both. The decision asks whether the same account computer may hold both source sessions, files, and command-line credentials.
+Seats still matter for Grok Bot, just not for access. The plans page says that on a self-serve Teams plan Grok Bot follows the seat the member is on: a higher seat can raise weekly usage and a lower seat lowers it. For the seat allowances and the on-demand details it sends admins to Cursor's Team pricing page, and so does this page. The Grok Bot docs do not publish how much weekly usage any seat carries.
 
-Named bot count is a usability choice inside that account, not an isolation scheme. If two workloads require a real security boundary, move one to an appropriately separated account arrangement or reject the combination under your organization's architecture policy.
+So the useful question is no longer which members need Premium to use Grok Bot. It is which members run out of weekly usage often enough that a higher seat would cost less than the on-demand usage they generate. That question has an answer only after members have used the product for a few weeks, which is the opposite order from the August buying guide, where the seat came first and the usage evidence came afterwards.
 
-## Compare Premium with Standard on your actual requirement
+Three seat rules from the plans page are worth knowing before anyone asks.
 
-The verified facts say both Cursor Teams Standard at $40 per user per month and Premium at $120 per user per month include Grok Bot. The Premium delta is $80 per user monthly using those published figures. This article does not invent a Grok Bot-specific Premium entitlement to justify that difference.
+Removing a member's seat ends their Teams grant. A SuperGrok or X Premium+ link already on that member's Cursor account does not grow to replace it and does not restore the Teams allowance.
 
-Dev lists the team requirements he has independently verified in current Cursor materials and procurement documents, then asks which plan satisfies them. Grok Bot access alone cannot distinguish the two because both are eligible. If no Premium-specific need survives review, Standard deserves consideration.
+A personal link adds nothing on top of a Teams seat. Linking SuperGrok, SuperGrok Plus, SuperGrok Heavy or X Premium+ while already on a self-serve Teams plan does not add usage, so members have no reason to link anything for work.
 
-| Decision factor | Teams Standard | Teams Premium | Evidence needed |
-|---|---:|---:|---|
-| Published user price | $40/month | $120/month | Current Cursor pricing source |
-| Grok Bot eligibility | Included | Included | Current Grok Bot eligibility source |
-| Scenario for 4 users | $160/month | $480/month | Roster count and arithmetic |
-| Premium-specific requirement | Must be checked | Must be checked | Current primary plan comparison |
+Request-based Teams plans and Enterprise seats do not take a personal SuperGrok link at all. Those plans keep Grok Bot on the Cursor contract.
 
-Do not fill the last row from memory. The binding facts for these articles establish price and Grok Bot inclusion, not a complete feature comparison.
+## Walk Dev from a stalled Premium request to a closed ticket
 
-## Refuse to justify Premium with an invented Bot feature
+Dev administers a self-serve Cursor Teams plan for a nine-person product team. In late August, working from that month's reading, he had drafted a request to move four people to Premium seats so they could use Grok Bot. Finance asked for a justification per seat, and the request sat in a queue.
 
-A purchase proposal often tries to make the preferred plan sound inevitable. That is where unsupported claims appear: a special model, a separate computer per bot, a particular allowance, or an administrative control not established by the evidence.
+On Monday morning Lina, a designer on the team, posted a screenshot in the team channel: a Grok Bot conversation in which her Bot had summarized a design review and listed the open decisions. She had not asked anyone for access. Dev assumed a mistake and opened the plans page to prove it. The page said every member of a self-serve Teams plan has Grok Bot, with no Premium seat and no admin request.
 
-Do not do that. The supplied evidence establishes no Premium-specific Grok Bot model or published allowance quantity. Neither claim belongs in a seat proposal. Ask current plan questions through approved primary sources and leave unresolved differences in the open-question column.
+He withdrew the upgrade request before ten. Then he read the next line, which mattered more: on-demand usage is enabled by default for the Teams plan. Nine people could run Bots past their weekly allowance without asking anyone, and the Grok Bot card on the dashboard had no switch for turning the product off.
 
-Write the proposal with two columns: verified plan requirement and open vendor question. An unknown can be resolved before signature. A fabricated differentiator can survive into budget, architecture, and training materials.
+By Tuesday afternoon he had a different plan. He would not buy any seat until he had seen a few weeks of usage. He would review spending by product every Monday. And he would set the controls self-serve Teams actually has before anyone connected a company mailbox.
 
-## Budget the seat separately from variable use
-
-The $120 figure is the published monthly per-user plan price. It is not an all-in guarantee for every possible use pattern. The verified facts say subscriptions include a weekly usage allowance and overflow is billed on demand under documented usage pricing, but they publish no allowance amount in the supplied evidence.
-
-Dev therefore creates a fixed-seat line and a separate observed-use line. He does not assume zero overflow or invent credits. The workload pilot records account-visible evidence and useful outputs. [What You Cannot Cap](/blog/what-you-cannot-cap) owns the budgeting procedure, so this guide does not repeat stop rules and variance design.
-
-| Cost record | Source | Fixed or observed | Decision use |
+| When | What Dev did | What he found | What changed |
 |---|---|---|---|
-| $120 user seat | Published Teams Premium price | Fixed plan line | Roster budget |
-| Taxes or local charges | Actual quote or invoice | Account-specific | Procurement total |
-| Usage evidence | Account record | Observed | Pilot review |
-| Operator review time | Internal time record | Observed | Total workflow cost |
-| Useful accepted output | Pilot review | Observed outcome | Seat justification |
+| Late August | Drafted a request to move four seats to Premium for Grok Bot | Finance wanted a per-seat case | The request stalled |
+| Monday 09:40 | Saw Lina using Grok Bot on her own seat | She had requested nothing | Access was never the bottleneck |
+| Monday 09:55 | Read the plans page | No Premium seat, no admin request | Withdrew the upgrade request |
+| Monday 10:20 | Read the usage section | On-demand on by default for Teams | Spending became the real question |
+| Tuesday 14:00 | Opened the Grok Bot page of the dashboard | A status line, no off switch, five controls | Wrote a rollout checklist |
 
-## Pilot one decision-bearing workflow per proposed seat
+Dev's mistake was reasonable in August. Keeping it after September would have cost money in two directions at once: seats bought for access that was already included, and on-demand usage that nobody was watching.
 
-Do not give each new user a folder of ten bots and ask whether Premium feels useful. Dev chooses one workflow whose output supports a real recurring decision. For a marketer, that may be the [Competitor Ad Watch bot](/bots/competitor-ad-watch). For operations, it may be the [Chief of Staff Briefing bot](/bots/chief-of-staff-briefing). For research, it may be [Source Verifier](/bots/source-verifier).
+## Watch on-demand, because it is on before you look
 
-The pilot names input, output schema, source permissions, boundary, reviewer, cadence, and success criteria. Dev runs four review cycles because four fits his monthly decision, not because the product mandates it. He records accepted outputs, rejected outputs, correction time, source failures, and any credential or file cleanup.
+For an individual, extra usage past the weekly grant happens only if on-demand is enabled, and an individual whose on-demand is off simply stops until the weekly reset. For self-serve Teams, the plans page says on-demand is enabled by default. That changes the failure mode. A Teams member whose seat allowance runs out keeps going, and the extra usage is billed through Cursor.
 
-One workflow per seat keeps the purchase question legible. Expansion comes only after the user proves they can own the first computer and review its work.
+Three facts shape how you watch it. There is no separate Grok Bot spend cap; the teams and enterprises FAQ says account-level on-demand controls apply instead. The per-product split of spending is on the dashboard usage page at cursor.com/dashboard/usage, and the pricing page says admins can see usage and key metrics in the Admin Dashboard. And the monthly on-demand limit does not cut a run off halfway; a Bot in the middle of a task can finish past it.
 
-## Write a boundary for each workload, not one for Premium
+The Teams-specific on-demand details are on Cursor's Team pricing page, and this page does not restate them. What you can decide without them is a review rhythm. Dev picked Monday mornings because the team plans its week then; the cadence is his choice, not a product rule. He looks at Grok Bot's share of spending, compares it with the week before, and asks the one or two heaviest users what ran. The first time he asked, the answer was one Bot re-reading a long product spec on a schedule nobody had looked at since it was set.
 
-The plan does not supply a universal workflow boundary. A competitor collector may never launch ads. A source verifier may never edit the document. An inbox triage workflow may never send. Each boundary names the action and object that its output must stop before.
+Members can see their own side. Usage & Billing in Grok Bot Settings shows weekly included usage and on-demand usage for eligible accounts, and if neither appears, the docs tell members to check the Cursor account page or ask their admin. Tell members which of those to expect, so a missing meter does not turn into a support thread. For the arithmetic of what drives usage, [Grok Bot cost](/blog/grok-bot-cost) walks through run frequency, page size and retries.
 
-Dev also checks tools and source permissions because [A Boundary Is Not a Permission](/blog/a-boundary-is-not-a-permission). A sentence does not remove a logged-in session already available to the computer. Keep unnecessary write capability out of the seat design where the source system allows it.
+## Accept that self-serve Teams has no off switch
+
+Some admins read enabled by default and go looking for the toggle. On self-serve Teams there is none. The organization-wide Enable Grok Bot switch, and Manage Group Access beside it, are Enterprise controls. On Teams, the same card says Grok Bot is enabled for your team and stops there.
+
+The teams page lists two situations in which Grok Bot stays off on a team: the team uses Privacy Mode (Legacy), or the team is on a legacy request-based plan. Neither is a control. Legacy Privacy Mode blocks Grok Bot because Grok Bot needs cloud data storage, and choosing a team-wide data setting to block one product would change how the whole team's Cursor data is handled. Do not use either as a switch.
+
+If your organization genuinely needs Grok Bot on for some groups and off for others, that is an Enterprise requirement, and the path runs through the Cursor account team. The FAQ says Enterprise access is rolling out and that availability and admin controls can vary by organization, so ask about your organization specifically rather than reading the docs as a promise.
+
+## Use the five controls a self-serve Teams admin actually has
+
+Self-serve Teams admins get a Grok Bot page on the Cursor dashboard at cursor.com/dashboard/bot. Members never see it. These are the controls that exist on Teams, not only on Enterprise.
+
+| Control | Where it lives | Default on Teams | What Dev chose |
+|---|---|---|---|
+| Team Rules | Grok Bot page | None until added; rules scoped to Grok Bot are always required | Two short rules |
+| Execution on Local Computer | Grok Bot page | Always allow, which leaves it to each member (whose own default asks every time) | Never allow |
+| Cloud Agents | Grok Bot page | On, team-wide | Left on, because two engineers delegate coding tasks |
+| Public template sharing | Grok Bot page | Allowed | Turned off |
+| Connector policy | Plugins page of the dashboard (Team Marketplace) | Inherited from your Cursor policy | Reviewed before rollout |
+
+Team Rules are guidance that every member's Bots follow, and members cannot turn off rules applied to Grok Bot. Keep them few and short. They guide a Bot; they do not create approval stops.
+
+Execution on Local Computer caps what Bots may do on a member's own machine through the desktop app. The docs recommend Never allow unless Bots have a specific reason to work on member machines, and a member's own setting still applies when it is stricter than the team's.
+
+Cloud Agents lets Bots hand coding tasks to Cursor Cloud Agents, which run on separate computers under your existing Cloud Agent controls. The switch covers the whole team, so it is on for everyone or off for everyone.
+
+Public template sharing controls whether members can publish Bot templates outside the team. Cursor enforces it on its servers, including for templates that are already public.
+
+The connector policy comes from your Cursor team's Marketplace settings; there is no separate Grok Bot connector list. A blocked connector shows as Disabled by team admin. Blocking a connector does not block the same service's website in the Bot's browser. Closing that path takes Network Controls, which is Enterprise only.
+
+Admins on either plan also get Invite Team on the Grok Bot page. Existing Cursor users on your team receive an email with a download link; new people receive an invitation to your Cursor team that points them to Grok Bot.
+
+## List what only Enterprise gets, so nobody promises it
+
+Most of the admin controls on the teams and enterprises page are Enterprise only, and the quickest way to lose credibility in a security review is to promise one of them on a Teams plan.
+
+| Control | Self-serve Teams | Enterprise |
+|---|---|---|
+| Enable Grok Bot switch and Manage Group Access | No; always on | Yes |
+| SCIM provisioning and deprovisioning | No | Yes |
+| Network Controls (destination allowlists) | No; teams without a policy allow all | Yes |
+| Enforce Auto-review and team Auto-review rules | No | Yes |
+| Audit logs, including Grok Bot control-plane events | No | Yes |
+| Action Recording and OpenTelemetry Export | No | Yes; Action Recording starts off |
+| Team Setup, Allow Local Egress, computer management | No | Yes |
+| MCP allowlist | No | Yes |
+
+The audit row matters most. Individuals and self-serve Teams have no audit view of Bot actions. Enterprise has audit logs covering admin, security and authentication events plus Grok Bot control-plane events such as Bot creation and routines, and a separate Action Recording setting that records Bot actions once an admin switches it on. On Teams, the record you have is spending by product on the usage page, and whatever your Bots are told to write down. The docs describe no admin view of members' conversations on self-serve Teams.
+
+That is a real limit, and the honest response is to design for it: Bots that produce reviewable drafts instead of taking actions, and a line in every charter telling the Bot to end its output with a short log of what it did.
+
+## Give every member their own computer, and stop looking for a team one
+
+The old page's title ended with one computer per person, and that part was right. Each user gets a dedicated cloud computer, a Firecracker microVM with its own kernel, memory and virtual devices, and one user cannot reach another user's computer. There is no team computer. Lina's Bots cannot see Dev's files, and Dev's cannot see hers.
+
+Inside one person's account the picture flips. All of that member's Bots share one computer, so files, browser sessions and command-line credentials are available to every Bot the member runs. Separate Bots are not a security boundary. When a workload needs its own computer and credential set, the docs' answer is to give it its own Cursor user, which on a Teams plan means its own seat.
+
+Bots also act as the member. A Bot has no identity of its own, cannot hold more access than the signed-in member, and every action it takes is attributable to that named person. Team-managed connectors are the one exception the docs name, since they may use team or service-account credentials. For admins this is mostly good news, because there is no separate machine identity to provision or rotate outside your identity provider. It also means a Bot's mistake in a company system arrives under a colleague's name, which is the best argument for keeping consequential actions behind approval. [Why one member's Bots share everything](/blog/screens-are-not-boundaries) covers the inside-one-account half in detail.
+
+## Share templates, never computers
+
+Members will want to hand each other a Bot that works. The supported way is a template: Share menu, Create template, then Copy link, with a choice of Public link or Team-only. The recipient previews it on x.ai and adds a copy to their own account. They get the configuration, meaning the identity, description, skills and routines. They do not get the sender's computer, logins or conversation history.
+
+On self-serve Teams the defaults point outward. The bots page says accounts outside Enterprise default to a public link, and the teams page says teams other than Enterprise start with public template sharing allowed. A member who shares in a hurry can therefore publish a Bot configuration that anyone holding the link can open. Strip API keys, internal URLs and customer data before sharing, and if nobody on your team has a reason to publish outside it, turn public template sharing off, as Dev did.
+
+Adding a shared Bot also accepts the third-party bot terms, because shared Bots are made by other users. Tell members that before a stranger's template lands on a work account.
+
+## Onboard each member with the right account on the first sign-in
+
+Access follows the Cursor account a member signs in with, so signing in with the wrong one is the onboarding mistake to head off first. A developer with a personal Cursor Hobby account on the same laptop can sign in to Grok Bot as that account and find no team access, because the team seat lives on the work account.
+
+Tell members three things on day one. Sign in with the Cursor account your team seat is on; the desktop account menu can hold a personal and a work account side by side, through Add account and then Switch account. If the team requires single sign-on, finish the organization login in the browser rather than a personal login. And while a member is on your team, the team's privacy mode governs their data, which is why a team still on Privacy Mode (Legacy) has to move off it before Grok Bot will start.
+
+Two network items belong in the same message if your company has them. Grok Bot computers use shared static egress addresses, so a company service that allows only known source IPs may block Bots; the docs say current ranges come from your Cursor account team. And if member devices sit behind a TLS-inspecting proxy such as Zscaler, Cursor's domains, including the nested cursorvm.com hostnames, must be allowed and exempt from inspection before members connect, or computer setup hangs.
+
+## Write Team Rules short enough to survive
+
+Team Rules are the only team-wide guidance a self-serve admin can give Grok Bot, and they are always on. That makes them valuable and easy to overload. A rule members cannot switch off should be one they would never want to switch off. Dev wrote two, and put everything else into a member checklist and into each Bot's own description.
+
+The botskills boundary idea works at two levels here. The team rule names the thing no Bot on the team ever does. Each Bot's description names the one action that Bot never takes without its owner. Neither replaces approval, and on Teams approval is set per member: each member's personal Auto-review rules are saved to their account and apply on every desktop they sign in to, and nothing on a self-serve plan lets an admin enforce them. Enforcement is an Enterprise control. [A boundary is not a permission](/blog/a-boundary-is-not-a-permission) explains why the sentence alone does not remove a session the computer is already signed in to.
 
 \`\`\`text
-Role: Teams Premium seat pilot owner
+TEAM RULES (Grok Bot page, scope: Grok Bot)
+1. Never copy company data, files or credentials to a personal account,
+   personal storage, or a public link.
+2. Never send, publish, merge, delete, or change a production system
+   unless the member approves that exact action in the conversation.
 
-Seat record:
-- named user and manager
-- one pilot workflow and business decision
-- approved source, data classification, and source owner
-- expected output, reviewer, cadence, and four-cycle review date
-- account-computer compatibility statement for every additional workflow
-
-For each cycle:
-1. Record source status, proposed output, reviewer decision, correction time,
-   useful outcome, and open access or cleanup issue.
-2. Stop the cycle if source conditions or account ownership differ from the record.
-3. Add no workflow until the user reviews computer-sharing compatibility.
-
-Boundary:
-The pilot never performs the workload's externally visible or destructive action.
-That action is named in the workload charter and remains human-owned.
+MEMBER CHECKLIST (send with the invite)
+[ ] Sign in with the Cursor account the team seat is on, not a personal one.
+[ ] Add Ask first rules in Settings -> General -> Bot -> Auto-review for
+    sending email, publishing, deleting and purchasing.
+[ ] Keep Execution on Local Computer at Never allow (the team cap is Never).
+[ ] Put one boundary line in every Bot description: the action it never
+    takes without you.
+[ ] Share Bots with Team-only links. Strip keys and internal URLs first.
+[ ] Take over the computer for passwords and 2FA. Never paste them in chat.
+[ ] Ask each Bot to end its output with a short log of what it did.
+[ ] Check Weekly usage on Fridays. Tell Dev if you ran into on-demand.
 \`\`\`
 
-The charter is an operating template, not a product setting. [How to Write a Boundary Line](/blog/how-to-write-a-boundary-line) supplies the test for the final workload sentence.
+The second rule overlaps the checklist on purpose: a rule members cannot switch off is the backstop for the week someone forgets the checklist. For product-team Bots in this shape, [PR Review Sentinel](/bots/pr-review-sentinel) comments on pull requests and never merges or approves, and [Engineering Agent Manager](/bots/engineering-agent-manager) reports what coding agents are working on and never pushes to the default branch. Both produce something a human reads before anything changes.
 
-## Walk Dev through a four-seat proposal
+## Answer the manager who wants Premium seats to be safe
 
-Dev initially proposes four Premium seats: marketing, product operations, research, and finance. At $120 per user monthly, the scenario is $480 per month. He replaces department labels with four named users and reviews their pilot workflows.
+The strongest version of the objection goes like this. Nobody on the team should hit a limit in the middle of a launch. Premium seats cost more but remove the risk, and a finance request is easier to justify once than to revisit every month. Buy Premium for everyone and move on.
 
-Marketing chooses public competitor creative monitoring. Research chooses claim verification. Product operations proposes a launch brief that reads approved project documents. Finance proposes a workflow needing banking access, but the source owner and boundary are unresolved. Dev parks the finance seat rather than treating plan eligibility as approval.
+Part of that is right. If several members exhaust their weekly allowance every week, the plans page says a higher seat can raise weekly usage, and paying for it may be cheaper than the on-demand usage they would otherwise run. That is a decision to make with the Team pricing page and a few weeks of the usage page open side by side.
 
-He then compares Premium with Standard for the remaining three users. Grok Bot access exists on both. Two users have current Premium requirements supported by the team's procurement evidence; the marketing user does not. The final proposal is two Premium seats and one Standard seat, with current published seat arithmetic of $280 monthly: two times $120 plus one times $40.
+The rest does not follow. Premium seats are not an access requirement, so they change nothing for members who never hit a limit. On-demand is already on by default, so a member who runs out does not stop in the middle of a launch; they keep going on usage billed through Cursor. And the risks a cautious manager actually worries about, such as a Bot emailing a customer, a public template carrying an internal URL, or a session reaching a system it should not, are not seat problems. The Grok Bot docs describe the seat difference only as weekly usage. They do not say a Premium seat adds audit logs, network controls or enforced approval, and those are Enterprise features. Spending the budget on seats buys usage. It does not buy safety.
 
-This mixed result is more useful than defending the original $480. It maps plans to verified needs and defers the high-risk workflow until its architecture is ready.
+## Offboard a member without assuming seat removal cleaned up
 
-## Trace a missing file to the wrong account assumption
+Removing a member's seat ends their Teams grant. The Grok Bot docs do not describe what happens to a departed member's cloud computer on a self-serve Teams plan, and the computer management actions (Recreate and Terminate) are Enterprise controls. So do not assume removal wiped anything.
 
-During the pilot, Lina cannot find Dev's research output on her own account computer. The team had assumed a named bot was a team-shared workspace. The documented assignment is to the user account, so Lina's seat does not automatically inherit Dev's computer files or sessions.
+Work through what you can control. Ask the member, before they leave, to run the docs' own removal steps: pause or delete routines, sign out of company websites on the shared computer, uninstall connectors and revoke their authorization in the source services, remove sensitive files from the workspace, and hide or delete Bots that should no longer appear. Then, on your side, revoke their sessions in your identity provider, and revoke their connector authorizations at the source services you administer, because connector tokens sit on Cursor's backend and are cut off at the service. [Handover notes when the owner goes on PTO](/blog/bot-handover-documentation) covers the week before someone leaves, when a Bot's schedule and outputs still need an owner.
 
-The team repairs the workflow by choosing an approved handoff destination. Dev's bot writes the reviewed artifact to a team-controlled repository only after the human review step. Lina reads it there under her own identity. They do not share Dev's account login.
+| Step | Who does it | Why it matters on Teams |
+|---|---|---|
+| Pause or delete the member's routines | Member, before leaving | Routines belong to that member's Bots, not to the team |
+| Sign out of company sites on the computer | Member | Sessions live on their computer, shared by all their Bots |
+| Revoke connector authorizations | Member, then admin at each service | Tokens are cut off at the source service |
+| Remove the seat | Admin | Ends the Teams grant for Grok Bot |
+| Revoke identity-provider sessions | Admin | Sign-in rides your identity provider |
 
-| Symptom | Wrong assumption | Repair | Verification that can fail |
-|---|---|---|---|
-| Colleague cannot see bot files | Bot name implied team workspace | Use approved handoff destination | Recipient opens final artifact |
-| Two users share one login | Seat treated as department pool | Assign individual accounts | Roster matches identity records |
-| Premium bought for access alone | Standard eligibility overlooked | Compare verified requirements | Proposal names Premium need |
-| Ten bots appear on day one | Bot count treated as value | Pilot one workflow | Four-cycle review completes |
-| Offboarded user leaves artifacts | Seat cancellation treated as cleanup | Run account-computer exit plan | Sessions and files verified |
+## When this page stops applying
 
-The failure is not solved by adding another bot. It is solved by designing the human-to-human handoff explicitly.
+On the 23 September 2026 check, the plans page said every member of a self-serve Cursor Teams plan has Grok Bot with no Premium seat and no admin request, usage follows the seat's allowance, and on-demand is enabled by default for Teams. The teams page says self-serve Teams has no off switch and lists the Enterprise-only controls in the tables above.
 
-## Design absence coverage without credential sharing
-
-If Dev is away, a colleague may need the reviewed output, schedule status, or source failure report. They do not need Dev's login. Define a backup reviewer and an approved shared destination for final artifacts. Keep drafts and account-computer state under the owning user's process.
-
-A routine belongs to one Bot, and deleting that Bot deletes its routines according to the verified facts. Absence coverage should therefore record which schedules depend on the person's account and who may pause or replace them through approved administration. Do not assume the routine became team-level because the subscription is a Teams plan.
-
-For operational handoff design, read [Bot Handover Documentation](/blog/bot-handover-documentation). Keep personal account credentials out of the handoff packet.
-
-## Answer the manager who wants one shared automation seat
-
-The strongest objection is cost: one shared login appears cheaper and makes the output available to everyone. It also obscures who owns the account computer, who approved a session, who reviews access, and what happens when team membership changes. It may conflict with account terms or company identity policy, which must be checked through approved sources.
-
-Use named seats and deliberate output sharing. If the business needs a service-owned automation identity, evaluate whether the product and your policies support that exact arrangement rather than improvising a person-shaped shared account. The published per-user price should be modeled as such.
-
-Cost pressure is a reason to narrow the roster and choose Standard where it meets verified needs, not a reason to erase accountability.
-
-## Verify the seat with access, output, and exit tests
-
-Before approving renewal, run three tests. Access test: the named user can reach only approved sources and a planted forbidden source remains unavailable. Output test: a reviewer can trace an accepted artifact to its sources and reject a planted bad claim. Exit test: pause routines, revoke source sessions, locate working files, preserve or delete them under policy, and confirm the handoff artifact remains available to its owner.
-
-The exit test can be performed with synthetic data during the pilot. Do not wait for an actual departure to discover that nobody owns the files. [Credential Hygiene: Rotate What the Computer Touched](/blog/credential-hygiene-for-bots) contains the touched-surface method.
-
-Record a pass or fail with evidence. A meeting where everyone agrees the seat seems fine is not the same as testing the old path after revocation.
-
-## Review the roster when a workflow crosses account ownership
-
-A workflow may begin with one person's sources and later serve another team's process. That change is not merely a new bot title. Reopen account ownership, data compatibility, reviewer, artifact destination, backup coverage, and exit responsibility.
-
-Dev adds a trigger to the seat register: any new source owner, data classification, externally visible action, or recipient starts a compatibility review before the workflow moves. The trigger is local governance, not a Teams Premium feature. It protects the roster from gradual scope growth.
-
-If the workflow should belong to a different person, design a handoff using approved artifacts and fresh source authorization. Do not copy browser state or command-line credentials to make the move convenient. The receiving user's account computer starts from its own reviewed access.
-
-Close the old owner's workflow only after the handoff artifact is accepted and old source access is removed. Record both events. A successful handoff proves continuity, while the access test proves the former path no longer remains available.
-
-## Calculate renewal from accepted work instead of bot count
-
-At renewal, Dev totals seat cost, observed usage evidence, operator review time, accepted outputs, rejected outputs, correction time, incidents, and decisions improved. He does not count created bots as value. Ten bot names can support no useful decision, while one reliable weekly brief can justify a seat.
-
-For each user, ask whether the workflow still matters, whether Standard satisfies verified plan needs, whether sources remain approved, and whether computer-sharing assumptions changed. A Premium seat can be downgraded, retained, or removed based on current evidence. The original proposal is not a permanent entitlement.
-
-| Renewal signal | Keep Premium may be justified | Change may be justified | Evidence |
-|---|---|---|---|
-| Premium requirement | Still current and used | No longer applies | Current primary plan evidence |
-| Workflow value | Repeated accepted decision support | Outputs unused or costly to correct | Review records |
-| Account compatibility | Sources remain compatible | New sensitive domain added | Seat register |
-| Operator ownership | Named user actively owns cleanup | Ownership unclear or changed | Roster review |
-
-Do not convert this table into an automatic cancellation rule. It prepares a named manager and procurement owner to decide.
-
-Archive the renewal snapshot with the price source date and roster version. If the published plan changes later, Dev can distinguish the basis of the earlier decision from the current offer instead of rewriting history.
-
-## Keep final artifacts team-owned without making sessions team-shared
-
-The user-account computer can produce an artifact needed by a group. Define a reviewed export step into an approved team repository, with source references, owner, and retention. Only accepted output crosses that handoff. Working files and authenticated sessions remain subject to the owning account's controls.
-
-The [Chief of Staff bot](/bots/chief-of-staff) is one example where a private working brief may later yield a reviewed team artifact. The distinction is between sharing a result deliberately and sharing account credentials. It also lets offboarding preserve necessary business records without preserving personal sessions.
-
-Test the repository permission separately. A successful upload does not prove recipients have the intended access or that unintended recipients do not. Use a planted harmless artifact during the pilot and verify both allowed and denied readers.
-
-## Stop this guide before plan claims the evidence does not support
-
-This guide establishes the verified $120 per-user monthly Premium price, Grok Bot inclusion, user-account computer assignment, and the roster implications. It does not invent a Premium-only Bot model, a usage quantity, a per-bot computer, or an unverified administrative feature.
-
-Recheck current primary pricing and documentation before purchase because products change. Use procurement documents for taxes, billing terms, and organization-specific commitments. Use your security and compliance process for data decisions.
-
-For the faster product tutorial, use [Learn Grok Bot](/blog/learn-grok-bot). For retained files during account changes, use [Why Deleting a Bot Leaves the Files](/blog/why-deleting-a-bot-leaves-the-files). Keep reading: [Where a Bot Cookie Actually Lives](/blog/where-a-bot-cookie-actually-lives) covers the session question without bloating this seat guide.
+Grok Bot is in beta. This page stops applying if the plans page brings back a seat requirement, if Teams gains an enable switch or any control currently marked Enterprise only, or if on-demand stops being on by default. It does not cover seat prices or seat allowances, which live on Cursor's Team pricing page, and it does not cover Enterprise contracts, which go through your Cursor account team. For one person choosing an individual plan, read [Cursor Hobby vs Cursor Pro for Grok Bot](/blog/grok-bot-hobby-and-pro-exclusion).
 
 ## Frequently Asked Questions
 
-### Does Cursor Teams Premium include Grok Bot?
+### Do I need a Cursor Teams Premium seat to use Grok Bot?
 
-Yes. The verified product facts checked for this site on August 25, 2026 list Cursor Teams Premium as eligible for Grok Bot and list its price as $120 per user per month. Recheck current primary Cursor and Grok Bot documentation before purchasing because pricing and eligibility can change. Inclusion answers the access question, not whether a proposed workflow is approved. You still need a named account owner, compatible data and credentials, a workload boundary, a reviewer, and an exit procedure for each seat.
+No. The Cursor plans page, checked on 23 September 2026, says that on a self-serve Cursor Teams plan every member gets Grok Bot on their own Cursor account. Admins do not assign a Premium seat and members do not request access. The Grok Bot FAQ lists both Teams Standard and Premium seats as including it. Seats still affect usage, because a higher seat can raise weekly usage, but they do not decide access. Seat allowances and prices are on Cursor's Team pricing page, which this answer deliberately does not quote.
 
-### Is the $120 price per bot or per user?
+### Does a Teams admin have to turn Grok Bot on or approve each member?
 
-It is the published monthly price per user for Cursor Teams Premium, not per named bot. Model the roster by seated people. A user may operate several bot workflows on the computer assigned to that user account, but those bot names are not separate security boundaries. Four Premium users produce simple scenario arithmetic of $480 monthly before account-specific items. Four bots under one user do not produce four Premium seats solely because four bot names exist.
+No. On a self-serve Teams plan Grok Bot is enabled by default and every member has access without any admin action. The Grok Bot card on the admin dashboard is a status line with no switch, so a Teams admin also cannot turn it off. The organization-wide enable switch and group-level access are Enterprise controls, where an admin turns Grok Bot on after working with the Cursor account team. Grok Bot stays off only for teams on Privacy Mode (Legacy) or on a legacy request-based plan.
 
-### Does each Teams Premium bot get a separate computer?
+### How do Grok Bot usage and on-demand billing work on a Teams seat?
 
-No. The documented computer is assigned to the user account, not an individual Bot. Bots on that account have separate screens on one persistent computer, and those screens are not security boundaries. Plan workflows according to what data, files, browser sessions, and credentials may share that user's computer. If two workloads require real separation, do not rely on bot names. Use an account and architecture arrangement approved for that boundary or keep one workload out of the proposed seat.
+Grok Bot draws first from the Teams allowance for the member's seat, which resets weekly. When that runs out, usage continues on on-demand, which the plans page says is enabled by default for Teams and which is billed through Cursor. There is no separate Grok Bot spend cap; account-level on-demand controls apply, and the dashboard usage page splits spending by product. A higher seat can raise weekly usage. Linking a personal SuperGrok or X Premium+ subscription on top of a Teams seat adds no usage at all.
 
-### Should I choose Premium over Teams Standard just for Grok Bot?
+### Do Teams members share one Grok Bot computer?
 
-Not on Grok Bot eligibility alone. The verified facts list both Teams Standard at $40 per user per month and Teams Premium at $120 per user per month as including Grok Bot. Identify a current, primary-source-backed Premium requirement beyond access, then compare it with your roster and pilot evidence. If no Premium-specific requirement survives, Standard deserves consideration. Do not justify the difference with an invented model, usage quantity, computer boundary, or administrative feature that the evidence does not establish.
+No. Each member gets a dedicated cloud computer, a Firecracker microVM with hardware-level separation, and one member cannot reach another member's computer. What is shared sits inside one person's account: all of that member's Bots use the same computer, including files, browser sessions and command-line credentials, so separate Bots are not a security boundary. If a workload needs its own computer and credentials, the docs say to give it its own Cursor user, which on a Teams plan means a seat of its own.
 `,
 };
