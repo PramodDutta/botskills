@@ -54,3 +54,16 @@ Entry format:
             prints "Why Cursor Hobby and Cursor Pro Do Not Include Grok Bot" in this state.
             curl -s https://botskills.sh/blog | sed 's/<!-- -->//g' | grep -o '[0-9]* articles on running'  -> 462
 
+
+2026-09-23 UTC   After wave 3: 25 new articles, 3 thesis rewrites (Pro, Teams,
+                 iPad), about 260 posts corrected to the 23 September docs,
+                 facts pack updated, 4 new factsweep checks.
+  git ref   32ac52a   (revert target for this state is the entry above:
+                       branch backup/pre-wave3-2026-09-23 at 0d7b1ff)
+  vercel    https://botskills-adqd51y6c-luckydutta96s-projects.vercel.app
+  verify    curl -s https://botskills.sh/blog/grok-bot-hobby-and-pro-exclusion | grep -o '<title>[^<]*'
+            prints "Cursor Hobby vs Cursor Pro for Grok Bot: Pro Includes It Now, Hobby Does Not".
+            curl -s https://botskills.sh/blog | sed 's/<!-- -->//g' | grep -o '[0-9]* articles on running'  -> 487
+  tests     71 e2e locally (2 dev-server resets under parallel load, both pass
+            serially), 66 passed + 5 write-tests skipped against production,
+            25 unit, 118 bots, 487 articles gated, lint, types and format clean.
