@@ -43,3 +43,14 @@ Entry format:
             curl -sI https://botskills.sh/ | grep -ci x-powered-by   -> 0 in this state, 1 before.
   tests     71 e2e locally, 66 passed + 5 write-tests skipped against production,
             25 unit, 118 bots, 462 articles gated, lint and format clean.
+
+2026-09-23 UTC   Before wave 3 (25 articles) and the 23 September fact
+                 corrections (Cursor Pro included, SuperGrok/X Premium+ linking,
+                 on-demand monthly limit, iPad via the iOS app, phone run history,
+                 Enterprise audit logs).
+  git ref   0d7b1ff   branch backup/pre-wave3-2026-09-23 (on origin)
+  vercel    https://botskills-jqo4y1zjt-luckydutta96s-projects.vercel.app
+  verify    curl -s https://botskills.sh/blog/grok-bot-hobby-and-pro-exclusion | grep -o '<title>[^<]*'
+            prints "Why Cursor Hobby and Cursor Pro Do Not Include Grok Bot" in this state.
+            curl -s https://botskills.sh/blog | sed 's/<!-- -->//g' | grep -o '[0-9]* articles on running'  -> 462
+
