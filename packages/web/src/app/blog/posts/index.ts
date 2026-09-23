@@ -110,6 +110,7 @@ import { post as post_build_the_discovery_slide_mid_call } from './build-the-dis
 import { post as post_build_vs_buy_ai_agents } from './build-vs-buy-ai-agents';
 import { post as post_call_coach_never_joins_the_call } from './call-coach-never-joins-the-call';
 import { post as post_call_follow_up_drafter_human_sends } from './call-follow-up-drafter-human-sends';
+import { post as post_cancel_grok_bot_trial } from './cancel-grok-bot-trial';
 import { post as post_chat_vs_scheduled_agents } from './chat-vs-scheduled-agents';
 import { post as post_cheapest_way_into_grok_bot } from './cheapest-way-into-grok-bot';
 import { post as post_churn_early_warning_still_no_customer_mail } from './churn-early-warning-still-no-customer-mail';
@@ -140,12 +141,16 @@ import { post as post_flight_check_in_reminder_never_books } from './flight-chec
 import { post as post_forecast_notes_never_change_the_number } from './forecast-notes-never-change-the-number';
 import { post as post_grok_bot_2fa_prompt } from './grok-bot-2fa-prompt';
 import { post as post_grok_bot_account_health } from './grok-bot-account-health';
+import { post as post_grok_bot_admin_controls } from './grok-bot-admin-controls';
 import { post as post_grok_bot_agentmail } from './grok-bot-agentmail';
 import { post as post_grok_bot_agentmail_vs_gmail } from './grok-bot-agentmail-vs-gmail';
 import { post as post_grok_bot_airtable } from './grok-bot-airtable';
 import { post as post_grok_bot_amazon_cart } from './grok-bot-amazon-cart';
 import { post as post_grok_bot_android_status } from './grok-bot-android-status';
 import { post as post_grok_bot_approval_rules_reversibility } from './grok-bot-approval-rules-reversibility';
+import { post as post_grok_bot_attachment_limits } from './grok-bot-attachment-limits';
+import { post as post_grok_bot_audit_logs } from './grok-bot-audit-logs';
+import { post as post_grok_bot_auto_review_rules } from './grok-bot-auto-review-rules';
 import { post as post_grok_bot_avoiding_ai_slop } from './grok-bot-avoiding-ai-slop';
 import { post as post_grok_bot_both_subscriptions } from './grok-bot-both-subscriptions';
 import { post as post_grok_bot_boundaries } from './grok-bot-boundaries';
@@ -154,10 +159,12 @@ import { post as post_grok_bot_bug_reproduction } from './grok-bot-bug-reproduct
 import { post as post_grok_bot_calendar_manager } from './grok-bot-calendar-manager';
 import { post as post_grok_bot_cannot_see_files } from './grok-bot-cannot-see-files';
 import { post as post_grok_bot_cannot_send_email } from './grok-bot-cannot-send-email';
+import { post as post_grok_bot_cant_reach_computer } from './grok-bot-cant-reach-computer';
 import { post as post_grok_bot_captcha_wall } from './grok-bot-captcha-wall';
 import { post as post_grok_bot_chief_of_staff_setup } from './grok-bot-chief-of-staff-setup';
 import { post as post_grok_bot_claude_code_skills_compatibility } from './grok-bot-claude-code-skills-compatibility';
 import { post as post_grok_bot_clip_youtube_podcast } from './grok-bot-clip-youtube-podcast';
+import { post as post_grok_bot_cloud_agents_delegation } from './grok-bot-cloud-agents-delegation';
 import { post as post_grok_bot_community_manager } from './grok-bot-community-manager';
 import { post as post_grok_bot_compare_booking_prices } from './grok-bot-compare-booking-prices';
 import { post as post_grok_bot_composio } from './grok-bot-composio';
@@ -169,6 +176,7 @@ import { post as post_grok_bot_deepseek_routing } from './grok-bot-deepseek-rout
 import { post as post_grok_bot_devils_advocate } from './grok-bot-devils-advocate';
 import { post as post_grok_bot_directory_business } from './grok-bot-directory-business';
 import { post as post_grok_bot_discord } from './grok-bot-discord';
+import { post as post_grok_bot_draft_cards } from './grok-bot-draft-cards';
 import { post as post_grok_bot_duplicate_drafts } from './grok-bot-duplicate-drafts';
 import { post as post_grok_bot_enterprise_waitlist } from './grok-bot-enterprise-waitlist';
 import { post as post_grok_bot_evidence_rules } from './grok-bot-evidence-rules';
@@ -210,6 +218,7 @@ import { post as post_grok_bot_google_sheets } from './grok-bot-google-sheets';
 import { post as post_grok_bot_grok_imagine_storyboard } from './grok-bot-grok-imagine-storyboard';
 import { post as post_grok_bot_grok_ship } from './grok-bot-grok-ship';
 import { post as post_grok_bot_group_chat } from './grok-bot-group-chat';
+import { post as post_grok_bot_hardware_security_key } from './grok-bot-hardware-security-key';
 import { post as post_grok_bot_hobby_and_pro_exclusion } from './grok-bot-hobby-and-pro-exclusion';
 import { post as post_grok_bot_hosted_mcp_tokens } from './grok-bot-hosted-mcp-tokens';
 import { post as post_grok_bot_hubspot } from './grok-bot-hubspot';
@@ -220,6 +229,7 @@ import { post as post_grok_bot_iphone_app } from './grok-bot-iphone-app';
 import { post as post_grok_bot_iphone_cannot_edit } from './grok-bot-iphone-cannot-edit';
 import { post as post_grok_bot_jira } from './grok-bot-jira';
 import { post as post_grok_bot_linear } from './grok-bot-linear';
+import { post as post_grok_bot_local_computer_execution } from './grok-bot-local-computer-execution';
 import { post as post_grok_bot_login_failed } from './grok-bot-login-failed';
 import { post as post_grok_bot_mac_intel } from './grok-bot-mac-intel';
 import { post as post_grok_bot_marketing_os } from './grok-bot-marketing-os';
@@ -229,9 +239,11 @@ import { post as post_grok_bot_naming } from './grok-bot-naming';
 import { post as post_grok_bot_no_audit_log_yet } from './grok-bot-no-audit-log-yet';
 import { post as post_grok_bot_no_spend_cap_ops } from './grok-bot-no-spend-cap-ops';
 import { post as post_grok_bot_not_a_sandbox } from './grok-bot-not-a-sandbox';
+import { post as post_grok_bot_not_responding } from './grok-bot-not-responding';
 import { post as post_grok_bot_notion } from './grok-bot-notion';
 import { post as post_grok_bot_obsidian_knowledge_base } from './grok-bot-obsidian-knowledge-base';
 import { post as post_grok_bot_on_call } from './grok-bot-on-call';
+import { post as post_grok_bot_on_demand_monthly_limit } from './grok-bot-on-demand-monthly-limit';
 import { post as post_grok_bot_on_demand_usage } from './grok-bot-on-demand-usage';
 import { post as post_grok_bot_one_computer_many_screens } from './grok-bot-one-computer-many-screens';
 import { post as post_grok_bot_outlook } from './grok-bot-outlook';
@@ -244,13 +256,16 @@ import { post as post_grok_bot_plugins_2026 } from './grok-bot-plugins-2026';
 import { post as post_grok_bot_plugins_catalog } from './grok-bot-plugins-catalog';
 import { post as post_grok_bot_pr_factory } from './grok-bot-pr-factory';
 import { post as post_grok_bot_preflight_checklist } from './grok-bot-preflight-checklist';
+import { post as post_grok_bot_privacy } from './grok-bot-privacy';
 import { post as post_grok_bot_privacy_mode } from './grok-bot-privacy-mode';
+import { post as post_grok_bot_private_network_access } from './grok-bot-private-network-access';
 import { post as post_grok_bot_product_investigation } from './grok-bot-product-investigation';
 import { post as post_grok_bot_prompt_injection_email } from './grok-bot-prompt-injection-email';
 import { post as post_grok_bot_prompts_that_work } from './grok-bot-prompts-that-work';
 import { post as post_grok_bot_quickbooks } from './grok-bot-quickbooks';
 import { post as post_grok_bot_quota_exceeded } from './grok-bot-quota-exceeded';
 import { post as post_grok_bot_regulated_industries } from './grok-bot-regulated-industries';
+import { post as post_grok_bot_reset_vs_update_computer } from './grok-bot-reset-vs-update-computer';
 import { post as post_grok_bot_retirement } from './grok-bot-retirement';
 import { post as post_grok_bot_review_fatigue } from './grok-bot-review-fatigue';
 import { post as post_grok_bot_routine_did_not_run } from './grok-bot-routine-did-not-run';
@@ -261,6 +276,8 @@ import { post as post_grok_bot_safety_checklist } from './grok-bot-safety-checkl
 import { post as post_grok_bot_sales_outbound } from './grok-bot-sales-outbound';
 import { post as post_grok_bot_salesforce } from './grok-bot-salesforce';
 import { post as post_grok_bot_scheduling } from './grok-bot-scheduling';
+import { post as post_grok_bot_secret_requests } from './grok-bot-secret-requests';
+import { post as post_grok_bot_security_review } from './grok-bot-security-review';
 import { post as post_grok_bot_setup_guide } from './grok-bot-setup-guide';
 import { post as post_grok_bot_shadow_mode } from './grok-bot-shadow-mode';
 import { post as post_grok_bot_shared_computer_security } from './grok-bot-shared-computer-security';
@@ -275,6 +292,7 @@ import { post as post_grok_bot_static_egress_ip } from './grok-bot-static-egress
 import { post as post_grok_bot_stayingapi_compare } from './grok-bot-stayingapi-compare';
 import { post as post_grok_bot_stripe } from './grok-bot-stripe';
 import { post as post_grok_bot_supergrok_plus } from './grok-bot-supergrok-plus';
+import { post as post_grok_bot_support_request_id } from './grok-bot-support-request-id';
 import { post as post_grok_bot_supported_platforms } from './grok-bot-supported-platforms';
 import { post as post_grok_bot_switch_intent_on_x } from './grok-bot-switch-intent-on-x';
 import { post as post_grok_bot_talent_scout } from './grok-bot-talent-scout';
@@ -302,7 +320,10 @@ import { post as post_grok_bot_to_subscription_audit } from './grok-bot-to-subsc
 import { post as post_grok_bot_to_support_triage } from './grok-bot-to-support-triage';
 import { post as post_grok_bot_transcriptapi_vs_browser } from './grok-bot-transcriptapi-vs-browser';
 import { post as post_grok_bot_troubleshooting } from './grok-bot-troubleshooting';
+import { post as post_grok_bot_two_accounts } from './grok-bot-two-accounts';
+import { post as post_grok_bot_user_isolation } from './grok-bot-user-isolation';
 import { post as post_grok_bot_vision_md } from './grok-bot-vision-md';
+import { post as post_grok_bot_voice_chat } from './grok-bot-voice-chat';
 import { post as post_grok_bot_vs_chatgpt_agent } from './grok-bot-vs-chatgpt-agent';
 import { post as post_grok_bot_vs_chatgpt_tasks } from './grok-bot-vs-chatgpt-tasks';
 import { post as post_grok_bot_vs_chatgpt_work } from './grok-bot-vs-chatgpt-work';
@@ -341,6 +362,7 @@ import { post as post_grok_bot_youtube_manager } from './grok-bot-youtube-manage
 import { post as post_grok_bot_youtube_transcripts } from './grok-bot-youtube-transcripts';
 import { post as post_grok_bot_zoom } from './grok-bot-zoom';
 import { post as post_hand_a_contractor_the_charter_not_the_login } from './hand-a-contractor-the-charter-not-the-login';
+import { post as post_hide_or_duplicate_a_grok_bot } from './hide-or-duplicate-a-grok-bot';
 import { post as post_how_bots_on_grok_actually_work } from './how-bots-on-grok-actually-work';
 import { post as post_how_to_answer_security_questionnaires } from './how-to-answer-security-questionnaires';
 import { post as post_how_to_audit_a_bot_you_inherited } from './how-to-audit-a-bot-you-inherited';
@@ -373,9 +395,12 @@ import { post as post_how_to_track_customer_promises } from './how-to-track-cust
 import { post as post_how_to_write_a_boundary_line } from './how-to-write-a-boundary-line';
 import { post as post_how_to_write_a_grok_bot_charter_2026 } from './how-to-write-a-grok-bot-charter-2026';
 import { post as post_icp_roster_reverified_weekly } from './icp-roster-reverified-weekly';
+import { post as post_is_grok_bot_down } from './is-grok-bot-down';
+import { post as post_is_grok_bot_hipaa_compliant } from './is-grok-bot-hipaa-compliant';
 import { post as post_is_grok_bot_worth_it } from './is-grok-bot-worth-it';
 import { post as post_learn_grok_bot } from './learn-grok-bot';
 import { post as post_least_privilege_bots } from './least-privilege-bots';
+import { post as post_link_supergrok_to_grok_bot } from './link-supergrok-to-grok-bot';
 import { post as post_local_computer_approvals_are_not_undo } from './local-computer-approvals-are-not-undo';
 import { post as post_log_paper_trades_with_a_written_stop } from './log-paper-trades-with-a-written-stop';
 import { post as post_mcp_vs_connectors } from './mcp-vs-connectors';
@@ -574,6 +599,7 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'build-vs-buy-ai-agents', ...post_build_vs_buy_ai_agents },
   { slug: 'call-coach-never-joins-the-call', ...post_call_coach_never_joins_the_call },
   { slug: 'call-follow-up-drafter-human-sends', ...post_call_follow_up_drafter_human_sends },
+  { slug: 'cancel-grok-bot-trial', ...post_cancel_grok_bot_trial },
   { slug: 'chat-vs-scheduled-agents', ...post_chat_vs_scheduled_agents },
   { slug: 'cheapest-way-into-grok-bot', ...post_cheapest_way_into_grok_bot },
   { slug: 'churn-early-warning-still-no-customer-mail', ...post_churn_early_warning_still_no_customer_mail },
@@ -604,12 +630,16 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'forecast-notes-never-change-the-number', ...post_forecast_notes_never_change_the_number },
   { slug: 'grok-bot-2fa-prompt', ...post_grok_bot_2fa_prompt },
   { slug: 'grok-bot-account-health', ...post_grok_bot_account_health },
+  { slug: 'grok-bot-admin-controls', ...post_grok_bot_admin_controls },
   { slug: 'grok-bot-agentmail', ...post_grok_bot_agentmail },
   { slug: 'grok-bot-agentmail-vs-gmail', ...post_grok_bot_agentmail_vs_gmail },
   { slug: 'grok-bot-airtable', ...post_grok_bot_airtable },
   { slug: 'grok-bot-amazon-cart', ...post_grok_bot_amazon_cart },
   { slug: 'grok-bot-android-status', ...post_grok_bot_android_status },
   { slug: 'grok-bot-approval-rules-reversibility', ...post_grok_bot_approval_rules_reversibility },
+  { slug: 'grok-bot-attachment-limits', ...post_grok_bot_attachment_limits },
+  { slug: 'grok-bot-audit-logs', ...post_grok_bot_audit_logs },
+  { slug: 'grok-bot-auto-review-rules', ...post_grok_bot_auto_review_rules },
   { slug: 'grok-bot-avoiding-ai-slop', ...post_grok_bot_avoiding_ai_slop },
   { slug: 'grok-bot-both-subscriptions', ...post_grok_bot_both_subscriptions },
   { slug: 'grok-bot-boundaries', ...post_grok_bot_boundaries },
@@ -618,10 +648,12 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'grok-bot-calendar-manager', ...post_grok_bot_calendar_manager },
   { slug: 'grok-bot-cannot-see-files', ...post_grok_bot_cannot_see_files },
   { slug: 'grok-bot-cannot-send-email', ...post_grok_bot_cannot_send_email },
+  { slug: 'grok-bot-cant-reach-computer', ...post_grok_bot_cant_reach_computer },
   { slug: 'grok-bot-captcha-wall', ...post_grok_bot_captcha_wall },
   { slug: 'grok-bot-chief-of-staff-setup', ...post_grok_bot_chief_of_staff_setup },
   { slug: 'grok-bot-claude-code-skills-compatibility', ...post_grok_bot_claude_code_skills_compatibility },
   { slug: 'grok-bot-clip-youtube-podcast', ...post_grok_bot_clip_youtube_podcast },
+  { slug: 'grok-bot-cloud-agents-delegation', ...post_grok_bot_cloud_agents_delegation },
   { slug: 'grok-bot-community-manager', ...post_grok_bot_community_manager },
   { slug: 'grok-bot-compare-booking-prices', ...post_grok_bot_compare_booking_prices },
   { slug: 'grok-bot-composio', ...post_grok_bot_composio },
@@ -633,6 +665,7 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'grok-bot-devils-advocate', ...post_grok_bot_devils_advocate },
   { slug: 'grok-bot-directory-business', ...post_grok_bot_directory_business },
   { slug: 'grok-bot-discord', ...post_grok_bot_discord },
+  { slug: 'grok-bot-draft-cards', ...post_grok_bot_draft_cards },
   { slug: 'grok-bot-duplicate-drafts', ...post_grok_bot_duplicate_drafts },
   { slug: 'grok-bot-enterprise-waitlist', ...post_grok_bot_enterprise_waitlist },
   { slug: 'grok-bot-evidence-rules', ...post_grok_bot_evidence_rules },
@@ -674,6 +707,7 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'grok-bot-grok-imagine-storyboard', ...post_grok_bot_grok_imagine_storyboard },
   { slug: 'grok-bot-grok-ship', ...post_grok_bot_grok_ship },
   { slug: 'grok-bot-group-chat', ...post_grok_bot_group_chat },
+  { slug: 'grok-bot-hardware-security-key', ...post_grok_bot_hardware_security_key },
   { slug: 'grok-bot-hobby-and-pro-exclusion', ...post_grok_bot_hobby_and_pro_exclusion },
   { slug: 'grok-bot-hosted-mcp-tokens', ...post_grok_bot_hosted_mcp_tokens },
   { slug: 'grok-bot-hubspot', ...post_grok_bot_hubspot },
@@ -684,6 +718,7 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'grok-bot-iphone-cannot-edit', ...post_grok_bot_iphone_cannot_edit },
   { slug: 'grok-bot-jira', ...post_grok_bot_jira },
   { slug: 'grok-bot-linear', ...post_grok_bot_linear },
+  { slug: 'grok-bot-local-computer-execution', ...post_grok_bot_local_computer_execution },
   { slug: 'grok-bot-login-failed', ...post_grok_bot_login_failed },
   { slug: 'grok-bot-mac-intel', ...post_grok_bot_mac_intel },
   { slug: 'grok-bot-marketing-os', ...post_grok_bot_marketing_os },
@@ -693,9 +728,11 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'grok-bot-no-audit-log-yet', ...post_grok_bot_no_audit_log_yet },
   { slug: 'grok-bot-no-spend-cap-ops', ...post_grok_bot_no_spend_cap_ops },
   { slug: 'grok-bot-not-a-sandbox', ...post_grok_bot_not_a_sandbox },
+  { slug: 'grok-bot-not-responding', ...post_grok_bot_not_responding },
   { slug: 'grok-bot-notion', ...post_grok_bot_notion },
   { slug: 'grok-bot-obsidian-knowledge-base', ...post_grok_bot_obsidian_knowledge_base },
   { slug: 'grok-bot-on-call', ...post_grok_bot_on_call },
+  { slug: 'grok-bot-on-demand-monthly-limit', ...post_grok_bot_on_demand_monthly_limit },
   { slug: 'grok-bot-on-demand-usage', ...post_grok_bot_on_demand_usage },
   { slug: 'grok-bot-one-computer-many-screens', ...post_grok_bot_one_computer_many_screens },
   { slug: 'grok-bot-outlook', ...post_grok_bot_outlook },
@@ -708,13 +745,16 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'grok-bot-plugins-catalog', ...post_grok_bot_plugins_catalog },
   { slug: 'grok-bot-pr-factory', ...post_grok_bot_pr_factory },
   { slug: 'grok-bot-preflight-checklist', ...post_grok_bot_preflight_checklist },
+  { slug: 'grok-bot-privacy', ...post_grok_bot_privacy },
   { slug: 'grok-bot-privacy-mode', ...post_grok_bot_privacy_mode },
+  { slug: 'grok-bot-private-network-access', ...post_grok_bot_private_network_access },
   { slug: 'grok-bot-product-investigation', ...post_grok_bot_product_investigation },
   { slug: 'grok-bot-prompt-injection-email', ...post_grok_bot_prompt_injection_email },
   { slug: 'grok-bot-prompts-that-work', ...post_grok_bot_prompts_that_work },
   { slug: 'grok-bot-quickbooks', ...post_grok_bot_quickbooks },
   { slug: 'grok-bot-quota-exceeded', ...post_grok_bot_quota_exceeded },
   { slug: 'grok-bot-regulated-industries', ...post_grok_bot_regulated_industries },
+  { slug: 'grok-bot-reset-vs-update-computer', ...post_grok_bot_reset_vs_update_computer },
   { slug: 'grok-bot-retirement', ...post_grok_bot_retirement },
   { slug: 'grok-bot-review-fatigue', ...post_grok_bot_review_fatigue },
   { slug: 'grok-bot-routine-did-not-run', ...post_grok_bot_routine_did_not_run },
@@ -725,6 +765,8 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'grok-bot-sales-outbound', ...post_grok_bot_sales_outbound },
   { slug: 'grok-bot-salesforce', ...post_grok_bot_salesforce },
   { slug: 'grok-bot-scheduling', ...post_grok_bot_scheduling },
+  { slug: 'grok-bot-secret-requests', ...post_grok_bot_secret_requests },
+  { slug: 'grok-bot-security-review', ...post_grok_bot_security_review },
   { slug: 'grok-bot-setup-guide', ...post_grok_bot_setup_guide },
   { slug: 'grok-bot-shadow-mode', ...post_grok_bot_shadow_mode },
   { slug: 'grok-bot-shared-computer-security', ...post_grok_bot_shared_computer_security },
@@ -739,6 +781,7 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'grok-bot-stayingapi-compare', ...post_grok_bot_stayingapi_compare },
   { slug: 'grok-bot-stripe', ...post_grok_bot_stripe },
   { slug: 'grok-bot-supergrok-plus', ...post_grok_bot_supergrok_plus },
+  { slug: 'grok-bot-support-request-id', ...post_grok_bot_support_request_id },
   { slug: 'grok-bot-supported-platforms', ...post_grok_bot_supported_platforms },
   { slug: 'grok-bot-switch-intent-on-x', ...post_grok_bot_switch_intent_on_x },
   { slug: 'grok-bot-talent-scout', ...post_grok_bot_talent_scout },
@@ -766,7 +809,10 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'grok-bot-to-support-triage', ...post_grok_bot_to_support_triage },
   { slug: 'grok-bot-transcriptapi-vs-browser', ...post_grok_bot_transcriptapi_vs_browser },
   { slug: 'grok-bot-troubleshooting', ...post_grok_bot_troubleshooting },
+  { slug: 'grok-bot-two-accounts', ...post_grok_bot_two_accounts },
+  { slug: 'grok-bot-user-isolation', ...post_grok_bot_user_isolation },
   { slug: 'grok-bot-vision-md', ...post_grok_bot_vision_md },
+  { slug: 'grok-bot-voice-chat', ...post_grok_bot_voice_chat },
   { slug: 'grok-bot-vs-chatgpt-agent', ...post_grok_bot_vs_chatgpt_agent },
   { slug: 'grok-bot-vs-chatgpt-tasks', ...post_grok_bot_vs_chatgpt_tasks },
   { slug: 'grok-bot-vs-chatgpt-work', ...post_grok_bot_vs_chatgpt_work },
@@ -805,6 +851,7 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'grok-bot-youtube-transcripts', ...post_grok_bot_youtube_transcripts },
   { slug: 'grok-bot-zoom', ...post_grok_bot_zoom },
   { slug: 'hand-a-contractor-the-charter-not-the-login', ...post_hand_a_contractor_the_charter_not_the_login },
+  { slug: 'hide-or-duplicate-a-grok-bot', ...post_hide_or_duplicate_a_grok_bot },
   { slug: 'how-bots-on-grok-actually-work', ...post_how_bots_on_grok_actually_work },
   { slug: 'how-to-answer-security-questionnaires', ...post_how_to_answer_security_questionnaires },
   { slug: 'how-to-audit-a-bot-you-inherited', ...post_how_to_audit_a_bot_you_inherited },
@@ -837,9 +884,12 @@ export const { posts, postList } = createBlogRegistry([
   { slug: 'how-to-write-a-boundary-line', ...post_how_to_write_a_boundary_line },
   { slug: 'how-to-write-a-grok-bot-charter-2026', ...post_how_to_write_a_grok_bot_charter_2026 },
   { slug: 'icp-roster-reverified-weekly', ...post_icp_roster_reverified_weekly },
+  { slug: 'is-grok-bot-down', ...post_is_grok_bot_down },
+  { slug: 'is-grok-bot-hipaa-compliant', ...post_is_grok_bot_hipaa_compliant },
   { slug: 'is-grok-bot-worth-it', ...post_is_grok_bot_worth_it },
   { slug: 'learn-grok-bot', ...post_learn_grok_bot },
   { slug: 'least-privilege-bots', ...post_least_privilege_bots },
+  { slug: 'link-supergrok-to-grok-bot', ...post_link_supergrok_to_grok_bot },
   { slug: 'local-computer-approvals-are-not-undo', ...post_local_computer_approvals_are_not_undo },
   { slug: 'log-paper-trades-with-a-written-stop', ...post_log_paper_trades_with_a_written_stop },
   { slug: 'mcp-vs-connectors', ...post_mcp_vs_connectors },

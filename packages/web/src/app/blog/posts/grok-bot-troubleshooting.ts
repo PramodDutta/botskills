@@ -144,7 +144,9 @@ authenticate yourself, and let the bot resume with the session. The
 posture: it stops for a human at every two-factor prompt or captcha and never
 tries to get past one. Look at the screen before concluding anything: a bot
 parked on a question it asked reports nothing, which from outside is
-indistinguishable from a bot thinking hard.
+indistinguishable from a bot thinking hard. If it sends nothing back at all,
+[Grok Bot not responding](/blog/grok-bot-not-responding) walks the sidebar states
+and the four things a Bot waits on.
 
 ### 6. The computer cannot be reached
 
@@ -155,20 +157,25 @@ Cause: the virtual machine behind the bot needs recovery. Your saved files and
 logins are usually not gone.
 
 Fix: escalate gently, in order. Retry or reopen the conversation. Restart the
-app fully, quitting rather than closing the window. Take the recover option if
-one is offered. Then look for an update path for the agent computer. Reset is
-last, because recovery preserves durable files and logins while a reset
-restores a snapshot and can lose recent unsynced work. Reaching for reset
-first is the single most expensive mistake in this list, and the ladder below
-sets out what each rung preserves before you climb it.
+app fully, quitting rather than closing the window. Choose Recover computer
+from the error state if it is offered. Then open Settings -> Updates and choose
+Update under Grok Bot's Computer (on a phone, Settings -> Bot -> Bot Computer).
+Reset is last, because recovery and update preserve durable files and logins
+while a reset restores the last snapshot and can lose recent unsynced work.
+Reaching for reset first is the single most expensive mistake in this list.
+The full walk-through is [Grok Bot cannot reach your computer](/blog/grok-bot-cant-reach-computer),
+and [reset, update or recover](/blog/grok-bot-reset-vs-update-computer) sets out
+what each control keeps before you use it.
 
 ### 7. Everything stopped at once, mid-month
 
 Symptom: several bots stop on the same day, with no pattern in what they do.
 
-Cause: the included usage allowance is exhausted. Worth knowing: as of
-writing there is no Grok Bot spend cap, so nothing stops a runaway routine
-before the allowance is gone. A common trigger is one badly scoped routine
+Cause: the included weekly usage is exhausted. Worth knowing: there is no
+per-Bot or Grok Bot-specific spend cap, so nothing stops one runaway routine
+from draining the weekly usage every other Bot relies on. What does exist is the
+account-level On-demand monthly limit, which caps the extra usage after that;
+see [the on-demand monthly limit](/blog/grok-bot-on-demand-monthly-limit). A common trigger is one badly scoped routine
 that thrashed, such as a bot retrying a broken login hundreds of times,
 consuming the usage everything else was relying on.
 
@@ -176,8 +183,8 @@ Fix: check usage and billing before debugging any individual bot. Then find
 the routine that burned it, which is usually the one with the shortest
 interval or the most browser work. Add a retry limit to its charter: after two
 failed attempts at the same step, stop and report rather than continue. With no
-product level cap to catch this for you, the counter line each bot writes at
-the end of a run is the only early warning available.
+per-Bot cap to catch this for you, the counter line each bot writes at the end
+of a run is the earliest warning available.
 
 ## Escalate the agent computer gently, in this order
 
@@ -395,12 +402,12 @@ costs a week of waiting for an answer that already exists.
 
 | What you observe | What it is | What to do instead |
 |---|---|---|
-| No iPad app | A documented limit | Use a Mac, Windows or Linux desktop, or an iPhone or Android phone |
-| The phone app cannot edit a routine | A documented limit | Edit, test, and delete on desktop |
+| iPad shows the phone app, not a desk | A documented limit: the iOS app runs on iPadOS 18 or later | Edit and test routines on a Mac, Windows or Linux desktop |
+| The phone app cannot edit a routine | A documented limit | Edit and test on desktop |
 | No model picker anywhere | Documented, and not planned to change | Stop looking for the setting |
 | Only the 20 newest run records survive | A documented limit | Have the bot write its own log |
-| Nothing stops a runaway before usage is gone | There is no Grok Bot spend cap | Write ceilings into every charter |
-| You cannot see what a bot did last month | No audit view exists yet | Keep the ledger in the reports |
+| Nothing stops a runaway before the weekly usage is gone | No Grok Bot-specific spend cap, only the account On-demand monthly limit | Set that limit, and write ceilings into every charter |
+| You cannot see what a bot did last month | No audit view outside Enterprise | Keep the ledger in the reports |
 | A service blocks you as a datacenter address | Egress IPs are static, and get flagged | Use an export or a feed |
 | Grok Bot is unavailable entirely | Privacy Mode (Legacy) blocks it | Change the mode, or accept it |
 
@@ -429,9 +436,13 @@ tried. Say whether it ever worked and roughly when it stopped, because a
 routine that ran for six weeks and then stopped almost always points at a
 connection, while one that never worked points at the charter or the schedule.
 
-Check the vendor status page too, but do not treat a green status as proof
-your problem is local; incident acknowledgement usually lags real problems by
-a couple of hours.
+Check the system status link on Cursor's help pages too, but do not treat a
+green status as proof your problem is local, because the local causes above
+look exactly like an outage from the chat window. Before you file anything,
+[the support checklist](/blog/grok-bot-support-request-id) shows where to copy
+the request ID and the six other details support asks for, and
+[is Grok Bot down or just slow](/blog/is-grok-bot-down) separates a service
+problem from the local ones.
 
 **Keep reading:** [The Best AI Bots for Developers in 2026](/blog/best-ai-bots-for-developers), [The Best AI Bots for Founders in 2026](/blog/best-ai-bots-for-founders), [The Best AI Bots for Marketing Teams in 2026](/blog/best-ai-bots-for-marketing).
 
@@ -456,10 +467,11 @@ Last, and only when you accept losing recent unsynced work. Recovery and
 update paths preserve durable files and saved logins, while a reset restores
 the last snapshot, so reaching for reset first is the most expensive mistake
 in this whole category. Work through the gentle escalation instead: retry or
-reopen the conversation, fully quit and restart the app, take a recover option
-if one is offered, then look for an update path for the agent computer. If a
-reset genuinely becomes necessary, expect to reauthenticate connectors
-afterwards and to lose anything the bot had not yet written to durable storage.
+reopen the conversation, fully quit and restart the app, choose Recover
+computer if the error offers it, then use Update under Grok Bot's Computer in
+Settings -> Updates. If a reset genuinely becomes necessary, expect to lose
+anything that had not synced to durable storage since the last snapshot, and
+check that the sites your bots use are still signed in before the next run.
 
 ### Why does my bot produce confident output with missing data?
 
